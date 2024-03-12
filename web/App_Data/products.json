@@ -49,6 +49,13 @@
       "parent": "docspace"
    },
    {
+      "id":"officeapi",
+      "title":"Office API",
+      "description":"In this section, you will learn how to use our JavaScript library to write code for your plugins, macros, builder scripts, etc. This library contains classes and methods for every document type: Text document API, Spreadsheet API, Presentation API, and Form API.",
+      "version": "7.5",
+      "parent": "docs"
+   },
+   {
       "id":"editors",
       "title":"Docs API",
       "description":"In this section, you will learn how to bring document editing and co-authoring to your web app users, set up, configure, and integrate ONLYOFFICE Docs.",
