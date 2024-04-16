@@ -1,6 +1,7 @@
 # Change Log
 
 ##
+- docspace: storybook v2.5
 - docspace: v2.5
 - docbuilder: new samples
 - editors: config to clipboard
