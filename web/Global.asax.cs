@@ -118,10 +118,6 @@ namespace ASC.Api.Web.Help
                             .Include(
                                 "~/scripts/main-page.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/developer-profile")
-                            .Include(
-                                "~/scripts/developer-profile.js"));
-
             bundles.Add(new Bundle("~/content/styles", new CssMinify())
                             .Include(
                                 "~/content/styles.css",
@@ -133,10 +129,6 @@ namespace ASC.Api.Web.Help
             bundles.Add(new Bundle("~/content/main-page", new CssMinify())
                             .Include(
                                 "~/content/main-page.css"));
-
-            bundles.Add(new Bundle("~/content/developer-profile", new CssMinify())
-                            .Include(
-                                "~/content/developer-profile.css"));
 
             bundles.Add(new Bundle("~/content/category-page", new CssMinify())
                             .Include(

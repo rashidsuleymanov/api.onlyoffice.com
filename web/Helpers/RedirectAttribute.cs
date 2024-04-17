@@ -37,8 +37,7 @@ namespace ASC.Api.Web.Help.Helpers
         {
             base.OnActionExecuting(filterContext);
 
-            if ((filterContext.ActionDescriptor.ControllerDescriptor.ControllerName.Equals("category", StringComparison.InvariantCultureIgnoreCase)) || 
-                (filterContext.ActionDescriptor.ControllerDescriptor.ControllerName.Equals("developerprofile", StringComparison.InvariantCultureIgnoreCase))) {
+            if (filterContext.ActionDescriptor.ControllerDescriptor.ControllerName.Equals("category", StringComparison.InvariantCultureIgnoreCase)) {
                 return;
             }
 

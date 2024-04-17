@@ -109,7 +109,6 @@
     <Compile Include="Controllers\PluginController.cs" />
     <Compile Include="Controllers\DocSpaceController.cs" />
     <Compile Include="Controllers\PortalsController.cs" />
-    <Compile Include="Controllers\DeveloperProfileController.cs" />
     <Compile Include="DocumentGenerator\DocSpaceDocumentation.cs" />
     <Compile Include="DocumentGenerator\CSharpDocumentation.cs" />
     <Compile Include="DocumentGenerator\DocBuilderDocumentation.cs" />
@@ -2123,16 +2122,16 @@
     <Content Include="App_Data\docbuilder\sample-files\mail_merge_result.docx" />
     <Content Include="App_Data\docbuilder\sample-files\mail_template.docx" />
     <Content Include="App_Data\docbuilder\sample-files\review_report.docx" />
-	<Content Include="App_Data\docbuilder\samples\addwatermark.docbuilder" />
+    <Content Include="App_Data\docbuilder\samples\addwatermark.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\commenterrors.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\createadvancedform.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\createbasicform.docbuilder" />
-	<Content Include="App_Data\docbuilder\samples\createspreadsheetchart.docbuilder" /> 
+    <Content Include="App_Data\docbuilder\samples\createspreadsheetchart.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\createchartpresentation.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\createformaldocument.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\createpresentation.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\createreports.docbuilder" />
-	<Content Include="App_Data\docbuilder\samples\createtabledocument.docbuilder" /> 
+    <Content Include="App_Data\docbuilder\samples\createtabledocument.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\fillform.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\fillspreadsheet.docbuilder" />
     <Content Include="App_Data\docbuilder\samples\mailmergereceptions.docbuilder" />
@@ -2845,7 +2844,6 @@
     <Content Include="Content\main-page.css" />
     <Content Include="Content\phone-controller.css" />
     <Content Include="Content\category-page.css" />
-    <Content Include="Content\developer-profile.css" />
     <Content Include="Content\plugins-macros.css" />
     <Content Include="Content\pushy.css" />
     <Content Include="Content\styles.css" />
@@ -4188,10 +4186,8 @@
     <Content Include="Scripts\main-page.js" />
     <Content Include="Scripts\menuselector.js" />
     <Content Include="Scripts\navigation-menu.js" />
-    <Content Include="Scripts\developer-profile.js" />
     <Content Include="Scripts\scripts.js" />
     <Content Include="version.txt" />
-    <Content Include="Views\DeveloperProfile\Registration.aspx" />
     <Content Include="Views\Desktop\AddingDMS.aspx" />
     <Content Include="Views\Desktop\AddingDMS\ChangingTheme.ascx" />
     <Content Include="Views\Desktop\AddingDMS\Configuring.ascx" />
@@ -4220,7 +4216,7 @@
     <Content Include="Views\DocBuilder\Builderframeworksamples\cppbuildersamples.ascx" />
     <Content Include="Views\DocBuilder\Builderframeworksamples\default.ascx" />
     <Content Include="Views\DocBuilder\buildersamples.aspx" />
-	<Content Include="Views\DocBuilder\Buildersamples\addwatermark.ascx" />
+    <Content Include="Views\DocBuilder\Buildersamples\addwatermark.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\commenterrors.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\createadvancedform.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\createbasicform.ascx" />
@@ -4229,7 +4225,7 @@
     <Content Include="Views\DocBuilder\Buildersamples\createformaldocument.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\createpresentation.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\createreports.ascx" />
-	<Content Include="Views\DocBuilder\Buildersamples\createtabledocument.ascx" />
+    <Content Include="Views\DocBuilder\Buildersamples\createtabledocument.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\default.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\fillform.ascx" />
     <Content Include="Views\DocBuilder\Buildersamples\fillspreadsheet.ascx" />
