@@ -20,7 +20,7 @@
                         if (product.Parent == null)
                         { %>
                     <li class="pushy-submenu <%= Html.IfController(product.Id) || subControllerStr.Equals(product.Id, StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
-                        <div class="pushy-submenu-item"><%= product.Title %></div>
+                       <a class="pushy-submenu-item" href="<%= Url.Action(product.Sections == null ? "basic": "index", product.Id) %>"><%= product.Title %></a>
                         <% if (product.Sections != null)
                            { %>
                            <ul class="pushy-dropdown">

@@ -69,12 +69,14 @@ $(function () {
         });
     }
 
-    $(".pushy-submenu-item").each(function (index, el) {
-        $(el).on("click", function () {
-            if (window.innerWidth <= 592) {
-                $(el).parent().toggleClass("show");
-            }
-        });
+    $(".pushy-submenu").each(function (index, el) {
+       $(el).on("click", function (event) {
+          if (window.innerWidth <= 592) {
+             if (event.target.tagName == "LI") {
+                $(el).toggleClass("show");
+             }
+          }
+       });
     });
 
     $("#sidebar-button").on("click", function() {

@@ -56,6 +56,10 @@
     color: #FF6F3D;
 }
 
+a.pushy-submenu-item {
+    color: var(--color-text-septenary);
+}
+
 .pushy-submenu-item {
     display: flex;
     align-items: center;
@@ -347,6 +351,10 @@
 
     .pushy-submenu.show::after {
         transform: rotate(180deg);
+    }
+
+    a.pushy-submenu-item {
+        color: var(--color-text-secondary);
     }
 
     .pushy-submenu-item {
