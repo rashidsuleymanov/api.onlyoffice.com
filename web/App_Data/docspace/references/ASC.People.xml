@@ -20,6 +20,11 @@
             <summary>List of group member IDs</summary>
             <type>System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic</type>
         </member>
+        <member name="T:ASC.People.ApiModels.RequestDto.GroupRequestDtoBase">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="P:ASC.People.ApiModels.RequestDto.GroupRequestDtoBase.GroupManager">
             <summary>Group manager ID</summary>
             <type>System.Guid, System</type>
@@ -240,12 +245,16 @@
             <summary>Thumbnail height</summary>
             <type>System.Int32, System</type>
         </member>
+        <member name="T:ASC.People.ApiModels.RequestDto.UpdateGroupRequestDto">
+            <summary>
+            </summary>
+        </member>
         <member name="P:ASC.People.ApiModels.RequestDto.UpdateGroupRequestDto.MembersToAdd">
-            <summary>Users ids to add to the group</summary>
+            <summary>List of user IDs to add to the group</summary>
             <type>System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic</type>
         </member>
         <member name="P:ASC.People.ApiModels.RequestDto.UpdateGroupRequestDto.MembersToRemove">
-            <summary>Users ids to remove from the group</summary>
+            <summary>List of user IDs to remove from the group</summary>
             <type>System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic</type>
         </member>
         <member name="T:ASC.People.ApiModels.RequestDto.UpdateMembersQuotaRequestDto">
@@ -436,7 +445,9 @@
             <short>
             Get groups
             </short>
-            <returns type="ASC.Web.Api.Models.GroupSummaryDto, ASC.Api.Core">List of groups</returns>
+            <param type="System.Nullable{System.Guid}, System" name="userId">User ID</param>
+            <param type="System.Nullable{System.Boolean}, System" name="manager">Specifies if the user is a manager or not</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">List of groups</returns>
             <remarks>
             This method returns partial group information.
             </remarks>
@@ -452,7 +463,7 @@
             Get a group
             </short>
             <param type="System.Guid, System" method="url" name="id">Group ID</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
             <remarks>
             This method returns full group information.
             </remarks>
@@ -468,7 +479,7 @@
             </short>
             <param type="System.Guid, System" method="url" name="userid">User ID</param>
             <returns type="ASC.Web.Api.Models.GroupSummaryDto, ASC.Api.Core">List of groups</returns>
-            <path>api/2.0/groups/member/{id}</path>
+            <path>api/2.0/groups/user/{userid}</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
         </member>
@@ -480,7 +491,7 @@
             Add a new group
             </short>
             <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Newly created group with the following parameters</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Newly created group with the detailed information</returns>
             <path>api/2.0/groups</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -492,8 +503,8 @@
             Update a group
             </short>
             <param type="System.Guid, System" method="url" name="id">Group ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Updated group with the following parameters</returns>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateGroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Updated group with the detailed information</returns>
             <path>api/2.0/groups/{id}</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -505,7 +516,7 @@
             Delete a group
             </short>
             <param type="System.Guid, System" method="url" name="id">Group ID</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters</returns>
+            <returns type="Microsoft.AspNetCore.Mvc.NoContentResult, Microsoft.AspNetCore.Mvc">No content</returns>
             <path>api/2.0/groups/{id}</path>
             <httpMethod>DELETE</httpMethod>
         </member>
@@ -518,8 +529,8 @@
             </short>
             <param type="System.Guid, System" method="url" name="fromId">Group ID to move from</param>
             <param type="System.Guid, System" method="url" name="toId">Group ID to move to</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters</returns>
-            <path>api/2.0/groups/{fromId}/members/transfer/{toId}</path>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
+            <path>api/2.0/groups/{fromId}/members/{toId}</path>
             <httpMethod>PUT</httpMethod>
         </member>
         <member name="M:ASC.People.Api.GroupController.SetMembersToAsync(System.Guid,ASC.People.ApiModels.RequestDto.GroupRequestDto)">
@@ -531,7 +542,7 @@
             </short>
             <param type="System.Guid, System" method="url" name="id">Group ID</param>
             <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
             <path>api/2.0/groups/{id}/members</path>
             <httpMethod>POST</httpMethod>
         </member>
@@ -544,7 +555,7 @@
             </short>
             <param type="System.Guid, System" method="url" name="id">Group ID</param>
             <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
             <path>api/2.0/groups/{id}/members</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -557,7 +568,7 @@
             </short>
             <param type="System.Guid, System" method="url" name="id">Group ID</param>
             <param type="ASC.People.ApiModels.RequestDto.SetManagerRequestDto, ASC.People" name="inDto">Request parameters for setting a group manager</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
             <path>api/2.0/groups/{id}/manager</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -570,7 +581,7 @@
             </short>
             <param type="System.Guid, System" method="url" name="id">Group ID</param>
             <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the following parameters</returns>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
             <path>api/2.0/groups/{id}/members</path>
             <httpMethod>DELETE</httpMethod>
         </member>
@@ -953,7 +964,7 @@
             <param type="System.Nullable{ASC.Core.AccountLoginType}, System" name="accountLoginType">Account login type</param>
             <param type="System.Nullable{ASC.Core.QuotaFilter}, System" name="quotaFilter">Filter by quota (Default - 1, Custom - 2)</param>
             <param type="System.Nullable{System.Boolean}, System" name="withoutGroup">Specifies whether the user should be a member of a group or not</param>
-            <param type="System.Nullable{System.Boolean}, System" name="excludeGroup">Specifies whether or not the user should be a member of the group with the specified id</param>
+            <param type="System.Nullable{System.Boolean}, System" name="excludeGroup">Specifies whether or not the user should be a member of the group with the specified ID</param>
             <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">List of users with the detailed information</returns>
             <path>api/2.0/people/filter</path>
             <httpMethod>GET</httpMethod>
@@ -1012,7 +1023,7 @@
             <param type="System.Nullable{ASC.Core.AccountLoginType}, System" name="accountLoginType">Account login type</param>
             <param type="System.Nullable{ASC.Core.QuotaFilter}, System" name="quotaFilter">Filter by quota (Default - 1, Custom - 2)</param>
             <param type="System.Nullable{System.Boolean}, System" name="withoutGroup">Specifies whether the user should be a member of a group or not</param>
-            /// <param type="System.Nullable{System.Boolean}, System" name="excludeGroup">Specifies whether or not the user should be a member of the group with the specified id</param>
+            <param type="System.Nullable{System.Boolean}, System" name="excludeGroup">Specifies whether or not the user should be a member of the group with the specified ID</param>
             <returns type="ASC.Web.Api.Models.EmployeeDto, ASC.Api.Core">List of users</returns>
             <path>api/2.0/people/simple/filter</path>
             <httpMethod>GET</httpMethod>
@@ -1225,16 +1236,17 @@
         </member>
         <member name="M:ASC.People.Api.UserController.ResetUsersQuota(ASC.People.ApiModels.RequestDto.UpdateMembersQuotaRequestDto)">
             <summary>
-            Reset a user quota limit with the ID specified in the request from the portal.
+            Resets a user quota limit with the ID specified in the request from the portal.
             </summary>
             <short>
             Reset a user quota limit
             </short>
             <category>Quota</category>
-            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersRequestDto, ASC.People" name="inDto">Request parameters for updating user information</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateMembersQuotaRequestDto, ASC.People" name="inDto">Request parameters for updating user information</param>
             <returns type="ASC.Web.Api.Models.EmployeeFullDto, ASC.Api.Core">User detailed information</returns>
             <path>api/2.0/people/resetquota</path>
             <httpMethod>PUT</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="T:ASC.People.Resources.PeopleResource">
             <summary>

@@ -120,7 +120,7 @@
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultMailSalesEmail">
-            <summary>Mail sales URL</summary>
+            <summary>Default sales email</summary>
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsHelperInit.DefaultBuyUrl">

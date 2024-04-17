@@ -321,11 +321,11 @@
             </summary>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.RequestsDto.TenantQuotaSettingsRequestsDto.TenantId">
-            <summary>Specifies if the quota settings are enabled or not</summary>
-            <type>System.Boolean, System</type>
+            <summary>Tenant ID</summary>
+            <type>System.Int32, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.RequestsDto.TenantQuotaSettingsRequestsDto.Quota">
-            <summary>Default quota value</summary>
+            <summary>Quota</summary>
             <type>System.Int64, System</type>
         </member>
         <member name="T:ASC.Web.Api.ApiModel.RequestsDto.TfaRequestsDto">
@@ -956,7 +956,7 @@
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.TagManagerId">
-            <summary>Tag manager id</summary>
+            <summary>Tag manager ID</summary>
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModel.ResponseDto.SettingsDto.BookTrainingEmail">
@@ -1361,7 +1361,7 @@
             </summary>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.RequestsDto.SendCongratulationsDto.Userid">
-            <summary>Uer ID,e</summary>
+            <summary>Uer ID</summary>
             <type>System.Guid, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.RequestsDto.SendCongratulationsDto.Key">
@@ -1738,24 +1738,20 @@
             </summary>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.MigrationStatusDto.Progress">
-            <summary>
-            
-            </summary>
+            <summary>Migration progress</summary>
+            <type>System.Double, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.MigrationStatusDto.Error">
-            <summary>
-            
-            </summary>
+            <summary>Migration error</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.MigrationStatusDto.ParseResult">
-            <summary>
-            
-            </summary>
+            <summary>Migration API information</summary>
+            <type>ASC.Migration.Core.Models.Api.MigrationApiInfo, ASC.Migration</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.MigrationStatusDto.IsCompleted">
-            <summary>
-            
-            </summary>
+            <summary>Specifies whether the migration is completed</summary>
+            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Web.Api.ApiModels.ResponseDto.NotificationSettingsDto">
             <summary>
@@ -1802,15 +1798,15 @@
             <type>System.Collections.Generic.IEnumerable{ASC.Web.Api.ApiModels.ResponseDto.TenantQuotaFeatureDto}, ASC.Web.Api</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.QuotaDto.UsersQuota">
-            <summary>Users quota</summary>
+            <summary>User quota</summary>
             <type>ASC.Core.Tenants.TenantEntityQuotaSettings, ASC.Core.Common</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.QuotaDto.RoomsQuota">
-            <summary>Rooms quota</summary>
+            <summary>Room quota</summary>
             <type>ASC.Core.Tenants.TenantEntityQuotaSettings, ASC.Core.Common</type>
         </member>
         <member name="P:ASC.Web.Api.ApiModels.ResponseDto.QuotaDto.TenantCustomQuota">
-            <summary>Rooms quota</summary>
+            <summary>Tenant custom quota</summary>
             <type>ASC.Core.Tenants.TenantQuotaSettings, ASC.Core.Common</type>
         </member>
         <member name="T:ASC.Web.Api.ApiModels.ResponseDto.TenantQuotaFeatureDto">
@@ -3673,21 +3669,21 @@
             Save the room quota settings
             </short>
             <category>Quota</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.UserQuotaSettingsRequestsDto, ASC.Web.Api" name="inDto">Request parameters for the user quota settings</param>
-            <returns type="System.Object, System">Message about the result of saving the room quota settings</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.QuotaSettingsRequestsDto, ASC.Web.Api" name="inDto">Request parameters for the quota settings</param>
+            <returns type="ASC.Core.Tenants.TenantRoomQuotaSettings, ASC.Core.Common">Tenant room quota settings</returns>
             <path>api/2.0/settings/roomquotasettings</path>
             <httpMethod>POST</httpMethod>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.SettingsController.SetTenantQuotaSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.TenantQuotaSettingsRequestsDto)">
             <summary>
-            Saves the tenant quota settings.
+            Saves the tenant quota settings specified in the request to the current portal.
             </summary>
             <short>
             Save the tenant quota settings
             </short>
             <category>Quota</category>
-            <param type="ASC.Web.Api.ApiModel.RequestsDto.UserQuotaSettingsRequestsDto, ASC.Web.Api" name="inDto">Request parameters for the user quota settings</param>
-            <returns type="System.Object, System">Message about the result of saving the tenant quota settings</returns>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.TenantQuotaSettingsRequestsDto, ASC.Web.Api" name="inDto">Request parameters for the tenant quota settings</param>
+            <returns type="ASC.Core.Tenants.TenantQuotaSettings, ASC.Core.Common">Tenant quota settings</returns>
             <path>api/2.0/settings/tenantquotasettings</path>
             <httpMethod>PUT</httpMethod>
         </member>
@@ -3695,7 +3691,7 @@
             <summary>
             Returns a list of all the available portal languages in the format of a two-letter or four-letter language code (e.g. "de", "en-US", etc.).
             </summary>
-            <short>Get supporrted languages</short>
+            <short>Get supported languages</short>
             <category>Common settings</category>
             <returns type="System.Object, System">List of all the available portal languages</returns>
             <path>api/2.0/settings/cultures</path>

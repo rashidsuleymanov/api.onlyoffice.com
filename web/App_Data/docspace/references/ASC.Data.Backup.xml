@@ -18,8 +18,8 @@
             <type>System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Object, System.Object}}, System.Collections.Generic</type>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupDto.Dump">
-            <summary>Dump</summary>
-            <type>System.Bolean, System</type>
+            <summary>Specifies if a dump will be created or not</summary>
+            <type>System.Boolean, System</type>
             <example>true</example>
         </member>
         <member name="T:ASC.Data.Backup.ApiModels.BackupRestoreDto">
@@ -65,8 +65,8 @@
             <type>ASC.Data.Backup.ApiModels.Cron, ASC.Data.Backup</type>
         </member>
         <member name="P:ASC.Data.Backup.ApiModels.BackupScheduleDto.Dump">
-            <summary>Dump</summary>
-            <type>System.Bolean, System</type>
+            <summary>Specifies if a dump will be created or not</summary>
+            <type>System.Boolean, System</type>
             <example>true</example>
         </member>
         <member name="T:ASC.Data.Backup.ApiModels.Cron">

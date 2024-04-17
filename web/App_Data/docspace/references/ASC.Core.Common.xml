@@ -287,6 +287,23 @@
             <summary>Audit trail settingse</summary>
             <type>ASC.Core.Tenants.TenantAuditSettings, ASC.Core.Common</type>
         </member>
+        <member name="T:ASC.Core.Tenants.TenantEntityQuotaSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Core.Tenants.TenantEntityQuotaSettings.EnableQuota">
+            <summary>Specifies if the quota is enabled or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Core.Tenants.TenantEntityQuotaSettings.DefaultQuota">
+            <summary>Default quota</summary>
+            <type>System.Int64, System</type>
+        </member>
+        <member name="P:ASC.Core.Tenants.TenantEntityQuotaSettings.LastRecalculateDate">
+            <summary>Date of the last quota recalculation</summary>
+            <type>System.Nullable{System.DateTime}, System</type>
+        </member>
         <member name="T:ASC.Core.Tenants.TenantQuota">
             <summary>
             </summary>
@@ -407,6 +424,23 @@
             <summary>Specifies if the third-party accounts linking is available or not</summary>
             <type>System.Boolean, System</type>
         </member>
+        <member name="T:ASC.Core.Tenants.TenantQuotaSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Core.Tenants.TenantQuotaSettings.EnableQuota">
+            <summary>Specifies if the quota is enabled or not</summary>
+            <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Core.Tenants.TenantQuotaSettings.Quota">
+            <summary>Quota</summary>
+            <type>System.Int64, System</type>
+        </member>
+        <member name="P:ASC.Core.Tenants.TenantQuotaSettings.LastRecalculateDate">
+            <summary>Date of the last quota recalculation</summary>
+            <type>System.Nullable{System.DateTime}, System</type>
+        </member>
         <member name="T:ASC.Core.Tenants.TenantTrustedDomainsType">
             <summary>
             </summary>
@@ -433,6 +467,11 @@
             </summary>
             <param name="recipient"></param>
             <returns></returns>
+        </member>
+        <member name="T:ASC.Core.QuotaFilter">
+            <summary>
+            
+            </summary>
         </member>
         <member name="T:ASC.Core.TenantVersion">
             <summary>
