@@ -62,24 +62,18 @@
                     <div class="footer-item">
                         <h6 class="footer-item-title">Get information</h6>
                         <ul class="footer-item-list">
-                            <li><a href="" target="_blank">Blog for developers</a></li>
-                            <li><a href="" target="_blank">For contributors</a></li>
-                            <li><a href="https://www.onlyoffice.com/legalterms.aspx" target="_blank">Legal notice</a></li>
+                            <li><a href="https://www.onlyoffice.com/blog/category/for-developers?from=api" target="_blank">Blog for developers</a></li>
+                            <li><a href="https://www.onlyoffice.com/contribute.aspx?from=api" target="_blank">For contributors</a></li>
+                            <li><a href="https://www.onlyoffice.com/legalterms.aspx?from=api" target="_blank">Legal notice</a></li>
                         </ul>
                     </div>
                     <div class="footer-item">
                         <h6 class="footer-item-title">Get help</h6>
                         <ul class="footer-item-list">
                             <li><a href="https://forum.onlyoffice.com" target="_blank">Forum</a></li>
-                            <li><a href="" target="_blank">Code on GitHub</a></li>
-                            <li><a href="" target="_blank">Installation guides</a></li>
-                            <li><a href="" target="_blank">Support contact form</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-item">
-                        <h6 class="footer-item-title">Try now</h6>
-                        <ul class="footer-item-list">
-                            <li><a href="" target="_blank">Developer Profile</a></li>
+                            <li><a href="https://github.com/ONLYOFFICE/" target="_blank">Code on GitHub</a></li>
+                            <li><a href="https://helpcenter.onlyoffice.com/installation/docs-developer-index.aspx?from=api" target="_blank">Installation guides</a></li>
+                            <li><a href="https://www.onlyoffice.com/support-contact-form.aspx?from=api" target="_blank">Support contact form</a></li>
                         </ul>
                     </div>
                 </div>
