@@ -3,6 +3,7 @@
 ##
 - docspace: storybook v2.5
 - docspace: v2.5
+- editors: added the information about the favIconUrl parameter to the WOPI discovery
 - docbuilder: new samples
 - editors: config to clipboard
 - editors: added the Setting avatars page to How it works
