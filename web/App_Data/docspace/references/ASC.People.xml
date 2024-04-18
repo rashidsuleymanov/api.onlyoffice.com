@@ -424,165 +424,6 @@
             <path>api/2.0/people/{userid}/contacts</path>
             <httpMethod>PUT</httpMethod>
         </member>
-        <member name="T:ASC.People.Api.GroupController">
-            <summary>
-             Groups API.
-            </summary>
-            <name>group</name>
-        </member>
-        <member name="M:ASC.People.Api.GroupController.#ctor(ASC.Core.UserManager,ASC.Api.Core.ApiContext,ASC.People.ApiModels.ResponseDto.GroupFullDtoHelper,ASC.MessagingSystem.Core.MessageService,ASC.MessagingSystem.EF.Model.MessageTarget,ASC.Core.PermissionContext,ASC.Files.Core.Security.FileSecurity)">
-            <summary>
-             Groups API.
-            </summary>
-            <name>group</name>
-        </member>
-        <member name="M:ASC.People.Api.GroupController.GetGroupsAsync(System.Nullable{System.Guid},System.Nullable{System.Boolean})">
-            <summary>
-            Returns the general information about all the groups, such as group ID and group manager.
-            </summary>
-            <short>
-            Get groups
-            </short>
-            <param type="System.Nullable{System.Guid}, System" name="userId">User ID</param>
-            <param type="System.Nullable{System.Boolean}, System" name="manager">Specifies if the user is a manager or not</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">List of groups</returns>
-            <remarks>
-            This method returns partial group information.
-            </remarks>
-            <path>api/2.0/groups</path>
-            <httpMethod>GET</httpMethod>
-            <collection>list</collection>
-        </member>
-        <member name="M:ASC.People.Api.GroupController.GetGroupAsync(System.Guid)">
-            <summary>
-            Returns the detailed information about the selected group.
-            </summary>
-            <short>
-            Get a group
-            </short>
-            <param type="System.Guid, System" method="url" name="id">Group ID</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
-            <remarks>
-            This method returns full group information.
-            </remarks>
-            <path>api/2.0/groups/{id}</path>
-            <httpMethod>GET</httpMethod>
-        </member>
-        <member name="M:ASC.People.Api.GroupController.GetByUserIdAsync(System.Guid)">
-            <summary>
-            Returns a list of groups for the user with the ID specified in the request.
-            </summary>
-            <short>
-            Get user groups
-            </short>
-            <param type="System.Guid, System" method="url" name="userid">User ID</param>
-            <returns type="ASC.Web.Api.Models.GroupSummaryDto, ASC.Api.Core">List of groups</returns>
-            <path>api/2.0/groups/user/{userid}</path>
-            <httpMethod>GET</httpMethod>
-            <collection>list</collection>
-        </member>
-        <member name="M:ASC.People.Api.GroupController.AddGroupAsync(ASC.People.ApiModels.RequestDto.GroupRequestDto)">
-            <summary>
-            Adds a new group with the group manager, name, and members specified in the request.
-            </summary>
-            <short>
-            Add a new group
-            </short>
-            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Newly created group with the detailed information</returns>
-            <path>api/2.0/groups</path>
-            <httpMethod>POST</httpMethod>
-        </member>
-        <member name="M:ASC.People.Api.GroupController.UpdateGroupAsync(System.Guid,ASC.People.ApiModels.RequestDto.UpdateGroupRequestDto)">
-            <summary>
-            Updates the existing group changing the group manager, name, and/or members.
-            </summary>
-            <short>
-            Update a group
-            </short>
-            <param type="System.Guid, System" method="url" name="id">Group ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.UpdateGroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Updated group with the detailed information</returns>
-            <path>api/2.0/groups/{id}</path>
-            <httpMethod>PUT</httpMethod>
-        </member>
-        <member name="M:ASC.People.Api.GroupController.DeleteGroupAsync(System.Guid)">
-            <summary>
-            Deletes a group with the ID specified in the request from the list of groups on the portal.
-            </summary>
-            <short>
-            Delete a group
-            </short>
-            <param type="System.Guid, System" method="url" name="id">Group ID</param>
-            <returns type="Microsoft.AspNetCore.Mvc.NoContentResult, Microsoft.AspNetCore.Mvc">No content</returns>
-            <path>api/2.0/groups/{id}</path>
-            <httpMethod>DELETE</httpMethod>
-        </member>
-        <member name="M:ASC.People.Api.GroupController.TransferMembersToAsync(System.Guid,System.Guid)">
-            <summary>
-            Moves all the members from the selected group to another one specified in the request.
-            </summary>
-            <short>
-            Move group members
-            </short>
-            <param type="System.Guid, System" method="url" name="fromId">Group ID to move from</param>
-            <param type="System.Guid, System" method="url" name="toId">Group ID to move to</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
-            <path>api/2.0/groups/{fromId}/members/{toId}</path>
-            <httpMethod>PUT</httpMethod>
-        </member>
-        <member name="M:ASC.People.Api.GroupController.SetMembersToAsync(System.Guid,ASC.People.ApiModels.RequestDto.GroupRequestDto)">
-            <summary>
-            Replaces the group members with those specified in the request.
-            </summary>
-            <short>
-            Replace group members
-            </short>
-            <param type="System.Guid, System" method="url" name="id">Group ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
-            <path>api/2.0/groups/{id}/members</path>
-            <httpMethod>POST</httpMethod>
-        </member>
-        <member name="M:ASC.People.Api.GroupController.AddMembersToAsync(System.Guid,ASC.People.ApiModels.RequestDto.GroupRequestDto)">
-            <summary>
-            Adds new group members to the group with the ID specified in the request.
-            </summary>
-            <short>
-            Add group members
-            </short>
-            <param type="System.Guid, System" method="url" name="id">Group ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
-            <path>api/2.0/groups/{id}/members</path>
-            <httpMethod>PUT</httpMethod>
-        </member>
-        <member name="M:ASC.People.Api.GroupController.SetManagerAsync(System.Guid,ASC.People.ApiModels.RequestDto.SetManagerRequestDto)">
-            <summary>
-            Sets a user with the ID specified in the request as a group manager.
-            </summary>
-            <short>
-            Set a group manager
-            </short>
-            <param type="System.Guid, System" method="url" name="id">Group ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.SetManagerRequestDto, ASC.People" name="inDto">Request parameters for setting a group manager</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
-            <path>api/2.0/groups/{id}/manager</path>
-            <httpMethod>PUT</httpMethod>
-        </member>
-        <member name="M:ASC.People.Api.GroupController.RemoveMembersFromAsync(System.Guid,ASC.People.ApiModels.RequestDto.GroupRequestDto)">
-            <summary>
-            Removes the group members specified in the request from the selected group.
-            </summary>
-            <short>
-            Remove group members
-            </short>
-            <param type="System.Guid, System" method="url" name="id">Group ID</param>
-            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
-            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
-            <path>api/2.0/groups/{id}/members</path>
-            <httpMethod>DELETE</httpMethod>
-        </member>
         <member name="M:ASC.People.Api.NotificationController.SendNotificationToChangeAsync(ASC.People.ApiModels.RequestDto.UpdateMemberRequestDto)">
             <summary>
             Sends a notification to the user with the ID specified in the request to change their phone number.
@@ -1301,6 +1142,165 @@
             <summary>
               Looks up a localized string similar to View profiles and groups.
             </summary>
+        </member>
+        <member name="T:ASC.People.Api.GroupController">
+            <summary>
+             Groups API.
+            </summary>
+            <name>group</name>
+        </member>
+        <member name="M:ASC.People.Api.GroupController.#ctor(ASC.Core.UserManager,ASC.Api.Core.ApiContext,ASC.People.ApiModels.ResponseDto.GroupFullDtoHelper,ASC.MessagingSystem.Core.MessageService,ASC.MessagingSystem.EF.Model.MessageTarget,ASC.Core.PermissionContext,ASC.Files.Core.Security.FileSecurity)">
+            <summary>
+             Groups API.
+            </summary>
+            <name>group</name>
+        </member>
+        <member name="M:ASC.People.Api.GroupController.GetGroupsAsync(System.Nullable{System.Guid},System.Nullable{System.Boolean})">
+            <summary>
+            Returns the general information about all the groups, such as group ID and group manager.
+            </summary>
+            <short>
+            Get groups
+            </short>
+            <param type="System.Nullable{System.Guid}, System" name="userId">User ID</param>
+            <param type="System.Nullable{System.Boolean}, System" name="manager">Specifies if the user is a manager or not</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">List of groups</returns>
+            <remarks>
+            This method returns partial group information.
+            </remarks>
+            <path>api/2.0/groups</path>
+            <httpMethod>GET</httpMethod>
+            <collection>list</collection>
+        </member>
+        <member name="M:ASC.People.Api.GroupController.GetGroupAsync(System.Guid)">
+            <summary>
+            Returns the detailed information about the selected group.
+            </summary>
+            <short>
+            Get a group
+            </short>
+            <param type="System.Guid, System" method="url" name="id">Group ID</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
+            <remarks>
+            This method returns full group information.
+            </remarks>
+            <path>api/2.0/groups/{id}</path>
+            <httpMethod>GET</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.GroupController.GetByUserIdAsync(System.Guid)">
+            <summary>
+            Returns a list of groups for the user with the ID specified in the request.
+            </summary>
+            <short>
+            Get user groups
+            </short>
+            <param type="System.Guid, System" method="url" name="userid">User ID</param>
+            <returns type="ASC.Web.Api.Models.GroupSummaryDto, ASC.Api.Core">List of groups</returns>
+            <path>api/2.0/groups/user/{userid}</path>
+            <httpMethod>GET</httpMethod>
+            <collection>list</collection>
+        </member>
+        <member name="M:ASC.People.Api.GroupController.AddGroupAsync(ASC.People.ApiModels.RequestDto.GroupRequestDto)">
+            <summary>
+            Adds a new group with the group manager, name, and members specified in the request.
+            </summary>
+            <short>
+            Add a new group
+            </short>
+            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Newly created group with the detailed information</returns>
+            <path>api/2.0/groups</path>
+            <httpMethod>POST</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.GroupController.UpdateGroupAsync(System.Guid,ASC.People.ApiModels.RequestDto.UpdateGroupRequestDto)">
+            <summary>
+            Updates the existing group changing the group manager, name, and/or members.
+            </summary>
+            <short>
+            Update a group
+            </short>
+            <param type="System.Guid, System" method="url" name="id">Group ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.UpdateGroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Updated group with the detailed information</returns>
+            <path>api/2.0/groups/{id}</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.GroupController.DeleteGroupAsync(System.Guid)">
+            <summary>
+            Deletes a group with the ID specified in the request from the list of groups on the portal.
+            </summary>
+            <short>
+            Delete a group
+            </short>
+            <param type="System.Guid, System" method="url" name="id">Group ID</param>
+            <returns type="Microsoft.AspNetCore.Mvc.NoContentResult, Microsoft.AspNetCore.Mvc">No content</returns>
+            <path>api/2.0/groups/{id}</path>
+            <httpMethod>DELETE</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.GroupController.TransferMembersToAsync(System.Guid,System.Guid)">
+            <summary>
+            Moves all the members from the selected group to another one specified in the request.
+            </summary>
+            <short>
+            Move group members
+            </short>
+            <param type="System.Guid, System" method="url" name="fromId">Group ID to move from</param>
+            <param type="System.Guid, System" method="url" name="toId">Group ID to move to</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
+            <path>api/2.0/groups/{fromId}/members/{toId}</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.GroupController.SetMembersToAsync(System.Guid,ASC.People.ApiModels.RequestDto.GroupRequestDto)">
+            <summary>
+            Replaces the group members with those specified in the request.
+            </summary>
+            <short>
+            Replace group members
+            </short>
+            <param type="System.Guid, System" method="url" name="id">Group ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
+            <path>api/2.0/groups/{id}/members</path>
+            <httpMethod>POST</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.GroupController.AddMembersToAsync(System.Guid,ASC.People.ApiModels.RequestDto.GroupRequestDto)">
+            <summary>
+            Adds new group members to the group with the ID specified in the request.
+            </summary>
+            <short>
+            Add group members
+            </short>
+            <param type="System.Guid, System" method="url" name="id">Group ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
+            <path>api/2.0/groups/{id}/members</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.GroupController.SetManagerAsync(System.Guid,ASC.People.ApiModels.RequestDto.SetManagerRequestDto)">
+            <summary>
+            Sets a user with the ID specified in the request as a group manager.
+            </summary>
+            <short>
+            Set a group manager
+            </short>
+            <param type="System.Guid, System" method="url" name="id">Group ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.SetManagerRequestDto, ASC.People" name="inDto">Request parameters for setting a group manager</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
+            <path>api/2.0/groups/{id}/manager</path>
+            <httpMethod>PUT</httpMethod>
+        </member>
+        <member name="M:ASC.People.Api.GroupController.RemoveMembersFromAsync(System.Guid,ASC.People.ApiModels.RequestDto.GroupRequestDto)">
+            <summary>
+            Removes the group members specified in the request from the selected group.
+            </summary>
+            <short>
+            Remove group members
+            </short>
+            <param type="System.Guid, System" method="url" name="id">Group ID</param>
+            <param type="ASC.People.ApiModels.RequestDto.GroupRequestDto, ASC.People" name="inDto">Group request parameters</param>
+            <returns type="ASC.People.ApiModels.ResponseDto.GroupDto, ASC.People">Group with the detailed information</returns>
+            <path>api/2.0/groups/{id}/members</path>
+            <httpMethod>DELETE</httpMethod>
         </member>
     </members>
 </doc>
