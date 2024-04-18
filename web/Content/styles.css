@@ -853,7 +853,7 @@ a.header-tn-link:hover {
 
 /*footer*/
 .layout-table-footer {
-    padding: 72px 0 86px;
+    padding: 24px 0 24px;
     background-color: #333333;
     width: 100%;
     box-sizing: border-box;
@@ -973,10 +973,11 @@ a.header-tn-link:hover {
 } */
 
 .footer-info {
-    border-top: 1px solid #616161;
+    /*border-top: 1px solid #616161;
     padding-top: 24px;
-    margin-top: 24px;
+    margin-top: 24px;*/
     text-align: right;
+    margin-top: -60px;
 }
 
 .footer-text {
@@ -2666,6 +2667,8 @@ select:invalid {
     .footer-info {
         padding-top: 16px;
         text-align: center;
+        border-top: 1px solid #616161;
+        margin-top: 24px;
     }
 
     .footer-text {
@@ -3034,6 +3037,8 @@ select:invalid {
 
     .footer-info {
         margin-top: 32px;
+        border-top: 1px solid #616161;
+        padding-top: 24px;
     }
 
     .bottommenu {
