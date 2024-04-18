@@ -91,8 +91,8 @@ Asc.editor.installDeveloperPlugin("https://&lt;documentserver&gt;:&lt;port&gt;/c
                     <p>The plugin will appear in the <em>sdkjs-plugins</em> directory. The path to the folder depends on the operating system you use:</p>
                     <ul>
                         <li>For Linux - <em>/opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/</em></li>
-                        <li>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DesktopEditors\editors\sdkjs-plugins\</em></li>
-                        <li>For Mac OS - <em>/Applications/ONLYOFFICE.app/Contents/Resources/editors/sdkjs-plugins/</em></li>
+                        <li>For Windows - <em>\AppData\Local\ONLYOFFICE\DesktopEditors\data\sdkjs-plugins\</em></li>
+                        <li>For Mac OS - <em>/Library/Application Support/asc.onlyoffice.ONLYOFFICE/sdkjs-plugins/</em></li>
                     </ul>
                     <p>A plugin <b>GUID</b> will be used as the folder name. For example, <em>{07FD8DFA-DFE0-4089-AL24-0730933CC80A}</em>.</p>
                     <img alt="Sdkjs-plugins folder" class="screenshot" src="<%= Url.Content("~/content/img/plugins/sdkjs-plugins-folder.png") %>" />
