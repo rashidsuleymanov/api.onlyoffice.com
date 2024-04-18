@@ -3007,6 +3007,7 @@ select:invalid {
         padding-bottom: 8px;
         font-size: 13px;
         line-height: 24px;
+        cursor: pointer;
     }
 
     .footer-item-title.active::after {
