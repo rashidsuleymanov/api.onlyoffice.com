@@ -26,13 +26,13 @@
                         <a href="<%= Url.Action("example/photoeditor") %>">Photo editor</a>, 
                         <a href="<%= Url.Action("example/ocr") %>">OCR</a>.</p>
                     <p>You can run multiple visual plugins at the same time. For each plugin, a separate button will appear on the left toolbar.</p>
-                    <img alt="Visual plugins" class="screenshot" src="<%= Url.Content("~/content/img/plugins/visual-plugins.png") %>" />
+                    <img alt="Visual plugins" class="screenshot max-width-416" src="<%= Url.Content("~/content/img/plugins/visual-plugins.png") %>" />
                 </li>
                 <li>
                     <p><em>Non-visual (background) plugins</em> (<em>"isVisual": false</em>) provide a button (or buttons) to apply some transformations or manipulations to the document, 
                         like <a href="<%= Url.Action("example/helloworld") %>">Hello world</a>, <a href="<%= Url.Action("example/speech") %>">Speech</a>.
                         To access them, click the <b>Background Plugins</b> button on the top toolbar.</p>
-                    <img alt="Background plugins" class="screenshot" src="<%= Url.Content("~/content/img/plugins/background-plugins.png") %>" />
+                    <img alt="Background plugins" class="screenshot max-width-416" src="<%= Url.Content("~/content/img/plugins/background-plugins.png") %>" />
                 </li>
                 <li>
                     <p><em>An input helper</em> (<em>"events": ["onInputHelperClear", "onInputHelperInput"]</em>) plugin is a combo of both visual and non-visual plugins, 
