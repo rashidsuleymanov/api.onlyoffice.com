@@ -10,8 +10,8 @@
     <meta name="author" content="Ascensio System SIA" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>ONLYOFFICE Api Documentation -
-        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" /> - ONLYOFFICE Api Documentation
     </title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:900,800,700,600,500,400,300&subset=latin,cyrillic-ext,cyrillic,latin-ext" rel="stylesheet" type="text/css" />
