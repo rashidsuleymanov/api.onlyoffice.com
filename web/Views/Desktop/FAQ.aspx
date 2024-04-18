@@ -134,8 +134,8 @@ typeof window.AscDesktopEditor.cloudCryptoCommand === "function"
             <li>
                 <p>delete the <em>cloud_crypto.xml</em> file from the <em>sdkjs-plugins</em> directory. The path to the folder depends on the operating system you use:</p>
                 <ul style="list-style: none;">
-                    <li>For Linux - <em>/opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/</em></li>
-                    <li>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DesktopEditors\sdkjs-plugins\</em></li>
+                    <li>For Linux - <em>home/&lt;username&gt;/.local/share/onlyoffice/desktopeditors/sdkjs-plugins/</em></li>
+                    <li>For Windows - <em>C:\Users\&lt;username&gt;\AppData\Local\ONLYOFFICE\DesktopEditors\data\sdkjs-plugins\</em></li>
                 </ul>
             </li>
         </ul>
