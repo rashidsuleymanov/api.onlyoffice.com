@@ -429,14 +429,12 @@
              Groups API.
             </summary>
             <name>group</name>
-            <visible>false</visible>
         </member>
         <member name="M:ASC.People.Api.GroupController.#ctor(ASC.Core.UserManager,ASC.Api.Core.ApiContext,ASC.People.ApiModels.ResponseDto.GroupFullDtoHelper,ASC.MessagingSystem.Core.MessageService,ASC.MessagingSystem.EF.Model.MessageTarget,ASC.Core.PermissionContext,ASC.Files.Core.Security.FileSecurity)">
             <summary>
              Groups API.
             </summary>
             <name>group</name>
-            <visible>false</visible>
         </member>
         <member name="M:ASC.People.Api.GroupController.GetGroupsAsync(System.Nullable{System.Guid},System.Nullable{System.Boolean})">
             <summary>
