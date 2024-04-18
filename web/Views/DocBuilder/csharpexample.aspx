@@ -57,12 +57,12 @@
                     <p>In the <b>Add Website</b> dialog box specify the name of the folder with the .Net (C#) / .Net (C# MVC) project in the <b>Site name</b> box.</p>
                     <p>Specify the path to the folder with your project in the <b>Physical path</b> box.</p>
                     <p>Specify the unique value used only for this website in the <b>Port</b> box:</p>
-                    <img class="screenshot" alt="How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)" src="<%= Url.Content("~/content/img/docbuilder/csharp/sitename.png") %>">
+                    <img class="screenshot max-width-416" alt="How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)" src="<%= Url.Content("~/content/img/docbuilder/csharp/sitename.png") %>">
                 </li>
                 <li>
                     <h4>Check for the .NET platform version specified in IIS manager for you website</h4>
                     <p>Choose the <b>v4.0.</b> version for <b>.NET CLR Version</b> clicking the <b>Application Pool</b> then right-clicking the platform name select the <b>Set application pool defaults</b> and finally set the necessary <b>.NET CLR version</b>:</p>
-                    <img class="screenshot" alt="How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)" src="<%= Url.Content("~/content/img/docbuilder/csharp/platform.png") %>">
+                    <img class="screenshot max-width-416" alt="How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)" src="<%= Url.Content("~/content/img/docbuilder/csharp/platform.png") %>">
                 </li>
                 <li>
                     <h4>Browse your website with the IIS manager</h4>
