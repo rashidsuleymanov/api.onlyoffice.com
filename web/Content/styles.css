@@ -2839,6 +2839,11 @@ select {
     max-width: 550px;
 }
 
+.max-width-416 {
+    width: 100%;
+    max-width: 416px;
+}
+
 .max-width-400 {
     width: 100%;
     max-width: 400px;
