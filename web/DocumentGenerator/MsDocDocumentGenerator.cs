@@ -642,6 +642,10 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 {
                     var name = member.Element("type").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("type").Attribute("name").ValueOrNull();
                     var split = member.Element("type").ValueOrNull().Split(',');
+                    if (split[0].StartsWith("System.Nullable{") && split[0].EndsWith("}"))
+                    {
+                        split[0] = split[0].Substring("System.Nullable{".Length, split[0].Length - "System.Nullable{".Length - 1);
+                    }
                     var newMembers = GetResponse(split[0], split[1].Trim());
 
                     if (newMembers != null)
