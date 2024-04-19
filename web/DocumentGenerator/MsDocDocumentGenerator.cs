@@ -820,9 +820,14 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                         humanName = humanNameAssembly;
                     }
 
-                    if (p.Name == "inDto" && p.Dto == null)
+                    if (p.Dto == null && (p.Name == "inDto" || p.Name == "inQueryDto"))
                     {
                         p.Dto = ExpandDto(GetOnlyName(p.Type), assembly);
+
+                        if (p.Name == "inQueryDto")
+                        {
+                            p.Method = "url";
+                        }
                     }
                 }
 
@@ -834,6 +839,16 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             var query = false;
             urlParams.ForEach(p =>
             {
+                if (p.Key.Name == "inQueryDto")
+                {
+                    foreach(var kv in p.Value.JsonParam as Dictionary<string, object>)
+                    {
+                        path += string.Format("{0}{1}={2}", query ? "&" : "?", kv.Key, HttpUtility.UrlEncode(JsonConvert.SerializeObject(kv.Value, Newtonsoft.Json.Formatting.Indented)));
+                        query = true;
+                    }
+                    return;
+                }
+
                 if (p.Value.JsonParam == null)
                 {
                     return;
