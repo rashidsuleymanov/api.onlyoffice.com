@@ -4457,33 +4457,31 @@
             <returns type="ASC.Webhooks.Core.Webhook, ASC.Webhooks.Core">Webhook settings</returns>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveWhiteLabelSettingsAsync(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelRequestsDto,ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto)">
-             <summary>
-             Saves the white label settings specified in the request.
-             </summary>
-             <short>
-             Save the white label settings
-             </short>
-             <category>Rebranding</category>
-             <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelRequestsDto, ASC.Web.Api" name="inDto">Request parameters for white label settings</param>
-             <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto, ASC.Web.Api" name="inQueryDto">White label request parameters</param>
-             <returns type="System.Boolean, System">Boolean value: true if the operation is sucessful</returns>
-             <path>api/2.0/settings/whitelabel/save</path>
-             <httpMethod>POST</httpMethod>
-            <visible>false</visible>
+            <summary>
+            Saves the white label settings specified in the request.
+            </summary>
+            <short>
+            Save the white label settings
+            </short>
+            <category>Rebranding</category>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelRequestsDto, ASC.Web.Api" name="inDto">Request parameters for white label settings</param>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto, ASC.Web.Api" name="inQueryDto">White label request parameters</param>
+            <returns type="System.Boolean, System">Boolean value: true if the operation is sucessful</returns>
+            <path>api/2.0/settings/whitelabel/save</path>
+            <httpMethod>POST</httpMethod>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveWhiteLabelSettingsFromFilesAsync(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto)">
-             <summary>
-             Saves the white label settings from files.
-             </summary>
-             <short>
-             Save the white label settings from files
-             </short>
-             <category>Rebranding</category>
-             <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto, ASC.Web.Api" name="inQueryDto">White label request parameters</param>
-             <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
-             <path>api/2.0/settings/whitelabel/savefromfiles</path>
-             <httpMethod>POST</httpMethod>
-            <visible>false</visible>
+            <summary>
+            Saves the white label settings from files.
+            </summary>
+            <short>
+            Save the white label settings from files
+            </short>
+            <category>Rebranding</category>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto, ASC.Web.Api" name="inQueryDto">White label request parameters</param>
+            <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
+            <path>api/2.0/settings/whitelabel/savefromfiles</path>
+            <httpMethod>POST</httpMethod>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetWhiteLabelLogosAsync(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto)">
             <summary>
@@ -4499,7 +4497,6 @@
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>false</requiresAuthorization>
             <collection>list</collection>
-            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetIsDefaultWhiteLabelLogos(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto)">
             <summary>
@@ -4513,21 +4510,19 @@
             <path>api/2.0/settings/whitelabel/logos/isdefault</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetWhiteLabelLogoTextAsync(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto)">
-             <summary>
-             Returns the white label logo text.
-             </summary>
-             <short>
-             Get the white label logo text
-             </short>
-             <category>Rebranding</category>
-             <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto, ASC.Web.Api" name="inQueryDto">White label request parameters</param>
-             <returns type="System.Object, System">Logo text</returns>
-             <path>api/2.0/settings/whitelabel/logotext</path>
-             <httpMethod>GET</httpMethod>
-            <visible>false</visible>
+            <summary>
+            Returns the white label logo text.
+            </summary>
+            <short>
+            Get the white label logo text
+            </short>
+            <category>Rebranding</category>
+            <param type="ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto, ASC.Web.Api" name="inQueryDto">White label request parameters</param>
+            <returns type="System.Object, System">Logo text</returns>
+            <path>api/2.0/settings/whitelabel/logotext</path>
+            <httpMethod>GET</httpMethod>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.RestoreWhiteLabelOptionsAsync(ASC.Web.Api.ApiModel.RequestsDto.WhiteLabelQueryRequestsDto)">
             <summary>
@@ -4541,7 +4536,6 @@
             <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
             <path>api/2.0/settings/whitelabel/restore</path>
             <httpMethod>PUT</httpMethod>
-            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetLicensorDataAsync">
             <summary>
@@ -4553,7 +4547,6 @@
             <path>api/2.0/settings/companywhitelabel</path>
             <httpMethod>GET</httpMethod>
             <collection>list</collection>
-            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveCompanyWhiteLabelSettingsAsync(ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettingsWrapper)">
             <summary>
@@ -4565,18 +4558,16 @@
             <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
             <path>api/2.0/settings/rebranding/company</path>
             <httpMethod>POST</httpMethod>
-            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetCompanyWhiteLabelSettingsAsync">
-             <summary>
-             Returns the company white label settings.
-             </summary>
-             <category>Rebranding</category>
-             <short>Get the company white label settings</short>
-             <returns type="ASC.Web.Api.ApiModels.ResponseDto.CompanyWhiteLabelSettingsDtov, ASC.Web.Api">Company white label settings</returns>
-             <path>api/2.0/settings/rebranding/company</path>
-             <httpMethod>GET</httpMethod>
-            <visible>false</visible>
+            <summary>
+            Returns the company white label settings.
+            </summary>
+            <category>Rebranding</category>
+            <short>Get the company white label settings</short>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.CompanyWhiteLabelSettingsDtov, ASC.Web.Api">Company white label settings</returns>
+            <path>api/2.0/settings/rebranding/company</path>
+            <httpMethod>GET</httpMethod>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.DeleteCompanyWhiteLabelSettingsAsync">
             <summary>
@@ -4587,41 +4578,37 @@
             <returns type="ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings, ASC.Web.Core">Default company white label settings</returns>
             <path>api/2.0/settings/rebranding/company</path>
             <httpMethod>DELETE</httpMethod>
-            <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveAdditionalWhiteLabelSettingsAsync(ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsWrapper)">
-             <summary>
-             Saves the additional white label settings specified in the request.
-             </summary>
-             <category>Rebranding</category>
-             <short>Save the additional white label settings</short>
-             <param type="ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsWrapper, ASC.Web.Core" name="wrapper">Additional white label settings</param>
-             <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
-             <path>api/2.0/settings/rebranding/additional</path>
-             <httpMethod>POST</httpMethod>
-            <visible>false</visible>
+            <summary>
+            Saves the additional white label settings specified in the request.
+            </summary>
+            <category>Rebranding</category>
+            <short>Save the additional white label settings</short>
+            <param type="ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettingsWrapper, ASC.Web.Core" name="wrapper">Additional white label settings</param>
+            <returns type="System.Boolean, System">Boolean value: true if the operation is successful</returns>
+            <path>api/2.0/settings/rebranding/additional</path>
+            <httpMethod>POST</httpMethod>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetAdditionalWhiteLabelSettingsAsync">
-             <summary>
-             Returns the additional white label settings.
-             </summary>
-             <category>Rebranding</category>
-             <short>Get the additional white label settings</short>
-             <returns type="ASC.Web.Api.ApiModels.ResponseDto.AdditionalWhiteLabelSettingsDto, ASC.Web.Api">Additional white label settings</returns>
-             <path>api/2.0/settings/rebranding/additional</path>
-             <httpMethod>GET</httpMethod>
-            <visible>false</visible>
+            <summary>
+            Returns the additional white label settings.
+            </summary>
+            <category>Rebranding</category>
+            <short>Get the additional white label settings</short>
+            <returns type="ASC.Web.Api.ApiModels.ResponseDto.AdditionalWhiteLabelSettingsDto, ASC.Web.Api">Additional white label settings</returns>
+            <path>api/2.0/settings/rebranding/additional</path>
+            <httpMethod>GET</httpMethod>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.DeleteAdditionalWhiteLabelSettingsAsync">
-             <summary>
-             Deletes the additional white label settings.
-             </summary>
-             <category>Rebranding</category>
-             <short>Delete the additional white label settings</short>
-             <returns type="ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings, ASC.Web.Core">Default additional white label settings</returns>
-             <path>api/2.0/settings/rebranding/additional</path>
-             <httpMethod>DELETE</httpMethod>
-            <visible>false</visible>
+            <summary>
+            Deletes the additional white label settings.
+            </summary>
+            <category>Rebranding</category>
+            <short>Delete the additional white label settings</short>
+            <returns type="ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings, ASC.Web.Core">Default additional white label settings</returns>
+            <path>api/2.0/settings/rebranding/additional</path>
+            <httpMethod>DELETE</httpMethod>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.SaveMailWhiteLabelSettingsAsync(ASC.Web.Core.WhiteLabel.MailWhiteLabelSettings)">
              <summary>
@@ -4670,15 +4657,14 @@
             <visible>false</visible>
         </member>
         <member name="M:ASC.Web.Api.Controllers.Settings.WhitelabelController.GetEnableWhitelabelAsync">
-             <summary>
-             Checks if the white label is enabled or not.
-             </summary>
-             <category>Rebranding</category>
-             <short>Check the white label availability</short>
-             <returns type="System.Boolean, System">Boolean value: true if the white label is enabled</returns>
-             <path>api/2.0/settings/enableWhitelabel</path>
-             <httpMethod>GET</httpMethod>
-            <visible>false</visible>
+            <summary>
+            Checks if the white label is enabled or not.
+            </summary>
+            <category>Rebranding</category>
+            <short>Check the white label availability</short>
+            <returns type="System.Boolean, System">Boolean value: true if the white label is enabled</returns>
+            <path>api/2.0/settings/enableWhitelabel</path>
+            <httpMethod>GET</httpMethod>
         </member>
         <member name="T:ASC.Web.Api.Controllers.ThirdPartyController">
             <summary>
