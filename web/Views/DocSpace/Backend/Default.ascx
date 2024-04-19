@@ -8,12 +8,19 @@
     The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/DELETE.
         All the resources, like posts or comments, have their own URLs and are designed to be manipulated in isolation.
 </p>
-<h2>Authentication
-</h2>
+<h2>Authentication</h2>
 <p>
     Authentication in the ONLYOFFICE DocSpace API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header.
         For information and examples please visit the <a href="<%= Url.Action("backend/auth") %>">Authentication</a> section.
 </p>
+<h2 id="auth-restrictions" class="copy-link">Restrictions on authentication requests</h2>
+<p>Please pay attention to some restrictions on autentication requests:</p>
+<ul>
+    <li>You can perform up to 1500 authentication requests per minute.</li>
+    <li>You can perform up to 50 simultaneous GET authentication requests.</li>
+    <li>You can perform up to 15 simultaneous authentication requests of any type except GET.</li>
+    <li>Some methods have additional restrictions. For example, you can perform up to 5 authentication requests per minute to collect passwords.</li>
+</ul>
 <h2>Making requests
 </h2>
 <p>
