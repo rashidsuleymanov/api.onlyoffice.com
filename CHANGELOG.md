@@ -1,6 +1,7 @@
 # Change Log
 
 ##
+- desktop: v8.1
 - editors: added the information about the favIconUrl parameter to the WOPI discovery
 - docbuilder: new samples
 - editors: config to clipboard

@@ -17,6 +17,9 @@
 
     <p class="dscr">The list of changes for ONLYOFFICE Desktop Editors API.</p>
 
+    <h2 id="81" class="copy-link">Version 8.1</h2>
+
+
     <h2 id="75" class="copy-link">Version 7.5</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("addingdms/changingtheme") %>">portal:uitheme</a> command to the <em>execCommand</em> method.</li>
