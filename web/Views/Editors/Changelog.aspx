@@ -18,6 +18,8 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="81" class="copy-link">Version 8.1</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("howitworks") %>#shardkey">shardkey</a> parameter to the URL query string when sending requests to the document command service,
+            document conversion service, or document builder service.</li>
         <li>Added the <a href="<%= Url.Action("connector") %>#addContextMenuItem">addContextMenuItem</a>, <a href="<%= Url.Action("connector") %>#addToolbarMenuItem ">addToolbarMenuItem</a>
             and <a href="<%= Url.Action("connector") %>#updateContextMenuItem">updateContextMenuItem</a> methods to the <em>Automation API</em>.</li>
         <li>Added the <a href="<%= Url.Action("conversionapi") %>#error-codes">-10 error code</a> to the Conversion API.</li>
