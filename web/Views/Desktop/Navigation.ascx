@@ -51,6 +51,9 @@
                     <a href="<%= Url.Action("addingdms/changingtheme") %>">Changing a theme</a>
                 </li>
                 <li>
+                    <a href="<%= Url.Action("addingdms/gettingviewportsettings") %>">Getting viewport settings</a>
+                </li>
+                <li>
                     <a href="<%= Url.Action("addingdms/encryption") %>">Encryption</a>
                     <ul>
                         <li>

@@ -1,6 +1,7 @@
 # Change Log
 
 ##
+- desktop: added the getViewportSettings method and onViewportSettingsChanged event to the AscDesktopEditor object
 - desktop: v8.1
 - editors: added the information about the favIconUrl parameter to the WOPI discovery
 - docbuilder: new samples

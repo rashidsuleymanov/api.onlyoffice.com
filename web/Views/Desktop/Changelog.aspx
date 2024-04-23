@@ -18,7 +18,10 @@
     <p class="dscr">The list of changes for ONLYOFFICE Desktop Editors API.</p>
 
     <h2 id="81" class="copy-link">Version 8.1</h2>
-
+    <ul>
+        <li>Added the <a href="<%= Url.Action("addingdms/gettingviewportsettings") %>">getViewportSettings</a> method to the <em>AscDesktopEditor</em> object.</li>
+        <li>Added the <a href="<%= Url.Action("addingdms/gettingviewportsettings") %>">onViewportSettingsChanged</a> event to the <em>AscDesktopEditor</em> object.</li>
+    </ul>
 
     <h2 id="75" class="copy-link">Version 7.5</h2>
     <ul>
