@@ -20,7 +20,7 @@
         The requests are sent to the <span class="fakelink">https://documentserver/docbuilder</span> address where <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
     </p>
     <p>Starting from version 8.1, it is recommended to add the <a href="<%= Url.Action("howitworks") %>#shardkey">shardkey</a> parameter to the URL <em>QueryString</em> with the <em>key</em> value in it.
-        For example, <em>?shardkey=Khirz6zTPdfd7</em>. This allows you to distribute requests for a document to different instances.</p>
+        For example, <em>?shardkey=Khirz6zTPdfd7</em>. This allows you to load balance requests.</p>
 
     <h2>Parameters and their description:</h2>
     <table class="table">

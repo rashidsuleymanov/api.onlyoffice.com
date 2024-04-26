@@ -20,7 +20,7 @@
         The requests are sent to the <span class="fakelink">https://documentserver/ConvertService.ashx</span> address where <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
     </p>
     <p>Starting from version 8.1, it is recommended to add the <a href="<%= Url.Action("howitworks") %>#shardkey">shardkey</a> parameter to the URL <em>QueryString</em> with the <em>key</em> value in it.
-        For example, <em>?shardkey=Khirz6zTPdfd7</em>. This allows you to distribute requests for a document to different instances.</p>
+        For example, <em>?shardkey=Khirz6zTPdfd7</em>. This allows you to load balance requests.</p>
 
     <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
 
