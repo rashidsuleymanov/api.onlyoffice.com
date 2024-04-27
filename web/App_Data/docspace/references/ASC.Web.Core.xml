@@ -241,7 +241,7 @@
              <summary>
                Looks up a localized string similar to h3.New portal has been registered
             
-            # Portal url: &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;
+            # Portal URL: &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot;
             # First name: $UserName
             # Last name: $UserLastName
             # Email: $UserEmail
@@ -1854,6 +1854,11 @@
         <member name="P:ASC.Web.Core.PublicResources.Resource.MessageEmailChangeInstuctionsSentOnEmail">
             <summary>
               Looks up a localized string similar to The email change instructions have been successfully sent.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.PublicResources.Resource.MessagePasswordSendedToEmail">
+            <summary>
+              Looks up a localized string similar to The password change instruction has been sent to {0} email address..
             </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.MessageYourPasswordSendedToEmail">
