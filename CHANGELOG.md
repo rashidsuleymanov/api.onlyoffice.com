@@ -1,10 +1,13 @@
 # Change Log
 
-##
-- docbuilder: new samples
+## 4.7.0
+- docspace: storybook v2.5
+- docspace: v2.5
+- editors: added the information about the favIconUrl parameter to the WOPI discovery
 - editors: config to clipboard
 - editors: added the Setting avatars page to How it works
 - editors: try ppsx
+- docbuilder: new samples
 
 ## 4.6.0
 - docspace: fix examples for dto

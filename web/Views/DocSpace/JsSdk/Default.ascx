@@ -26,7 +26,7 @@ You only need a few lines of JavaScript to set up a fully functional integration
     &lt;head&gt;
         &lt;meta charset="UTF-8"&gt;
         &lt;title&gt;DocSpace JavaScript SDK&lt;/title&gt;
-        &lt;script src="{PORTAL_SRC}/static/scripts/api.js"&gt;&lt;/script&gt;
+        &lt;script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"&gt;&lt;/script&gt;
     &lt;/head&gt;
     &lt;body&gt;
         &lt;div id="ds-frame"&gt;&lt;/div&gt;
@@ -34,7 +34,7 @@ You only need a few lines of JavaScript to set up a fully functional integration
 &lt;/html&gt;
 </pre>
         <p>The API JavaScript file can normally be found in the following DocSpace folder:</p>
-        <p><b>{PORTAL_SRC}/static/scripts/api.js</b></p>
+        <p><b>{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js</b></p>
         <p>where <b>{PORTAL_SRC}</b> is the name of the server with the ONLYOFFICE DocSpace installed.</p>
 
 <h2>Step 2. Getting the base class</h2>

@@ -24,28 +24,28 @@
       "id":"jssdk",
       "title":"JavaScript SDK",
       "description":"In this section, you will learn how to connect DocSpace as a frame to your website using api.js. You can embed an entire DocSpace portal, a single room, or a document.",
-      "version":"2.0",
+      "version":"2.5",
       "parent": "docspace"
    },
    {
       "id":"pluginssdk",
       "title":"Plugins SDK",
       "description":"In this section, you will learn how to create your own plugins and add them to the DocSpace portal.",
-      "version":"2.0",
+      "version":"2.5",
       "parent": "docspace"
    },
    {
       "id":"backend",
       "title":"API Backend",
       "description":"In this section, you will learn how to integrate ONLYOFFICE DocSpace into your own application and interact with its backend using the DocSpace API Backend  which is implemented as REST over HTTP using GET/POST/PUT/DELETE.",
-      "version":"2.0",
+      "version":"2.5",
       "parent": "docspace"
    },
    {
       "id":"apisystem",
       "title":"For hosting providers",
       "description":"In this section, you will learn how to provide the DocSpace portal as a SaaS solution on your own servers using our API methods.",
-      "version":"2.0",
+      "version":"2.5",
       "parent": "docspace"
    },
    {
