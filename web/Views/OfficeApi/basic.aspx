@@ -14,6 +14,10 @@
         <span class="hdr">Overview</span>
     </h1>
 
+    <div class="pvl_wrapper">
+        <span class="pvl_product">Office JavaScript API</span><span class="pvl_version">v<%= Products.Get("officeapi").Version %></span>
+    </div>
+
     <p class="dscr">As any document is a composite object consisting of a tree of larger nodes (paragraphs and tables) where it is possible to insert smaller document elements (text runs, images, charts, shapes),
         <b>Office API</b> allows to insert the content and format it to your liking quickly and easily.
     </p>
