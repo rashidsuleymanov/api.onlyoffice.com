@@ -11,7 +11,7 @@
       "title": "Docs",
       "description": "In this section, you will learn how to bring document editing and co-authoring to your web app users, set up, configure and integrate ONLYOFFICE Docs, extend its functionality using your own plugins/macros, and integrate document editors into the desktop applications. You will also find the information on how to use Document Builder to generate documents easily without running document editors.",
       "abstract": "ONLYOFFICE Docs is a collaborative office suite that includes editors for text documents, spreadsheets, presentations, fillable forms, and PDFs.",
-      "sections": [ "officeapi", "editors", "plugin", "docbuilder", "desktop" ]
+      "sections": [ "editors", "officeapi", "plugin", "docbuilder", "desktop" ]
    },
    {
       "id": "portals",
@@ -49,17 +49,17 @@
       "parent": "docspace"
    },
    {
-      "id":"officeapi",
-      "title":"Office API",
-      "description":"In this section, you will learn how to use our JavaScript library to write code for your plugins, macros, builder scripts, etc. This library contains classes and methods for every document type: Text document API, Spreadsheet API, Presentation API, and Form API.",
-      "version": "8.0",
-      "parent": "docs"
-   },
-   {
       "id":"editors",
       "title":"Docs API",
       "description":"In this section, you will learn how to bring document editing and co-authoring to your web app users, set up, configure, and integrate ONLYOFFICE Docs.",
       "version":"8.0",
+      "parent": "docs"
+   },
+   {
+      "id":"officeapi",
+      "title":"Office API",
+      "description":"In this section, you will learn how to use our JavaScript library to write code for your plugins, macros, builder scripts, etc. This library contains classes and methods for every document type: Text document API, Spreadsheet API, Presentation API, and Form API.",
+      "version": "8.0",
       "parent": "docs"
    },
    {
