@@ -1,5 +1,10 @@
 # Change Log
 
+##
+- redesign main page
+- redesign header and footer
+- selection of three products: docspace, docs, workspace
+
 ## 4.7.0
 - docspace: storybook v2.5
 - docspace: v2.5
