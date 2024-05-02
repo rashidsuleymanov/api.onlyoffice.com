@@ -6,7 +6,7 @@
 </h1>
 
 <p class="dscr">Opens the file selector and allows you to select a file from a list of available files.</p>
-<img alt="File-selector mode" class="screenshot max-width-400" src="<%= Url.Content("~/content/img/docspace/file-selector-mode.png") %>" />
+<img class="screenshot max-width-550" alt="File-selector mode" src="<%= Url.Content("~/content/img/docspace/file-selector-mode.png") %>" />
 
 <div class="header-gray">Method</div>
 <table class="table hover">

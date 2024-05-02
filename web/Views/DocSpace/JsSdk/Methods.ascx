@@ -23,6 +23,7 @@ var docSpace = DocSpace.SDK.initManager({config});
     <li><a href="#getFolders">getFolders</a></li>
     <li><a href="#getHashSettings">getHashSettings</a></li>
     <li><a href="#getList">getList</a></li>
+    <li><a href="#getRooms">getRooms</a></li>
     <li><a href="#getSelection">getSelection</a></li>
     <li><a href="#getUserInfo">getUserInfo</a></li>
     <li><a href="#initEditor">initEditor</a></li>
@@ -37,6 +38,7 @@ var docSpace = DocSpace.SDK.initManager({config});
     <li><a href="#openModal">openModal</a></li>
     <li><a href="#removeTagsFromRoom">removeTagsFromRoom</a></li>
     <li><a href="#setConfig">setConfig</a></li>
+    <li><a href="#setIsLoaded">setIsLoaded</a></li>
     <li><a href="#setListView">setListView</a></li>
 </ul>
 
@@ -355,6 +357,39 @@ docSpace.getHashSettings();
         <pre>
 docSpace.getList();
 </pre>
+    </li>
+    <li>
+        <p>
+            <b id="getRooms" class="copy-link">getRooms</b> - returns the information about rooms according to the specified filter parameters.
+        </p>
+        <pre>
+docSpace.getRooms(filter);
+</pre>
+        <table class="table">
+            <colgroup>
+                <col class="table-name" />
+                <col />
+                <col class="table-type" />
+                <col class="table-example" />
+            </colgroup>
+            <thead>
+                <tr class="tablerow">
+                    <td>Parameter</td>
+                    <td>Description</td>
+                    <td>Type</td>
+                    <td>Presence</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tablerow">
+                    <td>filter</td>
+                    <td>The room <a href="https://github.com/ONLYOFFICE/DocSpace-client/blob/master/packages/common/api/rooms/filter.js#L116" target="_blank">filter parameters</a>.</td>
+                    <td>object</td>
+                    <td>required</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mobile-content"></div>
     </li>
     <li>
         <p>
@@ -755,6 +790,14 @@ docSpace.setConfig(config);
             </tbody>
         </table>
         <div class="mobile-content"></div>
+    </li>
+    <li>
+        <p>
+            <b id="setIsLoaded" class="copy-link">setIsLoaded</b> - disables the loader in the SDK window.
+        </p>
+        <pre>
+docSpace.setIsLoaded();
+</pre>
     </li>
     <li>
         <p>

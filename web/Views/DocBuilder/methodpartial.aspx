@@ -171,7 +171,7 @@
 
             connector.callCommand(
                 "function () {" +
-                "<%= Regex.Replace(method.Example.Script.Replace("\"", "\\\"").Replace("builder.CreateFile", "").Replace("builder.SaveFile", "").Replace("builder.CloseFile()", ""), "\\r*\\n", "") %>" +
+                "<%= Regex.Replace(method.Example.Script.Replace("\\", "\\\\").Replace("\"", "\\\"").Replace("builder.CreateFile", "").Replace("builder.SaveFile", "").Replace("builder.CloseFile()", ""), "\\r*\\n", "") %>" +
                 "}"
             );
         };
