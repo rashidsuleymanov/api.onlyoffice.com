@@ -10,5 +10,5 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <%= Html.Partial("Backend/"+ (Model ?? "Default")) %>
+    <%= Html.Partial("WorkspaceApi/"+ (Model ?? "Default")) %>
 </asp:Content>

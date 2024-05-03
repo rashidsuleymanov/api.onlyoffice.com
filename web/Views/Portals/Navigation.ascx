@@ -16,16 +16,16 @@
         }
         switch (currentViewName)
         {
-            case "backend":
+            case "workspaceapi":
                 if (entryPoints != null && entryPoints.Any())
                 { %>
                     <div class="treeheader">Get Started</div>
                     <ul class="side-nav root">
                         <li>
-                            <a href="<%= Url.Action("backend/") %>">Basic concepts</a>
+                            <a href="<%= Url.Action("workspaceapi/") %>">Basic concepts</a>
                         </li>
                         <li>
-                            <a href="<%= Url.Action("backend/auth") %>">Passing authentication</a>
+                            <a href="<%= Url.Action("workspaceapi/auth") %>">Passing authentication</a>
                         </li>
                     </ul>
                     <div class="treeheader">API backend</div>
@@ -76,13 +76,13 @@
                     <div class="treeheader">More information</div>
                     <ul class="side-nav root">
                         <li>
-                            <a href="<%= Url.Action("backend/faq") %>">FAQ</a>
+                            <a href="<%= Url.Action("workspaceapi/faq") %>">FAQ</a>
                         </li>
                         <li>
-                            <a href="<%= Url.Action("backend/filters") %>">Filtering</a>
+                            <a href="<%= Url.Action("workspaceapi/filters") %>">Filtering</a>
                         </li>
                         <li>
-                            <a href="<%= Url.Action("backend/batch") %>">Batching</a>
+                            <a href="<%= Url.Action("workspaceapi/batch") %>">Batching</a>
                         </li>
                     </ul>
             <%  }

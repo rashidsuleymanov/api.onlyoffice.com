@@ -46,11 +46,11 @@ namespace ASC.Api.Web.Help.Controllers
 
         private readonly string[] _actionMap = new[]
             {
-                "Backend",
-                "Backend/Auth",
-                "Backend/Faq",
-                "Backend/Filters",
-                "Backend/Batch",
+                "WorkspaceApi",
+                "WorkspaceApi/Auth",
+                "WorkspaceApi/Faq",
+                "WorkspaceApi/Filters",
+                "WorkspaceApi/Batch",
                 "ApiSystem",
                 "ApiSystem/Authentication",
                 "ApiSystem/Faq",
@@ -78,15 +78,15 @@ namespace ASC.Api.Web.Help.Controllers
             return View("ApiSystem", (object)catchall);
         }
 
-        public ActionResult Backend(string catchall)
+        public ActionResult WorkspaceApi(string catchall)
         {
-            ViewData["viewName"] = "backend";
+            ViewData["viewName"] = "workspaceapi";
 
-            if (!_actionMap.Contains("backend/" + catchall, StringComparer.OrdinalIgnoreCase))
+            if (!_actionMap.Contains("workspaceapi/" + catchall, StringComparer.OrdinalIgnoreCase))
             {
                 catchall = null;
             }
-            return View("Backend", (object)catchall);
+            return View("WorkspaceApi", (object)catchall);
         }
 
         public ActionResult Index()
@@ -107,7 +107,7 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Section(string section, string category)
         {
-            ViewData["viewName"] = "backend";
+            ViewData["viewName"] = "workspaceapi";
 
             if (string.IsNullOrEmpty(section))
             {
@@ -149,7 +149,7 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Method(string section, string type, string url)
         {
-            ViewData["viewName"] = "backend";
+            ViewData["viewName"] = "workspaceapi";
 
             if (string.IsNullOrEmpty(section))
                 return View("sectionnotfound");
