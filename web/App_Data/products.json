@@ -18,7 +18,7 @@
       "title": "Workspace",
       "description": "In this section, you will learn how to integrate ONLYOFFICE Workspace into your own application and interact with its backend using the Workspace API Backend. This solution is provided without editors, you need to install ONLYOFFICE Docs separately. You can also host a portal and interact with it using our methods for hosting providers.",
       "abstract": "ONLYOFFICE Workspace is a collaborative cloud platform that allows users to manage documents, projects, emails, client relations, and timetables in one place.",
-      "sections": [ "backend", "apisystem" ]
+      "sections": [ "workspaceapi", "apisystem" ]
    },
    {
       "id":"jssdk",
@@ -84,7 +84,7 @@
       "version":"8.0"
    },
    {
-      "id":"backend",
+      "id":"workspaceapi",
       "title":"API Backend",
       "description":"In this section, you will learn how to integrate ONLYOFFICE Workspace into your own application and interact with its backend using the Workspace API Backend which is implemented as REST over HTTP using GET/POST/PUT/DELETE. This solution is provided without editors, you need to install ONLYOFFICE Docs separately.",
       "version": "12.6",

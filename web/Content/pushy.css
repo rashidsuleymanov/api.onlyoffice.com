@@ -205,13 +205,13 @@ a.pushy-submenu-item {
 
 .pushy-dropdown a.backend::before,
 .pushy-dropdown a.officeapi::before,
-.pushy-dropdown a.section::before {
+.pushy-dropdown a.workspaceapi::before {
     background-image: url("img/header/api.svg");
 }
 
 .theme-dark .pushy-dropdown a.backend::before,
 .theme-dark .pushy-dropdown a.officeapi::before,
-.theme-dark .pushy-dropdown a.section::before {
+.theme-dark .pushy-dropdown a.workspaceapi::before {
     background-image: url("img/header/api-dark.svg");
 }
 
