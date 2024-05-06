@@ -78,6 +78,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "JsSdk/Config",
                 "JsSdk/Methods",
                 "JsSdk/Events",
+                "JsSdk/SampleOpenFile",
                 "PluginsSdk",
                 "PluginsSdk/BuildingPlugin",
                 "PluginsSdk/Config",

@@ -53,6 +53,16 @@
             <li>
                 <a href="<%= Url.Action("jssdk/events") %>">Events</a>
             </li>
+            <li>
+                Samples
+                <ul>
+                    <li>
+                        <a href="<%= Url.Action("jssdk/sampleopenfile") %>">Open file ins editors</a>
+                    </li>
+                </ul>
+            </li>
+            
+            
         </ul>
 
         <div class="treeheader">Plugins SDK</div>
