@@ -20,7 +20,7 @@
                 <div class="main-item-more"><a href="<%= Url.Action(product.Sections == null ? "basic": "index", product.Id) %>">More</a></div>
             </div>
             <div class="main-item-img mobile">
-                <span class="img"></span>
+                <a href="<%= Url.Action(product.Sections == null ? "basic": "index", product.Id) %>"><span class="img"></span></a>
             </div>
         </div>
 
@@ -43,6 +43,6 @@
         </ul>
     </div>
     <div class="main-item-img desktop">
-        <span class="img"></span>
+        <a href="<%= Url.Action(product.Sections == null ? "basic": "index", product.Id) %>"><span class="img"></span></a>
     </div>
 </div>
