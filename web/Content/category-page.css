@@ -176,14 +176,21 @@
     background-image: url("img/category-page/desktop-dark.svg");
 }
 
-.category-item-title.backend:before,
-.category-item-title.section:before {
+.category-item-title.backend:before {
     background-image: url("img/category-page/api.svg");
 }
 
 .theme-dark .category-item-title.backend:before,
 .theme-dark .category-item-title.section:before {
     background-image: url("img/category-page/api-dark.svg");
+}
+
+.category-item-title.workspaceapi:before {
+    background-image: url("img/category-page/workspace-api.svg");
+}
+
+.theme-dark .category-item-title.workspaceapi:before {
+    background-image: url("img/category-page/workspace-api-dark.svg");
 }
 
 .category-item-title.apisystem:before {

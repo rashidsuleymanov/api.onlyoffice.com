@@ -4,7 +4,7 @@
     <span class="hdr">Basic concepts</span>
 </h1>
 
-<%var product = Products.GetSection("portals", "backend"); %>
+<%var product = Products.GetSection("portals", "workspaceapi"); %>
 
 <div class="pvl_wrapper">
     <span class="pvl_product">ONLYOFFICE Workspace <%= product.Title %></span><span class="pvl_version">v<%= product.Version %></span>
@@ -18,7 +18,7 @@
 </h2>
 <p>
     Authentication in the ONLYOFFICE Workspace API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header.
-        For information and examples please visit the <a href="<%= Url.Action("backend/auth") %>">Authentication</a> section.
+        For information and examples please visit the <a href="<%= Url.Action("workspaceapi/auth") %>">Authentication</a> section.
 </p>
 <h2>Making requests
 </h2>

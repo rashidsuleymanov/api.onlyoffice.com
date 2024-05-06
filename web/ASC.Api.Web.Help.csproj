@@ -2436,6 +2436,8 @@
     <Content Include="Content\img\category-page\plugins.svg" />
     <Content Include="Content\img\category-page\self-hosted-dark.svg" />
     <Content Include="Content\img\category-page\self-hosted.svg" />
+    <Content Include="Content\img\category-page\workspace-api.svg" />
+    <Content Include="Content\img\category-page\workspace-api-dark.svg" />
     <Content Include="Content\img\close.svg" />
     <Content Include="Content\img\code-dark.svg" />
     <Content Include="Content\img\code.svg" />
@@ -2776,6 +2778,8 @@
     <Content Include="Content\img\main-page\plugins.svg" />
     <Content Include="Content\img\main-page\self-hosted-dark.svg" />
     <Content Include="Content\img\main-page\self-hosted.svg" />
+    <Content Include="Content\img\main-page\workspace-api.svg" />
+    <Content Include="Content\img\main-page\workspace-api-dark.svg" />
     <Content Include="Content\img\main-page\workspace-dark.png" />
     <Content Include="Content\img\main-page\workspace-light.png" />
     <Content Include="Content\img\menu.svg" />
@@ -5071,12 +5075,12 @@
     <Content Include="Views\Portals\ApiSystem\TariffSection.ascx" />
     <Content Include="Views\Portals\ApiSystem\TariffSection\TariffGet.ascx" />
     <Content Include="Views\Portals\ApiSystem\TariffSection\TariffSet.ascx" />
-    <Content Include="Views\Portals\Backend.aspx" />
-    <Content Include="Views\Portals\Backend\Auth.ascx" />
-    <Content Include="Views\Portals\Backend\Batch.ascx" />
-    <Content Include="Views\Portals\Backend\Default.ascx" />
-    <Content Include="Views\Portals\Backend\Faq.ascx" />
-    <Content Include="Views\Portals\Backend\Filters.ascx" />
+    <Content Include="Views\Portals\WorkspaceApi.aspx" />
+    <Content Include="Views\Portals\WorkspaceApi\Auth.ascx" />
+    <Content Include="Views\Portals\WorkspaceApi\Batch.ascx" />
+    <Content Include="Views\Portals\WorkspaceApi\Default.ascx" />
+    <Content Include="Views\Portals\WorkspaceApi\Faq.ascx" />
+    <Content Include="Views\Portals\WorkspaceApi\Filters.ascx" />
     <Content Include="Views\Portals\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\Portals\Help.ascx" />
     <Content Include="Views\Portals\Method.aspx" />
