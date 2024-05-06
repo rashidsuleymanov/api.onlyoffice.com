@@ -30,11 +30,10 @@
                 } %>
             <div class="category-item">
                 <a href="<%= productUrl %>">
-                    <span class="category-item-link">
-                        <h4 class="category-item-title <%= product.Id %> <%: productSection.Id %>"><a href="<%= productUrl %>"><%: productSection.Title %></a></h4>
-                        <div class="category-item-description"><%: Html.Raw(productSection.Description) %></div>
-                    </span>
+                    <span class="category-item-link"></span>
                 </a>
+                <h4 class="category-item-title <%= product.Id %> <%: productSection.Id %>"><a href="<%= productUrl %>"><%: productSection.Title %></a></h4>
+                <div class="category-item-description"><%: Html.Raw(productSection.Description) %></div>
             </div>
         <% } %>
     </div>
