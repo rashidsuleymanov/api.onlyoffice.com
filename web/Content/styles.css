@@ -990,6 +990,11 @@ a.header-tn-link:hover {
     text-transform: uppercase;
 }
 
+.footer-text a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 .copyReserved {
     margin: 16px 0 0 0;
     font-size: 13px;
