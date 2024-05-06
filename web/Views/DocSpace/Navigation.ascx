@@ -211,7 +211,7 @@
                             <a href="/docspace-storybook" target="_blank">Storybook</a>
                         </li>
             <li>
-                <a href="<%= Url.Action("pluginssdk/plugintutorial") %>">How to create plugin step by step</a>
+                <a title="How to create plugin step by step" href="<%= Url.Action("pluginssdk/plugintutorial") %>">How to create plugin step by step</a>
                 <ul>
                     <li>
                         <a href="<%= Url.Action("pluginssdk/plugintutorial/planning") %>">Planning</a>
@@ -220,25 +220,25 @@
                         <a href="<%= Url.Action("pluginssdk/plugintutorial/developing") %>">Developing</a>
                         <ul>
                             <li>
-                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/creatingtemplate") %>">Step 1. Create a plugin template</a>
+                                <a title="Step 1. Create a plugin template" href="<%= Url.Action("pluginssdk/plugintutorial/developing/creatingtemplate") %>">Step 1. Create a plugin template</a>
                             </li>
                             <li>
-                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/configuringentrypoint") %>">Step 2. Configure the plugin entry point</a>
+                                <a title="Step 2. Configure the plugin entry point" href="<%= Url.Action("pluginssdk/plugintutorial/developing/configuringentrypoint") %>">Step 2. Configure the plugin entry point</a>
                             </li>
                             <li>
-                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/addingicons") %>">Step 3. Add plugin icons</a>
+                                <a title="Step 3. Add plugin icons" href="<%= Url.Action("pluginssdk/plugintutorial/developing/addingicons") %>">Step 3. Add plugin icons</a>
                             </li>
                             <li>
-                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/configuringinterfaceelements") %>">Step 4. Configure the plugin's interface elements</a>
+                                <a title="Step 4. Configure the plugin's interface elements" href="<%= Url.Action("pluginssdk/plugintutorial/developing/configuringinterfaceelements") %>">Step 4. Configure the plugin's interface elements</a>
                             </li>
                             <li>
-                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/creatingplugintypes") %>">Step 5. Create plugin types</a>
+                                <a title="Step 5. Create plugin types" href="<%= Url.Action("pluginssdk/plugintutorial/developing/creatingplugintypes") %>">Step 5. Create plugin types</a>
                             </li>
                             <li>
-                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/creatingsettingstype") %>">Step 6. Create the settings plugin type</a>
+                                <a title="Step 6. Create the settings plugin type" href="<%= Url.Action("pluginssdk/plugintutorial/developing/creatingsettingstype") %>">Step 6. Create the settings plugin type</a>
                             </li>
                             <li>
-                                <a href="<%= Url.Action("pluginssdk/plugintutorial/developing/creatingcodefile") %>">Step 7. Create the main plugin code file</a>
+                                <a title="Step 7. Create the main plugin code file" href="<%= Url.Action("pluginssdk/plugintutorial/developing/creatingcodefile") %>">Step 7. Create the main plugin code file</a>
                             </li>
                         </ul>
                     </li>
@@ -310,7 +310,7 @@
                                                 <ul>
                                                     <% foreach (var method in methods) { %>
                                                         <li>
-                                                            <a href="<%= Url.DocUrl(entryPoint, method, "docspace") %>"><%= method.FunctionName %></a>
+                                                            <a title="<%= method.FunctionName %>" href="<%= Url.DocUrl(entryPoint, method, "docspace") %>"><%= method.FunctionName %></a>
                                                         </li>
                                                     <% } %>
                                                 </ul>
@@ -322,7 +322,7 @@
                                     <% foreach (var method in rootMethods)
                                     { %>
                                         <li>
-                                            <a href="<%= Url.DocUrl(entryPoint, method, "docspace") %>"><%= method.FunctionName %></a>
+                                            <a title="<%= method.FunctionName %>" href="<%= Url.DocUrl(entryPoint, method, "docspace") %>"><%= method.FunctionName %></a>
                                         </li>
                                     <% } %>
                                 <% } %>
