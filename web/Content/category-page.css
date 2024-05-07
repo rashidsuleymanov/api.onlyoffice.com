@@ -252,6 +252,23 @@
     letter-spacing: -0.02em;
 }
 
+.help-title:before {
+    content: "";
+    display: inline-flex;
+    vertical-align: bottom;
+    margin-right: 12px;
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("img/category-page/help-light.svg");
+}
+
+.theme-dark .help-title:before {
+    background-image: url("img/category-page/help-dark.svg");
+}
+
 .help-list {
     list-style-type: none;
     margin: 0;
@@ -279,20 +296,6 @@
     width: 6px;
     height: 6px;
     background-color: #FF6F3D;
-}
-
-.help-img {
-    margin: 0 32px;
-    width: 188px;
-    min-width: 188px;
-    height: 188px;
-    background-image: url("img/category-page/help-light.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.theme-dark .help-img {
-    background-image: url("img/category-page/help-dark.svg");
 }
 
 @media screen and (max-width: 1024px) {
@@ -323,10 +326,6 @@
 
     .help-wrapper {
         padding: 0;
-    }
-
-    .help-img {
-        margin: 0 10px 0 42px;
     }
 }
 
@@ -388,9 +387,5 @@
     .help-list li {
         font-size: 13px;
         line-height: 20px;
-    }
-
-    .help-img {
-        display: none;
     }
 }
