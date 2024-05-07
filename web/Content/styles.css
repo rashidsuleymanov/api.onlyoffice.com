@@ -906,7 +906,7 @@ a.header-tn-link:hover {
 }
 
 .footer-item-list li a:hover {
-    text-decoration: underline;
+    color: #FF6F3D;
 }
 
 .footer-switch-theme {
@@ -992,6 +992,10 @@ a.header-tn-link:hover {
 .footer-text a {
     text-decoration: none;
     color: #FFFFFF;
+}
+
+.footer-text a:hover {
+    color: #FF6F3D;
 }
 
 .copyReserved {
