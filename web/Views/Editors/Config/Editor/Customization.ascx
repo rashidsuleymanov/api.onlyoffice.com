@@ -446,7 +446,7 @@
     </div>
 </div>
 <div id="configPreHolder" style="display: flex; margin-top: 18px;">
-    <div>
+    <div style="width: 100%;">
         <div id="configHeader" class="configHeader">
             <div class="preContentType">
                 <span style="font-family: monospace">Config.js</span>
