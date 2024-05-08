@@ -58,10 +58,11 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
     "nameLocale": {
         "fr": "LanguageTool",
         "es": "LanguageTool",
+        "pt-BR": "LanguageTool",
         "de": "LanguageTool"
     },
     "guid": "asc.{7CDB02C9-A0BF-4B56-9A1A-71C860B8498F}",
-    "version": "1.0.2",
+    "version": "1.0.3",
 
     "variations": [
         {
@@ -69,6 +70,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "descriptionLocale": {
                 "fr": "Am&#233;liorez l'orthographe, la grammaire et le style de vos textes.",
                 "es": "Mejore la ortograf&#237;a, la gram&#225;tica y el estilo de sus textos.",
+                "pt-BR": "Melhore a ortografia, a gram&#225;tica e o estilo dos seus textos.",
                 "de": "Verbessern Sie Rechtschreibung, Grammatik und Stil in Ihren Texten."
             },
             "url": "index.html",
@@ -154,7 +156,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             },
             "url": "index_about.html",
 
-            "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon.png", "resources/img/icon@2x.png" ],
+            "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png" ],
             "isViewer": true,
             "EditorsSupport": [ "word", "cell", "slide" ],
 

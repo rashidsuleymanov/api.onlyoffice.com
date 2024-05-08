@@ -54,6 +54,7 @@
     "nameLocale": {
         "fr": "Photo Editor",
         "es": "Editor de Fotos",
+        "pt-BR": "Editor de foto",
         "de": "Foto-Editor"
     },
     "guid": "asc.{07FD8DFA-DFE0-4089-AL24-0730933CC80A}",
@@ -66,6 +67,7 @@
             "descriptionLocale": {
                 "fr": "Modifiez des images, des captures d'&#233;cran et des photos directement dans vos documents: coupez, ajustez, appliquez des effets.",
                 "es": "Edite im&#225;genes, capturas de pantalla y fotos directamente en sus documentos: recorte, cambie el tama&#241;o y aplique efectos.",
+                "pt-BR": "Edite imagens, capturas de tela e fotos diretamente em seus documentos: corte, redimensione e aplique efeitos.",
                 "de": "Bearbeiten Sie Bilder, Screenshots und Fotos direkt in Dokumenten: Zuschneiden, Gr&#246;&#223;e &#228;ndern, Effekte anwenden."
             },
             "url": "index.html",
