@@ -57,7 +57,7 @@
 }
 
 a.pushy-submenu-item {
-    color: var(--color-text-septenary);
+    color: #CCC;
 }
 
 .pushy-submenu-item {
@@ -67,7 +67,7 @@ a.pushy-submenu-item {
     min-height: 72px;
     box-sizing: border-box;
     display: inline-flex;
-    color: var(--color-text-septenary);
+    color: #CCC;
     font-size: 12px;
     font-weight: 600;
     line-height: 16px;
@@ -236,7 +236,7 @@ a.pushy-submenu-item {
     top: 0;
     display: flex;
     margin: 0;
-    transform: translateX(-50%);
+    transform: translateX(-70%);
 }
 
 @keyframes menuLineLeft {
@@ -271,7 +271,7 @@ a.pushy-submenu-item {
         position: relative;
         top: initial;
         left: initial;
-        transform: initial;
+        transform: translateX(-15%);
     }
 }
 
