@@ -57,7 +57,7 @@
                 Samples
                 <ul>
                     <li>
-                        <a href="<%= Url.Action("jssdk/sampleopenfile") %>">Open file ins editors</a>
+                        <a href="<%= Url.Action("jssdk/sampleopenfile") %>">Open file in editors</a>
                     </li>
                 </ul>
             </li>
