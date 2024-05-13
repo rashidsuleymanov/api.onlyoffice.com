@@ -315,7 +315,7 @@
     <entry>
       <key>ASC.Files.Core.ApiModels.RequestDto.RoomType</key>
       <value>
-        <Description>FillingFormsRoom = 1, EditingRoom = 2, ReviewRoom = 3, ReadOnlyRoom = 4, CustomRoom = 5, PublicRoom = 6</Description>
+        <Description>FillingFormsRoom = 1, EditingRoom = 2, ReviewRoom = 3, ReadOnlyRoom = 4, CustomRoom = 5, PublicRoom = 6, FormRoom = 7</Description>
         <Example>5</Example>
         <ExampleJson>"5"</ExampleJson>
       </value>
