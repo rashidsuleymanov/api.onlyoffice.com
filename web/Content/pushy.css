@@ -314,6 +314,7 @@ a.pushy-submenu-item {
         display: flex;
         flex-direction: column;
         padding: 16px;
+        transform: initial;
     }
 
     .pushy-submenu {
