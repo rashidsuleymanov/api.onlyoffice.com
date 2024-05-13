@@ -343,11 +343,6 @@
     box-shadow: 0px 7px 25px 0px rgba(85, 85, 85, 0.15);
 }
 
-.theme-dark .macro-example:hover,
-.theme-dark .plugin-example:hover {
-    box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.4);
-}
-
 .plugin-example {
     padding: 0;
 }

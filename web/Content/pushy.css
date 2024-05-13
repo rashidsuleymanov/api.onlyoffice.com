@@ -174,33 +174,16 @@ a.pushy-submenu-item {
     background-image: url("img/header/plugins.svg");
 }
 
-.theme-dark .pushy-dropdown a.plugin::before,
-.theme-dark .pushy-dropdown a.pluginssdk::before {
-    background-image: url("img/header/plugins-dark.svg");
-}
-
 .pushy-dropdown a.docbuilder::before {
     background-image: url("img/header/doc-builder.svg");
-}
-
-.theme-dark .pushy-dropdown a.docbuilder::before {
-    background-image: url("img/header/doc-builder-dark.svg");
 }
 
 .pushy-dropdown a.desktop::before {
     background-image: url("img/header/desktop.svg");
 }
 
-.theme-dark .pushy-dropdown a.desktop::before {
-    background-image: url("img/header/desktop-dark.svg");
-}
-
 .pushy-dropdown a.jssdk::before {
     background-image: url("img/header/jssdk.svg");
-}
-
-.theme-dark .pushy-dropdown a.jssdk::before {
-    background-image: url("img/header/jssdk-dark.svg");
 }
 
 .pushy-dropdown a.backend::before,
@@ -209,26 +192,12 @@ a.pushy-submenu-item {
     background-image: url("img/header/api.svg");
 }
 
-.theme-dark .pushy-dropdown a.backend::before,
-.theme-dark .pushy-dropdown a.officeapi::before,
-.theme-dark .pushy-dropdown a.workspaceapi::before {
-    background-image: url("img/header/api-dark.svg");
-}
-
 .pushy-dropdown a.apisystem::before {
     background-image: url("img/header/seld-hosted.svg");
 }
 
-.theme-dark .pushy-dropdown a.apisystem::before {
-    background-image: url("img/header/seld-hosted-dark.svg");
-}
-
 .pushy-dropdown a.editors::before {
     background-image: url("img/header/docs-api.svg");
-}
-
-.theme-dark .pushy-dropdown a.editors::before {
-    background-image: url("img/header/docs-api-dark.svg");
 }
 
 .top-nav {
@@ -299,10 +268,6 @@ a.pushy-submenu-item {
         box-shadow: 0px 7px 15px 0px rgba(85, 85, 85, 0.1);
         opacity: 0;
         visibility: hidden;
-    }
-
-    .theme-dark .pushy {
-        box-shadow: initial;
     }
 
     .pushy.pushy-submenu-open {

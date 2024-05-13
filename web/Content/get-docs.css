@@ -17,14 +17,6 @@
     transition: box-shadow 0.3s;
 }
 
-.theme-dark .get-docs-option {
-    box-shadow: 0px 12px 40px 0px rgba(4, 15, 27, 0.12);
-}
-
-.theme-dark .get-docs-option:hover {
-    box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.4);
-}
-
 .get-docs-option > a {
     position: relative;
     display: block;
@@ -50,10 +42,6 @@
 .linux {
     background-image: url("img/get-docs/linux.svg");
     background-repeat: no-repeat;
-}
-
-.theme-dark .linux {
-    background-image: url("img/get-docs/linux-dark.svg");
 }
 
 .docker {
@@ -112,16 +100,8 @@ img {
     background-image: url("img/get-docs/start.svg");
 }
 
-.theme-dark .get-docbuilder-link-start::before {
-    background-image: url("img/get-docs/start-dark.svg");
-}
-
 .get-docbuilder-link-info::before {
     background-image: url("img/get-docs/info.svg");
-}
-
-.theme-dark .get-docbuilder-link-info::before {
-    background-image: url("img/get-docs/info-dark.svg");
 }
 
 @media screen and (max-width: 1024px) {

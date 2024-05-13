@@ -77,13 +77,6 @@
                         </ul>
                     </div>
                 </div>
-                <%--<div class="footer-switch-theme">
-                    <ul>
-                        <li><button id="theme-light-btn" class="theme-btn">Light</button></li>
-                        <li><button id="theme-dark-btn"class="theme-btn">Dark</button></li>
-                        <li><button id="theme-auto-btn" class="theme-btn active">Auto</button></li>
-                    </ul>
-                </div>--%>
                 <div class="footer-info">
                     <div class="footer-text"><a class="footer-text" href="https://onlyoffice.com" target="_blank">onlyoffice.com</a></div>
                     <div class="copyReserved">&copy; Ascensio System SIA <%= DateTime.Now.Year %>. All rights reserved</div>
