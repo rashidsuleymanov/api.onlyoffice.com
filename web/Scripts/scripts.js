@@ -465,7 +465,8 @@ function createConfigHTML(editor_url, json) {
     <script>
 new DocsAPI.DocEditor("placeholder", ${json});
     <\/script>
-</body>`;
+</body>
+</html>`;
 }
 function copyConfigToClipboard(html) {
     navigator.clipboard.writeText(html).then(function () {
