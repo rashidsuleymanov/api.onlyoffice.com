@@ -30,7 +30,7 @@
     <h2 id="install-doc" class="copy-link">安装ONLYOFFICE文档</h2>
     <p>
         您需要一个可从 SuiteCRM 和任何最终客户端解析和连接的 ONLYOFFICE Docs（文档服务器）实例。
-        如果情况并非如此，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
+        如果情况并非如此，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx?from=api" target="_blank">ONLYOFFICE Docs 文档页面</a>。
         ONLYOFFICE Docs 还必须能够直接 POST 到 SuiteCRM。
     </p>
     <p>安装 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>

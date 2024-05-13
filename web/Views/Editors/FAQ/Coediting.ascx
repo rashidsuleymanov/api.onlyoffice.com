@@ -11,7 +11,7 @@
     <dd>
         <p>您可能需要的最小连接数应该等于将使用您的文档服务器的用户数。但是您应该记住，在大多数情况下，一个用户 <span class="strikethrough">=</span> 一个连接，因为一个用户可以在多个浏览器中打开多个文档。</p>
         <p>因此，如果您确定您的所有用户都将同时使用文档服务器，则连接数的盈余至少等于您的用户数的两倍，否则缺少连接的用户将只能以仅查看模式打开文档。</p>
-        <p><a target="_blank" href="https://www.onlyoffice.com/zh/integration-edition-prices.aspx">此页面</a>上提供了所有可用的连接定价计划。</p>
+        <p><a target="_blank" href="https://www.onlyoffice.com/zh/integration-edition-prices.aspx?from=api">此页面</a>上提供了所有可用的连接定价计划。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="coediting_2">

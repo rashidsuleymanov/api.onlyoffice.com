@@ -62,7 +62,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
 
     <h2 id="restricting-access" class="copy-link">限制对编辑器或实时查看器的访问</h2>
-    <p>若要限制匿名用户访问编辑器或实时查看器，请设置配置文件中的参数<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring server isAnonymousSupport" target="_blank">services.CoAuthoring.server.isAnymousSupport</a>的值为<b>false</b>。
+    <p>若要限制匿名用户访问编辑器或实时查看器，请设置配置文件中的参数<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx?from=api#services-CoAuthoring server isAnonymousSupport" target="_blank">services.CoAuthoring.server.isAnymousSupport</a>的值为<b>false</b>。
     在这种情况下，当匿名用户试图打开编辑器时，将出现警告</p>
     <img class="screenshot max-width-400" alt="匿名用户警告" src="<%=Url.Content("~/Content/img/editor/noymous-warning.jpg")%>" />
     <p>实时查看器将在没有警告的情况下切换到脱机查看器</p>

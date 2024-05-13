@@ -71,7 +71,7 @@ new DocsAPI.DocEditor("placeholder", {
     </p>
     <p>
         转换开始延迟对于允许在不保存文件的情况下返回文件编辑会话是必要的，例如在打开文件进行编辑的情况下重新加载浏览器页面时。
-        默认转换开始延迟时间由 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay" target="_blank">services.CoAuthoring.server.savetimeoutdelay</a> 参数在 <b>文档服务器</b> 配置文件中定义, 配置文件可以在以下路径中找到:
+        默认转换开始延迟时间由 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx?from=api#services-CoAuthoring-server-savetimeoutdelay" target="_blank">services.CoAuthoring.server.savetimeoutdelay</a> 参数在 <b>文档服务器</b> 配置文件中定义, 配置文件可以在以下路径中找到:
     </p>
     <div>对于 Linux - <em>/etc/onlyoffice/documentserver/<b>default.json</b></em>。</div>
     <div>对于 Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>default.json</b></em>。</div>
@@ -138,7 +138,7 @@ new DocsAPI.DocEditor("placeholder", {
             将请求发送到 <b>回调处理程序</b> 时， <em>forcesavetype</em> 参数的值为 <b>0</b>。</li>
         <li>启用 <a href="<%= Url.Action("config/editor/customization") %>#forcesave">editorConfig.customization.forcesave</a> 模式，在编辑器初始化配置中将其设置为 <b>true</b>。
             在这种情况下，每次用户点击 <b>保存</b> 按钮时，forcesave 都会完成，并且当将请求发送到 <b>回调处理程序</b> 时， <em>forcesavetype</em> 参数的值为 <b>1</b>。</li>
-        <li>您可以在<b>文档服务器</b>附加配置文件中启用<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#AutoAssembly" target="_blank">重复的forcesave start</a>，该文件可以在以下路径中找到或被放置（如果您已经创建了它）：
+        <li>您可以在<b>文档服务器</b>附加配置文件中启用<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx?from=api#AutoAssembly" target="_blank">重复的forcesave start</a>，该文件可以在以下路径中找到或被放置（如果您已经创建了它）：
             <div>对于 Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>。</div>
             <div>对于 Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>。</div>
 
@@ -201,7 +201,7 @@ new DocsAPI.DocEditor("placeholder", {
     <h2 id="assemblyFormatAsOrigin" class="copy-link">以原始格式保存</h2>
 
     <p>
-        从版本 7.0 开始， <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-assemblyFormatAsOrigin" target="_blank">assemblyFormatAsOrigin</a> 服务器设置默认启用，以便将组装好的文件保存为其原始格式。
+        从版本 7.0 开始， <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx?from=api#services-CoAuthoring-server-assemblyFormatAsOrigin" target="_blank">assemblyFormatAsOrigin</a> 服务器设置默认启用，以便将组装好的文件保存为其原始格式。
         它用于将文件格式从 OOXML 更改为 ODF 或使用宏保存文件。
     </p>
 

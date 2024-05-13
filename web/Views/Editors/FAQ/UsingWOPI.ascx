@@ -9,7 +9,7 @@
 <dl class="faq_block" id="wopi_1">
     <dt>如何启用WOPI？</dt>
     <dd>
-        <p>要启用 WOPI，请将文档服务器配置中的 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable" target="_blank">wopi.enable</a> 参数设置为 <b>true</b>。</p>
+        <p>要启用 WOPI，请将文档服务器配置中的 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx?from=api#wopi-enable" target="_blank">wopi.enable</a> 参数设置为 <b>true</b>。</p>
         <div class="header-gray">参数</div>
         <table class="table">
             <colgroup>
@@ -185,7 +185,7 @@ ui=en-us&thm=1&"/&gt;
 <dl class="faq_block" id="wopi_13">
     <dt>ONLYOFFICE 文档 API 和 WOPI 有什么区别？</dt>
     <dd>
-        <p>您可以使用 API 或 WOPI 将 <a href="https://www.onlyoffice.com/zh/office-suite.aspx" target="_blank">ONLYOFFICE 文档</a> 与任何云服务集成。</p>
+        <p>您可以使用 API 或 WOPI 将 <a href="https://www.onlyoffice.com/zh/office-suite.aspx?from=api" target="_blank">ONLYOFFICE 文档</a> 与任何云服务集成。</p>
         <p><a href="<%= Url.Action("wopi/apivswopi") %>">此页面上</a> 的表格将帮助您找出这些选项之间的区别。</p>
     </dd>
 </dl>

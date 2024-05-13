@@ -129,6 +129,7 @@
     <Content Include="Content\img\arrow-gray.svg" />
 	<Content Include="Content\img\arrow-select.svg" />
     <Content Include="Content\img\close.svg" />
+    <Content Include="Content\img\copy-content.svg" />
     <Content Include="Content\img\csharp\add.png" />
     <Content Include="Content\img\csharp\browse.png" />
     <Content Include="Content\img\csharp\platform.png" />
@@ -150,6 +151,9 @@
     <Content Include="Content\img\Editor\anonymous.png" />
     <Content Include="Content\img\Editor\anonymous-warning.jpg" />
     <Content Include="Content\img\Editor\attachment-page.png" />
+    <Content Include="Content\img\Editor\avatars.png" />
+    <Content Include="Content\img\Editor\avatars-coediting.png" />
+    <Content Include="Content\img\Editor\avatars-comments.png" />
     <Content Include="Content\img\Editor\buttons.png" />
     <Content Include="Content\img\Editor\changes-url.png" />
     <Content Include="Content\img\Editor\change-source.png" />
@@ -412,6 +416,7 @@
     <Content Include="Views\Editors\Review.aspx" />
     <Content Include="Views\Editors\Save.aspx" />
     <Content Include="Views\Editors\Security.aspx" />
+    <Content Include="Views\Editors\SettingAvatars.aspx" />
     <Content Include="Views\Editors\SharePoint.aspx" />
     <Content Include="Views\Editors\Signature.aspx" />
     <Content Include="Views\Editors\Signature\Body.ascx" />

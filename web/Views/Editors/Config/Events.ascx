@@ -15,8 +15,8 @@
     <li><a href="#onDownloadAs">onDownloadAs</a> - 调用 <em>downloadAs</em> 方法时编辑文件的绝对 URL。</li>
     <li><a href="#onError">onError</a> - 发生错误或其他特定事件。</li>
     <li><a href="#onInfo">onInfo</a> - 应用程序打开了文件。</li>
-    <li><a href="#onMetaChange">onMetaChange</a> - 通过meta命令更改文档的 <em>元</em> 信息。</li>
     <li><a href="#onMakeActionLink">onMakeActionLink</a> - 用户试图获取打开包含书签的文档的链接，滚动到书签位置。</li>
+    <li><a href="#onMetaChange">onMetaChange</a> - 通过meta命令更改文档的 <em>元</em> 信息。</li>
     <li><a href="#onOutdatedVersion">onOutdatedVersion</a> - 使用旧的 <em>document.key</em> 值打开文档进行编辑，该值用于编辑以前的文档版本并成功保存。</li>
     <li><a href="#onPluginsReady">onPluginsReady</a> - 所有插件都已加载并可以使用。</li>
     <li><a href="#onReady">onReady</a> - 应用程序被加载到浏览器中。</li>
@@ -79,11 +79,11 @@
         "onInfo": function (event) {
             console.log("ONLYOFFICE Document Editor is opened in mode " + event.data.mode);
         },
-        "onMetaChange": function (event) {
-            console.log("Meta changed");
-        },
         "onMakeActionLink": function (event) {
             console.log("Action link was made");
+        },
+        "onMetaChange": function (event) {
+            console.log("Meta changed");
         },
         "onOutdatedVersion": function () {
             console.log("Outdataed version");
@@ -160,8 +160,8 @@
         "onDownloadAs",
         "onError",
         "onInfo",
-        "onMetaChange",
         "onMakeActionLink",
+        "onMetaChange",
         "onOutdatedVersion",
         "onPluginsReady",
         "onReady",
@@ -430,29 +430,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onMetaChange" class="copy-link">onMetaChange</b> - 通过 <a href="<%= Url.Action("command/meta") %>">meta</a> 命令更改文档的元信息时调用的函数。</p>
-        <p>文档的名称在 <em>data.title</em> 参数中发送。 <em>收藏</em> 图标高亮状态在 <em>data.favorite</em> 参数中发送。</p>
-        <p>当用户点击 <em>收藏</em> 图标时， 调用<a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a>方法更新 <em>收藏</em> 图标高亮状态<a href="<%= Url.Action("config/document/info") %>#favorite">信息</a>。
-            如果未声明该方法，则<em>收藏</em> 图标不会更改。</p>
-        <div class="header-gray">示例</div>
-        <pre>
-var onMetaChange = function (event) {
-    var title = event.data.title;
-    var favorite = event.data.favorite;
-    ...
-};
-
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onMetaChange": onMetaChange,
-        ...
-    },
-    ...
-});
-</pre>
-    </li>
-
-    <li>
         <p><b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - 当用户试图获取打开包含书签的文档的链接时调用的函数，滚动到书签位置。</p>
         <p>要设置书签链接，您必须调用 <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> 方法。
             书签数据在 <em>data</em> 参数中接收，然后必须在配置中用作 <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> 参数的值。
@@ -470,6 +447,29 @@ var onMakeActionLink = function (event){
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onMakeActionLink": onMakeActionLink,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p><b id="onMetaChange" class="copy-link">onMetaChange</b> - 通过 <a href="<%= Url.Action("command/meta") %>">meta</a> 命令更改文档的元信息时调用的函数。</p>
+        <p>文档的名称在 <em>data.title</em> 参数中发送。 <em>收藏</em> 图标高亮状态在 <em>data.favorite</em> 参数中发送。</p>
+        <p>当用户点击 <em>收藏</em> 图标时， 调用<a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a>方法更新 <em>收藏</em> 图标高亮状态<a href="<%= Url.Action("config/document/info") %>#favorite">信息</a>。
+            如果未声明该方法，则<em>收藏</em> 图标不会更改。</p>
+        <div class="header-gray">示例</div>
+        <pre>
+var onMetaChange = function (event) {
+    var title = event.data.title;
+    var favorite = event.data.favorite;
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onMetaChange": onMetaChange,
         ...
     },
     ...

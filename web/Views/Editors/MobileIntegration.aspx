@@ -15,7 +15,7 @@
     </h1>
     <p>要访问移动应用程序中的编辑器功能，请通过WebView组件（一个负责在应用程序中打开网页的系统组件）将其与ONLYOFFICE编辑器集成。
         之后，用户将能够直接在 iOS 或 Android 设备上查看、创建和编辑文本文档、电子表格和演示文稿，填写和阅读 PDF。</p>
-    <note>请注意，ONLYOFFICE移动web编辑器仅适用于 <a href="https://www.onlyoffice.com/zh/docs-enterprise.aspx" target="_blank">企业</a> 和 <a href="https://www.onlyoffice.com/zh/developer-edition.aspx" target="_blank">开发者</a> 版本的商业版本。</note>
+    <note>请注意，ONLYOFFICE移动web编辑器仅适用于 <a href="https://www.onlyoffice.com/zh/docs-enterprise.aspx?from=api" target="_blank">企业</a> 和 <a href="https://www.onlyoffice.com/zh/developer-edition.aspx" target="_blank">开发者</a> 版本的商业版本。</note>
     <div class="container">
         <ul class="browser">
             <li class="browser tab active copy-link" id="ios">iOS</li>
@@ -29,7 +29,7 @@
             <p><img class="screenshot max-width-832" alt="通过测试范例实现iOS集成" src="<%= Url.Content("~/content/img/editor/ios-test-sample.png") %>" /></p>
             <p><b>打开ONLYOFFICE编辑器</b></p>
             <ol>
-                <li>下载并安装ONLYOFFICE 文档 <a href="https://www.onlyoffice.com/zh/docs-enterprise.aspx" target="_blank">企业</a> 或 <a href="https://www.onlyoffice.com/zh/developer-edition.aspx" target="_blank">开发者</a> 版本。</li>
+                <li>下载并安装ONLYOFFICE 文档 <a href="https://www.onlyoffice.com/zh/docs-enterprise.aspx?from=api" target="_blank">企业</a> 或 <a href="https://www.onlyoffice.com/zh/developer-edition.aspx" target="_blank">开发者</a> 版本。</li>
                 <li>从 <a href="https://github.com/ONLYOFFICE/editors-webview-ios" target="_blank">GitHub</a>下载适用于iOS的移动演示示例。</li>
                 <li>用 <a href="https://developer.apple.com/xcode/" target="_blank">Xcode</a> 打开 <em>EditorWebViewDemo.xcodeproj</em> 项目，以修改此示例的代码片段，使DMS能够正常工作。</li>
                 <li>
@@ -193,7 +193,7 @@ func webView(_ webView: WKWebView,
             <p><img class="screenshot max-width-832" alt="通过api集成iOS" src="<%= Url.Content("~/content/img/editor/ios-api-config.png") %>" /></p>
             <p><b>打开ONLYOFFICE编辑器</b></p>
             <ol>
-                <li>下载并安装ONLYOFFICE 文档 <a href="https://www.onlyoffice.com/zh/docs-enterprise.aspx" target="_blank">企业</a> 或 <a href="https://www.onlyoffice.com/zh/developer-edition.aspx" target="_blank">开发者</a> 版本。</li>
+                <li>下载并安装ONLYOFFICE 文档 <a href="https://www.onlyoffice.com/zh/docs-enterprise.aspx?from=api" target="_blank">企业</a> 或 <a href="https://www.onlyoffice.com/zh/developer-edition.aspx" target="_blank">开发者</a> 版本。</li>
                 <li>从 <a href="https://github.com/ONLYOFFICE/editors-webview-ios" target="_blank">GitHub</a>下载适用于iOS的移动演示示例。</li>
                 <li>用 <a href="https://developer.apple.com/xcode/" target="_blank">Xcode</a> 打开 <em>EditorWebViewDemo.xcodeproj</em> 项目，以修改此示例的代码片段，使DMS能够正常工作。</li>
                 <li>创建一个空的 <em>html</em> 文件。用演示项目 <a href="https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/Resources/editor.html" target="_blank">editor.html</a> 资源作模板。</p></li>
@@ -380,7 +380,7 @@ func present(url: URL, in parent: UIViewController, complation: @escaping (() ->
             <p><img class="screenshot max-width-832" alt="通过测试范例实现Android集成" src="<%= Url.Content("~/content/img/editor/android-test-sample.png") %>" /></p>
             <p><b>打开ONLYOFFICE编辑器</b></p>
             <ol>
-                <li>下载并安装ONLYOFFICE 文档 <a href="https://www.onlyoffice.com/zh/docs-enterprise.aspx" target="_blank">企业</a> 或 <a href="https://www.onlyoffice.com/zh/developer-edition.aspx" target="_blank">开发者</a> 版本。</li>
+                <li>下载并安装ONLYOFFICE 文档 <a href="https://www.onlyoffice.com/zh/docs-enterprise.aspx?from=api" target="_blank">企业</a> 或 <a href="https://www.onlyoffice.com/zh/developer-edition.aspx" target="_blank">开发者</a> 版本。</li>
                 <li>从 <a href="https://github.com/ONLYOFFICE/editors-webview-android" target="_blank">GitHub</a>下载Android手机演示范例。</li>
                 <li>使用 <a href="https://developer.android.com/studio" target="_blank">Android Studio</a> 打开顶层 <em>build.gradle</em> 文件，修改此示例的代码片段，以便DMS正常工作。</li>
                 <li>

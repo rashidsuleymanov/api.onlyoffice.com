@@ -1270,31 +1270,37 @@ docEditor.setUsers({
                     </tr>
                     <tr class="tablerow">
                         <td>users.email</td>
-                        <td>定义用户的电子邮件地址。仅当 <em>c</em> 参数为 <em>mention</em> 时才使用此字段。</td>
+                        <td>定义用户的电子邮件地址。 This field is required when the <em>c</em> parameter is <em>mention</em>.</td>
                         <td>string</td>
-                        <td>必需的</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.id</td>
-                        <td>定义用户的身份。仅当<em>c</em>参数为<em>protect</em>时才使用该字段。</td>
+                        <td>定义用户的身份。 This field is required when the <em>c</em> parameter is <em>protect</em>.</td>
                         <td>string</td>
-                        <td>必需的</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.image</td>
-                        <td>定义用户头像的路径。 仅当<em>c</em>参数为<em>info</em>时才使用此字段。</td>
+                        <td>定义用户头像的路径。 This field is required when the <em>c</em> parameter is <em>info</em>.</td>
                         <td>string</td>
-                        <td>必需的</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.name</td>
                         <td>定义用户的全名。</td>
                         <td>string</td>
-                        <td>必需的</td>
+                        <td>可选的</td>
                     </tr>
                 </tbody>
             </table>
             <div class="mobile-content"></div>
+            <div class="note">Please note that the request to the user's avatar is sent without authorization because the avatar URL is inserted into the HTML of the editor frame.
+                Moreover, the CORS problem may occur. In this case, use the avatar in the base64 format. For example, <em>"data:image/png,base64,*****"</em>.</div>
+            <div class="note">Please note that if you are subscribed to the <em>onRequestUsers</em> event and send an avatar using the <em>setUsers</em> method,
+                the <a href="<%= Url.Action("config/editor") %>#user">user.image</a> field in the initialization config is not required.
+            We especially don't recommend to specify this parameter if the avatar is sent in the base64 format and the initialization config is signed with JWT.
+            In this case, the token will be too long.</div>
         </li>
 
         <li>

@@ -162,7 +162,7 @@
     ...
 });</pre>
         <p><em>comment</em> 字段是可选的，因为只要启用了 <em>fillForms</em> 参数并禁用了 <em>edit</em> 和 <em>review</em> 参数，注释都被禁用了。</p>
-        <p>通过上面的配置，文档将在启用表单填写模式并禁用所有其他模式的情况下打开，从而使有权访问它的用户只能填写特殊 <a target="_blank" href="https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/ONLYOFFICE-Document-Editor/UsageInstructions/InsertContentControls.aspx">内容控件</a>中的字段。</p>
+        <p>通过上面的配置，文档将在启用表单填写模式并禁用所有其他模式的情况下打开，从而使有权访问它的用户只能填写特殊 <a target="_blank" href="https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/ONLYOFFICE-Document-Editor/UsageInstructions/InsertContentControls.aspx?from=api">内容控件</a>中的字段。</p>
         <p>然后由您决定下一步做什么：对可编辑字段的更改将保存到同一个文档中，或者每次新用户访问和更改原始文档时都将创建一个新文档。</p>
         <p>如果仅授予具有 <em>fillForms</em> 权限的某个用户对文档有一次访问权限，则可以使用第一种情况，然后将其与所有更改一起保存，并且其他用户无需再次填写它。</p>
         <p>第二种情况更常用，当您有一个文档模板，其中一些字段未填写，并希望将其访问权限授予更多用户（例如，将其放到您的网站上，以便用户无需每次下载就可以填写并再次上传）。在这种情况下，更合理的做法是将此文档作为模板，方便将来更改，并且在具有 <em>fillForms</em> 访问权限的用户编辑字段后，将其保存在另一个文件名下。</p>

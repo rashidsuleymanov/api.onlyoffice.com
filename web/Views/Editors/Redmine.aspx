@@ -289,7 +289,7 @@
         此外，确保ONLYOFFICE Docs可以直接POST到Redmine。
     </p>
     <p>我们建议使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a> 安装 ONLYOFFICE Docs。
-        或者，对于 Debian、Ubuntu 或衍生版本，您也可以按照<a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">这些说明</a>进行操作。
+        或者，对于 Debian、Ubuntu 或衍生版本，您也可以按照<a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx?from=api" target="_blank">这些说明</a>进行操作。
  </p>
 
 

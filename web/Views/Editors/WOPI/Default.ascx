@@ -22,7 +22,7 @@
 
     <p>有关 WOPI 协议的更多信息，请阅读 <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/" target="_blank">WOPI 文档</a>。</p>
 
-    <p>您可以在配置文件中查找和更改所有必要的<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#WOPI" target="_blank">WOPI设置</a>，该文件可以在以下路径中找到（或创建）：</p>
+    <p>您可以在配置文件中查找和更改所有必要的<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx?from=api#WOPI" target="_blank">WOPI设置</a>，该文件可以在以下路径中找到（或创建）：</p>
     <div>对于 Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>。</div>
     <div>对于 Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>。</div>
 
@@ -33,7 +33,7 @@
     </div>
 
     <h2 id="enable" class="copy-link">启用 WOPI</h2>
-    <p>要启用 WOPI，请将文档服务器配置中的 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable" target="_blank">wopi.enable</a> 参数设置为 <b>true</b>:</p>
+    <p>要启用 WOPI，请将文档服务器配置中的 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx?from=api#wopi-enable" target="_blank">wopi.enable</a> 参数设置为 <b>true</b>:</p>
 
     <div class="header-gray">参数</div>
     <table class="table">
@@ -76,7 +76,7 @@
         此类集成商的 IP 地址必须包含在 <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list" target="_blank">WOPI 域允许列表</a>中。
         同时，必须拒绝所有其他集成商的访问。</p>
     <note>默认情况下，所有 IP 地址都被认为是可信的。</note>
-    <p>按照以下步骤配置文档服务器<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter" target="_blank">IP筛选器</a>：</p>
+    <p>按照以下步骤配置文档服务器<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx?from=api#IPFilter" target="_blank">IP筛选器</a>：</p>
     <ol>
         <li>
             <p>使用任何可用的文本编辑器打开 <em>/etc/onlyoffice/documentserver/local.json</em> 文件：</p>

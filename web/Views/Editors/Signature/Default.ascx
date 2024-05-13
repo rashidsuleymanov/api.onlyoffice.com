@@ -7,7 +7,7 @@
 
 <div class="note">从 4.2 版开始在 <b>文档服务器</b> 中使用此功能</div>
 
-<p>对于验证设置，需要编辑位于配置文件中的 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#SecretKey" target="_blank">secret key</a> 和 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#Token" target="_blank">token</a> 参数，配置文件可在以下路径找到(或创建)：</p>
+<p>对于验证设置，需要编辑位于配置文件中的 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx?from=api#SecretKey" target="_blank">secret key</a> 和 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#Token" target="_blank">token</a> 参数，配置文件可在以下路径找到(或创建)：</p>
 <div>对于 Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>。</div>
 <div>对于 Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>。</div>
 

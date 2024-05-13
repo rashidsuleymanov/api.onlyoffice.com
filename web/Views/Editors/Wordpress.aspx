@@ -28,7 +28,7 @@
     <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
     <p>
         您需要一个ONLYOFFICE 文档（文档服务器）实例，该实例可以从WordPress和任何终端客户端进行解析和连接。
-        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE 文档文档页面</a>。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx?from=api" target="_blank">ONLYOFFICE 文档文档页面</a>。
         ONLYOFFICE文档还必须能够直接发布到Wordpress。
     </p>
     <p>安装 ONLYOFFICE 文档实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>

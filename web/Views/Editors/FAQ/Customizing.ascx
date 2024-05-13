@@ -10,7 +10,7 @@
     <dt>如何对 ONLYOFFICE 文档服务器进行白标？</dt>
     <dd>
         <p>可以编辑以下选项来为您的文档服务器版本添加白标签，更改显示在 <b>关于</b> 页面上并对所有编辑器用户可见的信息。</p>
-        <div class="note">请注意，更改这些选项仅适用于 <a target="_blank" href="https://www.onlyoffice.com/zh/developer-edition-prices.aspx">ONLYOFFICE 开发者版</a> 用户。</div>
+        <div class="note">请注意，更改这些选项仅适用于 <a target="_blank" href="https://www.onlyoffice.com/zh/developer-edition-prices.aspx?from=api">ONLYOFFICE 开发者版</a> 用户。</div>
         <ul>
             <li><em>editorConfig.customization.customer</em> 选项：
                 <ul>
@@ -61,7 +61,7 @@
 <dl class="faq_block" id="customizing_2">
     <dt>如何更改文档服务器界面的默认语言？</dt>
     <dd>
-        <p>如果界面语言出现在 <a target="_blank" href="https://helpcenter.onlyoffice.com/server/document/available-languages.aspx">可用的文档服务器语言列表</a>中，您可以简单地使用配置文件中的 <em>editorConfig.lang</em> 属性将其设置为必要的语言环境，如下所示：</p>
+        <p>如果界面语言出现在 <a target="_blank" href="https://helpcenter.onlyoffice.com/server/document/available-languages.aspx?from=api">可用的文档服务器语言列表</a>中，您可以简单地使用配置文件中的 <em>editorConfig.lang</em> 属性将其设置为必要的语言环境，如下所示：</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "lang": "de",
@@ -69,7 +69,7 @@
     },
     ...
 });</pre>
-        <p>如果该语言不可用并且您想要将其翻译或已经将其翻译成您自己的语言，请参阅 <a target="_blank" href="https://helpcenter.onlyoffice.com/server/docker/document/add-interface-language.aspx">此文</a> 以了解如何将其安装到您的文档服务器。</p>
+        <p>如果该语言不可用并且您想要将其翻译或已经将其翻译成您自己的语言，请参阅 <a target="_blank" href="https://helpcenter.onlyoffice.com/server/docker/document/add-interface-language.aspx?from=api">此文</a> 以了解如何将其安装到您的文档服务器。</p>
         <p>有关语言设置的更多信息，请参见 <a href="<%= Url.Action("config/editor") %>">此页面</a>。</p>
     </dd>
 </dl>

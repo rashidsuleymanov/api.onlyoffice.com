@@ -44,7 +44,7 @@
         <li>
             <p>下载 文档服务器安装文件并在您的本地服务器上进行设置：</p>
             <div class="list-buttons">
-                <a class="button" href="https://www.onlyoffice.com/zh/developer-edition-request.aspx?from=api.onlyoffice.com" target="_blank">获取ONLYOFFICE编辑器
+                <a class="button" href="https://www.onlyoffice.com/zh/download-docs.aspx?from=api#docs-developer" target="_blank">获取ONLYOFFICE编辑器
                 </a>
             </div>
         </li>

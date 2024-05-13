@@ -18,7 +18,7 @@
     从版本 7.1 开始，这些参数已被弃用。
     现在,传入请求使用正文中的令牌（如果存在）。
     否则，将采用标头令牌。
-    要指定接下来用于验证数据的内容，必须将 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-tokenRequiredParams" target="_blank">services.CoAuthoring.server.tokenRequiredParams</a> 添加到 <em>local.json</em> 配置文件中。
+    要指定接下来用于验证数据的内容，必须将 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx?from=api#services-CoAuthoring-server-tokenRequiredParams" target="_blank">services.CoAuthoring.server.tokenRequiredParams</a> 添加到 <em>local.json</em> 配置文件中。
     如果为 <b>true</b>，则仅使用令牌数据。否则，打开的请求部分与令牌数据合并。
 </p>
 <p>

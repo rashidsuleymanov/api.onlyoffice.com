@@ -4,7 +4,7 @@
     <span class="hdr">ONLYOFFICE 文档 API 与 WOPI</span>
 </h1>
 
-    <p class="dscr">您可以使用 API 或 WOPI 将 <a href="https://www.onlyoffice.com/zh/office-suite.aspx" target="_blank">ONLYOFFICE 文档</a> 与任何云服务集成。</p>
+    <p class="dscr">您可以使用 API 或 WOPI 将 <a href="https://www.onlyoffice.com/zh/office-suite.aspx?from=api" target="_blank">ONLYOFFICE 文档</a> 与任何云服务集成。</p>
     <p>下表将帮助您找出这些选项之间的区别。</p>
 
     <table class="table">
@@ -38,7 +38,7 @@
                 <td id="integration" class="table-header-gray borders copy-link table-style"><h2>与 sync&share 和 DMS 解决方案集成</h2></td>
                 <td class="borders">
                     <p>通过 ONLYOFFICE 或其合作伙伴开发的即用型连接器进行集成。</p>
-                    <p><a href="https://www.onlyoffice.com/zh/all-connectors.aspx" target="_blank">检查所有集成</a></p>
+                    <p><a href="https://www.onlyoffice.com/zh/all-connectors.aspx?from=api" target="_blank">检查所有集成</a></p>
                 </td>
                 <td class="borders">
                     <p>通过 WOPI 连接器/通用 WOPI 客户端集成。</p>

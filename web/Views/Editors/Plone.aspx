@@ -30,7 +30,7 @@
 
     <p>
         您将需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例可从 Plone 和任何客户终端解析和连接。
-        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE 文档文档页面</a>。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx?from=api" target="_blank">ONLYOFFICE 文档文档页面</a>。
         ONLYOFFICE 文档还必须能够直接发布到 Plone。
     </p>
 

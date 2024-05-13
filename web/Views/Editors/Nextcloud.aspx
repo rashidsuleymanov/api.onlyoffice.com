@@ -49,13 +49,13 @@
     <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
     <p>
         您将需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例可从 Nextcloud 和任何终端客户端解析和连接。
-        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE 文档文档页面</a>。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx?from=api" target="_blank">ONLYOFFICE 文档文档页面</a>。
         ONLYOFFICE 文档还必须能够直接发布到 Nextcloud。
     </p>
     <p>
         ONLYOFFICE 文档和 Nextcloud 可以安装在不同的计算机上，也可以安装在同一台机器上。
         如果您选择后一种变体，您需要为 文档服务器设置自定义端口，因为默认情况下 ONLYOFFICE 文档和 Nextcloud 都在端口 80 上工作。
-        或者您可以在代理后面使用 文档服务器，请参阅 <a href="https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx" target="_blank">本文</a> 了解如何配置它。
+        或者您可以在代理后面使用 文档服务器，请参阅 <a href="https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx?from=api" target="_blank">本文</a> 了解如何配置它。
     </p>
     <p>启动 ONLYOFFICE 文档实例的最简单方法是使用 <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>。</p>
     <p>您还可以使用我们的 <a target="_blank" href="https://github.com/ONLYOFFICE/docker-onlyoffice-nextcloud">Docker 安装</a>进行安装 ，通过几个命令来安装和配置 文档服务器和 Nextcloud。</p>

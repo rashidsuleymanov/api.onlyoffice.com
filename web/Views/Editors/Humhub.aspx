@@ -32,7 +32,7 @@
 
     <p>
         您将需要一个 ONLYOFFICE 文档（文档服务器）实例，该实例可从 HumHub 和任何终端客户端解析和连接。
-        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE 文档文档页面</a>。ONLYOFFICE 文档还必须能够直接发布到 HumHub。</p>
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx?from=api" target="_blank">ONLYOFFICE 文档文档页面</a>。ONLYOFFICE 文档还必须能够直接发布到 HumHub。</p>
 
     <p>启动 ONLYOFFICE 文档实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
