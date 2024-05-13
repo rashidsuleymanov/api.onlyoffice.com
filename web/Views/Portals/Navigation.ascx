@@ -52,7 +52,7 @@
                                                                     <ul>
                                                                         <% foreach (var method in methods) { %>
                                                                             <li>
-                                                                                <a href="<%= Url.DocUrl(entryPoint, method, "portals") %>"><%= method.FunctionName %></a>
+                                                                                <a title="<%= method.FunctionName %>" href="<%= Url.DocUrl(entryPoint, method, "portals") %>"><%= method.FunctionName %></a>
                                                                             </li>
                                                                         <% } %>
                                                                     </ul>
@@ -64,7 +64,7 @@
                                                     <% foreach (var method in rootMethods)
                                                        { %>
                                                             <li>
-                                                                <a href="<%= Url.DocUrl(entryPoint, method, "portals") %>"><%= method.FunctionName %></a>
+                                                                <a title="<%= method.FunctionName %>" href="<%= Url.DocUrl(entryPoint, method, "portals") %>"><%= method.FunctionName %></a>
                                                             </li>
                                                     <% } %>
                                                  <% } %>

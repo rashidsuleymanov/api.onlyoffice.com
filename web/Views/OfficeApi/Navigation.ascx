@@ -114,13 +114,13 @@
                     <a href="<%= Url.Action("buildersamples/createreports") %>">Creating report document</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("buildersamples/mailmergereceptions") %>">Creating mail merge receptions</a>
+                    <a title="Creating mail merge receptions" href="<%= Url.Action("buildersamples/mailmergereceptions") %>">Creating mail merge receptions</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("buildersamples/fillspreadsheet") %>">Filling spreadsheet</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("buildersamples/commenterrors") %>">Commenting spreadsheet errors</a>
+                    <a title="Commenting spreadsheet errors" href="<%= Url.Action("buildersamples/commenterrors") %>">Commenting spreadsheet errors</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("buildersamples/createpresentation") %>">Creating presentation</a>

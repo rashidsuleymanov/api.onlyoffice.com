@@ -22,15 +22,16 @@
         <% 
             var sections = product.Sections;
             foreach (var section in sections) {
-                var productSection = Products.GetSection(product.Id, section); %>
+                var productSection = Products.GetSection(product.Id, section);
+                var productUrl = Url.Action(productSection.Id, product.Id, null);
+                if (product.Id == "docs")
+                {
+                    productUrl = Url.Action("basic", productSection.Id, null);
+                } %>
             <div class="category-item">
-               <%
-                  var productUrl = Url.Action(productSection.Id, product.Id, null);
-                  if (product.Id == "docs")
-                  {
-                     productUrl = Url.Action("basic", productSection.Id, null);
-                  }
-                  %>
+                <a href="<%= productUrl %>">
+                    <span class="category-item-link"></span>
+                </a>
                 <h4 class="category-item-title <%= product.Id %> <%: productSection.Id %>"><a href="<%= productUrl %>"><%: productSection.Title %></a></h4>
                 <div class="category-item-description"><%: Html.Raw(productSection.Description) %></div>
             </div>

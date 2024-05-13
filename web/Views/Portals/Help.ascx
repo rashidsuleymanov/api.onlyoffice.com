@@ -9,4 +9,3 @@
         <li>You can also ask our developers on <a href="https://forum.onlyoffice.com/c/workspace/33" target="_blank">ONLYOFFICE forum</a> (registration required).</li>
     </ul>
 </div>
-<div class="help-img"></div>

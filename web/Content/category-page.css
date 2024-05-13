@@ -85,30 +85,6 @@
     box-shadow: 0px 7px 15px 0px rgba(85, 85, 85, 0.1);
 }
 
-.theme-dark .category-item:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(181.84% 140.11% at 98.44% 1.84%, rgba(143, 67, 0, 0.53) 0%, rgba(51, 51, 51, 0.49) 67.66%);
-    pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-}
-
-.theme-dark .category-item:hover {
-    border-color: #ED7309;
-    box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.40);
-}
-
-.theme-dark .category-item:hover::after {
-    opacity: 1;
-    visibility: visible;
-}
-
 .category-item-title {
     position: relative;
     display: flex;
@@ -146,75 +122,41 @@
     background-image: url("img/category-page/jssdk.svg");
 }
 
-.theme-dark .category-item-title.jssdk:before {
-    background-image: url("img/category-page/jssdk-dark.svg");
-}
-
 .category-item-title.plugin:before,
 .category-item-title.pluginssdk:before {
     background-image: url("img/category-page/plugins.svg");
-}
-
-.theme-dark .category-item-title.plugin:before,
-.theme-dark .category-item-title.pluginssdk:before {
-    background-image: url("img/category-page/plugins-dark.svg");
 }
 
 .category-item-title.docbuilder:before {
     background-image: url("img/category-page/doc-builder.svg");
 }
 
-.theme-dark .category-item-title.docbuilder:before {
-    background-image: url("img/category-page/doc-builder-dark.svg");
-}
-
 .category-item-title.desktop:before {
     background-image: url("img/category-page/desktop.svg");
-}
-
-.theme-dark .category-item-title.desktop:before {
-    background-image: url("img/category-page/desktop-dark.svg");
 }
 
 .category-item-title.backend:before {
     background-image: url("img/category-page/api.svg");
 }
 
-.theme-dark .category-item-title.backend:before,
-.theme-dark .category-item-title.section:before {
-    background-image: url("img/category-page/api-dark.svg");
+.category-item-title.workspaceapi:before {
+    background-image: url("img/category-page/workspace-api.svg");
 }
 
 .category-item-title.workspaceapi:before {
     background-image: url("img/category-page/workspace-api.svg");
 }
 
-.theme-dark .category-item-title.workspaceapi:before {
-    background-image: url("img/category-page/workspace-api-dark.svg");
-}
-
 .category-item-title.apisystem:before {
     background-image: url("img/category-page/self-hosted.svg");
-}
-
-.theme-dark .category-item-title.apisystem:before {
-    background-image: url("img/category-page/self-hosted-dark.svg");
 }
 
 .category-item-title.officeapi:before {
     background-image: url("img/category-page/office-api.svg");
 }
 
-.theme-dark .category-item-title.officeapi:before {
-    background-image: url("img/category-page/office-api-dark.svg");
-}
-
 .category-item-title.editors:before {
     background-image: url("img/category-page/docs-api.svg");
-}
-
-.theme-dark .category-item-title.editors:before {
-    background-image: url("img/category-page/docs-api-dark.svg");
 }
 
 .category-item-description {
@@ -222,6 +164,15 @@
     font-size: 14px;
     line-height: 21px;
     z-index: 1;
+}
+
+.category-item-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 .help {
@@ -241,6 +192,19 @@
     font-weight: 700;
     line-height: 32px;
     letter-spacing: -0.02em;
+}
+
+.help-title:before {
+    content: "";
+    display: inline-flex;
+    vertical-align: bottom;
+    margin-right: 12px;
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("img/category-page/help-light.svg");
 }
 
 .help-list {
@@ -272,20 +236,6 @@
     background-color: #FF6F3D;
 }
 
-.help-img {
-    margin: 0 32px;
-    width: 188px;
-    min-width: 188px;
-    height: 188px;
-    background-image: url("img/category-page/help-light.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.theme-dark .help-img {
-    background-image: url("img/category-page/help-dark.svg");
-}
-
 @media screen and (max-width: 1024px) {
     .category-section {
         padding: 64px 0;
@@ -314,10 +264,6 @@
 
     .help-wrapper {
         padding: 0;
-    }
-
-    .help-img {
-        margin: 0 10px 0 42px;
     }
 }
 
@@ -379,9 +325,5 @@
     .help-list li {
         font-size: 13px;
         line-height: 20px;
-    }
-
-    .help-img {
-        display: none;
     }
 }

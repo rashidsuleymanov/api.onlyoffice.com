@@ -2,7 +2,7 @@
 
 <%@ Import Namespace="System.Web.Optimization" %>
 <!DOCTYPE html>
-<html lang="en" class="no-js invisible"
+<html lang="en" class="no-js"
     <% if (string.Equals(ConfigurationManager.AppSettings["offline_cache"], bool.TrueString, StringComparison.OrdinalIgnoreCase)){ %>manifest="<%= Url.RouteUrl("Cache") %>" <% } %>>
 <head>
     <meta charset="UTF-8" />
@@ -77,15 +77,8 @@
                         </ul>
                     </div>
                 </div>
-                <%--<div class="footer-switch-theme">
-                    <ul>
-                        <li><button id="theme-light-btn" class="theme-btn">Light</button></li>
-                        <li><button id="theme-dark-btn"class="theme-btn">Dark</button></li>
-                        <li><button id="theme-auto-btn" class="theme-btn active">Auto</button></li>
-                    </ul>
-                </div>--%>
                 <div class="footer-info">
-                    <div class="footer-text">onlyoffice.com</div>
+                    <div class="footer-text"><a class="footer-text" href="https://onlyoffice.com" target="_blank">onlyoffice.com</a></div>
                     <div class="copyReserved">&copy; Ascensio System SIA <%= DateTime.Now.Year %>. All rights reserved</div>
                 </div>
             </div>
