@@ -23,7 +23,10 @@
 </ul>
 
 <h2 id="win-1" class="copy-link"><span class="style_step">步骤 1.</span>安装 ONLYOFFICE 文档</h2>
-<p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE 文档</a> （打包为文档服务器）。</p>
+<p>下载并安装 ONLYOFFICE 文档 （打包为文档服务器）：</p>
+<div class="list-buttons">
+    <a class="button" href="https://www.onlyoffice.com/zh/download-docs.aspx?from=api#docs-developer" target="_blank">获取ONLYOFFICE编辑器</a>
+</div>
 <p>请参阅详细指南以了解如何为 <a target="_blank" href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_csharp_example">Windows</a>、 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_csharp_example">Linux</a>或 <a href="https://helpcenter.onlyoffice.com/server/developer-edition/docker/docker-installation.aspx?from=api_csharp_example">Docker</a>安装文档服务器。</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">步骤 2.</span>下载用于编辑器集成的.Net (C#) 代码</h2>

@@ -24,7 +24,10 @@
 
 <h2 id="Windows" class="copy-link">对于 Windows</h2>
 <h2 id="win-1" class="copy-link"><span class="style_step">步骤 1.</span>安装 ONLYOFFICE 文档</h2>
-<p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE 文档</a> （打包为文档服务器）。</p>
+<p>下载并安装 ONLYOFFICE 文档 （打包为文档服务器）：</p>
+<div class="list-buttons">
+    <a class="button" href="https://www.onlyoffice.com/zh/download-docs.aspx?from=api#docs-developer" target="_blank">获取ONLYOFFICE编辑器</a>
+</div>
 <p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example" target="_blank">适用于Windows</a>的文档服务器。</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">步骤 2.</span>下载用于编辑器集成的 Java 代码</h2>
@@ -136,7 +139,10 @@ files.docservice.url.site=https://documentserver/</pre>
 
 <h2 id="Linux" class="copy-link">对于 Linux</h2>
 <h2 id="linux-1" class="copy-link"><span class="style_step">步骤 1.</span>安装 ONLYOFFICE 文档</h2>
-<p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE 文档</a> （打包为文档服务器）。</p>
+<p>下载并安装 ONLYOFFICE 文档 （打包为文档服务器）：</p>
+<div class="list-buttons">
+    <a class="button" href="https://www.onlyoffice.com/zh/download-docs.aspx?from=api#docs-developer" target="_blank">获取ONLYOFFICE编辑器</a>
+</div>
 <p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example" target="_blank">适用于Linux</a>的文档服务器。</p>
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">步骤 2.</span>安装的先决条件及使用编辑器运行网站</h2>
@@ -205,7 +211,10 @@ sudo chmod -R ugo+rw /{path}
 <h2 id="Docker" class="copy-link">对于 Docker</h2>
 
 <h2 id="docker-1" class="copy-link"><span class="style_step">步骤 1.</span>安装 ONLYOFFICE 文档</h2>
-<p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> （打包为文档服务器）。</p>
+<p>下载并安装 ONLYOFFICE 文档 （打包为文档服务器）：</p>
+<div class="list-buttons">
+    <a class="button" href="https://www.onlyoffice.com/zh/download-docs.aspx?from=api#docs-developer" target="_blank">获取ONLYOFFICE编辑器</a>
+</div>
 <p>请参阅详细指南，了解如何 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_java_example" target="_blank">为Docker安装文档服务器</a>。</p>
 
 <h2 id="docker-2" class="copy-link"><span class="style_step">步骤 2. </span>安装先决条件并使用编辑器运行网站</h2>

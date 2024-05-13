@@ -47,8 +47,11 @@ make compose-prod
 有关环境变量的更多信息，请参阅<a href="#configure">下面</a>。</p>
 
 <p><b>选项 2. 在本地计算机上</b></p>
-<p>在深入研究示例之前，您需要安装 ONLYOFFICE Docs。
-查看详细指南，了解如何在 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_ruby_example" target="_blank">Windows</a>，
+<p>下载并安装 ONLYOFFICE 文档 （打包为文档服务器）：</p>
+<div class="list-buttons">
+    <a class="button" href="https://www.onlyoffice.com/zh/download-docs.aspx?from=api#docs-developer" target="_blank">获取ONLYOFFICE编辑器</a>
+</div>
+<p>查看详细指南，了解如何在 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_ruby_example" target="_blank">Windows</a>，
 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_ruby_example" target="_blank">Linux</a>，
 或 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_ruby_example" target="_blank">Docker</a>上安装它。</p>
 <p>要在本地计算机上运行该示例，您需要 <a href="https://www.ruby-lang.org/en/" target="_blank">Ruby 3.2.2</a>
