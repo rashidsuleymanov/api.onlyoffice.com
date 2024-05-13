@@ -26,11 +26,6 @@
 
 /* Styles for validation helpers
 -----------------------------------------------------------*/
-.invisible {
-    visibility: hidden;
-    opacity: 0;
-}
-
 /*clearfix*/
 .clearfix:after {
     content: ".";

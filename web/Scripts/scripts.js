@@ -56,8 +56,6 @@ $(window).on("load", function () {
         applyDarkTheme();
     }
 
-    $("html").removeClass("invisible");
-
     themeBtn.on("click", function () {
         themeBtn.removeClass("active");
         $(this).addClass("active");

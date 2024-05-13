@@ -2,7 +2,7 @@
 
 <%@ Import Namespace="System.Web.Optimization" %>
 <!DOCTYPE html>
-<html lang="en" class="no-js invisible"
+<html lang="en" class="no-js"
     <% if (string.Equals(ConfigurationManager.AppSettings["offline_cache"], bool.TrueString, StringComparison.OrdinalIgnoreCase)){ %>manifest="<%= Url.RouteUrl("Cache") %>" <% } %>>
 <head>
     <meta charset="UTF-8" />
