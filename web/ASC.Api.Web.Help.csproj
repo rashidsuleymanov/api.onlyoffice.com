@@ -1122,6 +1122,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.GetPosInParent.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.GetRange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.GetTag.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.MoveCursorOutside.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.Push.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.RemoveAllElements.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.ReplaceByElement.docbuilder" />
@@ -1451,6 +1452,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiFormBase.GetWrapperShape.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiFormBase.IsFixed.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiFormBase.IsRequired.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiFormBase.MoveCursorOutside.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiFormBase.SetBackgroundColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiFormBase.SetBorderColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiFormBase.SetFormKey.docbuilder" />
@@ -1501,6 +1503,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.GetRange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.GetTag.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.IsForm.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.MoveCursorOutside.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.Push.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.RemoveAllElements.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.RemoveElement.docbuilder" />
@@ -4825,9 +4828,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\examples\word\ApiBlockLvlSdt.MoveCursorOutside.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiFormBase.MoveCursorOutside.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiInlineLvlSdt.MoveCursorOutside.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.GetReferenceStyle.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.SetReferenceStyle.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.Paste.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\ReferenceStyle.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">

@@ -131,6 +131,15 @@
     </ul>
     <br />
 
+    <p><b>Reference style methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/getreferencestyle") %>">Api/GetReferenceStyle</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/setreferencestyle") %>">Api/SetReferenceStyle</a> method to Spreadsheet API.</li>
+        <li>Added the <em>ReferenceStyle</em> property to the <a href="<%= Url.Action("spreadsheetapi/api") %>">Api</a> object of Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#ReferenceStyle">ReferenceStyle</a> type to the simple type definitions.</li>
+    </ul>
+    <br />
+
     <p><b>Methods for moving a cursor</b></p>
     <ul>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/movecursoroutside ") %>">ApiBlockLvlSdt/MoveCursorOutside </a> method to Text document API.</li>
@@ -142,6 +151,7 @@
     <p><b>Other methods</b></p>
     <ul>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/addcustomfunction") %>">Api/AddCustomFunction</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/paste") %>">ApiWorksheet/Paste</a> method to Spreadsheet API.</li>
         <li>Added the <em>nWidth</em> and <em>nHeight</em> parameters to the <a href="<%= Url.Action("textdocumentapi/apipictureform/setimage") %>">ApiPictureForm/SetImage</a> method of Text document API.</li>
     </ul>
     <br />
