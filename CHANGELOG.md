@@ -1,5 +1,7 @@
 # Change Log
 
+- plugins: updated config parameters
+
 ## 4.7.0
 - docspace: storybook v2.5
 - docspace: v2.5
