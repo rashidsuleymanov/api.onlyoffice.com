@@ -44,7 +44,7 @@
                     <ul>
                         <% foreach (var method in DocPluginsDocumentation.Instance.GetModule("pluginBase")["plugin"].Methods) { %>
                             <li>
-                                <a href="<%= Url.Action(string.Format("{0}", method.Key.ToLower())) %>"> <%= method.Key %></a>
+                                <a title="<%= method.Key %>" href="<%= Url.Action(string.Format("{0}", method.Key.ToLower())) %>"> <%= method.Key %></a>
                                 <% if (method.Key.ToLower() == "executemethod") { %>
                                 <ul>
                                     <li>
@@ -145,13 +145,13 @@
             <a href="<%= Url.Action("installation/") %>">Adding plugins</a>
             <ul>
                 <li>
-                    <a href="<%= Url.Action("installation/desktop") %>">ONLYOFFICE Desktop Editors</a>
+                    <a title="ONLYOFFICE Desktop Editors" href="<%= Url.Action("installation/desktop") %>">ONLYOFFICE Desktop Editors</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("installation/onpremises") %>">ONLYOFFICE Docs on-premises</a>
+                    <a title="ONLYOFFICE Docs on-premises" href="<%= Url.Action("installation/onpremises") %>">ONLYOFFICE Docs on-premises</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("installation/cloud") %>">ONLYOFFICE Cloud</a>
+                    <a title="ONLYOFFICE Cloud" href="<%= Url.Action("installation/cloud") %>">ONLYOFFICE Cloud</a>
                 </li>
             </ul>
         <li>
@@ -218,7 +218,7 @@
                     <a href="<%= Url.Action("example/photoeditor") %>">Photo editor</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("example/searchandchangetextbackgroundcolor") %>">Search and change text background color</a>
+                    <a title="Search and change text background color" href="<%= Url.Action("example/searchandchangetextbackgroundcolor") %>">Search and change text background color</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("example/searchandreplace") %>">Search and replace</a>
@@ -251,13 +251,13 @@
                     <a href="<%= Url.Action("example/typograf") %>">Typograf</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("example/workwithcontentcontrolscontent") %>">Work with content controls content</a>
+                    <a title="Work with content controls content" href="<%= Url.Action("example/workwithcontentcontrolscontent") %>">Work with content controls content</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("example/workwithcontentcontrolsnavigation") %>">Work with content controls navigation</a>
+                    <a title="Work with content controls navigation" href="<%= Url.Action("example/workwithcontentcontrolsnavigation") %>">Work with content controls navigation</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("example/workwithcontentcontrolstags") %>">Work with content controls tags</a>
+                    <a title="Work with content controls tags" href="<%= Url.Action("example/workwithcontentcontrolstags") %>">Work with content controls tags</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("example/youtube") %>">YouTube</a>
@@ -340,7 +340,7 @@
                     <a href="<%= Url.Action("macrosamples/insertid") %>">Insert unique id</a>
                 </li>
                  <li>
-                    <a href="<%= Url.Action("macrosamples/completeaddressinformation") %>">Complete address information</a>
+                    <a title="Complete address information" href="<%= Url.Action("macrosamples/completeaddressinformation") %>">Complete address information</a>
                 </li>
             </ul>
         </li>

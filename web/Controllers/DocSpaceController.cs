@@ -50,14 +50,17 @@ namespace ASC.Api.Web.Help.Controllers
                 "Backend/HowItWorks/Auth",
                 "Backend/HowItWorks/LongRunningOperations",
                 "Backend/HowItWorks/UploadingLargeFiles",
+                "Backend/Batch",
+                "Backend/Faq",
+                "Backend/Filters",
+                "Backend/GetDocspace",
                 "Backend/HowItWorks/Webhooks",
-                "Changelog",
-                "Faq",
-                "Filters",
                 "GetDocspace",
-                "Batch",
                 "ApiSystem",
                 "ApiSystem/Authentication",
+                "ApiSystem/Batch",
+                "ApiSystem/Faq",
+                "ApiSystem/Filters",
                 "ApiSystem/PortalSection",
                 "ApiSystem/PortalSection/PortalGet",
                 "ApiSystem/PortalSection/PortalRegister",
@@ -80,6 +83,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "JsSdk/Events",
                 "PluginsSdk",
                 "PluginsSdk/BuildingPlugin",
+                "PluginsSdk/Changelog",
                 "PluginsSdk/Config",
                 "PluginsSdk/CreatingTemplate",
                 "PluginsSdk/CodingPlugin/Events",
@@ -134,11 +138,12 @@ namespace ASC.Api.Web.Help.Controllers
                 "PluginsSdk/PluginTutorial/Planning",
                 "PluginsSdk/PluginTutorial/Testing",
                 "PluginsSdk/PluginTutorial/Using",
-                "Basic",
             };
 
         public ActionResult ApiSystem(string catchall)
         {
+            ViewData["viewName"] = "apisystem";
+
             if (!_actionMap.Contains("apisystem/" + catchall, StringComparer.OrdinalIgnoreCase))
             {
                 catchall = null;
@@ -148,7 +153,7 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Index()
         {
-            return View("basic");
+            return View();
         }
 
         public ActionResult Navigation()
@@ -158,6 +163,8 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Backend(string catchall)
         {
+            ViewData["viewName"] = "backend";
+
             if (!_actionMap.Contains("backend/" + catchall, StringComparer.OrdinalIgnoreCase))
             {
                 catchall = null;
@@ -165,28 +172,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Backend", (object)catchall);
         }
 
-        public ActionResult Changelog()
-        {
-            return View();
-        }
-
-        public ActionResult Faq()
-        {
-            return View();
-        }
-
-        public ActionResult Filters()
-        {
-            return View();
-        }
-
-        public ActionResult GetDocspace()
-        {
-            return View();
-        }
-
         public ActionResult JsSdk(string catchall)
         {
+            ViewData["viewName"] = "jssdk";
+
+
             if (!_actionMap.Contains("jssdk/" + catchall, StringComparer.OrdinalIgnoreCase))
             {
                 catchall = null;
@@ -196,21 +186,13 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult PluginsSdk(string catchall)
         {
+            ViewData["viewName"] = "pluginssdk";
+
             if (!_actionMap.Contains("pluginssdk/" + catchall, StringComparer.OrdinalIgnoreCase))
             {
                 catchall = null;
             }
             return View("PluginsSdk", (object)catchall);
-        }
-
-        public ActionResult Batch()
-        {
-            return View();
-        }
-
-        public ActionResult Basic()
-        {
-            return View();
         }
 
         [ValidateInput(false)]
@@ -221,6 +203,8 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Section(string section, string category)
         {
+            ViewData["viewName"] = "backend";
+
             if (string.IsNullOrEmpty(section))
             {
                 var firstPoint = DocSpaceDocumentation.GetAll().OrderBy(x => x.Name).ToList().FirstOrDefault();
@@ -261,6 +245,8 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Method(string section, string type, string url)
         {
+            ViewData["viewName"] = "backend";
+
             if (string.IsNullOrEmpty(section))
                 return View("sectionnotfound");
 
