@@ -55,7 +55,8 @@
     "nameLocale": {
         "fr": "Reconnaissance optique de caract&#232;res",
         "es": "Reconocimiento &#243;ptico de caracteres",
-        "de": "OCR"
+        "de": "OCR",
+        "pt-BR": "OCR"
     },
     "guid": "asc.{440EBF13-9B19-4BD8-8621-05200E58140B}",
     "version": "2.0.0",
@@ -66,7 +67,8 @@
             "descriptionLocale": {
                 "fr": "Reconnaissez le texte des images et des captures d'&#233;cran et ins&#233;rez-le dans vos documents.",
                 "es": "Reconozca el texto de im&#225;genes y capturas de pantalla e ins&#233;rtelo en sus documentos.",
-                "de": "Erkennen Sie Text auf Bildern und Screenshots und f&#252;gen Sie ihn in Ihre Dokumente ein."
+                "de": "Erkennen Sie Text auf Bildern und Screenshots und f&#252;gen Sie ihn in Ihre Dokumente ein.",
+                "pt-BR": "Reconhe&#231;a texto de imagens e capturas de tela e insira-o em seus documentos."
             },
             "url": "index.html",
 

@@ -45,6 +45,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
     "nameLocale": {
         "fr": "&#201;checs",
         "es": "Ajedrez",
+        "pt-BR": "Xadrez",
         "de": "Schach"
     },
     "guid": "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
@@ -56,6 +57,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "descriptionLocale": {
                 "fr": "Jouez aux &#233;checs avec vos collaborateurs directement dans les &#233;diteurs.",
                 "es": "Juegue al ajedrez con otros colaboradores directamente en los editores.",
+                "pt-BR": "Jogue xadrez com outros colaboradores diretamente nos editores.",
                 "de": "Spielen Sie Schach mit anderen Mitautoren direkt in den Editoren."
             },
             "url" : "index.html",

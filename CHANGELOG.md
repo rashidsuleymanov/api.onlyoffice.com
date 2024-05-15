@@ -1,6 +1,7 @@
 # Change Log
 
 ##
+- plugins: updated config parameters
 - redesign main page
 - redesign header and footer
 - selection of three products: docspace, docs, workspace
