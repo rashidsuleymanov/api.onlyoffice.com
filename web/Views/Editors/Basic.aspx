@@ -15,7 +15,9 @@
         <span class="hdr">基本概念</span>
     </h1>
 
-    <span class="pvl_product">ONLYOFFICE 文档服务器</span><span class="pvl_version">v<%= Products.Get("editors").Version %></span>
+    <div class="pvl_wrapper">
+        <span class="pvl_product">ONLYOFFICE 文档服务器</span><span class="pvl_version">v<%= Products.Get("editors").Version %></span>
+    </div>
 
     <p class="dscr">
         <a href="<%= Url.Action("getdocs") %>">ONLYOFFICE 文档</a> 是一个开源办公套件，包括文本文档、电子表格、演示文稿和可填写表单的编辑器。

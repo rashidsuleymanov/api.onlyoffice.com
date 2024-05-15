@@ -22,7 +22,40 @@
  * Pursuant to Section 7 § 3(e) we decline to grant you any rights under trademark law for use of our trademarks.
  *
 */
+$(window).on("load", function () {
+    $(".footer-item-title").click(function () {
+        if ($(window).width() <= 592) {
+            $(this).toggleClass("active");
+            $(this).next(".footer-item-list").slideToggle(300);
+        }
+    });
 
+    $(window).resize(function () {
+        $(".footer-item-title").removeClass("active");
+
+        if ($(window).width() <= 592) {
+            $(".footer-item-list").css("display", "none");
+        } else {
+            $(".footer-item-list").css("display", "block");
+        }
+    });
+
+    if (window.innerWidth > 592) {
+        if (localStorage.getItem("sidebar-navigation") === "false") {
+            $("#sidebar-button").addClass("active");
+            $(".layout-table-side").addClass("hide");
+        } else {
+            $("#sidebar-button").removeClass("active");
+            $(".layout-table-side").removeClass("hide");
+        }
+
+        if (window.innerWidth <= 1024) {
+            setTimeout(() => {
+                $(".layout-table-side").addClass("transition");
+            }, 50);
+        }
+    }
+});
 
 $(function() {
     function displayModalPanel (obj, width, height, top, position) {
@@ -57,7 +90,7 @@ $(function() {
                 },
 
                 focusInput: true,
-                baseZ: 666,
+                baseZ: 1001,
 
                 fadeIn: 0,
                 fadeOut: 0,
@@ -313,6 +346,18 @@ $(document).ready(function () {
 
     var $tables = $(".table");
     if ($tables.length) renderMobileContent($tables);
+
+    var timeoutId;
+
+    $(".nav-list").on("scroll", function() {
+        $(".nav-list").addClass("scroll-active");
+    
+        clearTimeout(timeoutId);
+    
+        timeoutId = setTimeout(function() {
+            $(".nav-list").removeClass("scroll-active");
+        }, 100);
+    });
 });
 
 function handleSelects() {

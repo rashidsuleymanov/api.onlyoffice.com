@@ -195,6 +195,9 @@
     <div class="mobile-content"></div>
 
     <p id="used-callbackUrl" class="copy-link">
+        The server stores all <em>callbackUrls</em> and chooses which one to use depending on the user who performed the action.
+    </p>
+    <p>
         从 5.5 版本开始，根据请求的 <em>status</em> 选择 <a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a>。
         从 4.4 到 5.5 版本， <em>callbackUrl</em> 来自最后一个加入共同编辑的用户。
         在 4.4 之前的版本中，在共同编辑时， <em>callbackUrl</em> 来自第一次打开文件进行编辑的用户。

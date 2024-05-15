@@ -202,102 +202,104 @@
         </ul>
         <p>当您设置必要的权限并为同一个文档组合不同的权限时，您应该牢记这一点。</p>
         <p>请参阅下面的交互表，了解不同参数和参数组合如何相互影响以及由此产生的文档权限：</p>
-        <div class="table_wrapper">
-            <h5>参数</h5>
-            <table id="parameters" class="parameters_permissions">
-                <thead>
-                    <tr>
-                        <th>参数</th>
-                        <th colspan="2" style="text-align: center;">值</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr id="mode">
-                        <th><p><a href="<%= Url.Action("config/editor") %>#mode">editorConfig.mode</a></th>
-                        <td class="paramEdit active_param"><p>edit</p></td>
-                        <td class="paramView inactive_param"><p>view</p></td>
-                    </tr>
-                    <tr id="edit">
-                        <th><p><a href="<%= Url.Action("config/document/permissions") %>#edit">document.permissions.edit</a></p></th>
-                        <td class="paramTrue active_param"><p>true</p></td>
-                        <td class="paramFalse inactive_param"><p>false</p></td>
-                    </tr>
-                    <tr id="review">
-                        <th><p><a href="<%= Url.Action("config/document/permissions") %>#review">document.permissions.review</a></p></th>
-                        <td class="paramTrue active_param"><p>true</p></td>
-                        <td class="paramFalse inactive_param"><p>false</p></td>
-                    </tr>
-                    <tr id="fillForms">
-                        <th><p><a href="<%= Url.Action("config/document/permissions") %>#fillForms">document.permissions.fillForms</a></p></th>
-                        <td class="paramTrue active_param"><p>true</p></td>
-                        <td class="paramFalse inactive_param"><p>false</p></td>
-                    </tr>
-                    <tr id="comment">
-                        <th><p><a href="<%= Url.Action("config/document/permissions") %>#comment">document.permissions.comment</a></a></p></th>
-                        <td class="paramTrue active_param"><p>true</p></td>
-                        <td class="paramFalse inactive_param"><p>false</p></td>
-                    </tr>
-                    <tr id="download">
-                        <th><p><a href="<%= Url.Action("config/document/permissions") %>#download">document.permissions.download</a></p></th>
-                        <td class="paramTrue active_param"><p>true</p></td>
-                        <td class="paramFalse inactive_param"><p>false</p></td>
-                    </tr>
-                    <tr id="print">
-                        <th><p><a href="<%= Url.Action("config/document/permissions") %>#print">document.permissions.print</a></p></th>
-                        <td class="paramTrue active_param"><p>true</p></td>
-                        <td class="paramFalse inactive_param"><p>false</p></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="table_wrapper">
-            <h5>产生的权限</h5>
-            <table id="result" class="parameters_permissions">
-                <thead>
-                    <tr>
-                        <th>文档操作</th>
-                        <th>权限</th>
-                        <th>注释</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr id="viewing">
-                        <td class="resultAction"><p>查看</p></td>
-                        <td class="resultPermission allowed"><p>允许</p></td>
-                        <td class="resultNote"></td>
-                    </tr>
-                    <tr id="editing">
-                        <td class="resultAction"><p>编辑</p></td>
-                        <td class="resultPermission notallowed"><p>不允许</p></td>
-                        <td class="resultNote"></td>
-                    </tr>
-                    <tr id="reviewing">
-                        <td class="resultAction"><p>审查</p></td>
-                        <td class="resultPermission notallowed"><p>不允许</p></td>
-                        <td class="resultNote"></td>
-                    </tr>
-                    <tr id="formFilling">
-                        <td class="resultAction"><p>表格填写</p></td>
-                        <td class="resultPermission notallowed"><p>不允许</p></td>
-                        <td class="resultNote"></td>
-                    </tr>
-                    <tr id="commenting">
-                        <td class="resultAction"><p>评论</p></td>
-                        <td class="resultPermission notallowed"><p>不允许</p></td>
-                        <td class="resultNote"></td>
-                    </tr>
-                    <tr id="downloading">
-                        <td class="resultAction"><p>下载</p></td>
-                        <td class="resultPermission notallowed"><p>不允许</p></td>
-                        <td class="resultNote"></td>
-                    </tr>
-                    <tr id="printing">
-                        <td class="resultAction"><p>打印</p></td>
-                        <td class="resultPermission notallowed"><p>不允许</p></td>
-                        <td class="resultNote"></td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="table-box">
+            <div class="table_wrapper">
+                <h5>参数</h5>
+                <table id="parameters" class="parameters_permissions">
+                    <thead>
+                        <tr>
+                            <th>参数</th>
+                            <th colspan="2" style="text-align: center;">值</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="mode">
+                            <th><p><a href="<%= Url.Action("config/editor") %>#mode">editorConfig.mode</a></th>
+                            <td class="paramEdit active_param"><p>edit</p></td>
+                            <td class="paramView inactive_param"><p>view</p></td>
+                        </tr>
+                        <tr id="edit">
+                            <th><p><a href="<%= Url.Action("config/document/permissions") %>#edit">document.permissions.edit</a></p></th>
+                            <td class="paramTrue active_param"><p>true</p></td>
+                            <td class="paramFalse inactive_param"><p>false</p></td>
+                        </tr>
+                        <tr id="review">
+                            <th><p><a href="<%= Url.Action("config/document/permissions") %>#review">document.permissions.review</a></p></th>
+                            <td class="paramTrue active_param"><p>true</p></td>
+                            <td class="paramFalse inactive_param"><p>false</p></td>
+                        </tr>
+                        <tr id="fillForms">
+                            <th><p><a href="<%= Url.Action("config/document/permissions") %>#fillForms">document.permissions.fillForms</a></p></th>
+                            <td class="paramTrue active_param"><p>true</p></td>
+                            <td class="paramFalse inactive_param"><p>false</p></td>
+                        </tr>
+                        <tr id="comment">
+                            <th><p><a href="<%= Url.Action("config/document/permissions") %>#comment">document.permissions.comment</a></a></p></th>
+                            <td class="paramTrue active_param"><p>true</p></td>
+                            <td class="paramFalse inactive_param"><p>false</p></td>
+                        </tr>
+                        <tr id="download">
+                            <th><p><a href="<%= Url.Action("config/document/permissions") %>#download">document.permissions.download</a></p></th>
+                            <td class="paramTrue active_param"><p>true</p></td>
+                            <td class="paramFalse inactive_param"><p>false</p></td>
+                        </tr>
+                        <tr id="print">
+                            <th><p><a href="<%= Url.Action("config/document/permissions") %>#print">document.permissions.print</a></p></th>
+                            <td class="paramTrue active_param"><p>true</p></td>
+                            <td class="paramFalse inactive_param"><p>false</p></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table_wrapper">
+                <h5>产生的权限</h5>
+                <table id="result" class="parameters_permissions">
+                    <thead>
+                        <tr>
+                            <th>文档操作</th>
+                            <th>权限</th>
+                            <th>注释</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="viewing">
+                            <td class="resultAction"><p>查看</p></td>
+                            <td class="resultPermission allowed"><p>允许</p></td>
+                            <td class="resultNote"></td>
+                        </tr>
+                        <tr id="editing">
+                            <td class="resultAction"><p>编辑</p></td>
+                            <td class="resultPermission notallowed"><p>不允许</p></td>
+                            <td class="resultNote"></td>
+                        </tr>
+                        <tr id="reviewing">
+                            <td class="resultAction"><p>审查</p></td>
+                            <td class="resultPermission notallowed"><p>不允许</p></td>
+                            <td class="resultNote"></td>
+                        </tr>
+                        <tr id="formFilling">
+                            <td class="resultAction"><p>表格填写</p></td>
+                            <td class="resultPermission notallowed"><p>不允许</p></td>
+                            <td class="resultNote"></td>
+                        </tr>
+                        <tr id="commenting">
+                            <td class="resultAction"><p>评论</p></td>
+                            <td class="resultPermission notallowed"><p>不允许</p></td>
+                            <td class="resultNote"></td>
+                        </tr>
+                        <tr id="downloading">
+                            <td class="resultAction"><p>下载</p></td>
+                            <td class="resultPermission notallowed"><p>不允许</p></td>
+                            <td class="resultNote"></td>
+                        </tr>
+                        <tr id="printing">
+                            <td class="resultAction"><p>打印</p></td>
+                            <td class="resultPermission notallowed"><p>不允许</p></td>
+                            <td class="resultNote"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <p>有关权限的更多信息，请参见 <a href="<%= Url.Action("config/document/permissions") %>">此页面</a>。</p>
     </dd>

@@ -45,11 +45,17 @@ namespace ASC.Api.Web.Help.Helpers
         [DataMember(Name = "description")]
         public string Description;
 
+        [DataMember(Name = "abstract")]
+        public string Abstract;
+
         [DataMember(Name = "version")]
         public string Version;
 
-        [DataMember(Name = "links")]
-        public Dictionary<string, List<Tuple<string, string>>> Links;
+        [DataMember(Name = "sections")]
+        public List<String> Sections;
+
+        [DataMember(Name = "parent")]
+        public String Parent;
     }
 
     public static class Products
@@ -83,6 +89,11 @@ namespace ASC.Api.Web.Help.Helpers
         public static Product Get(string id)
         {
             return EnabledProducts().FirstOrDefault(product => product.Id == id);
+        }
+
+        public static Product GetSection(string productId, string sectionId)
+        {
+            return EnabledProducts().FirstOrDefault(product => product.Id == sectionId && product.Parent == productId);
         }
     }
 }
