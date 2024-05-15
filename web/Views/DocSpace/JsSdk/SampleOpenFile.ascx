@@ -6,7 +6,7 @@
 <p class="dscr">Open a file in <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/editor" target="_blank">ONLYOFFICE editors</a> 
 using <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/fileselector" target="_blank">FileSelector</a>.</p>
 <img class="screenshot" alt="OpenEditors" src="<%= Url.Content("~/content/img/docspace/gifs/open-editors.gif") %>" />
-<div class="header-gray">Before you start</div>
+<h2>Before you start</h2>
 
 <ol>
     <li>For the JavaScript SDK to work correctly, it must be launched on the server. Note that running the HTML file directly will not work. 
@@ -20,11 +20,10 @@ using <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/fileselector"
 </ol>
 <img class="screenshot max-width-832" alt="Chart" src="<%= Url.Content("~/content/img/docspace/add-in-js-sdk-root-url.png") %>" />
 
-<div class="header-gray">Building sample</div>
+<h2>Building sample</h2>
 
-</br>
+
 <h3>Step 1. Set HTML structure</h3>
-</br>
 <p>Create HTML file. It should include a <em>div</em> tag where we specify DocSpace connection parameters.</p>
 
 <div style="width: 100%;">
@@ -61,9 +60,8 @@ using <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/fileselector"
 <p><b>https://{PORTAL_SRC}/static/scripts/api.js</b></p>
 <p>where <b>{PORTAL_SRC}</b> is the name of the server with the ONLYOFFICE DocSpace installed.</p>
 
-</br>
+
 <h3>Step 2. Add File Selector</h3>
-</br>
 <p>Add a script to initialize the File Selector. First, let's add an event handler for <a href="https://api.onlyoffice.com/docspace/jssdk/events#onAppReady" target="_blank">onAppReady</a>, which runs when initialization is successful.</p>
 
 <div style="width: 100%;">
@@ -86,9 +84,8 @@ var onAppReady = function (e) {
     </pre>
 </div>  
 
-</br>
+
 <h3>Step 3. Add event handler for onSelectCallback</h3>
-</br>
 <p>Add an event handler for <a href="https://api.onlyoffice.com/docspace/jssdk/events#onSelectCallback" target="_blank">onSelectCallback</a>. Here we initialize <b>ONLYOFFICE editors</b> after the user selects a file. 
 To do this, we pass the ID of the file selected in the <b>File Selector</b> to the <a href="https://api.onlyoffice.com/docspace/jssdk/methods#initEditor" target="_blank">initEditor</a> method.</p>
 
@@ -115,9 +112,8 @@ var onSelectCallback = function (e) {
     </pre>
 </div>  
 
-</br>
+
 <h3>Step 4. Set configuration parameters</h3>
-</br>
 <p>Create a configuration for the <b>File Selector</b>. For this we create a variable as shown below.</p>
 
 <div style="width: 100%;">
@@ -145,9 +141,8 @@ const config = {
     </pre>
 </div> 
 
-</br>
+
 <h3>Step 5. Initialize File Selector</h3>
-</br>
 <p>Initialize the <b>File Selector</b> as shown below.</p>
 
 <div style="width: 100%;">
@@ -168,13 +163,13 @@ var docSpace = DocSpace.SDK.initFileSelector(config);
     </pre>
 </div> 
 
-</br>
+
 <h3>Step 6. Initialize File Selector</h3>
-</br>
+
 <p>Run our HTML file and make sure everything works.</p>
 
-<div class="header-gray">Example</div>
-</br>
+<h2>Example</h2>
+
 <div style="width: 100%;">
     <div id="jsSdkHeader" class="jsSdkHeader">
         <div class="preContentType">
