@@ -199,6 +199,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\Api.GetLocale.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.GetMailMergeData.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.GetRange.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.GetReferenceStyle.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.GetSelection.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.GetSheet.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.GetSheets.docbuilder" />
@@ -210,6 +211,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\Api.Save.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.SetFreezePanesType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.SetLocale.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.SetReferenceStyle.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.SetThemeColors.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiAreas.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiAreas.GetCount.docbuilder" />
@@ -572,6 +574,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetUsedRange.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.GetVisible.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.Move.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.Paste.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.SetActive.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.SetBottomMargin.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.SetColumnWidth.docbuilder" />
@@ -635,6 +638,7 @@
     <Content Include="App_Data\docbuilder\examples\ProtectedRangeUserType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\pt.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\pt_8.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\ReferenceStyle.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\RelFromH.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\RelFromV.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\ReplaceData.docbuilder" />
@@ -4828,10 +4832,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\docbuilder\examples\cell\Api.GetReferenceStyle.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\Api.SetReferenceStyle.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.Paste.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\ReferenceStyle.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiRange.Cut.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiRange.PasteSpecial.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\PasteSpecialOperation.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\PasteType.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
