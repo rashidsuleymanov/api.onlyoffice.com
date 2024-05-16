@@ -11,17 +11,17 @@ using <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/fileselector"
 <ol>
     <li>For the JavaScript SDK to work correctly, it must be launched on the server. Note that running the HTML file directly will not work. 
     Please make sure you are using a server environment.</li>
-    <li>You need to add the URL of your server's root directory to the <b>Developer Tools</b> section of DocSpace. For this:</li>
+    <li>You need to add the URL of your server's root directory to the <b>Developer Tools</b> section of DocSpace. For this:
         <ul>
-            <li><p>Go to your DocSpace workspace settings.</p></li>
-            <li><p>Navigate to the Developer Tools section.</p></li>
-            <li><p>In the <b>JavaScript SDK</b> tab, in <b>"Enter the address of DocSpace to embed"</b> add the URL of your server's root directory.</p></li>
+            <li>Go to your DocSpace workspace settings.</li>
+            <li>Navigate to the Developer Tools section.</li>
+            <li>In the <b>JavaScript SDK</b> tab, in <b>"Enter the address of DocSpace to embed"</b> add the URL of your server's root directory.</li>
         </ul>
+    </li>
 </ol>
 <img class="screenshot max-width-832" alt="Chart" src="<%= Url.Content("~/content/img/docspace/add-in-js-sdk-root-url.png") %>" />
 
 <h2>Building sample</h2>
-
 
 <h3>Step 1. Set HTML structure</h3>
 <p>Create HTML file. It should include a <em>div</em> tag where we specify DocSpace connection parameters.</p>
@@ -55,10 +55,9 @@ using <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/fileselector"
 &lt;/html&gt;</pre>
 </div>  
 
-<p>The API JavaScript file can normally be found in the following DocSpace URL:</p>
-<p><b>https://{PORTAL_SRC}/static/scripts/api.js</b></p>
-<p>where <b>{PORTAL_SRC}</b> is the name of the server with the ONLYOFFICE DocSpace installed.</p>
-
+<p>The API JavaScript file can normally be found in the following DocSpace URL:
+<b>https://{PORTAL_SRC}/static/scripts/api.js</b><br />
+<b>{PORTAL_SRC}</b> is the name of the server with the ONLYOFFICE DocSpace installed.</p>
 
 <h3>Step 2. Add File Selector</h3>
 <p>Add a script to initialize the File Selector. First, let's add an event handler for <a href="https://api.onlyoffice.com/docspace/jssdk/events#onAppReady" target="_blank">onAppReady</a>, which runs when initialization is successful.</p>
@@ -81,7 +80,6 @@ var onAppReady = function (e) {
     var frame = DocSpace.SDK.frames["ds-frame"];
 }</pre>
 </div>  
-
 
 <h3>Step 3. Add event handler for onSelectCallback</h3>
 <p>Add an event handler for <a href="https://api.onlyoffice.com/docspace/jssdk/events#onSelectCallback" target="_blank">onSelectCallback</a>. Here we initialize <b>ONLYOFFICE editors</b> after the user selects a file. 
@@ -108,7 +106,6 @@ var onSelectCallback = function (e) {
     });
 }</pre>
 </div>  
-
 
 <h3>Step 4. Set configuration parameters</h3>
 <p>Create a configuration for the <b>File Selector</b>. For this we create a variable as shown below.</p>
@@ -137,7 +134,6 @@ const config = {
 }</pre>
 </div> 
 
-
 <h3>Step 5. Initialize File Selector</h3>
 <p>Initialize the <b>File Selector</b> as shown below.</p>
 
@@ -157,7 +153,6 @@ const config = {
 <pre class="jsSdkPre" id="initPre">
 var docSpace = DocSpace.SDK.initFileSelector(config);</pre>
 </div> 
-
 
 <h3>Step 6. Initialize File Selector</h3>
 
