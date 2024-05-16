@@ -54,10 +54,10 @@
                 <a href="<%= Url.Action("jssdk/events") %>">Events</a>
             </li>
             <li>
-                Samples
+                <a href="<%= Url.Action("jssdk/samples/default") %>">Samples</a>
                 <ul>
                     <li>
-                        <a href="<%= Url.Action("jssdk/sampleopenfile") %>">Open file in editors</a>
+                        <a href="<%= Url.Action("jssdk/samples/sampleopenfile") %>">Open file in editors</a>
                     </li>
                 </ul>
             </li>
