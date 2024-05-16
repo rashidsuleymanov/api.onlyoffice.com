@@ -2496,6 +2496,7 @@
     <Content Include="Content\img\docbuilder\samples\fill-spreadsheet.svg" />
     <Content Include="Content\img\docbuilder\samples\mail-merge-reception.svg" />
     <Content Include="Content\img\docbuilder\terminal.png" />
+    <Content Include="Content\img\docspace\add-in-js-sdk-root-url.png" />
     <Content Include="Content\img\docspace\box.png" />
     <Content Include="Content\img\docspace\button.png" />
     <Content Include="Content\img\docspace\checkbox.png" />
@@ -2542,6 +2543,7 @@
     <Content Include="Content\img\docspace\textarea.png" />
     <Content Include="Content\img\docspace\toast.png" />
     <Content Include="Content\img\docspace\toggle-button.png" />
+    <Content Include="Content\img\docspace\gifs\open-editor.gif" />
     <Content Include="Content\img\docspace\upload-plugin.jpg" />
     <Content Include="Content\img\Editor\accept_reject.png" />
     <Content Include="Content\img\Editor\actionLink-create.png" />
