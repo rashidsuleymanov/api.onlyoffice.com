@@ -39,7 +39,7 @@ using <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/fileselector"
                 </div>
             </div>
     </div>
-    <pre class="jsSdkPre" id="htmlStructurePre">
+<pre class="jsSdkPre" id="htmlStructurePre">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
     &lt;head&gt;
@@ -52,8 +52,7 @@ using <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/fileselector"
          &lt;div id="ds-frame"&gt;&lt;/div&gt;
         ...
     &lt;/body&gt;
-&lt;/html&gt;
-    </pre>
+&lt;/html&gt;</pre>
 </div>  
 
 <p>The API JavaScript file can normally be found in the following DocSpace URL:</p>
@@ -77,11 +76,10 @@ using <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/fileselector"
                 </div>
             </div>
     </div>
-    <pre class="jsSdkPre" id="onAppPre">
+<pre class="jsSdkPre" id="onAppPre">
 var onAppReady = function (e) {
     var frame = DocSpace.SDK.frames["ds-frame"];
-}
-    </pre>
+}</pre>
 </div>  
 
 
@@ -102,14 +100,13 @@ To do this, we pass the ID of the file selected in the <b>File Selector</b> to t
                 </div>
             </div>
     </div>
-    <pre class="jsSdkPre" id="onSelectPre">
+<pre class="jsSdkPre" id="onSelectPre">
 var onSelectCallback = function (e) {
     docSpace = DocSpace.SDK.initEditor({
         "id": e.id,
         "height": "1000px"
     });
-}
-    </pre>
+}</pre>
 </div>  
 
 
@@ -129,7 +126,7 @@ var onSelectCallback = function (e) {
                 </div>
             </div>
     </div>
-    <pre class="jsSdkPre" id="configPre">
+<pre class="jsSdkPre" id="configPre">
 const config = {
     "events": {
         "onSelectCallback": onSelectCallback,
@@ -137,8 +134,7 @@ const config = {
     },
     "height": "700px",
     "width": "100%"
-}
-    </pre>
+}</pre>
 </div> 
 
 
@@ -158,9 +154,8 @@ const config = {
                 </div>
             </div>
     </div>
-    <pre class="jsSdkPre" id="initPre">
-var docSpace = DocSpace.SDK.initFileSelector(config);
-    </pre>
+<pre class="jsSdkPre" id="initPre">
+var docSpace = DocSpace.SDK.initFileSelector(config);</pre>
 </div> 
 
 
@@ -183,7 +178,7 @@ var docSpace = DocSpace.SDK.initFileSelector(config);
                 </div>
             </div>
     </div>
-    <pre class="jsSdkPre" id="examplePre">
+<pre class="jsSdkPre" id="examplePre">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
     &lt;head&gt;
@@ -215,8 +210,7 @@ var docSpace = DocSpace.SDK.initFileSelector(config);
         }
         var docSpace = DocSpace.SDK.initFileSelector(config);
     &lt;/script&gt;
-&lt;/html&gt;
-    </pre>
+&lt;/html&gt;</pre>
 </div>  
 
 <h2>Getting help</h2>
