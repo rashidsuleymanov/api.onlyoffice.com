@@ -27,7 +27,7 @@ using <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/fileselector"
 <p>Create HTML file. It should include a <em>div</em> tag where we specify DocSpace connection parameters.</p>
 
 <div style="width: 100%;">
-    <div id="jsSdkHeader" class="jsSdkHeader">
+    <div class="jsSdkHeader">
         <div class="preContentType">
             <span style="font-family: monospace">HTML</span>
         </div>
@@ -63,7 +63,7 @@ using <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/fileselector"
 <p>Add a script to initialize the File Selector. First, let's add an event handler for <a href="https://api.onlyoffice.com/docspace/jssdk/events#onAppReady" target="_blank">onAppReady</a>, which runs when initialization is successful.</p>
 
 <div style="width: 100%;">
-    <div id="jsSdkHeader" class="jsSdkHeader">
+    <div class="jsSdkHeader">
         <div class="preContentType">
             <span style="font-family: monospace">JS</span>
         </div>
@@ -86,7 +86,7 @@ var onAppReady = function (e) {
 To do this, we pass the ID of the file selected in the <b>File Selector</b> to the <a href="https://api.onlyoffice.com/docspace/jssdk/methods#initEditor" target="_blank">initEditor</a> method.</p>
 
 <div style="width: 100%;">
-    <div id="jsSdkHeader" class="jsSdkHeader">
+    <div class="jsSdkHeader">
         <div class="preContentType">
             <span style="font-family: monospace">JS</span>
         </div>
@@ -111,7 +111,7 @@ var onSelectCallback = function (e) {
 <p>Create a configuration for the <b>File Selector</b>. For this we create a variable as shown below.</p>
 
 <div style="width: 100%;">
-    <div id="jsSdkHeader" class="jsSdkHeader">
+    <div class="jsSdkHeader">
         <div class="preContentType">
             <span style="font-family: monospace">JS</span>
         </div>
@@ -138,7 +138,7 @@ const config = {
 <p>Initialize the <b>File Selector</b> as shown below.</p>
 
 <div style="width: 100%;">
-    <div id="jsSdkHeader" class="jsSdkHeader">
+    <div class="jsSdkHeader">
         <div class="preContentType">
             <span style="font-family: monospace">JS</span>
         </div>
@@ -161,7 +161,7 @@ var docSpace = DocSpace.SDK.initFileSelector(config);</pre>
 <h2>Example</h2>
 
 <div style="width: 100%;">
-    <div id="jsSdkHeader" class="jsSdkHeader">
+    <div class="jsSdkHeader">
         <div class="preContentType">
             <span style="font-family: monospace">HTML</span>
         </div>
