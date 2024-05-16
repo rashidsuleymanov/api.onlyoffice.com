@@ -39,7 +39,7 @@ using <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/fileselector"
                 </div>
             </div>
     </div>
-<pre class="jsSdkPre" id="htmlStructurePre">
+<pre class="jsSdkPreNoScroll" id="htmlStructurePre">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
     &lt;head&gt;
@@ -75,7 +75,7 @@ using <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/fileselector"
                 </div>
             </div>
     </div>
-<pre class="jsSdkPre" id="onAppPre">
+<pre class="jsSdkPreNoScroll" id="onAppPre">
 var onAppReady = function (e) {
     var frame = DocSpace.SDK.frames["ds-frame"];
 }</pre>
@@ -98,7 +98,7 @@ To do this, we pass the ID of the file selected in the <b>File Selector</b> to t
                 </div>
             </div>
     </div>
-<pre class="jsSdkPre" id="onSelectPre">
+<pre class="jsSdkPreNoScroll" id="onSelectPre">
 var onSelectCallback = function (e) {
     docSpace = DocSpace.SDK.initEditor({
         "id": e.id,
@@ -117,13 +117,13 @@ var onSelectCallback = function (e) {
         </div>
             <div class="tooltip" >
                 <div class="copyJsSdk">
-                    <img  id="config" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                    <img  id="jsConfig" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
                     <span id="config-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get code for the whole example.</span>
                     <span id="config-click" style="display: none;" class="tooltiptext-click">Code copied.</span>
                 </div>
             </div>
     </div>
-<pre class="jsSdkPre" id="configPre">
+<pre class="jsSdkPreNoScroll" id="jsConfigPre">
 const config = {
     "events": {
         "onSelectCallback": onSelectCallback,
@@ -150,7 +150,7 @@ const config = {
                 </div>
             </div>
     </div>
-<pre class="jsSdkPre" id="initPre">
+<pre class="jsSdkPreNoScroll" id="initPre">
 var docSpace = DocSpace.SDK.initFileSelector(config);</pre>
 </div> 
 
@@ -173,7 +173,7 @@ var docSpace = DocSpace.SDK.initFileSelector(config);</pre>
                 </div>
             </div>
     </div>
-<pre class="jsSdkPre" id="examplePre">
+<pre class="jsSdkPreNoScroll" id="examplePre">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
     &lt;head&gt;

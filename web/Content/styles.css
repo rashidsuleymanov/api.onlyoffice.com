@@ -3695,26 +3695,25 @@ select {
     background-color: #E2E2E2;
 }
 
-.jsSdkPre {
+.jsSdkPreNoScroll {
     border-radius: 0px 0px 3px 3px;
     margin-top: 0px;
-    overflow-y: scroll;
 }
-    .jsSdkPre::-webkit-scrollbar {
+    .jsSdkPreNoScroll::-webkit-scrollbar {
         width: 4px;
     }
-    .jsSdkPre::-webkit-scrollbar-track {
+    .jsSdkPreNoScroll::-webkit-scrollbar-track {
         background: #f1f1f1;
     }
-    .jsSdkPre::-webkit-scrollbar-thumb {
+    .jsSdkPreNoScroll::-webkit-scrollbar-thumb {
         background: #E2E2E2;
     }
 
-        .jsSdkPre::-webkit-scrollbar-thumb:hover {
+        .jsSdkPreNoScroll::-webkit-scrollbar-thumb:hover {
             background: #999;
         }
 
-    .jsSdkPre::-webkit-scrollbar-button {
+    .jsSdkPreNoScroll::-webkit-scrollbar-button {
         display: none;
     }
 
