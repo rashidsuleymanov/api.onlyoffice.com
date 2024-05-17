@@ -918,8 +918,12 @@
                     </li>
                 </ul>
             </td>
-            <td>boolean or object</td>
-            <td>true</td>
+            <td>object</td>
+            <td>{
+    "blank": true,
+    "text": "Open file location",
+    "url": "https://example.com"
+}</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
