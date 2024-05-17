@@ -3,8 +3,8 @@
 <h1>
     <span class="hdr">Open file in ONLYOFFICE editors</span>
 </h1>
-<p class="dscr">Open a file in <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/editor" target="_blank">ONLYOFFICE editors</a> 
-using <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/fileselector" target="_blank">FileSelector</a>.</p>
+<p class="dscr">Open a file in <a href="<%= Url.Action("JsSdk/InitModes/Editor") %>">ONLYOFFICE editors</a>
+using <a href="<%= Url.Action("JsSdk/InitModes/FileSelector") %>">FileSelector</a>.</p>
 <img class="screenshot" alt="OpenEditors" src="<%= Url.Content("~/content/img/docspace/gifs/open-editors.gif") %>" />
 <h2>Before you start</h2>
 
@@ -45,7 +45,7 @@ using <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/fileselector"
     &lt;head&gt;
         &lt;meta charset="UTF-8"&gt;
         &lt;title&gt;DocSpace JavaScript SDK&lt;/title&gt;
-        &lt;script src="https://{PORTAL_SRC}/static/scripts/api.js"&gt;&lt;/script&gt;
+        &lt;script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"&gt;&lt;/script&gt;
         ...
     &lt;/head&gt;
     &lt;body&gt;
@@ -53,76 +53,77 @@ using <a href="https://api.onlyoffice.com/docspace/jssdk/initmodes/fileselector"
         ...
     &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>  
+</div>
 
 <p>The API JavaScript file can normally be found in the following DocSpace URL:
-<b>https://{PORTAL_SRC}/static/scripts/api.js</b><br />
+<b>{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js</b><br />
 <b>{PORTAL_SRC}</b> is the name of the server with the ONLYOFFICE DocSpace installed.</p>
 
 <h3>Step 2. Add File Selector</h3>
-<p>Add a script to initialize the File Selector. First, let's add an event handler for <a href="https://api.onlyoffice.com/docspace/jssdk/events#onAppReady" target="_blank">onAppReady</a>, which runs when initialization is successful.</p>
 
-<div style="width: 100%;">
-    <div class="jsSdkHeader">
-        <div class="preContentType">
-            <span style="font-family: monospace">JS</span>
-        </div>
-            <div class="tooltip" >
-                <div class="copyJsSdk">
-                    <img  id="onApp" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
-                    <span id="onApp-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get code for the whole example.</span>
-                    <span id="onApp-click" style="display: none;" class="tooltiptext-click">Code copied.</span>
+<ol>
+    <li>
+        <p>Add a script to initialize the File Selector. First, let's add an event handler for <a href="<%= Url.Action("jssdk/events") %>#onAppReady">onAppReady</a>, which runs when initialization is successful.</p>
+            <div style="width: 100%;">
+                <div class="jsSdkHeader">
+                    <div class="preContentType">
+                        <span style="font-family: monospace">JS</span>
+                    </div>
+                        <div class="tooltip" >
+                            <div class="copyJsSdk">
+                                <img  id="onApp" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                                <span id="onApp-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get code for the whole example.</span>
+                                <span id="onApp-click" style="display: none;" class="tooltiptext-click">Code copied.</span>
+                            </div>
+                        </div>
                 </div>
-            </div>
-    </div>
 <pre class="jsSdkPreNoScroll" id="onAppPre">
 var onAppReady = function (e) {
     var frame = DocSpace.SDK.frames["ds-frame"];
 }</pre>
-</div>  
-
-<h3>Step 3. Add event handler for onSelectCallback</h3>
-<p>Add an event handler for <a href="https://api.onlyoffice.com/docspace/jssdk/events#onSelectCallback" target="_blank">onSelectCallback</a>. Here we initialize <b>ONLYOFFICE editors</b> after the user selects a file. 
-To do this, we pass the ID of the file selected in the <b>File Selector</b> to the <a href="https://api.onlyoffice.com/docspace/jssdk/methods#initEditor" target="_blank">initEditor</a> method.</p>
-
-<div style="width: 100%;">
-    <div class="jsSdkHeader">
-        <div class="preContentType">
-            <span style="font-family: monospace">JS</span>
-        </div>
-            <div class="tooltip" >
-                <div class="copyJsSdk">
-                    <img  id="onSelect" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
-                    <span id="onSelect-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get code for the whole example.</span>
-                    <span id="onSelect-click" style="display: none;" class="tooltiptext-click">Code copied.</span>
+</div>
+    </li>
+    <li>
+        <p>Add an event handler for <a href="<%= Url.Action("jssdk/events") %>#onSelectCallback">onSelectCallback</a>. Here we initialize <b>ONLYOFFICE editors</b> after the user selects a file. 
+To do this, we pass the ID of the file selected in the <b>File Selector</b> to the <a href="<%= Url.Action("jssdk/methods") %>#initEditor">initEditor</a> method.</p>
+            <div style="width: 100%;">
+                <div class="jsSdkHeader">
+                    <div class="preContentType">
+                        <span style="font-family: monospace">JS</span>
+                    </div>
+                        <div class="tooltip" >
+                            <div class="copyJsSdk">
+                                <img  id="onSelect" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                                <span id="onSelect-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get code for the whole example.</span>
+                                <span id="onSelect-click" style="display: none;" class="tooltiptext-click">Code copied.</span>
+                            </div>
+                        </div>
                 </div>
-            </div>
-    </div>
 <pre class="jsSdkPreNoScroll" id="onSelectPre">
 var onSelectCallback = function (e) {
     docSpace = DocSpace.SDK.initEditor({
         "id": e.id,
-        "height": "1000px"
+        "height": "700px"
     });
 }</pre>
 </div>  
-
-<h3>Step 4. Set configuration parameters</h3>
-<p>Create a configuration for the <b>File Selector</b>. For this we create a variable as shown below.</p>
-
-<div style="width: 100%;">
-    <div class="jsSdkHeader">
-        <div class="preContentType">
-            <span style="font-family: monospace">JS</span>
-        </div>
-            <div class="tooltip" >
-                <div class="copyJsSdk">
-                    <img  id="jsConfig" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
-                    <span id="config-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get code for the whole example.</span>
-                    <span id="config-click" style="display: none;" class="tooltiptext-click">Code copied.</span>
+    </li>
+        
+    <li>
+        <p>Create a configuration for the <b>File Selector</b>. For this we create a variable as shown below.</p>
+            <div style="width: 100%;">
+                <div class="jsSdkHeader">
+                    <div class="preContentType">
+                        <span style="font-family: monospace">JS</span>
+                    </div>
+                        <div class="tooltip" >
+                            <div class="copyJsSdk">
+                                <img  id="jsConfig" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                                <span id="config-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get code for the whole example.</span>
+                                <span id="config-click" style="display: none;" class="tooltiptext-click">Code copied.</span>
+                            </div>
+                        </div>
                 </div>
-            </div>
-    </div>
 <pre class="jsSdkPreNoScroll" id="jsConfigPre">
 const config = {
     "events": {
@@ -133,31 +134,30 @@ const config = {
     "width": "100%"
 }</pre>
 </div> 
-
-<h3>Step 5. Initialize File Selector</h3>
-<p>Initialize the <b>File Selector</b> as shown below.</p>
-
-<div style="width: 100%;">
-    <div class="jsSdkHeader">
-        <div class="preContentType">
-            <span style="font-family: monospace">JS</span>
-        </div>
-            <div class="tooltip" >
-                <div class="copyJsSdk">
-                    <img  id="init" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
-                    <span id="init-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get code for the whole example.</span>
-                    <span id="init-click" style="display: none;" class="tooltiptext-click">Code copied.</span>
+    </li>
+    <li>
+        <p>Initialize the <b>File Selector</b> as shown below.</p>
+            <div style="width: 100%; margin:0;">
+                <div class="jsSdkHeader">
+                    <div class="preContentType">
+                        <span style="font-family: monospace">JS</span>
+                    </div>
+                        <div class="tooltip" >
+                            <div class="copyJsSdk">
+                                <img  id="init" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                                <span id="init-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get code for the whole example.</span>
+                                <span id="init-click" style="display: none;" class="tooltiptext-click">Code copied.</span>
+                            </div>
+                        </div>
                 </div>
-            </div>
-    </div>
-<pre class="jsSdkPreNoScroll" id="initPre">
+<pre class="jsSdkPreNoScroll" id="initPre" >
 var docSpace = DocSpace.SDK.initFileSelector(config);</pre>
 </div> 
+    </li>
+</ol>
 
-<h3>Step 6. Initialize File Selector</h3>
-
+<h3>Step 3. Run sample</h3>
 <p>Run our HTML file and make sure everything works.</p>
-
 <h2>Example</h2>
 
 <div style="width: 100%;">
@@ -189,16 +189,17 @@ var docSpace = DocSpace.SDK.initFileSelector(config);</pre>
     &lt;script&gt;
         var onSelectCallback = function (e) {
             docSpace = DocSpace.SDK.initEditor({
-            "id": e.id,
-            "height": "1000px"
-        });}
+                "id": e.id,
+                "height": "700px"
+            });
+        }
         var onAppReady = function (e) {
             var frame = DocSpace.SDK.frames["ds-frame"];
         }
         const config = {
             "events": {
                 "onSelectCallback": onSelectCallback,
-                "onAppReady": onAppReady,
+                "onAppReady": onAppReady
             },
             "height": "700px",
             "width": "100%"
@@ -209,7 +210,7 @@ var docSpace = DocSpace.SDK.initFileSelector(config);</pre>
 </div>  
 
 <h2>Getting help</h2>
-<p>To get help, please create issues on <a href="https://github.com/ONLYOFFICE/sdkjs" target="_blank">GitHub</a>.</p>
+<p>To get help, please create issues on <a href="https://github.com/ONLYOFFICE/DocSpace/issues" target="_blank">GitHub</a>.</p>
 
 
 <script>
