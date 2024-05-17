@@ -22,7 +22,7 @@
     </h1>
 
     <p class="dscr">
-        <a href="https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer" target="_blank">ONLYOFFICE 文档</a> 适用于 Windows、Linux 和 Docker。
+        <a href="https://www.onlyoffice.com/zh/download-docs.aspx?from=api#docs-developer" target="_blank">ONLYOFFICE 文档</a> 适用于 Windows、Linux 和 Docker。
     </p>
 
     <p>要将其安装在本地服务器上，请按照 <b>ONLYOFFICE 帮助中心</b>中的说明进行操作：</p>
