@@ -761,6 +761,19 @@
             <td>
                 Defines the parameters that the user can disable or customize if possible:
                 <ul>
+                    <% if (license)
+                       { %>
+                    <li>
+                        <b>roles<a href="#requiredDescr2" class="required">**</a></b> - defines if the role settings will be disabled in the pdf forms or not.
+                        If the parameter is equal to <b>false</b>, then the role manager is hidden and viewing the form on behalf of a specific role is disabled.
+                        In this case, the <b>Manage Roles</b> and <b>View Form</b> buttons on the <b>Forms</b> tab and a drop-down list
+                        for setting the field role in the right panel will not be displayed. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <% } %>
                     <li>
                         <b>spellcheck </b> - defines if the spell checker is automatically switched on or off when the editor is loaded.
                         If this parameter is a boolean value, then it is set as the initial spell checker value and the spell checker setting will not be hidden.
@@ -792,7 +805,9 @@
             </td>
             <td>object</td>
             <td>{
-    "spellcheck": {
+    <% if (license)
+    { %>
+    "roles": true,<% } %>"spellcheck": {
         "mode": true<% if (license)
         { %>,
         "change": true<% } %>
