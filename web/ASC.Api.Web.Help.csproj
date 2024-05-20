@@ -2607,6 +2607,7 @@
     <Content Include="Content\img\Editor\edit.png" />
     <Content Include="Content\img\Editor\editor-samples.png" />
     <Content Include="Content\img\Editor\editor.png" />
+    <Content Include="Content\img\Editor\edit-pdf.png" />
     <Content Include="Content\img\Editor\embed-docxf.png" />
     <Content Include="Content\img\Editor\embed-pdf.png" />
     <Content Include="Content\img\Editor\embedded.png" />
