@@ -5,6 +5,7 @@
 - redesign main page
 - redesign header and footer
 - selection of three products: docspace, docs, workspace
+- docspace: storybook v2.5.1
 
 ## 4.7.0
 - docspace: storybook v2.5
