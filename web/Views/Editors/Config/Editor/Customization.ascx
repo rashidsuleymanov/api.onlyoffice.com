@@ -1016,6 +1016,13 @@
                         <b>type</b>: object,
                     </li>
                     <li>
+                        <b>header.editMode</b> - defines if a button for switching editor modes will be displayed in the header or not. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
                         <b>header.save</b> - defines if the <b>Save</b> button in the editor header is displayed or hidden. The default value is <b>true</b>.
                         Please note that this setting is used when the <a href="#compactHeader">compactHeader</a> parameter is set to <b>false</b>,
                         <br />
@@ -1254,6 +1261,7 @@
             <td>object</td>
             <td>{
     "header": {
+        "editMode": true,
         "save": true,
         "users": true
     },
