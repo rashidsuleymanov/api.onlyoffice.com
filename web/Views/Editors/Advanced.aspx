@@ -138,6 +138,7 @@
                 "www": "example.com"
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#features">features</a>": {
+                "roles": true,
                 "spellcheck": {
                     "mode": true
                 }
