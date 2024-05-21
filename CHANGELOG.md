@@ -9,11 +9,27 @@
 - editors: the editorConfig.customization.logo parameter is now available in the mobile editors
 - editors: added the visible field to the editorConfig.customization.logo parameter
 - editors: added the formsubmit action to the WOPI discovery
-- editors: try ppsx
 - editors: added the Save Copy As functionality to WOPI
 - editors: the editorConfig.customization.goback.requestClose field is deprecated, please use the editorConfig.customization.close field instead
 - editors: the editorConfig.customization.layout.toolbar.home.mailmerge field is deprecated, please use the editorConfig.customization.layout.toolbar.collaboration.mailmerge field instead
 - editors: change the default value of the editorConfig.customization.hideRightMenu parameter to true
+
+## 5.0.0
+- selection of three products: docspace, docs, workspace
+- redesign main page
+- redesign header and footer
+- docspace: storybook v2.5.1
+- docspace: v2.5.1
+- plugins: updated config parameters
+
+## 4.7.0
+- docspace: storybook v2.5
+- docspace: v2.5
+- editors: added the information about the favIconUrl parameter to the WOPI discovery
+- editors: config to clipboard
+- editors: added the Setting avatars page to How it works
+- editors: try ppsx
+- docbuilder: new samples
 
 ## 4.6.0
 - docspace: fix examples for dto

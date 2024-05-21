@@ -14,7 +14,9 @@
         <span class="hdr">Overview</span>
     </h1>
 
-    <span class="pvl_product">ONLYOFFICE Desktop Editors</span><span class="pvl_version">v<%= Products.Get("desktop").Version %></span>
+    <div class="pvl_wrapper">
+        <span class="pvl_product">ONLYOFFICE Desktop Editors</span><span class="pvl_version">v<%= Products.Get("desktop").Version %></span>
+    </div>
 
     <p>
         <b>ONLYOFFICE Desktop Editors</b> is an open-source office suite for working with documents stored on your computer. 
@@ -37,7 +39,7 @@
 
     <p>ONLYOFFICE Desktop Editors is available for Windows, Linux and Mac OS. Starting from version 6.1 this application is also supported by ARM-based Apple Silicon Macs.</p>
     <p>The simplest way to install this application on your local computer is to download it from our official website:</p>
-    <a class="button" href="https://www.onlyoffice.com/download-desktop.aspx" target="_blank">Get Desktop Editors</a>
+    <a class="button" href="https://www.onlyoffice.com/download-desktop.aspx?from=api" target="_blank">Get Desktop Editors</a>
     <p>For some Linux distributions, like Zorin OS, Linux Mint, Linkat, Linspire, etc., the ONLYOFFICE Desktop Editors package is already pre-installed 
         or available on their official stores.</p>
 

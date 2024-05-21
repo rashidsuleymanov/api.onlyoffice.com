@@ -6,6 +6,16 @@
 
 <p class="dscr">When initializing the SDK frame, a number of events can be passed to the configuration, which will be executed at the appropriate moment:</p>
 
+<ul class="columns-4" style="list-style: none;">
+    <li><a href="#onAppError">onAppError</a></li>
+    <li><a href="#onAppReady">onAppReady</a></li>
+    <li><a href="#onAuthSuccess">onAuthSuccess</a></li>
+    <li><a href="#onCloseCallback">onCloseCallback</a></li>
+    <li><a href="#onDownload">onDownload</a></li>
+    <li><a href="#onEditorCloseCallback">onEditorCloseCallback</a></li>
+    <li><a href="#onSelectCallback">onSelectCallback</a></li>
+</ul>
+
 <h2>Events and their description:</h2>
 <ul>
     <li>
@@ -48,6 +58,25 @@ var docSpace = DocSpace.SDK.initManager({
     </li>
     <li>
         <p>
+            <b id="onAuthSuccess" class="copy-link">onAuthSuccess</b> - the function called upon successful authorization.
+        </p>
+        <div id="methodExample" class="header-gray">Example</div>
+        <pre>
+var onAuthSuccess = function () {
+    console.log("The authorization is successful.");
+};
+
+var docSpace = DocSpace.SDK.initManager({
+    "events": {
+        "onAuthSuccess ": null,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+    <li>
+        <p>
             <b id="onCloseCallback" class="copy-link">onCloseCallback</b> - the function called only in the <a href="<%= Url.Action("jssdk/initmodes/roomselector") %>">room-selector</a>
             and <a href="<%= Url.Action("jssdk/initmodes/fileselector") %>">file-selector</a> modes when the room or file selector is closed or the selection is canceled.
         </p>
@@ -60,6 +89,45 @@ var onCloseCallback = function () {
 var docSpace = DocSpace.SDK.initRoomSelector({
     "events": {
         "onCloseCallback": null,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+    <li>
+        <p>
+            <b id="onDownload" class="copy-link">onDownload</b> - the function called when firing events to download items from the manager.
+            It returns a link to the download object. This event is called only when the <a href="<%= Url.Action("jssdk/config") %>#downloadToEvent">downloadToEvent</a> parameter is specified in the config.
+        </p>
+        <div id="methodExample" class="header-gray">Example</div>
+        <pre>
+var onDownload = function () {
+    console.log("The 'New document' file has been downloaded.");
+};
+
+var docSpace = DocSpace.SDK.initManager({
+    "events": {
+        "onDownload": null,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+    <li>
+        <p>
+            <b id="onEditorCloseCallback" class="copy-link">onEditorCloseCallback</b> - the function called when the document editor is closed.
+        </p>
+        <div id="methodExample" class="header-gray">Example</div>
+        <pre>
+var onEditorCloseCallback = function () {
+    console.log("The document editor is closed.");
+};
+
+var docSpace = DocSpace.SDK.initEditor({
+    "events": {
+        "onEditorCloseCallback": null,
         ...
     },
     ...
@@ -138,5 +206,24 @@ var docSpace = DocSpace.SDK.initRoomSelector({
                 </tbody>
         </table>
         <div class="mobile-content"></div>
+    </li>
+    <li>
+        <p>
+            <b id="onSignOut" class="copy-link">onSignOut</b> - the function called when logging out of the user account.
+        </p>
+        <div id="methodExample" class="header-gray">Example</div>
+        <pre>
+var onSignOut = function () {
+    console.log("The user is logging out of the DocSpace account.");
+};
+
+var docSpace = DocSpace.SDK.initManager({
+    "events": {
+        "onSignOut ": null,
+        ...
+    },
+    ...
+});
+</pre>
     </li>
 </ul>

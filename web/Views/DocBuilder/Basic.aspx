@@ -14,7 +14,9 @@
         <span class="hdr">Overview</span>
     </h1>
 
-    <span class="pvl_product">ONLYOFFICE DocumentBuilder</span><span class="pvl_version">v<%= Products.Get("docbuilder").Version %></span>
+    <div class="pvl_wrapper">
+        <span class="pvl_product">ONLYOFFICE Document Builder</span><span class="pvl_version">v<%= Products.Get("docbuilder").Version %></span>
+    </div>
 
     <p><b>ONLYOFFICE Document Builder</b> is a C++ library used to create and edit Office Open XML format files (documents, spreadsheets and presentations) and save them to DOCX, XSLX, PPTX and PDF formats.</p>
     <p>It allows you to build a document easily without the need to actually run a document processing editor.
@@ -28,7 +30,7 @@
             <p>After you download and unpack the files, the library is ready for <a href="<%= Url.Action("framework") %>">integration</a>.</p>
         </li>
         <li>Use <a href="<%= Url.Action("integrationapi/default") %>">Builder.App</a>, the provided executive binary wrapper for an easy start.
-            The latest versions of executable files can always be downloaded <a target="_blank" href="https://www.onlyoffice.com/document-builder.aspx">here</a>.
+            The latest versions of executable files can always be downloaded <a target="_blank" href="https://www.onlyoffice.com/document-builder.aspx?from=api">here</a>.
             After the file download, run it and see the examples of how ONLYOFFICE Document Builder can be used without the need to write any application.</li>
     </ol>
 

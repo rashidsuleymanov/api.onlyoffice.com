@@ -15,7 +15,7 @@
         <span class="hdr">Changelog</span>
     </h1>
 
-    <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
+    <p class="dscr">The list of changes of ONLYOFFICE Docs API.</p>
     <h2 id="81" class="copy-link">Version 8.1</h2>
     <ul>
         <li>Added the <em>roles</em> field to the <a href="<%= Url.Action("config/editor/customization") %>#features">editorConfig.customization.features</a> parameter.</li>

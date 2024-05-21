@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System SIA 2023
+ * (c) Copyright Ascensio System SIA 2024
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -36,6 +36,10 @@ namespace ASC.Api.Web.Help.Helpers
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             base.OnActionExecuting(filterContext);
+
+            if (filterContext.ActionDescriptor.ControllerDescriptor.ControllerName.Equals("category", StringComparison.InvariantCultureIgnoreCase)) {
+                return;
+            }
 
             var products = Products.EnabledProducts().Select(product => product.Id);
             if (!products.Contains(filterContext.ActionDescriptor.ControllerDescriptor.ControllerName, StringComparer.InvariantCultureIgnoreCase))

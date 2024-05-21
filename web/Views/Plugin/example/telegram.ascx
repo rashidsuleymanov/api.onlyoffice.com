@@ -18,7 +18,7 @@ The plugin has no access to the camera and microphone, so you will be unable to 
 
 
 <div class="header-gray">Installation</div>
-<p>Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Document Server + Community Server).</p>
+<p>Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace).</p>
 <p>You can also download this plugin from the <a href="https://www.onlyoffice.com/en/app-directory/telegram" target="_blank">ONLYOFFICE App Directory</a> and install it following the
 <a href="<%= Url.Action("installation/desktop") %>">desktop</a> or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation instructions.</p>
 
@@ -53,6 +53,7 @@ The plugin has no access to the camera and microphone, so you will be unable to 
     "nameLocale": {
         "fr": "Telegram",
         "es": "Telegram",
+        "pt-BR": "Telegram",
         "de": "Telegram"
     },
     "guid" : "asc.{E5773A43-F9B3-4E81-81D9-CE0A132470E7}",
@@ -64,6 +65,7 @@ The plugin has no access to the camera and microphone, so you will be unable to 
             "descriptionLocale": {
                 "fr": "Chattez avec vos co-auteurs en temps r&#233;el gr&#226;ce au client Telegram int&#233;gr&#233;.",
                 "es": "Chatee con los coautores en tiempo real utilizando el cliente integrado de Telegram.",
+                "pt-BR": "Converse com coautores em tempo real usando o cliente Telegram integrado.",
                 "de": "Unterhalten Sie sich mit Mitautoren in Echtzeit &#252;ber den integrierten Telegram-Client."
             },
             "url"         : "index.html",

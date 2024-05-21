@@ -16,3 +16,4 @@ build/docbuilder_docs/tmp
 build/docbuilder_docs/out
 build/docbuilder_docs/package-lock.json
 /.vs/ASC.Api.Web.Help/config
+/web/.vs/ASC.Api.Web.Help.csproj.dtbcache.json
