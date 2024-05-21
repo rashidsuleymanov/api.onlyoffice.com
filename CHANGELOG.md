@@ -2,6 +2,7 @@
 
 ##
 - editors: added the editorConfig.customization.layout.header.editMode parameter
+- editors: added the editorConfig.customization.features.roles parameter
 - editors: added the shardkey parameter to the URL query string when sending requests to the document command service, document conversion service, or document builder service
 - editors: added the addContextMenuItem, addToolbarMenuItem and updateContextMenuItem methods to the Automation API
 - editors: added the -10 error code to the Conversion API

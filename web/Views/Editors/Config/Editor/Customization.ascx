@@ -215,6 +215,13 @@
         <div id="holder_editorConfig_customization_features" class="config_object_holder" hidden>
             <div class="line">
                 <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_features_roles" name="editorConfig_customization_features_roles" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_features_roles">Features.Roles</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
                     <input type="checkbox" id="editorConfig_customization_features_spellcheck" name="editorConfig_customization_features_spellcheck" hidden="hidden" checked>
                     <span></span>
                     <label for="editorConfig_customization_features_spellcheck">Features.Spellcheck</label>
@@ -777,6 +784,16 @@
                 Defines the parameters that the user can disable or customize if possible:
                 <ul>
                     <li>
+                        <b>roles<a href="#requiredDescr" class="required">*</a></b> - defines if the role settings will be disabled in the pdf forms or not.
+                        If the parameter is equal to <b>false</b>, then the role manager is hidden and viewing the form on behalf of a specific role is disabled.
+                        In this case, the <b>Manage Roles</b> and <b>View Form</b> buttons on the <b>Forms</b> tab and a drop-down list
+                        for setting the field role in the right panel will not be displayed. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
                         <b>spellcheck </b> - defines if the spell checker is automatically switched on or off when the editor is loaded.
                         If this parameter is a boolean value, then it is set as the initial spell checker value and the spell checker setting will not be hidden.
                         The default value is <b>true</b>,
@@ -807,6 +824,7 @@
             </td>
             <td>object</td>
             <td>{
+    "roles": true,
     "spellcheck": {
         "mode": true<% if (license)
         { %>,
@@ -1864,11 +1882,13 @@
         }
         if (!getFieldValue("editorConfig_customization_features_spellcheck_mode")) {
             return `"features": {
+                "roles": ${getFieldValue("editorConfig_customization_features_roles")},
                 "spellcheck": ${getFieldValue("editorConfig_customization_features_spellcheck")}
             },
             `
         } else {
             return `"features": {
+                "roles": ${getFieldValue("editorConfig_customization_features_roles")},
                 "spellcheck": {
                     "mode": true
                 }
