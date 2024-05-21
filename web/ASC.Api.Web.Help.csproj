@@ -2693,7 +2693,6 @@
     <Content Include="Content\img\Editor\viewer.png" />
     <Content Include="Content\img\Editor\viewing-history.svg" />
     <Content Include="Content\img\Editor\wiki-page.png" />
-    <Content Include="Content\img\flags.gif" />
     <Content Include="Content\img\get-docs\docker.svg" />
     <Content Include="Content\img\get-docs\info.svg" />
     <Content Include="Content\img\get-docs\linux.svg" />
@@ -2906,7 +2905,6 @@
     <Content Include="Content\img\Video\owncloud_integration.png" />
     <Content Include="Content\jquery.treeview.css" />
     <Content Include="Content\main-page.css" />
-    <Content Include="Content\phone-controller.css" />
     <Content Include="Content\category-page.css" />
     <Content Include="Content\plugins-macros.css" />
     <Content Include="Content\pushy.css" />
@@ -4460,8 +4458,6 @@
     <Content Include="Scripts\jquery\jquery.blockUI.js" />
     <Content Include="Scripts\jquery\jquery.js" />
     <Content Include="Scripts\jquery\jquery.treeview.js" />
-    <Content Include="Scripts\phone-controller.js" />
-    <Content Include="Scripts\recaptcha-controller.js" />
     <Content Include="Scripts\main-page.js" />
     <Content Include="Scripts\menuselector.js" />
     <Content Include="Scripts\navigation-menu.js" />
