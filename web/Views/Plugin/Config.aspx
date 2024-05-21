@@ -19,11 +19,13 @@
 
     <ul class="columns-3" style="list-style: none;">
         <li><a href="#baseUrl">baseUrl</a></li>
+        <li><a href="#group">group</a></li>
         <li><a href="#guid">guid</a></li>
         <li><a href="#help">help</a></li>
         <li><a href="#minVersion">minVersion</a></li>
         <li><a href="#name">name</a></li>
         <li><a href="#nameLocale">nameLocale</a></li>
+        <li><a href="#offered">offered</a></li>
         <li><a href="#variations">variations</a></li>
         <li><a href="#buttons">buttons</a></li>
         <li><a href="#cryptoDisabledForExternalCloud">cryptoDisabledForExternalCloud</a></li>
@@ -54,6 +56,7 @@
         <li><a href="#store-categories">store.categories</a></li>
         <li><a href="#store-icons">store.icons</a></li>
         <li><a href="#store-screenshots">store.screenshots</a></li>
+        <li><a href="#type">type</a></li>
         <li><a href="#url">url</a></li>
         <li><a href="#version">version</a></li>
     </ul>
@@ -80,6 +83,30 @@
                 <td>Path to the plugin. All the other paths are calculated relative to this path. In case the plugin is installed on the server, an additional parameter (path to the plugins) is added there. If <em>baseUrl == ""</em>, the path to all plugins will be used.</td>
                 <td>string</td>
                 <td>""</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="group" class="copy-link">group</td>
+                <td>
+                    Plugin group that is separated from other plugins in the <b>Plugins</b> tab:
+                    <ul>
+                        <li>
+                            <b>name</b> - the group name,
+                            <br />
+                            <b>type</b>: string,
+                            <br />
+                            <b>example</b>: "Macros";
+                        </li>
+                        <li>
+                            <b>rank</b> - the group rank in the <b>Plugins</b> tab,
+                            <br />
+                            <b>type</b>: number,
+                            <br />
+                            <b>example</b>: 2.
+                        </li>
+                    </ul>
+                </td>
+                <td>object</td>
+                <td>{"name": "Macros", "rank": 2}</td>
             </tr>
             <tr class="tablerow">
                 <td id="guid" class="copy-link">guid</td>
@@ -112,6 +139,12 @@
                 <td>{
     "fr": "french plugin name"
 }</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="offered" class="copy-link">offered</td>
+                <td>Plugin author who proposed the plugin for publication.</td>
+                <td>string</td>
+                <td>"John Smith"</td>
             </tr>
             <tr class="tablerow">
                 <td id="variations" class="copy-link">variations</td>
@@ -361,6 +394,12 @@
                 <td>["resources/store/screenshots/screen_1.png"]</td>
             </tr>
             <tr class="tablerow">
+                <td id="type" class="copy-link">variations.type</td>
+                <td>Plugin <a href="<%= Url.Action("types") %>">type</a>. The following values are available: <b>"system", "background", "window", "panel"</b>.</td>
+                <td>string</td>
+                <td>"background"</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="url" class="copy-link">variations.url</td>
                 <td>
                     Plugin entry point, i.e. an HTML file which connects the <em>plugin.js</em> file (the base file needed for work with plugins) and launches the plugin code.
@@ -382,6 +421,10 @@
     <div class="header-gray">Example</div>
     <pre>{
         "baseUrl": "",
+        "group": {
+            "name": "Macros",
+            "rank": 2
+        },
         "guid": "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
         "help": "",
         "minVersion": "6.3.0",
@@ -390,6 +433,7 @@
             "fr": "french plugin name",
             "es": "spanish plugin name"
         },
+        "offered": "John Smith",
         "variations": [
             {
                 "buttons": [
@@ -452,6 +496,7 @@
                     },
                     "screenshots": ["resources/store/screenshots/screen_1.png"]
                 },
+                "type": "background",
                 "url": "index.html"
             }
         ],

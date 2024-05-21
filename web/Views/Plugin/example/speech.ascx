@@ -16,7 +16,7 @@ of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API"
 
 
 <div class="header-gray">Installation</div>
-<p>Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Document Server + Community Server), and ONLYOFFICE cloud.</p>
+<p>Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace), and ONLYOFFICE cloud.</p>
 <p>You can also download this plugin from the <a href="https://www.onlyoffice.com/en/app-directory/speech" target="_blank">ONLYOFFICE App Directory</a>.</p>
 
 
@@ -62,6 +62,7 @@ of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API"
         "cs": "&#344;e&#269;",
         "de": "Rede",
         "es": "Habla",
+        "pt-BR": "Fala",
         "fr": "Parole",
         "it": "Discorso",
         "ja": "&#12473;&#12500;&#12540;&#12481;",
@@ -77,8 +78,12 @@ of the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API"
             "description": "Convert the selected text into speech.",
             "descriptionLocale": {
                 "fr": "Convertissez le texte s&#233;lectionn&#233; en parole.",
+                "it": "Converti il testo selezionato in voce parlata.",
+                "ja": "&#36984;&#25246;&#12375;&#12383;&#12486;&#12461;&#12473;&#12488;&#12434;&#38899;&#22768;&#12395;&#22793;&#25563;&#12375;&#12414;&#12377;&#12290;",
                 "es": "Convierta el texto seleccionado en voz.",
-                "de": "Konvertieren Sie den ausgew&#228;hlten Text in die Rede."
+                "pt-BR": "Converta o texto selecionado em fala.",
+                "de": "Konvertieren Sie den ausgew&#228;hlten Text in die Rede.",
+                "zh": "&#26391;&#35835;&#25152;&#36873;&#30340;&#25991;&#26412;&#12290;"
             },
             "url": "index.html",
 

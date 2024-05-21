@@ -4,6 +4,12 @@
     <span class="hdr">Basic concepts</span>
 </h1>
 
+<%var product = Products.GetSection("docspace", "apisystem"); %>
+
+<div class="pvl_wrapper">
+    <span class="pvl_product">ONLYOFFICE DocSpace <%= product.Title %></span><span class="pvl_version">v<%= product.Version %></span>
+</div>
+
 <p class="dscr">
     The ONLYOFFICE Hosted Solution is implemented as REST over HTTP using GET/POST.
     All the resources, like client creation, portal registration, etc, have their own URLs and are designed to be manipulated in isolation.

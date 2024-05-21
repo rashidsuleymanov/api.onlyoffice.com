@@ -10,8 +10,8 @@
     <meta name="author" content="Ascensio System SIA" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>ONLYOFFICE Api Documentation -
-        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" /> - ONLYOFFICE Api Documentation
     </title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:900,800,700,600,500,400,300&subset=latin,cyrillic-ext,cyrillic,latin-ext" rel="stylesheet" type="text/css" />
@@ -37,12 +37,12 @@
     </div>
     <div class="background-body <%= Html.IfController("Home") ? "mainBody" : string.Empty %>">
         <div class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">
-                <% if (!Html.IfController("Home"))
+                <% if (!Html.IfController("Home") && !Html.IfAction("Index"))
                    { %>
                 <div class="layout-table-side">
                     <div class="layout-side">
                         <% Html.RenderPartial("SearchForm"); %>
-                        <% Html.RenderAction("Navigation"); %>
+                        <% Html.RenderAction("Navigation", new { viewName = ViewData["viewName"] }); %>
                     </div>
                 </div>
                 <% } %>
@@ -58,17 +58,29 @@
     <div>
         <div class="layout-table-footer">
             <div class="layout-footer">
-                <div class="bottommenu">
-                    <ul>
-                        <li><a target="_blank" href="https://www.onlyoffice.com/">Home site</a></li>
-                        <li><a target="_blank" href="https://www.onlyoffice.com/integration-edition.aspx">For integrators</a></li>
-                        <li><a target="_blank" href="https://www.onlyoffice.com/document-builder.aspx">Document Builder</a></li>
-                        <li><a target="_blank" href="https://forum.onlyoffice.com/">Forum</a></li>
-                        <li><a target="_blank" href="https://helpcenter.onlyoffice.com/">Help Center</a></li>
-                        <li><a target="_blank" href="https://www.onlyoffice.com/legalterms.aspx">Legal notice</a></li>
-                    </ul>
+                <div class="footer-menu">
+                    <div class="footer-item">
+                        <h6 class="footer-item-title">Get information</h6>
+                        <ul class="footer-item-list">
+                            <li><a href="https://www.onlyoffice.com/blog/category/for-developers?from=api" target="_blank">Blog for developers</a></li>
+                            <li><a href="https://www.onlyoffice.com/contribute.aspx?from=api" target="_blank">For contributors</a></li>
+                            <li><a href="https://www.onlyoffice.com/legalterms.aspx?from=api" target="_blank">Legal notice</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-item">
+                        <h6 class="footer-item-title">Get help</h6>
+                        <ul class="footer-item-list">
+                            <li><a href="https://forum.onlyoffice.com" target="_blank">Forum</a></li>
+                            <li><a href="https://github.com/ONLYOFFICE/" target="_blank">Code on GitHub</a></li>
+                            <li><a href="https://helpcenter.onlyoffice.com/installation/docs-developer-index.aspx?from=api" target="_blank">Installation guides</a></li>
+                            <li><a href="https://www.onlyoffice.com/support-contact-form.aspx?from=api" target="_blank">Support contact form</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="copyReserved">&copy; Ascensio System SIA <%= DateTime.Now.Year %>. All rights reserved</div>
+                <div class="footer-info">
+                    <div class="footer-text"><a class="footer-text" href="https://onlyoffice.com" target="_blank">onlyoffice.com</a></div>
+                    <div class="copyReserved">&copy; Ascensio System SIA <%= DateTime.Now.Year %>. All rights reserved</div>
+                </div>
             </div>
         </div>
     </div>

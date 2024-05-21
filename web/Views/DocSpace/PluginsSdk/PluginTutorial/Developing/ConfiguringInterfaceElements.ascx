@@ -1,6 +1,7 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
+    <a class="up" href="<%= Url.Action("pluginssdk/plugintutorial/developing") %>"></a>
     <span class="hdr">Step 4. Configure the plugin's interface elements</span>
 </h1>
 

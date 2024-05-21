@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System SIA 2023
+ * (c) Copyright Ascensio System SIA 2024
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -46,13 +46,16 @@ namespace ASC.Api.Web.Help.Controllers
 
         private readonly string[] _actionMap = new[]
             {
-                "Auth",
-                "Basic",
-                "Faq",
-                "Filters",
-                "Batch",
+                "WorkspaceApi",
+                "WorkspaceApi/Auth",
+                "WorkspaceApi/Faq",
+                "WorkspaceApi/Filters",
+                "WorkspaceApi/Batch",
                 "ApiSystem",
                 "ApiSystem/Authentication",
+                "ApiSystem/Faq",
+                "ApiSystem/Filters",
+                "ApiSystem/Batch",
                 "ApiSystem/PortalSection",
                 "ApiSystem/PortalSection/PortalGet",
                 "ApiSystem/PortalSection/PortalRegister",
@@ -66,6 +69,8 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult ApiSystem(string catchall)
         {
+            ViewData["viewName"] = "apisystem";
+
             if (!_actionMap.Contains("apisystem/" + catchall, StringComparer.OrdinalIgnoreCase))
             {
                 catchall = null;
@@ -73,39 +78,25 @@ namespace ASC.Api.Web.Help.Controllers
             return View("ApiSystem", (object)catchall);
         }
 
+        public ActionResult WorkspaceApi(string catchall)
+        {
+            ViewData["viewName"] = "workspaceapi";
+
+            if (!_actionMap.Contains("workspaceapi/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("WorkspaceApi", (object)catchall);
+        }
+
         public ActionResult Index()
         {
-            return View("basic");
+            return View();
         }
 
         public ActionResult Navigation()
         {
             return View(CommunityServerDocumentation.GetAll());
-        }
-
-        public ActionResult Auth()
-        {
-            return View();
-        }
-
-        public ActionResult Basic()
-        {
-            return View();
-        }
-
-        public ActionResult Faq()
-        {
-            return View();
-        }
-
-        public ActionResult Filters()
-        {
-            return View();
-        }
-
-        public ActionResult Batch()
-        {
-            return View();
         }
 
         [ValidateInput(false)]
@@ -116,6 +107,8 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Section(string section, string category)
         {
+            ViewData["viewName"] = "workspaceapi";
+
             if (string.IsNullOrEmpty(section))
             {
                 var firstPoint = CommunityServerDocumentation.GetAll().OrderBy(x => x.Name).ToList().FirstOrDefault();
@@ -156,6 +149,8 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Method(string section, string type, string url)
         {
+            ViewData["viewName"] = "workspaceapi";
+
             if (string.IsNullOrEmpty(section))
                 return View("sectionnotfound");
 
