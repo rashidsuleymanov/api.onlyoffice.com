@@ -15,7 +15,7 @@
 
 
 <div class="header-gray">Installation</div>
-<p>Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Document Server + Community Server). </p>
+<p>Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace). </p>
 <p>You can also download this plugin from the <a href="https://www.onlyoffice.com/en/app-directory/html" target="_blank">ONLYOFFICE App Directory</a> and install it following the
 <a href="<%= Url.Action("installation/desktop") %>">desktop</a> or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation instructions.</p>
 
@@ -53,6 +53,7 @@
     "nameLocale": {
         "fr": "HTML",
         "es": "HTML",
+        "pt-BR": "HTML",
         "de": "HTML"
     },
     "guid": "asc.{E581C417-3C80-4BC2-B42D-502850FDC1E7}",
@@ -64,6 +65,7 @@
             "descriptionLocale": {
                 "fr": "Obtenez le contenu de votre document sous forme de code HTML, modifiez-le et collez-le dans le document.",
                 "es": "Obtenga el contenido de su documento como c&#243;digo HTML, modif&#237;quelo y p&#233;guelo de nuevo en el documento.",
+                "pt-BR": "Obtenha o conte&#250;do do seu documento como c&#243;digo HTML, modifique-o e cole-o novamente no documento.",
                 "de": "Erhalten Sie den Inhalt Ihres Dokuments als HTML-Code, modifizieren und f&#252;gen Sie ihn wieder ins Dokument ein."
             },
             "url": "index.html",
@@ -110,7 +112,7 @@
                 }
             ],
             "isViewer": true,
-            "EditorsSupport": [ "word", "cell", "slide" ],
+            "EditorsSupport": [ "word", "cell", "slide", "pdf" ],
             "isVisual": true,
             "isModal": false,
             "isInsideMode": true,

@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System SIA 2023
+ * (c) Copyright Ascensio System SIA 2024
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -22,7 +22,40 @@
  * Pursuant to Section 7 § 3(e) we decline to grant you any rights under trademark law for use of our trademarks.
  *
 */
+$(window).on("load", function () {
+    $(".footer-item-title").click(function () {
+        if ($(window).width() <= 592) {
+            $(this).toggleClass("active");
+            $(this).next(".footer-item-list").slideToggle(300);
+        }
+    });
 
+    $(window).resize(function () {
+        $(".footer-item-title").removeClass("active");
+
+        if ($(window).width() <= 592) {
+            $(".footer-item-list").css("display", "none");
+        } else {
+            $(".footer-item-list").css("display", "block");
+        }
+    });
+
+    if (window.innerWidth > 592) {
+        if (localStorage.getItem("sidebar-navigation") === "false") {
+            $("#sidebar-button").addClass("active");
+            $(".layout-table-side").addClass("hide");
+        } else {
+            $("#sidebar-button").removeClass("active");
+            $(".layout-table-side").removeClass("hide");
+        }
+
+        if (window.innerWidth <= 1024) {
+            setTimeout(() => {
+                $(".layout-table-side").addClass("transition");
+            }, 50);
+        }
+    }
+});
 
 $(function() {
     function displayModalPanel (obj, width, height, top, position) {
@@ -57,7 +90,7 @@ $(function() {
                 },
 
                 focusInput: true,
-                baseZ: 666,
+                baseZ: 1001,
 
                 fadeIn: 0,
                 fadeOut: 0,
@@ -313,4 +346,147 @@ $(document).ready(function () {
 
     var $tables = $(".table");
     if ($tables.length) renderMobileContent($tables);
+
+    var timeoutId;
+
+    $(".nav-list").on("scroll", function() {
+        $(".nav-list").addClass("scroll-active");
+    
+        clearTimeout(timeoutId);
+    
+        timeoutId = setTimeout(function() {
+            $(".nav-list").removeClass("scroll-active");
+        }, 100);
+    });
 });
+
+function handleSelects() {
+    $('.select').each(function () {
+        const _this = $(this),
+            selectOption = _this.find('option'),
+            selectOptionLength = selectOption.length,
+            selectedOption = selectOption.filter(':selected'),
+            duration = 120;
+
+        _this.hide();
+        _this.wrap('<div class="select"></div>');
+        $('<div>', {
+            class: 'new-select',
+            text: _this.children('option:disabled').text()
+        }).insertAfter(_this);
+
+        const selectHead = _this.next('.new-select');
+        $('<div>', {
+            class: 'new-select__list'
+        }).insertAfter(selectHead);
+
+        const selectList = selectHead.next('.new-select__list');
+        for (let i = 1; i < selectOptionLength; i++) {
+            $('<div>', {
+                class: 'new-select__item',
+                html: $('<span>', {
+                    text: selectOption.eq(i).text()
+                })
+            })
+                .attr('data-value', selectOption.eq(i).val())
+                .appendTo(selectList);
+        }
+
+        const selectItem = selectList.find('.new-select__item');
+        selectList.slideUp(0);
+        selectHead.on('click', function () {
+            if (!$(this).hasClass('on')) {
+                $(this).addClass('on');
+                selectList.slideDown(duration);
+                selectItem.on('click', function () {
+                    let chooseItem = $(this).data('value');
+                    $('select').val(chooseItem).attr('selected', 'selected');
+                    selectHead.text($(this).find('span').text());
+                    selectList.slideUp(duration);
+                    selectHead.removeClass('on');
+                    updateConfig();
+                });
+                window.addEventListener('click', function (e) {
+                    if (e.target != selectList[0] && e.target != selectHead[0] && e.target != selectItem[0]) {
+                        selectHead.removeClass('on');
+                        selectList.slideUp(duration);
+                    }
+                });
+            } else {
+                $(this).removeClass('on');
+                selectList.slideUp(duration);
+            }
+        });
+    });
+}
+function getFieldValue(id) {
+    var element = document.getElementById(id);
+    if (document.getElementById(id).parentElement.className == "select") {
+        return `"${document.getElementById(id).parentElement.children[1].innerText}"`;
+    } else if (element.type == "checkbox") {
+        return element.checked;
+    } else if (element.id == `editorConfig_customization_zoom`) {
+        return isNaN(Number(element.value)) ? 0 : Number(element.value);
+    } else if (`${element.value}` == ``) {
+        return `""`;
+    } else if (isNaN(element.value)) {
+        if (element.value.includes("[") || element.value.includes('""')) {
+            return element.value;
+        }
+        return `"${element.value}"`;
+    } else {
+        return Number(element.value);
+    }
+}
+
+function resizeCodeInput() {
+    var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
+    var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
+    var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
+    var controlFieldsHeight = Math.round(document.getElementById("controlFields").getBoundingClientRect().height * 100) / 100;
+    var headerHeight = document.getElementById("configHeader").getBoundingClientRect().height;
+
+    var offset = paddingTop + paddingBottom + (borderSize * 2);
+    var height = controlFieldsHeight - offset - headerHeight;
+
+    document.getElementById("configPre").style.height = `${height}px`;
+}
+
+function createConfigHTML(editor_url, json) {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="${editor_url}/web-apps/apps/api/documents/api.js"><\/script>
+</head>
+<body>
+    <div id="editorSpace">
+        <div id="placeholder"></div>
+    </div>
+    <script>
+new DocsAPI.DocEditor("placeholder", ${json});
+    <\/script>
+</body>
+</html>`;
+}
+function copyConfigToClipboard(html) {
+    navigator.clipboard.writeText(html).then(function () {
+        document.getElementById("tooltiptext-hover").style = "display: none;";
+        document.getElementById("tooltiptext-click").style = "display: inline; width: 95px!important;";
+    }, function (err) {
+        console.error('Could not copy content: ', err);
+    });
+}
+
+function copyConfigMouseLeave() {
+    document.getElementById("tooltiptext-hover").style = "display: inline;";
+    document.getElementById("tooltiptext-click").style = "display: none;";
+}
+
+function deepCopyConfig(config) {
+    const copy = JSON.parse(JSON.stringify(config));
+    const result = {
+        config: config,
+        copy: copy
+    };
+    return result;
+}

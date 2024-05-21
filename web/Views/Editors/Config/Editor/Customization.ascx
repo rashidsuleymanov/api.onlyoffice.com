@@ -79,7 +79,7 @@
 <div class="header-gray">Example</div>
 <p>
     The <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
 </p>
 
 <p>
@@ -213,6 +213,13 @@
             </label>
         </div>
         <div id="holder_editorConfig_customization_features" class="config_object_holder" hidden>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_features_roles" name="editorConfig_customization_features_roles" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_features_roles">Features.Roles</label>
+                </label>
+            </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="editorConfig_customization_features_spellcheck" name="editorConfig_customization_features_spellcheck" hidden="hidden" checked>
@@ -466,10 +473,25 @@
         </div>
     </div>
 </div>
-<div id="configPreHolder">
-    <pre id="configPre"></pre>
+<div id="configPreHolder" style="display: flex; margin-top: 18px;">
+    <div style="width: 100%;">
+        <div id="configHeader" class="configHeader">
+            <div class="preContentType">
+                <span style="font-family: monospace">Config.js</span>
+            </div>
+            <div>
+                <div class="tooltip">
+                    <div class="copyConfig">
+                        <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                        <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">When you copy, you get the HTML code for the whole example.</span>
+                        <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML copied.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre id="configPre"></pre>
+    </div>  
 </div>
-
 
 <div id="editorSpace">
     <div id="placeholder"></div>
@@ -762,6 +784,16 @@
                 Defines the parameters that the user can disable or customize if possible:
                 <ul>
                     <li>
+                        <b>roles<a href="#requiredDescr" class="required">*</a></b> - defines if the role settings will be disabled in the pdf forms or not.
+                        If the parameter is equal to <b>false</b>, then the role manager is hidden and viewing the form on behalf of a specific role is disabled.
+                        In this case, the <b>Manage Roles</b> and <b>View Form</b> buttons on the <b>Forms</b> tab and a drop-down list
+                        for setting the field role in the right panel will not be displayed. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
                         <b>spellcheck </b> - defines if the spell checker is automatically switched on or off when the editor is loaded.
                         If this parameter is a boolean value, then it is set as the initial spell checker value and the spell checker setting will not be hidden.
                         The default value is <b>true</b>,
@@ -792,6 +824,7 @@
             </td>
             <td>object</td>
             <td>{
+    "roles": true,
     "spellcheck": {
         "mode": true<% if (license)
         { %>,
@@ -1014,6 +1047,13 @@
                         <b>header</b> - defines the editor header settings,
                         <br />
                         <b>type</b>: object,
+                    </li>
+                    <li>
+                        <b>header.editMode</b> - defines if a button for switching editor modes will be displayed in the header or not. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
                     </li>
                     <li>
                         <b>header.save</b> - defines if the <b>Save</b> button in the editor header is displayed or hidden. The default value is <b>true</b>.
@@ -1254,6 +1294,7 @@
             <td>object</td>
             <td>{
     "header": {
+        "editMode": true,
         "save": true,
         "users": true
     },
@@ -1762,71 +1803,11 @@
 <span id="requiredDescr2" class="required-descr"><span class="required">**</span><em> - extended white label option for Developer Edition</em></span>
 <% } %>
 
-
-<script>
-    $('.select').each(function () {
-        const _this = $(this),
-            selectOption = _this.find('option'),
-            selectOptionLength = selectOption.length,
-            selectedOption = selectOption.filter(':selected'),
-            duration = 120;
-
-        _this.hide();
-        _this.wrap('<div class="select"></div>');
-        $('<div>', {
-            class: 'new-select',
-            text: _this.children('option:disabled').text()
-        }).insertAfter(_this);
-
-        const selectHead = _this.next('.new-select');
-        $('<div>', {
-            class: 'new-select__list'
-        }).insertAfter(selectHead);
-
-        const selectList = selectHead.next('.new-select__list');
-        for (let i = 1; i < selectOptionLength; i++) {
-            $('<div>', {
-                class: 'new-select__item',
-                html: $('<span>', {
-                    text: selectOption.eq(i).text()
-                })
-            })
-                .attr('data-value', selectOption.eq(i).val())
-                .appendTo(selectList);
-        }
-
-        const selectItem = selectList.find('.new-select__item');
-        selectList.slideUp(0);
-        selectHead.on('click', function () {
-            if (!$(this).hasClass('on')) {
-                $(this).addClass('on');
-                selectList.slideDown(duration);
-                selectItem.on('click', function () {
-                    let chooseItem = $(this).data('value');
-                    $('select').val(chooseItem).attr('selected', 'selected');
-                    selectHead.text($(this).find('span').text());
-                    selectList.slideUp(duration);
-                    selectHead.removeClass('on');
-                    updateConfig();
-                });
-                window.addEventListener('click', function (e) {
-                    if (e.target != selectList[0] && e.target != selectHead[0] && e.target != selectItem[0]) {
-                        selectHead.removeClass('on');
-                        selectList.slideUp(duration);
-                    }
-                });
-            } else {
-                $(this).removeClass('on');
-                selectList.slideUp(duration);
-            }
-        });
-    });
-</script>
 <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 <script type="text/javascript">
-
+    handleSelects();
     // Editor window
-    var config = <%= Config.Serialize(
+    var { config, copy } = deepCopyConfig(<%= Config.Serialize(
     new Config {
         Document = new Config.DocumentConfig
             {
@@ -1856,7 +1837,18 @@
             },
         Height = "550px",
         Width = "100%"
-    }) %>;
+    }) %>);
+</script>
+
+<script>
+    var editor_url = "<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>";
+
+    $(".copyConfig").click(function () {
+        var json = JSON.stringify(copy, null, '\t');
+        var html = createConfigHTML(editor_url, json);
+        copyConfigToClipboard(html);
+    })
+    $(".tooltip").mouseleave(copyConfigMouseLeave);
 </script>
 
 <script>
@@ -1890,11 +1882,13 @@
         }
         if (!getFieldValue("editorConfig_customization_features_spellcheck_mode")) {
             return `"features": {
+                "roles": ${getFieldValue("editorConfig_customization_features_roles")},
                 "spellcheck": ${getFieldValue("editorConfig_customization_features_spellcheck")}
             },
             `
         } else {
             return `"features": {
+                "roles": ${getFieldValue("editorConfig_customization_features_roles")},
                 "spellcheck": {
                     "mode": true
                 }
@@ -2005,6 +1999,7 @@
             customization_object.anonymous = { request: false }
         }
         config.editorConfig.customization = customization_object;
+        copy.editorConfig.customization = customization_object;
         if (window.docEditor) {
             window.docEditor.destroyEditor();
         }
@@ -2014,32 +2009,4 @@
         hljs.highlightBlock(pre);
     }
 
-    function getFieldValue(id) {
-        var element = document.getElementById(id);
-        if (document.getElementById(id).parentElement.className == "select") {
-            return `"${document.getElementById(id).parentElement.children[1].innerText}"`;
-        } else if (element.type == "checkbox") {
-            return element.checked;
-        } else if (element.id == `editorConfig_customization_zoom`) {
-            return isNaN(Number(element.value)) ? 0 : Number(element.value);
-        } else if (`${element.value}` == ``) {
-            return `""`;
-        } else if (isNaN(element.value)) {
-            return `"${element.value}"`;
-        } else {
-            return Number(element.value);
-        }
-    }
-
-    function resizeCodeInput() {
-        var paddingTop = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingTop.split("px")[0]);
-        var paddingBottom = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).paddingBottom.split("px")[0]);
-        var borderSize = Number(getComputedStyle(document.getElementsByTagName("pre")[0]).border.split("px")[0]);
-        var controlFieldsHeight = Math.round(document.getElementById("controlFields").getBoundingClientRect().height * 100) / 100;
-
-        var offset = paddingTop + paddingBottom + (borderSize * 2);
-        var height = controlFieldsHeight - offset;
-
-        document.getElementById("configPre").style.height = `${height}px`;
-    }
 </script>

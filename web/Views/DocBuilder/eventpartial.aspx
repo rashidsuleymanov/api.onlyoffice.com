@@ -138,7 +138,7 @@
 
             connector.callCommand(
                 "function () {" +
-                "<%= Regex.Replace(ev.Example.Script.Replace("\"", "\\\"").Replace("builder.CreateFile", "").Replace("builder.SaveFile", "").Replace("builder.CloseFile()", ""), "\\r*\\n", "") %>" +
+                "<%= Regex.Replace(ev.Example.Script.Replace("\\", "\\\\").Replace("\"", "\\\"").Replace("builder.CreateFile", "").Replace("builder.SaveFile", "").Replace("builder.CloseFile()", ""), "\\r*\\n", "") %>" +
                 "}"
             );
         };
