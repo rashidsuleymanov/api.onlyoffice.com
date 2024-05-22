@@ -54,6 +54,7 @@
     "nameLocale": {
         "fr": "Traducteur",
         "es": "Traductor",
+        "pt-BR": "Tradutor",
         "de": "&#220;bersetzer"
     },
     "guid": "asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}",
@@ -65,6 +66,7 @@
             "descriptionLocale": {
                 "fr": "Traduisez le texte s&#233;lectionn&#233; dans d'autres langues avec Google Translate.",
                 "es": "Traduzca el texto seleccionado a otros idiomas con el Traductor de Google.",
+                "pt-BR": "Traduza o texto selecionado para outros idiomas com o Google Translate.",
                 "de": "&#220;bersetzen Sie den ausgew&#228;hlten Text in andere Sprachen mit Google Translate."
             },
             "url": "index.html",
