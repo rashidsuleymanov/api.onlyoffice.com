@@ -67,6 +67,7 @@
     "nameLocale": {
         "de": "Code hervorheben",
         "es": "Resaltar el c&#243;digo",
+        "pt-BR": "Highlight code",
         "fr": "Code en surbrillance"
     },
     "version": "1.0.2",
@@ -96,6 +97,7 @@
             "descriptionLocale": {
                 "de": "Heben Sie die Codesyntax hervor, indem Sie die gew&#252;nschte Sprache, den Stil und die Hintergrundfarbe ausw&#228;hlen.",
                 "es": "Resalte la sintaxis del c&#243;digo seleccionando el idioma, el estilo y el color de fondo necesarios.",
+                "pt-BR": "Destaque a sintaxe do c&#243;digo selecionando o idioma, estilo e cor de fundo necess&#225;rios.",
                 "fr": "Mettez en &#233;vidence la syntaxe du code en s&#233;lectionnant la langue, le style et la couleur de l'arri&#232;re-plan."
             },
             "icons": [

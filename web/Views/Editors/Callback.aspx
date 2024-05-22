@@ -195,6 +195,9 @@
     <div class="mobile-content"></div>
 
     <p id="used-callbackUrl" class="copy-link">
+        The server stores all <em>callbackUrls</em> and chooses which one to use depending on the user who performed the action.
+    </p>
+    <p>
         Since version 5.5, <a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a> is selected depending on the <em>status</em> of the request.
         Starting from version 4.4 to version 5.5, <em>callbackUrl</em> is used from the last user who joined the co-editing.
         Prior to version 4.4, when co-editing, <em>callbackUrl</em> is used from the user who first opened the file for editing.

@@ -1856,11 +1856,6 @@
               Looks up a localized string similar to The email change instructions have been successfully sent.
             </summary>
         </member>
-        <member name="P:ASC.Web.Core.PublicResources.Resource.MessagePasswordSendedToEmail">
-            <summary>
-              Looks up a localized string similar to The password change instruction has been sent to {0} email address..
-            </summary>
-        </member>
         <member name="P:ASC.Web.Core.PublicResources.Resource.MessageYourPasswordSendedToEmail">
             <summary>
               Looks up a localized string similar to If a user with the {0} email exists, the password change instruction has been sent to this email address..
@@ -2405,6 +2400,11 @@
               Looks up a localized string similar to Delete Portal.
             </summary>
         </member>
+        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.ButtonGetStarted">
+            <summary>
+              Looks up a localized string similar to Get started.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.ButtonInviteRightNow">
             <summary>
               Looks up a localized string similar to Invite Right Now.
@@ -2858,6 +2858,25 @@
             $TrulyYours
             
             ^To change the notification type, please manage your &quot;subscription settings&quot;:&quot;$RecipientSubscriptionConfigURL&quot;.^.
+             </summary>
+        </member>
+        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_migration_personal_to_docspace">
+             <summary>
+               Looks up a localized string similar to Hello!
+            
+            The data migration process from ONLYOFFICE Personal to your new ONLYOFFICE DocSpace is successfully completed.
+            
+            To access your DocSpace with the imported data, just click the button below:
+            
+            $OrangeButton
+            
+            Your current DocSpace plan is STARTUP. It is absolutely free.
+            
+            ==If necessary, you can change the name of your new DocSpace. Just switch to Settings -&gt; Customization -&gt; DocSpace Renaming.==
+            
+            Enjoy a new way of document collaboration!
+            
+            $TrulyYours.
              </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.pattern_migration_server_failure">
@@ -3763,6 +3782,11 @@
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.subject_migration_error">
             <summary>
               Looks up a localized string similar to ${LetterLogoText}. Another region portal migration error.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.subject_migration_personal_to_docspace">
+            <summary>
+              Looks up a localized string similar to Data migration to ONLYOFFICE DocSpace successfully completed.
             </summary>
         </member>
         <member name="P:ASC.Web.Core.PublicResources.WebstudioNotifyPatternResource.subject_migration_start">

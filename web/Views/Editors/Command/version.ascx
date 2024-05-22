@@ -77,7 +77,7 @@
         </tr>
         <tr class="tablerow">
             <td>version</td>
-            <td>Defines the document version.</td>
+            <td>Defines the document server version.</td>
             <td>string</td>
             <td>required</td>
         </tr>

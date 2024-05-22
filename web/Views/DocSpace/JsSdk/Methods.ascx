@@ -383,7 +383,7 @@ docSpace.getRooms(filter);
             <tbody>
                 <tr class="tablerow">
                     <td>filter</td>
-                    <td>The room <a href="https://github.com/ONLYOFFICE/DocSpace-client/blob/master/packages/common/api/rooms/filter.js#L116" target="_blank">filter parameters</a>.</td>
+                    <td>The room <a href="https://github.com/ONLYOFFICE/DocSpace-client/blob/master/packages/shared/api/rooms/filter.js#L183" target="_blank">filter parameters</a>.</td>
                     <td>object</td>
                     <td>required</td>
                 </tr>
