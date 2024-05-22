@@ -1,10 +1,12 @@
 # Change Log
 
-##
-- plugins: updated config parameters
+## 5.0.0
+- selection of three products: docspace, docs, workspace
 - redesign main page
 - redesign header and footer
-- selection of three products: docspace, docs, workspace
+- docspace: storybook v2.5.1
+- docspace: v2.5.1
+- plugins: updated config parameters
 
 ## 4.7.0
 - docspace: storybook v2.5

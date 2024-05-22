@@ -135,8 +135,7 @@
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#features">features</a>": {
                 "spellcheck": {
-                    "mode": true,
-                    "change": true
+                    "mode": true
                 }
             },
         "<a href="<%= Url.Action("config/editor/customization") %>#feedback">feedback</a>": {
