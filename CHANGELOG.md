@@ -1,5 +1,8 @@
 # Change Log
 
+##
+- redirect from old urls
+
 ## 5.0.0
 - selection of three products: docspace, docs, workspace
 - redesign main page
