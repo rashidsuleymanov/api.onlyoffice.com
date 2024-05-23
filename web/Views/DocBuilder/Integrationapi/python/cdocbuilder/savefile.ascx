@@ -4,7 +4,7 @@
    <span class="hdr">SaveFile</span>
 </h1>
 
-<h4 class="header-gray" id="SaveFile">int SaveFile(nType, sPath, sParams);</h4>
+<h4 class="header-gray" id="SaveFile">def SaveFile(self, type, path, params=None);</h4>
 <p class="dscr">Saves the file after all the changes are made. The type of the file which will be saved needs to be set.</p>
 
 <h2>Parameters:</h2>
@@ -18,19 +18,20 @@
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td><em>sExtension</em></td>
-            <td>const&nbsp;wchar_t*</td>
-            <td>The file extension. The following values are possible: <b>docx</b>, <b>odt</b>, <b>rtf</b>, <b>txt</b>, <b>pptx</b>, <b>xlsx</b>, <b>ods</b>, <b>csv</b>, <b>pdf</b>
-            (see <a href="<%= Url.Action("integrationapi/default") %>#format-types">AVS_OFFICESTUDIO_FILE_XXX</a> values).</td>
+            <td><em>type</em></td>
+            <td>int</td>
+            <td>The type of the file to be saved set as a hexadecimal integer for the Python code.
+            For the <em>.docbuilder</em> script file the following values are possible: <b>docx</b>, <b>odt</b>, <b>rtf</b>, <b>txt</b>, <b>pptx</b>, <b>xlsx</b>, <b>ods</b>, <b>csv</b>, <b>pdf</b>
+            (see <a href="<%= Url.Action("integrationapi/c/cdefault") %>#format-types">AVS_OFFICESTUDIO_FILE_XXX</a> values).</td>
         </tr>
         <tr class="tablerow">
-            <td><em>sPath</em></td>
-            <td>const&nbsp;wchar_t*</td>
+            <td><em>path</em></td>
+            <td>str</td>
             <td>The path to the file to be saved together with its name and extension.</td>
         </tr>
         <tr class="tablerow">
-            <td><em>sParams</em></td>
-            <td>const&nbsp;wchar_t*</td>
+            <td><em>params</em></td>
+            <td>str</td>
             <td>The parameters needed for the correct file saving (most commonly, the encoding is used for the <em>txt</em> and <em>csv</em> file types or the delimiter for the <em>csv</em> files,
             for other file types this is just an empty string). The parameters are added in the form of XML tags, where <b>m_nCsvTxtEncoding</b> is used for the text encoding
             and <b>m_nCsvDelimiter</b> is used for the <em>csv</em> delimiter. You can find all the supported values for the encoding <a target="_blank" href="https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js">in this file</a>.
@@ -50,14 +51,14 @@
 <div class="mobile-content"></div>
 
 <h2>Example</h2>
-<h4 class="header-gray">C++</h4>
+<h4 class="header-gray">Python</h4>
 <pre>
-std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
-CDocBuilder::Initialize(sWorkDirectory.c_str());
-CDocBuilder oBuilder;
-std::wstring sDstPath = sProcessDirectory + L"/result.docx";
-oBuilder.SaveFile("docx", sDstPath.c_str());
-CDocBuilder::Dispose();
+builder = docbuilder.CDocBuilder()
+builder.CreateFile("docx")
+dstPath = os.getcwd() + "/result.docx"
+builder.SaveFile("docx", dstPath)
+builder.CloseFile()
+docbuilder.CDocBuilder.Dispose()
 </pre>
 <h4 class="header-gray">.docbuilder</h4>
 <pre>
@@ -76,9 +77,9 @@ This is done using the parameters of the <em>SaveFile()</em> method. The paramet
     <li><b>height</b> - the image height in pixels.</li>
 </ul>
 <h2>Example</h2>
-<h4 class="header-gray">C++</h4>
+<h4 class="header-gray">Python</h4>
 <pre>
-oBuilder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "&lt;m_oThumbnail&gt;&lt;format&gt;4&lt;/format&gt;&lt;aspect&gt;1&lt;/aspect&gt;&lt;first&gt;false&lt;/first&gt;&lt;width&gt;1000&lt;/width&gt;&lt;height&gt;1000&lt;/height&gt;&lt;/m_oThumbnail&gt;");
+builder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "&lt;m_oThumbnail&gt;&lt;format&gt;4&lt;/format&gt;&lt;aspect&gt;1&lt;/aspect&gt;&lt;first&gt;false&lt;/first&gt;&lt;width&gt;1000&lt;/width&gt;&lt;height&gt;1000&lt;/height&gt;&lt;/m_oThumbnail&gt;")
 </pre>
 <h4 class="header-gray">.docbuilder</h4>
 <pre>

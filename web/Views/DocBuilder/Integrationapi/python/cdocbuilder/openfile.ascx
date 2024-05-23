@@ -4,7 +4,7 @@
    <span class="hdr">OpenFile</span>
 </h1>
 
-<h4 class="header-gray" id="OpenFile">int OpenFile(sPath, sParams);</h4>
+<h4 class="header-gray" id="OpenFile">def OpenFile(self, path, params);</h4>
 <p class="dscr">Opens the document file which will be edited and saved afterwards.</p>
 
 <h2>Parameters:</h2>
@@ -19,14 +19,14 @@
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td><em>sPath</em></td>
-            <td>String^</td>
+            <td><em>path</em></td>
+            <td>str</td>
             <td></td>
             <td>The path to the file to be opened together with its name and extension.</td>
         </tr>
         <tr class="tablerow">
-            <td><em>sParams</em></td>
-            <td>String^</td>
+            <td><em>params</em></td>
+            <td>str</td>
             <td>&lt;optional&gt;</td>
             <td>The parameters needed for the correct file opening (most commonly, the encoding is used for the <em>txt</em> and <em>csv</em> file types
             or the delimiter for the <em>csv</em> files, for other file types this is just an empty string). The parameters are added in the form of XML tags,
@@ -48,13 +48,11 @@
 <div class="mobile-content"></div>
 
 <h2>Example</h2>
-<h4 class="header-gray" >.Net</h4>
+<h4 class="header-gray" >Python</h4>
 <pre>
-string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
-CDocBuilder.Initialize(workDirectory);
-CDocBuilder oBuilder = new CDocBuilder();
-oBuilder.OpenFile(L"text-document.csv", "&lt;m_nCsvTxtEncoding&gt;46&lt;/m_nCsvTxtEncoding&gt;&lt;m_nCsvDelimiter&gt;4&lt;/m_nCsvDelimiter&gt;");
-CDocBuilder.Destroy();
+builder = docbuilder.CDocBuilder()
+builder.OpenFile(L"text-document.csv", "&lt;m_nCsvTxtEncoding&gt;46&lt;/m_nCsvTxtEncoding&gt;&lt;m_nCsvDelimiter&gt;4&lt;/m_nCsvDelimiter&gt;")
+builder.CloseFile()
 </pre>
 <h4 class="header-gray" >.docbuilder</h4>
 <pre>

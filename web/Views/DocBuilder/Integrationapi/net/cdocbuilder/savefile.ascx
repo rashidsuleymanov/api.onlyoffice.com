@@ -72,7 +72,7 @@ This is done using the parameters of the <em>SaveFile()</em> method. The paramet
 <ul>
     <li><b>m_oThumbnail</b> - the core tag showing that the inner nodes will be used to create a thumbnail out of the document file;</li>
     <li><b>format</b> - the image file format used to create a thumbnail (can be of the following values: <b>3</b> - for a JPG file, <b>4</b> - for a PNG file);</li>
-    <li><b>aspect</b> - the image aspect when creating a thumbnail from the document file (can be of the following values: <b>1</b> - will keep the original aspect, <b>0</b> - will stretch the image to fit the width and the height set below;</li>
+    <li><b>aspect</b> - the image aspect when creating a thumbnail from the document file (can be of the following values: <b>1</b> - will keep the original aspect, <b>0</b> - will stretch the image to fit the width and the height set below);</li>
     <li><b>first</b> - whether only the first page or all the pages should be converted into a thumbnail (can be of the following values: <b>true</b> - only the first page will be converted, <b>false</b> - all the document pages will be used to create thumbnails, in this case the file will be saved as an archive of images, one for each page);</li>
     <li><b>width</b> - the image width in pixels;</li>
     <li><b>height</b> - the image height in pixels.</li>
