@@ -4,7 +4,7 @@
    <span class="hdr">Set</span>
 </h1>
 
-<h4 class="header-gray" id="CloseFile">def Set(self, key, value);</h4>
+<h4 class="header-gray" id="Set">def Set(self, key, value);</h4>
 <p class="dscr">Sets an array value by its index.</p>
 <div class="note">Please note, that for the <em>.docbuilder</em> file the <em>CDocBuilderValue.Set</em> method is not used.</div>
 

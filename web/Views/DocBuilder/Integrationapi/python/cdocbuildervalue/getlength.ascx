@@ -4,7 +4,7 @@
    <span class="hdr">GetLength</span>
 </h1>
 
-<h4 class="header-gray" id="CloseFile">def GetLength(self);</h4>
+<h4 class="header-gray" id="GetLength">def GetLength(self);</h4>
 <p class="dscr">Returns the length if the <b>CDocBuilderValue</b> object is an array. Otherwise, returns 0.</p>
 <div class="note">Please note, that for the <em>.docbuilder</em> file the <em>CDocBuilderValue.GetLength</em> method is not used.</div>
 
@@ -16,6 +16,6 @@ context = builder.GetContext()
 globalObj = context.GetGlobal()
 api = globalObj["Api"]
 document = api.Call("GetDocument");
-charts = document.Call("GetAllCharts");
+charts = document.Call("GetAllCharts")
 length = charts.GetLength();
 </pre>

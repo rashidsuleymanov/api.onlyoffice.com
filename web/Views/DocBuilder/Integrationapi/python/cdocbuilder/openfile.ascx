@@ -52,7 +52,6 @@
 <pre>
 builder = docbuilder.CDocBuilder()
 builder.OpenFile(L"text-document.csv", "&lt;m_nCsvTxtEncoding&gt;46&lt;/m_nCsvTxtEncoding&gt;&lt;m_nCsvDelimiter&gt;4&lt;/m_nCsvDelimiter&gt;")
-builder.CloseFile()
 </pre>
 <h4 class="header-gray" >.docbuilder</h4>
 <pre>

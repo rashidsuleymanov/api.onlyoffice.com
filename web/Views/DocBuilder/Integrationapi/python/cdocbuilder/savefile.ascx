@@ -19,7 +19,7 @@
     <tbody>
         <tr class="tablerow">
             <td><em>type</em></td>
-            <td>int</td>
+            <td>int | str</td>
             <td>The type of the file to be saved set as a hexadecimal integer for the Python code.
             For the <em>.docbuilder</em> script file the following values are possible: <b>docx</b>, <b>odt</b>, <b>rtf</b>, <b>txt</b>, <b>pptx</b>, <b>xlsx</b>, <b>ods</b>, <b>csv</b>, <b>pdf</b>
             (see <a href="<%= Url.Action("integrationapi/c/cdefault") %>#format-types">AVS_OFFICESTUDIO_FILE_XXX</a> values).</td>
@@ -54,11 +54,8 @@
 <h4 class="header-gray">Python</h4>
 <pre>
 builder = docbuilder.CDocBuilder()
-builder.CreateFile("docx")
 dstPath = os.getcwd() + "/result.docx"
 builder.SaveFile("docx", dstPath)
-builder.CloseFile()
-docbuilder.CDocBuilder.Dispose()
 </pre>
 <h4 class="header-gray">.docbuilder</h4>
 <pre>

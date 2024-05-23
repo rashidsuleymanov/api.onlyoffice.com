@@ -4,7 +4,7 @@
    <span class="hdr">Get</span>
 </h1>
 
-<h4 class="header-gray" id="CloseFile">def Get(self, key);</h4>
+<h4 class="header-gray" id="Get">def Get(self, key);</h4>
 <p class="dscr">Returns an array value by its index.</p>
 <div class="note">Please note, that for the <em>.docbuilder</em> file the <em>CDocBuilderValue.Get</em> method is not used.</div>
 
@@ -36,7 +36,7 @@ context = builder.GetContext()
 globalObj = context.GetGlobal()
 api = globalObj["Api"]
 document = api.Call("GetDocument")
-charts = document.Call("GetAllCharts");
+charts = document.Call("GetAllCharts")
 chart = charts.Get(1);
 </pre>
 
@@ -53,6 +53,6 @@ context = builder.GetContext()
 globalObj = context.GetGlobal()
 api = globalObj["Api"]
 document = api.Call("GetDocument")
-charts = document.Call("GetAllCharts");
+charts = document.Call("GetAllCharts")
 chart = charts[1];
 </pre>

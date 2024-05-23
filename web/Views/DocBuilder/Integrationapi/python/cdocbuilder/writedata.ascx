@@ -4,7 +4,7 @@
    <span class="hdr">WriteData</span>
 </h1>
 
-<h4 class="header-gray" id="CreateFile">def WriteData(self, path, value, append);</h4>
+<h4 class="header-gray" id="WriteData">def WriteData(self, path, value, append);</h4>
 <p class="dscr">Writes data to the log file. It is used for logs in JS code.</p>
 <div class="note">Please note, that for the <em>.docbuilder</em> file the <em>CDocBuilder.WriteData</em> method is not used.</div>
 

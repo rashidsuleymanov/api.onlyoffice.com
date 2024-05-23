@@ -40,11 +40,7 @@
 <h4 class="header-gray" >Python</h4>
 <pre>
 builder = docbuilder.CDocBuilder()
-builder.CreateFile("docx")
 builder.ExecuteCommand(L"oParagraph.AddText(\"Hello from Python!\");");
-builder.CloseFile()
 </pre>
 <h4 class="header-gray" >.docbuilder</h4>
-<pre>builder.CreateFile("docx");
-oParagraph.AddText("Hello from Python!");
-builder.CloseFile();</pre>
+<pre>oParagraph.AddText("Hello from Python!");</pre>

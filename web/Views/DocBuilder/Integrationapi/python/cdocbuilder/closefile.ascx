@@ -11,9 +11,7 @@ but you need to close the previous file before you can start working with the ne
 <h2>Example</h2>
 <h4 class="header-gray" >Python</h4>
 <pre>builder = docbuilder.CDocBuilder()
-builder.CreateFile("docx")
 builder.CloseFile()
 </pre>
 <h4 class="header-gray" >.docbuilder</h4>
-<pre>builder.CreateFile("docx");
-builder.CloseFile();</pre>
+<pre>builder.CloseFile();</pre>

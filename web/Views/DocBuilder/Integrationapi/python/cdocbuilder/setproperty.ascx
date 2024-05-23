@@ -114,8 +114,7 @@ Argument.name === "ONLYOFFICE" // true
 <h4 class="header-gray" >Python</h4>
 <pre>
 builder = docbuilder.CDocBuilder()
-builder.SetProperty("--argument", L"{\"name\":\"ONLYOFFICE\"}");
-docbuilder.CDocBuilder.Dispose()
+builder.SetProperty("--argument", L"{\"name\":\"ONLYOFFICE\"}")
 </pre>
 <h4 class="header-gray" >.docbuilder</h4>
 <pre>

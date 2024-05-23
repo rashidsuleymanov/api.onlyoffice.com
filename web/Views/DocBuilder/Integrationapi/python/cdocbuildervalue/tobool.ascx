@@ -4,7 +4,7 @@
    <span class="hdr">ToBool</span>
 </h1>
 
-<h4 class="header-gray" id="CloseFile">def ToBool(self);</h4>
+<h4 class="header-gray" id="ToBool">def ToBool(self);</h4>
 <p class="dscr">Converts the <b>CDocBuilderValue</b> object to a boolean value.</p>
 <div class="note">Please note, that for the <em>.docbuilder</em> file the <em>CDocBuilderValue.ToBool</em> method is not used.</div>
 

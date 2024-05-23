@@ -4,7 +4,7 @@
    <span class="hdr">SetProperty</span>
 </h1>
 
-<h4 class="header-gray" id="CloseFile">def SetProperty(self, name, value);</h4>
+<h4 class="header-gray" id="SetProperty">def SetProperty(self, name, value);</h4>
 <p class="dscr">Sets a property to the <b>CDocBuilderValue</b> object.</p>
 <div class="note">Please note, that for the <em>.docbuilder</em> file the <em>CDocBuilderValue.SetProperty</em> method is not used.</div>
 
@@ -76,7 +76,7 @@ builder = docbuilder.CDocBuilder()
 context = builder.GetContext()
 globalObj = context.GetGlobal()
 api = globalObj["Api"]
-document = api.Call("GetDocument");
+document = api.Call("GetDocument")
 document["color", {"zX":{"red":112,"green":173,"blue":71,"alpha":255},"type":"srgb","Zvf":null,"type":"uniColor"}]
 </pre>
     </li>

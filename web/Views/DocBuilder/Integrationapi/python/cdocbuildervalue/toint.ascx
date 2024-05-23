@@ -4,7 +4,7 @@
    <span class="hdr">ToInt</span>
 </h1>
 
-<h4 class="header-gray" id="CloseFile">def ToInt(self);</h4>
+<h4 class="header-gray" id="ToInt">def ToInt(self);</h4>
 <p class="dscr">Converts the <b>CDocBuilderValue</b> object to an integer.</p>
 <div class="note">Please note, that for the <em>.docbuilder</em> file the <em>CDocBuilderValue.ToInt</em> method is not used.</div>
 

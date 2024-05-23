@@ -31,9 +31,7 @@
 <h4 class="header-gray" >Python</h4>
 <pre>builder = docbuilder.CDocBuilder()
 builder.CreateFile("docx")
-builder.CloseFile()
 </pre>
 <h4 class="header-gray" >.docbuilder</h4>
 <pre>builder.CreateFile("docx");
-builder.CloseFile()
 </pre>

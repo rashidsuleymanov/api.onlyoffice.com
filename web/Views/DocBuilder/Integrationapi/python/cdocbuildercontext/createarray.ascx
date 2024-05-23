@@ -4,7 +4,7 @@
    <span class="hdr">CreateArray</span>
 </h1>
 
-<h4 class="header-gray" id="CloseFile">def CreateArray(self, length);</h4>
+<h4 class="header-gray" id="CreateArray">def CreateArray(self, length);</h4>
 <p class="dscr">Creates an array value, an analogue of <em>new Array (length)</em> in JS.</p>
 <div class="note">Please note, that for the <em>.docbuilder</em> file the <em>CDocBuilderContext.CreateArray</em> method is not used.</div>
 
@@ -34,5 +34,4 @@
 builder = docbuilder.CDocBuilder()
 context = builder.GetContext()
 content = context.CreateArray(1)
-docbuilder.CDocBuilder.Dispose()
 </pre>

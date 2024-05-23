@@ -4,7 +4,7 @@
    <span class="hdr">IsNull</span>
 </h1>
 
-<h4 class="header-gray" id="CloseFile">def IsNull(self);</h4>
+<h4 class="header-gray" id="IsNull">def IsNull(self);</h4>
 <p class="dscr">Returns true if the <b>CDocBuilderValue</b> object is null.</p>
 <div class="note">Please note, that for the <em>.docbuilder</em> file the <em>CDocBuilderValue.IsNll</em> method is not used.</div>
 
@@ -14,5 +14,5 @@
 builder = docbuilder.CDocBuilder()
 context = builder.GetContext()
 globalObj = context.GetGlobal()
-null = globalObj.IsNull()
+bNull = globalObj.IsNull()
 </pre>

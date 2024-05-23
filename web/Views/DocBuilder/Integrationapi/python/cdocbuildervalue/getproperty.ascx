@@ -4,7 +4,7 @@
    <span class="hdr">GetProperty</span>
 </h1>
 
-<h4 class="header-gray" id="CloseFile">def GetProperty(self, name);</h4>
+<h4 class="header-gray" id="GetProperty">def GetProperty(self, name);</h4>
 <p class="dscr">Returns a property of the <b>CDocBuilderValue</b> object.</p>
 <div class="note">Please note, that for the <em>.docbuilder</em> file the <em>CDocBuilderValue.GetProperty</em> method is not used.</div>
 

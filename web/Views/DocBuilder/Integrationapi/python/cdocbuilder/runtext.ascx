@@ -4,7 +4,7 @@
    <span class="hdr">RunText</span>
 </h1>
 
-<h4 class="header-gray" id="Run">def RunText(self, commands);</h4>
+<h4 class="header-gray" id="RunText">def RunText(self, commands);</h4>
 <p class="dscr">Runs all the commands for the document creation using a single command.
 Compared to <a href="<%= Url.Action("integrationapi/python/cdocbuilder/executecommand") %>">CDocBuilder.ExecuteCommand</a> where only one command at a time is allowed,
 <em>CDocBuilder.RunText</em> makes it possible to enter all the commands for the document creation at once.</p>

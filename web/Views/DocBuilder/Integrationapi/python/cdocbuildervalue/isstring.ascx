@@ -4,7 +4,7 @@
    <span class="hdr">IsString</span>
 </h1>
 
-<h4 class="header-gray" id="CloseFile">def IsString(self);</h4>
+<h4 class="header-gray" id="IsString">def IsString(self);</h4>
 <p class="dscr">Returns true if the <b>CDocBuilderValue</b> object is a string.</p>
 <div class="note">Please note, that for the <em>.docbuilder</em> file the <em>CDocBuilderValue.IsString</em> method is not used.</div>
 
@@ -14,5 +14,5 @@
 builder = docbuilder.CDocBuilder()
 context = builder.GetContext()
 globalObj = context.GetGlobal()
-string = globalObj.IsString()
+bString = globalObj.IsString()
 </pre>

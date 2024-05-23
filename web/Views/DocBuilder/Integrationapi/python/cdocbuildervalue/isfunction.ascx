@@ -4,7 +4,7 @@
    <span class="hdr">IsFunction</span>
 </h1>
 
-<h4 class="header-gray" id="CloseFile">def IsFunction(self);</h4>
+<h4 class="header-gray" id="IsFunction">def IsFunction(self);</h4>
 <p class="dscr">Returns true if the <b>CDocBuilderValue</b> object is a function.</p>
 <div class="note">Please note, that for the <em>.docbuilder</em> file the <em>CDocBuilderValue.IsFunction</em> method is not used.</div>
 
@@ -14,5 +14,5 @@
 builder = docbuilder.CDocBuilder()
 context = builder.GetContext()
 globalObj = context.GetGlobal()
-function = globalObj.IsFunction()
+bFunction = globalObj.IsFunction()
 </pre>

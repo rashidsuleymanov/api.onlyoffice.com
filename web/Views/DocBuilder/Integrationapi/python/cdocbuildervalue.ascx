@@ -6,14 +6,6 @@
 
 <h4 class="header-gray" id="CDocBuilder">new CDocBuilderValue</h4>
 <p class="dscr">Class used by <b>ONLYOFFICE Document Builder</b> for getting the results of called JS commands. It represents a wrapper for a JS object.</p>
-<p>The <b>CDocBuilderValue</b> class can be created from the primitive data types:</p>
-<pre>
-CDocBuilderValue(bool value);
-CDocBuilderValue(int value);
-CDocBuilderValue(unsigned int value);
-CDocBuilderValue(double value);
-CDocBuilderValue(String^ value);
-</pre>
 
 <h2>Methods</h2>
 <table class="table">
