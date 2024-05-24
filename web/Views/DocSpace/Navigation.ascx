@@ -59,6 +59,9 @@
                     <li>
                         <a href="<%= Url.Action("jssdk/samples/sampleopenfile") %>">Open file in editors</a>
                     </li>
+                    <li>
+                        <a href="<%= Url.Action("jssdk/samples/authorization") %>">Log in to DocSpace account</a>
+                    </li>
                 </ul>
             </li>
             
