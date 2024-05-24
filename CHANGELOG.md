@@ -1,5 +1,7 @@
 # Change Log
 
+- update favicon
+
 ## 5.0.1
 - redirect from old urls
 
