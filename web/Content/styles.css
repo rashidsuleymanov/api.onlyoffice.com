@@ -943,10 +943,10 @@ a.header-tn-link:hover {
     width: 24px;
     height: 24px;
     position: absolute;
-    right: 4px;
+    right: 14px;
     display: none;
     top: 50%;
-    transform: translateY(-50%) scale(2, 2);
+    transform: translateY(-50%) scale(1.5, 1.5);
     cursor: pointer;
 }
 
