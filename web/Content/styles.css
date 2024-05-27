@@ -946,7 +946,7 @@ a.header-tn-link:hover {
     right: 4px;
     display: none;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) scale(2, 2);
     cursor: pointer;
 }
 
