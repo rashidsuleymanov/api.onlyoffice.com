@@ -62,6 +62,9 @@
                     <li>
                         <a href="<%= Url.Action("jssdk/samples/authorization") %>">Log in to DocSpace account</a>
                     </li>
+                    <li>
+                        <a href="<%= Url.Action("jssdk/samples/createfileinselectedfolder") %>">Create file in selected folder</a>
+                    </li>
                 </ul>
             </li>
             
