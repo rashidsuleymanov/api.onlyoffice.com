@@ -1,11 +1,11 @@
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl"%>
 
 <h1>
     <span class="hdr">Open file in ONLYOFFICE editors</span>
 </h1>
-<p class="dscr">Open a file in <a href="<%= Url.Action("JsSdk/InitModes/Editor") %>">ONLYOFFICE editors</a>
-using <a href="<%= Url.Action("JsSdk/InitModes/FileSelector") %>">FileSelector</a>.</p>
-<img class="screenshot" alt="OpenEditors" src="<%= Url.Content("~/content/img/docspace/gifs/open-editors.gif") %>" />
+<p class="dscr">Open a file in <a href="<%= Url.Action("JsSdk/InitModes/Editor")%>">ONLYOFFICE editors</a>
+using <a href="<%= Url.Action("JsSdk/InitModes/FileSelector")%>">FileSelector</a>.</p>
+<img class="screenshot" alt="OpenEditors" src="<%= Url.Content("~/content/img/docspace/gifs/open-editors.gif")%>" />
 <h2>Before you start</h2>
 
 <ol>
@@ -19,7 +19,7 @@ using <a href="<%= Url.Action("JsSdk/InitModes/FileSelector") %>">FileSelector</
         </ul>
     </li>
 </ol>
-<img class="screenshot max-width-832" alt="Chart" src="<%= Url.Content("~/content/img/docspace/add-in-js-sdk-root-url.png") %>" />
+<img class="screenshot max-width-832" alt="Chart" src="<%= Url.Content("~/content/img/docspace/add-in-js-sdk-root-url.png")%>" />
 
 <h2>Building sample</h2>
 
@@ -33,7 +33,7 @@ using <a href="<%= Url.Action("JsSdk/InitModes/FileSelector") %>">FileSelector</
         </div>
             <div class="tooltip" >
                 <div class="copyJsSdk">
-                    <img  id="htmlStructure" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                    <img  id="htmlStructure" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
                     <span id="htmlStructure-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get the HTML code for the whole example.</span>
                     <span id="htmlStructure-click" style="display: none;" class="tooltiptext-click">HTML copied.</span>
                 </div>
@@ -63,7 +63,7 @@ using <a href="<%= Url.Action("JsSdk/InitModes/FileSelector") %>">FileSelector</
 
 <ol>
     <li>
-        <p>Add a script to initialize the File Selector. First, let's add an event handler for <a href="<%= Url.Action("jssdk/events") %>#onAppReady">onAppReady</a>, which runs when initialization is successful.</p>
+        <p>Add a script to initialize the File Selector. First, let's add an event handler for <a href="<%= Url.Action("jssdk/events")%>#onAppReady">onAppReady</a>, which runs when initialization is successful.</p>
             <div style="width: 100%;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -71,7 +71,7 @@ using <a href="<%= Url.Action("JsSdk/InitModes/FileSelector") %>">FileSelector</
                     </div>
                         <div class="tooltip" >
                             <div class="copyJsSdk">
-                                <img  id="onApp" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                                <img  id="onApp" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
                                 <span id="onApp-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get code for the whole example.</span>
                                 <span id="onApp-click" style="display: none;" class="tooltiptext-click">Code copied.</span>
                             </div>
@@ -84,8 +84,8 @@ var onAppReady = function (e) {
 </div>
     </li>
     <li>
-        <p>Add an event handler for <a href="<%= Url.Action("jssdk/events") %>#onSelectCallback">onSelectCallback</a>. Here we initialize <b>ONLYOFFICE editors</b> after the user selects a file. 
-To do this, we pass the ID of the file selected in the <b>File Selector</b> to the <a href="<%= Url.Action("jssdk/methods") %>#initEditor">initEditor</a> method.</p>
+        <p>Add an event handler for <a href="<%= Url.Action("jssdk/events")%>#onSelectCallback">onSelectCallback</a>. Here we initialize <b>ONLYOFFICE editors</b> after the user selects a file. 
+To do this, we pass the ID of the file selected in the <b>File Selector</b> to the <a href="<%= Url.Action("jssdk/methods")%>#initEditor">initEditor</a> method.</p>
             <div style="width: 100%;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -93,7 +93,7 @@ To do this, we pass the ID of the file selected in the <b>File Selector</b> to t
                     </div>
                         <div class="tooltip" >
                             <div class="copyJsSdk">
-                                <img  id="onSelect" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                                <img  id="onSelect" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
                                 <span id="onSelect-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get code for the whole example.</span>
                                 <span id="onSelect-click" style="display: none;" class="tooltiptext-click">Code copied.</span>
                             </div>
@@ -118,7 +118,7 @@ var onSelectCallback = function (e) {
                     </div>
                         <div class="tooltip" >
                             <div class="copyJsSdk">
-                                <img  id="jsConfig" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                                <img  id="jsConfig" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
                                 <span id="config-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get code for the whole example.</span>
                                 <span id="config-click" style="display: none;" class="tooltiptext-click">Code copied.</span>
                             </div>
@@ -144,7 +144,7 @@ const config = {
                     </div>
                         <div class="tooltip" >
                             <div class="copyJsSdk">
-                                <img  id="init" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                                <img  id="init" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
                                 <span id="init-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get code for the whole example.</span>
                                 <span id="init-click" style="display: none;" class="tooltiptext-click">Code copied.</span>
                             </div>
@@ -167,7 +167,7 @@ var docSpace = DocSpace.SDK.initFileSelector(config);</pre>
         </div>
             <div class="tooltip" >
                 <div class="copyJsSdk">
-                    <img  id="example" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                    <img  id="example" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
                     <span id="example-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get the HTML code for the whole example.</span>
                     <span id="example-click" style="display: none;" class="tooltiptext-click">HTML copied.</span>
                 </div>

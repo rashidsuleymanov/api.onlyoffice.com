@@ -1,10 +1,10 @@
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl"%>
 
 <h1>
     <span class="hdr">Create file in selected folder</span>
 </h1>
 <p class="dscr">Create file in selected folder and open it in editors.</p>
-<img class="screenshot" alt="OpenEditors" src="<%= Url.Content("~/content/img/docspace/gifs/js-sdk-create-file.gif") %>" />
+<img class="screenshot" alt="OpenEditors" src="<%= Url.Content("~/content/img/docspace/gifs/js-sdk-create-file.gif")%>" />
 
 
 <h2>Building sample</h2>
@@ -19,7 +19,7 @@
         </div>
             <div class="tooltip" >
                 <div class="copyJsSdk">
-                    <img  id="htmlStructure" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                    <img  id="htmlStructure" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
                     <span id="htmlStructure-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get the HTML code for the whole example.</span>
                     <span id="htmlStructure-click" style="display: none;" class="tooltiptext-click">HTML copied.</span>
                 </div>
@@ -65,7 +65,7 @@
 
 <ol>
     <li>
-        <p>Add a script to initialize the <a href="<%= Url.Action("jssdk/initmodes/manager") %>">Manager</a>. First, let's add an event handler for <a href="<%= Url.Action("jssdk/events") %>#onAppReady">onAppReady</a>, which runs when initialization is successful.</p>
+        <p>Add a script to initialize the <a href="<%= Url.Action("jssdk/initmodes/manager")%>">Manager</a>. First, let's add an event handler for <a href="<%= Url.Action("jssdk/events")%>#onAppReady">onAppReady</a>, which runs when initialization is successful.</p>
             <div style="width: 100%;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -73,7 +73,7 @@
                     </div>
                         <div class="tooltip" >
                             <div class="copyJsSdk">
-                                <img  id="onApp" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                                <img  id="onApp" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
                                 <span id="onApp-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get code for the whole example.</span>
                                 <span id="onApp-click" style="display: none;" class="tooltiptext-click">Code copied.</span>
                             </div>
@@ -87,7 +87,7 @@ var onAppReady = function (e) {
     </li>
         
     <li>
-        <p>Create a configuration for the <b>Manager</b>. For this we create a variable as shown below.</p>
+        <p>Create a configuration for the <b>Manager</b>. For this we create a variable as shown below. In the <a href="<%= Url.Action("jssdk/config")%>#rootPath">rootPath</a> section, specify the section whose directories you want to display.</p>
             <div style="width: 100%;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -95,7 +95,7 @@ var onAppReady = function (e) {
                     </div>
                         <div class="tooltip" >
                             <div class="copyJsSdk">
-                                <img  id="jsConfig" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                                <img  id="jsConfig" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
                                 <span id="config-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get code for the whole example.</span>
                                 <span id="config-click" style="display: none;" class="tooltiptext-click">Code copied.</span>
                             </div>
@@ -120,7 +120,7 @@ const config = {
                     </div>
                         <div class="tooltip" >
                             <div class="copyJsSdk">
-                                <img  id="init" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                                <img  id="init" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
                                 <span id="init-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get code for the whole example.</span>
                                 <span id="init-click" style="display: none;" class="tooltiptext-click">Code copied.</span>
                             </div>
@@ -133,7 +133,7 @@ var docSpace = DocSpace.SDK.initManager(config);</pre>
 </ol>
 
 <h3>Step 3. Load folders list to Combobox</h3>
-<p>Add an <b>onComboboxClick()</b> event handler for the Combobox. Using the <a href="<%= Url.Action("jssdk/events") %>#getFolders">getFolders()</a> method, we load the list into the Combobox.</p>
+<p>Add an <b>onComboboxClick()</b> event handler for the Combobox. Using the <a href="<%= Url.Action("jssdk/events")%>#getFolders">getFolders()</a> method, we load the list into the Combobox.</p>
 
 <div style="width: 100%;">
     <div class="jsSdkHeader">
@@ -142,7 +142,7 @@ var docSpace = DocSpace.SDK.initManager(config);</pre>
         </div>
             <div class="tooltip" >
                 <div class="copyJsSdk">
-                    <img  id="htmlStructure" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                    <img  id="htmlStructure" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
                     <span id="htmlStructure-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get the HTML code for the whole example.</span>
                     <span id="htmlStructure-click" style="display: none;" class="tooltiptext-click">HTML copied.</span>
                 </div>
@@ -162,7 +162,7 @@ var onComboboxClick = async function (e) {
 </div>
 
 <h3>Step 4. Add method to create file</h3>
-<p>Add an <b>onButtonClick()</b> event handler for the button. Using the <a href="<%= Url.Action("jssdk/events") %>#createFile">createFile()</a> method, create file in selected folder.</p>
+<p>Add an <b>onButtonClick()</b> event handler for the button. Using the <a href="<%= Url.Action("jssdk/events")%>#createFile">createFile()</a> method, create file in selected folder.</p>
 
 <div style="width: 100%;">
     <div class="jsSdkHeader">
@@ -171,7 +171,7 @@ var onComboboxClick = async function (e) {
         </div>
             <div class="tooltip" >
                 <div class="copyJsSdk">
-                    <img  id="htmlStructure" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                    <img  id="htmlStructure" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
                     <span id="htmlStructure-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get the HTML code for the whole example.</span>
                     <span id="htmlStructure-click" style="display: none;" class="tooltiptext-click">HTML copied.</span>
                 </div>
@@ -205,7 +205,7 @@ var onButtonClick = async function (e) {
         </div>
             <div class="tooltip" >
                 <div class="copyJsSdk">
-                    <img  id="example" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                    <img  id="example" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
                     <span id="example-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get the HTML code for the whole example.</span>
                     <span id="example-click" style="display: none;" class="tooltiptext-click">HTML copied.</span>
                 </div>
