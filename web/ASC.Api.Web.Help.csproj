@@ -478,7 +478,6 @@
     <Content Include="Views\Home\ProductBlock.ascx" />
     <Content Include="Views\Shared\Analytic.ascx" />
     <Content Include="Views\Shared\BreadCrumbs.ascx" />
-    <Content Include="Views\Shared\EventNotFound.aspx" />
     <Content Include="Views\Shared\Index.aspx" />
     <Content Include="Views\Shared\MethodNotFound.aspx" />
     <Content Include="Views\Shared\Search.aspx" />
