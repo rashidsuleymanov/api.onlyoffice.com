@@ -17,7 +17,7 @@
 <div id="controlFields">
     <div id="viewedit" class="control-panel">
         <div class="line input_line" style="margin-top: 0;">
-            <label for="document_file_type">File type</label>
+            <label for="document_file_type">文件类型</label>
             <select class="select" id="document_file_type" name="document_file_type">
                 <option disabled>xlsx</option>
                 <option value="xlsx" selected>xlsx</option>
@@ -26,34 +26,34 @@
             </select>
         </div>
         <div class="line input_line">
-            <label for="document_key">Key</label>
+            <label for="document_key">密钥</label>
             <input type="text" id="document_key" name="document_key" value="Khirz6zTPdfd7">
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="document_reference_data" name="document_reference_data" hidden="hidden" checked>
                 <span></span>
-                <label for="document_reference_data">Reference data</label>
+                <label for="document_reference_data">参考数据</label>
             </label>
         </div>
         <div class="config_object_holder" id="holder_document_reference_data">
             <div class="config_nested_group">
                 <div class="line input_line">
-                    <label for="document_file_key">File key</label>
+                    <label for="document_file_key">文件密钥</label>
                     <input type="text" id="document_file_key" name="document_file_key" value="BCFA2CED">
                 </div>
                 <div class="line input_line">
-                     <label for="document_instance_id">Instance Id</label>
+                     <label for="document_instance_id">实例 ID</label>
                     <input type="text" id="document_instance_id" name="document_instance_id" value="https://example.com">
                 </div>
             </div>
         </div>
         <div class="line input_line">
-            <label for="document_title">Title</label>
+            <label for="document_title">标题</label>
             <input type="text" id="document_title" name="document_title" value="Example Title">
         </div>
         <div class="line input_line" style="margin-bottom: 0;">
-            <label for="document_url">URL</label>
+            <label for="document_url">网址</label>
             <input type="text" id="document_url" name="document_url" value="https://example.com/url-to-example-document.xlsx">
         </div>
 
@@ -70,8 +70,8 @@
                 <div class="tooltip">
                     <div class="copyConfig">
                         <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
-                        <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">When you copy, you get the HTML code for the whole example.</span>
-                        <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML copied.</span>
+                        <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">复制时，您将获得整个示例的 HTML 代码。</span>
+                        <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML 已复制。</span>
                     </div>
                 </div>
             </div>
@@ -158,7 +158,7 @@
                         <br />
                         <b>类型</b>: string,
                         <br />
-                        <b>示例</b>:  "Khirz6zTPdfd7".
+                        <b>示例</b>: "Khirz6zTPdfd7".
                     </li>
                 </ul>
             <td>object</td>

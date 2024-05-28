@@ -30,45 +30,45 @@
 <div id="controlFields">
     <div id="info" class="control-panel">
         <div class="line input_line" style="margin-top: 0;">
-            <label for="editorConfig_actionLink">Action Link</label>
+            <label for="editorConfig_actionLink">行动链接</label>
             <input type="text" id="editorConfig_actionLink" name="editorConfig_actionLink" value="ACTION_DATA">
         </div>
         <div class="line input_line">
-            <label for="editorConfig_callbackUrl">Callback Url</label>
+            <label for="editorConfig_callbackUrl">回调网址</label>
             <input type="text" id="editorConfig_callbackUrl" name="editorConfig_callbackUrl" value="https://example.com/url-to-callback.ashx">
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_coEditing" name="editorConfig_coEditing" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_coEditing">coEditing</label>
+                <label for="editorConfig_coEditing">共同编辑</label>
             </label>
         </div>
         <div id="holder_editorConfig_coEditing" class="config_object_holder" hidden>
             <div class="config_nested_group">
                 <div class="line input_line">
-                    <label for="editorConfig_coEditing_mode">Mode</label>
+                    <label for="editorConfig_coEditing_mode">模式</label>
                     <select class="select" id="editorConfig_coEditing_mode" name="editorConfig_coEditing_mode">
-                        <option disabled>fast</option>
-                        <option value="fast">fast</option>
-                        <option value="strict">strict </option>
+                        <option disabled>快速</option>
+                        <option value="fast">快速</option>
+                        <option value="strict">严格 </option>
                     </select>
                 </div>
                 <div class="line">
                     <label class="dataItemSpan">
                         <input type="checkbox" id="editorConfig_coEditing_change" name="editorConfig_coEditing_change" hidden="hidden" checked>
                         <span></span>
-                        <label for="editorConfig_coEditing_change">Change</label>
+                        <label for="editorConfig_coEditing_change">更改</label>
                     </label>
                 </div>
             </div>
         </div>
         <div class="line input_line">
-            <label for="editorConfig_createUrl">Create Url</label>
+            <label for="editorConfig_createUrl">创建网址</label>
             <input type="text" id="editorConfig_createUrl" name="editorConfig_createUrl" value="https://example.com/url-to-create-document/">
         </div>
         <div class="line input_line">
-            <label for="editorConfig_lang">Lang</label>
+            <label for="editorConfig_lang">语言</label>
             <select class="select" id="editorConfig_lang" name="editorConfig_lang">
                 <option value="en">en</option>
                 <option value="az">az</option>
@@ -113,36 +113,36 @@
             </select>
         </div>
         <div class="line input_line">
-            <label for="editorConfig_location">Location</label>
+            <label for="editorConfig_location">位置</label>
             <input type="text" id="editorConfig_location" name="editorConfig_location" value="">
         </div>
         <div class="line input_line">
-            <label for="editorConfig_mode">Mode</label>
+            <label for="editorConfig_mode">模式</label>
             <select class="select" id="editorConfig_mode" name="editorConfig_mode">
-                <option disabled>edit</option>
-                <option value="edit">edit</option>
-                <option value="view">view </option>
+                <option disabled>编辑</option>
+                <option value="edit">编辑</option>
+                <option value="view">查看 </option>
             </select>
         </div>
         <div class="line">
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_recent" name="editorConfig_recent" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_recent">Recent</label>
+                <label for="editorConfig_recent">最近</label>
             </label>
         </div>
         <div id="holder_editorConfig_recent" class="config_object_holder" hidden>
             <div id="holder_editorConfig_recent_0" class="editorConfig_recentItem config_nested_group">
                 <div class="line input_line">
-                    <label for="editorConfig_recent_folder_0">Folder</label>
+                    <label for="editorConfig_recent_folder_0">文件夹</label>
                     <input type="text" id="editorConfig_recent_folder_0" name="editorConfig_recent_folder_0" value="Example Folder">
                 </div>
                 <div class="line input_line">
-                    <label for="editorConfig_recent_title_0">Title</label>
+                    <label for="editorConfig_recent_title_0">标题</label>
                     <input type="text" id="editorConfig_recent_title_0" name="editorConfig_recent_title_0" value="exampledocument1.docx">
                 </div>
                <div class="line input_line">
-                    <label for="editorConfig_recent_url_0">Url</label>
+                    <label for="editorConfig_recent_url_0">网址</label>
                     <input type="text" id="editorConfig_recent_url_0" name="editorConfig_recent_url_0" value="https://example.com/exampledocument1.docx">
                 </div>
             </div> 
@@ -154,21 +154,21 @@
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_templates" name="editorConfig_templates" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_templates">Templates</label>
+                <label for="editorConfig_templates">模板</label>
             </label>
         </div>
         <div id="holder_editorConfig_templates" class="config_object_holder"hidden>
             <div id="holder_editorConfig_templates_0" class="editorConfig_templatesItem config_nested_group">
                 <div class="line input_line">
-                    <label for="editorConfig_templates_image_0">Image</label>
+                    <label for="editorConfig_templates_image_0">图像</label>
                     <input type="text" id="editorConfig_templates_image_0" name="editorConfig_templates_image_0" value="https://example.com/exampletemplate1.png">
                 </div>
                 <div class="line input_line">
-                    <label for="editorConfig_templates_title_0">Title</label>
+                    <label for="editorConfig_templates_title_0">标题</label>
                     <input type="text" id="editorConfig_templates_title_0" name="editorConfig_templates_title_0" value="exampledocument1.docx">
                 </div>
                <div class="line input_line">
-                    <label for="editorConfig_templates_url_0">Url</label>
+                    <label for="editorConfig_templates_url_0">网址</label>
                     <input type="text" id="editorConfig_templates_url_0" name="editorConfig_templates_url_0" value="https://example.com/url-to-create-template1">
                 </div>
             </div> 
@@ -180,13 +180,13 @@
             <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_user" name="editorConfig_user" hidden="hidden">
                 <span></span>
-                <label for="editorConfig_user">User</label>
+                <label for="editorConfig_user">用户</label>
             </label>
         </div>
         <div class="config_nested_group" style="margin-bottom: 0;">
             <div id="holder_editorConfig_user" class="config_object_holder" hidden>
                 <div class="line input_line">
-                    <label for="editorConfig_user_group">Group</label>
+                    <label for="editorConfig_user_group">组</label>
                     <input type="text" id="editorConfig_user_group" name="editorConfig_user_group" value="Group1">
                 </div>
                 <div class="line input_line">
@@ -194,11 +194,11 @@
                     <input type="text" id="editorConfig_user_id" name="editorConfig_user_id" value="78e1e841">
                 </div>
                 <div class="line input_line">
-                    <label for="editorConfig_user_image">Image</label>
+                    <label for="editorConfig_user_image">图像</label>
                     <input type="text" id="editorConfig_user_image" name="editorConfig_user_image" value="https://api.onlyoffice.com/zh/content/img/docbuilder/examples/blue_cloud.png">
                 </div>
                 <div class="line input_line">
-                    <label for="editorConfig_user_name">Name</label>
+                    <label for="editorConfig_user_name">姓名</label>
                     <input type="text" id="editorConfig_user_name" name="editorConfig_user_name" value="John Smith">
                 </div>
             </div>
@@ -215,8 +215,8 @@
                 <div class="tooltip">
                     <div class="copyConfig">
                         <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
-                        <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">When you copy, you get the HTML code for the whole example.</span>
-                        <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML copied.</span>
+                        <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">复制时，您将获得整个示例的 HTML 代码。</span>
+                        <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML 已复制。</span>
                     </div>
                 </div>
             </div>
@@ -479,7 +479,7 @@
                         <b>例如</b>："78e1e841"；
                     </li>
                     <li>
-                        <b>image</b> - the path to the user's avatar,
+                        <b>image</b> - 用户头像的地址,
                         <br />
                         <b>类型</b>: string,
                         <br />
@@ -514,16 +514,16 @@
         </tr>
         <tr class="tablerow-note">
             <td colspan="4">
-                <div class="note">Please note that the request to the user's avatar is sent without authorization because the avatar URL is inserted into the HTML of the editor frame.
-                Moreover, the CORS problem may occur. In this case, use the avatar in the base64 format. For example, <em>"data:image/png,base64,*****"</em>.</div>
+                <div class="note">请注意，因为头像 URL 被插入到编辑器框架的 HTML 中，对用户头像的请求是未经授权发送的。
+                 此外，还可能出现CORS问题。 在这种情况下，请使用base64格式的头像。 例如，<em>"data:image/png,base64,*****"</em>。</div>
             </td>
         </tr>
         <tr class="tablerow-note">
             <td colspan="4">
-                <div class="note">Please note that if you are subscribed to the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> event
-                and send an avatar using the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method, the <em>user.image</em> field in the initialization config
-                is not required. We especially don't recommend to specify this parameter if the avatar is sent in the base64 format and the initialization config is signed with JWT.
-                In this case, the token will be too long.</div>
+                <div class="note">请注意，如果您订阅了 <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> 事件并使用 <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> 方法，
+                初始化配置中的 <em>user.image</em> 字段不是必需的。
+                如果头像以base64格式发送且初始化配置使用JWT签名，我们特别不建议指定此参数。
+                在这种情况下，令牌就会太长。</div>
             </td>
         </tr>
     </tbody>

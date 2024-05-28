@@ -42,7 +42,7 @@
         <li>
             <p>
                 为<em>div</em> 元素添加 <b>文档编辑器</b> 初始化脚本以及要打开的文档的配置。
-                Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links. Otherwise, an error will occur.
+                使用本地链接时，请务必添加<a href="<%= Url.Action("security") %>">令牌</a>。 否则会出现错误。
             </p>
             <p>每个编辑器都有自己的初始化脚本：</p>
             <pre>

@@ -56,7 +56,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <li>
             <p>
                 为了选择一个文档进行比较，必须调用 <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> 方法。
-                When calling this method, the token must be added to validate the parameters.
+                调用该方法时，必须添加token来验证参数。
             </p>
             <pre>
 docEditor.setRevisedFile({

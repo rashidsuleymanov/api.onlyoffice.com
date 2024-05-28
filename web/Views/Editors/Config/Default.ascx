@@ -12,29 +12,29 @@
     <div id="controlFields">
         <div id="info" class="control-panel">
             <div class="line input_line" style="margin-top: 0px">
-                <label for="config_documentType">Document Type</label>
+                <label for="config_documentType">文件类型</label>
                 <select class="select" id="config_documentType" name="config_documentType">
-                    <option disabled>word</option>
-                    <option value="word" selected>word</option>
-                    <option value="cell">cell</option>
-                    <option value="slide">slide</option>
+                    <option disabled>word文档</option>
+                    <option value="word" selected>word文档</option>
+                    <option value="cell">cell表格</option>
+                    <option value="slide">幻灯片</option>
                     <option value="pdf">pdf</option>
                 </select>
             </div>
             <div class="line input_line">
                 <label for="config_type">Type</label>
                 <select class="select" id="config_type" name="config_type">
-                    <option disabled>desktop</option>
-                    <option value="desktop" selected>desktop</option>
-                    <option value="mobile">mobile </option>
+                    <option disabled>电脑</option>
+                    <option value="desktop" selected>电脑</option>
+                    <option value="mobile">手机 </option>
                 </select>
             </div>
             <div class="line input_line">
-                <label for="config_height">Height</label>
+                <label for="config_height">高度</label>
                 <input type="text" id="config_height" name="config_height" value="550px">
             </div>
             <div class="line input_line" style="margin-bottom: 0;">
-                <label for="config_width">Width</label>
+                <label for="config_width">宽度</label>
                 <input type="text" id="config_width" name="config_width" value="100%">
             </div>
         </div>
@@ -49,8 +49,8 @@
                     <div class="tooltip">
                         <div class="copyConfig">
                             <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
-                            <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">When you copy, you get the HTML code for the whole example.</span>
-                            <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML copied.</span>
+                            <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">复制时，您将获得整个示例的 HTML 代码。</span>
+                            <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML 已复制。</span>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
         </tr>
         <tr class="tablerow">
             <td id="height" class="copy-link">height</td>
-            <td>定义浏览器窗口中的文档高度（默认为<b>100%</b> ）。</td>
+            <td>定义浏览器窗口中的文档高度（默认为<b>100%</b>）。</td>
             <td>string</td>
             <td>"100%"</td>
         </tr>

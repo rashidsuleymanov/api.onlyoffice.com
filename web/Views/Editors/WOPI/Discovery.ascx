@@ -116,7 +116,7 @@ ui=en-us&thm=1&"/&gt;
             </tr>
             <tr>
                 <td id="rs" class="copy-link">rs</td>
-                <td>指示 WOPI 服务器包含 <a href="https://datatracker.ietf.org/doc/html/rfc1766.html" target="_blank">[RFC1766]</a> 
+                <td>指示 WOPI 服务器包含 <a href="https://datatracker.ietf.org/doc/html/rfc1766.html" target="_blank">[RFC1766]</a>
                     中所述格式的首选数据语言，用于语言可能影响数据计算的情况（在电子表格编辑器中）。</td>
                 <td>en-us</td>
             </tr>
@@ -145,8 +145,8 @@ ui=en-us&thm=1&"/&gt;
             </tr>
             <tr>
                 <td id="favIconUrl" class="copy-link">favIconUrl</td>
-                <td>Indicates that the WOPI server includes a URL to an appropriate favicon for all online office applications.
-                Hosts should use this URL as the favicon for their host page, so that the appropriate application icon appears when the online office is used.</td>
+                <td>表示WOPI服务器包括所有在线office应用程序的适当收藏夹的URL。
+主机应该使用此URL作为其主机页面的收藏夹图标，以便在使用在线office时显示相应的应用程序图标。</td>
                 <td>"/web-apps/apps/documenteditor/main/resources/img/favicon.ico"</td>
             </tr>
         </tbody>

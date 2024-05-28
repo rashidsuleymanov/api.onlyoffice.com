@@ -16,41 +16,41 @@
                 <label class="dataItemSpan" style="margin-top: 0px;">
                     <input type="checkbox" id="documentConfig_permissions_chat" name="documentConfig_permissions_chat" hidden="hidden" checked>
                     <span></span>
-                    <label for="documentConfig_permissions_chat">Chat</label>
+                    <label for="documentConfig_permissions_chat">聊天</label>
                 </label>
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="documentConfig_permissions_comment" name="documentConfig_permissions_comment" hidden="hidden" checked>
                     <span></span>
-                    <label for="documentConfig_permissions_comment">Comment</label>
+                    <label for="documentConfig_permissions_comment">评论</label>
                 </label>
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="documentConfig_permissions_copy" name="documentConfig_permissions_copy" hidden="hidden" checked>
                     <span></span>
-                    <label for="documentConfig_permissions_copy">Copy</label>
+                    <label for="documentConfig_permissions_copy">复制</label>
                 </label>
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="documentConfig_permissions_commentGroups" name="documentConfig_permissions_commentGroups" hidden="hidden" checked>
                     <span></span>
-                    <label for="documentConfig_permissions_commentGroups">Comment Groups</label>
+                    <label for="documentConfig_permissions_commentGroups">评论组</label>
                 </label>
             </div>
             <div id="holder_documentConfig_permissions_commentGroups" class="config_object_holder">
                 <div class="line input_line">
-                    <label for="documentConfig_permissions_commentGroups_edit">Edit</label>
+                    <label for="documentConfig_permissions_commentGroups_edit">编辑</label>
                     <input type="text" id="documentConfig_permissions_commentGroups_edit" name="documentConfig_permissions_commentGroups_edit" value='["Group2", ""]'>
                 </div>
                 <div class="line input_line">
-                    <label for="documentConfig_permissions_commentGroups_remove">Remove</label>
+                    <label for="documentConfig_permissions_commentGroups_remove">删除</label>
                     <input type="text" id="documentConfig_permissions_commentGroups_remove" name="documentConfig_permissions_commentGroups_remove" value='[""]'>
                 </div>
                 <div class="line input_line">
-                    <label for="documentConfig_permissions_commentGroups_view">View</label>
+                    <label for="documentConfig_permissions_commentGroups_view">查看</label>
                     <input type="text" id="documentConfig_permissions_commentGroups_view" name="documentConfig_permissions_commentGroups_view" value='""'>
                 </div>
             </div>
@@ -58,71 +58,71 @@
                 <label class="dataItemSpan">
                     <input type="checkbox" id="documentConfig_permissions_deleteCommentAuthorOnly" name="documentConfig_permissions_deleteCommentAuthorOnly" hidden="hidden">
                     <span></span>
-                    <label for="documentConfig_permissions_deleteCommentAuthorOnly">Delete Comment Author Only</label>
+                    <label for="documentConfig_permissions_deleteCommentAuthorOnly">仅删除评论作者</label>
                 </label>
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="documentConfig_permissions_download" name="documentConfig_permissions_download" hidden="hidden" checked>
                     <span></span>
-                    <label for="documentConfig_permissions_download">Download</label>
+                    <label for="documentConfig_permissions_download">下载</label>
                 </label>
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="documentConfig_permissions_edit" name="documentConfig_permissions_edit" hidden="hidden" checked>
                     <span></span>
-                    <label for="documentConfig_permissions_edit">Edit</label>
+                    <label for="documentConfig_permissions_edit">编辑</label>
                 </label>
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="documentConfig_permissions_editCommentAuthorOnly" name="documentConfig_permissions_editCommentAuthorOnly" hidden="hidden">
                     <span></span>
-                    <label for="documentConfig_permissions_editCommentAuthorOnly">Edit Comment Author Only</label>
+                    <label for="documentConfig_permissions_editCommentAuthorOnly">仅编辑评论作者</label>
                 </label>
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="documentConfig_permissions_fillForms" name="documentConfig_permissions_fillForms" hidden="hidden" checked>
                     <span></span>
-                    <label for="documentConfig_permissions_fillForms">Fill Forms</label>
+                    <label for="documentConfig_permissions_fillForms">填写表单</label>
                 </label>
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="documentConfig_permissions_modifyContentControl" name="documentConfig_permissions_modifyContentControl" hidden="hidden" checked>
                     <span></span>
-                    <label for="documentConfig_permissions_modifyContentControl">Modify Content Control</label>
+                    <label for="documentConfig_permissions_modifyContentControl">修改内容控件</label>
                 </label>
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="documentConfig_permissions_print" name="documentConfig_permissions_print" hidden="hidden" checked>
                     <span></span>
-                    <label for="documentConfig_permissions_print">Print</label>
+                    <label for="documentConfig_permissions_print">打印</label>
                 </label>
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="documentConfig_permissions_protect" name="documentConfig_permissions_protect" hidden="hidden" checked>
                     <span></span>
-                    <label for="documentConfig_permissions_protect">Protect</label>
+                    <label for="documentConfig_permissions_protect">保护</label>
                 </label>
             </div>
             <div class="line">
                 <label class="dataItemSpan">
                     <input type="checkbox" id="documentConfig_permissions_review" name="documentConfig_permissions_review" hidden="hidden">
                     <span></span>
-                    <label for="documentConfig_permissions_review">Review</label>
+                    <label for="documentConfig_permissions_review">审阅</label>
                 </label>
             </div>
             <div class="line input_line">
-                <label for="documentConfig_permissions_reviewGroups">Review Groups</label>
+                <label for="documentConfig_permissions_reviewGroups">审阅组</label>
                 <input type="text" id="documentConfig_permissions_reviewGroups" name="documentConfig_permissions_reviewGroups" value='["Group1", "Group2", ""]'>
             </div>
             <div class="line input_line" style="margin-bottom: 0px;">
-                <label for="documentConfig_permissions_userInfoGroups">User Info Groups</label>
+                <label for="documentConfig_permissions_userInfoGroups">用户信息组</label>
                 <input type="text" id="documentConfig_permissions_userInfoGroups" name="documentConfig_permissions_userInfoGroups" value='["Group1", ""]'>
             </div>
         </div>
@@ -137,8 +137,8 @@
                     <div class="tooltip">
                         <div class="copyConfig">
                             <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
-                            <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">When you copy, you get the HTML code for the whole example.</span>
-                            <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML copied.</span>
+                            <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">复制时，您将获得整个示例的 HTML 代码。</span>
+                            <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML 已复制。</span>
                         </div>
                     </div>
                 </div>

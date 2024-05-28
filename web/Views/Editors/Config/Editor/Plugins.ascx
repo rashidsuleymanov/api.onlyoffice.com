@@ -51,8 +51,8 @@
                 <div class="tooltip">
                     <div class="copyConfig">
                         <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
-                        <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">When you copy, you get the HTML code for the whole example.</span>
-                        <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML copied.</span>
+                        <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">复制时，您将获得整个示例的 HTML 代码。</span>
+                        <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML 已复制。</span>
                     </div>
                 </div>
             </div>

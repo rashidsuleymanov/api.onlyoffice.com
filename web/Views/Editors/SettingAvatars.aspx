@@ -6,27 +6,27 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Setting avatars
+    设置头像
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Setting avatars</span>
+        <span class="hdr">设置头像</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of setting the avatars for the users in ONLYOFFICE Docs.</p>
+    <p class="dscr">参考图和以下步骤说明了在 ONLYOFFICE Docs 中为用户设置头像的过程。</p>
     <img alt="Avatars" src="<%= Url.Content("~/content/img/editor/avatars.png") %>" />
     <ol>
-        <li>The user sends a request to get a list of users and set their avatars in the <b>document editor</b>.</li>
-        <li>The <b>document editor</b> informs the <b>document manager</b> about the request.</li>
-        <li>The <b>document manager</b> sends the list of users to the <b>document editor</b> where their avatars will be displayed.</li>
-        <li>The user opens the comments or a list of the co-editors in the <b>document editor</b> where the users' avatars are displayed near their names.</li>
-    </ol>
+        <li>用户发送请求以获取用户列表并在<b>文档编辑器</b>中设置他们的头像。</li>
+         <li><b>文档编辑器</b>将请求通知<b>文档管理器</b>。</li>
+         <li><b>文档管理器</b>将用户列表发送到<b>文档编辑器</b>，其中将显示他们的头像。</li>
+         <li>用户在<b>文档编辑器</b>中打开评论或共同编辑者列表，其中用户的头像显示在其姓名附近。</li>
+     </ol>
 
-    <h2 id="apply" class="copy-link">How this can be done in practice</h2>
+    <h2 id="apply" class="copy-link">在实践中如何做到这一点</h2>
     <ol>
-        <li>Create an empty <em>html</em> file to <a href="<%= Url.Action("open") %>#apply">Open the document</a>.</li>
+        <li>创建一个空的 <em>html</em> 文件来<a href="<%= Url.Action("open") %>#apply">打开文档</a>。</li>
         <li>
-            <p>To set the current user avatar, use the <a href="<%= Url.Action("config/editor") %>#user">editorConfig.user.image</a> field of the initialization config:</p>
+            <p>要设置当前用户头像，请使用初始化配置的 <a href="<%= Url.Action("config/editor") %>#user">editorConfig.user.image</a> 字段：</p>
             <pre>
 new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
@@ -42,9 +42,9 @@ new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>
             <p>
-                In the configuration script for Document Editor initialization, specify the event handler for setting the users' avatars.
-                When the user opens the comments or a list of the co-editors, the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> event is called
-                with the <em>data.id</em> parameter. The <em>data.c</em> parameter with the <em>info</em> operation type is also passed in this event.
+                在文档编辑器初始化的配置脚本中，指定用于设置用户头像的事件处理程序。
+                当用户打开评论或共同编辑者列表时，将调用 <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> 事件 <em>data.id</em> 参数。
+                操作类型为 <em>info</em> 的 <em>data.c</em> 参数也会在此事件中传递。
             </p>
             <div class="img-block-2">
                 <div>
@@ -72,7 +72,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>
             <p>
-                In order to set the users' avatars, the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method must be called:
+                为了设置用户的头像，必须调用 <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> 方法：
             </p>
             <pre>
 docEditor.setUsers({
@@ -95,8 +95,8 @@ docEditor.setUsers({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
+                其中 <b>example.com</b> 是安装<b>文档管理器</b>和<b>文档存储服务</b>的服务器的名称。
+                请参阅<a href="<%= Url.Action("howitworks") %>">工作原理</a>部分，了解有关 ONLYOFFICE Docs 服务客户端-服务器交互的更多信息。
             </p>
         </li>
     </ol>

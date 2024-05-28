@@ -19,27 +19,27 @@
 <div id="controlFields">
     <div id="embedded" class="control-panel">
         <div class="line input_line" style="margin-top: 0px;">
-            <label for="editorConfig_embedded_embedUrl">Embed Url</label>
+            <label for="editorConfig_embedded_embedUrl">嵌入网址</label>
             <input type="text" id="editorConfig_embedded_embedUrl" name="editorConfig_embedded_embedUrl" value="https://example.com/embedded?doc=exampledocument1.docx">
         </div>
         <div class="line input_line">
-            <label for="editorConfig_embedded_fullscreenUrl">Fullscreen Url</label>
+            <label for="editorConfig_embedded_fullscreenUrl">全屏网址</label>
             <input type="text" id="editorConfig_embedded_fullscreenUrl" name="editorConfig_embedded_fullscreenUrl" value="https://example.com/embedded?doc=exampledocument1.docx#fullscreen">
         </div>
         <div class="line input_line">
-            <label for="editorConfig_embedded_saveUrl">Save Url</label>
+            <label for="editorConfig_embedded_saveUrl">保存网址</label>
             <input type="text" id="editorConfig_embedded_saveUrl" name="editorConfig_embedded_saveUrl" value="https://example.com/download?doc=exampledocument1.docx">
         </div>
         <div class="line input_line">
-            <label for="editorConfig_embedded_shareUrl">Share Url</label>
+            <label for="editorConfig_embedded_shareUrl">分享网址</label>
             <input type="text" id="editorConfig_embedded_shareUrl" name="editorConfig_embedded_shareUrl" value="https://example.com/view?doc=exampledocument1.docx">
         </div>
         <div class="line input_line">
-            <label for="editorConfig_embedded_toolbarDocked">Toolbar Docked</label>
+            <label for="editorConfig_embedded_toolbarDocked">工具栏停靠</label>
             <select class="select" id="editorConfig_embedded_toolbarDocked" name="editorConfig_embedded_toolbarDocked">
-                <option value="top" disabled>top</option>
-                <option value="top" selected>top</option>
-                <option value="bottom">bottom</option>
+                <option value="top" disabled>顶部</option>
+                <option value="top" selected>顶部</option>
+                <option value="bottom">底部</option>
             </select>
         </div>
     </div>
@@ -54,8 +54,8 @@
                 <div class="tooltip">
                     <div class="copyConfig">
                         <img alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
-                        <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">When you copy, you get the HTML code for the whole example.</span>
-                        <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML copied.</span>
+                        <span id="tooltiptext-hover" style="display: inline;" class="tooltiptext">复制时，您将获得整个示例的 HTML 代码。</span>
+                        <span id="tooltiptext-click" style="display: none;" class="tooltiptext">HTML 已复制。</span>
                     </div>
                 </div>
             </div>

@@ -44,7 +44,7 @@
             <b>documentserver</b> 是安装了 ONLYOFFICE 文档服务器的服务器的名称。
         </li>
         <li>添加脚本，使用要打开的文档的配置为 <em>div</em> 元素初始化 <b>文档编辑器</b>。
-            Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links. Otherwise, an error will occur.
+            使用本地链接时，请务必添加<a href="<%= Url.Action("security") %>">令牌</a>。 否则会出现错误。
             <pre>
 new DocsAPI.DocEditor("placeholder", {
     "document": {

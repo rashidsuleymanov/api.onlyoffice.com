@@ -36,7 +36,7 @@
         <li>创建一个 <a href="<%= Url.Action("callback") %>">回调处理程序</a> 以保存来自 <b>文档编辑服务</b>的文档。</li>
         <li>创建一个 <em>html</em> 文件来 <a href="<%= Url.Action("open") %>#apply">打开文档</a>。</li>
         <li>在文档编辑器初始化的配置脚本中，使用 <a href="<%= Url.Action("config/editor") %>#callbackUrl">参数行</a>中的 <em>回调处理程序</em> 指定文件的 URL。
-            Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links. Otherwise, an error will occur.
+            使用本地链接时，请务必添加<a href="<%= Url.Action("security") %>">令牌</a>。 否则会出现错误。
             <pre>
 new DocsAPI.DocEditor("placeholder", {
     "document": {

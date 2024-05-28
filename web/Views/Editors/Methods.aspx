@@ -446,7 +446,7 @@ docEditor.requestClose();
                 <b id="setActionLink" class="copy-link">setActionLink</b> - 设置包含书签的文档的链接。
                 此方法必须在 <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> 事件之后调用。
                 软件集成商必须处理从 <b>文档编辑服务</b> 接收到的 <em>ACTION_DATA</em> 以设置链接。
-                该链接由软件集成商创建，他们在 <b>文档管理器</b>中使用 ONLYOFFICE 文档服务器
+                该链接由软件集成商创建，他们在 <b>文档管理器</b>中使用 ONLYOFFICE 文档服务器。
             </p>
             <pre>
 docEditor.setActionLink(link);
@@ -1270,19 +1270,19 @@ docEditor.setUsers({
                     </tr>
                     <tr class="tablerow">
                         <td>users.email</td>
-                        <td>定义用户的电子邮件地址。 This field is required when the <em>c</em> parameter is <em>mention</em>.</td>
+                        <td>定义用户的电子邮件地址。 当<em>c</em>参数为<em>mention</em>时，此字段是必需的。</td>
                         <td>string</td>
                         <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.id</td>
-                        <td>定义用户的身份。 This field is required when the <em>c</em> parameter is <em>protect</em>.</td>
+                        <td>定义用户的身份。当<em>c</em>参数为<em>protect</em>时，此字段是必需的。</td>
                         <td>string</td>
                         <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.image</td>
-                        <td>定义用户头像的路径。 This field is required when the <em>c</em> parameter is <em>info</em>.</td>
+                        <td>定义用户头像的路径。 当<em>c</em>参数为<em>info</em>时，此字段是必需的。</td>
                         <td>string</td>
                         <td>可选的</td>
                     </tr>
@@ -1295,12 +1295,12 @@ docEditor.setUsers({
                 </tbody>
             </table>
             <div class="mobile-content"></div>
-            <div class="note">Please note that the request to the user's avatar is sent without authorization because the avatar URL is inserted into the HTML of the editor frame.
-                Moreover, the CORS problem may occur. In this case, use the avatar in the base64 format. For example, <em>"data:image/png,base64,*****"</em>.</div>
-            <div class="note">Please note that if you are subscribed to the <em>onRequestUsers</em> event and send an avatar using the <em>setUsers</em> method,
-                the <a href="<%= Url.Action("config/editor") %>#user">user.image</a> field in the initialization config is not required.
-            We especially don't recommend to specify this parameter if the avatar is sent in the base64 format and the initialization config is signed with JWT.
-            In this case, the token will be too long.</div>
+            <div class="note">请注意，对用户头像的请求是未经授权发送的，因为头像 URL 被插入到编辑器框架的 HTML 中。
+                此外，还可能出现CORS问题。 在这种情况下，请使用base64格式的头像。 例如，<em>"data:image/png,base64,*****"</em>。</div>
+            <div class="note">请注意，如果您订阅了 onRequestUsers 事件并使用 setUsers 方法发送头像，
+                则 <a href="<%= Url.Action("config/ editor") %>#user">user.image</a> 初始化配置中的字段不是必需的。
+            如果头像以base64格式发送并且初始化配置使用JWT签名，我们特别不建议指定此参数。
+            在这种情况下，令牌就会太长。</div>
         </li>
 
         <li>
