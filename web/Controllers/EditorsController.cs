@@ -277,9 +277,24 @@ namespace ASC.Api.Web.Help.Controllers
             LogManager.GetLogger("ASC.Api").Debug("Editor Config create: " + jsonConfig);
 
             Config config = JsonConvert.DeserializeObject<Config>(jsonConfig);
+
+            if (config.Document == null) config.Document = new Config.DocumentConfig();
+
+            if (config.DocumentType.IsEmpty())
+            {
+                config.DocumentType = "word";
+                config.Document.FileType = "docx";
+            }
+            config.Document.FileType = !config.Document.FileType.IsEmpty()
+                ? config.Document.FileType
+                : "docx";
             config.Document.Key = "apiwh" + Guid.NewGuid();
-            config.Document.Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo." + "docx";
+            config.Document.Title = !config.Document.Title.IsEmpty()
+                ? config.Document.Title
+                : "Example Title." + config.Document.FileType;
+            config.Document.Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo." + config.Document.FileType;
             config.EditorConfig.CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme);
+
             return Json(Helpers.Config.Serialize(config));
         }
 

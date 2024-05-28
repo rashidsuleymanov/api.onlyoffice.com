@@ -1,5 +1,10 @@
 # Change Log
 
+- update favicon
+
+## 5.0.1
+- redirect from old urls
+
 ## 5.0.0
 - selection of three products: docspace, docs, workspace
 - redesign main page
