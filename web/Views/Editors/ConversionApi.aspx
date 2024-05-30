@@ -17,10 +17,10 @@
     <p class="dscr">
         For the interaction with the <b>document conversion service</b> the POST requests are used.
         The request parameters are entered in JSON format in the request body.
-        The requests are sent to the <span class="fakelink">https://documentserver/ConvertService.ashx</span> address where <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+        The requests are sent to the <span class="fakelink">https://documentserver/ConvertService.ashx</span> address where <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.
     </p>
 
-    <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
+    <div class="note">In <b>ONLYOFFICE Docs</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
 
     <h2 id="request" class="copy-link">Request parameters and their description</h2>
     <ul class="columns-4" style="list-style: none;">
@@ -423,7 +423,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="token" class="copy-link">token</td>
-                <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#conversion">token</a>.</td>
+                <td>Defines the encrypted signature added to the <b>ONLYOFFICE Docs</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#conversion">token</a>.</td>
                 <td>string</td>
                 <td>required by configuration</td>
             </tr>
@@ -589,1152 +589,1158 @@
     <span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - in the tables below you can see possibility of conversion your documents into the most known file formats, where the <b>Input format</b> column corresponds to the values of the <b>filetype</b> parameter and the  <b>Output format</b> columns correspond to the values of the <b>outputtype</b> parameter.</em></span>
 
     <h2 id="text-matrix" class="copy-link">Text document file formats</h2>
-    <table class="table-conversion-matrix-text">
-        <tbody>
-            <tr class="scroll-arrow" style="margin-top:247px;"></tr>
-            <tr>
-                <th rowspan="2">Input format</th>
-                <th colspan="18">Output format</th>
-            </tr>
-            <tr>
-                <td>bmp</td>
-                <td>docm</td>
-                <td>docx</td>
-                <td>docxf</td>
-                <td>dotm</td>
-                <td>dotx</td>
-                <td>epub</td>
-                <td>fb2</td>
-                <td>gif</td>
-                <td>html</td>
-                <td>jpg</td>
-                <td>odt</td>
-                <td>ott</td>
-                <td>pdf</td>
-                <td>pdfa</td>
-                <td>png</td>
-                <td>rtf</td>
-                <td>txt</td>
-            </tr>
-            <tr>
-                <td>djvu</td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-            </tr>
-            <tr>
-                <td>doc</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>docm</td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>docx</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>docxf</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>dot</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>dotm</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>dotx</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>epub</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>fb2</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>fodt</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>htm</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>html</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>mht</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>mhtml</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>odt</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>ott</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>oxps</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>pdf</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>rtf</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>stw</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>sxw</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>txt</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-            </tr>
-            <tr>
-                <td>wps</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>wpt</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>xml</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>xps</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="table-box">
+        <table class="table-conversion-matrix-text">
+            <tbody>
+                <tr class="scroll-arrow" style="margin-top:247px;"></tr>
+                <tr>
+                    <th rowspan="2">Input format</th>
+                    <th colspan="18">Output format</th>
+                </tr>
+                <tr>
+                    <td>bmp</td>
+                    <td>docm</td>
+                    <td>docx</td>
+                    <td>docxf</td>
+                    <td>dotm</td>
+                    <td>dotx</td>
+                    <td>epub</td>
+                    <td>fb2</td>
+                    <td>gif</td>
+                    <td>html</td>
+                    <td>jpg</td>
+                    <td>odt</td>
+                    <td>ott</td>
+                    <td>pdf</td>
+                    <td>pdfa</td>
+                    <td>png</td>
+                    <td>rtf</td>
+                    <td>txt</td>
+                </tr>
+                <tr>
+                    <td>djvu</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="no"></span></td>
+                </tr>
+                <tr>
+                    <td>doc</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>docm</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>docx</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>docxf</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>dot</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>dotm</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>dotx</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>epub</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>fb2</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>fodt</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>htm</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>html</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>mht</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>mhtml</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>odt</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>ott</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>oxps</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>pdf</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>rtf</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>stw</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>sxw</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>txt</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                </tr>
+                <tr>
+                    <td>wps</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>wpt</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>xml</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>xps</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <div class="mobile-content"></div>
 
     <h2 id="spreadsheet-matrix" class="copy-link">Spreadsheet file formats</h2>
-    <table class="table-conversion-matrix-spreadsheet">
-        <tbody>
-            <tr class="scroll-arrow" style="margin-top:150px;"></tr>
-            <tr>
-                <th rowspan="2">Input format</th>
-                <th colspan="13">Output format</th>
-            </tr>
-            <tr>
-                <td>bmp</td>
-                <td>csv</td>
-                <td>gif</td>
-                <td>jpg</td>
-                <td>ods</td>
-                <td>ots</td>
-                <td>pdf</td>
-                <td>pdfa</td>
-                <td>png</td>
-                <td>xlsm</td>
-                <td>xlsx</td>
-                <td>xltm</td>
-                <td>xltx</td>
-            </tr>
-            <tr>
-                <td>csv</td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>et</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>ett</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>fods</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>ods</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>ots</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>sxc</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>xls</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>xlsb</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>xlsm</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>xlsx</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>xlt</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>xltm</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>xltx</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-            </tr>
-            <tr>
-                <td>xml</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="table-box">
+        <table class="table-conversion-matrix-spreadsheet">
+            <tbody>
+                <tr class="scroll-arrow" style="margin-top:150px;"></tr>
+                <tr>
+                    <th rowspan="2">Input format</th>
+                    <th colspan="13">Output format</th>
+                </tr>
+                <tr>
+                    <td>bmp</td>
+                    <td>csv</td>
+                    <td>gif</td>
+                    <td>jpg</td>
+                    <td>ods</td>
+                    <td>ots</td>
+                    <td>pdf</td>
+                    <td>pdfa</td>
+                    <td>png</td>
+                    <td>xlsm</td>
+                    <td>xlsx</td>
+                    <td>xltm</td>
+                    <td>xltx</td>
+                </tr>
+                <tr>
+                    <td>csv</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>et</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>ett</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>fods</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>ods</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>ots</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>sxc</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>xls</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>xlsb</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>xlsm</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>xlsx</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>xlt</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>xltm</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>xltx</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                </tr>
+                <tr>
+                    <td>xml</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <div class="mobile-content"></div>
 
     <h2 id="presentation-matrix" class="copy-link">Presentation file formats</h2>
-    <table class="table-conversion-matrix-presentation">
-        <tr class="scroll-arrow" style="margin-top:183px;"></tr>
-        <tbody>
-            <tr>
-                <th rowspan="2">Input format</th>
-                <th colspan="14">Output format</th>
-            </tr>
-            <tr>
-                <td>bmp</td>
-                <td>gif</td>
-                <td>jpg</td>
-                <td>odp</td>
-                <td>otp</td>
-                <td>pdf</td>
-                <td>pdfa</td>
-                <td>png</td>
-                <td>potm</td>
-                <td>potx</td>
-                <td>ppsm</td>
-                <td>ppsx</td>
-                <td>pptm</td>
-                <td>pptx</td>
-            </tr>
-            <tr>
-                <td>dps</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>dpt</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>fodp</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>odp</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>otp</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>pot</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>potm</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>potx</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>pps</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>ppsm</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>ppsx</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>ppt</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>pptm</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-            <tr>
-                <td>pptx</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-            </tr>
-            <tr>
-                <td>sxi</td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="table-box">
+        <table class="table-conversion-matrix-presentation">
+            <tr class="scroll-arrow" style="margin-top:183px;"></tr>
+            <tbody>
+                <tr>
+                    <th rowspan="2">Input format</th>
+                    <th colspan="14">Output format</th>
+                </tr>
+                <tr>
+                    <td>bmp</td>
+                    <td>gif</td>
+                    <td>jpg</td>
+                    <td>odp</td>
+                    <td>otp</td>
+                    <td>pdf</td>
+                    <td>pdfa</td>
+                    <td>png</td>
+                    <td>potm</td>
+                    <td>potx</td>
+                    <td>ppsm</td>
+                    <td>ppsx</td>
+                    <td>pptm</td>
+                    <td>pptx</td>
+                </tr>
+                <tr>
+                    <td>dps</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>dpt</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>fodp</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>odp</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>otp</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>pot</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>potm</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>potx</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>pps</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>ppsm</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>ppsx</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>ppt</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>pptm</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+                <tr>
+                    <td>pptx</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="no"></span></td>
+                </tr>
+                <tr>
+                    <td>sxi</td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                    <td><span class="yes"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <div class="mobile-content"></div>
 
     <div id="sample-conversion" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format</div>
@@ -1750,7 +1756,7 @@
 </pre>
     <p>
         Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 
     <div id="sample-password-conversion" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the password-protected file from <em>docx</em> format to <em>pdf</em> format</div>
@@ -1767,7 +1773,7 @@
 </pre>
     <p>
         Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 
     <div id="sample-watermark" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format with a watermark inserted</div>
@@ -1817,7 +1823,7 @@
 </pre>
     <p>
         Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 
     <div id="sample-thumbnail" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to generate <em>png</em> thumbnail of file in <em>docx</em> format</div>
@@ -1838,7 +1844,7 @@
 </pre>
     <p>
         Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 
     <div id="sample-spreadsheet-to-pdf" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the <em>spreadsheet</em> file to <em>pdf</em> format</div>
@@ -1873,7 +1879,7 @@
 </pre>
     <p>
         Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 
     <div id="sample-conversion-token" class="header-gray copy-link">Sample of JSON object contains the JSON Web Token sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format</div>
@@ -1884,7 +1890,7 @@
 </pre>
     <p>
         Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 
     <h2 id="response" class="copy-link">Response parameters and their description</h2>

@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System SIA 2023
+ * (c) Copyright Ascensio System SIA 2024
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -46,13 +46,16 @@ namespace ASC.Api.Web.Help.Controllers
                 "builderframeworksamples/csharpbuildersamples",
                 "builderframeworksamples/cppbuildersamples",
                 "buildersamples",
+                "buildersamples/addwatermark",
                 "buildersamples/commenterrors",
                 "buildersamples/createadvancedform",
                 "buildersamples/createbasicform",
+                "buildersamples/createspreadsheetchart",
                 "buildersamples/createchartpresentation",
                 "buildersamples/createpresentation",
                 "buildersamples/createreports",
                 "buildersamples/createformaldocument",
+                "buildersamples/createtabledocument",
                 "buildersamples/fillform",
                 "buildersamples/fillspreadsheet",
                 "buildersamples/mailmergereceptions",

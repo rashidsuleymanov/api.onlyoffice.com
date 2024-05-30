@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System SIA 2023
+ * (c) Copyright Ascensio System SIA 2024
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -126,6 +126,10 @@ namespace ASC.Api.Web.Help
             bundles.Add(new Bundle("~/content/main-page", new CssMinify())
                             .Include(
                                 "~/content/main-page.css"));
+
+            bundles.Add(new Bundle("~/content/category-page", new CssMinify())
+                            .Include(
+                                "~/content/category-page.css"));
 
             bundles.Add(new Bundle("~/content/plugins-and-macros", new CssMinify())
                 .Include(

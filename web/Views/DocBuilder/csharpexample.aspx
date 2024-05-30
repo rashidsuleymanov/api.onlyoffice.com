@@ -16,7 +16,10 @@
     <h2 id="introduction">Introduction</h2>
             <p class="dscr">To integrate <b>ONLYOFFICE Document Builder</b> into your own application on <b>.Net (C#) or .Net (C# MVC)</b> you need to download and install <b>ONLYOFFICE Document Builder</b> to your computer and use the <a href="<%= Url.Action("integratingdocumentbuilder") %>">.Net (C#) or .Net (C# MVC) example</a> for the integration. This guide will show you the sequence of actions to integrate <b>ONLYOFFICE Document Builder</b> successfully.</p>
             <h2 id="CSharp1"><span class="style_step">Step 1. </span>Download and install ONLYOFFICE Document Builder</h2>
-            <p>First, download <a target="_blank" href="https://www.onlyoffice.com/document-builder.aspx"><b>ONLYOFFICE Document Builder</b></a> and install it to your computer.</p>
+            <p>First, download <b>ONLYOFFICE Document Builder</b> and install it to your computer:</p>
+            <div class="list-buttons">
+                <a class="button" href="https://www.onlyoffice.com/download-builder.aspx?from=api" target="_blank">Get ONLYOFFICE Document Builder</a>
+            </div>
             <h2 id="CSharp2"><span class="style_step">Step 2. </span>Install the prerequisites</h2>
             <p>To run your website with the <b>ONLYOFFICE Document Builder</b> successfully, check if your system meets the necessary system requirements. It has got to have the following components installed:</p>
             <div class="builder_description">
@@ -54,12 +57,12 @@
                     <p>In the <b>Add Website</b> dialog box specify the name of the folder with the .Net (C#) / .Net (C# MVC) project in the <b>Site name</b> box.</p>
                     <p>Specify the path to the folder with your project in the <b>Physical path</b> box.</p>
                     <p>Specify the unique value used only for this website in the <b>Port</b> box:</p>
-                    <img class="screenshot" alt="How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)" src="<%= Url.Content("~/content/img/docbuilder/csharp/sitename.png") %>">
+                    <img class="screenshot max-width-416" alt="How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)" src="<%= Url.Content("~/content/img/docbuilder/csharp/sitename.png") %>">
                 </li>
                 <li>
                     <h4>Check for the .NET platform version specified in IIS manager for you website</h4>
                     <p>Choose the <b>v4.0.</b> version for <b>.NET CLR Version</b> clicking the <b>Application Pool</b> then right-clicking the platform name select the <b>Set application pool defaults</b> and finally set the necessary <b>.NET CLR version</b>:</p>
-                    <img class="screenshot" alt="How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)" src="<%= Url.Content("~/content/img/docbuilder/csharp/platform.png") %>">
+                    <img class="screenshot max-width-416" alt="How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)" src="<%= Url.Content("~/content/img/docbuilder/csharp/platform.png") %>">
                 </li>
                 <li>
                     <h4>Browse your website with the IIS manager</h4>

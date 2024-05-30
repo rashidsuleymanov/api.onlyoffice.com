@@ -101,7 +101,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         "user": {
             "id": "78e1e841",
             "name": "John Smith",
-            "group": "Group1"
+            "group": "Group1,Group2"
         }
     },
     ...

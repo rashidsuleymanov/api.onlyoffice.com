@@ -87,7 +87,7 @@ return true;
 <p>When accessing the encrypted file, it is first is sent to the user's machine before the application begins the decryption.</p>
 
 <h3>Encrypted co-editing</h3>
-<p>The steps below explain the process of co-editing an encrypted document in ONLYOFFICE Document Server.</p>
+<p>The steps below explain the process of co-editing an encrypted document in ONLYOFFICE Docs.</p>
 <ol>
     <li>User 1 and user 2 open one and the same document in <b>document editor</b>.</li>
     <li>User 1 makes changes to the opened document.</li>
@@ -148,7 +148,7 @@ The distribution of data looks as follows:</p>
     <li>delete keys in the DMS database;</li>
     <li>delete the <em>cloud_crypto.xml</em> file from the <em>sdkjs-plugins</em> directory. The path to the folder depends on the operating system you use:</li>
     <ul style="list-style: none;">
-        <li>For Linux - <em>/opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/</em></li>
-        <li>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DesktopEditors\sdkjs-plugins\</em></li>
+        <li>For Linux - <em>home/&lt;username&gt;/.local/share/onlyoffice/desktopeditors/sdkjs-plugins/</em></li>
+        <li>For Windows - <em>C:\Users\&lt;username&gt;\AppData\Local\ONLYOFFICE\DesktopEditors\data\sdkjs-plugins\</em></li>
     </ul>
 </ul>

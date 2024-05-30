@@ -1,6 +1,6 @@
 ﻿/*
  *
- * (c) Copyright Ascensio System SIA 2023
+ * (c) Copyright Ascensio System SIA 2024
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -24,58 +24,15 @@
 */
 
 
-$(document).ready(function() {
-    var $items = $("#nav-all-menu-items").children()
-
-    var heading = "";
-
-    if ($items && $items.length > 0) {
-        var selectedItem = $items.filter((i) => {
-            return $($items[i]).hasClass("active")
-        })
-
-        if (selectedItem) {
-            var link = selectedItem.children()
-            heading = $(link).text()
-        }
-    }
-
-    if (heading) {
-        $("#variable-heading").text(heading)
+$(document).ready(function () {
+    if ($(".menu-header.active").length > 0) {
+        var $items = $("#nav-all-menu-items .pushy-submenu.active .pushy-submenu-item").text();
+        $(".menu-header").text($items);
     }
 })
 
 $(function () {
-    $("#header-button").on("click", function () {
-        if ($(".pushy").hasClass("pushy-submenu-open")) {
-            $(".arrow-header").addClass("rotate");
-        }
-        else {
-            $(".arrow-header").removeClass("rotate");
-        }
-    })
-});
-
-$(function () {
-    $("#menu-button").on("click", function () {
-        if ($(".layout-side").hasClass("open-menu")) {
-            $(".layout-side").removeClass("open-menu");
-            $(".site-overlay").addClass('hidden');
-            $("body").removeClass("hidden-body");
-        }
-        else {
-            $(".layout-side").addClass("open-menu");
-            $(".site-overlay").removeClass('hidden');
-            $(".pushy-left")
-                .addClass('pushy-submenu-closed')
-                .removeClass('pushy-submenu-open');
-            $("body").addClass("hidden-body");
-        }
-    })
-});
-
-$(function () {
-    $(".site-overlay, .close-menu").on("click", function () {
+    $(".site-overlay").on("click", function () {
         if ($(".site-overlay").hasClass("hidden")) {
             $("body").removeClass("hidden-body");
         }

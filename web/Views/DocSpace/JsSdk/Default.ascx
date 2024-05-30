@@ -4,6 +4,12 @@
     <span class="hdr">Basic concepts</span>
 </h1>
 
+<%var product = Products.GetSection("docspace", "jssdk"); %>
+
+<div class="pvl_wrapper">
+    <span class="pvl_product">ONLYOFFICE DocSpace <%= product.Title %></span><span class="pvl_version">v<%= product.Version %></span>
+</div>
+
 <p class="dscr">
     The ONLYOFFICE DocSpace SDK based on JavaScript allows developers to use all the DocSpace possibilities with <em>api.js</em>.
     You can integrate ONLYOFFICE DocSpace into your own web application, allowing users to create and submit documents directly from your website.
@@ -20,7 +26,7 @@ You only need a few lines of JavaScript to set up a fully functional integration
     &lt;head&gt;
         &lt;meta charset="UTF-8"&gt;
         &lt;title&gt;DocSpace JavaScript SDK&lt;/title&gt;
-        &lt;script src="{PORTAL_SRC}/static/scripts/api.js"&gt;&lt;/script&gt;
+        &lt;script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"&gt;&lt;/script&gt;
     &lt;/head&gt;
     &lt;body&gt;
         &lt;div id="ds-frame"&gt;&lt;/div&gt;
@@ -28,7 +34,7 @@ You only need a few lines of JavaScript to set up a fully functional integration
 &lt;/html&gt;
 </pre>
         <p>The API JavaScript file can normally be found in the following DocSpace folder:</p>
-        <p><b>{PORTAL_SRC}/static/scripts/api.js</b></p>
+        <p><b>{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js</b></p>
         <p>where <b>{PORTAL_SRC}</b> is the name of the server with the ONLYOFFICE DocSpace installed.</p>
 
 <h2>Step 2. Getting the base class</h2>

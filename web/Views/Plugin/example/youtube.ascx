@@ -50,6 +50,7 @@
     "nameLocale": {
         "fr": "YouTube",
         "es": "YouTube",
+        "pt-BR": "YouTube",
         "de": "YouTube"
     },
     "guid": "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}",
@@ -61,6 +62,7 @@
             "descriptionLocale": {
                 "fr": "Ins&#233;rez facilement des vid&#233;os YouTube dans vos documents.",
                 "es": "Inserte f&#225;cilmente v&#237;deos de YouTube en sus documentos.",
+                "pt-BR": "Incorpore facilmente v&#237;deos do YouTube em seus documentos.",
                 "de": "Betten Sie ganz einfach YouTube-Videos in Ihre Dokumente ein."
             },
             "url": "index.html",
