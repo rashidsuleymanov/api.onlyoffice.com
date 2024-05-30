@@ -13,6 +13,10 @@
 - editors: the editorConfig.customization.goback.requestClose field is deprecated, please use the editorConfig.customization.close field instead
 - editors: the editorConfig.customization.layout.toolbar.home.mailmerge field is deprecated, please use the editorConfig.customization.layout.toolbar.collaboration.mailmerge field instead
 - editors: change the default value of the editorConfig.customization.hideRightMenu parameter to true
+- update favicon
+
+## 5.0.1
+- redirect from old urls
 
 ## 5.0.0
 - selection of three products: docspace, docs, workspace
