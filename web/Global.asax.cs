@@ -127,6 +127,10 @@ namespace ASC.Api.Web.Help
                             .Include(
                                 "~/content/main-page.css"));
 
+            bundles.Add(new Bundle("~/content/category-page", new CssMinify())
+                            .Include(
+                                "~/content/category-page.css"));
+
             bundles.Add(new Bundle("~/content/plugins-and-macros", new CssMinify())
                 .Include(
                     "~/content/plugins-macros.css"));

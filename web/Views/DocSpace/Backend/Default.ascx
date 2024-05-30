@@ -4,6 +4,21 @@
     <span class="hdr">Basic concepts</span>
 </h1>
 
+<%var product = Products.GetSection("docspace", "backend"); %>
+
+<div class="pvl_wrapper">
+    <span class="pvl_product">ONLYOFFICE DocSpace <%= product.Title %></span><span class="pvl_version">v<%= product.Version %></span>
+</div>
+
+<p class="dscr">
+    <a href="https://www.onlyoffice.com/docspace.aspx" target="_blank">ONLYOFFICE DocSpace</a> is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, and forms in customizable rooms.
+    It provides the following features:
+</p>
+<ul>
+    <li>creating and customizing rooms for collaboration;</li>
+    <li>creating, editing and viewing text documents, spreadsheets, presentations, fillable forms, PDFs, ebooks, multimedia files;</li>
+    <li>inviting users to collaborate on files with them in real time.</li>
+</ul>
 <p>
     The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/DELETE.
         All the resources, like posts or comments, have their own URLs and are designed to be manipulated in isolation.
@@ -11,16 +26,9 @@
 <h2>Authentication</h2>
 <p>
     Authentication in the ONLYOFFICE DocSpace API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header.
-        For information and examples please visit the <a href="<%= Url.Action("backend/auth") %>">Authentication</a> section.
+        For information and examples please visit the <a href="<%= Url.Action("backend/howitworks/auth") %>">Authentication</a> section.
 </p>
-<h2 id="auth-restrictions" class="copy-link">Restrictions on authentication requests</h2>
-<p>Please pay attention to some restrictions on autentication requests:</p>
-<ul>
-    <li>You can perform up to 1500 authentication requests per minute.</li>
-    <li>You can perform up to 50 simultaneous GET authentication requests.</li>
-    <li>You can perform up to 15 simultaneous authentication requests of any type except GET.</li>
-    <li>Some methods have additional restrictions. For example, you can perform up to 5 authentication requests per minute to collect passwords.</li>
-</ul>
+
 <h2>Making requests
 </h2>
 <p>
@@ -39,15 +47,23 @@
         For instance, if a requested record could not be found, the HTTP response might look something like:
 </p>
 <pre>HTTP/1.1 404 Not Found</pre>
-<h2>Rate limiting
-</h2>
-<p>
-    You can perform up to 500 requests per 10-second period from the same IP address with one account.
-    If you exceed this limit, a 503 response for the subsequent requests will be received.
-    Check the <b>Retry-After</b> header to see how many seconds to wait before you try again.
-</p>
-<h2>Conventions used in this documentation
-</h2>
+<h2 id="rate-limiting" class="copy-link">Rate limiting</h2>
+<p>Please pay attention to some restrictions on autentication requests:</p>
+<ul>
+    <li>You can perform up to 1500 authentication requests per minute.</li>
+    <li>You can perform up to 50 simultaneous GET authentication requests.</li>
+    <li>You can perform up to 15 simultaneous authentication requests of any type except GET.</li>
+    <li>Some methods have additional restrictions. For example, you can perform up to 5 authentication requests per minute to collect passwords.</li>
+</ul>
+
+<p>If you exceed the limit, the <b>429 Too Many Requests</b> response for the subsequent requests will be received.
+This response may contain additional headers:</p>
+<ul>
+    <li><b>X-Ratelimit-Limit</b>. Request limit per timespan: 100/30m.</li>
+    <li><b>X-Ratelimit-Remaining</b>. The number of requests left for the time window.</li>
+    <li><b>X-Ratelimit-Reset</b>. The remaining window before the rate limit resets in seconds.</li>
+</ul>
+<h2>Conventions used in this documentation</h2>
 <p>
     The following notation is used in the documentation:<br />
     <b>{text}</b>: indicates the text that should be replaced with your own data (ID, search query, etc.)

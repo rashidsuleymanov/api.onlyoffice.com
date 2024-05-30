@@ -53,6 +53,7 @@
     "nameLocale": {
         "fr": "Compteur de mots",
         "es": "Recuento de palabras",
+        "pt-BR": "Word counter",
         "de": "Wortanzahl"
     },
     "guid" : "asc.{584EEEE8-DBF5-45C3-A4CA-F52177C82754}",
@@ -64,6 +65,7 @@
             "descriptionLocale": {
                 "fr": "Comptez les mots, les caract&#232;res (avec/sans espaces) et les paragraphes dans la partie s&#233;lectionn&#233;e de votre document.",
                 "es": "Cuente las palabras, los caracteres (con/sin espacios) y los p&#225;rrafos en la parte seleccionada de su documento.",
+                "pt-BR": "Conte palavras, caracteres (com/sem espa&#231;os) e par&#225;grafos na parte selecionada do seu documento.",
                 "de": "Z&#228;hlen Sie W&#246;rter, Zeichen (mit/ohne Leerzeichen) und Abs&#228;tze im ausgew&#228;hlten Teil Ihres Dokuments."
             },
             "url" : "index.html",

@@ -53,6 +53,7 @@
     "nameLocale": {
         "fr": "Th&#233;saurus",
         "es": "Tesauro",
+        "pt-BR": "Thesaurus",
         "de": "Thesaurus"
     },
     "guid": "asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9840}",
@@ -64,6 +65,7 @@
             "descriptionLocale": {
                 "fr": "Recherchez les synonymes et les antonymes d'un mot et remplacez-le par le mot s&#233;lectionn&#233;.",
                 "es": "Busque sin&#243;nimos y ant&#243;nimos de una palabra y sustit&#250;yala por la seleccionada.",
+                "pt-BR": "Pesquise sin&#244;nimos e ant&#244;nimos de uma palavra e substitua pela selecionada.",
                 "de": "Finden Sie Synonyme und Antonyme eines Wortes und ersetzen Sie es durch die ausgew&#228;hlte Variante."
             },
             "url": "index.html",

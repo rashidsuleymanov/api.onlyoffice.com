@@ -60,7 +60,7 @@
                             <a href="<%= Url.Action("addingdms/encryption/keygeneration") %>">Key generation</a>
                         </li>
                         <li>
-                            <a href="<%= Url.Action("addingdms/encryption/operations") %>">Operations with encrypted files</a>
+                            <a title="Operations with encrypted files" href="<%= Url.Action("addingdms/encryption/operations") %>">Operations with encrypted files</a>
                         </li>
                     </ul>
                 </li>

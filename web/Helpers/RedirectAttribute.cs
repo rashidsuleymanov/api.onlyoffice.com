@@ -37,6 +37,10 @@ namespace ASC.Api.Web.Help.Helpers
         {
             base.OnActionExecuting(filterContext);
 
+            if (filterContext.ActionDescriptor.ControllerDescriptor.ControllerName.Equals("category", StringComparison.InvariantCultureIgnoreCase)) {
+                return;
+            }
+
             var products = Products.EnabledProducts().Select(product => product.Id);
             if (!products.Contains(filterContext.ActionDescriptor.ControllerDescriptor.ControllerName, StringComparer.InvariantCultureIgnoreCase))
             {
