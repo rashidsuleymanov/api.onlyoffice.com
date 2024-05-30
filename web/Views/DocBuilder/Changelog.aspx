@@ -583,6 +583,12 @@
     </ul>
     <br />
 
+    <p><b>Integration API</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("integrationapi/python") %>">Python</a> framework for ONLYOFFICE Document Builder.</li>
+    </ul>
+    <br />
+
     <p><b>Other methods</b></p>
     <ul>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/addcustomfunction") %>">Api/AddCustomFunction</a> method to Spreadsheet API.</li>
@@ -876,8 +882,8 @@
 
     <p><b>Integration API</b></p>
     <ul>
-        <li>Updated the <a href="<%= Url.Action("integrationapi/c") %>">C++</a> wrapper for ONLYOFFICE Document Builder.</li>
-        <li>Added the <a href="<%= Url.Action("integrationapi/net") %>">.Net</a> wrapper for ONLYOFFICE Document Builder.</li>
+        <li>Updated the <a href="<%= Url.Action("integrationapi/c") %>">C++</a> framework for ONLYOFFICE Document Builder.</li>
+        <li>Added the <a href="<%= Url.Action("integrationapi/net") %>">.Net</a> framework for ONLYOFFICE Document Builder.</li>
     </ul>
     <br />
     

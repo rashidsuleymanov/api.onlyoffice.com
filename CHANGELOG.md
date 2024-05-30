@@ -1,6 +1,7 @@
 # Change Log
 
 ##
+- docbuidler: added the Python framework
 - docbuilder: v8.1.0
 - editors: added the Setting avatars page to How it works
 - editors: try ppsx
