@@ -35,4 +35,14 @@
         </div>
         <p class="block_more-sample"><a href="<%= Url.Action("jssdk/samples/createfileinselectedfolder")%>">More</a></p>
     </li>
+    <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
+        <a href="<%= Url.Action("jssdk/samples/customizationofeditors")%>">
+            <div class="example-sample-img create-formal-document"></div>
+        </a>
+        <div class="sample-info">
+            <p class="name-example-sample"><a href="<%= Url.Action("jssdk/samples/customizationofeditors")%>">Customization of editors</a></p>
+            <p>The customization allows to customize the editor interface so that it looked like your other products.</p>
+        </div>
+        <p class="block_more-sample"><a href="<%= Url.Action("jssdk/samples/customizationofeditors")%>">More</a></p>
+    </li>
 </ul>
