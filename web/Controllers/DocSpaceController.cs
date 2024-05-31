@@ -82,6 +82,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "JsSdk/Samples/SampleOpenFile",
                 "JsSdk/Samples/Authorization",
                 "JsSdk/Samples/CreateFileInSelectedFolder",
+                "JsSdk/Samples/CustomizationOfEditors",
                 "PluginsSdk",
                 "PluginsSdk/BuildingPlugin",
                 "PluginsSdk/Config",
