@@ -65,6 +65,9 @@
                     <li>
                         <a href="<%= Url.Action("jssdk/samples/createfileinselectedfolder") %>">Create file in selected folder</a>
                     </li>
+                    <li>
+                        <a href="<%= Url.Action("jssdk/samples/customizationofeditors") %>">Customization of editors</a>
+                    </li>
                 </ul>
             </li>
             
