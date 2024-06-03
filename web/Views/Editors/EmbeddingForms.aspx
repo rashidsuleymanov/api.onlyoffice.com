@@ -14,9 +14,12 @@
         <span class="hdr">Embedding forms into a web page</span>
     </h1>
     <p class="dscr">Starting from version 7.0, ONLYOFFICE Docs offers the possibility to create, edit and collaborate on online forms, fill them out, and save forms as PDF.</p>
-    <p>ONLYOFFICE forms are available in two main formats. DOCXF is intended for creating form templates from blank or any existing DOCX file.
-        The PDF format is used for filling out the ready forms.</p>
-    <note>Please note that starting from version 8.0, the OFORM format is deprecated. To fill out the ready forms, only the PDF format is used.</note>
+    <p>ONLYOFFICE forms are available in the PDF format which is intended for creating form templates from blank or any existing DOCX file
+        and used for filling out the ready forms.</p>
+    <note>
+        <p>Please note that starting from version 8.0, the OFORM format is deprecated. To fill out the ready forms, only the PDF format is used.</p>
+        <p>Starting from version 8.1, the DOCXF format is deprecated. To create and edit forms, only the PDF format is used.</p>
+    </note>
     <p>These instructions help you add an online form to your website, making it available for saving as PDF and filling in.</p>
     <note>Please note that these instructions will only work when JWT is disabled. Starting from version 7.2, JWT is enabled by default, so you need to disable it.
         More information about token can be found <a href="<%= Url.Action("signature/") %>">here</a>.</note>
@@ -27,8 +30,8 @@
             <li class="browser tab copy-link" id="filling">Filling forms</li>
         </ul>
         <div id="editing" class="content active">
-            <h2 id="docxf" class="copy-link">How to open DOCXF for editing from website</h2>
-            <p>To open an online form in the DOCXF format for editing from your website, follow the steps below:</p>
+            <h2 id="pdf-for-editing" class="copy-link">How to open PDF for editing from website</h2>
+            <p>To open an online form in the PDF format for editing from your website, follow the steps below:</p>
             <ol>
                 <li>Find and open the <em>index.html</em> file of your ONLYOFFICE Docs.</li>
                 <li>
@@ -60,13 +63,13 @@ if (this.docEditor) {
                 <li>
                     <p>Create the full URL address to the form template you need to open:</p>
                     <pre>
-const url = "https://example.com/url-to-example-document.docxf";
+const url = "https://example.com/url-to-example-document.pdf";
 </pre>
                 </li>
                 <li>
                     <p>Create the key to identify the file for co-editing:</p>
                     <pre>
-const key = filename + ".docxf";
+const key = filename + ".pdf";
 </pre>
                 </li>
                 <li>
@@ -75,12 +78,15 @@ const key = filename + ".docxf";
 this.docEditor = new DocsAPI.DocEditor("placeholder",
 {
     "document": {
-        "fileType": "docxf",
+        "fileType": "pdf",
         "key": key,
+        "permissions": {
+            "edit": true
+        },
         "title": "Form Template",
         "url": url
     },
-    "documentType": "word"
+    "documentType": "pdf"
 });
 </pre>
                 </li>
@@ -95,23 +101,26 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
         if (this.docEditor) {
             this.docEditor.destroyEditor()
         }
-        const url = "https://example.com/url-to-example-document.docxf";
-        const key = filename + ".docxf";
+        const url = "https://example.com/url-to-example-document.pdf";
+        const key = filename + ".pdf";
         this.docEditor = new DocsAPI.DocEditor("placeholder",
         {
             "document": {
-                "fileType": "docxf",
+                "fileType": "pdf",
                 "key": key,
+                "permissions": {
+                    "edit": true
+                },
                 "title": "Form Template",
                 "url": url
             },
-            "documentType": "word"
+            "documentType": "pdf"
         });
     }
 &lt;/script&gt;
 </pre>
-            <p>Once done, a form template can be opened for editing. After editing this file, you can get the form itself. To do so, click the <b>Save as pdf</b> button.</p>
-            <img class="screenshot max-width-832" alt="Embed docxf" src="<%= Url.Content("~/content/img/editor/embed-docxf.png") %>" />
+            <p>Once done, a form template can be opened for editing.</p>
+            <img class="screenshot max-width-832" alt="Embed pdf for editing" src="<%= Url.Content("~/content/img/editor/embed-pdf-for-editing.png") %>" />
         </div>
         <div id="filling" class="content">
             <h2 id="pdf" class="copy-link">How to open PDF for filling from website</h2>
@@ -151,7 +160,7 @@ const url = "https://example.com/url-to-example-document.pdf";
 </pre>
                 </li>
                 <li>
-                    <p>Create the key to identify the file</p>
+                    <p>Create the key to identify the file:</p>
                     <pre>
 const key = filename + ".pdf";
 </pre>
@@ -166,6 +175,10 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
 {
     "document": {
         "fileType": "pdf",
+        "permissions": {
+            "edit": false,
+            "fillForms": true
+        },
         "title": "Form",
         "url": url
     },
@@ -190,6 +203,10 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
         {
             "document": {
                 "fileType": "pdf",
+                "permissions": {
+                    "edit": false,
+                    "fillForms": true
+                },
                 "title": "Form",
                 "url": url
             },
@@ -198,8 +215,8 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
     }
 &lt;/script&gt;
 </pre>
-            <p>Once done, a form can be opened for filling. After filling in the fields (the required ones are highlighted with the red border), you can submit your data.
-                To do so, click the <b>Submit</b> button.</p>
+            <p>Once done, a form can be opened for filling. After filling in the all the required fields, you can submit your data.
+                To do so, click the <b>Complete & Submit</b> button.</p>
             <img class="screenshot max-width-832" alt="Embed pdf" src="<%= Url.Content("~/content/img/editor/embed-pdf.png") %>" />
         </div>
     </div>

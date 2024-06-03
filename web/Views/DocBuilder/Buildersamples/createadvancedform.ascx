@@ -47,5 +47,5 @@
     $("#builderScript").val("<%= Regex.Replace(defMethod.Script.Replace("\"", "\\\""), @"\r\n|\n", "\\n") %>");
 </script>
 <div id="generator">
-    <UserControl:Generator runat="server" docTitle="Purchase order" documentType="word" ext="docx" zoom="80" />
+    <UserControl:Generator runat="server" docTitle="Purchase order" documentType="pdf" ext="pdf" zoom="80" />
 </div>

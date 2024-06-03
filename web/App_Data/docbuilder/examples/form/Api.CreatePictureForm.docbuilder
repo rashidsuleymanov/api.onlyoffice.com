@@ -4,5 +4,5 @@ var oPictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": 
 var oParagraph = oDocument.GetElement(0);
 oParagraph.AddElement(oPictureForm);
 oPictureForm.SetImage("https://api.onlyoffice.com/content/img/docbuilder/examples/user-profile.png");
-builder.SaveFile("docxf", "CreatePictureForm.docxf");
+builder.SaveFile("pdf", "CreatePictureForm.pdf");
 builder.CloseFile();

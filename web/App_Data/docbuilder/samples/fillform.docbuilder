@@ -1,4 +1,4 @@
-builder.OpenFile("https://api.onlyoffice.com/app_data/docbuilder/sample-files/empty_form.docxf");
+builder.OpenFile("https://api.onlyoffice.com/app_data/docbuilder/sample-files/empty_form.pdf");
 var oDocument = Api.GetDocument();
 
 var data = {
@@ -22,5 +22,5 @@ aForms.forEach(form => {
 });
 
 Api.Save();
-builder.SaveFile("docxf", "Filled form.docxf");
+builder.SaveFile("pdf", "Filled form.pdf");
 builder.CloseFile();
