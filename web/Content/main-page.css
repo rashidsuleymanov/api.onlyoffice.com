@@ -199,7 +199,7 @@
 }
 
 .main-item.portals {
-    grid-template-columns: 352px auto;
+    grid-template-columns: 310px auto;
 }
 
 .main-item.docs .main-item-img {
