@@ -77,11 +77,13 @@
         var script = removeMethod["<%= ext %>"] +
             $("#builderScript").val().replaceAll("builder.OpenFile", "").replaceAll("builder.CreateFile", "").replaceAll("builder.SaveFile", "").replaceAll("builder.CloseFile()", "").replaceAll("\n", "");
 
-        connector.callCommand(
-            "function () {" +
-            script +
-            "}"
-        );
+        (new Function(
+            "connector.callCommand(" +
+                "function() {" +
+                    script +
+                "}" +
+            ");"
+        ))();
     };
 
     var onDocumentReady = function () {
