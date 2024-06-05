@@ -40,7 +40,7 @@
                     <br />
                     <div><a title="Open ODT file for editing" href="<%= Url.Action("editor") %>?method=odtEditor" class="button button-upper doc" target="blank">ODT</a><a title="View source code" class="button-popap-try" data-code="odtEditorCode"></a></div>
                     <br />
-                    <div><a title="Open PDF file for editing" href="<%= Url.Action("editor") %>?method=pdfEditor" class="button button-upper doc" target="blank">PDF</a><a title="View source code" class="button-popap-try" data-code="pdfEditorCode"></a></div>
+                    <div><a title="Open PDF form file for editing" href="<%= Url.Action("editor") %>?method=pdfEditor" class="button button-upper doc" target="blank">PDF</a><a title="View source code" class="button-popap-try" data-code="pdfEditorCode"></a></div>
                     <br />
                     <div><a title="Open TXT file for editing" href="<%= Url.Action("editor") %>?method=txtEditor" class="button button-upper doc" target="blank">TXT</a><a title="View source code" class="button-popap-try" data-code="txtEditorCode"></a></div>
                 </td>
@@ -576,7 +576,7 @@
             </div>
 
             <div id="pdfEditorCode">
-                <div class="popap-header">Open pdf for editing</div>
+                <div class="popap-header">Open pdf form for editing</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -598,7 +598,7 @@
                         "edit": true
                     },
                     "title": "Example Form Template Title.pdf",
-                    "url": "https://example.com/url-to-example-document.pdf"
+                    "url": "https://example.com/url-to-example-form.pdf"
                 },
                 "documentType": "pdf",
                 "editorConfig": {
@@ -1557,7 +1557,7 @@
                     "fileType": "pdf",
                     "key": "DEEC57D9",
                     "title": "Example Form Title.pdf",
-                    "url": "https://example.com/url-to-example-document.pdf",
+                    "url": "https://example.com/url-to-example-form.pdf",
                     "permissions": {
                         "edit": false,
                         "fillForms": true

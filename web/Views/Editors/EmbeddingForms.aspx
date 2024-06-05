@@ -30,7 +30,7 @@
             <li class="browser tab copy-link" id="filling">Filling forms</li>
         </ul>
         <div id="editing" class="content active">
-            <h2 id="pdf-for-editing" class="copy-link">How to open PDF for editing from website</h2>
+            <h2 id="pdf-for-editing" class="copy-link">How to open PDF form for editing from website</h2>
             <p>To open an online form in the PDF format for editing from your website, follow the steps below:</p>
             <ol>
                 <li>Find and open the <em>index.html</em> file of your ONLYOFFICE Docs.</li>
@@ -41,7 +41,7 @@
 </pre>
                 </li>
                 <li>
-                    <p>Add the <em>button</em> element to open a form template:</p>
+                    <p>Add the <em>button</em> element to open the PDF form:</p>
                     <pre>
 &lt;button onclick="open_form_template()"&gt;Open Form Template&lt;/button&gt;
 </pre>
@@ -61,9 +61,9 @@ if (this.docEditor) {
 </pre>
                 </li>
                 <li>
-                    <p>Create the full URL address to the form template you need to open:</p>
+                    <p>Create the full URL address to the PDF form you need to open:</p>
                     <pre>
-const url = "https://example.com/url-to-example-document.pdf";
+const url = "https://example.com/url-to-example-form.pdf";
 </pre>
                 </li>
                 <li>
@@ -101,7 +101,7 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
         if (this.docEditor) {
             this.docEditor.destroyEditor()
         }
-        const url = "https://example.com/url-to-example-document.pdf";
+        const url = "https://example.com/url-to-example-form.pdf";
         const key = filename + ".pdf";
         this.docEditor = new DocsAPI.DocEditor("placeholder",
         {
@@ -119,11 +119,11 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
     }
 &lt;/script&gt;
 </pre>
-            <p>Once done, a form template can be opened for editing.</p>
-            <img class="screenshot max-width-832" alt="Embed pdf for editing" src="<%= Url.Content("~/content/img/editor/embed-pdf-for-editing.png") %>" />
+            <p>Once done, the PDF form can be opened for editing.</p>
+            <img class="screenshot max-width-832" alt="Embed pdf form for editing" src="<%= Url.Content("~/content/img/editor/embed-pdf-for-editing.png") %>" />
         </div>
         <div id="filling" class="content">
-            <h2 id="pdf" class="copy-link">How to open PDF for filling from website</h2>
+            <h2 id="pdf" class="copy-link">How to open PDF form for filling from website</h2>
             <p>To make an online form in the PDF format available for filling in, follow the steps below:</p>
             <ol>
                 <li>Find and open the <em>index.html</em> file of your ONLYOFFICE Docs.</li>
@@ -134,7 +134,7 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
 </pre>
                 </li>
                 <li>
-                    <p>Add the <em>button</em> element to open the form:</p>
+                    <p>Add the <em>button</em> element to open the PDF form:</p>
                     <pre>
 &lt;button onclick="open_form()"&gt;Open Form&lt;/button&gt;
 </pre>
@@ -154,9 +154,9 @@ if (this.docEditor) {
 </pre>
                 </li>
                 <li>
-                    <p>Create the full URL address to the form template you need to open:</p>
+                    <p>Create the full URL address to the PDF form you need to open:</p>
                     <pre>
-const url = "https://example.com/url-to-example-document.pdf";
+const url = "https://example.com/url-to-example-form.pdf";
 </pre>
                 </li>
                 <li>
@@ -165,7 +165,7 @@ const url = "https://example.com/url-to-example-document.pdf";
 const key = filename + ".pdf";
 </pre>
                     <note>Please note that the <em>key</em> field is not passed to the configuration of the editors. This field will be automatically generated as a random number.
-                        This allows making all sessions of opening the form independent. So, collaboration on the PDF file is disabled.
+                        This allows making all sessions of opening the form independent. So, collaboration on the PDF form is disabled.
                         That's why anyone can open the form and fill it out without disturbing others.</note>
                 </li>
                 <li>
@@ -197,7 +197,7 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
         if (this.docEditor) {
             this.docEditor.destroyEditor()
         }
-        const url = "https://example.com/url-to-example-document.pdf";
+        const url = "https://example.com/url-to-example-form.pdf";
         const key = filename + ".pdf";
         this.docEditor = new DocsAPI.DocEditor("placeholder",
         {
@@ -215,9 +215,9 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
     }
 &lt;/script&gt;
 </pre>
-            <p>Once done, a form can be opened for filling. After filling in the all the required fields, you can submit your data.
+            <p>Once done, the PDF form can be opened for filling. After filling in all the required fields, you can submit your data.
                 To do so, click the <b>Complete & Submit</b> button.</p>
-            <img class="screenshot max-width-832" alt="Embed pdf" src="<%= Url.Content("~/content/img/editor/embed-pdf.png") %>" />
+            <img class="screenshot max-width-832" alt="Embed pdf form" src="<%= Url.Content("~/content/img/editor/embed-pdf.png") %>" />
         </div>
     </div>
 
