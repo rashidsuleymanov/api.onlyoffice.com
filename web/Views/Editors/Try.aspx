@@ -40,8 +40,6 @@
                     <br />
                     <div><a title="Open ODT file for editing" href="<%= Url.Action("editor") %>?method=odtEditor" class="button button-upper doc" target="blank">ODT</a><a title="View source code" class="button-popap-try" data-code="odtEditorCode"></a></div>
                     <br />
-                    <div><a title="Open PDF form file for editing" href="<%= Url.Action("editor") %>?method=pdfEditor" class="button button-upper doc" target="blank">PDF</a><a title="View source code" class="button-popap-try" data-code="pdfEditorCode"></a></div>
-                    <br />
                     <div><a title="Open TXT file for editing" href="<%= Url.Action("editor") %>?method=txtEditor" class="button button-upper doc" target="blank">TXT</a><a title="View source code" class="button-popap-try" data-code="txtEditorCode"></a></div>
                 </td>
                 <td>
@@ -88,6 +86,22 @@
                 </td>
             </tr>
             <tr>
+                <th>Editing forms</th>
+                <td>
+                    <div><a title="Open PDF form file for editing" href="<%= Url.Action("editor") %>?method=pdfEditor" class="button button-upper doc" target="blank">PDF</a><a title="View source code" class="button-popap-try" data-code="pdfEditorCode"></a></div>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Filling in forms</th>
+                <td>
+                    <div><a title="Open PDF file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="blank">PDF</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode"></a></div>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
                 <th>Local filter</th>
                 <td></td>
                 <td>
@@ -107,14 +121,6 @@
                 <th>Restricted review</th>
                 <td>
                     <div><a title="Open DOCX file for restricted review" href="<%= Url.Action("editor") %>?method=docxReviewGroups" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxReviewGroupsCode"></a></div>
-                </td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>Filling in forms</th>
-                <td>
-                    <div><a title="Open PDF file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="blank">PDF</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode"></a></div>
                 </td>
                 <td></td>
                 <td></td>
