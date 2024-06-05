@@ -38,13 +38,16 @@ namespace ASC.Api.Web.Help.Controllers
         private readonly string[] _actionMap = new[]
             {
                 "buildersamples",
+                "buildersamples/addwatermark",
                 "buildersamples/commenterrors",
                 "buildersamples/createadvancedform",
                 "buildersamples/createbasicform",
                 "buildersamples/createchartpresentation",
+                "buildersamples/createformaldocument",
                 "buildersamples/createpresentation",
                 "buildersamples/createreports",
-                "buildersamples/createformaldocument",
+                "buildersamples/createspreadsheetchart",
+                "buildersamples/createtabledocument",
                 "buildersamples/fillform",
                 "buildersamples/fillspreadsheet",
                 "buildersamples/mailmergereceptions",

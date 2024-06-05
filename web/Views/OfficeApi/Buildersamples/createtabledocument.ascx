@@ -4,7 +4,7 @@
 
 <%@ Register TagPrefix="UserControl"
     TagName="Generator"
-    Src="~/Views/DocBuilder/Buildersamples/samplegenerator.ascx" %>
+    Src="~/Views/OfficeApi/Buildersamples/samplegenerator.ascx" %>
 
 <h1>
     <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>
@@ -13,8 +13,8 @@
 <p class="dscr">Create a document with a styled table filled with array-based values:</p>
 <ul>
     <li>create an empty document with a table (<a href="<%= Url.Action("textdocumentapi/api") %>">Api</a>, <a href="<%= Url.Action("textdocumentapi/api/createtable") %>">ApiDocument/CreateTable</a>)</li>
-    <li>create a custom style for the table (<a href="<%= Url.Action("textdocumentapi/apistyle") %>">ApiDocument/GetStyle</a>,
-        <a href="<%= Url.Action("textdocumentapi/apitablecellpr") %>">ApiDocument/ApiTableCellPr</a>, <a href="<%= Url.Action("textdocumentapi/apitablerow") %>">ApiDocument/ApiTableRow</a>);</li>
+    <li>create a custom style for the table (<a href="<%= Url.Action("textdocumentapi/apidocument/getstyle") %>">ApiDocument/GetStyle</a>, <a href="<%= Url.Action("textdocumentapi/apistyle") %>">ApiStyle</a>,
+        <a href="<%= Url.Action("textdocumentapi/apitablecellpr") %>">ApiTableCellPr</a>, <a href="<%= Url.Action("textdocumentapi/apitablerow") %>">ApiTableRow</a>);</li>
     <li>populate the table with the array-based data cell by cell (<a href="<%= Url.Action("textdocumentapi/apitablecell") %>">ApiTableCell</a>).</li>
 </ul>
 <br />

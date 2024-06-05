@@ -4516,9 +4516,6 @@
     <Content Include="Views\DocBuilder\Builderframeworksamples\cppbuildersamples.ascx" />
     <Content Include="Views\DocBuilder\Builderframeworksamples\csharpbuildersamples.ascx" />
     <Content Include="Views\DocBuilder\Builderframeworksamples\default.ascx" />
-    <Content Include="Views\DocBuilder\Buildersamples\addwatermark.ascx" />
-    <Content Include="Views\DocBuilder\Buildersamples\createspreadsheetchart.ascx" />
-    <Content Include="Views\DocBuilder\Buildersamples\createtabledocument.ascx" />
     <Content Include="Views\DocBuilder\csharpexample.aspx" />
     <Content Include="Views\DocBuilder\Debugging.aspx" />
     <Content Include="Views\DocBuilder\DocBuilderShared\DocBuilderAction.ascx" />
@@ -4941,6 +4938,7 @@
     <Content Include="Views\Home\ProductBlock.ascx" />
     <Content Include="Views\OfficeApi\basic.aspx" />
     <Content Include="Views\OfficeApi\buildersamples.aspx" />
+    <Content Include="Views\OfficeApi\Buildersamples\addwatermark.ascx" />
     <Content Include="Views\OfficeApi\Buildersamples\commenterrors.ascx" />
     <Content Include="Views\OfficeApi\Buildersamples\createadvancedform.ascx" />
     <Content Include="Views\OfficeApi\Buildersamples\createbasicform.ascx" />
@@ -4948,6 +4946,8 @@
     <Content Include="Views\OfficeApi\Buildersamples\createformaldocument.ascx" />
     <Content Include="Views\OfficeApi\Buildersamples\createpresentation.ascx" />
     <Content Include="Views\OfficeApi\Buildersamples\createreports.ascx" />
+    <Content Include="Views\OfficeApi\Buildersamples\createspreadsheetchart.ascx" />
+    <Content Include="Views\OfficeApi\Buildersamples\createtabledocument.ascx" />
     <Content Include="Views\OfficeApi\Buildersamples\default.ascx" />
     <Content Include="Views\OfficeApi\Buildersamples\fillform.ascx" />
     <Content Include="Views\OfficeApi\Buildersamples\fillspreadsheet.ascx" />
