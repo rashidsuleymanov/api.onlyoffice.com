@@ -3,7 +3,6 @@
 <%@ Import Namespace="System.Web.Optimization" %>
 
 <asp:Content ID="IndexHead" ContentPlaceHolderID="HeadContent" runat="server">
-    <meta name="description" content="ONLYOFFICE API Documentation: read our detailed documentation for developers to learn the API fundamentals of ONLYOFFICE products and find out which API methods and events can be used in your applications. Open our How to ... tutorials which will help you understand how product features work and how to implement them step by step in your project. You can also download test samples and experiment with them following our instructions." />
     <%= Scripts.Render("~/bundles/main-page") %>
     <%= Styles.Render("~/content/main-page") %>
 </asp:Content>
