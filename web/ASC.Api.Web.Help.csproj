@@ -2141,8 +2141,8 @@
     <Content Include="App_Data\docbuilder\references\word\Globals.json" />
     <Content Include="App_Data\docbuilder\sample-files\data_with_errors.xlsx" />
     <Content Include="App_Data\docbuilder\sample-files\document_review_mode.docx" />
-    <Content Include="App_Data\docbuilder\sample-files\empty_form.docxf" />
-    <Content Include="App_Data\docbuilder\sample-files\filled_form.docxf" />
+    <Content Include="App_Data\docbuilder\sample-files\empty_form.pdf" />
+    <Content Include="App_Data\docbuilder\sample-files\filled_form.pdf" />
     <Content Include="App_Data\docbuilder\sample-files\mail_merge_data.xlsx" />
     <Content Include="App_Data\docbuilder\sample-files\mail_merge_result.docx" />
     <Content Include="App_Data\docbuilder\sample-files\mail_template.docx" />
@@ -2608,7 +2608,7 @@
     <Content Include="Content\img\Editor\editor-samples.png" />
     <Content Include="Content\img\Editor\editor.png" />
     <Content Include="Content\img\Editor\edit-pdf.png" />
-    <Content Include="Content\img\Editor\embed-docxf.png" />
+    <Content Include="Content\img\Editor\embed-pdf-for-editing.png" />
     <Content Include="Content\img\Editor\embed-pdf.png" />
     <Content Include="Content\img\Editor\embedded.png" />
     <Content Include="Content\img\Editor\exit-button.png" />
