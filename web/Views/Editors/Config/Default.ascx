@@ -85,10 +85,10 @@
             <td id="documentType" class="copy-link">documentType</td>
             <td>Defines the document type to be opened:
                 <ul>
-                    <li><b>word</b> - text document (<em>.doc, .docm, .docx, .docxf, .dot, .dotm, .dotx, .epub, .fb2, .fodt, .htm, .html, .mht, .mhtml, .odt, .oform, .ott, .rtf, .stw, .sxw, .txt, .wps, .wpt, .xml</em>),</li>
+                    <li><b>word</b> - text document (<em>.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fb2, .fodt, .htm, .html, .mht, .mhtml, .odt, .ott, .rtf, .stw, .sxw, .txt, .wps, .wpt, .xml</em>),</li>
                     <li><b>cell</b> - spreadsheet (<em>.csv, .et, .ett, .fods, .ods, .ots, .sxc, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml</em>),</li>
                     <li><b>slide</b> - presentation (<em>.dps, .dpt, .fodp, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .sxi</em>),</li>
-                    <li><b>pdf</b> - portable document format (<em>djvu, oxps, pdf, xps</em>).</li>
+                    <li><b>pdf</b> - portable document format (<em>.djvu, .docxf, .oform, .oxps, .pdf, .xps</em>).</li>
                 </ul>
             </td>
             <td>string</td>
