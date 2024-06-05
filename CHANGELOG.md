@@ -1,6 +1,7 @@
 # Change Log
 
 ##
+- editors: changed the documentType of the docxf and oform formats to pdf
 - editors: added the editorConfig.customization.layout.header.editMode parameter
 - editors: added the editorConfig.customization.features.roles parameter
 - editors: added the shardkey parameter to the URL query string when sending requests to the document command service, document conversion service, or document builder service
