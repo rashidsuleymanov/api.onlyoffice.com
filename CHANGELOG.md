@@ -1,6 +1,7 @@
 # Change Log
 
 ##
+- editors: added the pdf field to the conversion request
 - editors: added the editorConfig.customization.layout.header.editMode parameter
 - editors: added the editorConfig.customization.features.roles parameter
 - editors: added the shardkey parameter to the URL query string when sending requests to the document command service, document conversion service, or document builder service

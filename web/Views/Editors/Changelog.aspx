@@ -18,6 +18,7 @@
     <p class="dscr">The list of changes of ONLYOFFICE Docs API.</p>
     <h2 id="81" class="copy-link">Version 8.1</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("conversionapi") %>#pdf">pdf</a> field to the conversion request.</li>
         <li>Added the <em>roles</em> field to the <a href="<%= Url.Action("config/editor/customization") %>#features">editorConfig.customization.features</a> parameter.</li>
         <li>Added the <a href="<%= Url.Action("howitworks") %>#shardkey">shardkey</a> parameter to the URL query string when sending requests to the document command service,
             document conversion service, or document builder service.</li>
