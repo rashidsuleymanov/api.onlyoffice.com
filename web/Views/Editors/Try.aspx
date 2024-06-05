@@ -36,8 +36,6 @@
                 <td>
                     <div><a title="Open DOCX file for editing" href="<%= Url.Action("editor") %>?method=docxEditor" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxEditorCode"></a></div>
                     <br />
-                    <div><a title="Open DOCXF file for editing" href="<%= Url.Action("editor") %>?method=docxfEditor" class="button button-upper doc" target="blank">DOCXF</a><a title="View source code" class="button-popap-try" data-code="docxfEditorCode"></a></div>
-                    <br />
                     <div><a title="Open DOC file for editing" href="<%= Url.Action("editor") %>?method=docEditor" class="button button-upper doc" target="blank">DOC</a><a title="View source code" class="button-popap-try" data-code="docEditorCode"></a></div>
                     <br />
                     <div><a title="Open ODT file for editing" href="<%= Url.Action("editor") %>?method=odtEditor" class="button button-upper doc" target="blank">ODT</a><a title="View source code" class="button-popap-try" data-code="odtEditorCode"></a></div>
@@ -88,6 +86,22 @@
                 </td>
             </tr>
             <tr>
+                <th>Editing forms</th>
+                <td>
+                    <div><a title="Open PDF form file for editing" href="<%= Url.Action("editor") %>?method=pdfEditor" class="button button-upper doc" target="blank">PDF</a><a title="View source code" class="button-popap-try" data-code="pdfEditorCode"></a></div>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Filling in forms</th>
+                <td>
+                    <div><a title="Open PDF file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="blank">PDF</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode"></a></div>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
                 <th>Local filter</th>
                 <td></td>
                 <td>
@@ -107,14 +121,6 @@
                 <th>Restricted review</th>
                 <td>
                     <div><a title="Open DOCX file for restricted review" href="<%= Url.Action("editor") %>?method=docxReviewGroups" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxReviewGroupsCode"></a></div>
-                </td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>Filling in forms</th>
-                <td>
-                    <div><a title="Open PDF file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="blank">PDF</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode"></a></div>
                 </td>
                 <td></td>
                 <td></td>
@@ -236,42 +242,6 @@
                     "key": "E7FAFC9C22A8",
                     "title": "Example Document Title.docx",
                     "url": "https://example.com/url-to-example-document.docx"
-                },
-                "documentType": "word",
-                "editorConfig": {
-                    "callbackUrl": "https://example.com/url-to-callback.ashx"
-                },
-                "height": "100%",
-                "width": "100%"
-            });
-
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-            </div>
-
-            <div id="docxfEditorCode">
-                <div class="popap-header">Open docxf for editing</div>
-                <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html style="height: 100%;"&gt;
-&lt;head&gt;
-    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
-&lt;/head&gt;
-&lt;body style="height: 100%; margin: 0;"&gt;
-    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
-
-    &lt;script type="text/javascript"&gt;
-
-        window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "docxf",
-                    "key": "D05D6A33",
-                    "title": "Example Form Template Title.docxf",
-                    "url": "https://example.com/url-to-example-document.docxf"
                 },
                 "documentType": "word",
                 "editorConfig": {
@@ -598,6 +568,45 @@
                     "url": "https://example.com/url-to-example-presentation.odp"
                 },
                 "documentType": "slide",
+                "editorConfig": {
+                    "callbackUrl": "https://example.com/url-to-callback.ashx"
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="pdfEditorCode">
+                <div class="popap-header">Open pdf form for editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "pdf",
+                    "key": "D05D6A33",
+                    "permissions": {
+                        "edit": true
+                    },
+                    "title": "Example Form Template Title.pdf",
+                    "url": "https://example.com/url-to-example-form.pdf"
+                },
+                "documentType": "pdf",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx"
                 },
@@ -1554,7 +1563,7 @@
                     "fileType": "pdf",
                     "key": "DEEC57D9",
                     "title": "Example Form Title.pdf",
-                    "url": "https://example.com/url-to-example-document.pdf",
+                    "url": "https://example.com/url-to-example-form.pdf",
                     "permissions": {
                         "edit": false,
                         "fillForms": true
