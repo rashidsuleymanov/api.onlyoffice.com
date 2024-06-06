@@ -450,9 +450,14 @@
         "description": "<p>The item ID.</p>"
       },
       {
-        "type": "localeTranslate",
+        "type": "string",
         "name": "text",
         "description": "<p>The item text.</p>"
+      },
+      {
+        "type": "string",
+        "name": "data",
+        "description": "<p>The item data (this data will be sent to the click event callback).</p>"
       },
       {
         "type": "boolean",
@@ -460,9 +465,129 @@
         "description": "<p>Specifies if the current item is disabled or not.</p>"
       },
       {
+        "type": "string",
+        "name": "icons",
+        "description": "<p>The item icons (see the plugins {@link /plugin/config config} documentation).</p>"
+      },
+      {
         "type": "Array.<ContextMenuItem>",
         "name": "items",
         "description": "<p>An array containing the context menu items for the current item.</p>"
+      }
+    ]
+  },
+  "ToolbarMenuItemType": {
+    "name": "ToolbarMenuItemType",
+    "description": "<p>The possible values of the base which the relative vertical position of the toolbar menu item will be calculated from.</p>",
+    "type": [
+      "\"button\"",
+      "\"...\""
+    ]
+  },
+  "ToolbarMenuItem": {
+    "name": "ToolbarMenuItem",
+    "description": "<p>The toolbar menu item.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "string",
+        "name": "id",
+        "description": "<p>The item ID.</p>"
+      },
+      {
+        "type": "ToolbarMenuItemType",
+        "name": "type",
+        "description": "<p>The item type.</p>"
+      },
+      {
+        "type": "string",
+        "name": "text",
+        "description": "<p>The item text.</p>"
+      },
+      {
+        "type": "string",
+        "name": "hint",
+        "description": "<p>The item hint.</p>"
+      },
+      {
+        "type": "string",
+        "name": "icons",
+        "description": "<p>The item icons (see the plugins {@link /plugin/config config} documentation).</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "disabled",
+        "description": "<p>Specifies if the current item is disabled or not.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "enableToggle",
+        "description": "<p>Specifies if an item toggle is enabled or not.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "lockInViewMode",
+        "description": "<p>Specifies if the current item is locked in the view mode or not.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "separator",
+        "description": "<p>Specifies if a separator is used between the toolbar menu items or not.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "split",
+        "description": "<p>Specifies if the toolbar menu items are split or not.</p>"
+      },
+      {
+        "type": "Array.<ContextMenuItem>",
+        "name": "items",
+        "description": "<p>An array containing the context menu items for the current item.</p>"
+      }
+    ]
+  },
+  "ToolbarMenuTab": {
+    "name": "ToolbarMenuTab",
+    "description": "<p>The toolbar menu tab.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "string",
+        "name": "id",
+        "description": "<p>The tab ID.</p>"
+      },
+      {
+        "type": "string",
+        "name": "text",
+        "description": "<p>The tab text.</p>"
+      },
+      {
+        "type": "Array.<ToolbarMenuItem>",
+        "name": "items",
+        "description": "<p>An array containing the toolbar menu items for the current tab.</p>"
+      }
+    ]
+  },
+  "ToolbarMenuMainItem": {
+    "name": "ToolbarMenuMainItem",
+    "description": "<p>The main toolbar menu item.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "string",
+        "name": "guid",
+        "description": "<p>The plugin guid.</p>"
+      },
+      {
+        "type": "Array.<ToolbarMenuTab>",
+        "name": "tabs",
+        "description": "<p>An array containing the toolbar menu tabs for the current item.</p>"
       }
     ]
   }

@@ -77,6 +77,23 @@
           "optional": false
         }
       ]
+    },
+    "GetAllComments": {
+      "memberof": "Api",
+      "name": "GetAllComments",
+      "description": "<p>Returns all the comments from the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<comment>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "events": {},
