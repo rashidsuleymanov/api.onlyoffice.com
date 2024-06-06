@@ -2,6 +2,7 @@
 
 ##
 - office api section
+- docbuilder: added the form format type
 - docbuidler: added the Python framework
 - docbuilder: v8.1.0
 - update favicon
