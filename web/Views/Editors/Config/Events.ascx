@@ -40,6 +40,7 @@
     <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - the user is mentioned in a comment.</li>
     <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - the user is trying to manage document access rights by clicking <em>Change access rights</em> button.</li>
     <li><a href="#onRequestUsers">onRequestUsers</a> - the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</li>
+    <li><a href="#onSubmit">onSubmit</a> - the force saving request of the <em>3</em> <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> is successfully performed.</li>
     <li><a href="#onWarning">onWarning</a> - a warning occurs.</li>
 </ul>
 <div class="header-gray">Example</div>
@@ -145,6 +146,9 @@ Event messages will be available in your browser's DevTools console.
         "onRequestUsers": function (event) {
             console.log("Users requested");
         },
+        "onSubmit": function (event) {
+            console.log("The form was submitted");
+        },
         "onWarning": function (event) {
             console.log("ONLYOFFICE Document Editor reports a warning: code " + event.data.warningCode + ", description " + event.data.warningDescription);
         }
@@ -185,6 +189,7 @@ Event messages will be available in your browser's DevTools console.
         "onRequestSendNotify",
         "onRequestSharingSettings",
         "onRequestUsers",
+        "onSubmit",
         "onWarning"
     ];
 
@@ -1158,6 +1163,27 @@ var onRequestUsers = function (event) {
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onRequestUsers": onRequestUsers,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p>
+            <b id="onSubmit" class="copy-link">onSubmit</b> - the function called when the force saving request of the <em>3</em> <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> is successfully performed,
+            e.g. when the <b>Complete & Submit</b> button is clicked, the  form is submitted.
+        </p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onSubmit = function (event) {
+    console.log("The form was submitted.");
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onSubmit": onSubmit,
         ...
     },
     ...
