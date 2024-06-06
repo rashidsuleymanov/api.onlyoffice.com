@@ -2,6 +2,7 @@
 
 ##
 - editors: added the pdf field to the conversion request
+- editors: added the events.onSubmit event
 - editors: the docxf format is deprecated, please use the pdf format to create and edit forms
 - editors: changed the documentType of the docxf and oform formats to pdf
 - editors: added the editorConfig.customization.layout.header.editMode parameter

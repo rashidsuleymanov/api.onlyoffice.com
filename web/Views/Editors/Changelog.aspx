@@ -19,6 +19,7 @@
     <h2 id="81" class="copy-link">Version 8.1</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("conversionapi") %>#pdf">pdf</a> field to the conversion request.</li>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onSubmit">events.onSubmit</a> event.</li>
         <li>The <em>docxf</em> format is deprecated, please use the <em>pdf</em> format to create and edit forms.</li>
         <li>Changed the <a href="<%= Url.Action("config/") %>#documentType">documentType</a> of the <em>docxf</em> and <em>oform</em> formats to <em>pdf</em>.</li>
         <li>Added the <em>roles</em> field to the <a href="<%= Url.Action("config/editor/customization") %>#features">editorConfig.customization.features</a> parameter.</li>
