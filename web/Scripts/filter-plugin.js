@@ -1,6 +1,6 @@
 ﻿/*
  *
- * (c) Copyright Ascensio System SIA 2023
+ * (c) Copyright Ascensio System SIA 2024
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -92,6 +92,7 @@ $(function () {
 
     function closeFilter() {
         $(".filter-selector").removeClass("show");
+        $(".img-plugin").removeClass("rotate");
     }
 
     function toggleFilterButton() {

@@ -1,6 +1,7 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
+    <a class="up" href="<%= Url.Action("pluginssdk/plugintutorial/developing") %>"></a>
     <span class="hdr">Step 1. Create a plugin template</span>
 </h1>
 

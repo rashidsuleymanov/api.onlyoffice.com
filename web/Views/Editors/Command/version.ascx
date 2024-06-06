@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Requests the current version number of Document Server.</p>
+<p class="dscr">Requests the current version number of ONLYOFFICE Docs.</p>
 
 <div class="header-gray">Request example</div>
 <pre>
@@ -77,7 +77,7 @@
         </tr>
         <tr class="tablerow">
             <td>version</td>
-            <td>Defines the document version.</td>
+            <td>Defines the document server version.</td>
             <td>string</td>
             <td>required</td>
         </tr>

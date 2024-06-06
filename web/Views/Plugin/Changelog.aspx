@@ -38,6 +38,7 @@
 
     <h2 id="80" class="copy-link">Version 8.0</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("executemethod/text/searchnext") %>">SearchNext</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/slide/endslideshow") %>">EndSlideShow</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/slide/gotonextslideinslideshow") %>">GoToNextSlideInSlideShow</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/slide/gotopreviousslideinslideshow") %>">GoToPreviousSlideInSlideShow</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>

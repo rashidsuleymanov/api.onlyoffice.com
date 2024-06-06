@@ -1,6 +1,7 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
+    <a class="up" href="<%= Url.Action("backend/howitworks") %>"></a>
     <span class="hdr">Long-running operations</span>
 </h1>
 

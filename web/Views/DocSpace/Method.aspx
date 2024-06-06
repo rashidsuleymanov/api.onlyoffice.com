@@ -55,11 +55,17 @@
             </thead>
             <tbody>
             <% MsDocEntryPointMethodParams inDto = null; %>
+            <% MsDocEntryPointMethodParams inQueryDto = null; %>
             <% foreach (var param in method.Params.OrderByDescending(x => x.Method).Where(x => x.Visible))
                 {
                     if (param.Name == "inDto")
                     {
                         inDto = param;
+                        continue;
+                    }
+                    if (param.Name == "inQueryDto")
+                    {
+                        inQueryDto = param;
                         continue;
                     }
                     var paramModel = DocSpaceDocumentation.GetPluralizer().ToHumanName(param.Type); %>
@@ -96,6 +102,32 @@
                     <td>
                         <%= prop.Name %>
                         <div class="infotext">sent in body</div>
+                    </td>
+                    <td>
+                        <%= prop.Description %>
+                    </td>
+                    <td>
+                        <%= paramModel.Description %>
+                        <% if (DocSpaceDocumentation.GetPluralizer().IsCollection(prop.Type) || paramModel.IsCollection) { %>
+                        <div class="infotext">collection</div><% } %>
+                    </td>
+                    <td>
+                        <% if (!string.IsNullOrEmpty(paramModel.Example)) { %><%= paramModel.Example %><% } %>
+                        <% if (!string.IsNullOrEmpty(paramModel.Note)) { %>
+                        <div class="infotext"><%= paramModel.Note %></div><% } %>
+                    </td>
+                </tr>
+                <% }
+               } %>
+            <% if (inQueryDto != null && inQueryDto.Dto != null && inQueryDto.Dto.Any())
+               { 
+                    foreach(var prop in inQueryDto.Dto)
+                    { 
+                var paramModel = DocSpaceDocumentation.GetPluralizer().ToHumanName(prop.Type); %>
+                <tr class="tablerow">
+                    <td>
+                        <%= prop.Name %>
+                        <div class="infotext">sent in url</div>
                     </td>
                     <td>
                         <%= prop.Description %>

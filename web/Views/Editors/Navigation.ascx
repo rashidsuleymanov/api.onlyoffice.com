@@ -147,7 +147,7 @@
                     <a href="<%= Url.Action("inlineeditors") %>">Inline editors</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("conversion") %>">Converting and downloading file</a>
+                    <a title="Converting and downloading file" href="<%= Url.Action("conversion") %>">Converting and downloading file</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("security") %>">Security</a>
@@ -171,18 +171,21 @@
                     <a href="<%= Url.Action("insertingexternaldata") %>">Inserting external data</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("embeddingforms") %>">Embedding forms into a web page</a>
+                    <a title="Embedding forms into a web page" href="<%= Url.Action("embeddingforms") %>">Embedding forms into a web page</a>
                 </li>
                 <li>
                     <a href="<%= Url.Action("protectingranges") %>">Protecting ranges</a>
                 </li>
                 <li>
-                    <a href="<%= Url.Action("javasdk") %>">Integrating editors using Java SDK</a>
+                    <a title="Integrating editors using Java SDK" href="<%= Url.Action("javasdk") %>">Integrating editors using Java SDK</a>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("settingavatars") %>">Setting avatars</a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href="<%= Url.Action("interactingoutside/") %>">External access to the document editing</a>
+            <a title="External access to the document editing" href="<%= Url.Action("interactingoutside/") %>">External access to the document editing</a>
             <ul>
                 <li>
                     <a href="<%= Url.Action("interactingoutside/comments") %>">Working with comments</a>

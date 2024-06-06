@@ -15,7 +15,7 @@
 
 
 <div class="header-gray">Installation</div>
-<p>Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Document Server + Community Server).</p>
+<p>Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace).</p>
 <p>You can also download this plugin from the <a href="https://www.onlyoffice.com/en/app-directory/typograph" target="_blank">ONLYOFFICE App Directory</a> and install it following the
 <a href="<%= Url.Action("installation/desktop") %>">desktop</a> or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation instructions.</p>
 
@@ -72,6 +72,7 @@
     "nameLocale": {
         "fr": "Typograf",
         "es": "Typograf",
+        "pt-BR": "Typograf",
         "de": "Typograf"
     },
     "guid": "asc.{55159EC6-C91A-4DDB-8E1E-558454666461}",
@@ -83,6 +84,7 @@
             "descriptionLocale": {
                 "fr": "Pr&#233;parez vos textes pour la publication en corrigeant la typographie.",
                 "es": "Prepare sus textos para la publicaci&#243;n corrigiendo la tipograf&#237;a.",
+                "pt-BR": "Prepare seus textos para publica&#231;&#227;o corrigindo a tipografia.",
                 "de": "Bereiten Sie Ihre Texte f&#252;r die Ver&#246;ffentlichung vor, indem Sie Typografie korrigieren."
             },
             "url": "index.html",
