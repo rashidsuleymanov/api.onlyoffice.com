@@ -169,11 +169,13 @@
         var onDocumentReady = function () {
             window.connector = docEditor.createConnector();
 
-            connector.callCommand(
-                "function () {" +
-                "<%= Regex.Replace(method.Example.Script.Replace("\\", "\\\\").Replace("\"", "\\\"").Replace("builder.CreateFile", "").Replace("builder.SaveFile", "").Replace("builder.CloseFile()", ""), "\\r*\\n", "") %>" +
-                "}"
-            );
+            (new Function(
+                "connector.callCommand(" +
+                    "function () {" +
+                        "<%= Regex.Replace(method.Example.Script.Replace("\\", "\\\\").Replace("\"", "\\\"").Replace("builder.CreateFile", "").Replace("builder.SaveFile", "").Replace("builder.CloseFile()", ""), "\\r*\\n", "") %>" +
+                    "}" +
+                ");"
+            ))();
         };
 
         config.events = {
