@@ -4,7 +4,7 @@
 
 <%@ Register TagPrefix="UserControl"
     TagName="Generator"
-    Src="~/Views/DocBuilder/Buildersamples/samplegenerator.ascx" %>
+    Src="~/Views/OfficeApi/Buildersamples/samplegenerator.ascx" %>
 
 <h1>
     <a class="up" href="<%= Url.Action("buildersamples/") %>"></a>
@@ -13,7 +13,7 @@
 <p class="dscr">Create a document with a watermark with custom settings:</p>
 <ul>
     <li>create an empty page with a watermark (<a href="<%= Url.Action("textdocumentapi/api") %>">Api</a>,
-    <a href="<%= Url.Action("textdocumentapi/insertwatermark") %>">InsertWatermark</a>);</li>
+    <a href="<%= Url.Action("textdocumentapi/apidocument/insertwatermark") %>">ApiDocument/InsertWatermark</a>);</li>
     <li>edit watermark settings, set an image, specify size, direction and opacity (<a href="<%= Url.Action("textdocumentapi/apiwatermarksettings") %>">ApiWatermarkSettings</a>);</li>
 </ul>
 <br />
