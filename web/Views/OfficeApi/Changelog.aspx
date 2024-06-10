@@ -577,9 +577,9 @@
 
     <p><b>Methods for moving a cursor</b></p>
     <ul>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/movecursoroutside ") %>">ApiBlockLvlSdt/MoveCursorOutside </a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/movecursoroutside ") %>">ApiFormBase/MoveCursorOutside </a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiinlinelvlsdt/movecursoroutside ") %>">ApiInlineLvlSdt/MoveCursorOutside </a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/movecursoroutside") %>">ApiBlockLvlSdt/MoveCursorOutside</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/movecursoroutside") %>">ApiFormBase/MoveCursorOutside</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiinlinelvlsdt/movecursoroutside") %>">ApiInlineLvlSdt/MoveCursorOutside</a> method to Text document API.</li>
     </ul>
     <br />
 

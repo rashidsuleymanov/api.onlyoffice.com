@@ -22,7 +22,7 @@
             <td>int | str</td>
             <td>The type of the file to be saved set as a hexadecimal integer for the Python code.
             For the <em>.docbuilder</em> script file the following values are possible: <b>docx</b>, <b>odt</b>, <b>rtf</b>, <b>txt</b>, <b>pptx</b>, <b>xlsx</b>, <b>ods</b>, <b>csv</b>, <b>pdf</b>
-            (see <a href="<%= Url.Action("integrationapi/c/cdefault") %>#format-types">AVS_OFFICESTUDIO_FILE_XXX</a> values).</td>
+            (see <a href="<%= Url.Action("integrationapi/default") %>#format-types">AVS_OFFICESTUDIO_FILE_XXX</a> values).</td>
         </tr>
         <tr class="tablerow">
             <td><em>path</em></td>
@@ -63,7 +63,7 @@ builder.SaveFile("docx", "result.docx");
 </pre>
 
 <h2 id="SaveImage">Saving into images</h2>
-<p><b>ONLYOFFICE Document Builder</b> allows to save your document files into image files creating thumbnails of the first page or of all the pages in the document.
+<p><b>ONLYOFFICE Document Builder</b> allows you to save your document files into image files creating thumbnails of the first page or of all the pages in the document.
 This is done using the parameters of the <em>SaveFile()</em> method. The parameters are added in the form of XML tags, where the following tags can be used:</p>
 <ul>
     <li><b>m_oThumbnail</b> - the core tag showing that the inner nodes will be used to create a thumbnail out of the document file;</li>
