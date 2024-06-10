@@ -22,7 +22,7 @@
             <td>int</td>
             <td>The type of the file to be saved set as a hexadecimal integer for the .Net code.
             For the <em>.docbuilder</em> script file the following values are possible: <b>docx</b>, <b>odt</b>, <b>rtf</b>, <b>txt</b>, <b>pptx</b>, <b>xlsx</b>, <b>ods</b>, <b>csv</b>, <b>pdf</b>
-            (see <a href="<%= Url.Action("integrationapi/c/cdefault") %>#format-types">AVS_OFFICESTUDIO_FILE_XXX</a> values).</td>
+            (see <a href="<%= Url.Action("integrationapi/default") %>#format-types">AVS_OFFICESTUDIO_FILE_XXX</a> values).</td>
         </tr>
         <tr class="tablerow">
             <td><em>sPath</em></td>
