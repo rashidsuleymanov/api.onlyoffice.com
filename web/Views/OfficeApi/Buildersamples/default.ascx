@@ -23,8 +23,8 @@
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/addwatermark") %>">Adding watermark</a></p>
             <p>Adds a watermark to the document.</p>
+            <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/addwatermark") %>">More</a></p>
         </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/addwatermark") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("buildersamples/createtabledocument") %>">
@@ -33,8 +33,8 @@
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createtabledocument") %>">Creating table document</a></p>
             <p>Creates a document with a styled table.</p>
+            <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createtabledocument") %>">More</a></p>
         </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createtabledocument") %>">More</a></p>
     </li>
 
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
@@ -72,10 +72,10 @@
             <div class="example-sample-img create-spreadsheet-chart"></div>
         </a>
         <div class="sample-info">
-            <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createspreadsheetchart") %>">Creating chart spreadsheet</a></p>
+            <p class="name-example-sample"><a href="<%= Url.Action("buildersamples/createspreadsheetchart") %>">Creating spreadsheet chart</a></p>
             <p>Creates a chart filled with array-based values in the spreadsheet.</p>
+            <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createspreadsheetchart") %>">More</a></p>
         </div>
-        <p class="block_more-sample"><a href="<%= Url.Action("buildersamples/createspreadsheetchart") %>">More</a></p>
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("buildersamples/commenterrors") %>">

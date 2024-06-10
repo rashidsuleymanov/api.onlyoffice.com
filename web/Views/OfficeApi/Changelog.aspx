@@ -15,7 +15,7 @@
         <span class="hdr">Changelog</span>
     </h1>
 
-    <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
+    <p class="dscr">The list of changes for Office JavaScript API.</p>
     <h2 id="81" class="copy-link">Version 8.1</h2>
     <p><b>Date form methods</b></p>
     <ul>
@@ -583,12 +583,6 @@
     </ul>
     <br />
 
-    <p><b>Integration API</b></p>
-    <ul>
-        <li>Added the <a href="<%= Url.Action("integrationapi/python") %>">Python</a> framework for ONLYOFFICE Document Builder.</li>
-    </ul>
-    <br />
-
     <p><b>Other methods</b></p>
     <ul>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/addcustomfunction") %>">Api/AddCustomFunction</a> method to Spreadsheet API.</li>
@@ -905,13 +899,6 @@
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/onworksheetchange") %>">Api/onWorksheetChange</a> event to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/api/attachEvent") %>">Api/attachEvent</a> method to Presentation API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/api/detachEvent") %>">Api/detachEvent</a> method to Presentation API.</li>
-    </ul>
-    <br />
-
-    <p><b>Integration API</b></p>
-    <ul>
-        <li>Updated the <a href="<%= Url.Action("integrationapi/c") %>">C++</a> framework for ONLYOFFICE Document Builder.</li>
-        <li>Added the <a href="<%= Url.Action("integrationapi/net") %>">.Net</a> framework for ONLYOFFICE Document Builder.</li>
     </ul>
     <br />
     
