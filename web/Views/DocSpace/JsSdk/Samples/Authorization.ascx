@@ -130,13 +130,13 @@ Generate a password hash using <a href="<%= Url.Action("jssdk/events") %>#create
         </div>
             <div class="tooltip" >
                 <div class="copyJsSdk">
-                    <img  id="htmlStructure" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
-                    <span id="htmlStructure-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get the HTML code for the whole example.</span>
-                    <span id="htmlStructure-click" style="display: none;" class="tooltiptext-click">HTML copied.</span>
+                    <img  id="onClick" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg") %>" />
+                    <span id="onClick-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get the HTML code for the whole example.</span>
+                    <span id="onClick-click" style="display: none;" class="tooltiptext-click">HTML copied.</span>
                 </div>
             </div>
     </div>
-<pre class="jsSdkPreNoScroll" id="htmlStructurePre">
+<pre class="jsSdkPreNoScroll" id="onClickPre">
 var onButtonClick = async function () {
     var frame = DocSpace.SDK.frames["ds-frame"];
     var login = document.getElementById("login").value;
