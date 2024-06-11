@@ -5282,6 +5282,18 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\officeapi\examples\cell\Api.ClearCustomFunctions.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\Api.RemoveCustomFunction.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.SEARCH.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.SEARCHB.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.SUBSTITUTE.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.T.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.TEXT.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.TRIM.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.UNICHAR.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.UNICODE.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.UPPER.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.VALUE.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
