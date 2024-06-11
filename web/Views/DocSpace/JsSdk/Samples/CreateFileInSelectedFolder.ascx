@@ -142,13 +142,13 @@ var docSpace = DocSpace.SDK.initManager(config);</pre>
         </div>
             <div class="tooltip" >
                 <div class="copyJsSdk">
-                    <img  id="htmlStructure" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
-                    <span id="htmlStructure-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get the HTML code for the whole example.</span>
-                    <span id="htmlStructure-click" style="display: none;" class="tooltiptext-click">HTML copied.</span>
+                    <img  id="comboBox" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
+                    <span id="comboBox-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get the HTML code for the whole example.</span>
+                    <span id="comboBox-click" style="display: none;" class="tooltiptext-click">HTML copied.</span>
                 </div>
             </div>
     </div>
-<pre class="jsSdkPreNoScroll" id="htmlStructurePre">
+<pre class="jsSdkPreNoScroll" id="comboBoxPre">
 const combobox = document.getElementById("combobox");
 var onComboboxClick = async function (e) {
     var data = await frame.getFolders();
@@ -171,13 +171,13 @@ var onComboboxClick = async function (e) {
         </div>
             <div class="tooltip" >
                 <div class="copyJsSdk">
-                    <img  id="htmlStructure" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
-                    <span id="htmlStructure-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get the HTML code for the whole example.</span>
-                    <span id="htmlStructure-click" style="display: none;" class="tooltiptext-click">HTML copied.</span>
+                    <img  id="onClick" alt="Copy" src="<%= Url.Content("~/content/img/copy-content.svg")%>" />
+                    <span id="onClick-hover" style="display: inline;" class="tooltiptext-hover">When you copy, you get the HTML code for the whole example.</span>
+                    <span id="onClick-click" style="display: none;" class="tooltiptext-click">HTML copied.</span>
                 </div>
             </div>
     </div>
-<pre class="jsSdkPreNoScroll" id="htmlStructurePre">
+<pre class="jsSdkPreNoScroll" id="onClickPre">
 var onButtonClick = async function (e) {
     var frame = DocSpace.SDK.frames["ds-frame"];
     var selectedFolder = document.getElementById("combobox").value;
