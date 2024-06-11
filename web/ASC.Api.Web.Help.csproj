@@ -392,7 +392,6 @@
     <Content Include="App_Data\officeapi\examples\cell\ApiFreezePanes.FreezeColumns.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiFreezePanes.FreezeRows.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiFreezePanes.GetLocation.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\cell\ApiFreezePanes.Unfreeze.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiGradientStop.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiGradientStop.GetClassType.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiImage.docbuilder" />
