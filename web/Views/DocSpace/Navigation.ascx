@@ -68,6 +68,9 @@
                     <li>
                         <a href="<%= Url.Action("jssdk/samples/customizationofeditors") %>">Customization of editors</a>
                     </li>
+                    <li>
+                        <a href="<%= Url.Action("jssdk/samples/attachfiles") %>">Attach files</a>
+                    </li>
                 </ul>
             </li>
             
