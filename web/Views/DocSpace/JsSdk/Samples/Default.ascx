@@ -45,4 +45,14 @@
         </div>
         <p class="block_more-sample"><a href="<%= Url.Action("jssdk/samples/customizationofeditors")%>">More</a></p>
     </li>
+    <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
+        <a href="<%= Url.Action("jssdk/samples/attachfiles")%>">
+            <div class="example-sample-img create-formal-document"></div>
+        </a>
+        <div class="sample-info">
+            <p class="name-example-sample"><a href="<%= Url.Action("jssdk/samples/attachfiles")%>">Attach files</a></p>
+            <p>Attach files to the website using FileSelector.</p>
+        </div>
+        <p class="block_more-sample"><a href="<%= Url.Action("jssdk/samples/attachfiles")%>">More</a></p>
+    </li>
 </ul>
