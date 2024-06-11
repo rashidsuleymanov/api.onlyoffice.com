@@ -583,9 +583,16 @@
     </ul>
     <br />
 
-    <p><b>Other methods</b></p>
+    <p><b>Custom function methods</b></p>
     <ul>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/addcustomfunction") %>">Api/AddCustomFunction</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/clearcustomfunctions") %>">Api/ClearCustomFunctions</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/removecustomfunction") %>">Api/RemoveCustomFunction</a> method to Spreadsheet API.</li>
+    </ul>
+    <br />
+
+    <p><b>Other methods</b></p>
+    <ul>
         <li>Added the <em>nWidth</em> and <em>nHeight</em> parameters to the <a href="<%= Url.Action("textdocumentapi/apipictureform/setimage") %>">ApiPictureForm/SetImage</a> method of Text document API.</li>
     </ul>
     <br />
