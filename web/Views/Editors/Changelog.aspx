@@ -18,6 +18,7 @@
     <p class="dscr">The list of changes of ONLYOFFICE Docs API.</p>
     <h2 id="81" class="copy-link">Version 8.1</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("wopi/hostpage") %>#docs_api_config">docs_api_config</a> parameter to the <em>form</em> element of the WOPI host page.</li>
         <li>Added the <a href="<%= Url.Action("conversionapi") %>#pdf">pdf</a> field to the conversion request.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onSubmit">events.onSubmit</a> event.</li>
         <li>The <em>docxf</em> format is deprecated, please use the <em>pdf</em> format to create and edit forms.</li>

@@ -1,6 +1,7 @@
 # Change Log
 
 ##
+- editors: added the docs_api_config parameter to the form element of the WOPI host page
 - editors: added the pdf field to the conversion request
 - editors: added the events.onSubmit event
 - editors: the docxf format is deprecated, please use the pdf format to create and edit forms
