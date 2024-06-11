@@ -1,4 +1,4 @@
-builder.OpenFile("https://api.onlyoffice.com/app_data/docbuilder/sample-files/empty_form.docxf");
+builder.OpenFile("https://api.onlyoffice.com/app_data/officeapi/sample-files/empty_form.docxf");
 var oDocument = Api.GetDocument();
 
 var data = {
