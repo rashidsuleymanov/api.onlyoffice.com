@@ -499,7 +499,7 @@ var docSpace = DocSpace.SDK.initFileSelector(config);</pre>
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
-    &lt;script src="https://suleymanovrn.onlyoffice.com/static/scripts/sdk/1.0.0/api.js"&gt;&lt;/script&gt;
+    &lt;script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"&gt;&lt;/script&gt;
     &lt;title&gt;An example of using file manager&lt;/title&gt;
     &lt;style&gt;
         body {
