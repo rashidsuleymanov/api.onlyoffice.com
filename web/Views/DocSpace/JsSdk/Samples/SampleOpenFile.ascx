@@ -179,7 +179,7 @@ var docSpace = DocSpace.SDK.initFileSelector(config);</pre>
     &lt;head&gt;
         &lt;meta charset="UTF-8"&gt;
         &lt;title&gt;DocSpace JavaScript SDK&lt;/title&gt;
-        &lt;script src="https://{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"&gt;&lt;/script&gt;
+        &lt;script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"&gt;&lt;/script&gt;
         ...
     &lt;/head&gt;
     &lt;body&gt;
