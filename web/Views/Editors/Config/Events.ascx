@@ -1173,7 +1173,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onSubmit" class="copy-link">onSubmit</b> - the function called when the force saving request of the <em>3</em> <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> is successfully performed,
-            e.g. when the <b>Complete & Submit</b> button is clicked, the  form is submitted.
+            i.e. when the <b>Complete & Submit</b> button is clicked and the form is submitted.
         </p>
         <div class="header-gray">Example</div>
         <pre>
