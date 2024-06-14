@@ -57,6 +57,7 @@
     &lt;form id="office_form" name="office_form" target="office_frame" action="&lt;%= actionUrl %&gt;" method="post"&gt;
         &lt;input name="access_token" value="&lt;%= token %&gt;" type="hidden" /&gt;
         &lt;input name="access_token_ttl" value="&lt;%= tokenTtl %&gt;" type="hidden" /&gt;
+        &lt;input name="docs_api_config" value="{&quot;editorConfig&quot;:{&quot;customization&quot;:{&quot;forcesave&quot;:true}}}" type="hidden" /&gt;
     &lt;/form&gt;
 
     &lt;span id="frameholder"&gt;&lt;/span&gt;
@@ -108,6 +109,13 @@
                 <td>The time when an access token expires, represented as the number of milliseconds since January 1, 1970 UTC.
                 It is recommended to set this parameter to 10 hours.</td>
                 <td>integer</td>
+            </tr>
+            <tr>
+                <td id="docs_api_config" class="copy-link">docs_api_config</td>
+                <td>The <a href="<%= Url.Action("config") %>">config</a> parameters for opening the editor via Docs API
+                that are not supported by the WOPI protocol. For example, to enable the <a href="<%= Url.Action("save") %>#forcesave">forcesaving</a> functionality
+                by clicking the <b>Save</b> button, the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">editorConfig.customization.forcesave</a> parameter must be passed in this object.</td>
+                <td>string</td>
             </tr>
         </tbody>
     </table>
