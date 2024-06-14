@@ -50,7 +50,7 @@
 
 <ol>
     <li>
-        <p>Add a script to initialize the <a href="<%= Url.Action("jssdk/initmodes/editors")%>">editors</a>. First, let's add an event handler for <a href="<%= Url.Action("jssdk/events")%>#onAppReady">onAppReady</a>, which runs when initialization is successful.</p>
+        <p>Add a script to initialize the <a href="<%= Url.Action("jssdk/initmodes/editor")%>">editors</a>. First, let's add an event handler for <a href="<%= Url.Action("jssdk/events")%>#onAppReady">onAppReady</a>, which runs when initialization is successful.</p>
             <div style="width: 100%;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -163,7 +163,7 @@ var docSpace = DocSpace.SDK.initEditor(config);</pre>
     &lt;head&gt;
         &lt;meta charset="UTF-8"&gt;
         &lt;title&gt;DocSpace JavaScript SDK&lt;/title&gt;
-        &lt;script src="https://{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"&gt;&lt;/script&gt;
+        &lt;script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"&gt;&lt;/script&gt;
         ...
     &lt;/head&gt;
     &lt;body&gt;
