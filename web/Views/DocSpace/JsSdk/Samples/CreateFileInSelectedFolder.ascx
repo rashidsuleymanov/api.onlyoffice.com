@@ -133,7 +133,7 @@ var docSpace = DocSpace.SDK.initManager(config);</pre>
 </ol>
 
 <h3>Step 3. Load folders list to Combobox</h3>
-<p>Add an <b>onComboboxClick()</b> event handler for the Combobox. Using the <a href="<%= Url.Action("jssdk/events")%>#getFolders">getFolders()</a> method, we load the list into the Combobox.</p>
+<p>Add an <b>onComboboxClick()</b> event handler for the Combobox. Using the <a href="<%= Url.Action("jssdk/methods")%>#getFolders">getFolders()</a> method, we load the list into the Combobox.</p>
 
 <div style="width: 100%;">
     <div class="jsSdkHeader">
@@ -162,7 +162,7 @@ var onComboboxClick = async function (e) {
 </div>
 
 <h3>Step 4. Add method to create file</h3>
-<p>Add an <b>onButtonClick()</b> event handler for the button. Using the <a href="<%= Url.Action("jssdk/events")%>#createFile">createFile()</a> method, create file in selected folder.</p>
+<p>Add an <b>onButtonClick()</b> event handler for the button. Using the <a href="<%= Url.Action("jssdk/methods")%>#createFile">createFile()</a> method, create file in selected folder.</p>
 
 <div style="width: 100%;">
     <div class="jsSdkHeader">
@@ -223,7 +223,7 @@ var onButtonClick = async function (e) {
     &lt;head&gt;
         &lt;meta charset="UTF-8"&gt;
         &lt;title&gt;DocSpace JavaScript SDK&lt;/title&gt;
-        &lt;script src="https://{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"&gt;&lt;/script&gt;
+        &lt;script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"&gt;&lt;/script&gt;
         ...
     &lt;/head&gt;
     &lt;body&gt;
@@ -243,7 +243,6 @@ var onButtonClick = async function (e) {
     &lt;script&gt;
         var onAppReady = async function (e) {
             var frame = DocSpace.SDK.frames["ds-frame"];
-
         }
         const config = {
             "events": {
