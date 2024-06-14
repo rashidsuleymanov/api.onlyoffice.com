@@ -120,8 +120,8 @@ var docSpace = DocSpace.SDK.initSytem(config);</pre>
 </ol>
 
 <h3>Step 3. Add method to log in</h3>
-<p>Add an <b>onButtonClick()</b> event handler for the button. Using the <a href="<%= Url.Action("jssdk/events") %>#getHashSettings">getHashSettings()</a> method, we return the settings for generating a password hash. 
-Generate a password hash using <a href="<%= Url.Action("jssdk/events") %>#createHash">createHash()</a>. Use the <a href="<%= Url.Action("jssdk/events") %>#login">login()</a> method to authorize the user.</p>
+<p>Add an <b>onButtonClick()</b> event handler for the button. Using the <a href="<%= Url.Action("jssdk/methods") %>#getHashSettings">getHashSettings()</a> method, we return the settings for generating a password hash. 
+Generate a password hash using <a href="<%= Url.Action("jssdk/methods") %>#createHash">createHash()</a>. Use the <a href="<%= Url.Action("jssdk/methods") %>#login">login()</a> method to authorize the user.</p>
 
 <div style="width: 100%;">
     <div class="jsSdkHeader">
@@ -170,7 +170,7 @@ var onButtonClick = async function () {
     &lt;head&gt;
         &lt;meta charset="UTF-8"&gt;
         &lt;title&gt;DocSpace JavaScript SDK&lt;/title&gt;
-        &lt;script src="https://{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"&gt;&lt;/script&gt;
+        &lt;script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"&gt;&lt;/script&gt;
         ...
     &lt;/head&gt;
     &lt;body&gt;
