@@ -26,7 +26,7 @@
     {
         templateUrl = new System.UriBuilder(Request.Url.AbsoluteUri)
             {
-                Path = "/app_data/docbuilder/sample-files/" + this.Attributes["template"] + "." + ext
+                Path = "/app_data/officeapi/sample-files/" + this.Attributes["template"] + "." + ext
             }.ToString();
         useTemplateFile = true;
     }
