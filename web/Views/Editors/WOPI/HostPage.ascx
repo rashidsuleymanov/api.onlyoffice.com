@@ -107,8 +107,14 @@
             </tr>
             <tr>
                 <td id="access_token_ttl" class="copy-link">access_token_ttl</td>
-                <td>The time when an access token expires, represented as the number of milliseconds since January 1, 1970 UTC.
-                It is recommended to set this parameter to 10 hours.</td>
+                <td>
+                    The time when an access token expires, represented as the number of milliseconds since January 1, 1970 UTC.
+                    It is recommended to set this parameter to 10 hours.
+                    <br />
+                    This parameter can be also set to 0. This means for the client that the token expiry is either infinite or unknown.
+                    In this case, clients might disable any UI prompting users to refresh their sessions. This can lead to unexpected data loss due to access token expiry.
+                    So, this is strongly recommended to specify a value for <em>access_token_ttl</em>.
+                </td>
                 <td>integer</td>
             </tr>
             <tr>
