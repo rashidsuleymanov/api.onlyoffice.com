@@ -270,10 +270,20 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Config", (object) catchall);
         }
 
+        [HttpOptions]
+        public void ConfigCreate()
+        {
+            Response.AddHeader("Access-Control-Allow-Origin", "*");
+            Response.AddHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+            Response.AddHeader("Access-Control-Allow-Headers", "Content-Type");
+        }
 
         [HttpPost]
         public JsonResult ConfigCreate(string jsonConfig)
         {
+            Response.AddHeader("Access-Control-Allow-Origin", "*");
+            Response.AddHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+            Response.AddHeader("Access-Control-Allow-Headers", "Content-Type");
             LogManager.GetLogger("ASC.Api").Debug("Editor Config create: " + jsonConfig);
 
             Config config = JsonConvert.DeserializeObject<Config>(jsonConfig);
