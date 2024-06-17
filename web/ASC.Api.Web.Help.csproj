@@ -209,6 +209,7 @@
     <Content Include="App_Data\officeapi\examples\cell\Api.AddDefName.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\Api.AddSheet.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\Api.attachEvent.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\Api.ClearCustomFunctions.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\Api.CreateBlipFill.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\Api.CreateBullet.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\Api.CreateColorByName.docbuilder" />
@@ -249,6 +250,7 @@
     <Content Include="App_Data\officeapi\examples\cell\Api.Intersect.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\Api.onWorksheetChange.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\Api.RecalculateAllFormulas.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\Api.RemoveCustomFunction.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\Api.ReplaceTextSmart.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\Api.Save.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\Api.SetFreezePanesType.docbuilder" />
@@ -691,6 +693,16 @@
     <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.REPT.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.RIGHT.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.RIGHTB.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.SEARCH.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.SEARCHB.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.SUBSTITUTE.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.T.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.TEXT.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.TRIM.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.UNICHAR.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.UNICODE.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.UPPER.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.VALUE.docbuilder" />
     <Content Include="App_Data\officeapi\examples\ChartType.docbuilder" />
     <Content Include="App_Data\officeapi\examples\CheckBoxFormPr.docbuilder" />
     <Content Include="App_Data\officeapi\examples\CheckBoxFormPrBase.docbuilder" />
@@ -5282,18 +5294,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\officeapi\examples\cell\Api.ClearCustomFunctions.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\cell\Api.RemoveCustomFunction.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.SEARCH.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.SEARCHB.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.SUBSTITUTE.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.T.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.TEXT.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.TRIM.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.UNICHAR.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.UNICODE.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.UPPER.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.VALUE.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiColor.GetRGB.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\word\ApiUniColor.GetRGB.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">

@@ -591,6 +591,13 @@
     </ul>
     <br />
 
+    <p><b>RGB color methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiunicolor/getrgb") %>">ApiUniColor/GetRGB</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apicolor/getrgb") %>">ApiColor/GetRGB</a> method to Spreadsheet API.</li>
+    </ul>
+    <br />
+
     <p><b>Other methods</b></p>
     <ul>
         <li>Added the <em>nWidth</em> and <em>nHeight</em> parameters to the <a href="<%= Url.Action("textdocumentapi/apipictureform/setimage") %>">ApiPictureForm/SetImage</a> method of Text document API.</li>
