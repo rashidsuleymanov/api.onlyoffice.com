@@ -39,6 +39,7 @@
     <li><a href="#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> - the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</li>
     <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - the user is mentioned in a comment.</li>
     <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - the user is trying to manage document access rights by clicking <em>Change access rights</em> button.</li>
+    <li><a href="#onRequestStartFilling">onRequestStartFilling</a> - the user is trying to start filling out the ready forms by clicking the <em>Start filling</em> button in the pdf editing mode.</li>
     <li><a href="#onRequestUsers">onRequestUsers</a> - the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</li>
     <li><a href="#onSubmit">onSubmit</a> - the force saving request of the <em>3</em> <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> is successfully performed.</li>
     <li><a href="#onWarning">onWarning</a> - a warning occurs.</li>
@@ -143,6 +144,9 @@ Event messages will be available in your browser's DevTools console.
         "onRequestSharingSettings": function () {
             console.log("Sharing settings requested");
         },
+        "onRequestStartFilling": function () {
+            console.log("Start filling requested");
+        },
         "onRequestUsers": function (event) {
             console.log("Users requested");
         },
@@ -188,6 +192,7 @@ Event messages will be available in your browser's DevTools console.
         "onRequestSelectSpreadsheet",
         "onRequestSendNotify",
         "onRequestSharingSettings",
+        "onRequestStartFilling",
         "onRequestUsers",
         "onSubmit",
         "onWarning"
@@ -1110,6 +1115,27 @@ var onRequestSharingSettings = function () {
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onRequestSharingSettings": onRequestSharingSettings,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p><b id="onRequestStartFilling" class="copy-link">onRequestStartFilling</b> - the function called when the user is trying to start filling out the ready forms by clicking the <em>Start filling</em> button in the pdf editing mode.
+        If the event is not declared, this button will not be displayed.</p>
+        <p>When the user clicks the <em>Start filling</em> button, the <a href="<%= Url.Action("methods") %>#startFilling">startFilling</a> method is called to lock the pdf editing (only pdf viewing becomes available).</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestStartFilling = function () {
+    docEditor.startFilling();
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestStartFilling": onRequestStartFilling,
         ...
     },
     ...

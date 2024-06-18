@@ -1,6 +1,8 @@
 # Change Log
 
 ##
+- editors: added the startFilling method
+- editors: added the events.onRequestStartFilling event
 - editors: added the docs_api_config parameter to the form element of the WOPI host page
 - editors: added the pdf field to the conversion request
 - editors: added the events.onSubmit event

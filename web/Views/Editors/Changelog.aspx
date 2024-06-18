@@ -18,6 +18,8 @@
     <p class="dscr">The list of changes of ONLYOFFICE Docs API.</p>
     <h2 id="81" class="copy-link">Version 8.1</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("methods") %>#startFilling">startFilling</a> method.</li>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestStartFilling">events.onRequestStartFilling</a> event.</li>
         <li>Added the <a href="<%= Url.Action("wopi/hostpage") %>#docs_api_config">docs_api_config</a> parameter to the <em>form</em> element of the WOPI host page.</li>
         <li>Added the <a href="<%= Url.Action("conversionapi") %>#pdf">pdf</a> field to the conversion request.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onSubmit">events.onSubmit</a> event.</li>

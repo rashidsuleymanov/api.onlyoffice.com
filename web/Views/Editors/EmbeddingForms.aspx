@@ -119,7 +119,7 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
     }
 &lt;/script&gt;
 </pre>
-            <p>Once done, the PDF form can be opened for editing.</p>
+            <p>Once done, the PDF form can be opened for editing. After editing this file, you can fill out the ready forms. To do so, click the <b>Start filling</b> button.</p>
             <img class="screenshot max-width-832" alt="Embed pdf form for editing" src="<%= Url.Content("~/content/img/editor/embed-pdf-for-editing.png") %>" />
         </div>
         <div id="filling" class="content">
