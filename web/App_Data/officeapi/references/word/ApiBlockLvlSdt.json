@@ -736,7 +736,7 @@
     "MoveCursorOutside": {
       "memberof": "ApiBlockLvlSdt",
       "name": "MoveCursorOutside",
-      "description": "<p>Place cursor before/after the current content control</p>",
+      "description": "<p>Places a cursor before/after the current content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -749,6 +749,7 @@
         {
           "type": "boolean",
           "name": "isAfter",
+          "description": "<p>Specifies whether a cursor will be placed before (false) or after (true) the current content control.</p>",
           "optional": true,
           "defaultValue": true
         }
