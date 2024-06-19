@@ -9,6 +9,8 @@
     请求参数在请求正文中以 JSON
     格式输入请求被发送到 <span class="fakelink">https://documentserver/coauthoring/CommandService.ashx</span>, 其中 <b>documentserver</b> 是安装了ONLYOFFICE 文档服务器的服务器的名称
 </p>
+<p>Starting from version 8.1, it is recommended to add the <a href="<%= Url.Action("howitworks") %>#shardkey">shardkey</a> parameter to the URL <em>QueryString</em> with the <em>key</em> value in it.
+For example, <em>?shardkey=Khirz6zTPdfd7</em>. This allows you to load balance requests.</p>
 
 <div class="note">在版本4.2之前的 <b>ONLYOFFICE 文档服务器</b> 中，使用了带有 <em>QueryString</em> 中参数的GET请求。</div>
 

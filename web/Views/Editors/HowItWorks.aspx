@@ -83,4 +83,12 @@
         <b>文档管理器</b> 和 <b>文档存储服务</b> 要么包含在社区服务器中，要么必须由在自己的服务器上使用 ONLYOFFICE 文档服务器的软件集成商实施。
     </p>
 
+    <h2 id="shardkey" class="copy-link">Shard key</h2>
+    <p>Starting from version 8.1, the <em>shardkey</em> parameter is added to the URL <em>QueryString</em> when sending requests to the <b>document command service</b>,
+        <b>document conversion service</b>, or <b>document builder service</b>. It is also added to the browser-server interaction during the collaborative editing
+        as the <a href="<%= Url.Action("wopi/") %>#wopisrc">WOPISrc</a> query parameter.</p>
+    <p>The <em>key</em> field is used as a value. For example, <em>?shardkey=Khirz6zTPdfd7</em>.
+        If there is no key in the body, you do not have to send it (for example, in the <a href="<%= Url.Action("command/getForgottenList") %>">getForgottenList</a> command).</p>
+    <p>This is a recommendation when working with an editor server cluster to load balance requests during the collaborative editing: all users editing the same document are served by the same server.</p>
+
 </asp:Content>

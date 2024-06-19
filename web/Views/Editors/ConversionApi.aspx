@@ -19,6 +19,8 @@
         请求参数在请求正文中以 JSON。
         格式输入请求被发送到 <span class="fakelink">https://documentserver/ConvertService.ashx</span>, 其中 <b>documentserver</b> 是安装了ONLYOFFICE 文档服务器的服务器的名称
     </p>
+    <p>Starting from version 8.1, it is recommended to add the <a href="<%= Url.Action("howitworks") %>#shardkey">shardkey</a> parameter to the URL <em>QueryString</em> with the <em>key</em> value in it.
+        For example, <em>?shardkey=Khirz6zTPdfd7</em>. This allows you to load balance requests.</p>
 
     <div class="note">在 <b>ONLYOFFICE 文档服务器</b>4.2之前的版本中，使用了GET请求,请求参数在 <em>QueryString</em> 中。</div>
 
@@ -33,6 +35,7 @@
         <li><a href="#key">key</a></li>
         <li><a href="#outputtype">outputtype</a></li>
         <li><a href="#password">password</a></li>
+        <li><a href="#pdf">pdf</a></li>
         <li><a href="#region">region</a></li>
         <li><a href="#spreadsheetLayout">spreadsheetLayout</a></li>
         <li><a href="#thumbnail">thumbnail</a></li>
@@ -211,6 +214,23 @@
                 <td>如果文档文件受密码保护，则定义其密码。</td>
                 <td>string</td>
                 <td>可选的</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="pdf" class="copy-link">pdf</td>
+                <td>Defines settings for converting document files to pdf.</td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="form" class="copy-link">pdf.form</td>
+                <td>
+                    Defines whether the document will be converted to the <em>pdf</em> form (<b>true</b>) or to a regular <em>pdf</em> file (<b>false</b>).
+                    If this parameter is omitted, the document contents will not be changed. If the document has fields, they will remain in the converted document.
+                    If has not, the converted document will not contain them either. For example, you don't need to specify this parameter when converting <em>docxf</em>
+                    and <em>oform</em> formats to <em>pdf</em>. They will always be converted to <em>pdf</em> forms.
+                </td>
+                <td>boolean</td>
+                <td>optional</td>
             </tr>
             <tr class="tablerow">
                 <td id="region" class="copy-link">region</td>
@@ -1776,6 +1796,25 @@
         有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a> 部分。
     </p>
 
+    <div id="sample-pdf-conversion" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> form</div>
+    <pre>
+{
+    "async": false,
+    "filetype": "docx",
+    "key": "Khirz6zTPdfd7",
+    "outputtype": "pdf",
+    "pdf": {
+        "form": true
+    },
+    "title": "Example Document Title.docx",
+    "url": "https://example.com/url-to-example-document.docx"
+}
+</pre>
+    <p>
+        Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
+    </p>
+
     <div id="sample-watermark" class="header-gray copy-link">发送到<b>文档转换服务</b>的 JSON 对象示例，用于将文件从 <em>docx</em> 格式转换为插入水印的 <em>pdf</em> 格式</div>
     <pre>
 {
@@ -2052,6 +2091,10 @@
                 <td>-9</td>
                 <td>当转换器无法自动确定输出文件格式时出错。 此错误意味着客户端必须明确指定文件应转换为哪种格式（文本文档或电子表格）。
                     它用于在 XML 类型未知的情况下将 XML 转换为 OOXML。</td>
+            </tr>
+            <tr class="tablerow">
+                <td>-10</td>
+                <td>Size limit exceeded.</td>
             </tr>
             <%--<tr class="tablerow">
                 <td>-21</td>

@@ -23,7 +23,7 @@
     <li><a href="#onRequestClose">onRequestClose</a> - 必须结束与编辑器的工作并且必须关闭编辑器。</li>
     <li><a href="#onRequestCompareFile">onRequestCompareFile</a> - 用户试图通过单击 <em>存储中的文档</em> 按钮来选择要比较的文档。</li>
     <li><a href="#onRequestCreateNew">onRequestCreateNew</a> - 用户试图通过单击 <em>新建</em> 按钮来创建文档。</li>
-    <li><a href="#onRequestEditRights">onRequestEditRights</a> - 用户试图通过单击 <em>编辑文档</em> 按钮将文档从查看模式切换到编辑模式。</li>
+    <li><a href="#onRequestEditRights">onRequestEditRights</a> - 用户试图通过单击 <em>Edit current file</em> 按钮将文档从查看模式切换到编辑模式。</li>
     <li><a href="#onRequestHistory">onRequestHistory</a> - 用户试图通过单击 <em>版本历史</em> 按钮来显示文档版本历史。</li>
     <li><a href="#onRequestHistoryClose">onRequestHistoryClose</a> - 用户试图通过单击 <em>关闭历史记录</em> 按钮从查看文档版本历史记录返回到文档。</li>
     <li><a href="#onRequestHistoryData">onRequestHistoryData</a> - 用户正在尝试单击文档版本历史记录中的特定文档版本。</li>
@@ -39,6 +39,8 @@
     <li><a href="#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> - 用户尝试通过单击<em>邮件合并</em>按钮来选择收件人数据。</li>
     <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - 用户在评论中被提及。</li>
     <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - 用户尝试通过单击 <em>更改访问权限</em> 按钮来管理文档访问权限。</li>
+    <li><a href="#onRequestStartFilling">onRequestStartFilling</a> - the user is trying to start filling out the ready forms by clicking the <em>Start filling</em> button in the pdf editing mode.</li>
+    <li><a href="#onRequestUsers">onRequestUsers</a> - the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</li>
     <li><a href="#onRequestUsers">onRequestUsers</a> - 用户可以选择的其他用户, 用来在评论中提及、授予编辑特定工作表范围的访问权限或设置用户头像。</li>
     <li><a href="#onWarning">onWarning</a> - 出现警告。</li>
 </ul>
@@ -142,8 +144,14 @@
         "onRequestSharingSettings": function () {
             console.log("Sharing settings requested");
         },
+        "onRequestStartFilling": function () {
+            console.log("Start filling requested");
+        },
         "onRequestUsers": function (event) {
             console.log("Users requested");
+        },
+        "onSubmit": function (event) {
+            console.log("The form was submitted");
         },
         "onWarning": function (event) {
             console.log("ONLYOFFICE Document Editor reports a warning: code " + event.data.warningCode + ", description " + event.data.warningDescription);
@@ -184,7 +192,9 @@
         "onRequestSelectSpreadsheet",
         "onRequestSendNotify",
         "onRequestSharingSettings",
+        "onRequestStartFilling",
         "onRequestUsers",
+        "onSubmit",
         "onWarning"
     ];
 
@@ -526,8 +536,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestClose" class="copy-link">onRequestClose</b> - 当编辑器的工作必须结束并且编辑器必须关闭时调用的函数。</p>
-        <div class="header-gray">示例</div>
+        <p><b id="onRequestClose" class="copy-link">onRequestClose</b> - the function called when the user is trying to end the work with the editor and close it by clicking the cross button.
+        If the method is not declared, the <a href="<%= Url.Action("config/editor/customization") %>#close">editorConfig.customization.close</a> parameter will not be available, and
+        the cross button will not be displayed.</p>
+        <div class="header-gray">Example</div>
         <pre>
 var onRequestClose = function () {
     if (window.opener) {
@@ -577,14 +589,16 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestEditRights" class="copy-link">onRequestEditRights</b> - 当用户试图通过单击 <em>编辑文档</em> 按钮将文档从查看模式切换到编辑模式时调用的函数。
-            调用该函数时，编辑器必须再次初始化，处于编辑模式。
-            如果未声明该方法，则不会显示 <em>编辑</em> 按钮。
+            <b id="onRequestEditRights" class="copy-link">onRequestEditRights</b> - the function called when the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit current file</em> button.
+            This event also fires when the user clicks the <em>Edit PDF</em> button in the forms that are open in the <em>view</em> or <em>fillForms</em> mode.
+            When the function is called, the editor must be initialized again, in editing mode.
+            If the method is not declared the <em>Edit current file</em> and <em>Edit PDF</em> buttons will not be displayed.
         </p>
         <div class="note">
             当 <a href="<%= Url.Action("config/editor") %>#mode">editorConfig</a> <em>模式</em> 参数设置为<b>view</b> 并且 <em>编辑</em> 文档的 <em>权限</em> （<a href="<%= Url.Action("config/document/permissions") %>#edit">文档权限</a>）设置为 <b>true</b> 时， <b>onRequestEditRights</b> 参数是强制性的，以便用户可以切换到编辑模式。
         </div>
         <img class="screenshot" alt="onRequestEditRights" src="<%= Url.Content("~/content/img/editor/onRequestEditRights.png") %>"/>
+        <img class="screenshot" alt="Edit PDF button" src="<%= Url.Content("~/content/img/editor/edit-pdf.png") %>"/>
         <div class="header-gray">示例</div>
         <pre>
 var onRequestEditRights = function () {
@@ -1110,6 +1124,27 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
+        <p><b id="onRequestStartFilling" class="copy-link">onRequestStartFilling</b> - the function called when the user is trying to start filling out the ready forms by clicking the <em>Start filling</em> button in the pdf editing mode.
+        If the event is not declared, this button will not be displayed.</p>
+        <p>When the user clicks the <em>Start filling</em> button, the <a href="<%= Url.Action("methods") %>#startFilling">startFilling</a> method is called to lock the pdf editing (only pdf viewing becomes available).</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestStartFilling = function () {
+    docEditor.startFilling();
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestStartFilling": onRequestStartFilling,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
         <p><b id="onRequestUsers" class="copy-link">onRequestUsers</b> - 当用户可以选择其他用户在评论中提及、授予编辑特定工作表范围的访问权限或设置用户头像时调用的函数。</p>
         <p>从7.4版本开始，可以在<em>data.c</em>参数中指定操作类型。 它可以采用两个值 - <em>mention</em>或<em>protect</em>。
          在版本 7.4 之前，此事件仅支持mention操作。</p>
@@ -1155,6 +1190,27 @@ var onRequestUsers = function (event) {
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onRequestUsers": onRequestUsers,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p>
+            <b id="onSubmit" class="copy-link">onSubmit</b> - the function called when the force saving request of the <em>3</em> <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> is successfully performed,
+            i.e. when the <b>Complete & Submit</b> button is clicked and the form is submitted.
+        </p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onSubmit = function (event) {
+    console.log("The form was submitted.");
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onSubmit": onSubmit,
         ...
     },
     ...

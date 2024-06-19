@@ -9,7 +9,8 @@
 
     <p>主机页面必须包含以下元素：</p>
     <ul>
-        <li>出于安全目的，主机必须通过一个 <em>form</em> 元素将 <a href="#access_token">access_token</a> 和 <a href="#access_token_ttl">access_token_ttl</a> 参数 <em>POST</em> 到online office iframe。</li>
+        <li>出于安全目的，主机必须通过一个 <em>form</em> 元素将 <a href="#access_token">access_token</a> 和 <a href="#access_token_ttl">access_token_ttl</a> 参数 <em>POST</em> 到online office iframe。
+        The <a href="#docs_api_config">docs_api_config</a> parameter is optional.</li>
         <li>使用 <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>与online office iframe 交互的 JavaScript 代码。</li>
         <li>Body元素和online office的特定 CSS 样式，以避免视觉包。此外，
         主机页面应使用 <a href="<%= Url.Action("wopi/discovery") %>">WOPI 发现</a>中提供的网站图标 URL 为页面设置适当的网站图标。</li>
@@ -57,6 +58,7 @@
     &lt;form id="office_form" name="office_form" target="office_frame" action="&lt;%= actionUrl %&gt;" method="post"&gt;
         &lt;input name="access_token" value="&lt;%= token %&gt;" type="hidden" /&gt;
         &lt;input name="access_token_ttl" value="&lt;%= tokenTtl %&gt;" type="hidden" /&gt;
+        &lt;!-- &lt;input name="docs_api_config" value="&lt;%= apiConfig %&gt;" type="hidden" /&gt; --&gt;
     &lt;/form&gt;
 
     &lt;span id="frameholder"&gt;&lt;/span&gt;
@@ -82,7 +84,7 @@
 &lt;/html&gt;
 </pre>
 
-    <note>请注意， <em>"&lt;%= actionUrl %&gt;"</em>, <em>"&lt;%= token %&gt;"</em>, <em>"&lt;%= tokenTtl %&gt;"</em> 字符串将使用适当的参数呈现。</note>
+    <note>请注意， <em>"&lt;%= actionUrl %&gt;"</em>, <em>"&lt;%= token %&gt;"</em>, <em>"&lt;%= tokenTtl %&gt;"</em>, <em>"&lt;%= apiConfig %&gt;"</em> 字符串将使用适当的参数呈现。</note>
     <div class="header-gray">参数</div>
         <table class="table">
         <colgroup>
@@ -105,9 +107,22 @@
             </tr>
             <tr>
                 <td id="access_token_ttl" class="copy-link">access_token_ttl</td>
-                <td>访问令牌过期的时间，表示为自 1970 年 1 月 1 日 UTC 以来的毫秒数。
-                    建议将此参数设置为 10 小时。</td>
+                <td>
+                    访问令牌过期的时间，表示为自 1970 年 1 月 1 日 UTC 以来的毫秒数。
+                    建议将此参数设置为 10 小时。
+                    <br />
+                    This parameter can be also set to 0. This means for the client that the token expiry is either infinite or unknown.
+                    In this case, clients might disable any UI prompting users to refresh their sessions. This can lead to unexpected data loss due to access token expiry.
+                    So, this is strongly recommended to specify a value for <em>access_token_ttl</em>.
+                </td>
                 <td>integer</td>
+            </tr>
+            <tr>
+                <td id="docs_api_config" class="copy-link">docs_api_config</td>
+                <td>The optional <a href="<%= Url.Action("config") %>">config</a> parameters for opening the editor via Docs API
+                that are not supported by the WOPI protocol. For example, to enable the <a href="<%= Url.Action("save") %>#forcesave">forcesaving</a> functionality
+                by clicking the <b>Save</b> button, the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">editorConfig.customization.forcesave</a> parameter must be passed in this object.</td>
+                <td>string</td>
             </tr>
         </tbody>
     </table>

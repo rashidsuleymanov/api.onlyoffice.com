@@ -19,6 +19,8 @@
         请求参数在请求正文中以 JSON 格式输入。
         请求被发送到 <span class="fakelink">https://documentserver/docbuilder</span> 地址，其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档服务器的服务器的名称。
     </p>
+    <p>Starting from version 8.1, it is recommended to add the <a href="<%= Url.Action("howitworks") %>#shardkey">shardkey</a> parameter to the URL <em>QueryString</em> with the <em>key</em> value in it.
+        For example, <em>?shardkey=Khirz6zTPdfd7</em>. This allows you to load balance requests.</p>
 
     <h2>参数及其说明：</h2>
     <table class="table">

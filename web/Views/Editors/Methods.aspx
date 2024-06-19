@@ -40,6 +40,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setSharingSettings">setSharingSettings</a> - 更新有关允许与其他用户共享文档的设置的 <em>信息</em>。</li>
         <li><a href="#setUsers">setUsers</a> - 设置用户列表,用来在评论中提及、授予编辑特定工作表范围的访问权限，或设置用户头像。</li>
         <li><a href="#showMessage">showMessage</a> - 显示带有消息的工具提示。</li>
+        <li><a href="#startFilling">startFilling</a> - start filling out the ready forms and lock the pdf editing.</li>
     </ul>
 
     <h2>方法及其描述：</h2>
@@ -1339,6 +1340,16 @@ docEditor.showMessage(message);
             <note>
                 请注意，嵌入式平台 <a href="<%= Url.Action("config") %>#type">类型</a>不支持显示带有消息的工具提示。
             </note>
+        </li>
+
+        <li>
+            <p>
+                <b id="startFilling" class="copy-link">startFilling</b> - start filling out the ready forms and lock the pdf editing (only pdf viewing becomes available).
+                This method can be called only after the <a href="<%= Url.Action("config/events") %>#onRequestStartFilling">onRequestStartFilling</a> event.
+            </p>
+            <pre>
+docEditor.startFilling();
+</pre>
         </li>
     </ul>
     <span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - 仅对ONLYOFFICE 开发者版本可编辑。</em></span>

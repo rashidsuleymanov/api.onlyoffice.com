@@ -28,16 +28,322 @@ var connector = docEditor.createConnector()
     <p>连接器与插件具有相同的接口。下面可以找到可用于此类的方法。</p>
 
     <ul>
+        <li><a href="#addContextMenuItem">addContextMenuItem</a> - add an item to the context menu.</li>
+        <li><a href="#addToolbarMenuItem">addToolbarMenuItem</a> - add an item to the toolbar menu.</li>
         <li><a href="#attachEvent">attachEvent</a> -添加事件侦听器。</li>
         <li><a href="#callCommand">callCommand</a> -将数据发送回编辑器。</li>
         <li><a href="#connect">connect</a> -将连接器连接到编辑器。</li>
         <li><a href="#detachEvent">detachEvent</a> -删除事件侦听器。</li>
         <li><a href="#disconnect">disconnect</a> -断开连接器与编辑器的连接。</li>
         <li><a href="#executeMethod">executeMethod</a> -使用连接器执行某些编辑器方法。</li>
+        <li><a href="#updateContextMenuItem">updateContextMenuItem</a> - update an item in the context menu with the specified items.</li>
     </ul>
 
     <h2>方法及其描述：</h2>
     <ul>
+        <li>
+            <p><b id="addContextMenuItem" class="copy-link">addContextMenuItem</b> - the function called to add an item to the context menu.</p>
+            <div class="header-gray">Parameters</div>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+                    <col />
+                    <col class="table-type" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Name</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>items</td>
+                        <td>An array containing the context menu item parameters.</td>
+                        <td>array of <a href="#ContextMenuItem">ContextMenuItem</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+
+            <div id="ContextMenuItem" class="copy-link header-gray">ContextMenuItem</div>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+                    <col />
+                    <col class="table-type" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Name</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>id</td>
+                        <td>The item ID.</td>
+                        <td>string</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>text</td>
+                        <td>The item text.</td>
+                        <td>string</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>data</td>
+                        <td>The item data (this data will be sent to the click event callback).</td>
+                        <td>string</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>disabled</td>
+                        <td>Specifies if the current item is disabled or not.</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>icons</td>
+                        <td>The item icons (see the plugins <a href="<%= Url.Action("config", "plugin") %>#icons">config</a> documentation).</td>
+                        <td>string</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>items</td>
+                        <td>An array containing the context menu items for the current item.</td>
+                        <td>array of ContextMenuItem</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+
+            <div class="header-gray">Example</div>
+            <pre>
+var items: [
+    {
+        "id": "onConvert",
+        "text": getMessage("Convert to Markdown or HTML")
+    }
+]
+
+connector.addContextMenuItem(items);
+</pre>
+        </li>
+
+        <li>
+            <p><b id="addToolbarMenuItem" class="copy-link">addToolbarMenuItem</b> - the function called to add an item to the toolbar menu.</p>
+            <div class="header-gray">Parameters</div>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+                    <col />
+                    <col class="table-type" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Name</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>items</td>
+                        <td>The toolbar main menu item parameters.</td>
+                        <td><a href="#ToolbarMenuMainItem">ToolbarMenuMainItem</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+
+            <div id="ToolbarMenuMainItem" class="copy-link header-gray">ToolbarMenuMainItem</div>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+                    <col />
+                    <col class="table-type" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Name</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>guid</td>
+                        <td>The plugin guid.</td>
+                        <td>string</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>tabs</td>
+                        <td>An array containing the toolbar menu tabs for the current item.</td>
+                        <td>array of <a href="#ToolbarMenuTab">ToolbarMenuTab</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+
+            <div id="ToolbarMenuTab" class="copy-link header-gray">ToolbarMenuTab</div>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+                    <col />
+                    <col class="table-type" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Name</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>id</td>
+                        <td>The tab ID.</td>
+                        <td>string</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>text</td>
+                        <td>The tab text.</td>
+                        <td>string</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>items</td>
+                        <td>An array containing the toolbar menu items for the current tab.</td>
+                        <td>array of <a href="#ToolbarMenuItem">ToolbarMenuItem</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+
+            <div id="ToolbarMenuItem" class="copy-link header-gray">ToolbarMenuItem</div>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+                    <col />
+                    <col class="table-type" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Name</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>id</td>
+                        <td>The item ID.</td>
+                        <td>string</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>type</td>
+                        <td>The possible values of the base which the relative vertical position of the toolbar menu item will be calculated from.</td>
+                        <td><a href="<%= Url.Action("global", "plugin") %>#ToolbarMenuItemType">ToolbarMenuItemType</a></td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>text</td>
+                        <td>The item text.</td>
+                        <td>string</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>hint</td>
+                        <td>The item hint.</td>
+                        <td>string</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>icons</td>
+                        <td>The item icons (see the plugins <a href="<%= Url.Action("config", "plugin") %>#icons">config</a> documentation).</td>
+                        <td>string</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>disabled</td>
+                        <td>Specifies if the current item is disabled or not.</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>enableToggle</td>
+                        <td>Specifies if an item toggle is enabled or not.</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>lockInViewMode</td>
+                        <td>Specifies if the current item is locked in the view mode or not.</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>separator</td>
+                        <td>Specifies if a separator is used between the toolbar menu items or not.</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>split</td>
+                        <td>Specifies if the toolbar menu items are split or not.</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>onClick</td>
+                        <td>The click event callback.</td>
+                        <td>function</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>items</td>
+                        <td>An array containing the <a href="#ContextMenuItem">context menu items</a> for the current item.</td>
+                        <td>array of ContextMenuItem</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+
+            <div class="header-gray">Example</div>
+            <pre>
+var oToolbarMenuItem = {
+    "id": "MeaningItem",
+    "type": "button",
+    "text": "Meaning",
+    "hint": "Meaning",
+    "icons": "resources/light/icon.png",
+    "disabled": false,
+    "enableToggle": false,
+    "lockInViewMode": false,
+    "separator": true,
+    "split": true,
+    "onClick": onClick,
+    "items": [
+        {
+            "id": "onMeaningT",
+            "text": "Explain text in comment"
+        },
+        {
+            "id": "onFixSpelling",
+            "text": "Fix spelling & grammar"
+        },
+        {
+            "id": "onMakeLonger",
+            "text": "Make longer"
+        },
+        {
+            "id": "onMakeShorter",
+            "text": "Make shorter"
+        }
+    ]
+};
+var oToolbarMenuTab = {
+    "id": "ChatGPT",
+    "text": "AI Assistant",
+    "items": [oToolbarMenuItem]
+};
+var oToolbarMenuMainItem = {
+    "guid": "asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}",
+    "tabs": [oToolbarMenuTab]
+};
+
+connector.addToolbarMenuItem(oToolbarMenuMainItem);
+</pre>
+        </li>
+
         <li>
             <p><b id="attachEvent" class="copy-link">attachEvent</b> -被调用以添加事件侦听器的函数，该函数将在指定事件传递到目标时被调用。
                 所有可用事件的列表与插件的列表相同。可以在 <a href="<%= Url.Action("events", "plugin") %>">这里</a>找到。</p>
@@ -226,6 +532,94 @@ connector.disconnect()
             <div class="header-gray">示例</div>
             <pre>
 connector.executeMethod("SetFormValue",[forms[i]["InternalId"],"OnlyOffice BANK"],null);
+</pre>
+        </li>
+
+        <li>
+            <p><b id="updateContextMenuItem" class="copy-link">updateContextMenuItem</b> - the function called to update an item in the context menu with the specified items.</p>
+            <div class="header-gray">Parameters</div>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+                    <col />
+                    <col class="table-type" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Name</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>items</td>
+                        <td>An array containing the context menu item parameters.</td>
+                        <td>array of <a href="#toolbar-ContextMenuItem">ContextMenuItem</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+
+            <div id="toolbar-ContextMenuItem" class="copy-link header-gray">ContextMenuItem</div>
+            <table class="table">
+                <colgroup>
+                    <col class="table-name" />
+                    <col />
+                    <col class="table-type" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Name</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>id</td>
+                        <td>The item ID.</td>
+                        <td>string</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>text</td>
+                        <td>The item text.</td>
+                        <td>string</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>data</td>
+                        <td>The item data (this data will be sent to the click event callback).</td>
+                        <td>string</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>disabled</td>
+                        <td>Specifies if the current item is disabled or not.</td>
+                        <td>boolean</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>icons</td>
+                        <td>The item icons (see the plugins <a href="<%= Url.Action("config", "plugin") %>#icons">config</a> documentation).</td>
+                        <td>string</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>items</td>
+                        <td>An array containing the context menu items for the current item.</td>
+                        <td>array of ContextMenuItem</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+
+            <div class="header-gray">Example</div>
+            <pre>
+var items: [
+    {
+        "id": "onConvert",
+        "text": getMessage("Convert to Markdown or HTML")
+    }
+]
+
+connector.updateContextMenuItem(items);
 </pre>
         </li>
     </ul>

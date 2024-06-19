@@ -182,6 +182,7 @@
     <Content Include="Content\img\Editor\convert-page.png" />
     <Content Include="Content\img\Editor\create-page.png" />
     <Content Include="Content\img\Editor\create.png" />
+    <Content Include="Content\img\Editor\cross-button.jpg" />
     <Content Include="Content\img\Editor\customer.png" />
     <Content Include="Content\img\Editor\customization.png" />
     <Content Include="Content\img\Editor\documents-page.png" />
@@ -194,7 +195,8 @@
     <Content Include="Content\img\Editor\edit.png" />
     <Content Include="Content\img\Editor\editor-samples.png" />
     <Content Include="Content\img\Editor\editor.png" />
-    <Content Include="Content\img\Editor\embed-docxf.png" />
+    <Content Include="Content\img\Editor\edit-pdf.png" />
+    <Content Include="Content\img\Editor\embed-pdf-for-editing.png" />
     <Content Include="Content\img\Editor\embed-pdf.png" />
     <Content Include="Content\img\Editor\embedded.png" />
     <Content Include="Content\img\Editor\exit-button.png" />

@@ -18,6 +18,7 @@
     <li><a href="#anonymous">anonymous</a></li>
     <li><a href="#autosave">autosave</a></li>
     <li><a href="#chat">chat</a></li>
+    <li><a href="#close">close</a></li>
     <li><a href="#commentAuthorOnly">commentAuthorOnly</a></li>
     <li><a href="#comments">comments</a></li>
     <li><a href="#compactHeader">compactHeader</a></li>
@@ -124,6 +125,26 @@
         </div>
         <div class="line">
             <label class="dataItemSpan">
+                <input type="checkbox" id="editorConfig_customization_close" name="editorConfig_customization_close" hidden="hidden">
+                <span></span>
+                <label for="editorConfig_customization_close">Close</label>
+            </label>
+        </div>
+        <div id="holder_editorConfig_customization_close" class="config_object_holder" hidden>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_close_visible" name="editorConfig_customization_close_visible" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_close_visible">Visible</label>
+                </label>
+            </div>
+            <div class="line input_line">
+                <label for="editorConfig_customization_close_text">Text</label>
+                <input type="text" id="editorConfig_customization_close_text" name="editorConfig_customization_close_text" value="Close file">
+            </div>
+        </div>
+        <div class="line">
+            <label class="dataItemSpan">
                 <input type="checkbox" id="editorConfig_customization_compactHeader" name="editorConfig_customization_compactHeader" hidden="hidden">
                 <span></span>
                 <label for="editorConfig_customization_compactHeader">紧凑型头部</label>
@@ -194,6 +215,13 @@
         <div id="holder_editorConfig_customization_features" class="config_object_holder" hidden>
             <div class="line">
                 <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_features_roles" name="editorConfig_customization_features_roles" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_features_roles">Features.Roles</label>
+                </label>
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
                     <input type="checkbox" id="editorConfig_customization_features_spellcheck" name="editorConfig_customization_features_spellcheck" hidden="hidden" checked>
                     <span></span>
                     <label for="editorConfig_customization_features_spellcheck">Features.Spellcheck</label>
@@ -249,13 +277,6 @@
                     <label for="editorConfig_customization_goback_blank">空白页</label>
                 </label>
             </div>
-            <div class="line">
-                <label class="dataItemSpan">
-                    <input type="checkbox" id="editorConfig_customization_goback_requestClose" name="editorConfig_customization_goback_requestClose" hidden="hidden">
-                    <span></span>
-                    <label for="editorConfig_customization_goback_requestClose">请求关闭</label>
-                </label>
-            </div>
             <div class="line input_line">
                 <label for="editorConfig_customization_goback_text">文本</label>
                 <input type="text" id="editorConfig_customization_goback_text" name="editorConfig_customization_goback_text" value="Open file location">
@@ -274,7 +295,7 @@
         </div>
         <div class="line">
             <label class="dataItemSpan">
-                <input type="checkbox" id="editorConfig_customization_hideRightMenu" name="editorConfig_customization_hideRightMenu" hidden="hidden">
+                <input type="checkbox" id="editorConfig_customization_hideRightMenu" name="editorConfig_customization_hideRightMenu" hidden="hidden" checked>
                 <span></span>
                 <label for="editorConfig_customization_hideRightMenu">隐藏右侧菜单</label>
             </label>
@@ -312,6 +333,13 @@
             <div class="line input_line">
                 <label for="editorConfig_customization_logo_url">Url地址</label>
                 <input type="text" id="editorConfig_customization_logo_url" name="editorConfig_customization_logo_url" value="https://example.com">
+            </div>
+            <div class="line">
+                <label class="dataItemSpan">
+                    <input type="checkbox" id="editorConfig_customization_logo_visible" name="editorConfig_customization_logo_visible" hidden="hidden" checked>
+                    <span></span>
+                    <label for="editorConfig_customization_logo_visible">Visible</label>
+                </label>
             </div>
         </div>
         <div class="line">
@@ -469,8 +497,8 @@
     <div id="placeholder"></div>
 </div>
 
-<note>请注意，只有以下参数可用于移动编辑器：<a href="#feedback">feedback</a>、<a href="#goback">goback</a>、
-<a href="# 帮助">help</a>、<a href="#macrosMode">宏模式</a>、<a href="#mobileForceView">mobileForceView</a>。</note>
+<note>请注意，只有以下参数可用于移动编辑器：<a href="#close">close</a>、<a href="#feedback">feedback</a>、<a href="#goback">goback</a>、
+<a href="# 帮助">help</a>、<a href="#logo">logo</a>、<a href="#macrosMode">宏模式</a>、<a href="#mobileForceView">mobileForceView</a>。</note>
 
 <div class="header-gray">参数</div>
 <table class="table">
@@ -564,6 +592,43 @@
         <tr class="tablerow">
             <td colspan="4">
                 <img class="screenshot" src="<%= Url.Content("~/content/img/editor/chat.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr>
+            <td id="close" class="copy-link">close</td>
+            <td>
+                Defines settings for the cross button to close the editor:
+                <ul>
+                    <li>
+                        <b>visible</b> - defines if the cross button to close the editor is displayed or hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>text</b> - defines the tooltip text for a button in the editor header or the menu item text in the mobile editors and in the <b>File</b> menu of the web editors,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "Close file".
+                    </li>
+                </ul>
+
+            </td>
+            <td>object</td>
+            <td>{
+    "visible": true,
+    "text": "Close file"
+}</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <div class="note">Please note that it will only be available if the <a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a> event is set.
+                If the event is not declared and the <em>close</em> parameter is not specified, the cross button will not be displayed.</div>
+                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
+                <img class="screenshot max-width-832" alt="Cross button in the header" src="<%= Url.Content("~/content/img/editor/cross-button.jpg") %>" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -719,6 +784,16 @@
                 如果可能，定义用户可以禁用或自定义的参数：
                 <ul>
                     <li>
+                        <b>roles<a href="#requiredDescr" class="required">*</a></b> - defines if the role settings will be disabled in the pdf forms or not.
+                        If the parameter is equal to <b>false</b>, then the role manager is hidden and viewing the form on behalf of a specific role is disabled.
+                        In this case, the <b>Manage Roles</b> and <b>View Form</b> buttons on the <b>Forms</b> tab and a drop-down list
+                        for setting the field role in the right panel will not be displayed. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
                         <b>spellcheck</b> - 定义在加载编辑器时拼写检查器是自动打开还是关闭。
                         如果此参数为布尔值，则将其设置为初始拼写检查值，并且不会隐藏拼写检查设置。
                         默认值为 <b>true</b>，
@@ -749,6 +824,7 @@
             </td>
             <td>object</td>
             <td>{
+    "roles": true,
     "spellcheck": {
         "mode": true<% if (license)
         { %>,
@@ -853,7 +929,7 @@
                     </li>
                     <li>
                         <b>requestClose</b> - 定义如果单击打开文件位置按钮，将调用 <a href="<%= Url.Action("config/events") %>#onRequestClose">events.onRequestClose</a> 事件而不是打开浏览器选项卡或窗口。
-                        默认值为 <b>false</b>，
+                        Deprecated since version 8.1. Please use the <a href="#close">close</a> parameter instead,
                         <br />
                         <b>类型</b>：boolean，
                         <br />
@@ -875,8 +951,12 @@
                     </li>
                 </ul>
             </td>
-            <td>boolean 或 object</td>
-            <td>true</td>
+            <td>object</td>
+            <td>{
+    "blank": true,
+    "text": "Open file location",
+    "url": "https://example.com"
+}</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
@@ -922,10 +1002,10 @@
             <td id="hideRightMenu" class="copy-link">hideRightMenu</td>
             <td>
                 定义第一次加载时是否显示或隐藏右侧菜单。
-                默认值为 <b>false</b>。
+                默认值为 <b>true</b>。
             </td>
             <td>boolean</td>
-            <td>false</td>
+            <td>true</td>
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
@@ -967,6 +1047,13 @@
                         <b>header</b> - 定义编辑器标题设置，
                         <br />
                         <b>类型</b>：object，
+                    </li>
+                    <li>
+                        <b>header.editMode</b> - defines if a button for switching editor modes will be displayed in the header or not. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
                     </li>
                     <li>
                         <b>header.save</b> - 定义编辑器标题中的保存按钮是显示还是隐藏。默认值为 <b>true</b>。
@@ -1075,10 +1162,19 @@
                         <b>example</b>: true;
                     </li>
                     <li>
-                        <b>toolbar.collaboration</b> - 定义是显示还是隐藏 <b>协作</b> 选项卡。
-                        默认值为 <b>true</b>，
+                        <b>toolbar.collaboration</b> - defines the <b>Collaboration</b> tab settings.
+                        If this parameter is a boolean value, then it specifies whether the <b>Collaboration</b> tab will be displayed or hidden.
+                        The default value is <b>true</b>,
                         <br />
-                        <b>类型</b>：boolean，
+                        <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>toolbar.collaboration.mailmerge</b> - defines if the button for choosing the mail merge base is displayed or hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
                         <br />
                         <b>示例</b>：true；
                     </li>
@@ -1132,7 +1228,8 @@
                         <b>类型</b>：object，
                     </li>
                     <li>
-                        <b>toolbar.home.mailmerge</b> - 定义用于选择邮件合并基的按钮是显示还是隐藏。默认值为 <b>true</b>，
+                        <b>toolbar.home.mailmerge</b> - defines if the button for choosing the mail merge base is displayed or hidden.
+                        This parameter is deprecated, please use the <em>toolbar.collaboration.mailmerge</em> parameter instead,
                         <br />
                         <b>类型</b>：boolean，
                         <br />
@@ -1197,6 +1294,7 @@
             <td>object</td>
             <td>{
     "header": {
+        "editMode": true,
         "save": true,
         "users": true
     },
@@ -1214,7 +1312,9 @@
         "textLang": true
     },
     "toolbar": {
-        "collaboration": true,
+        "collaboration": {
+            "mailmerge": true
+        },
         "draw": true,
         "file": {
             "close": true,
@@ -1222,9 +1322,7 @@
             "save": true,
             "settings": true
         },
-        "home": {
-            "mailmerge": true
-        },
+        "home": {},
         "layout": true,
         "plugins": true,
         "protect": true,
@@ -1266,7 +1364,7 @@
             <td>"正在加载文档，请稍候…"</td>
         </tr>
         <% } %>
-        <tr class="tablerow">
+        <tr>
             <td id="logo" class="copy-link">logo<a href="#requiredDescr" class="required">*</a></td>
             <td>
                 更改编辑器标题左上角的图像文件。
@@ -1304,7 +1402,14 @@
                         <br />
                         <b>类型</b>：string，
                         <br />
-                        <b>示例</b>："https://example.com"。
+                        <b>示例</b>："https://example.com";
+                    </li>
+                    <li>
+                        <b>visible</b> - shows or hides the logo. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true.
                     </li>
                 </ul>
             </td>
@@ -1312,8 +1417,14 @@
             <td>{
     "image": "https://example.com/logo.png",
     "imageDark": "https://example.com/dark-logo.png",
-    "url": "https://example.com"
+    "url": "https://example.com",
+    "visible": true
 }</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="macros" class="copy-link">macros</td>
@@ -1547,7 +1658,7 @@
         <tr>
             <td id="submitForm" class="copy-link">submitForm</td>
             <td>
-                定义顶部工具栏上是否显示或隐藏<b>提交</b>按钮。
+                定义顶部工具栏上是否显示或隐藏<b>Complete & Submit</b>按钮。
                 按钮仅适用于 <em>pdf</em> 格式。 默认值为<b>false</b>。
             </td>
             <td>boolean</td>
@@ -1752,6 +1863,7 @@
     });
 
     $("#editorConfig_customization_anonymous").change(showHideConfigObject);
+    $("#editorConfig_customization_close").change(showHideConfigObject);
     $("#editorConfig_customization_customer").change(showHideConfigObject);
     $("#editorConfig_customization_feedback").change(showHideConfigObject);
     $("#editorConfig_customization_features").change(showHideConfigObject);
@@ -1771,11 +1883,13 @@
         }
         if (!getFieldValue("editorConfig_customization_features_spellcheck_mode")) {
             return `"features": {
+                "roles": ${getFieldValue("editorConfig_customization_features_roles")},
                 "spellcheck": ${getFieldValue("editorConfig_customization_features_spellcheck")}
             },
             `
         } else {
             return `"features": {
+                "roles": ${getFieldValue("editorConfig_customization_features_roles")},
                 "spellcheck": {
                     "mode": true
                 }
@@ -1800,6 +1914,12 @@
                 "label": ${getFieldValue("editorConfig_customization_anonymous_label")}
             },
             ` : "";
+        var close = !getFieldValue("editorConfig_customization_close") ? "" : 
+            `"close": {
+                "visible": ${getFieldValue("editorConfig_customization_close_visible")},
+                "text": ${getFieldValue("editorConfig_customization_close_text")}
+            },
+            `;
         var customer = getFieldValue("editorConfig_customization_customer") ?
             `"customer": {
                 "address": ${getFieldValue("editorConfig_customization_customer_address")},
@@ -1822,7 +1942,6 @@
         var goback = getFieldValue("editorConfig_customization_goback") ?
             `"goback": {
                 "blank": ${getFieldValue("editorConfig_customization_goback_blank")},
-                "requestClose": ${getFieldValue("editorConfig_customization_goback_requestClose")},
                 "text": ${getFieldValue("editorConfig_customization_goback_text")},
                 "url": ${getFieldValue("editorConfig_customization_goback_url")}
             },
@@ -1831,7 +1950,8 @@
             `"logo": {
                 "image": ${getFieldValue("editorConfig_customization_logo_image")},
                 "imageDark": ${getFieldValue("editorConfig_customization_logo_imageDark")},
-                "url": ${getFieldValue("editorConfig_customization_logo_url")}
+                "url": ${getFieldValue("editorConfig_customization_logo_url")},
+                "visible": ${getFieldValue("editorConfig_customization_logo_visible")}
             },
             ` : "";
         var review = getFieldValue("editorConfig_customization_review") ?
@@ -1847,7 +1967,7 @@
             "integrationMode": "embed",` : "";
         var customization = `{
             ${anonymous}"autosave": ${getFieldValue("editorConfig_customization_autosave")},
-            "comments": ${getFieldValue("editorConfig_customization_comments")},
+            ${close}"comments": ${getFieldValue("editorConfig_customization_comments")},
             "compactHeader": ${getFieldValue("editorConfig_customization_compactHeader")},
             "compactToolbar": ${getFieldValue("editorConfig_customization_compactToolbar")},
             "compatibleFeatures": ${getFieldValue("editorConfig_customization_compatibleFeatures")},

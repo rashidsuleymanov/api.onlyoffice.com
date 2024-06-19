@@ -50,38 +50,6 @@
             );
         <% break; %>
 
-        <% case "docxfEditor": %>
-        window.docEditor = new DocsAPI.DocEditor("placeholder",
-            <%= Config.Serialize(
-                new Config
-                    {
-                        Document = new Config.DocumentConfig
-                            {
-                                FileType = "docxf",
-                                Key = "apiwh" + Guid.NewGuid(),
-                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
-                                Title = "Example Form Template Title.docxf",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url_zh"] + "demo.docxf"
-                            },
-                        DocumentType = "word",
-                        EditorConfig = new Config.EditorConfigConfiguration
-                            {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
-                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
-                                    {
-                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
-                                            {
-                                                Request = false
-                                            }
-                                    },
-                                Lang = "zh"
-                            },
-                        Height = "100%",
-                        Width = "100%"
-                    }) %>
-            );
-        <% break; %>
-
         <% case "xlsxEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             <%= Config.Serialize(
@@ -352,6 +320,41 @@
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.odp"
                             },
                         DocumentType = "slide",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
+                                Lang = "zh"
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    }) %>
+            );
+        <% break; %>
+
+        <% case "pdfEditor": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "pdf",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig
+                                    {
+                                        Edit = true
+                                    },
+                                Title = "Example Form Template Title.pdf",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "oform.pdf"
+                            },
+                        DocumentType = "pdf",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
