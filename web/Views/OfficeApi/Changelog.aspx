@@ -16,6 +16,594 @@
     </h1>
 
     <p class="dscr">The list of changes for Office JavaScript API.</p>
+    <h2 id="81" class="copy-link">Version 8.1</h2>
+    <p><b>Date form methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform") %>">ApiDateForm</a> class to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("formapi/api/createdateform") %>">Api/CreateDateForm</a> method to Form API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/clear") %>">ApiDateForm/Clear</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/copy") %>">ApiDateForm/Copy</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/getclasstype") %>">ApiDateForm/GetClassType</a> method to Text document API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/getformat") %>">ApiDateForm/GetFormat</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/getformkey") %>">ApiDateForm/GetFormKey</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/getformtype") %>">ApiDateForm/GetFormType</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/getlanguage") %>">ApiDateForm/GetLanguage</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/gettext") %>">ApiDateForm/GetText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/gettextpr") %>">ApiDateForm/GetTextPr</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/gettime") %>">ApiDateForm/GetTime</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/gettiptext") %>">ApiDateForm/GetTipText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/getwrappershape") %>">ApiDateForm/GetWrapperShape</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/isfixed") %>">ApiDateForm/IsFixed</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/isrequired") %>">ApiDateForm/IsRequired</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/setbackgroundcolor") %>">ApiDateForm/SetBackgroundColor</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/setbordercolor") %>">ApiDateForm/SetBorderColor</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/setformat") %>">ApiDateForm/SetFormat</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/setformkey") %>">ApiDateForm/SetFormKey</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/setlanguage") %>">ApiDateForm/SetLanguage</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/setplaceholdertext") %>">ApiDateForm/SetPlaceholderText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/setrequired") %>">ApiDateForm/SetRequired</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/settextpr") %>">ApiDateForm/SetTextPr</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/settime") %>">ApiDateForm/SetTime</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/settiptext") %>">ApiDateForm/SetTipText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidateform/tofixed") %>">ApiDateForm/ToFixed</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#DateFormPr">DateFormPr</a> type to the simple type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#DateFormPrBase">DateFormPrBase</a> type to the simple type definitions.</li>
+    </ul>
+    <br />
+
+    <p><b>Methods for setting text properties</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getbold") %>">ApiTextPr/GetBold</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getcaps") %>">ApiTextPr/GetCaps</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getcolor") %>">ApiTextPr/GetColor</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getdoublestrikeout") %>">ApiTextPr/GetDoubleStrikeout</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getfontfamily") %>">ApiTextPr/GetFontFamily</a> method to Text document API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getfontsize") %>">ApiTextPr/GetFontSize</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/gethighlight") %>">ApiTextPr/GetHighlight</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getitalic") %>">ApiTextPr/GetItalic</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getlanguage") %>">ApiTextPr/GetLanguage</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getposition") %>">ApiTextPr/GetPosition</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getshd") %>">ApiTextPr/GetShd</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getsmallcaps") %>">ApiTextPr/GetSmallCaps</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getspacing") %>">ApiTextPr/GetSpacing</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getstrikeout") %>">ApiTextPr/GetStrikeout</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getstyle") %>">ApiTextPr/GetStyle</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getunderline") %>">ApiTextPr/GetUnderline</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/getvertalign") %>">ApiTextPr/GetVertAlign</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getbold") %>">ApiTextPr/GetBold</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getcaps") %>">ApiTextPr/GetCaps</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getdoublestrikeout") %>">ApiTextPr/GetDoubleStrikeout</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getfill") %>">ApiTextPr/GetFill</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getfontfamily") %>">ApiTextPr/GetFontFamily</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getfontsize") %>">ApiTextPr/GetFontSize</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getitalic") %>">ApiTextPr/GetItalic</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getoutline") %>">ApiTextPr/GetOutLine</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getsmallcaps") %>">ApiTextPr/GetSmallCaps</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getspacing") %>">ApiTextPr/GetSpacing</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getstrikeout") %>">ApiTextPr/GetStrikeout</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/gettextfill") %>">ApiTextPr/GetTextFill</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/getunderline") %>">ApiTextPr/GetUnderline</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getbold") %>">ApiTextPr/GetBold</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getcaps") %>">ApiTextPr/GetCaps</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getdoublestrikeout") %>">ApiTextPr/GetDoubleStrikeout</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getfill") %>">ApiTextPr/GetFill</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getfontfamily") %>">ApiTextPr/GetFontFamily</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getfontsize") %>">ApiTextPr/GetFontSize</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/gethighlight") %>">ApiTextPr/GetHighlight</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getitalic") %>">ApiTextPr/GetItalic</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getoutline") %>">ApiTextPr/GetOutLine</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getsmallcaps") %>">ApiTextPr/GetSmallCaps</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getspacing") %>">ApiTextPr/GetSpacing</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getstrikeout") %>">ApiTextPr/GetStrikeout</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/gettextfill") %>">ApiTextPr/GetTextFill</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/getunderline") %>">ApiTextPr/GetUnderline</a> method to Presentation API.</li>
+    </ul>
+    <br />
+
+    <p><b>Worksheet function methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction") %>">ApiWorksheetFunction</a> class to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/GetWorksheetFunction") %>">Api/GetWorksheetFunction</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/abs") %>">ApiWorksheetFunction/ABS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/accrint") %>">ApiWorksheetFunction/ACCRINT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/accrintm") %>">ApiWorksheetFunction/ACCRINTM</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/acos") %>">ApiWorksheetFunction/ACOS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/acosh") %>">ApiWorksheetFunction/ACOSH</a> method to Spreadsheet API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/acot") %>">ApiWorksheetFunction/ACOT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/acoth") %>">ApiWorksheetFunction/ACOTH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/aggregate") %>">ApiWorksheetFunction/AGGREGATE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/amordegrc") %>">ApiWorksheetFunction/AMORDEGRC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/amorlinc") %>">ApiWorksheetFunction/AMORLINC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/and") %>">ApiWorksheetFunction/AND</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/arabic") %>">ApiWorksheetFunction/ARABIC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/asc") %>">ApiWorksheetFunction/ASC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/asin") %>">ApiWorksheetFunction/ASIN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/asinh") %>">ApiWorksheetFunction/ASINH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/atan") %>">ApiWorksheetFunction/ATAN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/atan2") %>">ApiWorksheetFunction/ATAN2</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/atanh") %>">ApiWorksheetFunction/ATANH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/avedev") %>">ApiWorksheetFunction/AVEDEV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/average") %>">ApiWorksheetFunction/AVERAGE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/averagea") %>">ApiWorksheetFunction/AVERAGEA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/averageif") %>">ApiWorksheetFunction/AVERAGEIF</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/averageifs") %>">ApiWorksheetFunction/AVERAGEIFS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/base") %>">ApiWorksheetFunction/BASE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/besseli") %>">ApiWorksheetFunction/BESSELI</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/besselj") %>">ApiWorksheetFunction/BESSELJ</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/besselk") %>">ApiWorksheetFunction/BESSELK</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/bessely") %>">ApiWorksheetFunction/BESSELY</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/beta_dist") %>">ApiWorksheetFunction/BETA_DIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/beta_inv") %>">ApiWorksheetFunction/BETA_INV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/betadist") %>">ApiWorksheetFunction/BETADIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/betainv") %>">ApiWorksheetFunction/BETAINV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/bin2dec") %>">ApiWorksheetFunction/BIN2DEC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/bin2hex") %>">ApiWorksheetFunction/BIN2HEX</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/bin2oct") %>">ApiWorksheetFunction/BIN2OCT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/binom_dist") %>">ApiWorksheetFunction/BINOM_DIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/binom_dist_range") %>">ApiWorksheetFunction/BINOM_DIST_RANGE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/binom_inv") %>">ApiWorksheetFunction/BINOM_INV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/binomdist") %>">ApiWorksheetFunction/BINOMDIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/bitand") %>">ApiWorksheetFunction/BITAND</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/bitlshift") %>">ApiWorksheetFunction/BITLSHIFT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/bitor") %>">ApiWorksheetFunction/BITOR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/bitrshift") %>">ApiWorksheetFunction/BITRSHIFT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/bitxor") %>">ApiWorksheetFunction/BITXOR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/ceiling") %>">ApiWorksheetFunction/CEILING</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/ceiling_math") %>">ApiWorksheetFunction/CEILING_MATH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/ceiling_precise") %>">ApiWorksheetFunction/CEILING_PRECISE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/char") %>">ApiWorksheetFunction/CHAR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/chisq_dist") %>">ApiWorksheetFunction/CHISQ_DIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/chisq_dist_rt") %>">ApiWorksheetFunction/CHISQ_DIST_RT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/chisq_inv") %>">ApiWorksheetFunction/CHISQ_INV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/chisq_inv_rt") %>">ApiWorksheetFunction/CHISQ_INV_RT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/chidist") %>">ApiWorksheetFunction/CHIDIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/chiinv") %>">ApiWorksheetFunction/CHIINV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/choose") %>">ApiWorksheetFunction/CHOOSE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/clean") %>">ApiWorksheetFunction/CLEAN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/code") %>">ApiWorksheetFunction/CODE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/columns") %>">ApiWorksheetFunction/COLUMNS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/combin") %>">ApiWorksheetFunction/COMBIN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/combina") %>">ApiWorksheetFunction/COMBINA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/complex") %>">ApiWorksheetFunction/COMPLEX</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/concatenate") %>">ApiWorksheetFunction/CONCATENATE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/confidence") %>">ApiWorksheetFunction/CONFIDENCE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/confidence_norm") %>">ApiWorksheetFunction/CONFIDENCE_NORM</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/confidence_t") %>">ApiWorksheetFunction/CONFIDENCE_T</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/convert") %>">ApiWorksheetFunction/CONVERT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/cos") %>">ApiWorksheetFunction/COS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/cosh") %>">ApiWorksheetFunction/COSH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/cot") %>">ApiWorksheetFunction/COT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/coth") %>">ApiWorksheetFunction/COTH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/count") %>">ApiWorksheetFunction/COUNT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/counta") %>">ApiWorksheetFunction/COUNTA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/countblank") %>">ApiWorksheetFunction/COUNTBLANK</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/countif") %>">ApiWorksheetFunction/COUNTIF</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/countifs") %>">ApiWorksheetFunction/COUNTIFS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/coupdaybs") %>">ApiWorksheetFunction/COUPDAYBS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/coupdays") %>">ApiWorksheetFunction/COUPDAYS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/coupdaysnc") %>">ApiWorksheetFunction/COUPDAYSNC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/coupncd") %>">ApiWorksheetFunction/COUPNCD</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/coupnum") %>">ApiWorksheetFunction/COUPNUM</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/couppcd") %>">ApiWorksheetFunction/COUPPCD</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/critbinom") %>">ApiWorksheetFunction/CRITBINOM</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/csc") %>">ApiWorksheetFunction/CSC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/csch") %>">ApiWorksheetFunction/CSCH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/cumipmt") %>">ApiWorksheetFunction/CUMIPMT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/cumprinc") %>">ApiWorksheetFunction/CUMPRINC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/date") %>">ApiWorksheetFunction/DATE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/datevalue") %>">ApiWorksheetFunction/DATEVALUE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/daverage") %>">ApiWorksheetFunction/DAVERAGE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/day") %>">ApiWorksheetFunction/DAY</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/days") %>">ApiWorksheetFunction/DAYS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/days360") %>">ApiWorksheetFunction/DAYS360</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/db") %>">ApiWorksheetFunction/DB</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dcount") %>">ApiWorksheetFunction/DCOUNT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dcounta") %>">ApiWorksheetFunction/DCOUNTA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/ddb") %>">ApiWorksheetFunction/DDB</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dec2bin") %>">ApiWorksheetFunction/DEC2BIN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dec2hex") %>">ApiWorksheetFunction/DEC2HEX</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dec2oct") %>">ApiWorksheetFunction/DEC2OCT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/decimal") %>">ApiWorksheetFunction/DECIMAL</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/degrees") %>">ApiWorksheetFunction/DEGREES</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/delta") %>">ApiWorksheetFunction/DELTA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/devsq") %>">ApiWorksheetFunction/DEVSQ</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dget") %>">ApiWorksheetFunction/DGET</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/disc") %>">ApiWorksheetFunction/DISC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dmax") %>">ApiWorksheetFunction/DMAX</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dmin") %>">ApiWorksheetFunction/DMIN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dollar") %>">ApiWorksheetFunction/DOLLAR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dollarde") %>">ApiWorksheetFunction/DOLLARDE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dollarfr") %>">ApiWorksheetFunction/DOLLARFR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dproduct") %>">ApiWorksheetFunction/DPRODUCT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dstdev") %>">ApiWorksheetFunction/DSTDEV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dstdevp") %>">ApiWorksheetFunction/DSTDEVP</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dsum") %>">ApiWorksheetFunction/DSUM</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/duration") %>">ApiWorksheetFunction/DURATION</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dvar") %>">ApiWorksheetFunction/DVAR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/dvarp") %>">ApiWorksheetFunction/DVARP</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/ecma_ceiling") %>">ApiWorksheetFunction/ECMA_CEILING</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/edate") %>">ApiWorksheetFunction/EDATE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/effect") %>">ApiWorksheetFunction/EFFECT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/eomonth") %>">ApiWorksheetFunction/EOMONTH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/erf") %>">ApiWorksheetFunction/ERF</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/erf_precise") %>">ApiWorksheetFunction/ERF_PRECISE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/erfc") %>">ApiWorksheetFunction/ERFC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/erfc_precise") %>">ApiWorksheetFunction/ERFC_PRECISE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/error_type") %>">ApiWorksheetFunction/ERROR_TYPE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/even") %>">ApiWorksheetFunction/EVEN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/exact") %>">ApiWorksheetFunction/EXACT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/exp") %>">ApiWorksheetFunction/EXP</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/expon_dist") %>">ApiWorksheetFunction/EXPON_DIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/expondist") %>">ApiWorksheetFunction/EXPONDIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/f_dist") %>">ApiWorksheetFunction/F_DIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/f_dist_rt") %>">ApiWorksheetFunction/F_DIST_RT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/f_inv") %>">ApiWorksheetFunction/F_INV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/f_inv_rt") %>">ApiWorksheetFunction/F_INV_RT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/fact") %>">ApiWorksheetFunction/FACT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/factdouble") %>">ApiWorksheetFunction/FACTDOUBLE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/false") %>">ApiWorksheetFunction/FALSE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/fdist") %>">ApiWorksheetFunction/FDIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/find") %>">ApiWorksheetFunction/FIND</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/findb") %>">ApiWorksheetFunction/FINDB</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/finv") %>">ApiWorksheetFunction/FINV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/fisher") %>">ApiWorksheetFunction/FISHER</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/fisherinv") %>">ApiWorksheetFunction/FISHERINV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/fixed") %>">ApiWorksheetFunction/FIXED</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/floor") %>">ApiWorksheetFunction/FLOOR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/floor_math") %>">ApiWorksheetFunction/FLOOR_MATH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/floor_precise") %>">ApiWorksheetFunction/FLOOR_PRECISE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/forecast_ets") %>">ApiWorksheetFunction/FORECAST_ETS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/forecast_ets_confint") %>">ApiWorksheetFunction/FORECAST_ETS_CONFINT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/forecast_ets_seasonality") %>">ApiWorksheetFunction/FORECAST_ETS_SEASONALITY</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/forecast_ets_stat") %>">ApiWorksheetFunction/FORECAST_ETS_STAT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/frequency") %>">ApiWorksheetFunction/FREQUENCY</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/fv") %>">ApiWorksheetFunction/FV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/fvschedule") %>">ApiWorksheetFunction/FVSCHEDULE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/gamma") %>">ApiWorksheetFunction/GAMMA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/gamma_dist") %>">ApiWorksheetFunction/GAMMA_DIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/gamma_inv") %>">ApiWorksheetFunction/GAMMA_INV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/gammadist") %>">ApiWorksheetFunction/GAMMADIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/gammainv") %>">ApiWorksheetFunction/GAMMAINV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/gammaln") %>">ApiWorksheetFunction/GAMMALN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/gammaln_precise") %>">ApiWorksheetFunction/GAMMALN_PRECISE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/gauss") %>">ApiWorksheetFunction/GAUSS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/gcd") %>">ApiWorksheetFunction/GCD</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/geomean") %>">ApiWorksheetFunction/GEOMEAN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/gestep") %>">ApiWorksheetFunction/GESTEP</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/growth") %>">ApiWorksheetFunction/GROWTH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/harmean") %>">ApiWorksheetFunction/HARMEAN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/hex2bin") %>">ApiWorksheetFunction/HEX2BIN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/hex2dec") %>">ApiWorksheetFunction/HEX2DEC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/hex2oct") %>">ApiWorksheetFunction/HEX2OCT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/hlookup") %>">ApiWorksheetFunction/HLOOKUP</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/hour") %>">ApiWorksheetFunction/HOUR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/hyperlink") %>">ApiWorksheetFunction/HYPERLINK</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/hypgeom_dist") %>">ApiWorksheetFunction/HYPGEOM_DIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/hypgeomdist") %>">ApiWorksheetFunction/HYPGEOMDIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/if") %>">ApiWorksheetFunction/IF</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/iferror") %>">ApiWorksheetFunction/IFERROR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/ifna") %>">ApiWorksheetFunction/IFNA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imabs") %>">ApiWorksheetFunction/IMABS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imaginary") %>">ApiWorksheetFunction/IMAGINARY</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imargument") %>">ApiWorksheetFunction/IMARGUMENT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/inconjugate") %>">ApiWorksheetFunction/IMCONJUGATE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imcos") %>">ApiWorksheetFunction/IMCOS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imcosh") %>">ApiWorksheetFunction/IMCOSH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imcot") %>">ApiWorksheetFunction/IMCOT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imcsc") %>">ApiWorksheetFunction/IMCSC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imcsch") %>">ApiWorksheetFunction/IMCSCH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imdiv") %>">ApiWorksheetFunction/IMDIV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imexp") %>">ApiWorksheetFunction/IMEXP</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imln") %>">ApiWorksheetFunction/IMLN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imlog10") %>">ApiWorksheetFunction/IMLOG10</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imlog2") %>">ApiWorksheetFunction/IMLOG2</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/impower") %>">ApiWorksheetFunction/IMPOWER</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/improduct") %>">ApiWorksheetFunction/IMPRODUCT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imreal") %>">ApiWorksheetFunction/IMREAL</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imsec") %>">ApiWorksheetFunction/IMSEC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imsech") %>">ApiWorksheetFunction/IMSECH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imsin") %>">ApiWorksheetFunction/IMSIN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imsinh") %>">ApiWorksheetFunction/IMSINH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imsqrt") %>">ApiWorksheetFunction/IMSQRT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imsub") %>">ApiWorksheetFunction/IMSUB</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imsum") %>">ApiWorksheetFunction/IMSUM</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/imtan") %>">ApiWorksheetFunction/IMTAN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/index") %>">ApiWorksheetFunction/INDEX</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/int") %>">ApiWorksheetFunction/INT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/intrate") %>">ApiWorksheetFunction/INTRATE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/ipmt") %>">ApiWorksheetFunction/IPMT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/irr") %>">ApiWorksheetFunction/IRR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/iserr") %>">ApiWorksheetFunction/ISERR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/iserror") %>">ApiWorksheetFunction/ISERROR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/iseven") %>">ApiWorksheetFunction/ISEVEN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/isformula") %>">ApiWorksheetFunction/ISFORMULA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/islogical") %>">ApiWorksheetFunction/ISLOGICAL</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/isna") %>">ApiWorksheetFunction/ISNA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/isnontext") %>">ApiWorksheetFunction/ISNONTEXT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/isnumber") %>">ApiWorksheetFunction/ISNUMBER</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/iso_ceiling") %>">ApiWorksheetFunction/ISO_CEILING</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/isodd") %>">ApiWorksheetFunction/ISODD</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/isoweeknum") %>">ApiWorksheetFunction/ISOWEEKNUM</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/ispmt") %>">ApiWorksheetFunction/ISPMT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/isref") %>">ApiWorksheetFunction/ISREF</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/istext") %>">ApiWorksheetFunction/ISTEXT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/kurt") %>">ApiWorksheetFunction/KURT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/large") %>">ApiWorksheetFunction/LARGE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/lcm") %>">ApiWorksheetFunction/LCM</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/left") %>">ApiWorksheetFunction/LEFT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/leftb") %>">ApiWorksheetFunction/LEFTB</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/len") %>">ApiWorksheetFunction/LEN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/lenb") %>">ApiWorksheetFunction/LENB</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/linest") %>">ApiWorksheetFunction/LINEST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/ln") %>">ApiWorksheetFunction/LN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/log") %>">ApiWorksheetFunction/LOG</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/log10") %>">ApiWorksheetFunction/LOG10</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/logest") %>">ApiWorksheetFunction/LOGEST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/loginv") %>">ApiWorksheetFunction/LOGINV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/lognorm_dist") %>">ApiWorksheetFunction/LOGNORM_DIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/lognorm_inv") %>">ApiWorksheetFunction/LOGNORM_INV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/lognormdist") %>">ApiWorksheetFunction/LOGNORMDIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/lookup") %>">ApiWorksheetFunction/LOOKUP</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/lower") %>">ApiWorksheetFunction/LOWER</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/match") %>">ApiWorksheetFunction/MATCH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/max") %>">ApiWorksheetFunction/MAX</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/maxa") %>">ApiWorksheetFunction/MAXA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/mduration") %>">ApiWorksheetFunction/MDURATION</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/median") %>">ApiWorksheetFunction/MEDIAN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/mid") %>">ApiWorksheetFunction/MID</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/midb") %>">ApiWorksheetFunction/MIDB</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/min") %>">ApiWorksheetFunction/MIN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/mina") %>">ApiWorksheetFunction/MINA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/minute") %>">ApiWorksheetFunction/MINUTE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/mirr") %>">ApiWorksheetFunction/MIRR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/mod") %>">ApiWorksheetFunction/MOD</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/month") %>">ApiWorksheetFunction/MONTH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/mround") %>">ApiWorksheetFunction/MROUND</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/multinomial") %>">ApiWorksheetFunction/MULTINOMIAL</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/munit") %>">ApiWorksheetFunction/MUNIT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/n") %>">ApiWorksheetFunction/N</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/na") %>">ApiWorksheetFunction/NA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/negbinom_dist") %>">ApiWorksheetFunction/NEGBINOM_DIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/negbinomdist") %>">ApiWorksheetFunction/NEGBINOMDIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/networkdays") %>">ApiWorksheetFunction/NETWORKDAYS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/networkdays_intl") %>">ApiWorksheetFunction/NETWORKDAYS_INTL</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/nominal") %>">ApiWorksheetFunction/NOMINAL</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/norm_dist") %>">ApiWorksheetFunction/NORM_DIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/norm_inv") %>">ApiWorksheetFunction/NORM_INV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/norm_s_dist") %>">ApiWorksheetFunction/NORM_S_DIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/norm_s_inv") %>">ApiWorksheetFunction/NORM_S_INV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/normdist") %>">ApiWorksheetFunction/NORMDIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/norminv") %>">ApiWorksheetFunction/NORMINV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/normsdist") %>">ApiWorksheetFunction/NORMSDIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/normsinv") %>">ApiWorksheetFunction/NORMSINV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/not") %>">ApiWorksheetFunction/NOT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/now") %>">ApiWorksheetFunction/NOW</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/nper") %>">ApiWorksheetFunction/NPER</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/npv") %>">ApiWorksheetFunction/NPV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/numbervalue") %>">ApiWorksheetFunction/NUMBERVALUE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/oct2bin") %>">ApiWorksheetFunction/OCT2BIN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/oct2dec") %>">ApiWorksheetFunction/OCT2DEC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/oct2hex") %>">ApiWorksheetFunction/OCT2HEX</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/odd") %>">ApiWorksheetFunction/ODD</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/oddfprice") %>">ApiWorksheetFunction/ODDFPRICE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/oddfyield") %>">ApiWorksheetFunction/ODDFYIELD</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/oddlprice") %>">ApiWorksheetFunction/ODDLPRICE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/oddlyield") %>">ApiWorksheetFunction/ODDLYIELD</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/or") %>">ApiWorksheetFunction/OR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/pduration") %>">ApiWorksheetFunction/PDURATION</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/percentile") %>">ApiWorksheetFunction/PERCENTILE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/percentile_exc") %>">ApiWorksheetFunction/PERCENTILE_EXC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/percentile_inc") %>">ApiWorksheetFunction/PERCENTILE_INC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/percentrank") %>">ApiWorksheetFunction/PERCENTRANK</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/percentrank_exc") %>">ApiWorksheetFunction/PERCENTRANK_EXC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/percentrank_inc") %>">ApiWorksheetFunction/PERCENTRANK_INC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/permut") %>">ApiWorksheetFunction/PERMUT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/permutationa") %>">ApiWorksheetFunction/PERMUTATIONA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/phi") %>">ApiWorksheetFunction/PHI</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/pi") %>">ApiWorksheetFunction/PI</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/pmt") %>">ApiWorksheetFunction/PMT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/poisson") %>">ApiWorksheetFunction/POISSON</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/poisson_dist") %>">ApiWorksheetFunction/POISSON_DIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/power") %>">ApiWorksheetFunction/POWER</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/ppmt") %>">ApiWorksheetFunction/PPMT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/price") %>">ApiWorksheetFunction/PRICE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/pricedisc") %>">ApiWorksheetFunction/PRICEDISC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/pricemat") %>">ApiWorksheetFunction/PRICEMAT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/product") %>">ApiWorksheetFunction/PRODUCT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/proper") %>">ApiWorksheetFunction/PROPER</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/pv") %>">ApiWorksheetFunction/PV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/quartile") %>">ApiWorksheetFunction/QUARTILE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/quartile_exc") %>">ApiWorksheetFunction/QUARTILE_EXC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/quartile_inc") %>">ApiWorksheetFunction/QUARTILE_INC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/quotient") %>">ApiWorksheetFunction/QUOTIENT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/radians") %>">ApiWorksheetFunction/RADIANS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/rand") %>">ApiWorksheetFunction/RAND</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/randbetween") %>">ApiWorksheetFunction/RANDBETWEEN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/rank") %>">ApiWorksheetFunction/RANK</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/rank_avg") %>">ApiWorksheetFunction/RANK_AVG</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/rank_eq") %>">ApiWorksheetFunction/RANK_EQ</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/rate") %>">ApiWorksheetFunction/RATE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/received") %>">ApiWorksheetFunction/RECEIVED</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/replace") %>">ApiWorksheetFunction/REPLACE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/replaceb") %>">ApiWorksheetFunction/REPLACEB</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/rept") %>">ApiWorksheetFunction/REPT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/right") %>">ApiWorksheetFunction/RIGHT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/rightb") %>">ApiWorksheetFunction/RIGHTB</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/roman") %>">ApiWorksheetFunction/ROMAN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/round") %>">ApiWorksheetFunction/ROUND</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/rounddown") %>">ApiWorksheetFunction/ROUNDDOWN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/roundup") %>">ApiWorksheetFunction/ROUNDUP</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/rows") %>">ApiWorksheetFunction/ROWS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/rri") %>">ApiWorksheetFunction/RRI</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/search") %>">ApiWorksheetFunction/SEARCH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/searchb") %>">ApiWorksheetFunction/SEARCHB</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/sec") %>">ApiWorksheetFunction/SEC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/sech") %>">ApiWorksheetFunction/SECH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/second") %>">ApiWorksheetFunction/SECOND</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/seriessum") %>">ApiWorksheetFunction/SERIESSUM</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/sheet") %>">ApiWorksheetFunction/SHEET</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/sheets") %>">ApiWorksheetFunction/SHEETS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/sign") %>">ApiWorksheetFunction/SIGN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/sin") %>">ApiWorksheetFunction/SIN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/sinh") %>">ApiWorksheetFunction/SINH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/skew") %>">ApiWorksheetFunction/SKEW</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/skew_p") %>">ApiWorksheetFunction/SKEW_P</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/sln") %>">ApiWorksheetFunction/SLN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/small") %>">ApiWorksheetFunction/SMALL</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/sqrt") %>">ApiWorksheetFunction/SQRT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/sqrtpi") %>">ApiWorksheetFunction/SQRTPI</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/standardize") %>">ApiWorksheetFunction/STANDARDIZE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/stdev") %>">ApiWorksheetFunction/STDEV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/stdev_p") %>">ApiWorksheetFunction/STDEV_P</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/stdev_s") %>">ApiWorksheetFunction/STDEV_S</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/stdeva") %>">ApiWorksheetFunction/STDEVA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/stdevp") %>">ApiWorksheetFunction/STDEVP</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/stdevpa") %>">ApiWorksheetFunction/STDEVPA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/substitute") %>">ApiWorksheetFunction/SUBSTITUTE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/subtotal") %>">ApiWorksheetFunction/SUBTOTAL</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/sum") %>">ApiWorksheetFunction/SUM</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/sumif") %>">ApiWorksheetFunction/SUMIF</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/sumifs") %>">ApiWorksheetFunction/SUMIFS</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/sumsq") %>">ApiWorksheetFunction/SUMSQ</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/syd") %>">ApiWorksheetFunction/SYD</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/t") %>">ApiWorksheetFunction/T</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/t_dist") %>">ApiWorksheetFunction/T_DIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/t_dist_2t") %>">ApiWorksheetFunction/T_DIST_2T</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/t_dist_rt") %>">ApiWorksheetFunction/T_DIST_RT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/t_inv") %>">ApiWorksheetFunction/T_INV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/t_inv_2t") %>">ApiWorksheetFunction/T_INV_2T</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/tan") %>">ApiWorksheetFunction/TAN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/tanh") %>">ApiWorksheetFunction/TANH</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/tbilleq") %>">ApiWorksheetFunction/TBILLEQ</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/tbillprice") %>">ApiWorksheetFunction/TBILLPRICE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/tbillyield") %>">ApiWorksheetFunction/TBILLYIELD</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/tdist") %>">ApiWorksheetFunction/TDIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/text") %>">ApiWorksheetFunction/TEXT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/time") %>">ApiWorksheetFunction/TIME</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/timevalue") %>">ApiWorksheetFunction/TIMEVALUE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/tinv") %>">ApiWorksheetFunction/TINV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/today") %>">ApiWorksheetFunction/TODAY</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/transpose") %>">ApiWorksheetFunction/TRANSPOSE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/trend") %>">ApiWorksheetFunction/TREND</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/trim") %>">ApiWorksheetFunction/TRIM</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/trimmean") %>">ApiWorksheetFunction/TRIMMEAN</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/true") %>">ApiWorksheetFunction/TRUE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/trunc") %>">ApiWorksheetFunction/TRUNC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/type") %>">ApiWorksheetFunction/TYPE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/unichar") %>">ApiWorksheetFunction/UNICHAR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/unicode") %>">ApiWorksheetFunction/UNICODE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/upper") %>">ApiWorksheetFunction/UPPER</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/value") %>">ApiWorksheetFunction/VALUE</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/var") %>">ApiWorksheetFunction/VAR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/var_p") %>">ApiWorksheetFunction/VAR_P</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/var_s") %>">ApiWorksheetFunction/VAR_S</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/vara") %>">ApiWorksheetFunction/VARA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/varp") %>">ApiWorksheetFunction/VARP</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/varpa") %>">ApiWorksheetFunction/VARPA</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/vdb") %>">ApiWorksheetFunction/VDB</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/vlookup") %>">ApiWorksheetFunction/VLOOKUP</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/weekday") %>">ApiWorksheetFunction/WEEKDAY</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/weeknum") %>">ApiWorksheetFunction/WEEKNUM</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/weibull") %>">ApiWorksheetFunction/WEIBULL</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/weibull_dist") %>">ApiWorksheetFunction/WEIBULL_DIST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/workday") %>">ApiWorksheetFunction/WORKDAY</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/workday_intl") %>">ApiWorksheetFunction/WORKDAY_INTL</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/xirr") %>">ApiWorksheetFunction/XIRR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/xnpv") %>">ApiWorksheetFunction/XNPV</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/xor") %>">ApiWorksheetFunction/XOR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/year") %>">ApiWorksheetFunction/YEAR</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/yearfrac") %>">ApiWorksheetFunction/YEARFRAC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/yield") %>">ApiWorksheetFunction/YIELD</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/yielddisc") %>">ApiWorksheetFunction/YIELDDISC</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/yieldmat") %>">ApiWorksheetFunction/YIELDMAT</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/z_test") %>">ApiWorksheetFunction/Z_TEST</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheetfunction/ztest") %>">ApiWorksheetFunction/ZTEST</a> method to Spreadsheet API.</li>
+        <li>Added the <em>WorksheetFunction</em> property to the <a href="<%= Url.Action("spreadsheetapi/api") %>">Api</a> object of Spreadsheet API.</li>
+    </ul>
+    <br />
+
+    <p><b>Protected range methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrange") %>">ApiProtectedRange</a> class to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrange/adduser") %>">ApiProtectedRange/AddUser</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrange/deleteuser") %>">ApiProtectedRange/DeleteUser</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrange/getallusers") %>">ApiProtectedRange/GetAllUsers</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrange/getuser") %>">ApiProtectedRange/GetUser</a> method to Spreadsheet API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrange/setanyonetype") %>">ApiProtectedRange/SetAnyoneType</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrange/setrange") %>">ApiProtectedRange/SetRange</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrange/settitle") %>">ApiProtectedRange/SetTitle</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrangeuserinfo") %>">ApiProtectedRangeUserInfo</a> class to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrangeuserinfo/getid") %>">ApiProtectedRangeUserInfo/GetId</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrangeuserinfo/getname") %>">ApiProtectedRangeUserInfo/GetName</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiprotectedrangeuserinfo/gettype") %>">ApiProtectedRangeUserInfo/GetType</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/addprotectedrange") %>">ApiWorksheet/AddProtectedRange</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getallprotectedranges") %>">ApiWorksheet/GetAllProtectedRanges</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getprotectedrange") %>">ApiWorksheet/GetProtectedRange</a> method to Spreadsheet API.</li>
+        <li>Added the <em>AllProtectedRanges</em> property to the <a href="<%= Url.Action("spreadsheetapi/apiworksheet") %>">ApiWorksheet</a> object of Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#ProtectedRangeUserType">ProtectedRangeUserType</a> type to the simple type definitions.</li>
+    </ul>
+    <br />
+
+    <p><b>Reference style methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/getreferencestyle") %>">Api/GetReferenceStyle</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/setreferencestyle") %>">Api/SetReferenceStyle</a> method to Spreadsheet API.</li>
+        <li>Added the <em>ReferenceStyle</em> property to the <a href="<%= Url.Action("spreadsheetapi/api") %>">Api</a> object of Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#ReferenceStyle">ReferenceStyle</a> type to the simple type definitions.</li>
+    </ul>
+    <br />
+
+    <p><b>Methods for pasting / cutting ranges</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirange/cut") %>">ApiRange/Cut</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirange/pastespecial") %>">ApiRange/PasteSpecial</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/paste") %>">ApiWorksheet/Paste</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#PasteSpecialOperation">PasteSpecialOperation</a> type to the simple type definitions.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#PasteType">PasteType</a> type to the simple type definitions.</li>
+    </ul>
+    <br />
+
+    <p><b>Methods for moving a cursor</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/movecursoroutside") %>">ApiBlockLvlSdt/MoveCursorOutside</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/movecursoroutside") %>">ApiFormBase/MoveCursorOutside</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiinlinelvlsdt/movecursoroutside") %>">ApiInlineLvlSdt/MoveCursorOutside</a> method to Text document API.</li>
+    </ul>
+    <br />
+
+    <p><b>Custom function methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/addcustomfunction") %>">Api/AddCustomFunction</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/clearcustomfunctions") %>">Api/ClearCustomFunctions</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/removecustomfunction") %>">Api/RemoveCustomFunction</a> method to Spreadsheet API.</li>
+    </ul>
+    <br />
+
+    <p><b>RGB color methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiunicolor/getrgb") %>">ApiUniColor/GetRGB</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apicolor/getrgb") %>">ApiColor/GetRGB</a> method to Spreadsheet API.</li>
+    </ul>
+    <br />
+
+    <p><b>Other methods</b></p>
+    <ul>
+        <li>Added the <em>nWidth</em> and <em>nHeight</em> parameters to the <a href="<%= Url.Action("textdocumentapi/apipictureform/setimage") %>">ApiPictureForm/SetImage</a> method of Text document API.</li>
+    </ul>
+    <br />
+
     <h2 id="80" class="copy-link">Version 8.0</h2>
     <p><b>Form methods</b></p>
     <ul>
@@ -33,7 +621,6 @@
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/freezecolumns") %>">ApiFreezePanes/FreezeColumns</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/freezerows") %>">ApiFreezePanes/FreezeRows</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/getlocation") %>">ApiFreezePanes/GetLocation</a> method to Spreadsheet API.</li>
-        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apifreezepanes/unfreeze") %>">ApiFreezePanes/Unfreeze</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getfreezepanes") %>">ApiWorksheet/GetFreezePanes</a> method to Spreadsheet API.</li>
         <li>Added the <em>FreezePanes</em> property to the <a href="<%= Url.Action("spreadsheetapi/api") %>">Api</a> object of Spreadsheet API.</li>
         <li>Added the <em>FreezePanes</em> property to the <a href="<%= Url.Action("spreadsheetapi/apiworksheet") %>">ApiWorksheet</a> object of Spreadsheet API.</li>

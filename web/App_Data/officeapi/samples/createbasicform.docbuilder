@@ -1,4 +1,4 @@
-builder.CreateFile("docx");
+builder.CreateFile("pdf");
 var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
 var oHeadingStyle = oDocument.GetStyle("Heading 3");

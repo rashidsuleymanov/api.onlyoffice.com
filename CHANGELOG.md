@@ -21,6 +21,8 @@
 - editors: the editorConfig.customization.layout.toolbar.home.mailmerge field is deprecated, please use the editorConfig.customization.layout.toolbar.collaboration.mailmerge field instead
 - editors: change the default value of the editorConfig.customization.hideRightMenu parameter to true
 - office api section
+- docbuidler: added the Python framework
+- docbuilder: v8.1.0
 - update favicon
 
 ## 5.0.1

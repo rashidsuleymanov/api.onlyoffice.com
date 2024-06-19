@@ -226,14 +226,16 @@ There are seven form types: <em>text field</em>, <em>combo box</em>, <em>dropdow
 <div class="global-type-definitions">
 <span class="anchor-position" id="CreateNewDoc">&nbsp;</span>
 <h2>Creating a new form document</h2>
+    <p>To create a form document, the <a href="<%= Url.Action("integrationapi/c/cdocbuilder/createfile", "docbuilder") %>">CreateFile</a> method with the <em>"pdf"</em> extension must be used.</p>
+    <p>To save the ready document as a form, you need to use the <a href="<%= Url.Action("integrationapi/c/cdocbuilder/savefile", "docbuilder") %>">SaveFile</a> method with the <em>"pdf"</em> extension.</p>
     <p>The simplest example form document with a single text form containing the "John Smith" text can be built with the help of <b>ONLYOFFICE Document Builder</b> using the following code:</p>
-    <pre>builder.CreateFile("docx");                      // create a form document file in the .docx format with ONLYOFFICE Document Builder
+    <pre>builder.CreateFile("pdf");                      // create a form document file in the .pdf format with ONLYOFFICE Document Builder
 var oDocument = Api.GetDocument();                // create a new 'oDocument' variable and get the created text document contents
 var oTextForm = Api.CreateTextForm();             // create an empty text form
 var oParagraph = oDocument.GetElement(0);         // get the first empty paragraph from the created document
 oParagraph.AddElement(oTextForm);                 // add the created text form to the first paragraph
 oTextForm.SetText("John Smith");                  // add the "John Smith" text to the text form
-builder.SaveFile("pdf", "example.pdf");       // save the resulting form document as a file in the .pdf format with the 'example.pdf' name
+builder.SaveFile("pdf", "example.pdf");           // save the resulting form document as a file in the .pdf format with the 'example.pdf' name
 builder.CloseFile();                              // close the form document file and finish work with ONLYOFFICE Document Builder</pre>
     </div>
     <h2 id="OpenDoc">Opening an existing form document</h2>

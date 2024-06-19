@@ -314,6 +314,67 @@
       "\"@\""
     ]
   },
+  "ReferenceStyle": {
+    "name": "ReferenceStyle",
+    "description": "<p>The cell reference type.</p>",
+    "type": [
+      "'xlA1'",
+      "'xlR1C1'"
+    ]
+  },
+  "PasteType": {
+    "name": "PasteType",
+    "description": "<p>Specifies the part of the range to be pasted.</p>",
+    "type": [
+      "\"xlPasteAll\"",
+      "\"xlPasteAllExceptBorders\"",
+      "\"xlPasteColumnWidths\"",
+      "\"xlPasteComments\"",
+      "\"xlPasteFormats\"",
+      "\"xlPasteFormulas\"",
+      "\"xlPasteFormulasAndNumberFormats\"",
+      "\"xlPasteValues\"",
+      "\"xlPasteValuesAndNumberFormats\""
+    ]
+  },
+  "PasteSpecialOperation": {
+    "name": "PasteSpecialOperation",
+    "description": "<p>The mathematical operation which will be applied to the copied data.</p>",
+    "type": [
+      "\"xlPasteSpecialOperationAdd\"",
+      "\"xlPasteSpecialOperationDivide\"",
+      "\"xlPasteSpecialOperationMultiply\"",
+      "\"xlPasteSpecialOperationNone\"",
+      "\"xlPasteSpecialOperationSubtract\""
+    ]
+  },
+  "Aggregation": {
+    "name": "Aggregation",
+    "description": "<p>A numeric value that specifies which function should be used to aggregate identical time values in the timeline data range.</p>\n<ul>\n<li><b>1</b> (or omitted) - AVERAGE.</li>\n<li><b>2</b> - COUNT.</li>\n<li><b>3</b> - COUNTA.</li>\n<li><b>4</b> - MAX.</li>\n<li><b>5</b> - MEDIAN.</li>\n<li><b>6</b> - MIN.</li>\n<li><b>7</b> - SUM.</li>\n</ul>",
+    "type": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ]
+  },
+  "StatisticType": {
+    "name": "StatisticType",
+    "description": "<p>A numeric value between 1 and 8 that specifies which statistic will be returned.</p>\n<ul>\n<li><b>1</b> - Alpha parameter of ETS algorithm - the base value parameter.</li>\n<li><b>2</b> - Beta parameter of ETS algorithm - the trend value parameter.</li>\n<li><b>3</b> - Gamma parameter of ETS algorithm - the seasonality value parameter.</li>\n<li><b>4</b> - MASE (mean absolute scaled error) metric - a measure of the accuracy of forecasts.</li>\n<li><b>5</b> - SMAPE (symmetric mean absolute percentage error) metric - a measure of the accuracy based on percentage errors.</li>\n<li><b>6</b> - MAE (mean absolute error) metric - a measure of the accuracy of forecasts.</li>\n<li><b>7</b> - RMSE (root mean squared error) metric - a measure of the differences between predicted and observed values.</li>\n<li><b>8</b> - Step size detected in the timeline.</li>\n</ul>",
+    "type": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+    ]
+  },
   "FreezePaneType": {
     "name": "FreezePaneType",
     "description": "<p>Specifies a type of freeze panes.</p>",
@@ -531,6 +592,15 @@
       "\"xlUnderlineStyleNone\"",
       "\"xlUnderlineStyleSingle\"",
       "\"xlUnderlineStyleSingleAccounting\""
+    ]
+  },
+  "ProtectedRangeUserType": {
+    "name": "ProtectedRangeUserType",
+    "description": "<p>Specifies the user type of the protected range.</p>",
+    "type": [
+      "\"CanEdit\"",
+      "\"CanView\"",
+      "\"NotView\""
     ]
   }
 }

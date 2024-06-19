@@ -134,10 +134,13 @@
                 case "slide":
                     ext = "pptx";
                     break;
+                case "form":
+                    ext = "pdf";
+                    break;
             }
 
             var documentType = section.Module;
-            if (documentType == "form") documentType = "word";
+            if (documentType == "form") documentType = "pdf";
         %>
 
         var config = <%= Config.Serialize(
