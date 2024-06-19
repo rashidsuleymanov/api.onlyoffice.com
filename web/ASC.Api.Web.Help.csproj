@@ -318,6 +318,7 @@
     <Content Include="App_Data\officeapi\examples\cell\ApiChart.SetVertAxisTickLabelPosition.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiColor.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiColor.GetClassType.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiColor.GetRGB.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiComment.AddReply.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiComment.Delete.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiComment.docbuilder" />
@@ -678,7 +679,6 @@
     <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.FIND.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.FINDB.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.FIXED.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.GetWorksheetFunction.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.LEFT.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.LEFTB.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.LEN.docbuilder" />
@@ -2224,6 +2224,7 @@
     <Content Include="App_Data\officeapi\examples\word\ApiTextPr.ToJSON.docbuilder" />
     <Content Include="App_Data\officeapi\examples\word\ApiUniColor.docbuilder" />
     <Content Include="App_Data\officeapi\examples\word\ApiUniColor.GetClassType.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\word\ApiUniColor.GetRGB.docbuilder" />
     <Content Include="App_Data\officeapi\examples\word\ApiUniColor.ToJSON.docbuilder" />
     <Content Include="App_Data\officeapi\examples\word\ApiWatermarkSettings.docbuilder" />
     <Content Include="App_Data\officeapi\examples\word\ApiWatermarkSettings.GetClassType.docbuilder" />
@@ -5294,8 +5295,34 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\officeapi\examples\cell\ApiColor.GetRGB.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\word\ApiUniColor.GetRGB.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\Api.GetWorksheetFunction.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.AVERAGE.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.AVERAGEA.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.BETADIST.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.BETA_DIST.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.BETA_INV.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.BINOM_INV.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.CHIDIST.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.CHIINV.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.CHISQ_INV.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.CHISQ_INV_RT.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.CONFIDENCE.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.CONFIDENCE_NORM.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.CONFIDENCE_T.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.COUNT.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.COUNTA.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.COUNTBLANK.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.CRITBINOM.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.DEVSQ.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.EXPONDIST.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.EXPON_DIST.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.FDIST.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.FINV.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.F_DIST.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.F_DIST_RT.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.F_INV.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.KURT.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.LARGE.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
