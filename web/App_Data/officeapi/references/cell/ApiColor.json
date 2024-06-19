@@ -1,5 +1,18 @@
 {
   "methods": {
+    "GetRGB": {
+      "memberof": "ApiColor",
+      "name": "GetRGB",
+      "description": "<p>Returns a color value in RGB format.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "GetClassType": {
       "memberof": "ApiColor",
       "name": "GetClassType",

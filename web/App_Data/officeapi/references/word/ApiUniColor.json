@@ -35,6 +35,23 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "GetRGB": {
+      "memberof": "ApiUniColor",
+      "name": "GetRGB",
+      "description": "<p>Returns a color value in RGB format.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "events": {},

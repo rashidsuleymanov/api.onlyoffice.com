@@ -1475,6 +1475,27 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "Paste": {
+      "memberof": "ApiWorksheet",
+      "name": "Paste",
+      "description": "<p>Pastes the contents of the clipboard to the current sheet.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiRange",
+          "name": "destination",
+          "description": "<p>The cell range where the clipboard contents should be pasted. If this argument is omitted, the current selection is used.</p>",
+          "optional": true
+        }
+      ]
     }
   },
   "events": {},

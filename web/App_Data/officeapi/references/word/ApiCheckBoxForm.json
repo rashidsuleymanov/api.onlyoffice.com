@@ -549,10 +549,11 @@
     "MoveCursorOutside": {
       "memberof": "ApiCheckBoxForm",
       "name": "MoveCursorOutside",
-      "description": "<p>Place cursor before/after the current form.</p>",
+      "description": "<p>Places a cursor before/after the current form.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CFE"
         ]
       },
       "returns": [],
@@ -562,6 +563,7 @@
         {
           "type": "boolean",
           "name": "isAfter",
+          "description": "<p>Specifies whether a cursor will be placed before (false) or after (true) the current form.</p>",
           "optional": true,
           "defaultValue": true
         }
