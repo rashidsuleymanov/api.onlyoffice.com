@@ -559,12 +559,12 @@
         $.ajax({
             type: "POST",
             url: "<%= Url.Action("configcreate", null, null, Request.Url.Scheme) %>",
-            data: JSON.stringify({ jsonConfig: JSON.stringify(copy) }),
+            data: JSON.stringify(copy),
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (data) {
-                copy = JSON.parse(data);
-                window.docEditor = new DocsAPI.DocEditor("placeholder", JSON.parse(data));
+                copy = data;
+                window.docEditor = new DocsAPI.DocEditor("placeholder", data);
             }
         });
         var pre = document.getElementById("configPre");
