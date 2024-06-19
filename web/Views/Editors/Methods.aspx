@@ -40,6 +40,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setSharingSettings">setSharingSettings</a> - update the <em>information</em> about the settings which allow to share the document with other users.</li>
         <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</li>
         <li><a href="#showMessage">showMessage</a> - display tooltip with the message.</li>
+        <li><a href="#startFilling">startFilling</a> - start filling out the ready forms and lock the pdf editing.</li>
     </ul>
 
     <h2>Methods and their description:</h2>
@@ -1339,6 +1340,16 @@ docEditor.showMessage(message);
             <note>
                 Please note that displaying a tooltip with a message is not supported in the embedded platform <a href="<%= Url.Action("config") %>#type">type</a>.
             </note>
+        </li>
+
+        <li>
+            <p>
+                <b id="startFilling" class="copy-link">startFilling</b> - start filling out the ready forms and lock the pdf editing (only pdf viewing becomes available).
+                This method can be called only after the <a href="<%= Url.Action("config/events") %>#onRequestStartFilling">onRequestStartFilling</a> event.
+            </p>
+            <pre>
+docEditor.startFilling();
+</pre>
         </li>
     </ul>
     <span id="requiredDescr" class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Developer Edition</em></span>

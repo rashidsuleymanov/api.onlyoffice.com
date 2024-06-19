@@ -268,6 +268,7 @@
         "<a href="<%= Url.Action("config/events") %>#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a>": onRequestSelectSpreadsheet,
         "<a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a>": onRequestSendNotify,
         "<a href="<%= Url.Action("config/events") %>#onRequestSharingSettings">onRequestSharingSettings</a>": onRequestSaveAs,
+        "<a href="<%= Url.Action("config/events") %>#onRequestStartFilling">onRequestStartFilling</a>": onRequestStartFilling,
         "<a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a>": onRequestUsers,
         "<a href="<%= Url.Action("config/events") %>#onSubmit">onSubmit</a>": onSubmit,
         "<a href="<%= Url.Action("config/events") %>#onWarning">onWarning</a>": onWarning
