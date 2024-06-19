@@ -4654,6 +4654,7 @@
     <Content Include="Views\Desktop\AddingDMS\Encryption\keygeneration.ascx" />
     <Content Include="Views\Desktop\AddingDMS\Encryption\operations.ascx" />
     <Content Include="Views\Desktop\AddingDMS\execCommand.ascx" />
+    <Content Include="Views\Desktop\AddingDMS\GettingViewportSettings.ascx" />
     <Content Include="Views\Desktop\AddingDMS\LoginLogout.ascx" />
     <Content Include="Views\Desktop\AddingDMS\Notifications.ascx" />
     <Content Include="Views\Desktop\AddingDMS\Opening.ascx" />

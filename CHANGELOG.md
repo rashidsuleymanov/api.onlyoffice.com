@@ -26,6 +26,8 @@
 - plugins: v8.1.0
 - plugins: added the ability to add the plugin toolbar menu items
 - plugins: added the ability to create multiple left panels for plugins
+- desktop: added the getViewportSettings method and onViewportSettingsChanged event to the AscDesktopEditor object
+- desktop: v8.1
 - update favicon
 
 ## 5.0.1

@@ -81,7 +81,7 @@
       "title":"Desktop Editors",
       "description":"In this section, you will learn how to extend the ONLYOFFICE Desktop Editors functionality by setting up, customizing and integrating them with the document management systems.",
       "parent": "docs",
-      "version":"8.0"
+      "version":"8.1"
    },
    {
       "id":"workspaceapi",
