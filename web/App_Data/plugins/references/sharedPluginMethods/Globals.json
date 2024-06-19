@@ -58,6 +58,50 @@
       }
     ]
   },
+  "OLEProperties": {
+    "name": "OLEProperties",
+    "description": "<p>The OLE object properties</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "string",
+        "name": "data",
+        "description": "<p>OLE object data (internal format).</p>"
+      },
+      {
+        "type": "string",
+        "name": "imgSrc",
+        "description": "<p>A link to the image (its visual representation) stored in the OLE object and used by the plugin.</p>"
+      },
+      {
+        "type": "string",
+        "name": "guid",
+        "description": "<p>An identifier of the plugin which can edit the current OLE object and must be of the <em>asc.{UUID}</em> type.</p>"
+      },
+      {
+        "type": "number",
+        "name": "width",
+        "description": "<p>The OLE object width measured in millimeters.</p>"
+      },
+      {
+        "type": "number",
+        "name": "height",
+        "description": "<p>The OLE object height measured in millimeters.</p>"
+      },
+      {
+        "type": "number",
+        "name": "widthPix",
+        "description": "<p>The OLE object image width in pixels.</p>"
+      },
+      {
+        "type": "number",
+        "name": "heightPix",
+        "description": "<p>The OLE object image height in pixels.</p>"
+      }
+    ]
+  },
   "FontInfo": {
     "name": "FontInfo",
     "description": "<p>An object containing the font information.</p>",
