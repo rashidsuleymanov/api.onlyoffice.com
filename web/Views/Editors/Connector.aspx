@@ -103,7 +103,7 @@ connector.attachEvent("onChangeContentControl", function()
                         <td>command</td>
                         <td>定义用JavaScript编写的命令，其目的是形成可插入结果文档文件（
                             格式化段落、表格、文本部分和单独单词等）的结构化数据。然后将数据发送给编辑器。
-                            该命令必须与 <a href="<%= Url.Action("basic", "docbuilder") %>">ONLYOFFICE 文档生成器</a> 语法兼容。</td>
+                            该命令必须与 <a href="<%= Url.Action("basic", "officeapi") %>">Office JavaScript API</a> 语法兼容。</td>
                         <td>函数</td>
                     </tr>
                     <tr class="tablerow">

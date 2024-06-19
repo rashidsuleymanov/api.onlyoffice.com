@@ -96,7 +96,7 @@
 
     <p>
         您可以在 <a href="<%= Url.Action("integrationapi/usingdocbuilderfile", "DocBuilder") %>">此处</a> 找到有关 <em>.docbuilder</em> 文件语法的更多信息。
-        请阅读 <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("gettingstarted", "DocBuilder") %>">API 文档</a> ，了解有关使用哪些类和方法在 <em>.docbuilder</em> 文件的帮助下生成文档的详细信息。
+        Please read <a href="<%= Url.Action("basic", "officeapi") %>">Office JavaScript API documentation</a> for the detailed information on what classes and methods are used to generate the documents with the help of <em>.docbuilder</em> files.
     </p>
 
     <div id="sample-sync-first" class="header-gray copy-link">发送到 <b>文档生成器服务</b> 的 JSON 对象示例，用于第一个异步请求</div>

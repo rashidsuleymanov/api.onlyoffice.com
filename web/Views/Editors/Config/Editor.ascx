@@ -187,7 +187,7 @@
             <div id="holder_editorConfig_user" class="config_object_holder" hidden>
                 <div class="line input_line">
                     <label for="editorConfig_user_group">组</label>
-                    <input type="text" id="editorConfig_user_group" name="editorConfig_user_group" value="Group1">
+                    <input type="text" id="editorConfig_user_group" name="editorConfig_user_group" value="Group1,Group2">
                 </div>
                 <div class="line input_line">
                     <label for="editorConfig_user_id">Id</label>
@@ -459,11 +459,11 @@
                         <b>例如</b>："John"；
                     </li>
                     <li>
-                        <b>group</b> - 用户所属的组，
+                        <b>group</b> - the group (or several groups separated with commas) the user belongs to,
                         <br />
                         <b>类型</b>：string，
                         <br />
-                        <b>例如</b>："Group1"；
+                        <b>例如</b>："Group1,Group2"；
                     </li>
                     <li>
                         <b>id</b> - 用户的标识。
@@ -506,7 +506,7 @@
             </td>
             <td>object</td>
             <td>{
-    "group": "Group1",
+    "group": "Group1,Group2",
     "id": "78e1e841",
     "image": "https://example.com/url-to-user-avatar.png",
     "name": "John Smith"
@@ -778,13 +778,13 @@
             $.ajax({
                 type: "POST",
                 url: "<%= Url.Action("configcreate", null, null, Request.Url.Scheme) %>",
-                data: JSON.stringify({ jsonConfig: JSON.stringify(copy) }),
+                data: JSON.stringify(copy),
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data) {
-                    config = JSON.parse(data);
-                    copy = JSON.parse(data);
-                    window.docEditor = new DocsAPI.DocEditor("placeholder", JSON.parse(data));
+                    config = data;
+                    copy = data;
+                    window.docEditor = new DocsAPI.DocEditor("placeholder", data);
                 }
             });
             //window.docEditor = new DocsAPI.DocEditor("placeholder", config);
