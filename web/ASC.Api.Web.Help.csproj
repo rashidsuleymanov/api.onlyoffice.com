@@ -649,7 +649,7 @@
     <Content Include="App_Data\officeapi\examples\cell\ApiWorksheet.SetTopMargin.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiWorksheet.SetVisible.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.ASC.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\cell\ApIWorksheetFunction.CHAR.docbuilder" />
+    <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.CHAR.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.CLEAN.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.CODE.docbuilder" />
     <Content Include="App_Data\officeapi\examples\cell\ApiWorksheetFunction.CONCATENATE.docbuilder" />
