@@ -77,6 +77,61 @@
           "optional": false
         }
       ]
+    },
+    "GetAllComments": {
+      "memberof": "Api",
+      "name": "GetAllComments",
+      "description": "<p>Returns all the comments from the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<comment>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetCustomFunctions": {
+      "memberof": "Api",
+      "name": "GetCustomFunctions",
+      "description": "<p>Returns a library of local custom functions.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetCustomFunctions": {
+      "memberof": "Api",
+      "name": "SetCustomFunctions",
+      "description": "<p>Updates a library of local custom functions.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "jsonString",
+          "description": "<p>A library of custom functions in JSON format.</p>",
+          "optional": false
+        }
+      ]
     }
   },
   "events": {},

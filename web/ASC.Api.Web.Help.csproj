@@ -2346,6 +2346,7 @@
     <Content Include="App_Data\plugins\examples\Button.docbuilder" />
     <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.AddComment.docbuilder" />
     <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.ChangeComment.docbuilder" />
+    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.GetAllComments.docbuilder" />
     <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.RemoveComments.docbuilder" />
     <Content Include="App_Data\plugins\examples\comment.docbuilder" />
     <Content Include="App_Data\plugins\examples\CommentData.docbuilder" />
@@ -2373,6 +2374,7 @@
     <Content Include="App_Data\plugins\examples\localeTranslate.docbuilder" />
     <Content Include="App_Data\plugins\examples\Macros.docbuilder" />
     <Content Include="App_Data\plugins\examples\OLEObjectData.docbuilder" />
+    <Content Include="App_Data\plugins\examples\OLEProperties.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.createWindow.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.getItems.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.getScrollSizes.docbuilder" />
@@ -2408,14 +2410,17 @@
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onMethodReturn.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onRemoveComment.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onTargetPositionChanged.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onToolbarMenuClick.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onTranslate.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.resizeWindow.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.sendToPlugin.docbuilder" />
     <Content Include="App_Data\plugins\examples\PluginData.docbuilder" />
     <Content Include="App_Data\plugins\examples\ReplaceImageMode.docbuilder" />
     <Content Include="App_Data\plugins\examples\SelectionType.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.ActivateWindow.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.AddContextMenuItem.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.AddOleObject.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.AddToolbarMenuItem.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.CloseWindow.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.CoAuthoringChatSendMessage.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.ConvertDocument.docbuilder" />
@@ -2427,6 +2432,7 @@
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetImageDataFromSelection.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetInstalledPlugins.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetMacros.docbuilder" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetSelectedOleObjects.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetSelectedText.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetSelectionType.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.GetVBAMacros.docbuilder" />
@@ -2457,6 +2463,7 @@
     <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.AddComment.docbuilder" />
     <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.ChangeComment.docbuilder" />
     <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.EndSlideShow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.GetAllComments.docbuilder" />
     <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.GoToNextSlideInSlideShow.docbuilder" />
     <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.GoToPreviousSlideInSlideShow.docbuilder" />
     <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.GoToSlideInSlideShow.docbuilder" />
@@ -2465,6 +2472,10 @@
     <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.ResumeSlideShow.docbuilder" />
     <Content Include="App_Data\plugins\examples\slidePluginMethods\Api.StartSlideShow.docbuilder" />
     <Content Include="App_Data\plugins\examples\TextPartType.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ToolbarMenuItem.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ToolbarMenuItemType.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ToolbarMenuMainItem.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ToolbarMenuTab.docbuilder" />
     <Content Include="App_Data\plugins\examples\watermark_on_draw.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.AcceptReviewChanges.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.AddAddinField.docbuilder" />
@@ -3027,6 +3038,7 @@
     <Content Include="Content\img\plugins\submit-plugin.png" />
     <Content Include="Content\img\plugins\text_area.png" />
     <Content Include="Content\img\plugins\text_field.png" />
+    <Content Include="Content\img\plugins\toolbar-plugins.png" />
     <Content Include="Content\img\plugins\unhide_all_rows.png" />
     <Content Include="Content\img\plugins\unmerge_cells_after.png" />
     <Content Include="Content\img\plugins\unmerge_cells_before.png" />
