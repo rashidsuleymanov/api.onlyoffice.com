@@ -2375,7 +2375,9 @@
     <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.AddComment.docbuilder" />
     <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.ChangeComment.docbuilder" />
     <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.GetAllComments.docbuilder" />
+    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.GetCustomFunctions.docbuilder" />
     <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.RemoveComments.docbuilder" />
+    <Content Include="App_Data\plugins\examples\cellPluginMethods\Api.SetCustomFunctions.docbuilder" />
     <Content Include="App_Data\plugins\examples\comment.docbuilder" />
     <Content Include="App_Data\plugins\examples\CommentData.docbuilder" />
     <Content Include="App_Data\plugins\examples\ContentControl.docbuilder" />
