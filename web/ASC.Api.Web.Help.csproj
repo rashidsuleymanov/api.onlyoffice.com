@@ -2547,6 +2547,11 @@
     <Content Include="Content\img\docspace\gifs\js-sdk-authorization-sample.gif" />
     <Content Include="Content\img\docspace\gifs\js-sdk-create-file.gif" />
     <Content Include="Content\img\docspace\gifs\js-sdk-attach-files.gif" />
+    <Content Include="Content\img\docspace\js-sdk-open-file-in-editors.png" />
+    <Content Include="Content\img\docspace\js-sdk-log-in.png" />
+    <Content Include="Content\img\docspace\js-sdk-create-file.png" />
+    <Content Include="Content\img\docspace\js-sdk-customization-of-editors.png" />
+    <Content Include="Content\img\docspace\js-sdk-attach-files.png" />
     <Content Include="Content\img\docspace\customization-of-editors.png" />
     <Content Include="Content\img\docspace\upload-plugin.jpg" />
     <Content Include="Content\img\Editor\accept_reject.png" />
