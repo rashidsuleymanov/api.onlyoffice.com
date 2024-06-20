@@ -3906,7 +3906,27 @@ select {
     }
 }
 
-.fill-form {
-    background-image: url("img/docbuilder/samples/fill-form.svg");
+.sample-open-file {
+    background-image: url("img/docspace/js-sdk-open-file-in-editors.png");
+    background-repeat: no-repeat;
+}  
+
+.authorization {
+    background-image: url("img/docspace/js-sdk-log-in.png");
+    background-repeat: no-repeat;
+}
+
+.create-file-in-selected-folder {
+    background-image: url("img/docspace/js-sdk-create-file.png");
+    background-repeat: no-repeat;
+}
+
+.customization-of-editors {
+    background-image: url("img/docspace/js-sdk-customization-of-editors.png");
+    background-repeat: no-repeat;
+}
+
+.attach-files {
+    background-image: url("img/docspace/js-sdk-attach-files.png");
     background-repeat: no-repeat;
 }
