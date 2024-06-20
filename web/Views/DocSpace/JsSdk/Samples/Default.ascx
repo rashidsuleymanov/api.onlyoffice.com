@@ -7,7 +7,7 @@
 <ul class="sample-block">
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("jssdk/samples/sampleopenfile")%>">
-            <div class="example-sample-img create-formal-document"></div>
+            <div class="example-sample-img sample-open-file"></div>
         </a>
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("jssdk/samples/sampleopenfile")%>">Open file in ONLYOFFICE editors</a></p>
@@ -17,7 +17,7 @@
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("jssdk/samples/authorization")%>">
-            <div class="example-sample-img create-formal-document"></div>
+            <div class="example-sample-img authorization"></div>
         </a>
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("jssdk/samples/authorization")%>">Log in to DocSpace account</a></p>
@@ -27,7 +27,7 @@
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("jssdk/samples/createfileinselectedfolder")%>">
-            <div class="example-sample-img create-formal-document"></div>
+            <div class="example-sample-img create-file-in-selected-folder"></div>
         </a>
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("jssdk/samples/createfileinselectedfolder")%>">Create file in selected folder</a></p>
@@ -37,7 +37,7 @@
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("jssdk/samples/customizationofeditors")%>">
-            <div class="example-sample-img create-formal-document"></div>
+            <div class="example-sample-img customization-of-editors"></div>
         </a>
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("jssdk/samples/customizationofeditors")%>">Customization of editors</a></p>
@@ -47,7 +47,7 @@
     </li>
     <li class="sample-example" data-types="text-editor,spreadsheet,presentation,visual,non-system,ole-object">
         <a href="<%= Url.Action("jssdk/samples/attachfiles")%>">
-            <div class="example-sample-img create-formal-document"></div>
+            <div class="example-sample-img attach-files"></div>
         </a>
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("jssdk/samples/attachfiles")%>">Attach files</a></p>
