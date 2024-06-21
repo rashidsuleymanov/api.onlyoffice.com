@@ -52,28 +52,28 @@
       "id":"editors",
       "title":"Docs API",
       "description":"In this section, you will learn how to bring document editing and co-authoring to your web app users, set up, configure, and integrate ONLYOFFICE Docs.",
-      "version":"8.0",
+      "version":"8.1",
       "parent": "docs"
    },
    {
       "id":"officeapi",
       "title":"Office API",
       "description":"In this section, you will learn how to use our JavaScript library to write code for your plugins, macros, builder scripts, etc. This library contains classes and methods for every document type: Text document API, Spreadsheet API, Presentation API, and Form API.",
-      "version": "8.0",
+      "version": "8.1",
       "parent": "docs"
    },
    {
       "id":"plugin",
       "title":"Plugins and Macros",
       "description":"In this section, you will learn how to extend the ONLYOFFICE Docs functionality by creating your own plugins/macros. Here you will find the information about their structure, development lifecycle, and examples.",
-      "version":"8.0",
+      "version":"8.1",
       "parent": "docs"
    },
    {
       "id":"docbuilder",
       "title":"Document Builder",
       "description":"In this section, you will learn how to generate documents easily without running a document editor and integrate Document builder into your DMS, CRM system, etc.",
-      "version": "8.0",
+      "version": "8.1",
       "parent": "docs"
    },
    {
@@ -81,7 +81,7 @@
       "title":"Desktop Editors",
       "description":"In this section, you will learn how to extend the ONLYOFFICE Desktop Editors functionality by setting up, customizing and integrating them with the document management systems.",
       "parent": "docs",
-      "version":"8.0"
+      "version":"8.1"
    },
    {
       "id":"workspaceapi",

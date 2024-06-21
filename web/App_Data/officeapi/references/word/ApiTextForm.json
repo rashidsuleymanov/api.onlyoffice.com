@@ -556,7 +556,7 @@
     "GetText": {
       "memberof": "ApiTextForm",
       "name": "GetText",
-      "description": "<p>Returns the text from the current form.\n<em>This method is used only for text and combo box forms.</em></p>",
+      "description": "<p>Returns the text from the current form.\n<em>Returns the value as a string if possible for the given form type</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -632,7 +632,7 @@
     "SetTextPr": {
       "memberof": "ApiTextForm",
       "name": "SetTextPr",
-      "description": "<p>Sets the text properties to the current form.\n<em>This method is used only for text and combo box forms.</em></p>",
+      "description": "<p>Sets the text properties to the current form.\n<em>Used if possible for this type of form</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -658,7 +658,7 @@
     "GetTextPr": {
       "memberof": "ApiTextForm",
       "name": "GetTextPr",
-      "description": "<p>Returns the text properties from the current form.\n<em>This method is used only for text and combo box forms.</em></p>",
+      "description": "<p>Returns the text properties from the current form.\n<em>Used if possible for this type of form</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -672,6 +672,29 @@
       ],
       "see": null,
       "inherits": "Inherited From: {@link ApiFormBase#GetTextPr}"
+    },
+    "MoveCursorOutside": {
+      "memberof": "ApiTextForm",
+      "name": "MoveCursorOutside",
+      "description": "<p>Places a cursor before/after the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#MoveCursorOutside}",
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isAfter",
+          "description": "<p>Specifies whether a cursor will be placed before (false) or after (true) the current form.</p>",
+          "optional": true,
+          "defaultValue": true
+        }
+      ]
     },
     "Copy": {
       "memberof": "ApiTextForm",
@@ -693,35 +716,8 @@
     }
   },
   "events": {},
-  "comment": "/**\n\t * Class representing a document text field.\n\t * @constructor\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @property {boolean} comb - Specifies if the text field should be a comb of characters with the same cell width. The maximum number of characters must be set to a positive value.\n\t * @property {number} maxCharacters - The maximum number of characters in the text field.\n\t * @property {number} cellWidth - The cell width for each character measured in millimeters. If this parameter is not specified or equal to 0 or less, then the width will be set automatically.\n\t * @property {boolean} multiLine - Specifies if the current fixed size text field is multiline or not.\n\t * @property {boolean} autoFit - Specifies if the text field content should be autofit, i.e. whether the font size adjusts to the size of the fixed size form.\n\t * @extends {ApiFormBase}\n\t */",
+  "comment": "/**\n\t * Class representing a document text field.\n\t * @constructor\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @extends {ApiFormBase}\n\t */",
   "description": "<p>Class representing a document text field.</p>",
   "scope": "global",
-  "params": [],
-  "properties": [
-    {
-      "type": "boolean",
-      "name": "comb",
-      "description": "<p>Specifies if the text field should be a comb of characters with the same cell width. The maximum number of characters must be set to a positive value.</p>"
-    },
-    {
-      "type": "number",
-      "name": "maxCharacters",
-      "description": "<p>The maximum number of characters in the text field.</p>"
-    },
-    {
-      "type": "number",
-      "name": "cellWidth",
-      "description": "<p>The cell width for each character measured in millimeters. If this parameter is not specified or equal to 0 or less, then the width will be set automatically.</p>"
-    },
-    {
-      "type": "boolean",
-      "name": "multiLine",
-      "description": "<p>Specifies if the current fixed size text field is multiline or not.</p>"
-    },
-    {
-      "type": "boolean",
-      "name": "autoFit",
-      "description": "<p>Specifies if the text field content should be autofit, i.e. whether the font size adjusts to the size of the fixed size form.</p>"
-    }
-  ]
+  "params": []
 }

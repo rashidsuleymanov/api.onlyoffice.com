@@ -49,6 +49,7 @@
         <li><a href="#isUpdateOleOnResize">isUpdateOleOnResize</a></li>
         <li><a href="#isViewer">isViewer</a></li>
         <li><a href="#isVisual">isVisual</a></li>
+        <li><a href="#menu">menu</a></li>
         <li><a href="#screens">screens</a></li>
         <li><a href="#size">size</a></li>
         <li><a href="#store">store</a></li>
@@ -301,6 +302,12 @@
                 <td>true</td>
             </tr>
             <tr class="tablerow">
+                <td id="menu" class="copy-link">variations.menu</td>
+                <td>Specifies where the plugin will be placed (on the right or left panel).</td>
+                <td>string</td>
+                <td>"right"</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="screens" class="copy-link">variations.screens</td>
                 <td>Plugin screenshot image files used in the editors.</td>
                 <td>Array.&lt;string&gt;</td>
@@ -482,6 +489,7 @@
                 "isUpdateOleOnResize": true,
                 "isViewer": true,
                 "isVisual": false,
+                "menu": "right",
                 "screens": ["resources/store/screenshots/screen_1.png"],
                 "size": [600, 700],
                 "store": {

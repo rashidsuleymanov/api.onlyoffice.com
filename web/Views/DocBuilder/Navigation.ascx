@@ -545,6 +545,172 @@
             </ul>
         </li>
         <li>
+            <a href="<%= Url.Action("integrationapi/python") %>">Python</a>
+            <ul>
+                <li>
+                    <a href="<%= Url.Action("integrationapi/python/cdocbuilder") %>">CDocBuilder</a>
+                    <ul>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuilder/closefile") %>">CloseFile</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuilder/createfile") %>">CreateFile</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuilder/dispose") %>">Dispose</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuilder/executecommand") %>">ExecuteCommand</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuilder/getcontext") %>">GetContext</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuilder/getversion") %>">GetVersion</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuilder/initialize") %>">Initialize</a>
+                        </li>
+                        <li>
+                            <a title="IsSaveWithDoctrendererMode" href="<%= Url.Action("integrationapi/python/cdocbuilder/issavewithdoctrenderermode") %>">IsSaveWithDoctrendererMode</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuilder/openfile") %>">OpenFile</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuilder/run") %>">Run</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuilder/runtext") %>">RunText</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuilder/savefile") %>">SaveFile</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuilder/setproperty") %>">SetProperty</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuilder/settmpfolder") %>">SetTmpFolder</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuilder/writedata") %>">WriteData</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("integrationapi/python/cdocbuildercontext") %>">CDocBuilderContext</a>
+                    <ul>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildercontext/createarray") %>">CreateArray</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildercontext/createnull") %>">CreateNull</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildercontext/createobject") %>">CreateObject</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildercontext/createscope") %>">CreateScope</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildercontext/createundefined") %>">CreateUndefined</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildercontext/getglobal") %>">GetGlobal</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildercontext/iserror") %>">IsError</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("integrationapi/python/cdocbuildercontextscope") %>">CDocBuilderContextScope</a>
+                    <ul>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildercontextscope/close") %>">Close</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue") %>">CDocBuilderValue</a>
+                    <ul>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/call") %>">Call</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/clear") %>">Clear</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/createarray") %>">CreateArray</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/createnull") %>">CreateNull</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/createundefined") %>">CreateUndefined</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/get") %>">Get</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/getlength") %>">GetLength</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/getproperty") %>">GetProperty</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/isarray") %>">IsArray</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/isbool") %>">IsBool</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/isdouble") %>">IsDouble</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/isempty") %>">IsEmpty</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/isfunction") %>">IsFunction</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/isint") %>">IsInt</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/isnull") %>">IsNull</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/isobject") %>">IsObject</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/isstring") %>">IsString</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/isundefined") %>">IsUndefined</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/set") %>">Set</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/setproperty") %>">SetProperty</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/tobool") %>">ToBool</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/todouble") %>">ToDouble</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/toint") %>">ToInt</a>
+                        </li>
+                        <li>
+                            <a href="<%= Url.Action("integrationapi/python/cdocbuildervalue/tostring") %>">ToString</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
             <a href="<%= Url.Action("builderframeworksamples") %>">Builder framework samples</a>
             <ul>
                 <li>

@@ -1165,7 +1165,7 @@
     "Copy": {
       "memberof": "ApiRange",
       "name": "Copy",
-      "description": "<p>Copies a range to the specified range.</p>",
+      "description": "<p>Copies the range to the specified range or to the clipboard.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -1178,8 +1178,29 @@
         {
           "type": "ApiRange",
           "name": "destination",
-          "description": "<p>Specifies a new range to which the specified range will be copied.</p>",
-          "optional": false
+          "description": "<p>Specifies the new range to which the specified range will be copied. If this argument is omitted, the range will be copied to the clipboard.</p>",
+          "optional": true
+        }
+      ]
+    },
+    "Cut": {
+      "memberof": "ApiRange",
+      "name": "Cut",
+      "description": "<p>Cuts the range and save it to the clipboard or paste it to the specified range.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiRange",
+          "name": "destination",
+          "description": "<p>Specifies the new range to which the cut range will be pasted. If this argument is omitted, the range will be copied to the clipboard.</p>",
+          "optional": true
         }
       ]
     },
@@ -1200,6 +1221,47 @@
           "type": "ApiRange",
           "name": "rangeFrom",
           "description": "<p>Specifies the range to be pasted to the current range</p>",
+          "optional": false
+        }
+      ]
+    },
+    "PasteSpecial": {
+      "memberof": "ApiRange",
+      "name": "PasteSpecial",
+      "description": "<p>Pastes the Range object to the specified range using the special paste options.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "PasteType",
+          "name": "sPasteType",
+          "description": "<p>Paste option.</p>",
+          "optional": true,
+          "defaultValue": "\"xlPasteAll\""
+        },
+        {
+          "type": "PasteSpecialOperation",
+          "name": "sPasteSpecialOperation",
+          "description": "<p>The mathematical operation which will be applied to the copied data.</p>",
+          "optional": true,
+          "defaultValue": "\"xlPasteSpecialOperationNone\""
+        },
+        {
+          "type": "boolean",
+          "name": "bSkipBlanks",
+          "description": "<p>[bSkipBlanks=false] - Specifies whether to avoid replacing values in the paste area when blank cells occur in the copy area.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bTranspose",
+          "description": "<p>[bTranspose=false] - Specifies whether the pasted data will be transposed from rows to columns.</p>",
           "optional": false
         }
       ]

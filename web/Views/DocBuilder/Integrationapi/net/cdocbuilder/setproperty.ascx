@@ -127,7 +127,7 @@ docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
 <h2>Adding or removing fonts</h2>
 <p>It is also possible to update the font list when you either add new fonts or remove old ones. To do this, the <b>check-fonts</b> variable is used:</p>
 <h2>Example</h2>
-<h4 class="header-gray">C++</h4>
+<h4 class="header-gray">.Net</h4>
 <pre>
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);

@@ -19,6 +19,8 @@
         The request parameters are entered in JSON format in the request body.
         The requests are sent to the <span class="fakelink">https://documentserver/ConvertService.ashx</span> address where <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.
     </p>
+    <p>Starting from version 8.1, it is recommended to add the <a href="<%= Url.Action("howitworks") %>#shardkey">shardkey</a> parameter to the URL <em>QueryString</em> with the <em>key</em> value in it.
+        For example, <em>?shardkey=Khirz6zTPdfd7</em>. This allows you to load balance requests.</p>
 
     <div class="note">In <b>ONLYOFFICE Docs</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
 
@@ -33,6 +35,7 @@
         <li><a href="#key">key</a></li>
         <li><a href="#outputtype">outputtype</a></li>
         <li><a href="#password">password</a></li>
+        <li><a href="#pdf">pdf</a></li>
         <li><a href="#region">region</a></li>
         <li><a href="#spreadsheetLayout">spreadsheetLayout</a></li>
         <li><a href="#thumbnail">thumbnail</a></li>
@@ -210,6 +213,23 @@
                 <td id="password" class="copy-link">password</td>
                 <td>Defines the password for the document file if it is protected with a password.</td>
                 <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="pdf" class="copy-link">pdf</td>
+                <td>Defines settings for converting document files to pdf.</td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="form" class="copy-link">pdf.form</td>
+                <td>
+                    Defines whether the document will be converted to the <em>pdf</em> form (<b>true</b>) or to a regular <em>pdf</em> file (<b>false</b>).
+                    If this parameter is omitted, the document contents will not be changed. If the document has fields, they will remain in the converted document.
+                    If has not, the converted document will not contain them either. For example, you don't need to specify this parameter when converting <em>docxf</em>
+                    and <em>oform</em> formats to <em>pdf</em>. They will always be converted to <em>pdf</em> forms.
+                </td>
+                <td>boolean</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
@@ -1776,6 +1796,25 @@
         See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
     </p>
 
+    <div id="sample-pdf-conversion" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> form</div>
+    <pre>
+{
+    "async": false,
+    "filetype": "docx",
+    "key": "Khirz6zTPdfd7",
+    "outputtype": "pdf",
+    "pdf": {
+        "form": true
+    },
+    "title": "Example Document Title.docx",
+    "url": "https://example.com/url-to-example-document.docx"
+}
+</pre>
+    <p>
+        Where <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on ONLYOFFICE Docs service client-server interactions.
+    </p>
+
     <div id="sample-watermark" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format with a watermark inserted</div>
     <pre>
 {
@@ -2052,6 +2091,10 @@
                 <td>-9</td>
                 <td>Error when the converter cannot automatically determine the output file format. This error means that the client must explicitly specify
                     in which format the file should be converted (text document or spreadsheet). It is used to convert XML to OOXML in case the XML type is unknown.</td>
+            </tr>
+            <tr class="tablerow">
+                <td>-10</td>
+                <td>Size limit exceeded.</td>
             </tr>
             <%--<tr class="tablerow">
                 <td>-21</td>

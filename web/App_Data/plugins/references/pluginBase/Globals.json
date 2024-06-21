@@ -150,6 +150,52 @@
       }
     ]
   },
+  "ContextMenuType": {
+    "name": "ContextMenuType",
+    "description": "<p>The context menu type:</p>\n<ul>\n<li><b>None</b> - not used,</li>\n<li><b>Target</b> - nothing is selected,</li>\n<li><b>Selection</b> - text is selected,</li>\n<li><b>Image</b> - image is selected,</li>\n<li><b>Shape</b> - shape is selected,</li>\n<li><b>OleObject</b> - OLE object is selected.</li>\n</ul>",
+    "type": [
+      "\"None\"",
+      "\"Target\"",
+      "\"Selection\"",
+      "\"Image\"",
+      "\"Shape\"",
+      "\"OleObject\""
+    ]
+  },
+  "ContextMenuOptions": {
+    "name": "ContextMenuOptions",
+    "description": "<p>Defines the context menu options.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "ContextMenuType",
+        "name": "Type",
+        "description": "<p>The context menu type.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "header",
+        "description": "<p>Specifies if the context menu is opened inside the header.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "footer",
+        "description": "<p>Specifies if the context menu is opened inside the footer.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "headerArea",
+        "description": "<p>Specifies if the context menu is opened over the header.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "footerArea",
+        "description": "<p>Specifies if the context menu is opened over the footer.</p>"
+      }
+    ]
+  },
   "InputHelperItem": {
     "name": "InputHelperItem",
     "description": "<p>Defines the input helper item.</p>",

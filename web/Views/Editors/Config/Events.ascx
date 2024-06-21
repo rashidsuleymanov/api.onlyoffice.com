@@ -23,7 +23,7 @@
     <li><a href="#onRequestClose">onRequestClose</a> - the work with the editor must be ended and the editor must be closed.</li>
     <li><a href="#onRequestCompareFile">onRequestCompareFile</a> - the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button.</li>
     <li><a href="#onRequestCreateNew">onRequestCreateNew</a> - the user is trying to create document by clicking the <em>Create New</em> button.</li>
-    <li><a href="#onRequestEditRights">onRequestEditRights</a> - the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit Document</em> button.</li>
+    <li><a href="#onRequestEditRights">onRequestEditRights</a> - the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit current file</em> button.</li>
     <li><a href="#onRequestHistory">onRequestHistory</a> - the user is trying to show the document version history by clicking the <em>Version History</em> button.</li>
     <li><a href="#onRequestHistoryClose">onRequestHistoryClose</a> - the user is trying to go back to the document from viewing the document version history  by clicking the <em>Close History</em> button.</li>
     <li><a href="#onRequestHistoryData">onRequestHistoryData</a> - the user is trying to click the specific document version in the document version history.</li>
@@ -39,7 +39,9 @@
     <li><a href="#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> - the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</li>
     <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - the user is mentioned in a comment.</li>
     <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - the user is trying to manage document access rights by clicking <em>Change access rights</em> button.</li>
+    <li><a href="#onRequestStartFilling">onRequestStartFilling</a> - the user is trying to start filling out the ready forms by clicking the <em>Start filling</em> button in the pdf editing mode.</li>
     <li><a href="#onRequestUsers">onRequestUsers</a> - the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</li>
+    <li><a href="#onSubmit">onSubmit</a> - the force saving request of the <em>3</em> <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> is successfully performed.</li>
     <li><a href="#onWarning">onWarning</a> - a warning occurs.</li>
 </ul>
 <div class="header-gray">Example</div>
@@ -142,8 +144,14 @@ Event messages will be available in your browser's DevTools console.
         "onRequestSharingSettings": function () {
             console.log("Sharing settings requested");
         },
+        "onRequestStartFilling": function () {
+            console.log("Start filling requested");
+        },
         "onRequestUsers": function (event) {
             console.log("Users requested");
+        },
+        "onSubmit": function (event) {
+            console.log("The form was submitted");
         },
         "onWarning": function (event) {
             console.log("ONLYOFFICE Document Editor reports a warning: code " + event.data.warningCode + ", description " + event.data.warningDescription);
@@ -184,7 +192,9 @@ Event messages will be available in your browser's DevTools console.
         "onRequestSelectSpreadsheet",
         "onRequestSendNotify",
         "onRequestSharingSettings",
+        "onRequestStartFilling",
         "onRequestUsers",
+        "onSubmit",
         "onWarning"
     ];
 
@@ -524,7 +534,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestClose" class="copy-link">onRequestClose</b> - the function called when the work with the editor must be ended and the editor must be closed.</p>
+        <p><b id="onRequestClose" class="copy-link">onRequestClose</b> - the function called when the user is trying to end the work with the editor and close it by clicking the cross button.
+        If the method is not declared, the <a href="<%= Url.Action("config/editor/customization") %>#close">editorConfig.customization.close</a> parameter will not be available, and
+        the cross button will not be displayed.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestClose = function () {
@@ -575,14 +587,16 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestEditRights" class="copy-link">onRequestEditRights</b> - the function called when the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit Document</em> button.
+            <b id="onRequestEditRights" class="copy-link">onRequestEditRights</b> - the function called when the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit current file</em> button.
+            This event also fires when the user clicks the <em>Edit PDF</em> button in the forms that are open in the <em>view</em> or <em>fillForms</em> mode.
             When the function is called, the editor must be initialized again, in editing mode.
-            If the method is not declared the <em>Edit</em> button will not be displayed.
+            If the method is not declared the <em>Edit current file</em> and <em>Edit PDF</em> buttons will not be displayed.
         </p>
         <div class="note">
             <b>onRequestEditRights</b> parameter is obligatory when the <a href="<%= Url.Action("config/editor") %>#mode">editorConfig</a> <em>mode</em> parameter is set to <b>view</b> and the <em>permission</em> to <em>edit</em> the document (<a href="<%= Url.Action("config/document/permissions") %>#edit">document permissions</a>) is set to <b>true</b> so that the user could switch to the editing mode.
         </div>
         <img class="screenshot" alt="onRequestEditRights" src="<%= Url.Content("~/content/img/editor/onRequestEditRights.png") %>"/>
+        <img class="screenshot" alt="Edit PDF button" src="<%= Url.Content("~/content/img/editor/edit-pdf.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestEditRights = function () {
@@ -1109,6 +1123,27 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
+        <p><b id="onRequestStartFilling" class="copy-link">onRequestStartFilling</b> - the function called when the user is trying to start filling out the ready forms by clicking the <em>Start filling</em> button in the pdf editing mode.
+        If the event is not declared, this button will not be displayed.</p>
+        <p>When the user clicks the <em>Start filling</em> button, the <a href="<%= Url.Action("methods") %>#startFilling">startFilling</a> method is called to lock the pdf editing (only pdf viewing becomes available).</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestStartFilling = function () {
+    docEditor.startFilling();
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestStartFilling": onRequestStartFilling,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
         <p><b id="onRequestUsers" class="copy-link">onRequestUsers</b> - the function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</p>
         <p>Starting from version 7.4, the operation type can be specified in the <em>data.c</em> parameter. It can take two values - <em>mention</em> or <em>protect</em>.
         Prior to version 7.4, only the mention operation was available with this event.</p>
@@ -1154,6 +1189,27 @@ var onRequestUsers = function (event) {
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onRequestUsers": onRequestUsers,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p>
+            <b id="onSubmit" class="copy-link">onSubmit</b> - the function called when the force saving request of the <em>3</em> <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> is successfully performed,
+            i.e. when the <b>Complete & Submit</b> button is clicked and the form is submitted.
+        </p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onSubmit = function (event) {
+    console.log("The form was submitted.");
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onSubmit": onSubmit,
         ...
     },
     ...
