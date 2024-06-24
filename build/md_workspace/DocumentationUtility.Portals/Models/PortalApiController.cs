@@ -15,7 +15,8 @@ namespace DocumentationUtility.Portals.Models
         {
             foreach (var method in type.GetMethods().Where(m => m.GetCustomAttributes<ApiAttribute>().Any()))
             {
-                ApiMethods.Add(new PortalApiMethod(this, method));
+                var m = new PortalApiMethod(this, method);
+                if (m.IsVisible) ApiMethods.Add(m);
             }
         }
 
