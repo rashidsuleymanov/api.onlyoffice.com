@@ -20,6 +20,7 @@ namespace DocumentationUtility.Shared.Markdown
                 var opt = new JsonSerializerSettings()
                 {
                     Formatting = Formatting.Indented,
+                    NullValueHandling = NullValueHandling.Ignore,
                     ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
                     ContractResolver = new CamelCasePropertyNamesContractResolver(),
                 };
