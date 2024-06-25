@@ -1,6 +1,6 @@
 # Change Log
 
-##
+## 5.1.0
 - editors: added the startFilling method
 - editors: added the events.onRequestStartFilling event
 - editors: added the docs_api_config parameter to the form element of the WOPI host page
