@@ -1,0 +1,982 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiTextPr",
+      "name": "GetClassType",
+      "description": "<p>Returns a type of the ApiTextPr class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"textPr\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetStyle": {
+      "memberof": "ApiTextPr",
+      "name": "SetStyle",
+      "description": "<p>The text style base method.\n<note>This method is not used by itself, as it only forms the basis for the {@link ApiRun#SetStyle} method which sets\nthe selected or created style to the text.</note></p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiStyle",
+          "name": "oStyle",
+          "description": "<p>The style which must be applied to the text character.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetStyle": {
+      "memberof": "ApiTextPr",
+      "name": "GetStyle",
+      "description": "<p>Gets the style of the current text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiStyle"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetBold": {
+      "memberof": "ApiTextPr",
+      "name": "SetBold",
+      "description": "<p>Sets the bold property to the text character.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isBold",
+          "description": "<p>Specifies that the contents of the run are displayed bold.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetBold": {
+      "memberof": "ApiTextPr",
+      "name": "GetBold",
+      "description": "<p>Gets the bold property from the current text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetItalic": {
+      "memberof": "ApiTextPr",
+      "name": "SetItalic",
+      "description": "<p>Sets the italic property to the text character.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isItalic",
+          "description": "<p>Specifies that the contents of the current run are displayed italicized.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetItalic": {
+      "memberof": "ApiTextPr",
+      "name": "GetItalic",
+      "description": "<p>Gets the italic property from the current text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetStrikeout": {
+      "memberof": "ApiTextPr",
+      "name": "SetStrikeout",
+      "description": "<p>Specifies that the contents of the run are displayed with a single horizontal line through the center of the line.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isStrikeout",
+          "description": "<p>Specifies that the contents of the current run are displayed struck through.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetStrikeout": {
+      "memberof": "ApiTextPr",
+      "name": "GetStrikeout",
+      "description": "<p>Gets the strikeout property from the current text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetUnderline": {
+      "memberof": "ApiTextPr",
+      "name": "SetUnderline",
+      "description": "<p>Specifies that the contents of the run are displayed along with a line appearing directly below the character\n(less than all the spacing above and below the characters on the line).</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isUnderline",
+          "description": "<p>Specifies that the contents of the current run are displayed underlined.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetUnderline": {
+      "memberof": "ApiTextPr",
+      "name": "GetUnderline",
+      "description": "<p>Gets the underline property from the current text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetFontFamily": {
+      "memberof": "ApiTextPr",
+      "name": "SetFontFamily",
+      "description": "<p>Sets all 4 font slots with the specified font family.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sFontFamily",
+          "description": "<p>The font family or families used for the current text run.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetFontFamily": {
+      "memberof": "ApiTextPr",
+      "name": "GetFontFamily",
+      "description": "<p>Gets the font family from the current text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetFontSize": {
+      "memberof": "ApiTextPr",
+      "name": "SetFontSize",
+      "description": "<p>Sets the font size to the characters of the current text run.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "hps",
+          "name": "nSize",
+          "description": "<p>The text size value measured in half-points (1/144 of an inch).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetFontSize": {
+      "memberof": "ApiTextPr",
+      "name": "GetFontSize",
+      "description": "<p>Gets the font size from the current text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "hps"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetColor": {
+      "memberof": "ApiTextPr",
+      "name": "SetColor",
+      "description": "<p>Sets the text color to the current text run in the RGB format.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isAuto",
+          "description": "<p>If this parameter is set to &quot;true&quot;, then r,g,b parameters will be ignored.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "GetColor": {
+      "memberof": "ApiTextPr",
+      "name": "GetColor",
+      "description": "<p>Gets the RGB color from the current text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRGBColor"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetVertAlign": {
+      "memberof": "ApiTextPr",
+      "name": "SetVertAlign",
+      "description": "<p>Specifies the alignment which will be applied to the contents of the run in relation to the default appearance of the run text:</p>\n<ul>\n<li><b>&quot;baseline&quot;</b> - the characters in the current text run will be aligned by the default text baseline.</li>\n<li><b>&quot;subscript&quot;</b> - the characters in the current text run will be aligned below the default text baseline.</li>\n<li><b>&quot;superscript&quot;</b> - the characters in the current text run will be aligned above the default text baseline.</li>\n</ul>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "\"baseline\" | \"subscript\" | \"superscript\"",
+          "name": "sType",
+          "description": "<p>The vertical alignment type applied to the text contents.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetVertAlign": {
+      "memberof": "ApiTextPr",
+      "name": "GetVertAlign",
+      "description": "<p>Gets the vertical alignment type from the current text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetHighlight": {
+      "memberof": "ApiTextPr",
+      "name": "SetHighlight",
+      "description": "<p>Specifies a highlighting color which is added to the text properties and applied as a background to the contents of the current run/range/paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "highlightColor",
+          "name": "sColor",
+          "description": "<p>Available highlight color.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetHighlight": {
+      "memberof": "ApiTextPr",
+      "name": "GetHighlight",
+      "description": "<p>Gets the highlight property from the current text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetSpacing": {
+      "memberof": "ApiTextPr",
+      "name": "SetSpacing",
+      "description": "<p>Sets the text spacing measured in twentieths of a point.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "twips",
+          "name": "nSpacing",
+          "description": "<p>The value of the text spacing measured in twentieths of a point (1/1440 of an inch).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetSpacing": {
+      "memberof": "ApiTextPr",
+      "name": "GetSpacing",
+      "description": "<p>Gets the text spacing from the current text properties measured in twentieths of a point.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "twips"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetDoubleStrikeout": {
+      "memberof": "ApiTextPr",
+      "name": "SetDoubleStrikeout",
+      "description": "<p>Specifies that the contents of the run are displayed with two horizontal lines through each character displayed on the line.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isDoubleStrikeout",
+          "description": "<p>Specifies that the contents of the current run are displayed double struck through.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetDoubleStrikeout": {
+      "memberof": "ApiTextPr",
+      "name": "GetDoubleStrikeout",
+      "description": "<p>Gets the double strikeout property from the current text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetCaps": {
+      "memberof": "ApiTextPr",
+      "name": "SetCaps",
+      "description": "<p>Specifies that any lowercase characters in the text run are formatted for display only as their capital letter character equivalents.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isCaps",
+          "description": "<p>Specifies that the contents of the current run are displayed capitalized.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetCaps": {
+      "memberof": "ApiTextPr",
+      "name": "GetCaps",
+      "description": "<p>Specifies whether the text with the current text properties are capitalized.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetSmallCaps": {
+      "memberof": "ApiTextPr",
+      "name": "SetSmallCaps",
+      "description": "<p>Specifies that all the small letter characters in the text run are formatted for display only as their capital\nletter character equivalents which are two points smaller than the actual font size specified for this text.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isSmallCaps",
+          "description": "<p>Specifies if the contents of the current run are displayed capitalized two points smaller or not.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetSmallCaps": {
+      "memberof": "ApiTextPr",
+      "name": "GetSmallCaps",
+      "description": "<p>Specifies whether the text with the current text properties are displayed capitalized two points smaller than the actual font size.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetPosition": {
+      "memberof": "ApiTextPr",
+      "name": "SetPosition",
+      "description": "<p>Specifies an amount by which text is raised or lowered for this run in relation to the default\nbaseline of the surrounding non-positioned text.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "hps",
+          "name": "nPosition",
+          "description": "<p>Specifies a positive (raised text) or negative (lowered text)\nmeasurement in half-points (1/144 of an inch).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetPosition": {
+      "memberof": "ApiTextPr",
+      "name": "GetPosition",
+      "description": "<p>Gets the text position from the current text properties measured in half-points (1/144 of an inch).</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "hps"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetLanguage": {
+      "memberof": "ApiTextPr",
+      "name": "SetLanguage",
+      "description": "<p>Specifies the languages which will be used to check spelling and grammar (if requested) when processing\nthe contents of the text run.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sLangId",
+          "description": "<p>The possible value for this parameter is a language identifier as defined by\nRFC 4646/BCP 47. Example: &quot;en-CA&quot;.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetLanguage": {
+      "memberof": "ApiTextPr",
+      "name": "GetLanguage",
+      "description": "<p>Gets the language from the current text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetShd": {
+      "memberof": "ApiTextPr",
+      "name": "SetShd",
+      "description": "<p>Specifies the shading applied to the contents of the current text run.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ShdType",
+          "name": "sType",
+          "description": "<p>The shading type applied to the contents of the current text run.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetShd": {
+      "memberof": "ApiTextPr",
+      "name": "GetShd",
+      "description": "<p>Gets the text shading from the current text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRGBColor"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetFill": {
+      "memberof": "ApiTextPr",
+      "name": "SetFill",
+      "description": "<p>Sets the text color to the current text run.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiFill",
+          "name": "oApiFill",
+          "description": "<p>The color or pattern used to fill the text color.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetFill": {
+      "memberof": "ApiTextPr",
+      "name": "GetFill",
+      "description": "<p>Gets the text color from the current text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiFill"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetTextFill": {
+      "memberof": "ApiTextPr",
+      "name": "SetTextFill",
+      "description": "<p>Sets the text fill to the current text run.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiFill",
+          "name": "oApiFill",
+          "description": "<p>The color or pattern used to fill the text color.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetTextFill": {
+      "memberof": "ApiTextPr",
+      "name": "GetTextFill",
+      "description": "<p>Gets the text fill from the current text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiFill"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetOutLine": {
+      "memberof": "ApiTextPr",
+      "name": "SetOutLine",
+      "description": "<p>Sets the text outline to the current text run.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiStroke",
+          "name": "oStroke",
+          "description": "<p>The stroke used to create the text outline.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetOutLine": {
+      "memberof": "ApiTextPr",
+      "name": "GetOutLine",
+      "description": "<p>Gets the text outline from the current text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiStroke"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "ToJSON": {
+      "memberof": "ApiTextPr",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiTextPr object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "bWriteStyles",
+          "description": "<p>Specifies if the used styles will be written to the JSON object or not.</p>",
+          "optional": false
+        }
+      ]
+    }
+  },
+  "events": {},
+  "comment": "/**\n\t * Class representing the text properties.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing the text properties.</p>",
+  "scope": "global",
+  "params": []
+}

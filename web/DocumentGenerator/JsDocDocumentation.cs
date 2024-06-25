@@ -185,7 +185,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         public DBExample GetSample(string name)
         {
-            var path = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, $@"App_Data\docbuilder\samples\{name}.docbuilder");
+            var path = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, $@"App_Data\officeapi\samples\{name}.docbuilder");
 
             var sample = new DBExample
             {

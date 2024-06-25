@@ -1,0 +1,39 @@
+{
+  "methods": {
+    "GetRGB": {
+      "memberof": "ApiColor",
+      "name": "GetRGB",
+      "description": "<p>Returns a color value in RGB format.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetClassType": {
+      "memberof": "ApiColor",
+      "name": "GetClassType",
+      "description": "<p>Returns a type of the ApiColor class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "\"color\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "events": {},
+  "comment": "/**\n\t * Class representing a base class for the color types.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing a base class for the color types.</p>",
+  "scope": "global",
+  "params": []
+}

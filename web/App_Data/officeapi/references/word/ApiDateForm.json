@@ -1,0 +1,626 @@
+{
+  "methods": {
+    "GetFormat": {
+      "memberof": "ApiDateForm",
+      "name": "GetFormat",
+      "description": "<p>Gets the date format of the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetFormat": {
+      "memberof": "ApiDateForm",
+      "name": "SetFormat",
+      "description": "<p>Sets the date format to the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sFormat",
+          "description": "<p>The date format. For example, mm.dd.yyyy</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetLanguage": {
+      "memberof": "ApiDateForm",
+      "name": "GetLanguage",
+      "description": "<p>Gets the used date language of the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetLanguage": {
+      "memberof": "ApiDateForm",
+      "name": "SetLanguage",
+      "description": "<p>Sets the date language to the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sLangId",
+          "description": "<p>The date language. The possible value for this parameter is a language identifier as defined in\nRFC 4646/BCP 47. Example: &quot;en-CA&quot;.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetTime": {
+      "memberof": "ApiDateForm",
+      "name": "GetTime",
+      "description": "<p>Returns the timestamp of the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetTime": {
+      "memberof": "ApiDateForm",
+      "name": "SetTime",
+      "description": "<p>Sets the timestamp to the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nTimeStamp",
+          "description": "<p>The timestamp that will be set to the current date form.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetClassType": {
+      "memberof": "ApiDateForm",
+      "name": "GetClassType",
+      "description": "<p>Returns a type of the ApiFormBase class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "\"form\""
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#GetClassType}"
+    },
+    "GetFormType": {
+      "memberof": "ApiDateForm",
+      "name": "GetFormType",
+      "description": "<p>Returns a type of the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "FormType"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#GetFormType}"
+    },
+    "GetFormKey": {
+      "memberof": "ApiDateForm",
+      "name": "GetFormKey",
+      "description": "<p>Returns the current form key.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#GetFormKey}"
+    },
+    "SetFormKey": {
+      "memberof": "ApiDateForm",
+      "name": "SetFormKey",
+      "description": "<p>Sets a key to the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#SetFormKey}",
+      "params": [
+        {
+          "type": "string",
+          "name": "sKey",
+          "description": "<p>Form key.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetTipText": {
+      "memberof": "ApiDateForm",
+      "name": "GetTipText",
+      "description": "<p>Returns the tip text of the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#GetTipText}"
+    },
+    "SetTipText": {
+      "memberof": "ApiDateForm",
+      "name": "SetTipText",
+      "description": "<p>Sets the tip text to the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#SetTipText}",
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "description": "<p>Tip text.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "IsRequired": {
+      "memberof": "ApiDateForm",
+      "name": "IsRequired",
+      "description": "<p>Checks if the current form is required.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#IsRequired}"
+    },
+    "SetRequired": {
+      "memberof": "ApiDateForm",
+      "name": "SetRequired",
+      "description": "<p>Specifies if the current form should be required.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#SetRequired}",
+      "params": [
+        {
+          "type": "boolean",
+          "name": "bRequired",
+          "description": "<p>Defines if the current form is required (true) or not (false).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "IsFixed": {
+      "memberof": "ApiDateForm",
+      "name": "IsFixed",
+      "description": "<p>Checks if the current form is fixed size.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#IsFixed}"
+    },
+    "ToFixed": {
+      "memberof": "ApiDateForm",
+      "name": "ToFixed",
+      "description": "<p>Converts the current form to a fixed size form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#ToFixed}",
+      "params": [
+        {
+          "type": "twips",
+          "name": "nWidth",
+          "description": "<p>The wrapper shape width measured in twentieths of a point (1/1440 of an inch).</p>",
+          "optional": false
+        },
+        {
+          "type": "twips",
+          "name": "nHeight",
+          "description": "<p>The wrapper shape height measured in twentieths of a point (1/1440 of an inch).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ToInline": {
+      "memberof": "ApiDateForm",
+      "name": "ToInline",
+      "description": "<p>Converts the current form to an inline form.\n<em>Picture form can't be converted to an inline form, it's always a fixed size object.</em></p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#ToInline}"
+    },
+    "SetBorderColor": {
+      "memberof": "ApiDateForm",
+      "name": "SetBorderColor",
+      "description": "<p>Sets the border color to the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#SetBorderColor}",
+      "params": [
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bNone",
+          "description": "<p>Defines that border color will not be set.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetBackgroundColor": {
+      "memberof": "ApiDateForm",
+      "name": "SetBackgroundColor",
+      "description": "<p>Sets the background color to the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#SetBackgroundColor}",
+      "params": [
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bNone",
+          "description": "<p>Defines that background color will not be set.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetText": {
+      "memberof": "ApiDateForm",
+      "name": "GetText",
+      "description": "<p>Returns the text from the current form.\n<em>Returns the value as a string if possible for the given form type</em></p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#GetText}"
+    },
+    "Clear": {
+      "memberof": "ApiDateForm",
+      "name": "Clear",
+      "description": "<p>Clears the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#Clear}"
+    },
+    "GetWrapperShape": {
+      "memberof": "ApiDateForm",
+      "name": "GetWrapperShape",
+      "description": "<p>Returns a shape in which the form is placed to control the position and size of the fixed size form frame.\nThe null value will be returned for the inline forms.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiShape"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#GetWrapperShape}"
+    },
+    "SetPlaceholderText": {
+      "memberof": "ApiDateForm",
+      "name": "SetPlaceholderText",
+      "description": "<p>Sets the placeholder text to the current form.\n<em>Can't be set to checkbox or radio button.</em></p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#SetPlaceholderText}",
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "description": "<p>The text that will be set to the current form.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetTextPr": {
+      "memberof": "ApiDateForm",
+      "name": "SetTextPr",
+      "description": "<p>Sets the text properties to the current form.\n<em>Used if possible for this type of form</em></p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#SetTextPr}",
+      "params": [
+        {
+          "type": "ApiTextPr",
+          "name": "oTextPr",
+          "description": "<p>The text properties that will be set to the current form.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetTextPr": {
+      "memberof": "ApiDateForm",
+      "name": "GetTextPr",
+      "description": "<p>Returns the text properties from the current form.\n<em>Used if possible for this type of form</em></p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#GetTextPr}"
+    },
+    "MoveCursorOutside": {
+      "memberof": "ApiDateForm",
+      "name": "MoveCursorOutside",
+      "description": "<p>Places a cursor before/after the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#MoveCursorOutside}",
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isAfter",
+          "description": "<p>Specifies whether a cursor will be placed before (false) or after (true) the current form.</p>",
+          "optional": true,
+          "defaultValue": true
+        }
+      ]
+    },
+    "Copy": {
+      "memberof": "ApiDateForm",
+      "name": "Copy",
+      "description": "<p>Copies the current form (copies with the shape if it exists).</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CFE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiForm"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#Copy}"
+    }
+  },
+  "events": {},
+  "comment": "/**\n\t * Class representing a document date field.\n\t * @constructor\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @extends {ApiFormBase}\n\t */",
+  "description": "<p>Class representing a document date field.</p>",
+  "scope": "global",
+  "params": []
+}

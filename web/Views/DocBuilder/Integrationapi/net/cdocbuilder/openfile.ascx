@@ -27,7 +27,7 @@
         <tr class="tablerow">
             <td><em>sParams</em></td>
             <td>String^</td>
-            <td>&lt;optional></td>
+            <td>&lt;optional&gt;</td>
             <td>The parameters needed for the correct file opening (most commonly, the encoding is used for the <em>txt</em> and <em>csv</em> file types
             or the delimiter for the <em>csv</em> files, for other file types this is just an empty string). The parameters are added in the form of XML tags,
             where <b>m_nCsvTxtEncoding</b> is used for the text encoding and <b>m_nCsvDelimiter</b> is used for the <em></em> delimiter.

@@ -43,6 +43,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "addingdms/encryption/keygeneration",
                 "addingdms/encryption/operations",
                 "addingdms/execcommand",
+                "addingdms/gettingviewportsettings",
                 "addingdms/loginlogout",
                 "addingdms/notifications",
                 "addingdms/opening",

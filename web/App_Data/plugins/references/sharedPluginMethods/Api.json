@@ -35,51 +35,9 @@
       "inherits": null,
       "params": [
         {
-          "type": "Object",
+          "type": "OLEProperties",
           "name": "data",
           "description": "<p>The OLE object properties.</p>",
-          "optional": false
-        },
-        {
-          "type": "string",
-          "name": "data.data",
-          "description": "<p>OLE object data (internal format).</p>",
-          "optional": false
-        },
-        {
-          "type": "string",
-          "name": "data.imgSrc",
-          "description": "<p>A link to the image (its visual representation) stored in the OLE object and used by the plugin.</p>",
-          "optional": false
-        },
-        {
-          "type": "string",
-          "name": "data.guid",
-          "description": "<p>An identifier of the plugin which can edit the current OLE object and must be of the <em>asc.{UUID}</em> type.</p>",
-          "optional": false
-        },
-        {
-          "type": "number",
-          "name": "data.width",
-          "description": "<p>The OLE object width measured in millimeters.</p>",
-          "optional": false
-        },
-        {
-          "type": "number",
-          "name": "data.height",
-          "description": "<p>The OLE object height measured in millimeters.</p>",
-          "optional": false
-        },
-        {
-          "type": "number",
-          "name": "data.widthPix",
-          "description": "<p>The OLE object image width in pixels.</p>",
-          "optional": false
-        },
-        {
-          "type": "number",
-          "name": "data.heightPix",
-          "description": "<p>The OLE object image height in pixels.</p>",
           "optional": false
         }
       ]
@@ -100,54 +58,31 @@
       "inherits": null,
       "params": [
         {
-          "type": "Object",
+          "type": "OLEProperties",
           "name": "data",
           "description": "<p>The OLE object properties.</p>",
           "optional": false
-        },
-        {
-          "type": "string",
-          "name": "data.data",
-          "description": "<p>OLE object data (internal format).</p>",
-          "optional": false
-        },
-        {
-          "type": "string",
-          "name": "data.imgSrc",
-          "description": "<p>A link to the image (its visual representation) stored in the OLE object and used by the plugin.</p>",
-          "optional": false
-        },
-        {
-          "type": "string",
-          "name": "data.objectId",
-          "description": "<p>The OLE object identifier.</p>",
-          "optional": false
-        },
-        {
-          "type": "number",
-          "name": "data.width",
-          "description": "<p>The OLE object width measured in millimeters.</p>",
-          "optional": false
-        },
-        {
-          "type": "number",
-          "name": "data.height",
-          "description": "<p>The OLE object height measured in millimeters.</p>",
-          "optional": false
-        },
-        {
-          "type": "number",
-          "name": "data.widthPix",
-          "description": "<p>The OLE object image width in pixels.</p>",
-          "optional": false
-        },
-        {
-          "type": "number",
-          "name": "data.heightPix",
-          "description": "<p>The OLE object image height in pixels.</p>",
-          "optional": false
         }
       ]
+    },
+    "GetSelectedOleObjects": {
+      "memberof": "Api",
+      "name": "GetSelectedOleObjects",
+      "description": "<p>Returns an array of the selected OLE objects.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<OLEProperties>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     },
     "GetFontList": {
       "memberof": "Api",
@@ -1102,7 +1037,7 @@
         {
           "type": "Array.<ContextMenuItem>",
           "name": "items",
-          "description": "<p>An array containing the context menu items for the current item.</p>",
+          "description": "<p>An array containing the context menu items.</p>",
           "optional": false
         }
       ]
@@ -1126,6 +1061,29 @@
           "type": "Array.<ContextMenuItem>",
           "name": "items",
           "description": "<p>An array containing the context menu items for the current item.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "AddToolbarMenuItem": {
+      "memberof": "Api",
+      "name": "AddToolbarMenuItem",
+      "description": "<p>Adds an item to the toolbar menu.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array.<ToolbarMenuMainItem>",
+          "name": "items",
+          "description": "<p>An array containing the main toolbar menu items.</p>",
           "optional": false
         }
       ]
@@ -1155,6 +1113,29 @@
           "type": "variation",
           "name": "variation",
           "description": "<p>The plugin variation.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ActivateWindow": {
+      "memberof": "Api",
+      "name": "ActivateWindow",
+      "description": "<p>Activates (moves forward) the plugin window/panel.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "frameId",
+          "description": "<p>The frame ID.</p>",
           "optional": false
         }
       ]

@@ -28,7 +28,7 @@ using System;
 using System.Configuration;
 using System.IO;
 using System.Linq;
-using System.Security;
+using System.Text;
 using System.Web.Mvc;
 using System.Web.WebPages;
 using ASC.Api.Web.Help.Helpers;
@@ -270,17 +270,53 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Config", (object) catchall);
         }
 
+        [HttpOptions]
+        public void ConfigCreate()
+        {
+            Response.AddHeader("Access-Control-Allow-Origin", "*");
+            Response.AddHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+            Response.AddHeader("Access-Control-Allow-Headers", "Content-Type");
+        }
 
         [HttpPost]
-        public JsonResult ConfigCreate(string jsonConfig)
+        public ContentResult ConfigCreate([ModelBinder(typeof(JsonModelBinder))] Config config)
         {
-            LogManager.GetLogger("ASC.Api").Debug("Editor Config create: " + jsonConfig);
+            Response.AddHeader("Access-Control-Allow-Origin", "*");
+            Response.AddHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+            Response.AddHeader("Access-Control-Allow-Headers", "Content-Type");
+            LogManager.GetLogger("ASC.Api").Debug("Editor Config create: " + JsonConvert.SerializeObject(config));
 
-            Config config = JsonConvert.DeserializeObject<Config>(jsonConfig);
+
+            if (config.Document == null) config.Document = new Config.DocumentConfig();
+
+            if (config.DocumentType.IsEmpty())
+            {
+                config.DocumentType = "word";
+                config.Document.FileType = "docx";
+            }
+            config.Document.FileType = !config.Document.FileType.IsEmpty()
+                ? config.Document.FileType
+                : "docx";
             config.Document.Key = "apiwh" + Guid.NewGuid();
-            config.Document.Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + "docx";
+            config.Document.Title = !config.Document.Title.IsEmpty()
+                ? config.Document.Title
+                : "Example Title." + config.Document.FileType;
+            config.Document.Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + config.Document.FileType;
             config.EditorConfig.CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme);
-            return Json(Helpers.Config.Serialize(config));
+
+            return Content(Helpers.Config.Serialize(config), "application/json");
+        }
+
+        internal class JsonModelBinder : IModelBinder
+        {
+            public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+            {
+                controllerContext.HttpContext.Request.InputStream.Position = 0;
+                var stream = controllerContext.RequestContext.HttpContext.Request.InputStream;
+                var readStream = new StreamReader(stream, Encoding.UTF8);
+                var json = readStream.ReadToEnd();
+                return JsonConvert.DeserializeObject(json, bindingContext.ModelType);
+            }
         }
 
         public ActionResult Confluence()

@@ -45,30 +45,12 @@ namespace ASC.Api.Web.Help.Controllers
                 "builderframeworksamples",
                 "builderframeworksamples/csharpbuildersamples",
                 "builderframeworksamples/cppbuildersamples",
-                "buildersamples",
-                "buildersamples/addwatermark",
-                "buildersamples/commenterrors",
-                "buildersamples/createadvancedform",
-                "buildersamples/createbasicform",
-                "buildersamples/createspreadsheetchart",
-                "buildersamples/createchartpresentation",
-                "buildersamples/createpresentation",
-                "buildersamples/createreports",
-                "buildersamples/createformaldocument",
-                "buildersamples/createtabledocument",
-                "buildersamples/fillform",
-                "buildersamples/fillspreadsheet",
-                "buildersamples/mailmergereceptions",
-                "changelog",
                 "classlist",
                 "csharpbuildersamples",
                 "csharpexample",
                 "debugging",
-                "formapi",
                 "framework",
                 "getbuilder",
-                "gettingstarted",
-                "global",
                 "nodejsexample",
                 "howitworks",
                 "howitworks/comparedocuments",
@@ -238,13 +220,62 @@ namespace ASC.Api.Web.Help.Controllers
                 "integrationapi/net/cdocbuildercontext/getglobal",
                 "integrationapi/net/cdocbuildercontext/createscope",
                 "integrationapi/net/cdocbuildercontext/iserror",
+                "integrationapi/python",
+                "integrationapi/python/cdocbuilder",
+                "integrationapi/python/cdocbuilder/closefile",
+                "integrationapi/python/cdocbuilder/createfile",
+                "integrationapi/python/cdocbuilder/dispose",
+                "integrationapi/python/cdocbuilder/executecommand",
+                "integrationapi/python/cdocbuilder/getcontext",
+                "integrationapi/python/cdocbuilder/getversion",
+                "integrationapi/python/cdocbuilder/initialize",
+                "integrationapi/python/cdocbuilder/issavewithdoctrenderermode",
+                "integrationapi/python/cdocbuilder/openfile",
+                "integrationapi/python/cdocbuilder/run",
+                "integrationapi/python/cdocbuilder/runtext",
+                "integrationapi/python/cdocbuilder/savefile",
+                "integrationapi/python/cdocbuilder/setproperty",
+                "integrationapi/python/cdocbuilder/settmpfolder",
+                "integrationapi/python/cdocbuilder/writedata",
+                "integrationapi/python/cdocbuildervalue",
+                "integrationapi/python/cdocbuildervalue/isempty",
+                "integrationapi/python/cdocbuildervalue/clear",
+                "integrationapi/python/cdocbuildervalue/isnull",
+                "integrationapi/python/cdocbuildervalue/isundefined",
+                "integrationapi/python/cdocbuildervalue/isbool",
+                "integrationapi/python/cdocbuildervalue/isint",
+                "integrationapi/python/cdocbuildervalue/isdouble",
+                "integrationapi/python/cdocbuildervalue/isstring",
+                "integrationapi/python/cdocbuildervalue/isfunction",
+                "integrationapi/python/cdocbuildervalue/isobject",
+                "integrationapi/python/cdocbuildervalue/isarray",
+                "integrationapi/python/cdocbuildervalue/getlength",
+                "integrationapi/python/cdocbuildervalue/tobool",
+                "integrationapi/python/cdocbuildervalue/toint",
+                "integrationapi/python/cdocbuildervalue/todouble",
+                "integrationapi/python/cdocbuildervalue/tostring",
+                "integrationapi/python/cdocbuildervalue/getproperty",
+                "integrationapi/python/cdocbuildervalue/get",
+                "integrationapi/python/cdocbuildervalue/set",
+                "integrationapi/python/cdocbuildervalue/setproperty",
+                "integrationapi/python/cdocbuildervalue/createarray",
+                "integrationapi/python/cdocbuildervalue/createundefined",
+                "integrationapi/python/cdocbuildervalue/createnull",
+                "integrationapi/python/cdocbuildervalue/call",
+                "integrationapi/python/cdocbuildercontextscope",
+                "integrationapi/python/cdocbuildercontextscope/close",
+                "integrationapi/python/cdocbuildercontext",
+                "integrationapi/python/cdocbuildercontext/createundefined",
+                "integrationapi/python/cdocbuildercontext/createnull",
+                "integrationapi/python/cdocbuildercontext/createobject",
+                "integrationapi/python/cdocbuildercontext/createarray",
+                "integrationapi/python/cdocbuildercontext/getglobal",
+                "integrationapi/python/cdocbuildercontext/createscope",
+                "integrationapi/python/cdocbuildercontext/iserror",
                 "integrationapi/arguments",
                 "integrationapi/usingdocbuilderfile",
                 "phpexample",
-                "presentationapi",
                 "rubyexample",
-                "spreadsheetapi",
-                "textdocumentapi",
                 "try",
             };
 
@@ -265,11 +296,6 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Changelog()
-        {
-            return View();
-        }
-
         public ActionResult Debugging()
         {
             return View();
@@ -281,11 +307,6 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult GetBuilder()
-        {
-            return View();
-        }
-
-        public ActionResult Gettingstarted()
         {
             return View();
         }
@@ -338,15 +359,6 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Buildersamples(string catchall)
-        {
-            if (!_actionMap.Contains("buildersamples/" + catchall, StringComparer.OrdinalIgnoreCase))
-            {
-                catchall = null;
-            }
-            return View("Buildersamples", (object)catchall);
-        }
-
         public ActionResult Builderframeworksamples(string catchall)
         {
             if (!_actionMap.Contains("builderframeworksamples/" + catchall, StringComparer.OrdinalIgnoreCase))
@@ -363,35 +375,6 @@ namespace ASC.Api.Web.Help.Controllers
             if (dbMethod != null && dbMethod.Example != null)
                 return dbMethod.Example.Script;
             return "";
-        }
-
-        public ActionResult Textdocumentapi(string catchall)
-        {
-            if (string.IsNullOrEmpty(catchall)) return View("Textdocumentapi");
-            return FindDoc("word", catchall);
-        }
-
-        public ActionResult Spreadsheetapi(string catchall)
-        {
-            if (string.IsNullOrEmpty(catchall)) return View("Spreadsheetapi");
-            return FindDoc("cell", catchall);
-        }
-
-        public ActionResult Presentationapi(string catchall)
-        {
-            if (string.IsNullOrEmpty(catchall)) return View("Presentationapi");
-            return FindDoc("slide", catchall);
-        }
-
-        public ActionResult Formapi(string catchall)
-        {
-            if (string.IsNullOrEmpty(catchall)) return View("Formapi");
-            return FindDoc("form", catchall);
-        }
-
-        public ActionResult Global()
-        {
-            return View(DocBuilderDocumentation.Instance.GetGlobals());
         }
 
         public FileResult DownloadScript(string fileId)
