@@ -41,6 +41,11 @@
        } %>
     <link rel="canonical" href="<%= HttpUtility.HtmlEncode(canonicalHref) %>" />
 
+    <% if (string.Equals(ConfigurationManager.AppSettings["analitics"], bool.TrueString, StringComparison.OrdinalIgnoreCase))
+       { %>
+    <% Html.RenderPartial("Analytic"); %>
+    <% } %>
+
     <%= Styles.Render("~/content/styles") %>
 
     <%= Scripts.Render("~/bundles/scripts") %>
@@ -48,6 +53,12 @@
     <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
 </head>
 <body class="<%= Html.IfController("Home") ? "main-body" : string.Empty %>">
+
+    <% if (string.Equals(ConfigurationManager.AppSettings["analitics"], bool.TrueString, StringComparison.OrdinalIgnoreCase))
+       { %>
+    <% Html.RenderPartial("AnalyticNoScript"); %>
+    <% } %>
+
     <div class="site-overlay hidden"></div><div class="close-menu"></div>
     <div class="layout-table-header main-page">
         <% Html.RenderPartial("TopNavigation");%>
@@ -103,10 +114,5 @@
     </div>
 
     <asp:ContentPlaceHolder ID="ScriptPlaceholder" runat="server"></asp:ContentPlaceHolder>
-
-    <% if (string.Equals(ConfigurationManager.AppSettings["analitics"], bool.TrueString, StringComparison.OrdinalIgnoreCase))
-       { %>
-    <% Html.RenderPartial("Analytic"); %>
-    <% } %>
 </body>
 </html>
