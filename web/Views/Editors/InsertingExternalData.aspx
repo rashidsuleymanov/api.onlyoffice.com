@@ -134,6 +134,9 @@ var onRequestReferenceData = function (event) {
 };
 </pre>
             <img class="screenshot max-width-700" alt="Update values" src="<%= Url.Content("~/content/img/editor/update-values.png") %>" />
+            <p>This event also fires when the user runs the <a href="https://helpcenter.onlyoffice.com/onlyoffice-editors/onlyoffice-spreadsheet-editor/Functions/importrange.aspx?from=api" target="_blank">IMPORTRANGE</a> function.
+                The URL of the source spreadsheet which is used in the <em>IMPORTRANGE</em> parameters is passed to the <em>onRequestReferenceData</em> event
+                in the <em>event.data.link</em> parameter.</p>
         </li>
         <li>
             <p>In order to refresh the data from the source file, the <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> method must be called.
