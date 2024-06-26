@@ -14,6 +14,13 @@ namespace DocumentationUtility.Shared.Models
 
             ParseXml();
 
+            if (Name.ToString().Contains("`"))
+            {
+                var n = GetGenericType(this.type);
+                this.type = n.type;
+                Name = n.Name;
+            }
+
             ParseProperties();
         }
 
@@ -22,6 +29,44 @@ namespace DocumentationUtility.Shared.Models
             foreach (var props in type.GetProperties())
             {
                 Properties.Add(new DocApiProperty(this, props));
+            }
+        }
+
+        private DocApiType GetGenericType(Type type)
+        {
+            string e = "[]";
+            if (type.Name.Contains("Task")) e = "";
+
+            DocApiType n;
+
+            Type[] t = type.GetGenericArguments();
+
+            switch (t.Length)
+            {
+                case 1:
+                    {
+                        if (t[0].Name.Contains("`"))
+                        {
+                            n = GetGenericType(t[0]);
+                            n.Name += e;
+                            return n;
+                        }
+                        n = new DocApiType(t[0]);
+                        n.Name += e;
+                        return n;
+                    }
+                case 2:
+                    {
+                        n = new DocApiType(typeof(Object));
+                        n.Name = $"<{t[0].Name}, {t[1].Name}>";
+                        return n;
+                    }
+                default: 
+                    {
+                        n = new DocApiType(typeof(Object));
+                        n.Name = "untracked_generic";
+                        return n;
+                    }
             }
         }
 
