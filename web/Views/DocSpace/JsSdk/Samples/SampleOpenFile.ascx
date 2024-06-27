@@ -8,18 +8,8 @@ using <a href="<%= Url.Action("JsSdk/InitModes/FileSelector")%>">File-selector</
 <img class="screenshot" alt="OpenEditors" src="<%= Url.Content("~/content/img/docspace/gifs/open-editors.gif")%>" />
 <h2>Before you start</h2>
 
-<ol>
-    <li>For the JavaScript SDK to work correctly, it must be launched on the server. Note that running the HTML file directly will not work. 
-    Please make sure you are using a server environment.</li>
-    <li>You need to add the URL of your server's root directory to the <b>Developer Tools</b> section of DocSpace:
-        <ol>
-            <li>Go to the DocSpace settings.</li>
-            <li>Navigate to the <b>Developer Tools</b> section.</li>
-            <li>On the <b>JavaScript SDK</b> tab, in the <b>Enter the address of DocSpace to embed</b> field, add the URL of your server's root directory.</li>
-        </ol>
-    </li>
-</ol>
-<img class="screenshot max-width-832" alt="Chart" src="<%= Url.Content("~/content/img/docspace/add-in-js-sdk-root-url.png")%>" />
+<p>Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
+You need to <a href="<%= Url.Action("jssdk/")%>#docspace-url">add the URL</a> of your server's root directory to the <b>Developer Tools</b> section of DocSpace.</p>
 
 <h2>Building a sample</h2>
 

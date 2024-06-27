@@ -6,6 +6,11 @@
 <p class="dscr">Attaches files to a website using <a href="<%= Url.Action("JsSdk/InitModes/FileSelector")%>">File-selector</a>.</p>
 <img class="screenshot" alt="OpenEditors" src="<%= Url.Content("~/content/img/docspace/gifs/js-sdk-attach-files.gif") %>" />
 
+<h2>Before you start</h2>
+
+<p>Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
+You need to <a href="<%= Url.Action("jssdk/")%>#docspace-url">add the URL</a> of your server's root directory to the <b>Developer Tools</b> section of DocSpace.</p>
+
 <h2>Building a sample</h2>
 
 <h3>Step 1. Set HTML structure</h3>

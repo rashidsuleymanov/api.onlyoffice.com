@@ -6,6 +6,10 @@
 <p class="dscr">Customizes the editor interface so that it looks like your other products (if there are any), and changes the presence or absence of the additional buttons, links, logos and editor owner details.</p>
 <img class="screenshot" alt="OpenEditors" src="<%= Url.Content("~/content/img/docspace/customization-of-editors.png")%>" />
 
+<h2>Before you start</h2>
+
+<p>Please make sure you are using a server environment to run the HTML file because the JavaScript SDK must be launched on the server.
+You need to <a href="<%= Url.Action("jssdk/")%>#docspace-url">add the URL</a> of your server's root directory to the <b>Developer Tools</b> section of DocSpace.</p>
 
 <h2>Building a sample</h2>
 
