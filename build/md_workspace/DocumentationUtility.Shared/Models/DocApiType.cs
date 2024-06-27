@@ -26,6 +26,11 @@ namespace DocumentationUtility.Shared.Models
 
         private void ParseProperties()
         {
+            if (type.FullName.StartsWith("System."))
+            {
+                Properties = null;
+                return;
+            }
             foreach (var props in type.GetProperties())
             {
                 Properties.Add(new DocApiProperty(this, props));
