@@ -1,6 +1,7 @@
 ﻿using DocumentationUtility.Shared.Models.Abstract;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DocumentationUtility.Shared.Models
 {
@@ -19,6 +20,13 @@ namespace DocumentationUtility.Shared.Models
                 var n = GetGenericType(this.type);
                 this.type = n.type;
                 Name = n.Name;
+            }
+
+            if (this.type.GetCustomAttributes(false).Where(a => a.GetType().Name == "TypeConverterAttribute").Count() != 0)
+            {
+                this.type = typeof(String);
+                var i = Name.IndexOf('[');
+                Name = $"String{(i == -1 ? "" : Name.Substring(i, Name.Length))}";
             }
 
             ParseProperties();
