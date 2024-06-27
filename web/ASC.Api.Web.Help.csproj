@@ -4704,6 +4704,12 @@
     <Content Include="Views\DocSpace\JsSdk\InitModes\RoomSelector.ascx" />
     <Content Include="Views\DocSpace\JsSdk\InitModes\System.ascx" />
     <Content Include="Views\DocSpace\JsSdk\Methods.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\Samples\Default.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\Samples\AttachFiles.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\Samples\Authorization.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\Samples\CreateFileInSelectedFolder.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\Samples\CustomizationOfEditors.ascx" />
+    <Content Include="Views\DocSpace\JsSdk\Samples\SampleOpenFile.ascx" />
     <Content Include="Views\DocSpace\Method.aspx" />
     <Content Include="Views\DocSpace\Navigation.ascx" />
     <Content Include="Views\DocSpace\PluginsSdk.aspx" />
