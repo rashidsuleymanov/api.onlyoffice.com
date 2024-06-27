@@ -1,4 +1,5 @@
 # Change Log
+- docspace: added the JS SDK samples
 
 ## 4.7.0
 - docspace: storybook v2.5
