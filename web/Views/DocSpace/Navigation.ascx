@@ -340,9 +340,6 @@
                         <li>
                             <a href="<%= Url.Action("backend/filters") %>">Filtering</a>
                         </li>
-                        <li>
-                            <a href="<%= Url.Action("backend/batch") %>">Batching</a>
-                        </li>
                     </ul>
                 <%
                     break;

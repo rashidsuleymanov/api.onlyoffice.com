@@ -50,7 +50,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "Backend/HowItWorks/Auth",
                 "Backend/HowItWorks/LongRunningOperations",
                 "Backend/HowItWorks/UploadingLargeFiles",
-                "Backend/Batch",
                 "Backend/Faq",
                 "Backend/Filters",
                 "Backend/GetDocspace",
