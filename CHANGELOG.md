@@ -1,6 +1,47 @@
 # Change Log
 - docspace: added the JS SDK samples
 
+## 5.1.0
+- editors: added the startFilling method
+- editors: added the events.onRequestStartFilling event
+- editors: added the docs_api_config parameter to the form element of the WOPI host page
+- editors: added the pdf field to the conversion request
+- editors: added the events.onSubmit event
+- editors: the docxf format is deprecated, please use the pdf format to create and edit forms
+- editors: changed the documentType of the docxf and oform formats to pdf
+- editors: added the editorConfig.customization.layout.header.editMode parameter
+- editors: added the editorConfig.customization.features.roles parameter
+- editors: added the shardkey parameter to the URL query string when sending requests to the document command service, document conversion service, or document builder service
+- editors: added the addContextMenuItem, addToolbarMenuItem and updateContextMenuItem methods to the Automation API
+- editors: added the -10 error code to the Conversion API
+- editors: the editorConfig.customization.logo parameter is now available in the mobile editors
+- editors: added the visible field to the editorConfig.customization.logo parameter
+- editors: added the formsubmit action to the WOPI discovery
+- editors: added the Save Copy As functionality to WOPI
+- editors: the editorConfig.customization.goback.requestClose field is deprecated, please use the editorConfig.customization.close field instead
+- editors: the editorConfig.customization.layout.toolbar.home.mailmerge field is deprecated, please use the editorConfig.customization.layout.toolbar.collaboration.mailmerge field instead
+- editors: change the default value of the editorConfig.customization.hideRightMenu parameter to true
+- office api section
+- docbuidler: added the Python framework
+- docbuilder: v8.1.0
+- plugins: v8.1.0
+- plugins: added the ability to add the plugin toolbar menu items
+- plugins: added the ability to create multiple left panels for plugins
+- desktop: added the getViewportSettings method and onViewportSettingsChanged event to the AscDesktopEditor object
+- desktop: v8.1
+- update favicon
+
+## 5.0.1
+- redirect from old urls
+
+## 5.0.0
+- selection of three products: docspace, docs, workspace
+- redesign main page
+- redesign header and footer
+- docspace: storybook v2.5.1
+- docspace: v2.5.1
+- plugins: updated config parameters
+
 ## 4.7.0
 - docspace: storybook v2.5
 - docspace: v2.5

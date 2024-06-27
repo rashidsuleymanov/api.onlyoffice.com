@@ -464,14 +464,14 @@
     "onContextMenuShow": {
       "memberof": "Plugin",
       "name": "onContextMenuShow",
-      "description": "<p>The function called when the context menu has been shown.</p>",
+      "description": "<p>The function called when the context menu has been shown.</p>\n<p><note>If a plugin is listening for this event, it must call the {@link /plugin/executeMethod/common/addcontextmenuitem AddContextMenuItem} method (synchronously or not),\nbecause the editor waits for responses from all plugins before filling the context menu.</note></p>",
       "tags": {},
       "see": null,
       "params": [
         {
-          "type": "Object",
+          "type": "ContextMenuOptions",
           "name": "options",
-          "description": "<p>Defines the options for the current selection.</p>",
+          "description": "<p>Defines the context menu information.</p>",
           "optional": false
         }
       ]
@@ -480,6 +480,21 @@
       "memberof": "Plugin",
       "name": "onContextMenuClick",
       "description": "<p>The function called when the context menu item has been clicked.</p>",
+      "tags": {},
+      "see": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "id",
+          "description": "<p>Item ID.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "onToolbarMenuClick": {
+      "memberof": "Plugin",
+      "name": "onToolbarMenuClick",
+      "description": "<p>The function called when the toolbar menu item has been clicked.</p>",
       "tags": {},
       "see": null,
       "params": [

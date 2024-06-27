@@ -181,6 +181,10 @@
             <summary>File version</summary>
             <type>System.Int32, System</type>
         </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.CheckFillFormDraftRequestDto.Doc">
+            <summary>Shared token</summary>
+            <type>System.String, System</type>
+        </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CheckFillFormDraftRequestDto.Action">
             <summary>Action with a form</summary>
             <type>System.String, System</type>
@@ -256,10 +260,6 @@
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateRoomRequestDto.RoomType">
             <summary>Room type</summary>
             <type>ASC.Files.Core.ApiModels.RequestDto.RoomType, ASC.Files.Core</type>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateRoomRequestDto.Private">
-            <summary>Private room or not</summary>
-            <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.CreateRoomRequestDto.Share">
             <summary>Collection of sharing parameters</summary>
@@ -429,10 +429,6 @@
             <summary>File extension</summary>
             <type>System.String, System</type>
         </member>
-        <member name="P:ASC.Files.Core.ApiModels.RequestDto.GetInfoUsersRequestDto.UserIds">
-            <summary>List of user ids</summary>
-            <type>System.Collections.Generic.List{System.Guid}, System.Collections.Generic</type>
-        </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.GetReferenceDataDto`1">
             <summary>
             </summary>
@@ -598,18 +594,6 @@
             <summary>Specifies whether downloading a file from a link is disabled or not</summary>
             <type>System.Boolean, System</type>
         </member>
-        <member name="T:ASC.Files.Core.ApiModels.RequestDto.SaveAsPdfRequestDto`1">
-            <summary>
-            </summary>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.RequestDto.SaveAsPdfRequestDto`1.FolderId">
-            <summary>Folder ID</summary>
-            <type>System.Int32, System</type>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.RequestDto.SaveAsPdfRequestDto`1.Title">
-            <summary>File title</summary>
-            <type>System.String, System</type>
-        </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.SaveEditingRequestDto">
             <summary>
             </summary>
@@ -625,6 +609,10 @@
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.SaveEditingRequestDto.File">
             <summary>Request file stream</summary>
             <type>Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.SaveEditingRequestDto.Doc">
+            <summary>Shared token</summary>
+            <type>System.String, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.SaveEditingRequestDto.Forcesave">
             <summary>Specifies whether to force save a file or not</summary>
@@ -685,6 +673,10 @@
         <member name="P:ASC.Files.Core.ApiModels.RequestDto.StartEditRequestDto.EditingAlone">
             <summary>Specifies whether to share a file with other users for editing or not</summary>
             <type>System.Boolean, System</type>
+        </member>
+        <member name="P:ASC.Files.Core.ApiModels.RequestDto.StartEditRequestDto.Doc">
+            <summary>Shared token</summary>
+            <type>System.String, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.RequestDto.TemplatesRequestDto">
             <summary>
@@ -901,10 +893,6 @@
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConfigurationDto`1.ErrorMessage">
             <summary>Error message</summary>
             <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.ConfigurationDto`1.StartFilling">
-            <summary>Specifies if the filling has started or not</summary>
-            <type>System.Boolean, System</type>
         </member>
         <member name="T:ASC.Files.Core.ApiModels.ResponseDto.ConversationResultDto">
             <summary>
@@ -1125,10 +1113,6 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.HasDraft">
             <summary>Is there a draft or not</summary>
-            <type>System.Boolean, System</type>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.StartFilling">
-            <summary>Specifies if the filling has started or not</summary>
             <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileDto`1.DenySharing">
@@ -1357,10 +1341,6 @@
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto.RootFolderType">
             <summary>Root folder type</summary>
-            <type>ASC.Files.Core.FolderType, ASC.Files.Core</type>
-        </member>
-        <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto.ParentRoomType">
-            <summary>First parent folder type</summary>
             <type>ASC.Files.Core.FolderType, ASC.Files.Core</type>
         </member>
         <member name="P:ASC.Files.Core.ApiModels.ResponseDto.FileEntryDto.UpdatedBy">
@@ -1928,7 +1908,7 @@
             <param name="parentId"></param>
             <param name="type"></param>
         </member>
-        <member name="M:ASC.Files.Core.IFolderDao`1.GetFoldersAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.Boolean,System.Int32,System.Int32,`0,System.Boolean)">
+        <member name="M:ASC.Files.Core.IFolderDao`1.GetFoldersAsync(`0,ASC.Files.Core.OrderBy,ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean,System.Boolean,System.Int32,System.Int32,`0)">
             <summary>
             Get a list of folders.
             </summary>
@@ -1943,7 +1923,6 @@
             <param name="offset"></param>
             <param name="count"></param>
             <param name="roomId"></param>
-            <param name="containingMyFiles"></param>
             <returns></returns>
         </member>
         <member name="M:ASC.Files.Core.IFolderDao`1.GetFoldersAsync(System.Collections.Generic.IEnumerable{`0},ASC.Files.Core.FilterType,System.Boolean,System.Nullable{System.Guid},System.String,System.Boolean,System.Boolean,System.Boolean)">
@@ -2290,10 +2269,6 @@
         </member>
         <member name="P:ASC.Files.Core.FormFillingProperties.CollectFillForm">
             <summary>Specifies whether to collect the data from the filled forms or not</summary>
-            <type>System.Boolean, System</type>
-        </member>
-        <member name="P:ASC.Files.Core.FormFillingProperties.StartFilling">
-            <summary>Specifies if the filling has started or not</summary>
             <type>System.Boolean, System</type>
         </member>
         <member name="P:ASC.Files.Core.FormFillingProperties.Title">
@@ -3630,6 +3605,10 @@
             <summary>
             </summary>
         </member>
+        <member name="M:ASC.Web.Files.Services.WCFService.MentionWrapper.#ctor(ASC.Core.Users.UserInfo,ASC.Web.Core.Users.DisplayUserSettingsHelper)">
+            <summary>
+            </summary>
+        </member>
         <member name="P:ASC.Web.Files.Services.WCFService.MentionWrapper.User">
             <summary>User information</summary>
             <type>ASC.Core.Users.UserInfo, ASC.Core.Common</type>
@@ -3640,10 +3619,6 @@
         </member>
         <member name="P:ASC.Web.Files.Services.WCFService.MentionWrapper.Id">
             <summary>User ID</summary>
-            <type>System.String, System</type>
-        </member>
-        <member name="P:ASC.Web.Files.Services.WCFService.MentionWrapper.Image">
-            <summary>User image</summary>
             <type>System.String, System</type>
         </member>
         <member name="P:ASC.Web.Files.Services.WCFService.MentionWrapper.HasAccess">

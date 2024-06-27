@@ -20,7 +20,7 @@
     <p>You can search for the desired method to use its script in the text area below. Or, in case you have a script of your own, use the button under the text area to upload it. You can select the necessary editor.</p>
 
     <div>
-        <ul class="doc-builder-file-types top-nav">
+        <ul class="doc-builder-file-types try-tabs">
             <li class="<%= Request["type"] != "cell" && Request["type"] != "slide" && Request["type"] != "form" ? "active" : "" %>">
                 <a href="<%= Url.Action("try") %>">Document Editor</a>
             </li>
@@ -121,16 +121,19 @@
             var removeMethod = {
                 docx: "Api.GetDocument().RemoveAllElements();",
                 xlsx: "Api.AddSheet(\"Sheet 1\");var sheets = Api.GetSheets(); for (var shInd = 0; shInd < sheets.length - 1; shInd++){ sheets[shInd].Delete(); }",
-                pptx: "var oPresentation = Api.GetPresentation(); var nSlidesCount = oPresentation.GetSlidesCount(); for(var nSlideIdx = nSlidesCount - 1; nSlideIdx > -1; --nSlideIdx) { oPresentation.GetSlideByIndex(nSlideIdx).Delete(); } oPresentation.AddSlide(Api.CreateSlide());"
+                pptx: "var oPresentation = Api.GetPresentation(); var nSlidesCount = oPresentation.GetSlidesCount(); for(var nSlideIdx = nSlidesCount - 1; nSlideIdx > -1; --nSlideIdx) { oPresentation.GetSlideByIndex(nSlideIdx).Delete(); } oPresentation.AddSlide(Api.CreateSlide());",
+                pdf: "Api.GetDocument().RemoveAllElements();"
             };
             var script = removeMethod["<%= ext %>"] +
                 $("#builderScript").val().replaceAll("builder.CreateFile", "").replaceAll("builder.SaveFile", "").replaceAll("builder.CloseFile()", "").replaceAll("\n", "");
 
-            connector.callCommand(
-                "function () {" +
-                script +
-                "}"
-            );
+            (new Function(
+                "connector.callCommand(" +
+                    "function() {" +
+                        script +
+                    "}" +
+                ");"
+            ))();
         };
 
         var onDocumentReady = function () {
@@ -146,8 +149,8 @@
         <%
             if (Request["type"] == "form")
             {
-                documentType = "word";
-                ext = "docx";
+                documentType = "pdf";
+                ext = "pdf";
             }
         %>
 
@@ -159,7 +162,7 @@
                         Key = "apiwh" + Guid.NewGuid(),
                         Permissions = new Config.DocumentConfig.PermissionsConfig(),
                         Title = "Example Title." + ext,
-                        Url = ConfigurationManager.AppSettings["storage_demo_url"] + "new." + ext 
+                        Url = ConfigurationManager.AppSettings["storage_demo_url"] + "new." + ext
                     },
                 DocumentType = documentType,
                 EditorConfig = new Config.EditorConfigConfiguration

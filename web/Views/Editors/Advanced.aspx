@@ -119,6 +119,10 @@
                 "label": "Guest"
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#autosave">autosave</a>": true,
+            "<a href="<%= Url.Action("config/editor/customization") %>#close">close</a>": {
+                "visible": true,
+                "text": "Close file"
+            },
             "<a href="<%= Url.Action("config/editor/customization") %>#comments">comments</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#compactHeader">compactHeader</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#compactToolbar">compactToolbar</a>": false,
@@ -134,9 +138,9 @@
                 "www": "example.com"
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#features">features</a>": {
+                "roles": true,
                 "spellcheck": {
-                    "mode": true,
-                    "change": true
+                    "mode": true
                 }
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#feedback">feedback</a>": {
@@ -146,19 +150,19 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#goback">goback</a>": {
                 "blank": true,
-                "requestClose": false,
                 "text": "Open file location",
                 "url": "https://example.com"
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#help">help</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#hideNotes">hideNotes</a>": false,
-            "<a href="<%= Url.Action("config/editor/customization") %>#hideRightMenu">hideRightMenu</a>": false,
+            "<a href="<%= Url.Action("config/editor/customization") %>#hideRightMenu">hideRightMenu</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#hideRulers">hideRulers</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#integrationMode">integrationMode</a>": "embed",
             "<a href="<%= Url.Action("config/editor/customization") %>#logo">logo</a>": {
                 "image": "https://example.com/logo.png",
                 "imageDark": "https://example.com/dark-logo.png",
-                "url": "https://example.com"
+                "url": "https://example.com",
+                "visible": true
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#macros">macros</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#macrosMode">macrosMode</a>": "warn",
@@ -229,7 +233,7 @@
             ...
         ],
         "<a href="<%= Url.Action("config/editor") %>#user">user</a>": {
-            "group": "Group1",
+            "group": "Group1,Group2",
             "id": "78e1e841",
             "image": "https://example.com/url-to-user-avatar.png",
             "name": "John Smith"
@@ -264,7 +268,9 @@
         "<a href="<%= Url.Action("config/events") %>#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a>": onRequestSelectSpreadsheet,
         "<a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a>": onRequestSendNotify,
         "<a href="<%= Url.Action("config/events") %>#onRequestSharingSettings">onRequestSharingSettings</a>": onRequestSaveAs,
+        "<a href="<%= Url.Action("config/events") %>#onRequestStartFilling">onRequestStartFilling</a>": onRequestStartFilling,
         "<a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a>": onRequestUsers,
+        "<a href="<%= Url.Action("config/events") %>#onSubmit">onSubmit</a>": onSubmit,
         "<a href="<%= Url.Action("config/events") %>#onWarning">onWarning</a>": onWarning
     },
     "<a href="<%= Url.Action("config/") %>#height">height</a>": "100%",

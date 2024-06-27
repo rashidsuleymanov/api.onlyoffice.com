@@ -19,6 +19,8 @@
         The request parameters are entered in JSON format in the request body.
         The requests are sent to the <span class="fakelink">https://documentserver/docbuilder</span> address where <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.
     </p>
+    <p>Starting from version 8.1, it is recommended to add the <a href="<%= Url.Action("howitworks") %>#shardkey">shardkey</a> parameter to the URL <em>QueryString</em> with the <em>key</em> value in it.
+        For example, <em>?shardkey=Khirz6zTPdfd7</em>. This allows you to load balance requests.</p>
 
     <h2>Parameters and their description:</h2>
     <table class="table">
@@ -96,7 +98,7 @@
 
     <p>
         You can find more information about the <em>.docbuilder</em> file syntax <a href="<%= Url.Action("integrationapi/usingdocbuilderfile", "DocBuilder") %>">here</a>.
-        Please read <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("gettingstarted", "DocBuilder") %>">API documentation</a> for the detailed information on what classes and methods are used to generate the documents with the help of <em>.docbuilder</em> files.
+        Please read <a href="<%= Url.Action("basic", "officeapi") %>">Office JavaScript API documentation</a> for the detailed information on what classes and methods are used to generate the documents with the help of <em>.docbuilder</em> files.
     </p>
 
     <div id="sample-sync-first" class="header-gray copy-link">Sample of JSON object sent to <b>document builder service</b> for the first asynchronous request</div>

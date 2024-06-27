@@ -47,6 +47,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
     "nameLocale": {
         "fr": "Autocomplete",
         "es": "Autocomplete",
+        "pt-BR": "Preenchimento autom&#225;tico",
         "de": "Autocomplete"
     },
     "guid" : "asc.{A103601F-FDA0-418A-BC37-A514031894C0}",
@@ -58,6 +59,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "descriptionLocale": {
                 "fr": "Utilisez un assistant de saisie pendant que vous tapez dans les &#233;diteurs.",
                 "es": "Utilice un asistente de entrada mientras escribe en los editores.",
+                "pt-BR": "Use um assistente de entrada enquanto digita nos editores.",
                 "de": "Verwenden Sie einen Assistenten bei der Eingabe in den Editoren."
             },
             "url"                 : "index.html",

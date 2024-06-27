@@ -1,0 +1,830 @@
+{
+  "methods": {
+    "Format": {
+      "memberof": "Api",
+      "name": "Format",
+      "description": "<p>Returns a class formatted according to the instructions contained in the format expression.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "expression",
+          "description": "<p>Any valid expression.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "format",
+          "description": "<p>A valid named or user-defined format expression.</p>",
+          "optional": true
+        }
+      ]
+    },
+    "AddCustomFunction": {
+      "memberof": "Api",
+      "name": "AddCustomFunction",
+      "description": "<p>Creates a new custom function.\nThe description of the function parameters and result is specified using JSDoc. The <em>@customfunction</em> tag is required in JSDoc.\nParameters and results can be specified as the <em>number / string / bool / any / number[][] / string[][] / bool[][] / any[][]</em> types.\nParameters can be required or optional. A user can also set a default value.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "function",
+          "name": "fCustom",
+          "description": "<p>A new function for calculating.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "RemoveCustomFunction": {
+      "memberof": "Api",
+      "name": "RemoveCustomFunction",
+      "description": "<p>Removes a custom function.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sName",
+          "description": "<p>The name of a custom function.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ClearCustomFunctions": {
+      "memberof": "Api",
+      "name": "ClearCustomFunctions",
+      "description": "<p>Clears all custom functions.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "AddSheet": {
+      "memberof": "Api",
+      "name": "AddSheet",
+      "description": "<p>Creates a new worksheet. The new worksheet becomes the active sheet.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sName",
+          "description": "<p>The name of a new worksheet.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetSheets": {
+      "memberof": "Api",
+      "name": "GetSheets",
+      "description": "<p>Returns a sheet collection that represents all the sheets in the active workbook.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiWorksheet>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetLocale": {
+      "memberof": "Api",
+      "name": "SetLocale",
+      "description": "<p>Sets a locale to the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "LCID",
+          "description": "<p>The locale specified.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetLocale": {
+      "memberof": "Api",
+      "name": "GetLocale",
+      "description": "<p>Returns the current locale ID.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetActiveSheet": {
+      "memberof": "Api",
+      "name": "GetActiveSheet",
+      "description": "<p>Returns an object that represents the active sheet.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiWorksheet"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetSheet": {
+      "memberof": "Api",
+      "name": "GetSheet",
+      "description": "<p>Returns an object that represents a sheet.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiWorksheet",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string | number",
+          "name": "nameOrIndex",
+          "description": "<p>Sheet name or sheet index.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetThemesColors": {
+      "memberof": "Api",
+      "name": "GetThemesColors",
+      "description": "<p>Returns a list of all the available theme colors for the spreadsheet.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<string>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetThemeColors": {
+      "memberof": "Api",
+      "name": "SetThemeColors",
+      "description": "<p>Sets the theme colors to the current spreadsheet.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sTheme",
+          "description": "<p>The color scheme that will be set to the current spreadsheet.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CreateNewHistoryPoint": {
+      "memberof": "Api",
+      "name": "CreateNewHistoryPoint",
+      "description": "<p>Creates a new history point.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "CreateColorFromRGB": {
+      "memberof": "Api",
+      "name": "CreateColorFromRGB",
+      "description": "<p>Creates an RGB color setting the appropriate values for the red, green and blue color components.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiColor"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CreateColorByName": {
+      "memberof": "Api",
+      "name": "CreateColorByName",
+      "description": "<p>Creates a color selecting it from one of the available color presets.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiColor"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "PresetColor",
+          "name": "sPresetColor",
+          "description": "<p>A preset selected from the list of the available color preset names.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "Intersect": {
+      "memberof": "Api",
+      "name": "Intersect",
+      "description": "<p>Returns the ApiRange object that represents the rectangular intersection of two or more ranges. If one or more ranges from a different worksheet are specified, an error will be returned.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiRange",
+          "name": "Range1",
+          "description": "<p>One of the intersecting ranges. At least two Range objects must be specified.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiRange",
+          "name": "Range2",
+          "description": "<p>One of the intersecting ranges. At least two Range objects must be specified.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetSelection": {
+      "memberof": "Api",
+      "name": "GetSelection",
+      "description": "<p>Returns an object that represents the selected range.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "AddDefName": {
+      "memberof": "Api",
+      "name": "AddDefName",
+      "description": "<p>Adds a new name to a range of cells.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sName",
+          "description": "<p>The range name.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sRef",
+          "description": "<p>The reference to the specified range. It must contain the sheet name, followed by sign ! and a range of cells.\nExample: &quot;Sheet1!$A$1:$B$2&quot;.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isHidden",
+          "description": "<p>Defines if the range name is hidden or not.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetDefName": {
+      "memberof": "Api",
+      "name": "GetDefName",
+      "description": "<p>Returns the ApiName object by the range name.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiName"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "defName",
+          "description": "<p>The range name.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "Save": {
+      "memberof": "Api",
+      "name": "Save",
+      "description": "<p>Saves changes to the specified document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "GetRange": {
+      "memberof": "Api",
+      "name": "GetRange",
+      "description": "<p>Returns the ApiRange object by the range reference.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sRange",
+          "description": "<p>The range of cells from the current sheet.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetWorksheetFunction": {
+      "memberof": "Api",
+      "name": "GetWorksheetFunction",
+      "description": "<p>Returns the ApiWorksheetFunction object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiWorksheetFunction"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetMailMergeData": {
+      "memberof": "Api",
+      "name": "GetMailMergeData",
+      "description": "<p>Returns the mail merge data.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<Array.<string>>"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nSheet",
+          "description": "<p>The sheet index.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bWithFormat",
+          "description": "<p>Specifies that the data will be received with the format.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "RecalculateAllFormulas": {
+      "memberof": "Api",
+      "name": "RecalculateAllFormulas",
+      "description": "<p>Recalculates all formulas in the active workbook.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "function",
+          "name": "fLogger",
+          "description": "<p>A function which specifies the logger object for checking recalculation of formulas.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "attachEvent": {
+      "memberof": "Api",
+      "name": "attachEvent",
+      "description": "<p>Subscribes to the specified event and calls the callback function when the event fires.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "eventName",
+          "description": "<p>The event name.</p>",
+          "optional": false
+        },
+        {
+          "type": "function",
+          "name": "callback",
+          "description": "<p>Function to be called when the event fires.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "detachEvent": {
+      "memberof": "Api",
+      "name": "detachEvent",
+      "description": "<p>Unsubscribes from the specified event.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "eventName",
+          "description": "<p>The event name.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "AddComment": {
+      "memberof": "Api",
+      "name": "AddComment",
+      "description": "<p>Returns an array of ApiComment objects.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiComment",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "description": "<p>The comment text.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sAuthor",
+          "description": "<p>The author's name (optional).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetCommentById": {
+      "memberof": "Api",
+      "name": "GetCommentById",
+      "description": "<p>Returns a comment from the current document by its ID.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiComment"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sId",
+          "description": "<p>The comment ID.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetComments": {
+      "memberof": "Api",
+      "name": "GetComments",
+      "description": "<p>Returns all comments related to the whole workbook.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiComment>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllComments": {
+      "memberof": "Api",
+      "name": "GetAllComments",
+      "description": "<p>Returns all comments from the current workbook including comments from all worksheets.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiComment>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetFreezePanesType": {
+      "memberof": "Api",
+      "name": "SetFreezePanesType",
+      "description": "<p>Sets a type to the freeze panes.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "FreezePaneType",
+          "name": "FreezePaneType",
+          "description": "<p>The freeze panes type (&quot;null&quot; to unfreeze).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetFreezePanesType": {
+      "memberof": "Api",
+      "name": "GetFreezePanesType",
+      "description": "<p>Returns the freeze panes type.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "FreezePaneType"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetReferenceStyle": {
+      "memberof": "Api",
+      "name": "GetReferenceStyle",
+      "description": "<p>Returns the cell reference style.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ReferenceStyle"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetReferenceStyle": {
+      "memberof": "Api",
+      "name": "SetReferenceStyle",
+      "description": "<p>Sets the cell reference style.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ReferenceStyle",
+          "name": "sReferenceStyle",
+          "description": "<p>The cell reference style.</p>",
+          "optional": false
+        }
+      ]
+    }
+  },
+  "events": {
+    "onWorksheetChange": {
+      "memberof": "Api",
+      "name": "onWorksheetChange",
+      "description": "<p>The callback function which is called when the specified range of the current sheet changes.\n<note>Please note that the event is not called for the undo/redo operations.</note></p>",
+      "tags": {},
+      "see": null,
+      "params": [
+        {
+          "type": "ApiRange",
+          "name": "range",
+          "description": "<p>The modified range represented as the ApiRange object.</p>",
+          "optional": false
+        }
+      ]
+    }
+  },
+  "comment": "/**\n\t * Base class.\n\t * @global\n\t * @class\n\t * @name Api\n\t * @property {Array} Sheets - Returns the Sheets collection that represents all the sheets in the active workbook.\n\t * @property {ApiWorksheet} ActiveSheet - Returns an object that represents the active sheet.\n\t * @property {ApiRange} Selection - Returns an object that represents the selected range.\n\t * @property {ApiComment[]} Comments - Returns all comments related to the whole workbook.\n\t * @property {FreezePaneType} FreezePanes - Returns or sets the type of freeze panes.\n\t * @property {ApiComment[]} AllComments - Returns all comments from the current workbook including comments from all worksheets.\n\t * @property {ReferenceStyle} ReferenceStyle - Returns or sets the reference style.\n\t * @property {ApiWorksheetFunction} WorksheetFunction - Returns an object that represents a list of functions.\n\t */",
+  "description": "<p>Base class.</p>",
+  "scope": "global",
+  "properties": [
+    {
+      "type": "Array",
+      "name": "Sheets",
+      "description": "<p>Returns the Sheets collection that represents all the sheets in the active workbook.</p>"
+    },
+    {
+      "type": "ApiWorksheet",
+      "name": "ActiveSheet",
+      "description": "<p>Returns an object that represents the active sheet.</p>"
+    },
+    {
+      "type": "ApiRange",
+      "name": "Selection",
+      "description": "<p>Returns an object that represents the selected range.</p>"
+    },
+    {
+      "type": "Array.<ApiComment>",
+      "name": "Comments",
+      "description": "<p>Returns all comments related to the whole workbook.</p>"
+    },
+    {
+      "type": "FreezePaneType",
+      "name": "FreezePanes",
+      "description": "<p>Returns or sets the type of freeze panes.</p>"
+    },
+    {
+      "type": "Array.<ApiComment>",
+      "name": "AllComments",
+      "description": "<p>Returns all comments from the current workbook including comments from all worksheets.</p>"
+    },
+    {
+      "type": "ReferenceStyle",
+      "name": "ReferenceStyle",
+      "description": "<p>Returns or sets the reference style.</p>"
+    },
+    {
+      "type": "ApiWorksheetFunction",
+      "name": "WorksheetFunction",
+      "description": "<p>Returns an object that represents a list of functions.</p>"
+    }
+  ]
+}

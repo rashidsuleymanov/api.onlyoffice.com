@@ -88,7 +88,7 @@
                         <li><b>0</b> - the force saving request is performed to the <a href="<%= Url.Action("command/forcesave") %>">command service</a>,</li>
                         <li><b>1</b> - the force saving request is performed each time the saving is done (e.g. the <b>Save</b> button is clicked), which is only available when the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a> option is set to <em>true</em>.</li>
                         <li><b>2</b> - the force saving request is performed by timer with the settings from the server config.</li>
-                        <li><b>3</b> - the force saving request is performed each time the form is submitted (e.g. the <a href="<%= Url.Action("config/editor/customization") %>#submitForm">Submit</a> button is clicked).</li>
+                        <li><b>3</b> - the force saving request is performed each time the form is submitted (e.g. the <a href="<%= Url.Action("config/editor/customization") %>#submitForm">Complete & Submit</a> button is clicked).</li>
                     </ul>
                     The type is present when the <em>status</em> value is equal to <b>6</b> or <b>7</b> only.
                 </td>
@@ -195,6 +195,9 @@
     <div class="mobile-content"></div>
 
     <p id="used-callbackUrl" class="copy-link">
+        The server stores all <em>callbackUrls</em> and chooses which one to use depending on the user who performed the action.
+    </p>
+    <p>
         Since version 5.5, <a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a> is selected depending on the <em>status</em> of the request.
         Starting from version 4.4 to version 5.5, <em>callbackUrl</em> is used from the last user who joined the co-editing.
         Prior to version 4.4, when co-editing, <em>callbackUrl</em> is used from the user who first opened the file for editing.

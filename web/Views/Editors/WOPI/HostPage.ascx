@@ -9,7 +9,8 @@
 
     <p>The host page must contain the following elements:</p>
     <ul>
-        <li>A <em>form</em> element via which the host must <em>POST</em> the <a href="#access_token">access_token</a> and <a href="#access_token_ttl">access_token_ttl</a> parameters to the online office iframe for security purposes.</li>
+        <li>A <em>form</em> element via which the host must <em>POST</em> the <a href="#access_token">access_token</a> and <a href="#access_token_ttl">access_token_ttl</a> parameters to the online office iframe for security purposes.
+        The <a href="#docs_api_config">docs_api_config</a> parameter is optional.</li>
         <li>JavaScript code for interacting with the online office iframe using <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>.</li>
         <li>Specific CSS styles for the body element and online office to avoid visual bags. In addition, the host page should set an appropriate favicon 
         for the page using the favicon URL provided in <a href="<%= Url.Action("wopi/discovery") %>">WOPI discovery</a>.</li>
@@ -57,6 +58,7 @@
     &lt;form id="office_form" name="office_form" target="office_frame" action="&lt;%= actionUrl %&gt;" method="post"&gt;
         &lt;input name="access_token" value="&lt;%= token %&gt;" type="hidden" /&gt;
         &lt;input name="access_token_ttl" value="&lt;%= tokenTtl %&gt;" type="hidden" /&gt;
+        &lt;!-- &lt;input name="docs_api_config" value="&lt;%= apiConfig %&gt;" type="hidden" /&gt; --&gt;
     &lt;/form&gt;
 
     &lt;span id="frameholder"&gt;&lt;/span&gt;
@@ -82,7 +84,7 @@
 &lt;/html&gt;
 </pre>
 
-    <note>Please note that the <em>"&lt;%= actionUrl %&gt;"</em>, <em>"&lt;%= token %&gt;"</em>, <em>"&lt;%= tokenTtl %&gt;"</em> strings will be rendered with the appropriate parameters.</note>
+    <note>Please note that the <em>"&lt;%= actionUrl %&gt;"</em>, <em>"&lt;%= token %&gt;"</em>, <em>"&lt;%= tokenTtl %&gt;"</em>, <em>"&lt;%= apiConfig %&gt;"</em> strings will be rendered with the appropriate parameters.</note>
     <div class="header-gray">Parameters</div>
     <table class="table">
         <colgroup>
@@ -105,9 +107,22 @@
             </tr>
             <tr>
                 <td id="access_token_ttl" class="copy-link">access_token_ttl</td>
-                <td>The time when an access token expires, represented as the number of milliseconds since January 1, 1970 UTC.
-                It is recommended to set this parameter to 10 hours.</td>
+                <td>
+                    The time when an access token expires, represented as the number of milliseconds since January 1, 1970 UTC.
+                    It is recommended to set this parameter to 10 hours.
+                    <br />
+                    This parameter can be also set to 0. This means for the client that the token expiry is either infinite or unknown.
+                    In this case, clients might disable any UI prompting users to refresh their sessions. This can lead to unexpected data loss due to access token expiry.
+                    So, this is strongly recommended to specify a value for <em>access_token_ttl</em>.
+                </td>
                 <td>integer</td>
+            </tr>
+            <tr>
+                <td id="docs_api_config" class="copy-link">docs_api_config</td>
+                <td>The optional <a href="<%= Url.Action("config") %>">config</a> parameters for opening the editor via Docs API
+                that are not supported by the WOPI protocol. For example, to enable the <a href="<%= Url.Action("save") %>#forcesave">forcesaving</a> functionality
+                by clicking the <b>Save</b> button, the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">editorConfig.customization.forcesave</a> parameter must be passed in this object.</td>
+                <td>string</td>
             </tr>
         </tbody>
     </table>

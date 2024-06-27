@@ -78,6 +78,23 @@
         }
       ]
     },
+    "GetAllComments": {
+      "memberof": "Api",
+      "name": "GetAllComments",
+      "description": "<p>Returns all the comments from the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<comment>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "StartSlideShow": {
       "memberof": "Api",
       "name": "StartSlideShow",

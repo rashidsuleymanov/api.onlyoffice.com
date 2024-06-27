@@ -13,7 +13,7 @@
             <col class="table-api" />
             <col class="table-wopi" />
         </colgroup>
-        <thead style="background-color: #ebebeb">
+        <thead class="table-header-gray">
             <tr class="tablerow">
                 <td class="borders"></td>
                 <td style="text-align: center" class="borders"><h2>API</h2></td>
@@ -158,6 +158,7 @@
                         <li>Opening a dialog of <a href="<%= Url.Action("wopi/postmessage") %>#UI_Sharing">sharing access</a> settings</li>
                         <li>Opening the document <a href="<%= Url.Action("wopi/postmessage") %>#UI_FileVersions">version history</a></li>
                         <li><a href="<%= Url.Action("wopi/postmessage") %>#UI_InsertGraphic">Inserting images</a> from the storage</li>
+                        <li>Request to <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>#save-as">save</a> a file in a different format</li>
                     </ul>
                 </td>
             </tr>

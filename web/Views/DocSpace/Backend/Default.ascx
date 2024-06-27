@@ -4,6 +4,21 @@
     <span class="hdr">Basic concepts</span>
 </h1>
 
+<%var product = Products.GetSection("docspace", "backend"); %>
+
+<div class="pvl_wrapper">
+    <span class="pvl_product">ONLYOFFICE DocSpace <%= product.Title %></span><span class="pvl_version">v<%= product.Version %></span>
+</div>
+
+<p class="dscr">
+    <a href="https://www.onlyoffice.com/docspace.aspx" target="_blank">ONLYOFFICE DocSpace</a> is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, and forms in customizable rooms.
+    It provides the following features:
+</p>
+<ul>
+    <li>creating and customizing rooms for collaboration;</li>
+    <li>creating, editing and viewing text documents, spreadsheets, presentations, fillable forms, PDFs, ebooks, multimedia files;</li>
+    <li>inviting users to collaborate on files with them in real time.</li>
+</ul>
 <p>
     The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/DELETE.
         All the resources, like posts or comments, have their own URLs and are designed to be manipulated in isolation.
@@ -11,7 +26,7 @@
 <h2>Authentication</h2>
 <p>
     Authentication in the ONLYOFFICE DocSpace API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header.
-        For information and examples please visit the <a href="<%= Url.Action("backend/auth") %>">Authentication</a> section.
+        For information and examples please visit the <a href="<%= Url.Action("backend/howitworks/auth") %>">Authentication</a> section.
 </p>
 
 <h2>Making requests
