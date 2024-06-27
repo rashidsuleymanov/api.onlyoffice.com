@@ -57,7 +57,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "GetDocspace",
                 "ApiSystem",
                 "ApiSystem/Authentication",
-                "ApiSystem/Batch",
                 "ApiSystem/Faq",
                 "ApiSystem/Filters",
                 "ApiSystem/PortalSection",

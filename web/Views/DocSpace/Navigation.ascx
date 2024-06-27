@@ -396,9 +396,6 @@
                         <li>
                             <a href="<%= Url.Action("apisystem/filters") %>">Filtering</a>
                         </li>
-                        <li>
-                            <a href="<%= Url.Action("apisystem/batch") %>">Batching</a>
-                        </li>
                     </ul>
                 <%
                     break;

@@ -4940,7 +4940,6 @@
     <Content Include="Views\DocBuilder\Try.aspx" />
     <Content Include="Views\DocSpace\ApiSystem.aspx" />
     <Content Include="Views\DocSpace\ApiSystem\Authentication.ascx" />
-    <Content Include="Views\DocSpace\ApiSystem\Batch.ascx" />
     <Content Include="Views\DocSpace\ApiSystem\Default.ascx" />
     <Content Include="Views\DocSpace\ApiSystem\Faq.ascx" />
     <Content Include="Views\DocSpace\ApiSystem\Filters.ascx" />
