@@ -11,7 +11,7 @@
         </a>
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("jssdk/samples/sampleopenfile")%>">Open file in ONLYOFFICE editors</a></p>
-            <p>Open a file in ONLYOFFICE editors using FileSelector.</p>
+            <p>Opens a file in ONLYOFFICE editors using the file selector.</p>
         </div>
         <p class="block_more-sample"><a href="<%= Url.Action("jssdk/samples/sampleopenfile")%>">More</a></p>
     </li>
@@ -31,7 +31,7 @@
         </a>
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("jssdk/samples/createfileinselectedfolder")%>">Create file in selected folder</a></p>
-            <p>Create file in selected folder and open it in editors.</p>
+            <p>Creates a file in the selected folder and opens it in the editors.</p>
         </div>
         <p class="block_more-sample"><a href="<%= Url.Action("jssdk/samples/createfileinselectedfolder")%>">More</a></p>
     </li>
@@ -40,8 +40,8 @@
             <div class="example-sample-img customization-of-editors"></div>
         </a>
         <div class="sample-info">
-            <p class="name-example-sample"><a href="<%= Url.Action("jssdk/samples/customizationofeditors")%>">Customization of editors</a></p>
-            <p>The customization allows to customize the editor interface so that it looked like your other products.</p>
+            <p class="name-example-sample"><a href="<%= Url.Action("jssdk/samples/customizationofeditors")%>">Customize editors</a></p>
+            <p>Customizes the editor interface so that it looks like your other products.</p>
         </div>
         <p class="block_more-sample"><a href="<%= Url.Action("jssdk/samples/customizationofeditors")%>">More</a></p>
     </li>
@@ -51,7 +51,7 @@
         </a>
         <div class="sample-info">
             <p class="name-example-sample"><a href="<%= Url.Action("jssdk/samples/attachfiles")%>">Attach files</a></p>
-            <p>Attach files to the website using FileSelector.</p>
+            <p>Attaches files to a website using the file selector.</p>
         </div>
         <p class="block_more-sample"><a href="<%= Url.Action("jssdk/samples/attachfiles")%>">More</a></p>
     </li>

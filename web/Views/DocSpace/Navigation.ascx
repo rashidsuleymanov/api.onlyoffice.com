@@ -54,7 +54,7 @@
                 <a href="<%= Url.Action("jssdk/events") %>">Events</a>
             </li>
             <li>
-                <a href="<%= Url.Action("jssdk/samples/default") %>">Samples</a>
+                <a href="<%= Url.Action("jssdk/samples/default") %>">JS SDK samples</a>
                 <ul>
                     <li>
                         <a href="<%= Url.Action("jssdk/samples/sampleopenfile") %>">Open file in editors</a>
@@ -66,7 +66,7 @@
                         <a href="<%= Url.Action("jssdk/samples/createfileinselectedfolder") %>">Create file in selected folder</a>
                     </li>
                     <li>
-                        <a href="<%= Url.Action("jssdk/samples/customizationofeditors") %>">Customization of editors</a>
+                        <a href="<%= Url.Action("jssdk/samples/customizationofeditors") %>">Customize editors</a>
                     </li>
                     <li>
                         <a href="<%= Url.Action("jssdk/samples/attachfiles") %>">Attach files</a>

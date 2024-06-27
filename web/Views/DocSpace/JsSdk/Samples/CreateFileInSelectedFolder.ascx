@@ -3,14 +3,14 @@
 <h1>
     <span class="hdr">Create file in selected folder</span>
 </h1>
-<p class="dscr">Create file in selected folder and open it in editors.</p>
+<p class="dscr">Creates a file in the selected folder and opens it in the editors.</p>
 <img class="screenshot" alt="OpenEditors" src="<%= Url.Content("~/content/img/docspace/gifs/js-sdk-create-file.gif")%>" />
 
 
-<h2>Building sample</h2>
+<h2>Building a sample</h2>
 
 <h3>Step 1. Set HTML structure</h3>
-<p>Create HTML file. Add Combobox, Text field, and a Button. HTML file should include a <em>div</em> tag where we specify DocSpace connection parameters.</p>
+<p>Create an HTML file. Add a combo box, a text field, and a button. The HTML file must include a <em>div</em> tag where we specify the DocSpace connection parameters:</p>
 
 <div style="width: 100%;">
     <div class="jsSdkHeader">
@@ -57,15 +57,16 @@
 &lt;/html&gt;</pre>
 </div>
 
-<p>The API JavaScript file can normally be found in the following DocSpace URL:
-<b>{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js</b><br />
-<b>{PORTAL_SRC}</b> is the name of the server with the ONLYOFFICE DocSpace installed.</p>
+<p>The API JavaScript file can normally be found in the following DocSpace folder:</p>
+<p><b>{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js</b></p>
+<p>where <b>{PORTAL_SRC}</b> is the name of the server with the ONLYOFFICE DocSpace installed.</p>
 
-<h3>Step 2. Initialize "Manager" mode</h3>
+<h3>Step 2. Initialize the Manager mode</h3>
 
+<p>Add a script to initialize the <a href="<%= Url.Action("jssdk/initmodes/manager")%>">Manager</a> mode.</p>
 <ol>
     <li>
-        <p>Add a script to initialize the <a href="<%= Url.Action("jssdk/initmodes/manager")%>">Manager</a>. First, let's add an event handler for <a href="<%= Url.Action("jssdk/events")%>#onAppReady">onAppReady</a>, which runs when initialization is successful.</p>
+        <p>Add an event handler for <a href="<%= Url.Action("jssdk/events")%>#onAppReady">onAppReady</a>, which fires when initialization is successful:</p>
             <div style="width: 100%;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -87,7 +88,7 @@ var onAppReady = function (e) {
     </li>
         
     <li>
-        <p>Create a configuration for the <b>Manager</b>. For this we create a variable as shown below. In the <a href="<%= Url.Action("jssdk/config")%>#rootPath">rootPath</a> section, specify the section whose directories you want to display.</p>
+        <p>Create a configuration for the <b>Manager</b> mode. In the <a href="<%= Url.Action("jssdk/config")%>#rootPath">rootPath</a> field, specify the section whose directories you want to display:</p>
             <div style="width: 100%;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -112,7 +113,7 @@ const config = {
 </div> 
     </li>
     <li>
-        <p>Initialize the <b>Manager</b> as shown below.</p>
+        <p>Initialize the <b>Manager</b> mode with the <a href="<%= Url.Action("jssdk/methods")%>#initManager">initManager</a> method:</p>
             <div style="width: 100%; margin:0;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -132,8 +133,8 @@ var docSpace = DocSpace.SDK.initManager(config);</pre>
     </li>
 </ol>
 
-<h3>Step 3. Load folders list to Combobox</h3>
-<p>Add an <b>onComboboxClick()</b> event handler for the Combobox. Using the <a href="<%= Url.Action("jssdk/methods")%>#getFolders">getFolders()</a> method, we load the list into the Combobox.</p>
+<h3>Step 3. Upload a list of folders to the combo box</h3>
+<p>Add the <b>onComboboxClick()</b> event handler for the combo box. Using the <a href="<%= Url.Action("jssdk/methods")%>#getFolders">getFolders</a> method, upload the list into the combo box:</p>
 
 <div style="width: 100%;">
     <div class="jsSdkHeader">
@@ -161,8 +162,8 @@ var onComboboxClick = async function (e) {
 }</pre>
 </div>
 
-<h3>Step 4. Add method to create file</h3>
-<p>Add an <b>onButtonClick()</b> event handler for the button. Using the <a href="<%= Url.Action("jssdk/methods")%>#createFile">createFile()</a> method, create file in selected folder.</p>
+<h3>Step 4. Add a method to create a file</h3>
+<p>Add the <b>onButtonClick()</b> event handler for the button. Using the <a href="<%= Url.Action("jssdk/methods")%>#createFile">createFile</a> method, create a file in the selected folder:</p>
 
 <div style="width: 100%;">
     <div class="jsSdkHeader">
@@ -194,7 +195,7 @@ var onButtonClick = async function (e) {
 }</pre>
 </div>
 
-<h3>Step 5. Run sample</h3>
+<h3>Step 5. Run the sample</h3>
 <p>Run our HTML file and make sure everything works.</p>
 <h2>Example</h2>
 

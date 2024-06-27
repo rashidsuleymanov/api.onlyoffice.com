@@ -3,17 +3,17 @@
 <h1>
     <span class="hdr">Attach files</span>
 </h1>
-<p class="dscr">Attach files to the website using <a href="<%= Url.Action("JsSdk/InitModes/FileSelector")%>">FileSelector</a>.</p>
+<p class="dscr">Attaches files to a website using <a href="<%= Url.Action("JsSdk/InitModes/FileSelector")%>">File-selector</a>.</p>
 <img class="screenshot" alt="OpenEditors" src="<%= Url.Content("~/content/img/docspace/gifs/js-sdk-attach-files.gif") %>" />
 
-<h2>Building sample</h2>
+<h2>Building a sample</h2>
 
 <h3>Step 1. Set HTML structure</h3>
 
 
 <ol>
     <li>
-        <p>Create HTML file. It should include a <em>div</em> tag where we specify DocSpace connection parameters.</p>
+        <p>Create an HTML file. It must include a <em>div</em> tag where we specify the DocSpace connection parameters:</p>
         <div style="width: 100%;">
             <div class="jsSdkHeader">
                 <div class="preContentType">
@@ -37,16 +37,17 @@
         ...
     &lt;/head&gt;
     &lt;body&gt;
+        &lt;div id="ds-frame"&gt;&lt;/div&gt;
         ...
     &lt;/body&gt;
 &lt;/html&gt;</pre>
 </div>
-        <p>The API JavaScript file can normally be found in the following DocSpace URL:
-        <b>{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js</b><br />
-        <b>{PORTAL_SRC}</b> is the name of the server with the ONLYOFFICE DocSpace installed.</p>
+        <p>The API JavaScript file can normally be found in the following DocSpace folder:</p>
+        <p><b>{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js</b></p>
+        <p>where <b>{PORTAL_SRC}</b> is the name of the server with the ONLYOFFICE DocSpace installed.</p>
     </li>
     <li>
-        <p>Add the <em>style</em> section to the page</p>
+        <p>Add the <em>style</em> section to the page:</p>
 
         <div style="width: 100%;">
             <div class="jsSdkHeader">
@@ -149,7 +150,7 @@
 </div>
     </li>
     <li>
-        <p>Add table with tasks to the page</p>
+        <p>Add a table with tasks to the page:</p>
 
         <div style="width: 100%;">
             <div class="jsSdkHeader">
@@ -164,7 +165,7 @@
                         </div>
                     </div>
             </div>
-<pre class="jsSdkPreNoScroll" id="taskContainerPre"">
+<pre class="jsSdkPreNoScroll" id="taskContainerPre">
 &lt;div id="taskContainer"&gt;
     &lt;table id="taskTable"&gt;
         &lt;thead&gt;
@@ -182,7 +183,7 @@
             &lt;/tr&gt;
             &lt;tr class="task-row"&gt;
                 &lt;td&gt;Conclude an agreement with partners&lt;/td&gt;
-                &lt;td&gt;Sign contracts with new partners to expand the business and increase sales.&lt;/td&gt;
+                &lt;td&gt;Sign contracts with new partners to expand the business and increase sales&lt;/td&gt;
                 &lt;td&gt;High&lt;/td&gt;
             &lt;/tr&gt;
         &lt;/tbody&gt;
@@ -191,7 +192,7 @@
 </div>
     </li>
     <li>
-        <p>Add a sidebar where the attachments of the selected task will be displayed. As well as the "Attach file" button.</p>
+        <p>Add a sidebar where the attachments of the selected task will be displayed, as well as the <b>Attach file</b> button:</p>
 
         <div style="width: 100%;">
             <div class="jsSdkHeader">
@@ -217,7 +218,7 @@
 </div>
     </li>
     <li>
-        <p>Add a dialog to the page, which will display the <b>FileSelector</b>.</p>
+        <p>Add a dialog to the page, which will display the <b>file selector</b>:</p>
 
         <div style="width: 100%;">
             <div class="jsSdkHeader">
@@ -240,12 +241,12 @@
     </li>
 </ol>
 
-<h3>Step 2. Add functionality for selecting tasks.</h3>
+<h3>Step 2. Add functionality for selecting tasks</h3>
 
 
 <ol>
     <li>
-        <p>Add two variables to get a list of tasks and store the selected task, as well as the function of uploading attachments for the selected task.</p>
+        <p>Add two variables to get a list of tasks and store the selected task, as well as the function to upload attachments for the selected task:</p>
         <div style="width: 100%;">
             <div class="jsSdkHeader">
                 <div class="preContentType">
@@ -274,7 +275,7 @@ const loadAttachments = (taskRow) => {
 </div>
     </li>
     <li>
-        <p>Add a <b>click</b> event handler for each task.</p>
+        <p>Add the <b>click</b> event handler for each task:</p>
         <div style="width: 100%;">
             <div class="jsSdkHeader">
                 <div class="preContentType">
@@ -303,11 +304,11 @@ taskRows.forEach(row => {
     </li>
 </ol>
 
-<h3>Step 3. Implement functionality for adding attachments.</h3>
+<h3>Step 3. Implement functionality for adding attachments</h3>
 
 <ol>
     <li>
-        <p>Add variables to get a modal window and a file attachment button, as well as a click handler that opens a modal window if there is a selected task.</p>
+        <p>Add variables to get a modal window and the <b>Attach file</b> button, as well as the <em>click</em> handler that opens the modal window when the task is selected:</p>
         <div style="width: 100%;">
             <div class="jsSdkHeader">
                 <div class="preContentType">
@@ -332,7 +333,7 @@ attachButton.addEventListener("click", () => {
 </div>
     </li>
     <li>
-        <p>Add an <a href="<%= Url.Action("jssdk/events")%>#onSelectCallback">onSelectCallback</a> event handler that closes the modal window and transmits the ID and name of the selected file in JSON format.</p>
+        <p>Add the <a href="<%= Url.Action("jssdk/events")%>#onSelectCallback">onSelectCallback</a> event handler that closes the modal window and sends the ID and name of the selected file in JSON format:</p>
         <div style="width: 100%;">
             <div class="jsSdkHeader">
                 <div class="preContentType">
@@ -348,13 +349,13 @@ attachButton.addEventListener("click", () => {
             </div>
 <pre class="jsSdkPreNoScroll" id="onSelectCallbackPre">
 const onSelectCallback = async (e) => {
-    modalElement.close(JSON.stringify({ id: e.id, title: e.title }));
+    modalElement.close(JSON.stringify({ "id": e.id, "title": e.title }));
 };</pre>
 </div>
     </li>
     <li>
-        <p>Add a variable for the base URL and a handler for the modal window closing event, which, if there is a selected task and result, 
-creates a list item with an attachment including a link and a delete button, and then adds this element to the list of task attachments.</p>
+        <p>Add a variable for the base URL and an event handler for closing the modal window. When the task is selected and the modal window is closed,
+        this function creates a list item with an attachment that includes a link and the <b>Delete</b> button, and then adds this item to the list of task attachments:</p>
         <div style="width: 100%;">
             <div class="jsSdkHeader">
                 <div class="preContentType">
@@ -369,7 +370,7 @@ creates a list item with an attachment including a link and a delete button, and
                     </div>
             </div>
 <pre class="jsSdkPreNoScroll" id="dialogClosePre">
-const dsURL = "https://{PORTAL_SRC}/doceditor?fileId=";
+const dsURL = "{PORTAL_SRC}/doceditor?fileId=";
 modalElement.addEventListener("close", () => {
     const result = modalElement.returnValue;
     if (result && selectedTask) {
@@ -405,11 +406,12 @@ modalElement.addEventListener("close", () => {
     </li>
 </ol>
 
-<h3>Step 4. Add File Selector</h3>
+<h3>Step 4. Add the file selector</h3>
 
+<p>Add a script to initialize the <b>file selector</b>.</p>
 <ol>
     <li>
-        <p>Add a script to initialize the <b>File Selector</b>. First, let's add an event handler for <a href="<%= Url.Action("jssdk/events")%>#onAppReady">onAppReady</a>, which runs when initialization is successful.</p>
+        <p>Add an event handler for <a href="<%= Url.Action("jssdk/events")%>#onAppReady">onAppReady</a>, which fires when initialization is successful:</p>
             <div style="width: 100%;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -431,7 +433,7 @@ var onAppReady = function (e) {
     </li>
         
     <li>
-        <p>Create a configuration for the <b>File Selector</b>. For this we create a variable as shown below.</p>
+        <p>Create a configuration for the <b>file selector</b>:</p>
             <div style="width: 100%;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -457,7 +459,7 @@ const config = {
 </div> 
     </li>
     <li>
-        <p>Initialize the <b>File Selector</b> as shown below.</p>
+        <p>Initialize the <b>file selector</b> with the <a href="<%= Url.Action("jssdk/methods")%>#initFileSelector">initFileSelector</a> method:</p>
             <div style="width: 100%; margin:0;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -477,7 +479,7 @@ var docSpace = DocSpace.SDK.initFileSelector(config);</pre>
     </li>
 </ol>
 
-<h3>Step 5. Run sample</h3>
+<h3>Step 5. Run the sample</h3>
 <p>Run our HTML file and make sure everything works.</p>
 <h2>Example</h2>
 
@@ -497,207 +499,207 @@ var docSpace = DocSpace.SDK.initFileSelector(config);</pre>
 <pre class="jsSdkPre" id="examplePre" style="height: 700px;">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"&gt;&lt;/script&gt;
-    &lt;title&gt;An example of using file manager&lt;/title&gt;
-    &lt;style&gt;
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            display: flex;
-        }
-        h1 {
-            color: #333;
-        }
-        button {
-            padding: 8px 12px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th,td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        a {
-            text-decoration: none;
-            color: #007bff;
-        }
-        a:hover {
-            text-decoration: underline;
-            color: #0056b3;
-        }
-        .task-row.selected {
-            background-color: #d3e2ff;
-        }
-        #taskContainer {
-            width: 70%;
-            margin-right: 20px;
-        }
-        #attachmentsPanel {
-            width: 30%;
-            border: 1px solid #ccc;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        #attachmentsPanel h2 {
-            margin-top: 0;
-        }
-        #attachmentsPanel button {
-            margin-top: 10px;
-            align-self: flex-start;
-        }
-        #attachmentsList {
-            list-style-type: none;
-            padding: 0;
-        }
-        .attachment-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px 0;
-        }
-        .attachment-item a {
-            flex-grow: 1;
-        }
-        .delete-button {
-            background-color: #dc3545;
-            color: white;
-            border: none;
-            cursor: pointer;
-            padding: 5px 10px;
-            margin-left: 10px;
-        }
-        .delete-button:hover {
-            background-color: #c82333;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div id="taskContainer"&gt;
-        &lt;table id="taskTable"&gt;
-            &lt;thead&gt;
-                &lt;tr&gt;
-                    &lt;th&gt;Task&lt;/th&gt;
-                    &lt;th&gt;Description&lt;/th&gt;
-                    &lt;th&gt;Priority&lt;/th&gt;
-                &lt;/tr&gt;
-            &lt;/thead&gt;
-            &lt;tbody id="taskList"&gt;
-                &lt;tr class="task-row"&gt;
-                    &lt;td&gt;Prepare a sales analysis&lt;/td&gt;
-                    &lt;td&gt;Analyze sales data for the last six months and prepare a detailed report&lt;/td&gt;
-                    &lt;td&gt;Low&lt;/td&gt;
-                &lt;/tr&gt;
-                &lt;tr class="task-row"&gt;
-                    &lt;td&gt;Conclude an agreement with partners&lt;/td&gt;
-                    &lt;td&gt;Sign contracts with new partners to expand the business and increase sales.&lt;/td&gt;
-                    &lt;td&gt;High&lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/tbody&gt;
-        &lt;/table&gt;
-    &lt;/div&gt;
-    &lt;div id="attachmentsPanel"&gt;
-        &lt;div&gt;
-            &lt;h2&gt;Attachments&lt;/h2&gt;
-            &lt;ul id="attachmentsList"&gt;&lt;/ul&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;script src="{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js"&gt;&lt;/script&gt;
+        &lt;title&gt;An example of using file manager&lt;/title&gt;
+        &lt;style&gt;
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                display: flex;
+            }
+            h1 {
+                color: #333;
+            }
+            button {
+                padding: 8px 12px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th,td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            a {
+                text-decoration: none;
+                color: #007bff;
+            }
+            a:hover {
+                text-decoration: underline;
+                color: #0056b3;
+            }
+            .task-row.selected {
+                background-color: #d3e2ff;
+            }
+            #taskContainer {
+                width: 70%;
+                margin-right: 20px;
+            }
+            #attachmentsPanel {
+                width: 30%;
+                border: 1px solid #ccc;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            #attachmentsPanel h2 {
+                margin-top: 0;
+            }
+            #attachmentsPanel button {
+                margin-top: 10px;
+                align-self: flex-start;
+            }
+            #attachmentsList {
+                list-style-type: none;
+                padding: 0;
+            }
+            .attachment-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px 0;
+            }
+            .attachment-item a {
+                flex-grow: 1;
+            }
+            .delete-button {
+                background-color: #dc3545;
+                color: white;
+                border: none;
+                cursor: pointer;
+                padding: 5px 10px;
+                margin-left: 10px;
+            }
+            .delete-button:hover {
+                background-color: #c82333;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="taskContainer"&gt;
+            &lt;table id="taskTable"&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Task&lt;/th&gt;
+                        &lt;th&gt;Description&lt;/th&gt;
+                        &lt;th&gt;Priority&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody id="taskList"&gt;
+                    &lt;tr class="task-row"&gt;
+                        &lt;td&gt;Prepare a sales analysis&lt;/td&gt;
+                        &lt;td&gt;Analyze sales data for the last six months and prepare a detailed report&lt;/td&gt;
+                        &lt;td&gt;Low&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr class="task-row"&gt;
+                        &lt;td&gt;Conclude an agreement with partners&lt;/td&gt;
+                        &lt;td&gt;Sign contracts with new partners to expand the business and increase sales&lt;/td&gt;
+                        &lt;td&gt;High&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
         &lt;/div&gt;
-        &lt;button id="attachButton"&gt;Attach file&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;dialog id="modal" style="width: 600px; height: 700px;"&gt;
-        &lt;div id="ds-frame"&gt;&lt;/div&gt;
-    &lt;/dialog&gt;
-    &lt;script&gt;
-        const taskRows = document.querySelectorAll(".task-row");
-        let selectedTask = null;
-        const modalElement = document.getElementById("modal");
-        const attachButton = document.getElementById("attachButton");
-        const dsURL = "https://{PORTAL_SRC}/doceditor?fileId=";
-        const loadAttachments = (taskRow) => {
-            const attachmentsList = document.getElementById("attachmentsList");
-            attachmentsList.innerHTML = "";
-            if (taskRow.attachments && taskRow.attachments.length > 0) {
-                taskRow.attachments.forEach(item => {
-                    attachmentsList.appendChild(item);
-                });
-            }
-        };
-        taskRows.forEach(row => {
-            row.addEventListener("click", () => {
-                if (selectedTask) {
-                    selectedTask.classList.remove("selected");
+        &lt;div id="attachmentsPanel"&gt;
+            &lt;div&gt;
+                &lt;h2&gt;Attachments&lt;/h2&gt;
+                &lt;ul id="attachmentsList"&gt;&lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;button id="attachButton"&gt;Attach file&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;dialog id="modal" style="width: 600px; height: 700px;"&gt;
+            &lt;div id="ds-frame"&gt;&lt;/div&gt;
+        &lt;/dialog&gt;
+        &lt;script&gt;
+            const taskRows = document.querySelectorAll(".task-row");
+            let selectedTask = null;
+            const modalElement = document.getElementById("modal");
+            const attachButton = document.getElementById("attachButton");
+            const dsURL = "{PORTAL_SRC}/doceditor?fileId=";
+            const loadAttachments = (taskRow) => {
+                const attachmentsList = document.getElementById("attachmentsList");
+                attachmentsList.innerHTML = "";
+                if (taskRow.attachments && taskRow.attachments.length > 0) {
+                    taskRow.attachments.forEach(item => {
+                        attachmentsList.appendChild(item);
+                    });
                 }
-                selectedTask = row;
-                row.classList.add("selected");
-                loadAttachments(row);
-            });
-        });
-        attachButton.addEventListener("click", () => {
-            if (selectedTask) {
-                modalElement.showModal();
-            }
-        });
-        const onSelectCallback = async (e) => {
-            modalElement.close(JSON.stringify({ id: e.id, title: e.title }));
-        };
-        modalElement.addEventListener("close", () => {
-            const result = modalElement.returnValue;
-            if (result && selectedTask) {
-                const { id, title } = JSON.parse(result);
-                const noAttachmentsMessage = document.querySelector("#attachmentsList .no-attachments");
-                if (noAttachmentsMessage) {
-                    noAttachmentsMessage.remove();
-                }
-                const listItem = document.createElement("li");
-                listItem.className = "attachment-item";
-                const link = document.createElement("a");
-                link.href = dsURL + id;
-                link.target = "_blank";
-                link.textContent = title;
-                listItem.appendChild(link);
-                const deleteButton = document.createElement("button");
-                deleteButton.className = "delete-button";
-                deleteButton.textContent = "Delete";
-                deleteButton.addEventListener("click", () => {
-                    selectedTask.attachments = selectedTask.attachments.filter(item => item !== listItem);
-                    listItem.remove();
-                    if (selectedTask.attachments.length === 0) {
-                        showNoAttachmentsMessage();
+            };
+            taskRows.forEach(row => {
+                row.addEventListener("click", () => {
+                    if (selectedTask) {
+                        selectedTask.classList.remove("selected");
                     }
+                    selectedTask = row;
+                    row.classList.add("selected");
+                    loadAttachments(row);
                 });
-                listItem.appendChild(deleteButton);
-                selectedTask.attachments = selectedTask.attachments || [];
-                selectedTask.attachments.push(listItem);
-                document.getElementById("attachmentsList").appendChild(listItem);
-            }
-        });
-        const onAppReady = () => {
-            DocSpace.SDK.frames["ds-frame"];
-        };
-        const config = {
-            events: {
-                onAppReady: onAppReady,
-                onSelectCallback: onSelectCallback,
-            },
-            downloadToEvent: true,
-            height: "700px"
-        };
-        DocSpace.SDK.initFileSelector(config);
-    &lt;/script&gt;
-&lt;/body&gt;
+            });
+            attachButton.addEventListener("click", () => {
+                if (selectedTask) {
+                    modalElement.showModal();
+                }
+            });
+            const onSelectCallback = async (e) => {
+                modalElement.close(JSON.stringify({ id: e.id, title: e.title }));
+            };
+            modalElement.addEventListener("close", () => {
+                const result = modalElement.returnValue;
+                if (result && selectedTask) {
+                    const { id, title } = JSON.parse(result);
+                    const noAttachmentsMessage = document.querySelector("#attachmentsList .no-attachments");
+                    if (noAttachmentsMessage) {
+                        noAttachmentsMessage.remove();
+                    }
+                    const listItem = document.createElement("li");
+                    listItem.className = "attachment-item";
+                    const link = document.createElement("a");
+                    link.href = dsURL + id;
+                    link.target = "_blank";
+                    link.textContent = title;
+                    listItem.appendChild(link);
+                    const deleteButton = document.createElement("button");
+                    deleteButton.className = "delete-button";
+                    deleteButton.textContent = "Delete";
+                    deleteButton.addEventListener("click", () => {
+                        selectedTask.attachments = selectedTask.attachments.filter(item => item !== listItem);
+                        listItem.remove();
+                        if (selectedTask.attachments.length === 0) {
+                            showNoAttachmentsMessage();
+                        }
+                    });
+                    listItem.appendChild(deleteButton);
+                    selectedTask.attachments = selectedTask.attachments || [];
+                    selectedTask.attachments.push(listItem);
+                    document.getElementById("attachmentsList").appendChild(listItem);
+                }
+            });
+            const onAppReady = () => {
+                DocSpace.SDK.frames["ds-frame"];
+            };
+            const config = {
+                events: {
+                    onAppReady: onAppReady,
+                    onSelectCallback: onSelectCallback,
+                },
+                downloadToEvent: true,
+                height: "700px"
+            };
+            DocSpace.SDK.initFileSelector(config);
+        &lt;/script&gt;
+    &lt;/body&gt;
 &lt;/html&gt;</pre>
 </div>  
 

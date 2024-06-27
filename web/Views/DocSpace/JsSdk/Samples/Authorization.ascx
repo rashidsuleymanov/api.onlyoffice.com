@@ -7,10 +7,10 @@
 <img class="screenshot" alt="OpenEditors" src="<%= Url.Content("~/content/img/docspace/gifs/js-sdk-authorization-sample.gif") %>" />
 
 
-<h2>Building sample</h2>
+<h2>Building a sample</h2>
 
 <h3>Step 1. Set HTML structure</h3>
-<p>Create HTML file. Add two text fields and a button. HTML file should include a <em>div</em> tag where we specify DocSpace connection parameters.</p>
+<p>Create an HTML file. Add two text fields and a button. The HTML file must include a <em>div</em> tag where we specify the DocSpace connection parameters:</p>
 
 <div style="width: 100%;">
     <div class="jsSdkHeader">
@@ -46,15 +46,16 @@
 &lt;/html&gt;</pre>
 </div>
 
-<p>The API JavaScript file can normally be found in the following DocSpace URL:
-<b>{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js</b><br />
-<b>{PORTAL_SRC}</b> is the name of the server with the ONLYOFFICE DocSpace installed.</p>
+<p>The API JavaScript file can normally be found in the following DocSpace folder:</p>
+<p><b>{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js</b></p>
+<p>where <b>{PORTAL_SRC}</b> is the name of the server with the ONLYOFFICE DocSpace installed.</p>
 
-<h3>Step 2. Initialize "System" mode</h3>
+<h3>Step 2. Initialize the System mode</h3>
 
+<p>Add a script to initialize the <a href="<%= Url.Action("jssdk/initmodes/system") %>">System</a> mode.</p>
 <ol>
     <li>
-        <p>Add a script to initialize the <a href="<%= Url.Action("jssdk/initmodes/system") %>">System</a>. First, let's add an event handler for <a href="<%= Url.Action("jssdk/events") %>#onAppReady">onAppReady</a>, which runs when initialization is successful.</p>
+        <p>Add an event handler for <a href="<%= Url.Action("jssdk/events") %>#onAppReady">onAppReady</a>, which fires when initialization is successful:</p>
             <div style="width: 100%;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -76,7 +77,7 @@ var onAppReady = function (e) {
     </li>
         
     <li>
-        <p>Create a configuration for the <b>System</b>. For this we create a variable as shown below.</p>
+        <p>Create a configuration for the <b>System</b> mode:</p>
             <div style="width: 100%;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -99,7 +100,7 @@ const config = {
 </div> 
     </li>
     <li>
-        <p>Initialize the <b>System</b> as shown below.</p>
+        <p>Initialize the <b>System</b> mode with the <a href="<%= Url.Action("jssdk/methods")%>#initSystem">initSystem</a> method:</p>
             <div style="width: 100%; margin:0;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -114,14 +115,14 @@ const config = {
                         </div>
                 </div>
 <pre class="jsSdkPreNoScroll" id="initPre" >
-var docSpace = DocSpace.SDK.initSytem(config);</pre>
+var docSpace = DocSpace.SDK.initSystem(config);</pre>
 </div> 
     </li>
 </ol>
 
-<h3>Step 3. Add method to log in</h3>
-<p>Add an <b>onButtonClick()</b> event handler for the button. Using the <a href="<%= Url.Action("jssdk/methods") %>#getHashSettings">getHashSettings()</a> method, we return the settings for generating a password hash. 
-Generate a password hash using <a href="<%= Url.Action("jssdk/methods") %>#createHash">createHash()</a>. Use the <a href="<%= Url.Action("jssdk/methods") %>#login">login()</a> method to authorize the user.</p>
+<h3>Step 3. Add a method to log in</h3>
+<p>Add the <b>onButtonClick()</b> event handler for the button. Using the <a href="<%= Url.Action("jssdk/methods") %>#getHashSettings">getHashSettings</a> method, return the password hash settings
+and generate the password hash using the <a href="<%= Url.Action("jssdk/methods") %>#createHash">createHash</a> method. After this, authorize the user using the <a href="<%= Url.Action("jssdk/methods") %>#login">login</a> method:</p>
 
 <div style="width: 100%;">
     <div class="jsSdkHeader">
@@ -147,7 +148,7 @@ var onButtonClick = async function () {
 }</pre>
 </div>
 
-<h3>Step 4. Run sample</h3>
+<h3>Step 4. Run the sample</h3>
 <p>Run our HTML file and make sure everything works.</p>
 <h2>Example</h2>
 

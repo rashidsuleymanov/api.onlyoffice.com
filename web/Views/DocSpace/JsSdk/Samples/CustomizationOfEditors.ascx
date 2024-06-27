@@ -1,16 +1,16 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl"%>
 
 <h1>
-    <span class="hdr">Customization of editors</span>
+    <span class="hdr">Customize editors</span>
 </h1>
-<p class="dscr">The customization allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details.</p>
+<p class="dscr">Customizes the editor interface so that it looks like your other products (if there are any), and changes the presence or absence of the additional buttons, links, logos and editor owner details.</p>
 <img class="screenshot" alt="OpenEditors" src="<%= Url.Content("~/content/img/docspace/customization-of-editors.png")%>" />
 
 
-<h2>Building sample</h2>
+<h2>Building a sample</h2>
 
 <h3>Step 1. Set HTML structure</h3>
-<p>Create HTML file. HTML file should include a <em>div</em> tag where we specify DocSpace connection parameters.</p>
+<p>Create an HTML file. The HTML file must include a <em>div</em> tag where we specify the DocSpace connection parameters:</p>
 
 <div style="width: 100%;">
     <div class="jsSdkHeader">
@@ -28,7 +28,6 @@
 <pre class="jsSdkPreNoScroll" id="htmlStructurePre">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
-    &lt;/style&gt;
     &lt;head&gt;
         &lt;meta charset="UTF-8"&gt;
         &lt;title&gt;DocSpace JavaScript SDK&lt;/title&gt;
@@ -42,15 +41,16 @@
 &lt;/html&gt;</pre>
 </div>
 
-<p>The API JavaScript file can normally be found in the following DocSpace URL:
-<b>{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js</b><br />
-<b>{PORTAL_SRC}</b> is the name of the server with the ONLYOFFICE DocSpace installed.</p>
+<p>The API JavaScript file can normally be found in the following DocSpace folder:</p>
+<p><b>{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js</b></p>
+<p>where <b>{PORTAL_SRC}</b> is the name of the server with the ONLYOFFICE DocSpace installed.</p>
 
-<h3>Step 2. Initialize editors</h3>
+<h3>Step 2. Initialize the editors</h3>
 
+<p>Add a script to initialize the <a href="<%= Url.Action("jssdk/initmodes/editor")%>">editors</a>.</p>
 <ol>
     <li>
-        <p>Add a script to initialize the <a href="<%= Url.Action("jssdk/initmodes/editor")%>">editors</a>. First, let's add an event handler for <a href="<%= Url.Action("jssdk/events")%>#onAppReady">onAppReady</a>, which runs when initialization is successful.</p>
+        <p>Add an event handler for <a href="<%= Url.Action("jssdk/events")%>#onAppReady">onAppReady</a>, which fires when initialization is successful:</p>
             <div style="width: 100%;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -72,8 +72,8 @@ var onAppReady = function (e) {
     </li>
         
     <li>
-        <p>Create a configuration for <b>Editors</b>. For this we create a variable as shown below. Go to the <a href="<%= Url.Action("config/editor/customization", "editors") %>">customization</a> section and configure the editors as needed.
-        After that, copy the resulting config and paste it into the <a href="<%= Url.Action("jssdk/config")%>#editorCustomization">editorCustomization</a> section, as shown below. In the config, pass the id of the file that will be opened in the editors.</p>
+        <p>Create a configuration for the <b>Editor</b> mode. Go to the <a href="<%= Url.Action("config/editor/customization", "editors") %>">customization</a> section and configure the editors as needed.
+        After that, copy the resulting config and paste it into the <a href="<%= Url.Action("jssdk/config")%>#editorCustomization">editorCustomization</a> section, as shown below. In the config, pass the id of the file that will be opened in the editors:</p>
             <div style="width: 100%;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -120,7 +120,7 @@ const config = {
 </div> 
     </li>
     <li>
-        <p>Initialize the <b>Editors</b> as shown below.</p>
+        <p>Initialize the <b>Editors</b> mode with the <a href="<%= Url.Action("jssdk/methods")%>#initEditor">initEditor</a> method:</p>
             <div style="width: 100%; margin:0;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -140,7 +140,7 @@ var docSpace = DocSpace.SDK.initEditor(config);</pre>
     </li>
 </ol>
 
-<h3>Step 3. Run sample</h3>
+<h3>Step 3. Run the sample</h3>
 <p>Run our HTML file and make sure everything works.</p>
 <h2>Example</h2>
 

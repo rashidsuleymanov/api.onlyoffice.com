@@ -3,28 +3,28 @@
 <h1>
     <span class="hdr">Open file in ONLYOFFICE editors</span>
 </h1>
-<p class="dscr">Open a file in <a href="<%= Url.Action("JsSdk/InitModes/Editor")%>">ONLYOFFICE editors</a>
-using <a href="<%= Url.Action("JsSdk/InitModes/FileSelector")%>">FileSelector</a>.</p>
+<p class="dscr">Opens a file in <a href="<%= Url.Action("JsSdk/InitModes/Editor")%>">ONLYOFFICE editors</a>
+using <a href="<%= Url.Action("JsSdk/InitModes/FileSelector")%>">File-selector</a>.</p>
 <img class="screenshot" alt="OpenEditors" src="<%= Url.Content("~/content/img/docspace/gifs/open-editors.gif")%>" />
 <h2>Before you start</h2>
 
 <ol>
     <li>For the JavaScript SDK to work correctly, it must be launched on the server. Note that running the HTML file directly will not work. 
     Please make sure you are using a server environment.</li>
-    <li>You need to add the URL of your server's root directory to the <b>Developer Tools</b> section of DocSpace. For this:
-        <ul>
-            <li>Go to your DocSpace workspace settings.</li>
-            <li>Navigate to the Developer Tools section.</li>
-            <li>In the <b>JavaScript SDK</b> tab, in <b>"Enter the address of DocSpace to embed"</b> add the URL of your server's root directory.</li>
-        </ul>
+    <li>You need to add the URL of your server's root directory to the <b>Developer Tools</b> section of DocSpace:
+        <ol>
+            <li>Go to the DocSpace settings.</li>
+            <li>Navigate to the <b>Developer Tools</b> section.</li>
+            <li>On the <b>JavaScript SDK</b> tab, in the <b>Enter the address of DocSpace to embed</b> field, add the URL of your server's root directory.</li>
+        </ol>
     </li>
 </ol>
 <img class="screenshot max-width-832" alt="Chart" src="<%= Url.Content("~/content/img/docspace/add-in-js-sdk-root-url.png")%>" />
 
-<h2>Building sample</h2>
+<h2>Building a sample</h2>
 
 <h3>Step 1. Set HTML structure</h3>
-<p>Create HTML file. It should include a <em>div</em> tag where we specify DocSpace connection parameters.</p>
+<p>Create an HTML file. It must include a <em>div</em> tag where we specify the DocSpace connection parameters:</p>
 
 <div style="width: 100%;">
     <div class="jsSdkHeader">
@@ -55,15 +55,16 @@ using <a href="<%= Url.Action("JsSdk/InitModes/FileSelector")%>">FileSelector</a
 &lt;/html&gt;</pre>
 </div>
 
-<p>The API JavaScript file can normally be found in the following DocSpace URL:
-<b>{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js</b><br />
-<b>{PORTAL_SRC}</b> is the name of the server with the ONLYOFFICE DocSpace installed.</p>
+<p>The API JavaScript file can normally be found in the following DocSpace folder:</p>
+<p><b>{PORTAL_SRC}/static/scripts/sdk/1.0.0/api.js</b></p>
+<p>where <b>{PORTAL_SRC}</b> is the name of the server with the ONLYOFFICE DocSpace installed.</p>
 
-<h3>Step 2. Add File Selector</h3>
+<h3>Step 2. Add the file selector</h3>
 
+<p>Add a script to initialize the <a href="<%= Url.Action("JsSdk/InitModes/FileSelector")%>">file selector</a>.</p>
 <ol>
     <li>
-        <p>Add a script to initialize the File Selector. First, let's add an event handler for <a href="<%= Url.Action("jssdk/events")%>#onAppReady">onAppReady</a>, which runs when initialization is successful.</p>
+        <p>Add an event handler for <a href="<%= Url.Action("jssdk/events")%>#onAppReady">onAppReady</a>, which fires when initialization is successful:</p>
             <div style="width: 100%;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -84,8 +85,8 @@ var onAppReady = function (e) {
 </div>
     </li>
     <li>
-        <p>Add an event handler for <a href="<%= Url.Action("jssdk/events")%>#onSelectCallback">onSelectCallback</a>. Here we initialize <b>ONLYOFFICE editors</b> after the user selects a file. 
-To do this, we pass the ID of the file selected in the <b>File Selector</b> to the <a href="<%= Url.Action("jssdk/methods")%>#initEditor">initEditor</a> method.</p>
+        <p>Add an event handler for <a href="<%= Url.Action("jssdk/events")%>#onSelectCallback">onSelectCallback</a>. When the user selects a file, <b>ONLYOFFICE editors</b> are initialized
+        by passing the ID of the file selected in the <b>file selector</b> to the <a href="<%= Url.Action("jssdk/methods")%>#initEditor">initEditor</a> method:</p>
             <div style="width: 100%;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -110,7 +111,7 @@ var onSelectCallback = function (e) {
     </li>
         
     <li>
-        <p>Create a configuration for the <b>File Selector</b>. For this we create a variable as shown below.</p>
+        <p>Create a configuration for the <b>file selector</b>:</p>
             <div style="width: 100%;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -136,7 +137,7 @@ const config = {
 </div> 
     </li>
     <li>
-        <p>Initialize the <b>File Selector</b> as shown below.</p>
+        <p>Initialize the <b>file selector</b> with the <a href="<%= Url.Action("jssdk/methods")%>#initFileSelector">initFileSelector</a> method:</p>
             <div style="width: 100%; margin:0;">
                 <div class="jsSdkHeader">
                     <div class="preContentType">
@@ -156,7 +157,7 @@ var docSpace = DocSpace.SDK.initFileSelector(config);</pre>
     </li>
 </ol>
 
-<h3>Step 3. Run sample</h3>
+<h3>Step 3. Run the sample</h3>
 <p>Run our HTML file and make sure everything works.</p>
 <h2>Example</h2>
 
