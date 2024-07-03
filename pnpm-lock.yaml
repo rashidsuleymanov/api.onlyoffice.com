@@ -2836,9 +2836,6 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
-      sade:
-        specifier: ^1.8.1
-        version: 1.8.1
       storybook:
         specifier: ^8.0.0
         version: 8.0.0(@babel/preset-env@7.24.0(@babel/core@7.24.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
