@@ -1,3 +1,4 @@
+import {type SitemapData} from "@onlyoffice/eleventy-sitemap"
 import type {Data} from "@onlyoffice/eleventy-types"
 import {cutPrefix, cutSuffix} from "@onlyoffice/strings"
 import {slug} from "github-slugger"
@@ -8,6 +9,7 @@ declare module "@onlyoffice/eleventy-types" {
     items?: any[]
     crosslink?(data: Data, s: string): string
     slug?(data: Data): string
+    defaultSitemap?(d: Data): SitemapData
   }
 
   interface EleventyComputed {
@@ -47,6 +49,19 @@ export function data(): Data {
       p += s
       p = p.split("/").map((s) => slug(s)).join("/")
       return p
+    },
+
+    defaultSitemap(d) {
+      return {
+        title: d.title,
+        url: d.page?.url,
+        order: d.order || 0,
+        data: d,
+      }
+    },
+
+    sitemap(d) {
+      return d.defaultSitemap(d)
     },
 
     eleventyComputed: {

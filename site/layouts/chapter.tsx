@@ -1,5 +1,4 @@
-// todo: replace with `config/sitemap.ts`.
-
+import {Sitemap, type SitemapEntity} from "@onlyoffice/eleventy-sitemap"
 import type {Context, Data} from "@onlyoffice/eleventy-types"
 import {
   Chapter,
@@ -18,7 +17,6 @@ import {GithubIcon} from "@onlyoffice/ui-icons/rich/24.tsx"
 import {Breadcrumb, BreadcrumbCrumb, Content} from "@onlyoffice/ui-kit"
 import {type JSX, Fragment, h} from "preact"
 import {Tree} from "../components/tree/tree.ts"
-import {retrieve} from "../config/sitemap.ts"
 
 export function data(): Data {
   return {
@@ -40,10 +38,10 @@ export function render({content, ...ctx}: Context): JSX.Element {
           </li>
         </SearchTemplate>
       </SearchContainer>
-      <Navigation {...ctx} />
+      <InternalChapterNavigation level={2} url={ctx.page.url} />
     </ChapterNavigation>
     <ChapterContent>
-      <B url={ctx.page.url} />
+      <InternalBreadcrumb url={ctx.page.url} />
       <SearchHidable>
         <Content>
           {ctx.title && <h1>{ctx.title}</h1>}
@@ -70,51 +68,119 @@ export function render({content, ...ctx}: Context): JSX.Element {
   </Chapter>
 }
 
-function Navigation(ctx): JSX.Element {
-  const c = ctx.collections.navigation.find((c) => {
-    return ctx.page.url.startsWith(c.link)
-  })
-  if (c === undefined) {
-    return <></>
-  }
-  // todo: check if c is undefined, in ideal case it should never be undefined.
-  return <Tree>
-    {c.children && c.children.map((c) => (
-      <Tree.Group key={c.link}>
-        <Tree.Link href={c.link} active={ctx.page.url === c.link}>{c.title}</Tree.Link>
-        {c.children && <SubTree {...ctx} chapter={c} />}
-      </Tree.Group>
-    ))}
-  </Tree>
-}
-
-function SubTree({chapter: c, ...ctx}): JSX.Element {
-  return <>{c.children && c.children.map((c) => (
-    <Tree.Item expanded={ctx.page.url.startsWith(c.link)}>
-      <Tree.Link href={c.link} active={ctx.page.url === c.link}>{c.title}</Tree.Link>
-      {c.children && <SubTree {...ctx} chapter={c} />}
-    </Tree.Item>
-  ))}</>
-}
-
-interface BProperties {
+export interface InternalChapterNavigationProperties {
+  level: number
   url: string
 }
 
-function B({url}: BProperties): JSX.Element | null {
-  const a: JSX.Element[] = []
+export function InternalChapterNavigation(p: InternalChapterNavigationProperties): JSX.Element | null {
+  const s = Sitemap.instance
 
-  let u = url
+  let l = p.level
+  let e: SitemapEntity | undefined = s.page("/")
   while (true) {
-    const p = retrieve(u)
-    if (p === undefined) {
+    if (!e || l === 0) {
       break
     }
-    a.unshift(<BreadcrumbCrumb href={p.url}>{p.title}</BreadcrumbCrumb>)
-    if (p.parent === undefined) {
+    for (const id of e.children) {
+      const c = s.entity(id)
+      if (!c) {
+        continue
+      }
+      let u = ""
+      if (c.type === "group") {
+        const b = s.page(c.parent)
+        if (!b) {
+          continue
+        }
+        u = b.url
+      } else if (c.type === "page") {
+        u = c.url
+      } else {
+        // @ts-expect-error
+        throw new Error(`Unexpected entity type: ${c.type}`)
+      }
+      if (p.url.startsWith(u)) {
+        e = c
+        l -= 1
+        break
+      }
+    }
+  }
+
+  if (!e) {
+    return null
+  }
+
+  return <Tree>
+    {e.children.map((id) => {
+      const e = s.entity(id)
+      if (!e || e.type !== "page") {
+        return null
+      }
+      return <Tree.Group>
+        <Tree.Link href={e.url} active={p.url === e.url}>{e.title}</Tree.Link>
+        <Sub e={e} />
+      </Tree.Group>
+    })}
+  </Tree>
+
+  function Sub({e}: {e: SitemapEntity}): JSX.Element | null {
+    return <>{e.children.map((id) => {
+      const e = s.entity(id)
+      if (!e) {
+        return null
+      }
+      if (e.type === "group") {
+        if (e.children.length === 0) {
+          return null
+        }
+        const r = s.entity(e.parent)
+        if (!r) {
+          return null
+        }
+        if (r.type !== "page") {
+          throw new Error(`Nested group is not supported: ${e.id}`)
+        }
+        const b = s.page(p.url)
+        if (!b) {
+          return null
+        }
+        return <Tree.Item expanded={e.children.includes(b.id)}>
+          <Tree.Link href="" active={false}>{e.title}</Tree.Link>
+          <Sub e={e} />
+        </Tree.Item>
+      }
+      if (e.type === "page") {
+        return <Tree.Item expanded={p.url.startsWith(e.url)}>
+          <Tree.Link href={e.url} active={p.url === e.url}>{e.title}</Tree.Link>
+          {e.children.length !== 0 && <Sub e={e} />}
+        </Tree.Item>
+      }
+      // @ts-expect-error
+      throw new Error(`Unexpected entity type: ${e.type}`)
+    })}</>
+  }
+}
+
+export interface InternalBreadcrumbProperties {
+  url: string
+}
+
+export function InternalBreadcrumb(p: InternalBreadcrumbProperties): JSX.Element | null {
+  const a: JSX.Element[] = []
+  const s = Sitemap.instance
+
+  let e: SitemapEntity | undefined = s.page(p.url)
+  while (true) {
+    while (e && e.type === "group") {
+      e = s.entity(e.parent)
+    }
+    if (!e || e.url === "/") {
       break
     }
-    u = p.parent
+    a.unshift(<BreadcrumbCrumb href={e.url}>{e.title}</BreadcrumbCrumb>)
+    e = s.entity(e.parent)
   }
 
   if (a.length === 0) {

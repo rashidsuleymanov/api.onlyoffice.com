@@ -1,7 +1,7 @@
+import {Sitemap} from "@onlyoffice/eleventy-sitemap"
 import {type Data} from "@onlyoffice/eleventy-types"
 import {Config} from "@onlyoffice/site-config"
 import {type JSX, Fragment, h} from "preact"
-import {list} from "@/config/sitemap.ts"
 
 export function data(): Data {
   return {
@@ -12,15 +12,16 @@ export function data(): Data {
 }
 
 export function render(): JSX.Element {
+  const s = Sitemap.instance
   const c = Config.read()
   return <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {list().map((p) => {
-      if (p.url === undefined) {
+    {s.entities.map((e) => {
+      if (e.type !== "page") {
         return <></>
       }
       return <url>
-        <loc>{c.baseUrl}{p.url}</loc>
-        <lastmod>{p.date.toISOString()}</lastmod>
+        <loc>{c.baseUrl}{e.url}</loc>
+        <lastmod>{e.data.page.date.toISOString()}</lastmod>
       </url>
     })}
   </urlset>

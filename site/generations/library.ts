@@ -22,6 +22,40 @@ export function data({list, retrieve}: Resource): Data {
       return `${p}/index`
     },
 
+    sitemap(data) {
+      const s = data.defaultSitemap(data)
+
+      s.groups = function groups() {
+        const [d]: Declaration[] = data.pagination.items
+        if (d.kind !== "class") {
+          return []
+        }
+        return [
+          {title: "Constructors"},
+          {title: "Events"},
+          {title: "Methods"},
+          {title: "Properties"},
+        ]
+      }
+
+      s.group = function group() {
+        const [d]: Declaration[] = data.pagination.items
+        switch (d.kind) {
+        case "constructor":
+          return "Constructors"
+        case "event":
+          return "Events"
+        case "method":
+          return "Methods"
+        case "property":
+          return "Properties"
+        }
+        return ""
+      }
+
+      return s
+    },
+
     onRetrieve(r: Reference): Declaration | undefined {
       return retrieve(r.id)
     },

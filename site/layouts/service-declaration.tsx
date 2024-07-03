@@ -2,9 +2,8 @@ import type {Context, Data} from "@onlyoffice/eleventy-types"
 import {ServiceDeclaration} from "@onlyoffice/site-kit"
 import {type JSX, Fragment, h} from "preact"
 import {SyntaxHighlight} from "../components/syntax-highlight/syntax-highlight.ts"
-import {TableOfContents} from "../components/table-of-contents/table-of-contents.ts"
-import {retrieve} from "../config/sitemap.ts"
 import {Markdown} from "@/internal/markdown.tsx"
+import {TableOfContents} from "@/internal/table-of-contents.tsx"
 
 export function data(): Data {
   return {
@@ -18,7 +17,7 @@ export function render(ctx: Context): JSX.Element {
   switch (d.kind) {
   case "group":
     // todo: move to the ServiceDeclaration
-    return <TableOfContents url={ctx.page.url} onRetrieve={retrieve} />
+    return <TableOfContents url={ctx.page.url} />
   case "request":
     return <ServiceDeclaration
       declaration={d}

@@ -2617,6 +2617,9 @@ importers:
       '@onlyoffice/eleventy-pagefind':
         specifier: workspace:^
         version: link:../packages/eleventy-pagefind
+      '@onlyoffice/eleventy-sitemap':
+        specifier: workspace:^
+        version: link:../packages/eleventy-sitemap
       '@onlyoffice/eleventy-starry-night':
         specifier: workspace:^
         version: link:../packages/eleventy-starry-night

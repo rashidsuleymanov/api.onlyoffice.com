@@ -1,8 +1,7 @@
 import type {Data} from "@onlyoffice/eleventy-types"
 import {Content} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
-import {TableOfContents} from "@/components/table-of-contents/table-of-contents.ts"
-import {retrieve} from "@/config/sitemap.ts"
+import {TableOfContents} from "@/internal/table-of-contents.tsx"
 
 export function data(): Data {
   return {
@@ -13,6 +12,6 @@ export function data(): Data {
 
 export function render(): JSX.Element {
   return <Content>
-    <TableOfContents url="/" depth={-1} onRetrieve={retrieve} />
+    <TableOfContents url="/" depth={-1} />
   </Content>
 }
