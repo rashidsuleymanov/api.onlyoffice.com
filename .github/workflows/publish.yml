@@ -20,8 +20,9 @@ jobs:
       run: pnpm build
 
     - name: Build Site
-      timeout-minutes: 15
-      run: cd site && pnpm build
+      timeout-minutes: 60
+      working-directory: site
+      run: pnpm build
 
     # - name: Publish Site
     # Once the content has been built, you can find it in the `./site/dist`
