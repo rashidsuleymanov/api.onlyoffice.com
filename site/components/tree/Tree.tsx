@@ -111,6 +111,9 @@ export function Link(
     href
   }: LinkProperties
 ): JSX.Element {
+  if (!href) {
+    return <span class={clsx(className, "tree__leaf", active && "tree__leaf_current")}>{children}</span>
+  }
   return (
     <a class={clsx(className, "tree__leaf", active && "tree__leaf_current")} href={href}>{children}</a>
   )
