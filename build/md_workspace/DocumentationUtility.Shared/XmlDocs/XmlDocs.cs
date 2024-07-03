@@ -20,6 +20,25 @@ namespace DocumentationUtility.Shared.XmlDocs
             return Path.GetDirectoryName(location);
         }
 
+        public static int GetLoadedXmlCount(string[] type)
+        {
+            switch (type.Length)
+            {
+                case 0: return loadedXmlDocumentation.Count();
+
+                case 1: return loadedXmlDocumentation.Where(xml => xml.Key.StartsWith(type[0])).Count();
+
+                default:
+                    {
+                        IEnumerable<KeyValuePair<string, string>> r = loadedXmlDocumentation;
+                        foreach (var t in type) r = r.Where(xml => !xml.Key.StartsWith(t));
+                        if (r.Count() > 0) Console.WriteLine("\nUntracked keys in loaded xml documentation:");
+                        foreach (var o in r) Console.WriteLine(o.Key);
+                        return r.Count();
+                    }
+            }
+        }
+
         public static void LoadXmlDocumentation(Assembly assembly)
         {
             if (LoadedAssemblies.Contains(assembly))
@@ -54,6 +73,8 @@ namespace DocumentationUtility.Shared.XmlDocs
         {
             var key = "T:" + XmlDocumentationKeyHelper(type.FullName, null);
             loadedXmlDocumentation.TryGetValue(key, out string documentation);
+            if (documentation != null) Statistics.Statistics.CountDocumentation("Type", key);
+            else Statistics.Statistics.CountDocumentation(null, key);
             return documentation;
         }
 
@@ -61,6 +82,8 @@ namespace DocumentationUtility.Shared.XmlDocs
         {
             var key = "P:" + XmlDocumentationKeyHelper(propertyInfo.DeclaringType.FullName, propertyInfo.Name);
             loadedXmlDocumentation.TryGetValue(key, out string documentation);
+            if (documentation != null) Statistics.Statistics.CountDocumentation("Property", key);
+            else Statistics.Statistics.CountDocumentation(null, key);
             return documentation;
         }
 
@@ -68,6 +91,8 @@ namespace DocumentationUtility.Shared.XmlDocs
         {
             var key = "E:" + XmlDocumentationKeyHelper(eventInfo.DeclaringType.FullName, eventInfo.Name);
             loadedXmlDocumentation.TryGetValue(key, out string documentation);
+            if (documentation != null) Statistics.Statistics.CountDocumentation("Event", key);
+            else Statistics.Statistics.CountDocumentation(null, key);
             return documentation;
         }
 
@@ -75,6 +100,8 @@ namespace DocumentationUtility.Shared.XmlDocs
         {
             var key = "F:" + XmlDocumentationKeyHelper(fieldInfo.DeclaringType.FullName, fieldInfo.Name);
             loadedXmlDocumentation.TryGetValue(key, out string documentation);
+            if (documentation != null) Statistics.Statistics.CountDocumentation("Field", key);
+            else Statistics.Statistics.CountDocumentation(null, key);
             return documentation;
         }
 
@@ -83,6 +110,8 @@ namespace DocumentationUtility.Shared.XmlDocs
             var key = methodInfo.GetMethodKey();
 
             loadedXmlDocumentation.TryGetValue(key, out string documentation);
+            if (documentation != null) Statistics.Statistics.CountDocumentation("Method", key);
+            else Statistics.Statistics.CountDocumentation(null, key);
             return documentation;
         }
 

@@ -1,5 +1,6 @@
 ﻿using ASC.Api.Attributes;
 using DocumentationUtility.Shared.Models;
+using DocumentationUtility.Shared.Statistics;
 using System;
 using System.Linq;
 using System.Reflection;
@@ -51,8 +52,8 @@ namespace DocumentationUtility.Portals.Models
                     return true;
             }
 
-            Console.WriteLine($"Unhandled element {element}");
-
+            string item = type.Module.Name + ":" + Name;
+            Statistics.CountUnhandled(element.Name.ToString(), item);
             return false;
         }
     }

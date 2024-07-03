@@ -68,6 +68,8 @@ namespace DocumentationUtility.Shared.Models.Abstract
                     return true;
             }
 
+            string item = type.Module.Name + ":" + Name;
+            if (GetType().Name != "PortalApiMethod") Statistics.Statistics.CountUnhandled(element.Name.ToString(), item);
             return false;
         }
 

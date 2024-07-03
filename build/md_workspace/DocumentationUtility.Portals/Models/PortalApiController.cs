@@ -1,5 +1,6 @@
 ﻿using ASC.Api.Attributes;
 using DocumentationUtility.Shared.Models;
+using DocumentationUtility.Shared.Statistics;
 using System;
 using System.Linq;
 using System.Reflection;
@@ -27,11 +28,7 @@ namespace DocumentationUtility.Portals.Models
 
         protected override bool HandleElement(XElement element)
         {
-            if (base.HandleElement(element)) return true;
-
-            Console.WriteLine($"Unhandled element {element}");
-
-            return false;
+            return base.HandleElement(element);
         }
     }
 }

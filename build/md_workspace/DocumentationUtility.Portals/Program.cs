@@ -3,6 +3,7 @@ using DocumentationUtility.Portals.Models;
 using DocumentationUtility.Shared.Markdown;
 using DocumentationUtility.Shared.Models;
 using DocumentationUtility.Shared.XmlDocs;
+using DocumentationUtility.Shared.Statistics;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -43,6 +44,8 @@ public class Program
         }
 
         JsonRenderer.RenderApiControllers(result.Cast<DocApiController>().ToList(), "json_out", "portals.json");
+
+        Statistics.PrintAll(false);
 
         Console.WriteLine();
     }
