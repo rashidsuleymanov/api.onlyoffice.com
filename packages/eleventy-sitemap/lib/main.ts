@@ -21,6 +21,7 @@ export interface SitemapData {
 
 export interface SitemapAccessible {
   entities: SitemapEntity[]
+  path(e: SitemapEntity): string[]
   page(u: string): SitemapPage | undefined
   entity(id: string): SitemapEntity | undefined
 }
@@ -60,6 +61,16 @@ export class Sitemap implements SitemapAccessible {
 
   get entities(): SitemapEntity[] {
     return this.#entities
+  }
+
+  path(e: SitemapEntity): string[] {
+    const p: string[] = []
+    let t: SitemapEntity | undefined = e
+    while (t) {
+      p.push(t.id)
+      t = this.entity(t.parent)
+    }
+    return p.reverse()
   }
 
   page(u: string): SitemapPage | undefined {
