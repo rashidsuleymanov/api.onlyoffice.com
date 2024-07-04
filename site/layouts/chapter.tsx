@@ -25,9 +25,44 @@ export function data(): Data {
 }
 
 export function render({content, ...ctx}: Context): JSX.Element {
-  return <Chapter>
+  const s = Sitemap.instance
+
+  const pe = s.page(ctx.page.url)
+  if (!pe) {
+    throw new Error(`Page not found: ${ctx.page.url}`)
+  }
+
+  const pt = s.path(pe)
+  if (pt.length < 3) {
+    throw new Error(`Chapter layout requires at least three levels: ${pe.url}`)
+  }
+
+  const [, rd, cd] = pt
+
+  const re = s.entity(rd)
+  if (!re || re.type !== "page") {
+    throw new Error(`Part not found: ${rd}`)
+  }
+
+  const ce = s.entity(cd)
+  if (!ce || ce.type !== "page") {
+    throw new Error(`Chapter not found: ${cd}`)
+  }
+
+  return <Chapter
+    data-part={re.title}
+    data-chapter={ce.title}
+    data-pagefind-filter="part[data-part], chapter[data-chapter]"
+  >
     <ChapterNavigation>
-      <SearchContainer>
+      <SearchContainer
+        search-options={{
+          filters: {
+            part: [re.title],
+            chapter: [ce.title],
+          },
+        }}
+      >
         <SearchPlaceholder>Type <kbd>/</kbd> to search</SearchPlaceholder>
         <SearchField label="Search" />
         <SearchClear label="Clear" />
