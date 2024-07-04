@@ -10,6 +10,10 @@ export class SearchContainer extends HTMLElement {
     return "search-container"
   }
 
+  get #src(): string {
+    return this.getAttribute("src") || "/pagefind/pagefind.js"
+  }
+
   get #focused(): boolean {
     return this.getAttribute("focused") === ""
   }
@@ -123,8 +127,7 @@ export class SearchContainer extends HTMLElement {
 
   async #setupPagefind(): Promise<void> {
     try {
-      // todo: move path to the parameters (src)
-      const p = await imp<PagefindModule>("/pagefind/pagefind.js")
+      const p = await imp<PagefindModule>(this.#src)
       await p.init()
       this.#pagefind = p
     } catch {
