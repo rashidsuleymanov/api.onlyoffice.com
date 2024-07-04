@@ -1,3 +1,4 @@
+import {type PagefindSearchOptions} from "@onlyoffice/pagefind-types"
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {useSlots} from "@onlyoffice/preact-slots"
 import {CancelIcon, MagnifyingGlassIcon} from "@onlyoffice/ui-icons/poor/24.tsx"
@@ -5,18 +6,24 @@ import {Template} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
 
 export interface SearchContainerProperties extends ChildrenIncludable {
-  size?: "default" | "large"
+  "search-options"?: PagefindSearchOptions
+  "size"?: "default" | "large"
 }
 
-export function SearchContainer({children, size}: SearchContainerProperties): JSX.Element {
-  const [slots] = useSlots(children, {
+export function SearchContainer(p: SearchContainerProperties): JSX.Element {
+  const [slots] = useSlots(p.children, {
     placeholder: SearchPlaceholder,
     field: SearchField,
     clear: SearchClear,
     template: SearchTemplate
   })
 
-  return <search-container>
+  const o: Record<string, string> = {}
+  if (p["search-options"]) {
+    o["search-options"] = JSON.stringify(p["search-options"])
+  }
+
+  return <search-container {...o}>
     <form class={cls()} id="search" action="https://duckduckgo.com/" method="get">
       <MagnifyingGlassIcon class="search__glass" width={24} height={24} />
       {slots.placeholder}
@@ -29,7 +36,7 @@ export function SearchContainer({children, size}: SearchContainerProperties): JS
 
   function cls(): string {
     let s = "search"
-    if (size === "large") {
+    if (p.size === "large") {
       s += " search_large"
     }
     return s

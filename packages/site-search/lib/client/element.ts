@@ -1,4 +1,8 @@
-import type {PagefindFragment, PagefindModule} from "@onlyoffice/pagefind-types"
+import {
+  type PagefindFragment,
+  type PagefindModule,
+  type PagefindSearchOptions,
+} from "@onlyoffice/pagefind-types"
 
 // https://github.com/primer/react/blob/v36.14.0/packages/react/src/TextInput/TextInput.tsx
 // todo: separate input logic into a separate search-container.
@@ -12,6 +16,14 @@ export class SearchContainer extends HTMLElement {
 
   get #src(): string {
     return this.getAttribute("src") || "/pagefind/pagefind.js"
+  }
+
+  get #searchOptions(): PagefindSearchOptions {
+    const s = this.getAttribute("search-options")
+    if (!s) {
+      return {}
+    }
+    return JSON.parse(s)
   }
 
   get #focused(): boolean {
@@ -331,7 +343,7 @@ export class SearchContainer extends HTMLElement {
       return
     }
 
-    const sr = await pf.search(qs)
+    const sr = await pf.search(qs, this.#searchOptions)
 
     const ce = this.#counterElement
     if (ce) {
