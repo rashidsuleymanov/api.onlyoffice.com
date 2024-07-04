@@ -183,26 +183,91 @@ export class Sitemap implements SitemapAccessible {
         t -= 1
       }
 
-      let u = a.slice(0, t).join("/")
-      u += "/"
+      // eslint-disable-next-line prefer-template
+      const u = a.slice(0, t).join("/") + "/"
 
       if (e.url === u) {
         continue
       }
 
-      let i = s.#indexes[`page;${u}`]
-      if (i === undefined) {
-        const g = new SitemapGroup()
-        g.id = `group;${u};Unknown Group`
-        g.title = "Unknown Group"
-        s.#entities.push(g)
-        i = s.#entities.length - 1
-        s.#indexes[g.id] = i
+      const h: SitemapGroup[] = []
+
+      let i = -1
+      let k = t
+      let x = u
+      let n = ""
+
+      while (true) {
+        i = s.#indexes[`page;${x}`]
+        if (i !== undefined) {
+          break
+        }
+
+        k -= 1
+        // eslint-disable-next-line prefer-template
+        x = a.slice(0, k).join("/") + "/"
+        n = a[k]
+
+        let g: SitemapGroup
+
+        const id = `group;${x};${n}`
+        const j = s.#indexes[id]
+        if (j !== undefined) {
+          const e = s.#entities[j]
+          if (e.type !== "group") {
+            throw new Error(`Not a group '${id}'`)
+          }
+          g = e
+        } else {
+          g = new SitemapGroup()
+          g.id = id
+          g.title = n
+        }
+
+        h.push(g)
       }
 
-      const p = s.#entities[i]
-      e.parent = p.id
-      p.children.push(e.id)
+      let m = s.#entities[i]
+      if (!m || m.type !== "page") {
+        throw new Error(`Not a page '${e.id}'`)
+      }
+
+      if (h.length !== 0) {
+        let p = h[h.length - 1]
+        for (let i = h.length - 2; i >= 0; i -= 1) {
+          const n = h[i]
+          if (!n.parent) {
+            n.parent = p.id
+          }
+          if (n.parent !== p.id) {
+            throw new Error(`Parent mismatch '${n.id}'`)
+          }
+          if (!p.children.includes(n.id)) {
+            p.children.push(n.id)
+          }
+          p = n
+        }
+
+        const g = h[h.length - 1]
+        if (!g.parent) {
+          g.parent = m.id
+        }
+        if (g.parent !== m.id) {
+          throw new Error(`Parent mismatch '${g.id}'`)
+        }
+
+        for (const g of h) {
+          if (s.#indexes[g.id] === undefined) {
+            s.#entities.push(g)
+            s.#indexes[g.id] = s.#entities.length - 1
+          }
+        }
+
+        m = g
+      }
+
+      e.parent = m.id
+      m.children.push(e.id)
     }
 
     for (const e of s.#entities) {
