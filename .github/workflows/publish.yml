@@ -39,7 +39,3 @@ jobs:
     - name: Invalidate CLOUDFRONT cache
       run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }}
 
-    # - name: Publish Site
-    # Once the content has been built, you can find it in the `./site/dist`
-    # directory. Be aware that this directory could contain as many as 5000
-    # files. You can tar it to better deliver content to the server.
