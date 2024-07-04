@@ -129,7 +129,6 @@ export class SearchContainer extends HTMLElement {
   }
 
   async #setup(): Promise<void> {
-    console.log(window.location.href)
     await this.#setupPagefind()
     this.#setupQuery()
     this.#setupSites()
