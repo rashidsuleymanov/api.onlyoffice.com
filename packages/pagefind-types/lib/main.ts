@@ -15,17 +15,33 @@ export interface PagefindModule {
   /**
    * {@link https://github.com/CloudCannon/pagefind/blob/v1.1.0/pagefind_web_js/lib/coupled_search.ts/#L657 Pagefind Reference}
    */
-  search(term: string): Promise<PagefindSearchResults>
+  search(term: string, options?: PagefindSearchOptions): Promise<PagefindSearchResults>
 }
 
+/**
+ * {@link https://github.com/CloudCannon/pagefind/blob/v1.1.0/pagefind_web_js/types/index.d.ts/#L73 Pagefind Reference}
+ */
+export interface PagefindSearchOptions {
+  filters?: Record<string, unknown>
+}
+
+/**
+ * {@link https://github.com/CloudCannon/pagefind/blob/v1.1.0/pagefind_web_js/types/index.d.ts/#L88 Pagefind Reference}
+ */
 export interface PagefindSearchResults {
   results: PagefindSearchResult[]
 }
 
+/**
+ * {@link https://github.com/CloudCannon/pagefind/blob/v1.1.0/pagefind_web_js/types/index.d.ts/#L106 Pagefind Reference}
+ */
 export interface PagefindSearchResult {
   data(): Promise<PagefindFragment>
 }
 
+/**
+ * {@link https://github.com/CloudCannon/pagefind/blob/v1.1.0/pagefind_web_js/types/index.d.ts/#L123 Pagefind Reference}
+ */
 export interface PagefindFragment {
   url: string
   meta?: PagefindFragmentMeta
