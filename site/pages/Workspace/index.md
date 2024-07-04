@@ -6,7 +6,21 @@ summary: In this section, you will learn how to integrate ONLYOFFICE Workspace i
 sample:
   syntax: js
   code: |
-    console.log("hi")
+    POST api/2.0/project/1234/task
+    Host: yourportal.onlyoffice.co
+    Content-Type: application/json
+    Accept: application/json
+
+    {
+      "description": "New task",
+      "priority": "Normal",
+      "title": "Task title",
+      "milestoneid": 1234,
+      "responsibles": [
+        "9924256A-739C-462b-AF15-E652A3B1B6EB"
+      ],
+      "startDate": "2024-06-24T11-30-00.000Z"
+    }
 help:
   faq: http://0.0.0.0/
   issues: http://0.0.0.0/
