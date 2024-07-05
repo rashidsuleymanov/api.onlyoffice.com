@@ -14,6 +14,7 @@ import {
 import {SrOnly} from "@onlyoffice/ui-kit"
 import {OnlyofficeLogo} from "@onlyoffice/ui-logos"
 import {type JSX, h} from "preact"
+import {GlobalNavigation} from "@/internal/global-navigation.tsx"
 
 export function data(): Data {
   return {
@@ -21,7 +22,7 @@ export function data(): Data {
   }
 }
 
-export function render({collections, content}: Context): JSX.Element {
+export function render({content, ...ctx}: Context): JSX.Element {
   return <Page>
     <PageHeader>
       <SrOnly>
@@ -30,9 +31,8 @@ export function render({collections, content}: Context): JSX.Element {
       <PageHeaderLogo>
         <a href="/"><OnlyofficeLogo height={38} /></a>
       </PageHeaderLogo>
-      <PageHeaderMenu label="Global Navigation">
-        {collections.navigation
-          .map((item) => <a href={item.link}>{item.title}</a>)}
+      <PageHeaderMenu>
+        <GlobalNavigation url={ctx.page.url} />
       </PageHeaderMenu>
     </PageHeader>
     <main>{content}</main>

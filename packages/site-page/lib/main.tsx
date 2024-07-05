@@ -30,12 +30,8 @@ export function PageHeaderLogo({children}: ChildrenIncludable): JSX.Element {
   return <>{children}</>
 }
 
-export interface PageHeaderMenuParameters extends ChildrenIncludable {
-  label?: string
-}
-
-export function PageHeaderMenu({children, label}: PageHeaderMenuParameters): JSX.Element {
-  return <nav class="page-header-menu" aria-label={label}>{children}</nav>
+export function PageHeaderMenu({children}: ChildrenIncludable): JSX.Element {
+  return <>{children}</>
 }
 
 export function PageFooter({children}: ChildrenIncludable): JSX.Element {

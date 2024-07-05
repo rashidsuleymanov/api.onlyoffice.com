@@ -36,10 +36,12 @@ export function Default({children}: ChildrenIncludable): JSX.Element {
           <OnlyofficeLogo height={38} style={{display: "block"}} />
         </a>
       </PageHeaderLogo>
-      <PageHeaderMenu label="Global">
-        {/* <a href="/docspace/">DocSpace</a>
-        <a href="/docs/">Docs</a>
-        <a href="/workspace/">Workspace</a> */}
+      <PageHeaderMenu>
+        <nav aria-label="Global">
+          <a href="/docspace/">DocSpace</a>
+          <a href="/docs/">Docs</a>
+          <a href="/workspace/">Workspace</a>
+        </nav>
       </PageHeaderMenu>
     </PageHeader>
     <main>
