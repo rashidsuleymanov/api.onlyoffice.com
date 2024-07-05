@@ -1,5 +1,5 @@
 import {extname} from "node:path"
-import {type Data, type Template, type UserConfig} from "@onlyoffice/eleventy-types"
+import {type Data, type UserConfig} from "@onlyoffice/eleventy-types"
 
 declare module "@onlyoffice/eleventy-types" {
   interface Data {
@@ -56,11 +56,14 @@ export class SitemapGroup {
 }
 
 export class Sitemap implements SitemapAccessible {
-  #indexes: SitemapIndexes = {}
-  #entities: SitemapEntity[] = []
+  static shared: SitemapAccessible
 
-  get entities(): SitemapEntity[] {
-    return this.#entities
+  indexes: SitemapIndexes
+  entities: SitemapEntity[]
+
+  constructor(indexes: SitemapIndexes, entities: SitemapEntity[]) {
+    this.indexes = indexes
+    this.entities = entities
   }
 
   path(e: SitemapEntity): string[] {
@@ -82,22 +85,20 @@ export class Sitemap implements SitemapAccessible {
   }
 
   entity(id: string): SitemapEntity | undefined {
-    const i = this.#indexes[id]
+    const i = this.indexes[id]
     if (i === undefined) {
       return undefined
     }
-    return this.#entities[i]
+    return this.entities[i]
   }
+}
 
-  static #shared: SitemapAccessible
+export function eleventySitemap(uc: UserConfig): void {
+  uc.addCollection("sitemap", (tc) => {
+    const ts = tc.getAll()
 
-  static get shared(): SitemapAccessible {
-    return Sitemap.#shared
-  }
-
-  static collect(ts: Template[]): void {
     const c = new Map<string, string>()
-    const s = new Sitemap()
+    const s = new Sitemap({}, [])
 
     for (const te of ts) {
       const n = extname(te.outputPath)
@@ -133,13 +134,13 @@ export class Sitemap implements SitemapAccessible {
       }
       p.data = d.data
 
-      const i = s.#indexes[p.id]
+      const i = s.indexes[p.id]
       if (i !== undefined) {
         throw new Error(`Duplicate URL '${p.url}'`)
       }
 
-      s.#entities.push(p)
-      s.#indexes[p.id] = s.#entities.length - 1
+      s.entities.push(p)
+      s.indexes[p.id] = s.entities.length - 1
 
       if (d.groups) {
         const a = d.groups()
@@ -153,13 +154,13 @@ export class Sitemap implements SitemapAccessible {
           g.title = d.title
           g.parent = p.id
 
-          const i = s.#indexes[g.id]
+          const i = s.indexes[g.id]
           if (i !== undefined) {
             throw new Error(`Duplicate group '${g.title}'`)
           }
 
-          s.#entities.push(g)
-          s.#indexes[g.id] = s.#entities.length - 1
+          s.entities.push(g)
+          s.indexes[g.id] = s.entities.length - 1
         }
       }
 
@@ -171,7 +172,7 @@ export class Sitemap implements SitemapAccessible {
       }
     }
 
-    for (const e of s.#entities) {
+    for (const e of s.entities) {
       if (e.type !== "page") {
         continue
       }
@@ -198,7 +199,7 @@ export class Sitemap implements SitemapAccessible {
       let n = ""
 
       while (true) {
-        i = s.#indexes[`page;${x}`]
+        i = s.indexes[`page;${x}`]
         if (i !== undefined) {
           break
         }
@@ -211,9 +212,9 @@ export class Sitemap implements SitemapAccessible {
         let g: SitemapGroup
 
         const id = `group;${x};${n}`
-        const j = s.#indexes[id]
+        const j = s.indexes[id]
         if (j !== undefined) {
-          const e = s.#entities[j]
+          const e = s.entities[j]
           if (e.type !== "group") {
             throw new Error(`Not a group '${id}'`)
           }
@@ -227,7 +228,7 @@ export class Sitemap implements SitemapAccessible {
         h.push(g)
       }
 
-      let m = s.#entities[i]
+      let m = s.entities[i]
       if (!m || m.type !== "page") {
         throw new Error(`Not a page '${e.id}'`)
       }
@@ -257,9 +258,9 @@ export class Sitemap implements SitemapAccessible {
         }
 
         for (const g of h) {
-          if (s.#indexes[g.id] === undefined) {
-            s.#entities.push(g)
-            s.#indexes[g.id] = s.#entities.length - 1
+          if (s.indexes[g.id] === undefined) {
+            s.entities.push(g)
+            s.indexes[g.id] = s.entities.length - 1
           }
         }
 
@@ -270,7 +271,7 @@ export class Sitemap implements SitemapAccessible {
       m.children.push(e.id)
     }
 
-    for (const e of s.#entities) {
+    for (const e of s.entities) {
       if (e.type !== "page") {
         continue
       }
@@ -280,12 +281,12 @@ export class Sitemap implements SitemapAccessible {
         continue
       }
 
-      const j = s.#indexes[e.parent]
+      const j = s.indexes[e.parent]
       if (j === undefined) {
         throw new Error(`No parent for '${e.url}'`)
       }
 
-      const p = s.#entities[j]
+      const p = s.entities[j]
       if (!p) {
         throw new Error(`No entity for '${e.url}'`)
       }
@@ -300,17 +301,17 @@ export class Sitemap implements SitemapAccessible {
         throw new Error(`Unknown type '${p.type}'`)
       }
 
-      let i = s.#indexes[id]
+      let i = s.indexes[id]
       if (i === undefined) {
         const g = new SitemapGroup()
         g.id = id
         g.title = n
-        s.#entities.push(g)
-        i = s.#entities.length - 1
-        s.#indexes[g.id] = i
+        s.entities.push(g)
+        i = s.entities.length - 1
+        s.indexes[g.id] = i
       }
 
-      const m = s.#entities[i]
+      const m = s.entities[i]
       if (!m) {
         throw new Error(`No entity for '${id}'`)
       }
@@ -330,21 +331,21 @@ export class Sitemap implements SitemapAccessible {
       }
     }
 
-    for (const e of s.#entities) {
+    for (const e of s.entities) {
       e.children.sort((a, b) => {
-        const i = s.#indexes[a]
+        const i = s.indexes[a]
         if (i === undefined) {
           throw new Error(`No index for '${a}'`)
         }
-        const x = s.#entities[i]
+        const x = s.entities[i]
         if (!x) {
           throw new Error(`No entity for '${a}'`)
         }
-        const j = s.#indexes[b]
+        const j = s.indexes[b]
         if (j === undefined) {
           throw new Error(`No index for '${b}'`)
         }
-        const y = s.#entities[j]
+        const y = s.entities[j]
         if (!y) {
           throw new Error(`No entity for '${b}'`)
         }
@@ -356,14 +357,8 @@ export class Sitemap implements SitemapAccessible {
       })
     }
 
-    Sitemap.#shared = s
-  }
-}
+    Sitemap.shared = s
 
-export function eleventySitemap(uc: UserConfig): void {
-  uc.addCollection("sitemap", (tc) => {
-    const ts = tc.getAll()
-    Sitemap.collect(ts)
     return []
   })
 }
