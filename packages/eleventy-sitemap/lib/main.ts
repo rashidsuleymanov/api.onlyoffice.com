@@ -20,7 +20,7 @@ export interface SitemapData {
 }
 
 export interface SitemapAccessible {
-  entities: SitemapEntity[]
+  get entities(): SitemapEntity[]
   path(e: SitemapEntity): string[]
   page(u: string): SitemapPage | undefined
   entity(id: string): SitemapEntity | undefined
