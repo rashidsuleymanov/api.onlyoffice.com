@@ -2,6 +2,7 @@ name: Publish
 
 on:
   workflow_dispatch:
+  push:
 
 jobs:
   publish:
@@ -34,8 +35,9 @@ jobs:
     - name: Sync bucket
       run: |
         cd ./site/dist
-        aws s3 sync . s3://api2static.teamlab.info --delete
+        #aws s3 sync . s3://api2static.teamlab.info --delete
+        aws s3 sync . s3://api2-test --delete
 
-    - name: Invalidate CLOUDFRONT cache
-      run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }}
+    #- name: Invalidate CLOUDFRONT cache
+    #  run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }}
 
