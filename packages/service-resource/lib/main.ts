@@ -1,6 +1,7 @@
 import {readFile} from "node:fs/promises"
 import {join} from "node:path"
 import {URL, fileURLToPath} from "node:url"
+import {escape} from "@onlyoffice/node-path/win32.ts"
 import type {Component, Declaration} from "@onlyoffice/service-declaration"
 
 export interface Resource {
@@ -26,10 +27,10 @@ export async function resource(df: string, cf: string): Promise<string> {
   let rc = await readFile(rf, "utf8")
 
   const d = "const d: Declaration[] = require"
-  rc = rc.replace(`${d}("")`, `${d}("${df}")`)
+  rc = rc.replace(`${d}("")`, `${d}("${escape(df)}")`)
 
   const c = "const c: Record<string, Component> = require"
-  rc = rc.replace(`${c}("")`, `${c}("${cf}")`)
+  rc = rc.replace(`${c}("")`, `${c}("${escape(cf)}")`)
 
   return rc
 }

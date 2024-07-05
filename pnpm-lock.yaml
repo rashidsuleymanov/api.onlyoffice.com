@@ -1103,6 +1103,9 @@ importers:
       '@onlyoffice/library-declaration':
         specifier: workspace:^
         version: link:../library-declaration
+      '@onlyoffice/node-path':
+        specifier: workspace:^
+        version: link:../node-path
       '@types/node':
         specifier: ^20.12.12
         version: 20.12.12
@@ -1626,6 +1629,9 @@ importers:
 
   packages/service-resource:
     dependencies:
+      '@onlyoffice/node-path':
+        specifier: workspace:^
+        version: link:../node-path
       '@onlyoffice/service-declaration':
         specifier: workspace:^
         version: link:../service-declaration
