@@ -1,3 +1,4 @@
+import * as rich24 from "@onlyoffice/ui-icons/rich/24.tsx"
 import * as rich32 from "@onlyoffice/ui-icons/rich/32.tsx"
 import * as rich64 from "@onlyoffice/ui-icons/rich/64.tsx"
 import {type JSX, h} from "preact"
@@ -6,7 +7,7 @@ type InternalIcon = typeof rich32.DesktopEditorsIcon
 type InternalIconProperties = Parameters<InternalIcon>[0]
 
 export interface IconProperties extends InternalIconProperties {
-  src: "rich32" | "rich64"
+  src: "rich24" | "rich32" | "rich64"
   name: string
 }
 
@@ -27,6 +28,18 @@ export function Icon(p: IconProperties): JSX.Element {
 }
 
 const icons: Record<IconProperties["src"], Record<string, InternalIcon>> = {
+  rich24: {
+    "bug": rich24.BugIcon,
+    "desktop-editors": rich24.DesktopEditorsIcon,
+    "docs-api": rich24.DocsApiIcon,
+    "docspace-api": rich24.DocspaceApiIcon,
+    "document-builder": rich24.DocumentBuilderIcon,
+    "github": rich24.GithubIcon,
+    "javascript-sdk": rich24.JavascriptSdkIcon,
+    "office-api": rich24.OfficeApiIcon,
+    "plugins": rich24.PluginsIcon,
+    "self-hosted": rich24.SelfHostedIcon
+  },
   rich32: {
     "desktop-editors": rich32.DesktopEditorsIcon,
     "docs-api": rich32.DocsApiIcon,
