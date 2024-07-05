@@ -89,10 +89,10 @@ export class Sitemap implements SitemapAccessible {
     return this.#entities[i]
   }
 
-  static #instance: SitemapAccessible
+  static #shared: SitemapAccessible
 
-  static get instance(): SitemapAccessible {
-    return Sitemap.#instance
+  static get shared(): SitemapAccessible {
+    return Sitemap.#shared
   }
 
   static collect(ts: Template[]): void {
@@ -356,7 +356,7 @@ export class Sitemap implements SitemapAccessible {
       })
     }
 
-    Sitemap.#instance = s
+    Sitemap.#shared = s
   }
 }
 

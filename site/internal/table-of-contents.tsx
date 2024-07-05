@@ -8,7 +8,7 @@ export interface TableOfContentsProperties {
 }
 
 export function TableOfContents(p: TableOfContentsProperties): JSX.Element {
-  const s = Sitemap.instance
+  const s = Sitemap.shared
   const {url, depth = 1} = p
   const e: SitemapEntity | undefined = s.page(url)
   if (!e || e.children.length === 0) {

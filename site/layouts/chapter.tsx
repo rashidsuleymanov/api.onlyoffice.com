@@ -25,7 +25,7 @@ export function data(): Data {
 }
 
 export function render({content, ...ctx}: Context): JSX.Element {
-  const s = Sitemap.instance
+  const s = Sitemap.shared
 
   const pe = s.page(ctx.page.url)
   if (!pe) {
@@ -109,7 +109,7 @@ export interface InternalChapterNavigationProperties {
 }
 
 export function InternalChapterNavigation(p: InternalChapterNavigationProperties): JSX.Element | null {
-  const s = Sitemap.instance
+  const s = Sitemap.shared
 
   let l = p.level
   let e: SitemapEntity | undefined = s.page("/")
@@ -204,7 +204,7 @@ export interface InternalBreadcrumbProperties {
 
 export function InternalBreadcrumb(p: InternalBreadcrumbProperties): JSX.Element | null {
   const a: JSX.Element[] = []
-  const s = Sitemap.instance
+  const s = Sitemap.shared
 
   let e: SitemapEntity | undefined = s.page(p.url)
   while (true) {
