@@ -2365,12 +2365,10 @@
     <Content Include="App_Data\officeapi\examples\word\ApiTable.docbuilder" />
     <Content Include="App_Data\officeapi\examples\word\ApiTable.GetCell.docbuilder" />
     <Content Include="App_Data\officeapi\examples\word\ApiTable.GetClassType.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\word\ApiTable.GetNext.docbuilder" />
     <Content Include="App_Data\officeapi\examples\word\ApiTable.GetParentContentControl.docbuilder" />
     <Content Include="App_Data\officeapi\examples\word\ApiTable.GetParentTable.docbuilder" />
     <Content Include="App_Data\officeapi\examples\word\ApiTable.GetParentTableCell.docbuilder" />
     <Content Include="App_Data\officeapi\examples\word\ApiTable.GetPosInParent.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\word\ApiTable.GetPrevious.docbuilder" />
     <Content Include="App_Data\officeapi\examples\word\ApiTable.GetRange.docbuilder" />
     <Content Include="App_Data\officeapi\examples\word\ApiTable.GetRow.docbuilder" />
     <Content Include="App_Data\officeapi\examples\word\ApiTable.GetRowsCount.docbuilder" />

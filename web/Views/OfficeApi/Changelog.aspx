@@ -601,6 +601,8 @@
     <p><b>Other methods</b></p>
     <ul>
         <li>Added the <em>nWidth</em> and <em>nHeight</em> parameters to the <a href="<%= Url.Action("textdocumentapi/apipictureform/setimage") %>">ApiPictureForm/SetImage</a> method of Text document API.</li>
+        <li>Removed the <em>ApiTable/GetNext</em> method from Text document API.</li>
+        <li>Removed the <em>ApiTable/GetPrevious</em> method from Text document API.</li>
     </ul>
     <br />
 
