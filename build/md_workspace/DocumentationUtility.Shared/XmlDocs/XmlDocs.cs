@@ -141,7 +141,7 @@ namespace DocumentationUtility.Shared.XmlDocs
                 {
                     if (parameterInfo.ParameterType.IsArray)
                     {
-                        // append the "[]" array brackets onto the element type
+                        parameterKeys.Add(parameterInfo.ParameterType.FullName);
                     }
                     else if (parameterInfo.ParameterType.IsPointer)
                     {
@@ -152,12 +152,9 @@ namespace DocumentationUtility.Shared.XmlDocs
                         // append the "@" symbol to the element type
                     }
                 }
-                else if (parameterInfo.ParameterType.IsGenericParameter)
+                else if (parameterInfo.ParameterType.IsGenericType)
                 {
-                    // look up the index of the generic from the
-                    // dictionaries, appending "`" if
-                    // the parameter is from a type or "``" if the
-                    // parameter is from a method
+                    parameterKeys.Add(ParseGeneric(parameterInfo.ParameterType));
                 }
                 else
                 {
@@ -229,6 +226,19 @@ namespace DocumentationUtility.Shared.XmlDocs
             {
                 return null;
             }
+        }
+
+        private static string ParseGeneric(Type type)
+        {
+            var arguments = type.GetGenericArguments();
+            string innerType = "";
+            foreach (var a in arguments) 
+            {
+                if (a.IsGenericType) innerType += ParseGeneric(a);
+                else innerType += a.FullName + ",";
+            }
+            innerType = innerType.TrimEnd(',');
+            return XmlDocumentationKeyHelper($"{type.FullName.Split('`')[0]}{{{innerType}}}", null);
         }
 
         private static string XmlDocumentationKeyHelper(string typeFullNameString, string memberNameString)

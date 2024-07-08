@@ -26,9 +26,9 @@ namespace DocumentationUtility.Shared.Models
 
             Controller = controller;
 
-            ParseXml();
-
             ParseReflection();
+
+            ParseXml();
         }
 
         protected override bool HandleElement(XElement element)
