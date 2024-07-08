@@ -10,11 +10,14 @@
 // aria-describedby) to the combobox and listbox elements from the
 // combobox-container element.
 
-// todo: Implement combobox container events.
 // todo: Implement type-searching in the combobox.
 
-import type {ComboboxContainerChangeEventListener} from "./events.ts"
-import {ComboboxContainerChangeEvent} from "./events.ts"
+import {
+  ComboboxContainerChangedEvent,
+  ComboboxContainerChangeEvent,
+  type ComboboxContainerChangeEventListener,
+  type ComboboxContainerChangedEventListener,
+} from "./events.ts"
 
 export type ComboboxContainerAttributeName =
   Exclude<keyof ComboboxContainerAttributes, undefined>
@@ -25,6 +28,7 @@ export interface ComboboxContainerAttributes {
   "name"?: string
   "page-size"?: string
   "oncomboboxcontainerchange"?: string
+  "oncomboboxcontainerchanged"?: string
 }
 
 export type ComboboxContainerEvent =
@@ -63,7 +67,8 @@ export class ComboboxContainer extends HTMLElement {
       "disabled",
       "name",
       "page-size",
-      "oncomboboxcontainerchange"
+      "oncomboboxcontainerchange",
+      "oncomboboxcontainerchanged",
     ]
   }
 
@@ -83,6 +88,9 @@ export class ComboboxContainer extends HTMLElement {
       break
     case "oncomboboxcontainerchange":
       this.#changeOncomboboxcontainerchange(v)
+      break
+    case "oncomboboxcontainerchanged":
+      this.#changeOncomboboxcontainerchanged(v)
       break
     default:
       throw new Error(`Attribute '${n}' is not supported`)
@@ -111,6 +119,30 @@ export class ComboboxContainer extends HTMLElement {
       f = new Function("event", v) as ComboboxContainerChangeEventListener
     }
     this.oncomboboxcontainerchange = f
+  }
+
+  #oncomboboxcontainerchanged: ComboboxContainerChangedEventListener | null = null
+
+  get oncomboboxcontainerchanged(): ComboboxContainerChangedEventListener | null {
+    return this.#oncomboboxcontainerchanged
+  }
+
+  set oncomboboxcontainerchanged(l: ComboboxContainerChangedEventListener | null) {
+    if (this.#oncomboboxcontainerchanged) {
+      this.removeEventListener(ComboboxContainerChangedEvent.type, this.#oncomboboxcontainerchanged)
+    }
+    this.#oncomboboxcontainerchanged = l
+    if (this.#oncomboboxcontainerchanged) {
+      this.addEventListener(ComboboxContainerChangedEvent.type, this.#oncomboboxcontainerchanged)
+    }
+  }
+
+  #changeOncomboboxcontainerchanged(v: string | null): void {
+    let f = null
+    if (v !== null) {
+      f = new Function("event", v) as ComboboxContainerChangedEventListener
+    }
+    this.oncomboboxcontainerchanged = f
   }
 
   #internals: ElementInternals | null = null
@@ -505,7 +537,8 @@ export class ComboboxContainer extends HTMLElement {
     this.#attach()
     this.#create()
     this.#setup()
-    this.select(-1)
+    this.#move(this.#setupIndex)
+    this.#select(this.#setupIndex, true)
     this.#listen()
     if (this.disabled) {
       this.#disable()
@@ -986,7 +1019,7 @@ export class ComboboxContainer extends HTMLElement {
     le.setAttribute("hidden", "")
   }
 
-  #select(i: number): void {
+  #select(i: number, silent = false): void {
     const ce = this.#combobox
     if (!ce) {
       return
@@ -1001,15 +1034,40 @@ export class ComboboxContainer extends HTMLElement {
       throw new RangeError(`Index '${i}' is out of bounds`)
     }
 
+    const se = ao[i]
+
+    if (!silent) {
+      const ce = new ComboboxContainerChangeEvent({
+        bubbles: true,
+        cancelable: true,
+        option: se,
+        optionIndex: i,
+        optionValue: se.dataset.value,
+      })
+      const co = this.dispatchEvent(ce)
+      if (!co) {
+        return
+      }
+    }
+
     for (const op of ao) {
       op.setAttribute("aria-selected", "false")
     }
 
-    const se = ao[i]
     se.setAttribute("aria-selected", "true")
 
     ce.setAttribute("aria-activedescendant", se.id)
     ce.innerHTML = se.innerHTML
+
+    if (!silent) {
+      const de = new ComboboxContainerChangedEvent({
+        bubbles: true,
+        option: se,
+        optionIndex: i,
+        optionValue: se.dataset.value,
+      })
+      this.dispatchEvent(de)
+    }
   }
 
   #move(i: number): void {
