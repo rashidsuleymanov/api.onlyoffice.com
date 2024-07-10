@@ -196,6 +196,9 @@
                 <li>
                     <a href="<%= Url.Action("interactingoutside/fillingform") %>">Filling out the form</a>
                 </li>
+                <li>
+                    <a href="<%= Url.Action("interactingoutside/gettingdata") %>">Getting data from a form</a>
+                </li>
             </ul>
         </li>
     </ul>
