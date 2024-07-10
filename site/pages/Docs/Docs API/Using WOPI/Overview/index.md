@@ -1,3 +1,7 @@
+---
+order: -9
+---
+
 Starting from version 6.4, ONLYOFFICE Docs offers support for the **Web Application Open Platform Interface Protocol (WOPI)** - a REST-based protocol that is used to integrate your application with an online office. WOPI operations allow you to open files stored on a server, edit and save them.
 
 This documentation describes:

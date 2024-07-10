@@ -1,3 +1,7 @@
+---
+order: -5
+---
+
 The parameters, which can be changed for ONLYOFFICE Docs, can be subdivided into the following main sections:
 
 [**config**](/editors/config/) - allows to change the platform type used, document display size (width and height) and type of the document opened;

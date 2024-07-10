@@ -1,3 +1,7 @@
+---
+order: -7
+---
+
 In order to create an online office session within your application, a host must create an HTML page that will host an iframe element within it pointing to a particular [WOPI action URL](/editors/wopi/discovery#actions).
 
 The host page must contain the following elements:

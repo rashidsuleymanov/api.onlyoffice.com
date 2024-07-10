@@ -1,3 +1,7 @@
+---
+order: -3
+---
+
 After initializing **document editor** you will get the object that can be used to call the methods.
 
 ```
