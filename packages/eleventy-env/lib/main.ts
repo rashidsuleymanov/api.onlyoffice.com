@@ -23,3 +23,14 @@ export function isServe(): boolean {
   }
   return m === "serve"
 }
+
+/**
+ * {@link https://www.11ty.dev/docs/environment-vars/ Eleventy Reference}
+ */
+export function rootDir(): string {
+  const r = env.ELEVENTY_ROOT
+  if (r === undefined) {
+    throw new Error("ELEVENTY_ROOT is not defined")
+  }
+  return r
+}
