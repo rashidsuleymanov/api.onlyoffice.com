@@ -550,9 +550,6 @@ export class ComboboxContainer extends HTMLElement {
   }
 
   select(i: number): void {
-    if (i < 0) {
-      i = this.#setupIndex
-    }
     this.#move(i)
     this.#select(i)
   }
