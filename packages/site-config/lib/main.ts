@@ -173,17 +173,14 @@ export class ServerConfig implements ServerConfigurable {
 
 export interface InputPlayground {
   documentEditor?: InputDocumentEditor
-  tabs?: Record<string, string>
 }
 
 export interface PlaygroundConfigurable {
   documentEditor: DocumentEditorConfigurable
-  tabs: TabConfigurable[]
 }
 
 export class PlaygroundConfig implements PlaygroundConfigurable {
   documentEditor = new DocumentEditorConfig()
-  tabs: TabConfig[] = []
 
   static fromJson(data: string): PlaygroundConfigurable {
     const o = JSON.parse(data)
@@ -205,15 +202,6 @@ export class PlaygroundConfig implements PlaygroundConfigurable {
       pl.documentEditor = DocumentEditorConfig.fromInput(ip.documentEditor)
     }
 
-    if (ip.tabs) {
-      for (const [id, lb] of Object.entries(ip.tabs)) {
-        const t = new TabConfig()
-        t.id = id
-        t.label = lb
-        pl.tabs.push(t)
-      }
-    }
-
     return pl
   }
 
@@ -227,14 +215,6 @@ export class PlaygroundConfig implements PlaygroundConfigurable {
       a.documentEditor,
       b.documentEditor
     )
-
-    if (a.tabs.length !== 0 && b.tabs.length !== 0) {
-      throw new Error("Merging of tabs is not supported")
-    } else if (a.tabs.length !== 0) {
-      pl.tabs = a.tabs
-    } else if (b.tabs.length !== 0) {
-      pl.tabs = b.tabs
-    }
 
     return pl
   }
@@ -312,7 +292,6 @@ export class DocumentEditorConfig implements DocumentEditorConfigurable {
 
 export interface InputProperty {
   path?: string
-  tab?: string
   href?: string
   type?: "boolean" | "function" | "number" | "string"
   format?: "percent"
@@ -322,7 +301,6 @@ export interface InputProperty {
 
 export interface PropertyConfigurable {
   path: string
-  tab: string
   href: string
   type: Type
   // format?: Format
@@ -331,7 +309,6 @@ export interface PropertyConfigurable {
 
 export class PropertyConfig implements PropertyConfigurable {
   path = ""
-  tab = ""
   href = ""
   type: Type = new UndefinedType()
   // format?: Format = undefined
@@ -355,10 +332,6 @@ export class PropertyConfig implements PropertyConfigurable {
 
     if (ip.path) {
       p.path = ip.path
-    }
-
-    if (ip.tab) {
-      p.tab = ip.tab
     }
 
     if (ip.href) {
@@ -493,14 +466,4 @@ export class UndefinedType implements UndefinedRepresentable {
 
 export interface TypeNode {
   type: string
-}
-
-export interface TabConfigurable {
-  id: string
-  label: string
-}
-
-export class TabConfig implements TabConfigurable {
-  id: string = ""
-  label: string = ""
 }

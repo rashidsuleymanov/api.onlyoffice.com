@@ -12,30 +12,8 @@ import {
   PropertyConfig,
   ServerConfig,
   StringType,
-  TabConfig,
   UndefinedType
 } from "./main.ts"
-
-test("TabConfig(): initializes a tab", () => {
-  const t = new TabConfig()
-  is(t instanceof TabConfig, true)
-})
-
-test("TabConfig(): initializes a tab with the correct order of keys", () => {
-  const t = new TabConfig()
-  const a = Object.keys(t)
-  eq(a, ["id", "label"])
-})
-
-test("TabConfig(): initializes a tab with an empty id", () => {
-  const t = new TabConfig()
-  is(t.id, "")
-})
-
-test("TabConfig(): initializes a tab with an empty label", () => {
-  const t = new TabConfig()
-  is(t.label, "")
-})
 
 test("UndefinedType(): initializes a undefined type", () => {
   const t = new UndefinedType()
@@ -181,11 +159,6 @@ test("PropertyConfig(): initializes a property with an empty path", () => {
   is(p.path, "")
 })
 
-test("PropertyConfig(): initializes a property with an empty tab", () => {
-  const p = new PropertyConfig()
-  is(p.tab, "")
-})
-
 test("PropertyConfig(): initializes a property with an empty href", () => {
   const p = new PropertyConfig()
   is(p.href, "")
@@ -216,12 +189,6 @@ test("PropertyConfig.fromJson(): initializes a property from json with the path"
   const j = '{"path":"p"}'
   const p = PropertyConfig.fromJson(j)
   is(p.path, "p")
-})
-
-test("PropertyConfig.fromJson(): initializes a property from json with the tab", () => {
-  const j = '{"tab":"t"}'
-  const p = PropertyConfig.fromJson(j)
-  is(p.tab, "t")
 })
 
 test("PropertyConfig.fromJson(): initializes a property from json with the href", () => {
@@ -431,11 +398,6 @@ test("PlaygroundConfig(): initializes a playground with an empty document editor
   eq(p.documentEditor, new DocumentEditorConfig())
 })
 
-test("PlaygroundConfig(): initializes a playground with an empty tabs", () => {
-  const p = new PlaygroundConfig()
-  eq(p.tabs, [])
-})
-
 test("PlaygroundConfig.fromJson(): initializes a playground from json", () => {
   const j = "{}"
   const p = PlaygroundConfig.fromJson(j)
@@ -448,15 +410,6 @@ test("PlaygroundConfig.fromJson(): initializes a playground from json with the d
   const d = new DocumentEditorConfig()
   d.documentServerUrl = "d"
   eq(p.documentEditor, d)
-})
-
-test("PlaygroundConfig.fromJson(): initializes a playground from json with the tabs", () => {
-  const j = '{"tabs":{"t":"l"}}'
-  const p = PlaygroundConfig.fromJson(j)
-  const t = new TabConfig()
-  t.id = "t"
-  t.label = "l"
-  eq(p.tabs, [t])
 })
 
 test("PlaygroundConfig.fromYaml(): initializes a playground from yaml", () => {
@@ -503,54 +456,6 @@ test("PlaygroundConfig.merge(): merges the document editor of the second playgro
   b.documentEditor = e
   const c = PlaygroundConfig.merge(a, b)
   eq(c.documentEditor, e)
-})
-
-test("PlaygroundConfig.merge(): merges the tabs of two empty playgrounds", () => {
-  const a = new PlaygroundConfig()
-  const b = new PlaygroundConfig()
-  const c = PlaygroundConfig.merge(a, b)
-  eq(c.tabs, [])
-})
-
-test("PlaygroundConfig.merge(): uses the tabs of the first playground when the second one is empty", () => {
-  const a = new PlaygroundConfig()
-  const t = new TabConfig()
-  t.id = "t"
-  t.label = "l"
-  a.tabs = [t]
-  const b = new PlaygroundConfig()
-  const c = PlaygroundConfig.merge(a, b)
-  eq(c.tabs, [t])
-})
-
-test("PlaygroundConfig.merge(): uses the tabs of the second playground when the first one is empty", () => {
-  const a = new PlaygroundConfig()
-  const b = new PlaygroundConfig()
-  const t = new TabConfig()
-  t.id = "t"
-  t.label = "l"
-  b.tabs = [t]
-  const c = PlaygroundConfig.merge(a, b)
-  eq(c.tabs, [t])
-})
-
-test("PlaygroundConfig.merge(): throws an error when merging two non-empty tabs", () => {
-  const a = new PlaygroundConfig()
-  const t = new TabConfig()
-  t.id = "t"
-  t.label = "l"
-  a.tabs = [t]
-  const b = new PlaygroundConfig()
-  const u = new TabConfig()
-  u.id = "u"
-  u.label = "m"
-  b.tabs = [u]
-  try {
-    const c = PlaygroundConfig.merge(a, b)
-    un(`Expected an error, got ${c}`)
-  } catch (e) {
-    is(e instanceof Error && e.message, "Merging of tabs is not supported")
-  }
 })
 
 test("ServerConfig(): initializes a server", () => {
