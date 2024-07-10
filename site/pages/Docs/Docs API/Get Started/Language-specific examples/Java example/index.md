@@ -93,7 +93,9 @@ To run the Java example code, install the Java version appropriate for your OS a
 
    Test your Tomcat installation using the address in a web browser:
 
-   http\://localhost:8080
+   ```
+   http://localhost:8080
+   ```
 
    If everything is correct, you will see the Tomcat web page in the browser as shown below.
 
@@ -150,7 +152,7 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
 2. Download the archive with the Java example and unpack the archive:
 
    ```
-   wget https\://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip
+   wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip
    ```
 
    ```
@@ -224,7 +226,7 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
 9. Open the Tomcat administration page in browser with the admin user credentions:
 
    ```
-   http\://localhost:8080/manager/html
+   http://localhost:8080/manager/html
    ```
 
 10. Select the WAR file to upload from *target/OnlineEditorsExampleJava-1.0.war*.
@@ -232,7 +234,7 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
 11. See the result in your browser using the address:
 
     ```
-    http\://localhost:8080/OnlineEditorsExampleJava-1.0/
+    http://localhost:8080/OnlineEditorsExampleJava-1.0/
     ```
 
 ## Step 3. Check accessibility
@@ -255,7 +257,15 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
 
 1. Install **Java** following the instructions [here](https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8).
 
-2. Download the archive with the Java example and unpack the archive: wget https\://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip unzip Java.Example.zip
+2. Download the archive with the Java example and unpack the archive:
+
+   ```
+   wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip
+   ```
+   
+   ```
+   unzip Java.Example.zip
+   ```
 
 3. Change the current directory for the project directory:
 
