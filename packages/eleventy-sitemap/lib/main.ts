@@ -1,5 +1,6 @@
 import {extname} from "node:path"
 import {type Data, type UserConfig} from "@onlyoffice/eleventy-types"
+import {randomUUID} from "node:crypto"
 
 declare module "@onlyoffice/eleventy-types" {
   interface Data {
@@ -10,6 +11,7 @@ declare module "@onlyoffice/eleventy-types" {
 export interface SitemapData {
   title?: string
   url?: string
+  path?: string
   order?: number
   groups?(): {
     title?: string
@@ -20,26 +22,25 @@ export interface SitemapData {
 }
 
 export interface SitemapAccessible {
+  get indexes(): SitemapIndexes
   get entities(): SitemapEntity[]
-  path(e: SitemapEntity): string[]
-  page(u: string): SitemapPage | undefined
-  entity(id: string): SitemapEntity | undefined
+  trace(e: SitemapEntity): string[]
+  find(t: string, b: keyof SitemapIndexes): SitemapEntity | undefined
 }
-
-export type SitemapIndexes = Record<string, number>
 
 export type SitemapEntity = SitemapEntityMap[keyof SitemapEntityMap]
 
-export type SitemapEntityMap = {
+export interface SitemapEntityMap {
   page: SitemapPage
   group: SitemapGroup
 }
 
 export class SitemapPage {
-  type = "page" as const
   id = ""
+  type = "page" as const
   title = ""
   url = ""
+  path = ""
   order = 0
   parent = ""
   children: string[] = []
@@ -47,8 +48,8 @@ export class SitemapPage {
 }
 
 export class SitemapGroup {
-  type = "group" as const
   id = ""
+  type = "group" as const
   title = ""
   order = -1
   parent = ""
@@ -58,39 +59,33 @@ export class SitemapGroup {
 export class Sitemap implements SitemapAccessible {
   static shared: SitemapAccessible
 
-  indexes: SitemapIndexes
-  entities: SitemapEntity[]
+  indexes: SitemapIndexes = new SitemapIndexes()
+  entities: SitemapEntity[] = []
 
-  constructor(indexes: SitemapIndexes, entities: SitemapEntity[]) {
-    this.indexes = indexes
-    this.entities = entities
-  }
-
-  path(e: SitemapEntity): string[] {
+  trace(e: SitemapEntity): string[] {
     const p: string[] = []
     let t: SitemapEntity | undefined = e
     while (t) {
       p.push(t.id)
-      t = this.entity(t.parent)
+      t = this.find(t.parent, "id")
     }
     return p.reverse()
   }
 
-  page(u: string): SitemapPage | undefined {
-    const e = this.entity(`page;${u}`)
-    if (!e || e.type !== "page") {
-      return
-    }
-    return e
-  }
-
-  entity(id: string): SitemapEntity | undefined {
-    const i = this.indexes[id]
+  find(t: string, b: keyof SitemapIndexes): SitemapEntity | undefined {
+    const i = this.indexes[b][t]
     if (i === undefined) {
-      return undefined
+      return
     }
     return this.entities[i]
   }
+}
+
+export class SitemapIndexes {
+  id: Record<string, number> = {}
+  url: Record<string, number> = {}
+  path: Record<string, number> = {}
+  group: Record<string, number> = {}
 }
 
 export function eleventySitemap(uc: UserConfig): void {
@@ -98,7 +93,7 @@ export function eleventySitemap(uc: UserConfig): void {
     const ts = tc.getAll()
 
     const c = new Map<string, string>()
-    const s = new Sitemap({}, [])
+    const s = new Sitemap()
 
     for (const te of ts) {
       const n = extname(te.outputPath)
@@ -121,26 +116,43 @@ export function eleventySitemap(uc: UserConfig): void {
       if (!d.url) {
         throw new Error("No URL")
       }
+      if (!d.path) {
+        throw new Error("No path")
+      }
       if (!d.data) {
         throw new Error("No data")
       }
 
       const p = new SitemapPage()
-      p.id = `page;${d.url}`
+      p.id = randomUUID()
       p.title = d.title
       p.url = d.url
+      p.path = d.path
       if (d.order) {
         p.order = d.order
       }
       p.data = d.data
 
-      const i = s.indexes[p.id]
+      let i = s.indexes.id[p.id]
+      if (i !== undefined) {
+        throw new Error(`Duplicate ID '${p.id}'`)
+      }
+
+      i = s.indexes.url[p.url]
       if (i !== undefined) {
         throw new Error(`Duplicate URL '${p.url}'`)
       }
 
       s.entities.push(p)
-      s.indexes[p.id] = s.entities.length - 1
+      s.indexes.id[p.id] = s.entities.length - 1
+      s.indexes.url[p.url] = s.entities.length - 1
+
+      i = s.indexes.path[p.path]
+      if (i !== undefined) {
+        s.indexes.path[p.path] = -1
+      } else {
+        s.indexes.path[p.path] = s.entities.length - 1
+      }
 
       if (d.groups) {
         const a = d.groups()
@@ -150,17 +162,25 @@ export function eleventySitemap(uc: UserConfig): void {
           }
 
           const g = new SitemapGroup()
-          g.id = `group;${p.url};${d.title}`
+          g.id = randomUUID()
           g.title = d.title
           g.parent = p.id
 
-          const i = s.indexes[g.id]
+          const k = `${g.parent};${g.title}`
+
+          let i = s.indexes.id[g.id]
+          if (i !== undefined) {
+            throw new Error(`Duplicate ID '${g.id}'`)
+          }
+
+          i = s.indexes.group[k]
           if (i !== undefined) {
             throw new Error(`Duplicate group '${g.title}'`)
           }
 
           s.entities.push(g)
-          s.indexes[g.id] = s.entities.length - 1
+          s.indexes.id[g.id] = s.entities.length - 1
+          s.indexes.group[k] = s.entities.length - 1
         }
       }
 
@@ -199,7 +219,7 @@ export function eleventySitemap(uc: UserConfig): void {
       let n = ""
 
       while (true) {
-        i = s.indexes[`page;${x}`]
+        i = s.indexes.url[x]
         if (i !== undefined) {
           break
         }
@@ -211,17 +231,30 @@ export function eleventySitemap(uc: UserConfig): void {
 
         let g: SitemapGroup
 
-        const id = `group;${x};${n}`
-        const j = s.indexes[id]
+        const j = s.indexes.url[x]
         if (j !== undefined) {
-          const e = s.entities[j]
-          if (e.type !== "group") {
-            throw new Error(`Not a group '${id}'`)
+          const p = s.entities[j]
+          if (!p || p.type !== "page") {
+            throw new Error(`Not a page '${p.id}'`)
           }
-          g = e
+
+          const k = `${p.id};${n}`
+
+          const i = s.indexes.group[k]
+          if (i === undefined) {
+            g = new SitemapGroup()
+            g.id = randomUUID()
+            g.title = n
+          } else {
+            const e = s.entities[i]
+            if (e.type !== "group") {
+              throw new Error(`Not a group '${e.id}'`)
+            }
+            g = e
+          }
         } else {
           g = new SitemapGroup()
-          g.id = id
+          g.id = randomUUID()
           g.title = n
         }
 
@@ -258,9 +291,11 @@ export function eleventySitemap(uc: UserConfig): void {
         }
 
         for (const g of h) {
-          if (s.indexes[g.id] === undefined) {
+          const k = `${g.parent};${g.title}`
+          if (s.indexes.group[k] === undefined) {
             s.entities.push(g)
-            s.indexes[g.id] = s.entities.length - 1
+            s.indexes.id[g.id] = s.entities.length - 1
+            s.indexes.group[k] = s.entities.length - 1
           }
         }
 
@@ -281,39 +316,32 @@ export function eleventySitemap(uc: UserConfig): void {
         continue
       }
 
-      const j = s.indexes[e.parent]
+      const j = s.indexes.id[e.parent]
       if (j === undefined) {
         throw new Error(`No parent for '${e.url}'`)
       }
 
       const p = s.entities[j]
       if (!p) {
-        throw new Error(`No entity for '${e.url}'`)
+        throw new Error(`No entity for '${e.parent}'`)
       }
 
-      let id = ""
-      if (p.type === "page") {
-        id = `group;${p.url};${n}`
-      } else if (p.type === "group") {
-        id = `${p.id};${n}`
-      } else {
-        // @ts-expect-error
-        throw new Error(`Unknown type '${p.type}'`)
-      }
+      const k = `${p.id};${n}`
+      let i = s.indexes.group[k]
 
-      let i = s.indexes[id]
       if (i === undefined) {
         const g = new SitemapGroup()
-        g.id = id
+        g.id = randomUUID()
         g.title = n
         s.entities.push(g)
         i = s.entities.length - 1
-        s.indexes[g.id] = i
+        s.indexes.id[g.id] = i
+        s.indexes.group[k] = i
       }
 
       const m = s.entities[i]
       if (!m) {
-        throw new Error(`No entity for '${id}'`)
+        throw new Error(`No entity for '${i}'`)
       }
 
       for (const [i, id] of p.children.entries()) {
@@ -333,7 +361,7 @@ export function eleventySitemap(uc: UserConfig): void {
 
     for (const e of s.entities) {
       e.children.sort((a, b) => {
-        const i = s.indexes[a]
+        const i = s.indexes.id[a]
         if (i === undefined) {
           throw new Error(`No index for '${a}'`)
         }
@@ -341,7 +369,7 @@ export function eleventySitemap(uc: UserConfig): void {
         if (!x) {
           throw new Error(`No entity for '${a}'`)
         }
-        const j = s.indexes[b]
+        const j = s.indexes.id[b]
         if (j === undefined) {
           throw new Error(`No index for '${b}'`)
         }

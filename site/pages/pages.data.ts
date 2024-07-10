@@ -55,6 +55,7 @@ export function data(): Data {
       return {
         title: d.title,
         url: d.page?.url,
+        path: d.page?.inputPath,
         order: d.order || 0,
         data: d,
       }

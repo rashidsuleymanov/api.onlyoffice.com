@@ -10,8 +10,8 @@ export interface TableOfContentsProperties {
 export function TableOfContents(p: TableOfContentsProperties): JSX.Element {
   const s = Sitemap.shared
   const {url, depth = 1} = p
-  const e: SitemapEntity | undefined = s.page(url)
-  if (!e || e.children.length === 0) {
+  const e = s.find(url, "url")
+  if (!e || e.type !== "page" || e.children.length === 0) {
     return <></>
   }
   let c = -1
@@ -31,7 +31,7 @@ export function TableOfContents(p: TableOfContentsProperties): JSX.Element {
   }
 
   function Item({id}: {id: string}): JSX.Element {
-    const e = s.entity(id)
+    const e = s.find(id, "id")
     if (!e || e.children.length === 0) {
       return <></>
     }

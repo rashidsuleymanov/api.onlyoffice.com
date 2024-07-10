@@ -15,15 +15,15 @@ export interface GlobalNavigationProperties {
 export function GlobalNavigation(p: GlobalNavigationProperties): JSX.Element {
   const s = Sitemap.shared
 
-  const e = s.page("/")
-  if (!e) {
+  const e = s.find("/", "url")
+  if (!e || e.type !== "page") {
     throw new Error("Root page not found")
   }
 
   return <nav class="global-navigation" aria-label="Global Navigation">
     <ul class="global-navigation__menu">
       {e.children.map((id) => {
-        const e = s.entity(id)
+        const e = s.find(id, "id")
         if (!e) {
           throw new Error(`Entity not found: ${id}`)
         }
@@ -40,7 +40,7 @@ export function GlobalNavigation(p: GlobalNavigationProperties): JSX.Element {
           <a class={c} href={e.url}>{e.title}</a>
           <ul class="global-navigation__submenu">
             {e.children.map((id) => {
-              const e = s.entity(id)
+              const e = s.find(id, "id")
               if (!e) {
                 throw new Error(`Entity not found: ${id}`)
               }
