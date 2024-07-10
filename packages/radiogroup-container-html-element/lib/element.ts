@@ -418,9 +418,6 @@ export class RadiogroupContainer extends HTMLElement {
   }
 
   check(i: number): void {
-    if (i < 0) {
-      i = this.#setupIndex
-    }
     this.#check(i)
   }
 
