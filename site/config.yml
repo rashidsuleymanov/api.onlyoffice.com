@@ -6,40 +6,343 @@ server:
 playground:
   documentEditor:
     documentServerUrl: http://localhost:3000/
+
     config:
     - path: documentType
-      tab: base
       href: docs/docs-api/usage-api/config/#documentType
       type: string
       cases: [word, cell, slide, pdf]
       default: word
 
     - path: height
-      tab: base
       href: docs/docs-api/usage-api/config/#height
       type: string
       default: 100%
 
+    # - path: token
+
     - path: document.fileType
-      tab: document
       href: docs/docs-api/usage-api/config/document/#fileType
       type: string
       cases: [docx, xlsx, pptx, pdf]
       default: docx
 
+    # - path: document.key
+
+    - path: document.referenceData.fileKey
+      href: ""
+      type: string
+
+    - path: document.referenceData.instanceId
+      href: ""
+      type: string
+
+    - path: document.referenceData.key
+      href: ""
+      type: string
+
+    - path: document.title
+      href: ""
+      type: string
+      default: Playground Document
+
+    # - path: document.url
+
+    - path: document.info.author
+      href: ""
+      type: string
+      deprecated: true
+
+    - path: document.info.created
+      href: ""
+      type: string
+      deprecated: true
+
+    - path: document.info.favorite
+      href: ""
+      type: boolean
+
+    - path: document.info.folder
+      href: ""
+      type: string
+
+    - path: document.info.owner
+      href: ""
+      type: string
+
+    - path: document.info.sharingSettings[0].isLink
+      href: ""
+      type: boolean
+
+    - path: document.info.sharingSettings[0].permissions
+      href: ""
+      type: string
+      cases: [Full Access, Read Only, Deny Access]
+
+    - path: document.info.sharingSettings[0].user
+      href: ""
+      type: string
+
+    - path: document.info.uploaded
+      href:
+      type: string
+
+    # document.permissions.changeHistory
+    # document.permissions.chat
+    # document.permissions.comment
+    # document.permissions.commentGroups[0].edit
+    # document.permissions.commentGroups[0].remove
+    # document.permissions.commentGroups[0].view
+    # document.permissions.copy
+    # document.permissions.deleteCommentAuthorOnly
+    # document.permissions.download
+    # document.permissions.edit
+    # document.permissions.editCommentAuthorOnly
+    # document.permissions.fillForms
+    # document.permissions.modifyContentControl
+    # document.permissions.modifyFilter
+    # document.permissions.print
+    # document.permissions.protect
+    # document.permissions.rename
+    # document.permissions.review
+    # document.permissions.reviewGroups[0]
+    # document.permissions.userInfoGroups[0]
+    # editorConfig.actionLink
+    # editorConfig.callbackUrl
+    # editorConfig.coEditing.mode
+    # editorConfig.coEditing.change
+    # editorConfig.createUrl
+    # editorConfig.lang
+    # editorConfig.location
+    # editorConfig.mode
+    # editorConfig.recent[0].folder
+    # editorConfig.recent[0].title
+    # editorConfig.recent[0].url
+    # editorConfig.region
+    # editorConfig.templates[0].image
+    # editorConfig.templates[0].title
+    # editorConfig.templates[0].url
+    # editorConfig.user.firstname
+    # editorConfig.user.group
+    # editorConfig.user.id
+    # editorConfig.user.image
+    # editorConfig.user.lastname
+    # editorConfig.user.name
+    # editorConfig.customization.anonymous.request
+    # editorConfig.customization.anonymous.label
+    # editorConfig.customization.autosave
+    # editorConfig.customization.chat
+    # editorConfig.customization.commentAuthorOnly
+    # editorConfig.customization.comments
+    # editorConfig.customization.compactHeader
+    # editorConfig.customization.compactToolbar
+    # editorConfig.customization.compatibleFeatures
+    # editorConfig.customization.customer.address
+    # editorConfig.customization.customer.info
+    # editorConfig.customization.customer.logo
+    # editorConfig.customization.customer.logoDark
+    # editorConfig.customization.customer.mail
+    # editorConfig.customization.customer.name
+    # editorConfig.customization.customer.phone
+    # editorConfig.customization.customer.www
+    # editorConfig.customization.features.spellcheck.mode
+    # editorConfig.customization.feedback.url
+    # editorConfig.customization.feedback.visible
+    # editorConfig.customization.forcesave
+    # editorConfig.customization.goback.blank
+    # editorConfig.customization.goback.requestClose
+    # editorConfig.customization.goback.text
+    # editorConfig.customization.goback.url
+    # editorConfig.customization.help
+    # editorConfig.customization.hideNotes
+    # editorConfig.customization.hideRightMenu
+    # editorConfig.customization.hideRulers
+    # editorConfig.customization.integrationMode
+    # editorConfig.customization.logo.image
+    # editorConfig.customization.logo.imageDark
+    # editorConfig.customization.logo.imageEmbedded
+    # editorConfig.customization.logo.url
+    # editorConfig.customization.macros
+    # editorConfig.customization.macrosMode
+    # editorConfig.customization.mentionShare
+    # editorConfig.customization.mobileForceView
+    # editorConfig.customization.plugins
+    # editorConfig.customization.review.hideReviewDisplay
+    # editorConfig.customization.review.hoverMode
+    # editorConfig.customization.review.reviewDisplay
+    # editorConfig.customization.review.showReviewChanges
+    # editorConfig.customization.review.trackChanges
+    # editorConfig.customization.reviewDisplay
+    # editorConfig.customization.showReviewChanges
+    # editorConfig.customization.spellcheck
+    # editorConfig.customization.submitForm
+    # editorConfig.customization.toolbarHideFileName
+    # editorConfig.customization.toolbarNoTabs
+    # editorConfig.customization.trackChanges
+    # editorConfig.customization.uiTheme
+    # editorConfig.customization.unit
+    # editorConfig.customization.zoom
+    # editorConfig.embedded.embedUrl
+    # editorConfig.embedded.fullscreenUrl
+    # editorConfig.embedded.saveUrl
+    # editorConfig.embedded.shareUrl
+    # editorConfig.embedded.toolbarDocked
+    # editorConfig.plugins.autostart[0]
+    # editorConfig.plugins.pluginsData[0]
+    # editorConfig.plugins.url
+
     - path: editorConfig.customization.compactHeader
-      tab: customization
       href: docs/docs-api/usage-api/config/editor-config/customization/#compactHeader
       type: boolean
       default: false
 
     - path: events.onAppReady
-      tab: events
       href: docs/docs-api/usage-api/config/events/#onAppReady
       type: function
+      default: console.log("Document Editor is ready")
 
-  tabs:
-    base: Base
-    document: Document
-    customization: "Editor Config: Customization"
-    events: Events
+    - path: events.onCollaborativeChanges
+      href: docs/docs-api/usage-api/config/events/#onCollaborativeChanges
+      type: function
+
+    - path: events.onDocumentReady
+      href: docs/docs-api/usage-api/config/events/#onDocumentReady
+      type: function
+
+    - path: events.onDocumentStateChange
+      href: docs/docs-api/usage-api/config/events/#onDocumentStateChange
+      type: function
+
+    - path: events.onDownloadAs
+      href: docs/docs-api/usage-api/config/events/#onDownloadAs
+      type: function
+
+    - path: events.onError
+      href: docs/docs-api/usage-api/config/events/#onError
+      type: function
+
+    - path: events.onInfo
+      href: docs/docs-api/usage-api/config/events/#onInfo
+      type: function
+
+    - path: events.onMakeActionLink
+      href: docs/docs-api/usage-api/config/events/#onMakeActionLink
+      type: function
+
+    - path: events.onMetaChange
+      href: docs/docs-api/usage-api/config/events/#onMetaChange
+      type: function
+
+    - path: events.onOutdatedVersion
+      href: docs/docs-api/usage-api/config/events/#onOutdatedVersion
+      type: function
+
+    - path: events.onPluginsReady
+      href: docs/docs-api/usage-api/config/events/#onPluginsReady
+      type: function
+
+    - path: events.onReady
+      href: docs/docs-api/usage-api/config/events/#onReady
+      type: function
+
+    - path: events.onRequestClose
+      href: docs/docs-api/usage-api/config/events/#onRequestClose
+      type: function
+
+    - path: events.onRequestCompareFile
+      href: docs/docs-api/usage-api/config/events/#onRequestCompareFile
+      type: function
+
+    - path: events.onRequestCreateNew
+      href: docs/docs-api/usage-api/config/events/#onRequestCreateNew
+      type: function
+
+    - path: events.onRequestEditRights
+      href: docs/docs-api/usage-api/config/events/#onRequestEditRights
+      type: function
+
+    - path: events.onRequestHistory
+      href: docs/docs-api/usage-api/config/events/#onRequestHistory
+      type: function
+
+    - path: events.onRequestHistoryClose
+      href: docs/docs-api/usage-api/config/events/#onRequestHistoryClose
+      type: function
+
+    - path: events.onRequestHistoryData
+      href: docs/docs-api/usage-api/config/events/#onRequestHistoryData
+      type: function
+
+    - path: events.onRequestInsertImage
+      href: docs/docs-api/usage-api/config/events/#onRequestInsertImage
+      type: function
+
+    - path: events.onRequestMailMergeRecipients
+      href: docs/docs-api/usage-api/config/events/#onRequestMailMergeRecipients
+      type: function
+
+    - path: events.onRequestOpen
+      href: docs/docs-api/usage-api/config/events/#onRequestOpen
+      type: function
+
+    - path: events.onRequestReferenceData
+      href: docs/docs-api/usage-api/config/events/#onRequestReferenceData
+      type: function
+
+    - path: events.onRequestReferenceSource
+      href: docs/docs-api/usage-api/config/events/#onRequestReferenceSource
+      type: function
+
+    - path: events.onRequestRename
+      href: docs/docs-api/usage-api/config/events/#onRequestRename
+      type: function
+
+    - path: events.onRequestRestore
+      href: docs/docs-api/usage-api/config/events/#onRequestRestore
+      type: function
+
+    - path: events.onRequestSaveAs
+      href: docs/docs-api/usage-api/config/events/#onRequestSaveAs
+      type: function
+
+    - path: events.onRequestSelectDocument
+      href: docs/docs-api/usage-api/config/events/#onRequestSelectDocument
+      type: function
+
+    - path: events.onRequestSelectSpreadsheet
+      href: docs/docs-api/usage-api/config/events/#onRequestSelectSpreadsheet
+      type: function
+
+    - path: events.onRequestSendNotify
+      href: docs/docs-api/usage-api/config/events/#onRequestSendNotify
+      type: function
+
+    - path: events.onRequestSharingSettings
+      href: docs/docs-api/usage-api/config/events/#onRequestSharingSettings
+      type: function
+
+    - path: events.onRequestUsers
+      href: docs/docs-api/usage-api/config/events/#onRequestUsers
+      type: function
+
+    - path: events.onWarning
+      href: docs/docs-api/usage-api/config/events/#onWarning
+      type: function
+
+    scenarios:
+    - name: Select...
+      configs:
+      - document:
+          fileType: docx
+        documentType: word
+        height: 100%
+
+    - name: Open DOCX file for editing
+      configs:
+      - document:
+          fileType: docx
+          key: E7FAFC9C22A8
+        documentType: word
+        height: 100%
+        events:
+          onAppReady: console.log("Document Editor is ready")

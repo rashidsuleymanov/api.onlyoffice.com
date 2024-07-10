@@ -21,6 +21,7 @@
     "@onlyoffice/document-server-utils": "workspace:^",
     "@onlyoffice/server-client": "workspace:^",
     "@onlyoffice/site-config": "workspace:^",
+    "@onlyoffice/ui-icons": "workspace:^",
     "@onlyoffice/ui-kit": "workspace:^",
     "dot-prop": "^9.0.0",
     "preact": "^10.22.0",

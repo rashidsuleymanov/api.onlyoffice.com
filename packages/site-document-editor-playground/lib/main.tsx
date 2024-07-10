@@ -3,6 +3,7 @@ import {
   type PlaygroundConfigurable,
   type PropertyConfigurable
 } from "@onlyoffice/site-config"
+import {CloseIcon} from "@onlyoffice/ui-icons/poor/24.tsx"
 import {
   Button,
   CodeEditor,
@@ -12,19 +13,18 @@ import {
   CodeListingTabListWrapper,
   CodeListingTabPanel,
   Content,
-  ContentTab,
-  ContentTabContainer,
-  ContentTabList,
-  ContentTabPanel,
   FormControl,
+  FormControlAction,
   FormControlControl,
   FormControlLabel,
   Select,
   SelectCombobox,
   SelectListbox,
-  SelectOption
+  SelectOption,
+  SrOnly,
+  Template
 } from "@onlyoffice/ui-kit"
-import {type JSX, Fragment, h} from "preact"
+import {type JSX, h} from "preact"
 
 const samples = [
   {id: "html", label: "HTML"},
@@ -36,74 +36,122 @@ export interface DocumentEditorPlaygroundParameters {
   config: PlaygroundConfigurable
 }
 
-export function DocumentEditorPlayground(
-  {config}: DocumentEditorPlaygroundParameters
-): JSX.Element {
-  return <document-editor-playground class="de-playground">
-    <Content>
-      <form>
-        <Properties />
-        <div class="de-playground__control-list">
-          <Button type="submit" value="reset">Reset</Button>
-          <Button type="submit" value="play" variant="accent">Play</Button>
-        </div>
-      </form>
-    </Content>
-    <document-editor-mirror>
-      <document-editor
-        document-server-url={config.documentEditor.documentServerUrl}
-        config="{}"
-      >
-      </document-editor>
-    </document-editor-mirror>
-    <Content>
-      <Samples />
-    </Content>
-  </document-editor-playground>
+export function DocumentEditorPlayground(p: DocumentEditorPlaygroundParameters): JSX.Element {
+  const ts: JSX.Element[] = []
+  const po: JSX.Element[] = []
+  const eo: JSX.Element[] = []
 
-  function Properties(): JSX.Element {
-    const ts: JSX.Element[] = []
-    const ps: JSX.Element[] = []
-
-    for (const tb of config.tabs) {
-      const t = <ContentTab id={tb.id}>{tb.label}</ContentTab>
-      ts.push(t)
-
-      const p = <ContentTabPanel by={tb.id}>
-        {config.documentEditor.config
-          .filter((p) => p.tab === tb.id)
-          .map((p) => <Property property={p} />)}
-      </ContentTabPanel>
-      ps.push(p)
+  for (const c of p.config.documentEditor.config) {
+    const o = <SelectOption value={c.path}>{c.path}</SelectOption>
+    if (c.path.startsWith("events.")) {
+      eo.push(o)
+    } else {
+      po.push(o)
     }
 
-    return <ContentTabContainer>
-      <ContentTabList label="">{ts}</ContentTabList>
-      {ps}
-    </ContentTabContainer>
+    const t = <Template data-de-playground-property={c.path}><Property property={c} /></Template>
+    ts.push(t)
   }
 
-  function Samples(): JSX.Element {
-    const ts: JSX.Element[] = []
-    const ps: JSX.Element[] = []
+  const ct: JSX.Element[] = []
+  const cp: JSX.Element[] = []
 
-    for (const s of samples) {
-      const t = <CodeListingTab id={s.id}>{s.label}</CodeListingTab>
-      ts.push(t)
+  for (const s of samples) {
+    const t = <CodeListingTab id={s.id}>{s.label}</CodeListingTab>
+    ct.push(t)
 
-      const p = <CodeListingTabPanel by={s.id}>
-        <pre><code data-config-sample={s.id}></code></pre>
-      </CodeListingTabPanel>
-      ps.push(p)
-    }
-
-    return <CodeListing>
-      <CodeListingTabListWrapper>
-        <CodeListingTabList label="">{ts}</CodeListingTabList>
-      </CodeListingTabListWrapper>
-      {ps}
-    </CodeListing>
+    const p = <CodeListingTabPanel by={s.id}>
+      <pre><code data-de-playground-config-sample={s.id}>{"Sample of code in the process of generation..."}</code></pre>
+    </CodeListingTabPanel>
+    cp.push(p)
   }
+
+  const so: JSX.Element[] = []
+
+  for (const s of p.config.documentEditor.scenarios) {
+    const c = JSON.stringify(s.configs[0])
+    const o = <SelectOption value={c}>{s.name}</SelectOption>
+    so.push(o)
+  }
+
+  return <div class="de-playground">
+    <div class="de-playground__inner">
+      <h1 class="de-playground__heading">Document Editor Playground</h1>
+      <document-editor-playground>
+        <form class="de-playground__islands">
+          <div class="de-playground__island de-playground__scenarios">
+            <SrOnly><h2>Config Scenarios</h2></SrOnly>
+            <FormControl>
+              <FormControlLabel>Choose a scenario</FormControlLabel>
+              <FormControlControl>
+                <Select name="scenario">
+                  <SelectCombobox>Select...</SelectCombobox>
+                  <SelectListbox>{so}</SelectListbox>
+                </Select>
+              </FormControlControl>
+            </FormControl>
+          </div>
+          <div class="de-playground__island de-playground__properties">
+            <SrOnly><h2>Config Properties</h2></SrOnly>
+            <FormControl>
+              <FormControlLabel>Choose a property</FormControlLabel>
+              <FormControlControl>
+                <Select name="property">
+                  <SelectCombobox>Select...</SelectCombobox>
+                  <SelectListbox>
+                    <SelectOption value="" selected={true}>Select...</SelectOption>
+                    {po}
+                  </SelectListbox>
+                </Select>
+              </FormControlControl>
+            </FormControl>
+            <div class="de-playground__container" data-de-playground-properties-container></div>
+          </div>
+          <div class="de-playground__island de-playground__events">
+            <SrOnly><h2>Config Events</h2></SrOnly>
+            <FormControl>
+              <FormControlLabel>Choose an event</FormControlLabel>
+              <FormControlControl>
+                <Select name="event">
+                  <SelectCombobox>Select...</SelectCombobox>
+                  <SelectListbox>
+                    <SelectOption value="" selected={true}>Select...</SelectOption>
+                    {eo}
+                  </SelectListbox>
+                </Select>
+              </FormControlControl>
+            </FormControl>
+            <div class="de-playground__container" data-de-playground-events-container></div>
+          </div>
+          <div class="de-playground__actions">
+            <Button variant="accent" type="submit" name="action" value="play">Play</Button>
+          </div>
+          <div class="de-playground__island de-playground__editor">
+            <SrOnly><h2>Document Editor</h2></SrOnly>
+            <document-editor-mirror>
+              <document-editor
+                document-server-url={p.config.documentEditor.documentServerUrl}
+                config="{}"
+              >
+              </document-editor>
+            </document-editor-mirror>
+          </div>
+          <div class="de-playground__island de-playground__samples">
+            <SrOnly><h2>Config Samples</h2></SrOnly>
+            <Content>
+              <CodeListing>
+                <CodeListingTabListWrapper>
+                  <CodeListingTabList label="">{ct}</CodeListingTabList>
+                </CodeListingTabListWrapper>
+                {cp}
+              </CodeListing>
+            </Content>
+          </div>
+          {ts}
+        </form>
+      </document-editor-playground>
+    </div>
+  </div>
 }
 
 interface PropertyParameters {
@@ -134,6 +182,11 @@ function BooleanProperty({property}: PropertyParameters): JSX.Element {
     <FormControlLabel>
       <a href={property.href}>{property.path}</a>
     </FormControlLabel>
+    <FormControlAction>
+      <button type="button" name="remove" value={property.path}>
+        <CloseIcon height={16} width={16} />
+      </button>
+    </FormControlAction>
     <FormControlControl>
       <input
         name={property.path}
@@ -150,8 +203,8 @@ interface EnumPropertyParameters {
 }
 
 function EnumProperty({property, type}: EnumPropertyParameters): JSX.Element {
-  let cb = <></>
-  const lo: JSX.Element[] = []
+  let cb: JSX.Element | null = null
+  const lo: JSX.Element[] = [<SelectOption value="">Select...</SelectOption>]
 
   for (const t of type.cases) {
     if (t.type !== "literal") {
@@ -172,10 +225,20 @@ function EnumProperty({property, type}: EnumPropertyParameters): JSX.Element {
     lo.push(o)
   }
 
-  return <FormControl for="">
+  if (!cb) {
+    cb = <SelectCombobox>Select...</SelectCombobox>
+    lo[0].props.selected = true
+  }
+
+  return <FormControl>
     <FormControlLabel>
       <a href={property.href}>{property.path}</a>
     </FormControlLabel>
+    <FormControlAction>
+      <button type="button" name="remove" value={property.path}>
+        <CloseIcon height={16} width={16} />
+      </button>
+    </FormControlAction>
     <FormControlControl>
       <Select name={property.path}>
         {cb}
@@ -186,17 +249,26 @@ function EnumProperty({property, type}: EnumPropertyParameters): JSX.Element {
 }
 
 function FunctionProperty({property}: PropertyParameters): JSX.Element {
-  return <FormControl class="de-playground__function-property">
-    <FormControlLabel>
-      <a href={property.href}>{property.path}</a>
-    </FormControlLabel>
-    <FormControlControl>
-      <CodeEditor id={property.path} name={property.path}></CodeEditor>
-    </FormControlControl>
-    <output for={property.path}>
-      <pre><code data-output-for={property.path}></code></pre>
-    </output>
-  </FormControl>
+  return <div class="de-playground__function-property">
+    <FormControl>
+      <FormControlLabel>
+        <a href={property.href}>{property.path}</a>
+      </FormControlLabel>
+      <FormControlAction>
+        <button type="button" name="remove" value={property.path}>
+          <CloseIcon height={16} width={16} />
+        </button>
+      </FormControlAction>
+      <FormControlControl>
+        <CodeEditor id={property.path} name={property.path}></CodeEditor>
+      </FormControlControl>
+    </FormControl>
+    <Content>
+      <output for={property.path}>
+        <pre><code data-de-playground-output-for={property.path}>Console of {property.path}()...</code></pre>
+      </output>
+    </Content>
+  </div>
 }
 
 function NumberProperty({property}: PropertyParameters): JSX.Element {
@@ -207,6 +279,11 @@ function NumberProperty({property}: PropertyParameters): JSX.Element {
     <FormControlLabel>
       <a href={property.href}>{property.path}</a>
     </FormControlLabel>
+    <FormControlAction>
+      <button type="button" name="remove" value={property.path}>
+        <CloseIcon height={16} width={16} />
+      </button>
+    </FormControlAction>
     <FormControlControl>
       <input name={property.path} type="number" value={property.default} />
     </FormControlControl>
@@ -221,6 +298,11 @@ function StringProperty({property}: PropertyParameters): JSX.Element {
     <FormControlLabel>
       <a href={property.href}>{property.path}</a>
     </FormControlLabel>
+    <FormControlAction>
+      <button type="button" name="remove" value={property.path}>
+        <CloseIcon height={16} width={16} />
+      </button>
+    </FormControlAction>
     <FormControlControl>
       <input name={property.path} type="text" value={property.default} />
     </FormControlControl>
