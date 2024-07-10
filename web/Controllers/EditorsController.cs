@@ -113,6 +113,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "InteractingOutside/Comments",
                 "InteractingOutside/FillingForm",
                 "InteractingOutside/ReviewWork",
+                "InteractingOutside/GettingData",
                 "JavaSdk",
                 "Jira",
                 "Liferay",
