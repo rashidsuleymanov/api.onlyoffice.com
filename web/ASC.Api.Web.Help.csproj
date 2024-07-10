@@ -5115,6 +5115,7 @@
     <Content Include="Views\Editors\InteractingOutside\Comments.ascx" />
     <Content Include="Views\Editors\InteractingOutside\Default.ascx" />
     <Content Include="Views\Editors\InteractingOutside\FillingForm.ascx" />
+    <Content Include="Views\Editors\InteractingOutside\GettingData.ascx" />
     <Content Include="Views\Editors\InteractingOutside\ReviewWork.ascx" />
     <Content Include="Views\Editors\JavaSdk.aspx" />
     <Content Include="Views\Editors\Jira.aspx" />
