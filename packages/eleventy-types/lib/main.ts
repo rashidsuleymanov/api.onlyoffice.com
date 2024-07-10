@@ -57,7 +57,7 @@ export interface UserConfig {
   /**
    * {@link https://www.11ty.dev/docs/languages/custom/ Eleventy Reference}
    */
-  addExtension(extension: string, options: unknown): void
+  addExtension(extension: string, options: ExtensionOptions): void
 
   /**
    * {@link https://www.11ty.dev/docs/data-global-custom/ Eleventy Reference}
@@ -88,6 +88,15 @@ export interface UserConfig {
    * {@link https://www.11ty.dev/docs/events/ Eleventy Reference}
    */
   on(type: string, cb: unknown): void
+}
+
+/**
+ * {@link https://www.11ty.dev/docs/languages/custom/ Eleventy Reference}
+ */
+export interface ExtensionOptions {
+  key?: string
+  outputFileExtension?: string
+  compile(content: string, file: string): () => unknown | Promise<unknown>
 }
 
 /**
