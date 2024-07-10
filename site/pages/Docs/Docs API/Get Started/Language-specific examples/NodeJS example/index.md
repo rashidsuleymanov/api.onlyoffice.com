@@ -2,7 +2,7 @@
 
 This example will help you integrate ONLYOFFICE Docs into your web application on Node.js.
 
-It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+> It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
 
 ## Important security info
 
@@ -25,11 +25,11 @@ See the detailed guide to learn how to [install ONLYOFFICE Docs for Windows](htt
 
 ## Step 2. Download the Node.js code for the editors integration
 
-Download the [Node.js example](/editors/demopreview) from our site.
+Download the [Node.js example](../index.md) from our site.
 
 To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the *config/default.json* file:
 
-```
+``` json
 "storageFolder": "./files"
 "storagePath": "/files"
 "siteUrl": "https://documentserver/"
@@ -37,7 +37,7 @@ To connect the editors to your website, specify the path to the editors installa
 
 where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed, the **storageFolder** and **storagePath** are the paths where files will be created and stored. You can set an absolute path. For example, *D:\\\folder*. Please note that on Windows OS the double backslash must be used as a separator.
 
-If you want to experiment with the editor configuration, modify the [parameters](/editors/advanced) in the *\views\editor.ejs* file.
+If you want to experiment with the editor configuration, modify the [parameters](../../../Usage%20API/Advanced%20parameters/index.md) in the *\views\editor.ejs* file.
 
 ## Step 3. Install Node.js environment
 
@@ -49,27 +49,35 @@ We will run the code in Node.js runtime environment and will interact with it us
 
 1. Launch the **Command Prompt** and switch to the folder with the Node.js project code, for example:
 
+   ```
    cd /d "C:\Node.js Example"
+   ```
 
 2. Node.js comes with a package manager, **node package manager (npm)**, which is automatically installed along with Node.js. To run the Node.js code, install the project modules using the following *npm* command:
 
+   ```
    npm install
+   ```
 
    A new *node\_modules* folder will be created in the project folder.
 
 3. Run the project using the **Command Prompt**:
 
+   ```
    node bin/www
+   ```
 
 4. See the result in your browser using the address:
 
-   http\://localhost:3000
+   ```
+   http://localhost:3000
+   ```
 
 ## Step 5. Check accessibility
 
 In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](/editors/demopreview#DemoPreview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](../index.md#DemoPreview) on our site.
 
 ## For Linux
 
@@ -85,31 +93,45 @@ See the detailed guide to learn how to [install ONLYOFFICE Docs for Linux](https
 
 1. Install **Node.js**:
 
-   curl -sL https\://deb.nodesource.com/setup\_14.x | sudo -E bash -
+   ```
+   curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+   ```
 
+   ```
    sudo apt-get install -y nodejs
+   ```
 
 2. Download the archive with the Node.js example and unpack the archive:
 
-   wget https\://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Node.js.Example.zip
+   ```
+   wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Node.js.Example.zip
+   ```
 
+   ```
    unzip Node.js.Example.zip
+   ```
 
 3. Change the current directory for the project directory:
 
+   ```
    cd Node.js\ Example/
+   ```
 
 4. Install the dependencies:
 
+   ```
    npm install
+   ```
 
 5. Edit the *config/default.json* configuration file. Specify the name of your local server with the ONLYOFFICE Docs installed.
 
+   ```
    nano config/default.json
+   ```
 
    Edit the following lines:
 
-   ```
+   ``` json
    "storageFolder": "./files"
    "storagePath": "/files"
    "siteUrl": "https://documentserver/"
@@ -123,14 +145,18 @@ See the detailed guide to learn how to [install ONLYOFFICE Docs for Linux](https
 
 6. Run the project with Node.js:
 
+   ```
    node bin/www
+   ```
 
 7. See the result in your browser using the address:
 
-   http\://localhost:3000
+   ```
+   http://localhost:3000
+   ```
 
 ## Step 3. Check accessibility
 
 In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](/editors/demopreview#DemoPreview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](../index.md#DemoPreview) on our site.
