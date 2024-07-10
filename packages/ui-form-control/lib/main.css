@@ -1,14 +1,36 @@
 .form-control {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  gap: 9px;
 }
 
 .form-control__label {
   font-size: 13px;
   font-weight: 400;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.form-control__action {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.form-control__action button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  font-size: inherit;
+  padding: 0;
+}
+
+.form-control__action svg {
+  display: block;
 }
 
 .form-control__control {
-  margin-top: 9px;
+  grid-column: span 2;
+  grid-row: 2;
 }

@@ -39,6 +39,10 @@ export function FormControlLabel(p: ChildrenIncludable): JSX.Element {
   return <label class="form-control__label" for={ctx.for}>{p.children}</label>
 }
 
+export function FormControlAction(p: ChildrenIncludable): JSX.Element {
+  return <div class="form-control__action">{p.children}</div>
+}
+
 export function FormControlControl(p: ChildrenIncludable): JSX.Element {
   return <div class="form-control__control">{p.children}</div>
 }
