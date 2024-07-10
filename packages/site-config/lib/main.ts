@@ -1,6 +1,7 @@
 import {existsSync, readFileSync} from "node:fs"
 import {join} from "node:path"
 import {cwd} from "node:process"
+import {type DocEditorConfigEvents, type DocEditorConfigurableOptions} from "@onlyoffice/document-server-types"
 import yaml from "yaml"
 
 export interface InputConfig {
@@ -223,16 +224,19 @@ export class PlaygroundConfig implements PlaygroundConfigurable {
 export interface InputDocumentEditor {
   documentServerUrl?: string
   config?: InputProperty[]
+  scenarios?: InputScenario[]
 }
 
 export interface DocumentEditorConfigurable {
   documentServerUrl: string
   config: PropertyConfigurable[]
+  scenarios: ScenarioConfigurable[]
 }
 
 export class DocumentEditorConfig implements DocumentEditorConfigurable {
   documentServerUrl = ""
   config: PropertyConfig[] = []
+  scenarios: ScenarioConfigurable[] = []
 
   static fromJson(data: string): DocumentEditorConfigurable {
     const o = JSON.parse(data)
@@ -261,6 +265,10 @@ export class DocumentEditorConfig implements DocumentEditorConfigurable {
       }
     }
 
+    if (ide.scenarios) {
+      de.scenarios = ide.scenarios
+    }
+
     return de
   }
 
@@ -284,6 +292,14 @@ export class DocumentEditorConfig implements DocumentEditorConfigurable {
       de.config = a.config
     } else if (b.config.length !== 0) {
       de.config = b.config
+    }
+
+    if (a.scenarios.length !== 0 && b.scenarios.length !== 0) {
+      throw new Error("Merging of scenarios is not supported")
+    } else if (a.scenarios.length !== 0) {
+      de.scenarios = a.scenarios
+    } else if (b.scenarios.length !== 0) {
+      de.scenarios = b.scenarios
     }
 
     return de
@@ -467,3 +483,14 @@ export class UndefinedType implements UndefinedRepresentable {
 export interface TypeNode {
   type: string
 }
+
+export interface InputScenario {
+  name?: string
+  configs: InputScenarioConfig[]
+}
+
+interface InputScenarioConfig extends DocEditorConfigurableOptions {
+  events?: Record<keyof DocEditorConfigEvents, string>
+}
+
+type ScenarioConfigurable = InputScenario

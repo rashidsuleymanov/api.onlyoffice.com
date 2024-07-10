@@ -9,6 +9,7 @@
     "test": "pnpm test:types && pnpm test:unit"
   },
   "dependencies": {
+    "@onlyoffice/document-server-types": "workspace:^",
     "typescript": "^5.4.5",
     "yaml": "^2.4.1"
   },
