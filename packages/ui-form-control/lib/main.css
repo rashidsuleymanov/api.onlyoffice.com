@@ -34,3 +34,9 @@
   grid-column: span 2;
   grid-row: 2;
 }
+
+/* Integration with @onlyoffice/ui-select */
+
+.form-control__control .select {
+  width: 100%;
+}
