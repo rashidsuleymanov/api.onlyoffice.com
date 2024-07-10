@@ -27,7 +27,7 @@ Download the [.Net (C#) or .Net (C# MVC) example](../index.md) from our site.
 
 To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the *settings.config* file (or *web.appsettings.config* file for MVC version):
 
-``` csharp
+``` xml
 <add key="storage-path" value=""/>
 <add key="files.docservice.url.site" value="https://documentserver/" />
 ```
