@@ -21,4 +21,4 @@ End Sub
 
 Result
 
-![Unmerge-before](/content/img/plugins/unmerge_cells_before.png) ![Unmerge-after](/content/img/plugins/unmerge_cells_after.png)
+![Unmerge-before](/plugins/unmerge_cells_before.png) ![Unmerge-after](/plugins/unmerge_cells_after.png)

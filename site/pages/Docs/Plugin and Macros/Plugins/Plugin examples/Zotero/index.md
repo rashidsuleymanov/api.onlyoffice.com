@@ -8,7 +8,7 @@ Connects a Zotero account for adding references to the document in full accordan
 
 **Analogues:** [Mendeley](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/mendeley), [EasyBib](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/easybib).
 
-![Zotero](/content/img/plugins/gifs/zotero.gif)
+![Zotero](/plugins/gifs/zotero.gif)
 
 Installation
 

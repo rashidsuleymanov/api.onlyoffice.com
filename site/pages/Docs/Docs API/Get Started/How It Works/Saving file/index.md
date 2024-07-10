@@ -1,6 +1,6 @@
 The reference figure and the steps below explain the process of saving a document in ONLYOFFICE Docs.
 
-![Opening File](/content/img/editor/saving.jpg)
+![Opening File](/editor/saving.jpg)
 
 1. The user edits the document in the **document editor**.
 2. The **document editor** sends the changes to the **document editing service**.

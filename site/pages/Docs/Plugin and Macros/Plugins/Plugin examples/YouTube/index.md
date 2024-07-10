@@ -6,7 +6,7 @@ Connects [youtube iframe\_api](https://developers.google.com/youtube/iframe_api_
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![Youtube](/content/img/plugins/gifs/youtube.gif)
+![Youtube](/plugins/gifs/youtube.gif)
 
 ## Installation
 

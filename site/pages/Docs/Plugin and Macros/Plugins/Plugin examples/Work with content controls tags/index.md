@@ -6,7 +6,7 @@ Gets the list of content controls tags.
 
 **Supported editors:** documents.
 
-![WorkWithContentControlsTags](/content/img/plugins/gifs/work-with-content-controls-tags.gif)
+![WorkWithContentControlsTags](/plugins/gifs/work-with-content-controls-tags.gif)
 
 Installation
 

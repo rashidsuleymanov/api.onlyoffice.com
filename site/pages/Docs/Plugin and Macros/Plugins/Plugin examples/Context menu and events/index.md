@@ -6,7 +6,7 @@ Tracks the events of calling the context menu and clicking on its items. It also
 
 **Supported editors:** documents.
 
-![Context menu and events](/content/img/plugins/gifs/context-menu-and-events.gif)
+![Context menu and events](/plugins/gifs/context-menu-and-events.gif)
 
 Installation
 

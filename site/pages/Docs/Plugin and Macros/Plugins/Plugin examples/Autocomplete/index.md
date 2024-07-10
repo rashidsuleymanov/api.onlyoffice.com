@@ -6,7 +6,7 @@ Helps the user to input text quickly.
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![Autocomplete](/content/img/plugins/gifs/autocomplete.gif)
+![Autocomplete](/plugins/gifs/autocomplete.gif)
 
 Installation
 

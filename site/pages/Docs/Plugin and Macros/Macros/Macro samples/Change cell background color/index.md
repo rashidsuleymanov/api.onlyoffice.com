@@ -21,4 +21,4 @@ End Sub
 
 Result
 
-![Background color](/content/img/plugins/background_color.png)
+![Background color](/plugins/background_color.png)

@@ -6,15 +6,15 @@ The following plugin types can be distinguished:
 
      You can run multiple visual plugins at the same time. For each plugin, a separate button will appear on the left toolbar.
 
-     ![Visual plugins](/content/img/plugins/visual-plugins.png)
+     ![Visual plugins](/plugins/visual-plugins.png)
 
      Starting from version 8.1, plugins can change the toolbar: create their own tabs and fill them, add buttons to the standard tabs. To do this, use the [AddToolbarMenuItem](/plugin/executemethod/common/addtoolbarmenuitem) method.
 
-     ![Toolbar plugins](/content/img/plugins/toolbar-plugins.png)
+     ![Toolbar plugins](/plugins/toolbar-plugins.png)
 
    * *Non-visual (background) plugins* (*"isVisual": false*) provide a button (or buttons) to apply some transformations or manipulations to the document, like [Hello world](/plugin/example/helloworld), [Speech](/plugin/example/speech). To access them, click the **Background Plugins** button on the top toolbar.
 
-     ![Background plugins](/content/img/plugins/background-plugins.png)
+     ![Background plugins](/plugins/background-plugins.png)
 
    * *An input helper* (*"events": \["onInputHelperClear", "onInputHelperInput"]*) plugin is a combo of both visual and non-visual plugins, like [Autocomplete](/plugin/example/autocomplete). It has its own window that appears and disappears when you type text. Its location is tied to the cursor.
 

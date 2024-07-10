@@ -6,7 +6,7 @@ Inserts custom fields into the document.
 
 **Supported editors:** documents.
 
-![AddCustomFields](/content/img/plugins/gifs/add-custom-fields.gif)
+![AddCustomFields](/plugins/gifs/add-custom-fields.gif)
 
 Installation
 

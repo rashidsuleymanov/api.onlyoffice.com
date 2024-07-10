@@ -17,15 +17,15 @@ Starting from version 7.2, the **live viewer** is added to the text document, sp
    }
    ```
 
-   ![Setting](/content/img/editor/show-changes-from-other-users.png)
+   ![Setting](/editor/show-changes-from-other-users.png)
 
    In the live viewer, the cursors of the other users are displayed by configuring the [document.permissions.userInfoGroups](/editors/config/document/permissions#userInfoGroups) parameter.
 
-   ![Live viewer](/content/img/editor/live-viewer.png)
+   ![Live viewer](/editor/live-viewer.png)
 
    The changes are displayed in the same way as in the editing mode.
 
-   ![Editor](/content/img/editor/editor.png)
+   ![Editor](/editor/editor.png)
 
 2. If the *mode* field is *fast* and the *change* field is *false*, then the live viewer is opened by default, and you cannot switch the mode to the common viewer:
 
@@ -70,7 +70,7 @@ Starting from version 7.2, the **live viewer** is added to the text document, sp
    }
    ```
 
-   ![Viewer](/content/img/editor/viewer.png)
+   ![Viewer](/editor/viewer.png)
 
 In the following cases, only the common viewer is used:
 

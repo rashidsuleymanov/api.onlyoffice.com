@@ -2,7 +2,7 @@ The most common problems with the editors integration and the ways to solve them
 
 ## Download failed
 
-![Download failed](/content/img/editor/e-download.png)
+![Download failed](/editor/e-download.png)
 
 The "Download failed" message is displayed at the editors loading process.
 
@@ -20,7 +20,7 @@ Check if the [editorConfig.callbackUrl](/editors/config/editor#callbackUrl) link
 
 ## Could not be saved
 
-![Could not be saved](/content/img/editor/e-error0.png)
+![Could not be saved](/editor/e-error0.png)
 
 The editor is loaded with the "The document could not be saved" message.
 
@@ -30,7 +30,7 @@ Check if the [Callback handler](/editors/callback#implement) is working correctl
 
 ## The file version has been changed
 
-![The file version has been changed](/content/img/editor/e-key.png)
+![The file version has been changed](/editor/e-key.png)
 
 The editor is loaded with the "The file version has been changed. The page will be reloaded" message.
 
@@ -40,7 +40,7 @@ Do not forget that every time the document is edited and saved, the [document.ke
 
 ## The file version cannot be opened
 
-![The file version cannot be opened](/content/img/editor/changes-url.png)
+![The file version cannot be opened](/editor/changes-url.png)
 
 The **document editing service** cannot open the file version.
 
@@ -48,7 +48,7 @@ Check if the *changesUrl* link from the [setHistoryData](/editors/methods#setHis
 
 ## No collaborative editing
 
-![No collaborative editing](/content/img/editor/e-coedit.png)
+![No collaborative editing](/editor/e-coedit.png)
 
 No co-editing is available when the document is opened for editing by different users.
 
@@ -58,7 +58,7 @@ Check if the [document.key](/editors/config/document#key) values coincide to be 
 
 ## Invalid token
 
-![Invalid token](/content/img/editor/e-token.png)
+![Invalid token](/editor/e-token.png)
 
 The editor is loaded with the "The document security token is not correctly formed. Please contact your Document Server administrator" message.
 

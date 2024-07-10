@@ -4,35 +4,35 @@ You can upload your own plugins to your server. For the DocSpace Saas solution, 
 
 By default, system plugins are turned off. But you can enable them by following the instructions below:
 
-1. In the lower left corner, click ![](/content/img/docspace/more-icon.png) and open the **Settings** page.
+1. In the lower left corner, click ![](/docspace/more-icon.png) and open the **Settings** page.
 
-   ![DocSpace Settings](/content/img/docspace/docspace-settings.png)
+   ![DocSpace Settings](/docspace/docspace-settings.png)
 
 2. Go to the **Integration** section.
 
 3. Open the **Plugins** tab.
 
-   ![DocSpace plugins](/content/img/docspace/docspace-plugins.png)
+   ![DocSpace plugins](/docspace/docspace-plugins.png)
 
 4. Enable a plugin with a switcher.
 
-   ![Plugin switcher](/content/img/docspace/switcher.png)
+   ![Plugin switcher](/docspace/switcher.png)
 
 After that, the plugin will function automatically unless additional settings need to be specified.
 
 A list of the system plugins can be also found in the **Developer Tools** section on the **Plugins SDK** tab. For each plugin there is a link to the plugin repository, where you can find the information about the plugin structure and code.
 
-![Plugin samples](/content/img/docspace/plugin-samples.png)
+![Plugin samples](/docspace/plugin-samples.png)
 
 ## Configuring plugin settings
 
 To set up a plugin:
 
-1. Click ![](/content/img/docspace/settings-icon.png).
+1. Click ![](/docspace/settings-icon.png).
 
 2. In the appeared dialog, fill out all the empty fields.
 
-   ![Plugin settings](/content/img/docspace/plugin-settings.png)
+   ![Plugin settings](/docspace/plugin-settings.png)
 
 Now the plugin is available to use.
 
@@ -40,9 +40,9 @@ Now the plugin is available to use.
 
 In the DocSpace on-premises solution, the system plugins will be available on the same **Plugins** page. But in this case, you also have the option to upload your own plugins. To do this:
 
-1. In the lower left corner, click ![](/content/img/docspace/more-icon.png) and open the **Settings** page.
+1. In the lower left corner, click ![](/docspace/more-icon.png) and open the **Settings** page.
 
-   ![DocSpace Settings](/content/img/docspace/docspace-settings.png)
+   ![DocSpace Settings](/docspace/docspace-settings.png)
 
 2. Go to the **Integration** section.
 
@@ -50,10 +50,10 @@ In the DocSpace on-premises solution, the system plugins will be available on th
 
 4. Click the **Upload plugin** button.
 
-   ![Plugin uploading](/content/img/docspace/upload-plugin.jpg)
+   ![Plugin uploading](/docspace/upload-plugin.jpg)
 
 5. Choose the plugin archive and click **Open**.
 
-   ![Plugin archive](/content/img/docspace/plugin-archive.png)
+   ![Plugin archive](/docspace/plugin-archive.png)
 
 After that, the plugin will function automatically unless additional settings need to be specified.

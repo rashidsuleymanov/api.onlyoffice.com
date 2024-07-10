@@ -8,7 +8,7 @@ Supported languages are listed [here](https://github.com/typograf/typograf/blob/
 
 **Supported editors:** documents.
 
-![Typograf](/content/img/plugins/gifs/typograf.gif)
+![Typograf](/plugins/gifs/typograf.gif)
 
 Installation
 

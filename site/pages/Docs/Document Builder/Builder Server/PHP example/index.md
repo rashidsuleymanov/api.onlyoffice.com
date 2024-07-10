@@ -38,17 +38,17 @@ You can use any web server capable of runnig PHP code to run the sample. We will
 
    and find the **PHP Manager** feature in the **Features View** in **IIS**.
 
-   ![](/content/img/php/manager.png)
+   ![](/php/manager.png)
 
    You need to register the installed PHP version in **IIS** using **PHP Manager**.
 
    Double-click **PHP Manager** to open it, click the **Register new PHP version** task and specify the full path to the main PHP executable file location. For example: C:\Program Files\PHP\php-cgi.exe.
 
-   ![](/content/img/php/php-version-1.jpg)
+   ![](/php/php-version-1.jpg)
 
    After clicking **OK** the new **PHP version** will be registered with IIS and will become active.
 
-   ![](/content/img/php/php-version-2.jpg)
+   ![](/php/php-version-2.jpg)
 
 2. Configure IIS to handle PHP requests:
 
@@ -56,7 +56,7 @@ You can use any web server capable of runnig PHP code to run the sample. We will
 
    Double-click the **Handler Mappings** feature:
 
-   ![](/content/img/php/handlerclick.png)
+   ![](/php/handlerclick.png)
 
    In the **Action** panel, click **Add Module Mapping**. In the **Add Module Mapping** dialog box, specify the configuration settings as follows:
 
@@ -70,7 +70,7 @@ You can use any web server capable of runnig PHP code to run the sample. We will
 
      click **OK**.
 
-   ![](/content/img/php/handler-add.png)
+   ![](/php/handler-add.png)
 
 After IIS manager configuration is complete everything is ready for running the **PHP** example.
 
@@ -80,7 +80,7 @@ After IIS manager configuration is complete everything is ready for running the 
 
    On the **Connections** panel right-click the **Sites** node in the tree, then click **Add Website**.
 
-   ![](/content/img/csharp/add.png)
+   ![](/csharp/add.png)
 
 2. In the **Add Website** dialog box specify the name of the folder with the PHP project in the **Site name** box.
 
@@ -88,10 +88,10 @@ After IIS manager configuration is complete everything is ready for running the 
 
    Specify the unique value used only for this website in the **Port** box.
 
-   ![](/content/img/docbuilder/php-add.png)
+   ![](/docbuilder/php-add.png)
 
 3. Browse your web site with the IIS manager:
 
    Right-click the site -> **Manage Website** -> **Browse**
 
-   ![](/content/img/php/browse.png)
+   ![](/php/browse.png)

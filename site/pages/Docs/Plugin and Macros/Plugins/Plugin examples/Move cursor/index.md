@@ -6,7 +6,7 @@ Moves the text cursor to the document start/end.
 
 **Supported editors:** documents.
 
-![MoveCursor](/content/img/plugins/gifs/move-cursor.gif)
+![MoveCursor](/plugins/gifs/move-cursor.gif)
 
 Installation
 

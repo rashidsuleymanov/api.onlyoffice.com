@@ -21,4 +21,4 @@ End Sub
 
 Result
 
-![Font color](/content/img/plugins/font_color.png)
+![Font color](/plugins/font_color.png)

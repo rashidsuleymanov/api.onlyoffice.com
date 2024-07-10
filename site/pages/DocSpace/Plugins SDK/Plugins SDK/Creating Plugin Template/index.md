@@ -37,7 +37,7 @@ Before starting plugin development, create a plugin template and configure its s
    * **Event listener** - the plugin will be given the access to the portal events.
    * **File** - the plugin will be able to interact with the file list, change the file type and image.
 
-![Creating template](/content/img/docspace/creating-template.png)
+![Creating template](/docspace/creating-template.png)
 
 All the specified parameters can be changed later in the *package.json* file.
 

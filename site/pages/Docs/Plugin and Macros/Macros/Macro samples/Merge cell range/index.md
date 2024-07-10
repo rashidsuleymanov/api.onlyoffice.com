@@ -21,4 +21,4 @@ End Sub
 
 Result
 
-![Merge cells](/content/img/plugins/merge_cells.png)
+![Merge cells](/plugins/merge_cells.png)

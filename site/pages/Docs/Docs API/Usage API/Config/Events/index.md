@@ -181,7 +181,7 @@ Event messages will be available in your browser's DevTools console.
 
   To set the bookmark link, you must call the [setActionLink](/editors/methods#setActionLink) method. The bookmark data is received in the *data* parameter and must be then used in the configuration as the value for the [editorConfig.actionLink](/editors/config/editor#actionLink) parameter. If the method is not declared the *Get Link* button will not be displayed.
 
-  ![onMakeActionLink](/content/img/editor/onMakeActionLink.png)
+  ![onMakeActionLink](/editor/onMakeActionLink.png)
 
   Example
 
@@ -312,7 +312,7 @@ Event messages will be available in your browser's DevTools console.
 
   **onRequestEditRights** parameter is obligatory when the [editorConfig](/editors/config/editor#mode) *mode* parameter is set to **view** and the *permission* to *edit* the document ([document permissions](/editors/config/document/permissions#edit)) is set to **true** so that the user could switch to the editing mode.
 
-  ![onRequestEditRights](/content/img/editor/onRequestEditRights.png) ![Edit PDF button](/content/img/editor/edit-pdf.png)
+  ![onRequestEditRights](/editor/onRequestEditRights.png) ![Edit PDF button](/editor/edit-pdf.png)
 
   Example
 
@@ -335,7 +335,7 @@ Event messages will be available in your browser's DevTools console.
 
   To show the document version history you must call the [refreshHistory](/editors/methods#refreshHistory) method. If the method and the [onRequestHistoryData](#onRequestHistoryData) method is not declared the *Version History* button will not be displayed.
 
-  ![onRequestHistory](/content/img/editor/onRequestHistory.png)
+  ![onRequestHistory](/editor/onRequestHistory.png)
 
   Example
 
@@ -384,7 +384,7 @@ Event messages will be available in your browser's DevTools console.
 
 * **onRequestHistoryClose** - the function called when the user is trying to go back to the document from viewing the document version history by clicking the *Close History* button. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the *Close History* button will not be displayed.
 
-  ![onRequestHistoryClose](/content/img/editor/onRequestHistoryClose.png)
+  ![onRequestHistoryClose](/editor/onRequestHistoryClose.png)
 
   Example
 
@@ -408,7 +408,7 @@ Event messages will be available in your browser's DevTools console.
 
   To show the changes corresponding to the specific document version you must call the [setHistoryData](/editors/methods#setHistoryData) method. When calling this method, the token must be added to validate the parameters. If the method and the [onRequestHistory](#onRequestHistory) method is not declared the *Version History* button will not be displayed.
 
-  ![onRequestHistoryData](/content/img/editor/onRequestHistoryData.png)
+  ![onRequestHistoryData](/editor/onRequestHistoryData.png)
 
   Example
 
@@ -449,7 +449,7 @@ Event messages will be available in your browser's DevTools console.
 
   To insert an image into the file you must call the [insertImage](/editors/methods#insertImage) method with the specified command. When calling this method, the token must be added to validate the parameters. If the method is not declared the *Image from Storage* button will not be displayed.
 
-  ![onRequestInsertImage](/content/img/editor/onRequestInsertImage.png)
+  ![onRequestInsertImage](/editor/onRequestInsertImage.png)
 
   Example
 
@@ -491,7 +491,7 @@ Event messages will be available in your browser's DevTools console.
 
   An object with the unique file data, the file path, and a new browser tab name are sent in the *data* parameter.
 
-  ![open-source](/content/img/editor/open-source.png)
+  ![open-source](/editor/open-source.png)
 
   Example
 
@@ -525,9 +525,9 @@ Event messages will be available in your browser's DevTools console.
 
   To send the data to the *setReferenceData* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* or *link* parameters are used.
 
-  ![Paste link](/content/img/editor/paste-link.png)
+  ![Paste link](/editor/paste-link.png)
 
-  ![Update values](/content/img/editor/update-values.png)
+  ![Update values](/editor/update-values.png)
 
   Example
 
@@ -566,7 +566,7 @@ Event messages will be available in your browser's DevTools console.
 
   When the button is clicked, you must call the [setReferenceSource](/editors/methods#setReferenceSource) method to change a source of the external data. When calling this method, the token must be added to validate the parameters. If the event is not declared, the *Change source* button will not be displayed.
 
-  To send the data to the *setReferenceSource* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* parameter is used. ![Change source](/content/img/editor/change-source.png)
+  To send the data to the *setReferenceSource* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* parameter is used. ![Change source](/editor/change-source.png)
 
   Example
 
@@ -602,7 +602,7 @@ Event messages will be available in your browser's DevTools console.
 
   Until version 6.0 the *Rename...* button is only available if the [document.permissions.rename](/editors/config/document/permissions#rename) is set to **true**.
 
-  ![onRequestRename](/content/img/editor/onRequestRename.png)
+  ![onRequestRename](/editor/onRequestRename.png)
 
   Example
 
@@ -629,7 +629,7 @@ Event messages will be available in your browser's DevTools console.
 
   The *Restore* button is displayed for the previous document versions only and hidden for the current one. Until version 5.5 the *Restore* button is only available if the [document.permissions.changeHistory](/editors/config/document/permissions#changeHistory) is set to **true**.
 
-  ![onRequestRestore](/content/img/editor/onRequestRestore.png)
+  ![onRequestRestore](/editor/onRequestRestore.png)
 
   Example
 
@@ -684,7 +684,7 @@ Event messages will be available in your browser's DevTools console.
 
 * **onRequestSaveAs** - the function called when the user is trying to save file by clicking *Save Copy as...* button. The title of the document, its type and the absolute URL to the document to be downloaded are sent in the *data* parameter. If the method is not declared the *Save Copy as...* button will not be displayed.
 
-  ![onRequestSaveAs](/content/img/editor/onRequestSaveAs.png)
+  ![onRequestSaveAs](/editor/onRequestSaveAs.png)
 
   Example
 
@@ -711,7 +711,7 @@ Event messages will be available in your browser's DevTools console.
 
   To select a document for comparing or combining, you must call the [setRequestedDocument](/editors/methods#setRequestedDocument) method.
 
-  \** - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition* ![onRequestSelectDocument](/content/img/editor/onRequestSelectDocument.png)
+  \** - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition* ![onRequestSelectDocument](/editor/onRequestSelectDocument.png)
 
   Example
 
@@ -742,7 +742,7 @@ Event messages will be available in your browser's DevTools console.
 
   To select recipient data, you must call the [setRequestedSpreadsheet](/editors/methods#setRequestedSpreadsheet) method. When calling this method, the token must be added to validate the parameters. If the method is not declared, the *Mail merge* button will become faded and unclickable.
 
-  ![onRequestMailMergeRecipients](/content/img/editor/onRequestMailMergeRecipients.png)
+  ![onRequestMailMergeRecipients](/editor/onRequestMailMergeRecipients.png)
 
   Example
 
@@ -798,7 +798,7 @@ Event messages will be available in your browser's DevTools console.
 
   When the access rights is changed, you must call the [setSharingSettings](/editors/methods#setSharingSettings) method to update the [information](/editors/config/document/info#sharingSettings) about the settings which allow to share the document with other users. If the method is not declared the *Change access rights* button will not be displayed.
 
-  ![onRequestSharingSettings](/content/img/editor/onRequestSharingSettings.png)
+  ![onRequestSharingSettings](/editor/onRequestSharingSettings.png)
 
   Example
 
@@ -858,9 +858,9 @@ Event messages will be available in your browser's DevTools console.
 
   To set a list of users, you must call the [setUsers](/editors/methods#setUsers) method which can take different lists of users depending on the specified operation type. The *onRequestUsers* event is called once for each *c* type when the corresponding operation is performed. If the *setUsers* is called with an empty list, then the *onRequestUsers* event will fire again.
 
-  ![onRequestUsers](/content/img/editor/onRequestUsers.png)
+  ![onRequestUsers](/editor/onRequestUsers.png)
 
-  ![Protect range](/content/img/editor/protect-range.png)
+  ![Protect range](/editor/protect-range.png)
 
   Example
 

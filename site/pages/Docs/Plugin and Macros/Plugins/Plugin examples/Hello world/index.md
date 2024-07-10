@@ -6,7 +6,7 @@ Inserts the *Hello world!* phrase when the user presses the button.
 
 **Supported editors:** documents.
 
-![HelloWorld](/content/img/plugins/gifs/hello-world.gif)
+![HelloWorld](/plugins/gifs/hello-world.gif)
 
 Installation
 

@@ -21,4 +21,4 @@ End Sub
 
 Result
 
-![Font bold](/content/img/plugins/font_bold.png)
+![Font bold](/plugins/font_bold.png)

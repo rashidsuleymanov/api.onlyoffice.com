@@ -16,7 +16,7 @@ There are two ways to launch the application: through the shortcut or the termin
 4. In the **Target** field, after the path to the application, enter a space and then type the *--ascdesktop-support-debug-info* flag.
 5. Click the **Apply** button.
 
-![Windows shortcut](/content/img/desktop/windows-shortcut.png)
+![Windows shortcut](/desktop/windows-shortcut.png)
 
 \
 
@@ -27,7 +27,7 @@ There are two ways to launch the application: through the shortcut or the termin
 
 2. In the appeared **Run** window, type *cmd* in the **Open** field.
 
-   ![Windows terminal](/content/img/desktop/windows-terminal.png)
+   ![Windows terminal](/desktop/windows-terminal.png)
 
 3. Click the **OK** button. The terminal will be opened.
 
@@ -65,7 +65,7 @@ To start working in debug mode, right-click any editable field on the top toolba
 
 Here is the result:
 
-![Debug](/content/img/desktop/debugging.png)
+![Debug](/desktop/debugging.png)
 
 ## Running the application
 

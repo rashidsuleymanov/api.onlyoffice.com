@@ -6,7 +6,7 @@ Connects the [Toast UI Image Editor](https://ui.toast.com/tui-image-editor) for 
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![PhotoEditor](/content/img/plugins/gifs/photo-editor.gif)
+![PhotoEditor](/plugins/gifs/photo-editor.gif)
 
 Installation
 

@@ -8,7 +8,7 @@ The fields should be already added to the document with the [Example add custom 
 
 **Supported editors:** documents.
 
-![LoadCustomFields](/content/img/plugins/gifs/load-custom-fields.gif)
+![LoadCustomFields](/plugins/gifs/load-custom-fields.gif)
 
 Installation
 

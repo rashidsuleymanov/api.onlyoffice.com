@@ -4,7 +4,7 @@ The document history is stored with the document storage service. The **document
 
 The reference figure and the steps below explain the process of viewing the history in ONLYOFFICE Docs.
 
-![Document history](/content/img/editor/viewing-history.svg)
+![Document history](/editor/viewing-history.svg)
 
 1. The user clicks the *Version History* button while editing the document within the **document editor**.
 2. The **document editor** requests the list of the document versions from the **document storage service**.
@@ -58,7 +58,7 @@ The reference figure and the steps below explain the process of viewing the hist
    });
    ```
 
-   ![Opening File](/content/img/editor/history_open.png)
+   ![Opening File](/editor/history_open.png)
 
 3. In the configuration script for Document Editor initialization, specify the event handler which will select the [version from history](/editors/config/events#onRequestHistoryData). When the [onRequestHistoryData](/editors/config/events#onRequestHistoryData) event is called, the [setHistoryData](/editors/methods#setHistoryData) method must be executed. This method contains the absolute URL to the file of the corresponding version.
 
@@ -85,7 +85,7 @@ The reference figure and the steps below explain the process of viewing the hist
    });
    ```
 
-   ![Opening File](/content/img/editor/history.png)
+   ![Opening File](/editor/history.png)
 
 4. In the configuration script for Document Editor initialization, specify the event handler which will [restore](/editors/config/events#onRequestRestore) the file version when the user clicks the *Restore* button in the version history. When the [onRequestRestore](/editors/config/events#onRequestRestore) event is called, the [refreshHistory](/editors/methods#refreshHistory) method must be executed to initialize version history again. This method contains document history for each document version, if the history parameter has been present for each version.
 
@@ -132,7 +132,7 @@ The reference figure and the steps below explain the process of viewing the hist
    });
    ```
 
-   ![onRequestRestore](/content/img/editor/onRequestRestore.png)
+   ![onRequestRestore](/editor/onRequestRestore.png)
 
 5. Open your *html* file in the browser.
 
@@ -154,7 +154,7 @@ The reference figure and the steps below explain the process of viewing the hist
    });
    ```
 
-   ![onRequestHistoryClose](/content/img/editor/onRequestHistoryClose.png)
+   ![onRequestHistoryClose](/editor/onRequestHistoryClose.png)
 
 ## Opening the document history with changes highlighting
 
@@ -221,4 +221,4 @@ When the server version is updated, the **document editor** does not use the *ch
 
   The *changesurl* request is made in the browser from the added iframe with the **documentserver** domain, where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. For its correct work the cross-origin HTTP requests must be allowed (CORS). This can be achieved using the *Access-Control-Allow-Origin* header.
 
-  ![changesurl](/content/img/editor/changesurl.png)
+  ![changesurl](/editor/changesurl.png)

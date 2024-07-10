@@ -6,7 +6,7 @@ Inserts the content of one content control into another.
 
 **Supported editors:** documents.
 
-![WorkWithContentControlsContent](/content/img/plugins/gifs/work-with-content-controls-content.gif)
+![WorkWithContentControlsContent](/plugins/gifs/work-with-content-controls-content.gif)
 
 Installation
 

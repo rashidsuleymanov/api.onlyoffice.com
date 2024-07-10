@@ -1,6 +1,6 @@
 Displays a blank page with the loader. It allows you to call system methods.
 
-![System mode](/content/img/docspace/system-mode.png)
+![System mode](/docspace/system-mode.png)
 
 Method
 

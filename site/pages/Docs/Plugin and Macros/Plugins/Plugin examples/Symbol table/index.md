@@ -6,7 +6,7 @@ Inserts special symbols into the document.
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![SymbolTable](/content/img/plugins/gifs/symbol-table.gif)
+![SymbolTable](/plugins/gifs/symbol-table.gif)
 
 Installation
 

@@ -6,7 +6,7 @@ Inserts template fields for invoice information.
 
 **Supported editors:** documents.
 
-![Invoices](/content/img/plugins/gifs/invoices.gif)
+![Invoices](/plugins/gifs/invoices.gif)
 
 Installation
 

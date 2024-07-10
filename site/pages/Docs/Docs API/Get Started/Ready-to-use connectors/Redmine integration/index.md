@@ -68,7 +68,7 @@ Read more about the plugin installation on the Redmine [Wiki page](https://www.r
 
 Configure the plugin via the Redmine interface. Go to **Administration -> Plugins**, find the ONLYOFFICE integration plugin for Redmine and click **Configure**:
 
-![Redmine settings](/content/img/editor/redmine-settings.png)
+![Redmine settings](/editor/redmine-settings.png)
 
 **General Settings**
 
@@ -104,7 +104,7 @@ The plugin uses the [ONLYOFFICE Docs API](/editors/basic) and is integrated into
 
 * **Documents**
 
-  ![Documents page](/content/img/editor/documents-page.png)
+  ![Documents page](/editor/documents-page.png)
 
   On the **Documents** page, users can open the attachment to view, edit, create, or convert it. The options displayed in the interface may vary depending on the user permissions.
 
@@ -118,13 +118,13 @@ The plugin uses the [ONLYOFFICE Docs API](/editors/basic) and is integrated into
 
 * **Attachment**
 
-  ![Attachment page](/content/img/editor/attachment-page.png)
+  ![Attachment page](/editor/attachment-page.png)
 
   On the **Attachment** page, users can open the attachment to view, edit, or convert it. The options displayed in the interface may vary depending on the user's permissions for the module where the attachment is located.
 
 * **Files**
 
-  ![Files page](/content/img/editor/files-page.png)
+  ![Files page](/editor/files-page.png)
 
   On the **Files** page, users can open the attachment to view, edit, or convert it. The options displayed in the interface may vary depending on the user's permissions.
 
@@ -137,7 +137,7 @@ The plugin uses the [ONLYOFFICE Docs API](/editors/basic) and is integrated into
 
 * **Issues**
 
-  ![Issues page](/content/img/editor/issues-page.png)
+  ![Issues page](/editor/issues-page.png)
 
   On the **Issues** page, users can open the attachment to view, edit, or convert it. The options displayed in the interface may vary depending on the user's permissions.
 
@@ -150,7 +150,7 @@ The plugin uses the [ONLYOFFICE Docs API](/editors/basic) and is integrated into
 
 * **News**
 
-  ![News page](/content/img/editor/news-page.png)
+  ![News page](/editor/news-page.png)
 
   On the **News** page, users can open the attachment to view, edit, or convert it. The options displayed in the interface may vary depending on the user's permissions.
 
@@ -163,7 +163,7 @@ The plugin uses the [ONLYOFFICE Docs API](/editors/basic) and is integrated into
 
 * **Wiki**
 
-  ![Wiki page](/content/img/editor/wiki-page.png)
+  ![Wiki page](/editor/wiki-page.png)
 
   On the **Wiki** page, users can open the attachment to view, edit, or convert it. The options displayed in the interface may vary depending on the user's permissions.
 
@@ -176,7 +176,7 @@ The plugin uses the [ONLYOFFICE Docs API](/editors/basic) and is integrated into
 
 * **Forums**
 
-  ![Forums page](/content/img/editor/forums-page.png)
+  ![Forums page](/editor/forums-page.png)
 
   On the **Forums** page, users can open the attachment to view, edit, or convert it. The options displayed in the interface may vary depending on the user's permissions.
 
@@ -189,18 +189,18 @@ The plugin uses the [ONLYOFFICE Docs API](/editors/basic) and is integrated into
 
 * **View Or Edit In ONLYOFFICE**
 
-  ![View Or Edit In ONLYOFFICE](/content/img/editor/view-or-edit.png)
+  ![View Or Edit In ONLYOFFICE](/editor/view-or-edit.png)
 
   On the **View Or Edit In ONLYOFFICE** page, users can view or edit the attachment. The visibility of this page depends on the user's permissions for the module where the attachment is located.
 
 * **Create in ONLYOFFICE**
 
-  ![Create in ONLYOFFICE](/content/img/editor/create-page.png)
+  ![Create in ONLYOFFICE](/editor/create-page.png)
 
   On the **Create in ONLYOFFICE** page, users can create the attachment using templates that consider the user's language preference. Take a look at [supported formats](#formats). The visibility of this page depends on the user's permissions for the module.
 
 * **Convert with ONLYOFFICE**
 
-  ![Convert with ONLYOFFICE](/content/img/editor/convert-page.png)
+  ![Convert with ONLYOFFICE](/editor/convert-page.png)
 
   On the **Convert with ONLYOFFICE** page, the user can convert the attachment. The visibility of this page depends on the user's permissions for the module where the attachment is located.

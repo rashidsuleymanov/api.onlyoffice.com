@@ -4,7 +4,7 @@ Modal dialog.
 
 See the parameters of this component in [storybook](https://storybook.onlyoffice.io/?path=/docs/components-modaldialog--docs).
 
-![Modal dialog](/content/img/docspace/modal-dialog.png)
+![Modal dialog](/docspace/modal-dialog.png)
 
 To change the modal dialog type, use [ModalDisplayType](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IModalDialog.ts) (*modal* or *aside*).
 

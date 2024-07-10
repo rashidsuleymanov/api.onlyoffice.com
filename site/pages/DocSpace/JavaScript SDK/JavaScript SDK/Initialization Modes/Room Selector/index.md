@@ -1,6 +1,6 @@
 Opens the room selector and allows you to select a room from a list of the available rooms.
 
-![Room-selector mode](/content/img/docspace/room-selector-mode.png)
+![Room-selector mode](/docspace/room-selector-mode.png)
 
 Method
 

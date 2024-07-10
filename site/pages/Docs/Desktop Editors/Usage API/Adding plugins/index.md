@@ -14,7 +14,7 @@ Follow the steps below to add the plugins to the editor using plugin manager:
 2. Click **Plugin Manager**.
 3. Find the plugin you need and click **Install**.
 
-![Plugins manager](/content/img/plugins/desktop-plugin-manager.png)
+![Plugins manager](/plugins/desktop-plugin-manager.png)
 
 **Option 2. Uploading the plugin archive (an internet connection is not required)**
 
@@ -30,7 +30,7 @@ If you want to add your own plugin, you can do it manually, even if you are offl
 
 4. Choose your created archive and click **Open**.
 
-![Install plugin manually](/content/img/plugins/install-manually.png)
+![Install plugin manually](/plugins/install-manually.png)
 
 The plugin will be added to the opened editors and all the editors you will open afterwords and displayed within the **Plugins** tab.
 
@@ -58,11 +58,11 @@ So, the folder name of this plugin will be *{91EAC419-EF8B-440C-A960-B451C7DF3A3
 
 **Step 3.** Put all the plugin files to this folder:
 
-![Plugin folder](/content/img/desktop/plugins_folder.png)
+![Plugin folder](/desktop/plugins_folder.png)
 
 **Step 4.** Start ONLYOFFICE Desktop Editors. If everything is done correctly, the plugin will be displayed within the **Plugins** tab:
 
-![Extended comments](/content/img/desktop/extended_comments.png)
+![Extended comments](/desktop/extended_comments.png)
 
 ## Removing plugins from ONLYOFFICE Desktop Editors
 

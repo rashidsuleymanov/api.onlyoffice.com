@@ -34,7 +34,7 @@ Collapse all
 
   Please make sure that your plugin archive **doesn’t** look the following way:
 
-  ![Plugin archive](/content/img/plugins/plugin_archive.png)
+  ![Plugin archive](/plugins/plugin_archive.png)
 
   All the plugin files and subfolders must be at the archive root. To do it, unpack the plugin folder first and then archive its elements only.
 

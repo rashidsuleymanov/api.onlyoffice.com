@@ -1,6 +1,6 @@
 Allows you to open the SDK as a document editor for editing by specifying the [id](/docspace/jssdk/config#id) parameter for a file.
 
-![Editor mode](/content/img/docspace/editor-mode.png)
+![Editor mode](/docspace/editor-mode.png)
 
 Method
 

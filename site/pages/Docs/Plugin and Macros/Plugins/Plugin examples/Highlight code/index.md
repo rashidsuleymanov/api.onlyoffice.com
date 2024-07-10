@@ -6,7 +6,7 @@ Connects the [highlight.js library](https://highlightjs.org/) for highlighting c
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![HighlightCode](/content/img/plugins/gifs/highlight-code.gif)
+![HighlightCode](/plugins/gifs/highlight-code.gif)
 
 Installation
 

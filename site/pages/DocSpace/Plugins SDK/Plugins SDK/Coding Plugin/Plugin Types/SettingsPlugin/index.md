@@ -2,7 +2,7 @@ The plugin that manages settings for the administrator or owner.
 
 **Interface**: ISettingsPlugin.
 
-![Plugin settings](/content/img/docspace/settings-block.png)
+![Plugin settings](/docspace/settings-block.png)
 
 Variables
 

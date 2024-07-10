@@ -6,7 +6,7 @@ Adds a clippy assistant to the document editor.
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![Clippy](/content/img/plugins/gifs/clippy.gif)
+![Clippy](/plugins/gifs/clippy.gif)
 
 Installation
 

@@ -1,6 +1,6 @@
 Displays a list of entities depending on the specified [rootPath](/docspace/jssdk/config#rootPath). It allows you to create rooms, folders, and files and work with them.
 
-![Manager](/content/img/docspace/manager-mode.png)
+![Manager](/docspace/manager-mode.png)
 
 Method
 

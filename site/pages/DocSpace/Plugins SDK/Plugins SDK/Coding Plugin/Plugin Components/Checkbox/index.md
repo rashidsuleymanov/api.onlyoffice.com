@@ -4,7 +4,7 @@ Custom checkbox input.
 
 See the parameters of this component in [storybook](https://storybook.onlyoffice.io/?path=/docs/components-checkbox--docs).
 
-![Checkbox](/content/img/docspace/checkbox.png)
+![Checkbox](/docspace/checkbox.png)
 
 Example
 

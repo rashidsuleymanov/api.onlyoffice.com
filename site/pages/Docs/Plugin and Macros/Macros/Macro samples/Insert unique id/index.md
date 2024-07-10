@@ -28,4 +28,4 @@ Methods used: [GetDocument](/officeapi/textdocumentapi/api/getdocument), [Create
 
 Result
 
-![Insert id](/content/img/plugins/insert_id.png)
+![Insert id](/plugins/insert_id.png)

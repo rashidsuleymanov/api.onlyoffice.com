@@ -1,6 +1,6 @@
 The reference figure and the steps below explain the process of protecting ranges in spreadsheets in ONLYOFFICE Docs.
 
-![Protect ranges](/content/img/editor/protect-ranges-scheme.svg)
+![Protect ranges](/editor/protect-ranges-scheme.svg)
 
 1. The user opens *Protection -> Protect Range* in the **document editor**, clicks *New*, and starts typing the user name in the *Who can edit* field.
 2. The **document editor** sends a request to the **document manager** for a list of users to allow editing the specified sheet range.
@@ -13,7 +13,7 @@ The reference figure and the steps below explain the process of protecting range
 
 2. In the configuration script for Document Editor initialization, specify the event handler to display the list of users for granting the access rights to edit the specified sheet range. When the user opens *Protection -> Protect Range*, clicks *New*, and starts typing in the *Who can edit* field, the [onRequestUsers](/editors/config/events#onRequestUsers) event is called and the user can select other users to allow them to edit this range. The *data.c* parameter with the *protect* operation type is passed in this event.
 
-   ![Grant access](/content/img/editor/protect-range.png)
+   ![Grant access](/editor/protect-range.png)
 
    ```
    var onRequestUsers = function(event) {

@@ -12,7 +12,7 @@ The following elements are not included in the word count:
 
 **Supported editors:** documents.
 
-![CountWordsAndCharacters](/content/img/plugins/gifs/count-words-and-characters.gif)
+![CountWordsAndCharacters](/plugins/gifs/count-words-and-characters.gif)
 
 Installation
 

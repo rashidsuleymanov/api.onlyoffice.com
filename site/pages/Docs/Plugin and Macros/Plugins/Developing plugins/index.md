@@ -26,7 +26,7 @@ To develop a plugin for ONLYOFFICE editors, follow the instructions below.
 
    where **documentserver** is the name of the server, and **port** is the port number with the ONLYOFFICE Docs installed.
 
-   ![Developer console](/content/img/plugins/developer-console.png)
+   ![Developer console](/plugins/developer-console.png)
 
    The plugin will be displayed within the **Plugins** tab. You can edit the plugin and reload it to see the changes.
 
@@ -64,7 +64,7 @@ To debug ONLYOFFICE plugins in the web editors, follow the instructions below.
 
 3. Open the **Plugins** tab and run the plugin.
 
-   Please note that the **debugger** command will only work if the development tools are open. Otherwise, the browser will ignore it. ![Builder debugger](/content/img/plugins/plugin-debugging.png)
+   Please note that the **debugger** command will only work if the development tools are open. Otherwise, the browser will ignore it. ![Builder debugger](/plugins/plugin-debugging.png)
 
 ## For ONLYOFFICE desktop editors
 
@@ -82,7 +82,7 @@ To debug ONLYOFFICE plugins in the web editors, follow the instructions below.
 
    A plugin **GUID** will be used as the folder name. For example, *{07FD8DFA-DFE0-4089-AL24-0730933CC80A}*.
 
-   ![Sdkjs-plugins folder](/content/img/plugins/sdkjs-plugins-folder.png)
+   ![Sdkjs-plugins folder](/plugins/sdkjs-plugins-folder.png)
 
    You can edit the plugin and reload it to see the changes.
 
@@ -90,4 +90,4 @@ To debug ONLYOFFICE plugins in the web editors, follow the instructions below.
 
 To debug ONLYOFFICE plugins in the desktop editors, use the *--ascdesktop-support-debug-info* flag. To do this, follow the instructions [here](/desktop/debugging) depending on the operating system you use.
 
-![Debug](/content/img/desktop/debugging.png)
+![Debug](/desktop/debugging.png)

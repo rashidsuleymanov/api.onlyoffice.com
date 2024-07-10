@@ -6,7 +6,7 @@ Protects a document using a watermark.
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![Settings](/content/img/plugins/gifs/settings.gif)
+![Settings](/plugins/gifs/settings.gif)
 
 Installation
 

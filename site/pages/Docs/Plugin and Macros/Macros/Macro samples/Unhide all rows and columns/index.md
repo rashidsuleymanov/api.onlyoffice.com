@@ -21,4 +21,4 @@ Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [G
 
 Result
 
-![Unhide all rows](/content/img/plugins/unhide_all_rows.png)
+![Unhide all rows](/plugins/unhide_all_rows.png)

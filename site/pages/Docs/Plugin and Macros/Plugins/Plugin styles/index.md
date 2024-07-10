@@ -6,7 +6,7 @@ ONLYOFFICE provides a style sheet for different interface elements. To adjust yo
 
 All the available controls are displayed within the **Controls example** plugin:
 
-![Controls example](/content/img/plugins/controls.png)\
+![Controls example](/plugins/controls.png)\
 
 
 **Buttons**
@@ -32,7 +32,7 @@ All the available controls are displayed within the **Controls example** plugin:
    }
    ```
 
-   ![Button 1](/content/img/plugins/button-1.png)
+   ![Button 1](/plugins/button-1.png)
 
 2. Use the *btn-text-default.submit.primary* class to add **Button 2** to your plugin:
 
@@ -49,7 +49,7 @@ All the available controls are displayed within the **Controls example** plugin:
    }
    ```
 
-   ![Button 2](/content/img/plugins/button-2.png)
+   ![Button 2](/plugins/button-2.png)
 
 3. Use the *btn-text-default.submit* class to add **Button 3** to your plugin:
 
@@ -67,9 +67,9 @@ All the available controls are displayed within the **Controls example** plugin:
    }               
    ```
 
-   ![Button 3](/content/img/plugins/button-3.png) The button color is chosen by the developer. The darker the button, the more important it is. As a rule, the button of the *btn-text-default.submit.primary* class is used to confirm the action and send the result (for example, the **Ok** button).
+   ![Button 3](/plugins/button-3.png) The button color is chosen by the developer. The darker the button, the more important it is. As a rule, the button of the *btn-text-default.submit.primary* class is used to confirm the action and send the result (for example, the **Ok** button).
 
-4. Use the *btn-edit* class to add ![Edit button](/content/img/plugins/edit_button.png) **Edit button** to your plugin:
+4. Use the *btn-edit* class to add ![Edit button](/plugins/edit_button.png) **Edit button** to your plugin:
 
    ```
    <label class="for-combo">Edit button</label><div class="btn-edit" style="display: inline-block; margin-left: 10px;"></div>
@@ -105,7 +105,7 @@ All the available controls are displayed within the **Controls example** plugin:
    }               
    ```
 
-   ![Textarea](/content/img/plugins/text_area.png)
+   ![Textarea](/plugins/text_area.png)
 
 2. Use the *input *form element with the *text* type to add a **text field** to your plugin:
 
@@ -133,9 +133,9 @@ All the available controls are displayed within the **Controls example** plugin:
    }        
    ```
 
-   ![Text field](/content/img/plugins/text_field.png)
+   ![Text field](/plugins/text_field.png)
 
-3. Use the *input *form element with the *checkbox* type to add a ![Checkbox](/content/img/plugins/checkbox_example.png) **checkbox** to your plugin:
+3. Use the *input *form element with the *checkbox* type to add a ![Checkbox](/plugins/checkbox_example.png) **checkbox** to your plugin:
 
    ```
    <input type="checkbox" class="form-control" style="vertical-align: middle;"><label style="margin-left: 5px;vertical-align: middle;">Checkbox</label>
@@ -200,7 +200,7 @@ $('#select_example').select2({
 });
 ```
 
-![Combobox](/content/img/plugins/combobox_example.png)\
+![Combobox](/plugins/combobox_example.png)\
 
 
 **Loader**
@@ -219,11 +219,11 @@ This class has the following parameters:
 }        
 ```
 
-![Loader](/content/img/plugins/loader_example.png)
+![Loader](/plugins/loader_example.png)
 
 Let’s have a look at how to add interface elements in the ONLYOFFICE style to the YouTube plugin.
 
-![YouTube plugin](/content/img/plugins/youtube_interface.png)
+![YouTube plugin](/plugins/youtube_interface.png)
 
 1. To add the simple white **OK** button, use the *btn-text-default* class (button width - 30 pixels):
 

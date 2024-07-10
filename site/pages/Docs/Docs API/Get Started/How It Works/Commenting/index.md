@@ -1,6 +1,6 @@
 The **Comment option** allows you to leave comments on the specific words, phrases, sentences and other document parts, edit and remove these comments. All the comments will be saved and shown to other document users.
 
-![](/content/img/editor/comment.png)
+![](/editor/comment.png)
 
 ## Comment access rights
 
@@ -8,7 +8,7 @@ In order to enable the comment option, the [comment](/editors/config/document/pe
 
 In case the *edit* parameter is set to **true** and the *comment* parameter is also set to **true**, the user will be able to edit the document and comment.
 
-![Commenting](/content/img/editor/commenting.png)
+![Commenting](/editor/commenting.png)
 
 In case the *edit* parameter is set to **false** and the *comment* parameter is set to **true**, the document will be available for commenting only.
 
@@ -128,7 +128,7 @@ To display ONLYOFFICE spreadsheet comments in other editors correctly, all the c
    reply2
    ```
 
-   ![](/content/img/editor/comments-threaded.png)
+   ![](/editor/comments-threaded.png)
 
 2. To convert the original comments format into the **threaded comments**, the *"${author}:\n"* string is deleted if the comment starts with it.
 

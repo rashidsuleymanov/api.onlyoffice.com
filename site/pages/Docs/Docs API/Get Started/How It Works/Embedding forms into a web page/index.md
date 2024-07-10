@@ -107,7 +107,7 @@ The full code fragment looks like this:
 
 Once done, the PDF form can be opened for editing. After editing this file, you can fill out the ready forms. To do so, click the **Start filling** button.
 
-![Embed pdf form for editing](/content/img/editor/embed-pdf-for-editing.png)
+![Embed pdf form for editing](/editor/embed-pdf-for-editing.png)
 
 ## How to open PDF form for filling from website
 
@@ -205,4 +205,4 @@ The full code fragment looks like this:
 
 Once done, the PDF form can be opened for filling. After filling in all the required fields, you can submit your data. To do so, click the **Complete & Submit** button.
 
-![Embed pdf form](/content/img/editor/embed-pdf.png)
+![Embed pdf form](/editor/embed-pdf.png)

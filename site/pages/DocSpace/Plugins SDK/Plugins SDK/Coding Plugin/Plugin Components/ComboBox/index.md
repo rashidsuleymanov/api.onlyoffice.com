@@ -4,7 +4,7 @@ Custom combo box input.
 
 See the parameters of this component in [storybook](https://storybook.onlyoffice.io/?path=/docs/components-combobox--docs).
 
-![Combo box](/content/img/docspace/combobox.png)
+![Combo box](/docspace/combobox.png)
 
 To create a combo box option, use [IComboBoxItem](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IComboBox.ts).
 
