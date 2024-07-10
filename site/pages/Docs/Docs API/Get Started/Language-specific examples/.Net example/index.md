@@ -2,7 +2,7 @@
 
 This example will help you integrate ONLYOFFICE Docs into your web application written in .Net (C#) or .Net (C# MVC).
 
-It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+> It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
 
 ## Important security info
 
@@ -23,18 +23,18 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Windows](htt
 
 ## Step 2. Download the .Net (C#) / .Net (C# MVC) code for the editors integration
 
-Download the [.Net (C#) or .Net (C# MVC) example](/editors/demopreview) from our site.
+Download the [.Net (C#) or .Net (C# MVC) example](../index.md) from our site.
 
 To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the *settings.config* file (or *web.appsettings.config* file for MVC version):
 
-```
+``` html
 <add key="storage-path" value=""/>
 <add key="files.docservice.url.site" value="https://documentserver/" />
 ```
 
 where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed and the **storage-path** is the path where files will be created and stored. You can set an absolute path.
 
-If you want to experiment with the editor configuration, modify the [parameters](/editors/advanced) in the *DocEditor.aspx* file.
+If you want to experiment with the editor configuration, modify the [parameters](../../../Usage%20API/Advanced%20parameters/index.md) in the *DocEditor.aspx* file.
 
 ## Step 3. Install the prerequisites
 
@@ -51,7 +51,7 @@ Configure the IIS components for the server to work correctly:
 
 2. In the opened window, find **Internet Information Services** and check all the features that are chosen in the following image:
 
-   ![](/content/img/csharp/server-components.png)
+   ![Windows features](/csharp/server-components.png)
 
 ## Step 4. Run your website with the editors
 
@@ -63,7 +63,7 @@ Configure the IIS components for the server to work correctly:
 
    On the **Connections** panel right-click the **Sites** node in the tree, then click **Add Website**.
 
-   ![](/content/img/csharp/add.png)
+   ![Connections](/csharp/add.png)
 
 3. In the **Add Website** dialog box specify the name of the folder with the .Net (C#) / .Net (C# MVC) project in the **Site name** box.
 
@@ -71,22 +71,22 @@ Configure the IIS components for the server to work correctly:
 
    Specify the unique value used only for this website in the **Port** box.
 
-   ![](/content/img/csharp/sitename.png)
+   ![Add website](/csharp/sitename.png)
 
 4. Check for the .NET platform version specified in IIS Manager for you website. Choose **v4.0.** version.
 
    **Application Pools** -> right-click the platform name -> **Set application Pool defaults** -> **.NET CLR version**
 
-   ![](/content/img/csharp/platform.png)
+   ![Advanced settings](/csharp/platform.png)
 
 5. Browse your website with the IIS Manager:
 
    Right-click the site -> **Manage Website** -> **Browse**
 
-   ![](/content/img/csharp/browse.png)
+   ![Browse website](/csharp/browse.png)
 
 ## Step 5. Check accessibility
 
 In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](/editors/demopreview#DemoPreview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](../index.md#DemoPreview) on our site.
