@@ -15,6 +15,7 @@ import remarkRehype from "remark-rehype"
 import {type PluggableList, unified} from "unified"
 import {VFile} from "vfile"
 import {rehypeDocumentBuilderContainer} from "../components/document-builder-container/rehype.ts"
+import {rehypeCrosslink} from "./crosslink.tsx"
 import {rehypeImage} from "./image.tsx"
 
 export function Markdown(p: ChildrenIncludable): JSX.Element {
@@ -62,6 +63,7 @@ export function remarkPlugins(): PluggableList {
 
 export function rehypePlugins(): PluggableList {
   return [
+    rehypeCrosslink,
     rehypeSlug,
     [rehypeAutolink, {behavior: "wrap"}],
     rehypeImage,

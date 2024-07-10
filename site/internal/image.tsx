@@ -1,4 +1,4 @@
-import {basename, extname, join} from "node:path"
+import {basename, extname, isAbsolute} from "node:path"
 import {type ImageOptions} from "@11ty/eleventy-img"
 import {modify} from "@onlyoffice/hast-util-eleventy-img"
 import {generate} from "@onlyoffice/preact-eleventy-img"
@@ -16,7 +16,24 @@ export function Image(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
     p.alt = ""
   }
 
-  const s = path(p.src)
+  let s = p.src
+  if (!s || typeof s !== "string") {
+    throw new Error("The 'src' attribute is required, but missing.")
+  }
+
+  if (!URL.canParse(s) && !isAbsolute(s)) {
+    throw new Error("The 'src' attribute must be an absolute URL.")
+  }
+
+  if (isAbsolute(s)) {
+    s = `.${s}`
+  }
+
+  // todo: this is a temporary solution during the migration.
+  if (s.startsWith("./content")) {
+    return null
+  }
+
   const o = options(s)
 
   const Suspense = useSuspense(async () => {
@@ -41,14 +58,22 @@ export function rehypeImage() {
         n.properties.alt = ""
       }
 
-      const s = path(n.properties.src)
+      const s = n.properties.src
+      if (!s || typeof s !== "string") {
+        throw new Error("The 'src' attribute is required, but missing.")
+      }
+
+      // todo: this is a temporary solution during the migration.
+      if (s.startsWith("./content")) {
+        return
+      }
+
       const o = options(s)
 
       n.properties = {
         decoding: "async",
         loading: "lazy",
         ...n.properties,
-        src: s
       }
 
       // @ts-ignore conflict with mdx extensions
@@ -58,16 +83,6 @@ export function rehypeImage() {
     await r
     return t
   }
-}
-
-function path(s: unknown): string {
-  if (!s) {
-    throw new Error("The 'src' attribute is required, but missing.")
-  }
-  if (typeof s !== "string") {
-    throw new Error("The 'src' attribute must be a string.")
-  }
-  return join("assets/images/", s)
 }
 
 function options(s: string): ImageOptions {
