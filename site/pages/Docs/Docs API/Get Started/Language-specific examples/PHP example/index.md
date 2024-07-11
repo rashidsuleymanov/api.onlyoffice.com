@@ -82,9 +82,9 @@ The example is configured by changing environment variables.
 | ------------------------------ | ----------------------------------------------------------------------- | ---------------------- |
 | ADDRESS                        | The address where the server should be started.                         | 0.0.0.0                |
 | PORT                           | The port on which the server should be running.                         | 80                     |
-| DOCUMENT\_SERVER\_PRIVATE\_URL | The URL through which the server will communicate with ONLYOFFICE Docs. | http://proxy:8080     |
-| DOCUMENT\_SERVER\_PUBLIC\_URL  | The URL through which a user will communicate with ONLYOFFICE Docs.     | http://localhost:8080 |
-| EXAMPLE\_URL                   | The URL through which ONLYOFFICE Docs will communicate with the server. | http://proxy          |
+| DOCUMENT\_SERVER\_PRIVATE\_URL | The URL through which the server will communicate with ONLYOFFICE Docs. | `http://proxy:8080`    |
+| DOCUMENT\_SERVER\_PUBLIC\_URL  | The URL through which a user will communicate with ONLYOFFICE Docs.     | `http://localhost:8080` |
+| EXAMPLE\_URL                   | The URL through which ONLYOFFICE Docs will communicate with the server. | `http://proxy`          |
 | JWT\_SECRET                    | JWT authorization secret. Leave blank to disable authorization.         | your-256-bit-secret    |
 
 If you integrated the editors successfully the result should look like the [demo preview](../index.md#demo-preview) on our site.

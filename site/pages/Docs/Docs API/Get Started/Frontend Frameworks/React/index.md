@@ -86,9 +86,9 @@ This procedure creates a [basic React application](https://github.com/facebook/c
 
    Replace the following lines with your own data:
 
-   * **"http://documentserver/"** - replace with the URL of your server;
-   * **"https://example.com/url-to-example-document.docx"** - replace with the URL to your file;
-   * **"https://example.com/url-to-callback.ashx"** - replace with your callback URL (this is required for the saving functionality to work).
+   * `http://documentserver/` - replace with the URL of your server;
+   * `https://example.com/url-to-example-document.docx` - replace with the URL to your file;
+   * `https://example.com/url-to-callback.ashx` - replace with your callback URL (this is required for the saving functionality to work).
 
    This JavaScript file will create the *App* component containing the ONLYOFFICE Docs editor configured with basic features.
 
@@ -143,7 +143,7 @@ Now you can deploy the application to the created server:
 
 2. Copy the contents of the *onlyoffice-react-demo/build* directory to the root directory of the web server (to the *onlyoffice-react-demo* folder).
 
-The application will be deployed on the web server (*http://localhost:3000* by default).
+The application will be deployed on the web server (`http://localhost:3000` by default).
 
 ## ONLYOFFICE Docs React component API
 

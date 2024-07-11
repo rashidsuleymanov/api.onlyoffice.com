@@ -117,8 +117,8 @@ ng version
 
    Replace the following lines with your own data:
 
-   * **"https://example.com/url-to-example-document.docx"** - replace with the URL to your file;
-   * **"https://example.com/url-to-callback.ashx"** - replace with your callback URL (this is required for the saving functionality to work).
+   * `https://example.com/url-to-example-document.docx` - replace with the URL to your file;
+   * `https://example.com/url-to-callback.ashx` - replace with your callback URL (this is required for the saving functionality to work).
 
    This TypeScript file will create the *AppComponent* component containing the ONLYOFFICE Docs editor configured with basic features.
 
@@ -134,7 +134,7 @@ ng version
    ></document-editor>
    ```
 
-   Replace the **"http://documentserver/"** line with the URL of your server.
+   Replace the `http://documentserver/` line with the URL of your server.
 
 
 ### Versions 17.0.0 and above
@@ -192,8 +192,8 @@ ng version
 
    Replace the following lines with your own data:
 
-   * **"https://example.com/url-to-example-document.docx"** - replace with the URL to your file;
-   * **"https://example.com/url-to-callback.ashx"** - replace with your callback URL (this is required for the saving functionality to work).
+   * `https://example.com/url-to-example-document.docx` - replace with the URL to your file;
+   * `https://example.com/url-to-callback.ashx` - replace with your callback URL (this is required for the saving functionality to work).
 
    This TypeScript file will create the *AppComponent* component containing the ONLYOFFICE Docs editor configured with basic features.
 
@@ -209,7 +209,7 @@ ng version
    ></document-editor>
    ```
 
-   Replace the **"http://documentserver/"** line with the URL of your server.
+   Replace the `http://documentserver/` line with the URL of your server.
 
 Test the application using the Node.js development server:
 
@@ -331,7 +331,7 @@ Now you can deploy the application to the created server:
 
 2. Copy the contents of the *dist/onlyoffice-angular-demo* directory to the root directory of the web server (to the *onlyoffice-angular-demo* folder).
 
-The application will be deployed on the web server (*http://localhost:3000* by default).
+The application will be deployed on the web server (`http://localhost:3000` by default).
 
 ## ONLYOFFICE Docs Angular component API
 
