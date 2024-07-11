@@ -2,6 +2,7 @@ import {type SitemapData} from "@onlyoffice/eleventy-sitemap"
 import {type Data} from "@onlyoffice/eleventy-types"
 import {cutPrefix, cutSuffix} from "@onlyoffice/strings"
 import {slug} from "github-slugger"
+import {type GlobalNavigationData, GlobalNavigationDatum} from "@/internal/global-navigation.tsx"
 
 declare module "@onlyoffice/eleventy-types" {
   interface Data {
@@ -10,6 +11,7 @@ declare module "@onlyoffice/eleventy-types" {
     crosslink?(data: Data, s: string): string
     slug?(data: Data): string
     defaultSitemap?(d: Data): SitemapData
+    defaultGlobalNavigation?(data: Data): GlobalNavigationData
   }
 
   interface EleventyComputed {
@@ -65,6 +67,14 @@ export function data(): Data {
       return d.defaultSitemap(d)
     },
 
+    defaultGlobalNavigation(d) {
+      const m = new GlobalNavigationDatum()
+      m.icon = d.icon
+      m.title = d.title
+      m.path = d.page.inputPath.slice(1)
+      return m
+    },
+
     eleventyComputed: {
       title(data) {
         if (!data) {
@@ -75,12 +85,22 @@ export function data(): Data {
         }
         return data.title
       },
+
       layout(data) {
         if (!data || !data.layout) {
           return undefined
         }
         return `${data.layout}.tsx`
-      }
-    }
+      },
+
+      globalNavigation(d) {
+        const a = d.defaultGlobalNavigation(d)
+        const b = d.globalNavigation
+        if (!b) {
+          return a
+        }
+        return GlobalNavigationDatum.merge(a, b)
+      },
+    },
   }
 }
