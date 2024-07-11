@@ -9,30 +9,28 @@ export interface TableOfContentsProperties {
 
 export function TableOfContents(p: TableOfContentsProperties): JSX.Element {
   const s = Sitemap.shared
-  const {url, depth = 1} = p
-  const e = s.find(url, "url")
-  if (!e || e.type !== "page" || e.children.length === 0) {
+  const {depth = 1} = p
+  const e = s.find(p.url, "url")
+  if (!e) {
     return <></>
   }
   let c = -1
   return <List e={e} />
 
   function List({e}: {e: SitemapEntity}): JSX.Element {
-    if (c === depth && depth !== -1) {
+    if (c === depth && depth !== -1 || e.children.length === 0) {
       return <></>
     }
     c += 1
     return <ul>
       {e.children.map((id) => <Item id={id} />)}
-      <Callback>{() => {
-        c -= 1
-      }}</Callback>
+      <Callback>{() => {c -= 1}}</Callback>
     </ul>
   }
 
   function Item({id}: {id: string}): JSX.Element {
     const e = s.find(id, "id")
-    if (!e || e.children.length === 0) {
+    if (!e) {
       return <></>
     }
     if (e.type === "group") {
