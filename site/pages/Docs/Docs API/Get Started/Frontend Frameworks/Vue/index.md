@@ -10,25 +10,25 @@ This procedure creates a [basic Vue.js application](https://cli.vuejs.org/guide/
 
 1. Open a command line or command prompt and create a Vue.js 3.x project named *onlyoffice-vue-demo* using the [Create Vue Tool](https://github.com/vuejs/create-vue):
 
-   ```
+   ``` bash
    npm create vue@3
    ```
 
 2. Go to the newly created directory:
 
-   ```
+   ``` bash
    cd onlyoffice-vue-demo
    ```
 
 3. Install ONLYOFFICE Docs Vue.js component from **npm** and save it to the *package.json* file with *--save*:
 
-   ```
+   ``` bash
    npm install --save @onlyoffice/document-editor-vue
    ```
 
 4. Open the *./src/App.vue* file in the *onlyoffice-vue-demo* project and replace its contents with the following code:
 
-   ```
+   ``` xml
    <template>
        <DocumentEditor 
            id="docEditor" 
@@ -90,15 +90,15 @@ This procedure creates a [basic Vue.js application](https://cli.vuejs.org/guide/
 
    Replace the following lines with your own data:
 
-   * **"http\://documentserver/"** - replace with the URL of your server;
-   * **"https\://example.com/url-to-example-document.docx"** - replace with the URL to your file;
-   * **"https\://example.com/url-to-callback.ashx"** - replace with your callback URL (this is required for the saving functionality to work).
+   * `http://documentserver/` - replace with the URL of your server;
+   * `https://example.com/url-to-example-document.docx` - replace with the URL to your file;
+   * `https://example.com/url-to-callback.ashx` - replace with your callback URL (this is required for the saving functionality to work).
 
 5. Test the application using the Vue development server:
 
    * To start the development server, navigate to the *onlyoffice-vue-demo* directory and run:
 
-     ```
+     ``` bash
      npm run dev
      ```
 
@@ -110,25 +110,25 @@ The easiest way to deploy the application to a production environment is to inst
 
 1. Install the *serve* package globally:
 
-   ```
+   ``` bash
    npm install -g serve
    ```
 
 2. Serve your static site on the 3000 port:
 
-   ```
+   ``` bash
    serve -s build
    ```
 
    Another port can be adjusted using the *-l* or *--listen* flags:
 
-   ```
+   ``` bash
    serve -s build -l 4000
    ```
 
 3. To serve the project folder, go to it and run the *serve* command:
 
-   ```
+   ``` bash
    cd onlyoffice-vue-demo
    serve
    ```
@@ -137,7 +137,7 @@ Now you can deploy the application to the created server:
 
 1. Navigate to the *onlyoffice-vue-demo* directory and run:
 
-   ```
+   ``` bash
    npm run build
    ```
 
@@ -145,17 +145,17 @@ Now you can deploy the application to the created server:
 
 2. Copy the contents of the *onlyoffice-vue-demo/dist* directory to the root directory of the web server (to the *onlyoffice-vue-demo* folder).
 
-The application will be deployed on the web server (*http\://localhost:3000* by default).
+The application will be deployed on the web server (`http://localhost:3000` by default).
 
 ## ONLYOFFICE Docs Vue component API
 
-Properties
+### Properties
 
 | Name                                 | Type                    | Default | Description                                                                                                                                                |
 | ------------------------------------ | ----------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id\*                                 | string                  | null    | Component unique identifier.                                                                                                                               |
 | documentServerUrl\*                  | string                  | null    | Address of ONLYOFFICE Docs.                                                                                                                                |
-| config\*                             | object                  | null    | Generic [configuration object](/editors/config) for opening a file with token.                                                                             |
+| config\*                             | object                  | null    | Generic [configuration object](../../../Usage%20API/Config/index.md) for opening a file with token.                                                                             |
 | document\_fileType                   | string                  | null    | The type of the file.                                                                                                                                      |
 | document\_title                      | string                  | null    | The file name.                                                                                                                                             |
 | documentType                         | string                  | null    | The document type.                                                                                                                                         |
@@ -182,7 +182,7 @@ Properties
 | events\_onRequestHistoryData         | (event: object) => void | null    | The function called when the user is trying to click the specific document version in the document version history.                                        |
 | events\_onRequestRestore             | (event: object) => void | null    | The function called when the user is trying to restore the file version by clicking the **Restore** button in the version history.                         |
 
-\** - required field*
+\* *- required field*
 
 ## Installing Storybook
 
@@ -190,7 +190,7 @@ Install [Storybook](https://storybook.js.org/) to develop UI components in isola
 
 1. Change the address of the document server in the *config/default.json* file:
 
-   ```
+   ``` json
    "documentServerUrl": "http://documentserver/"
    ```
 
@@ -198,13 +198,13 @@ Install [Storybook](https://storybook.js.org/) to develop UI components in isola
 
 2. Build Storybook with the following command:
 
-   ```
+   ``` bash
    npm run build-storybook
    ```
 
 3. Start Storybook:
 
-   ```
+   ``` bash
    npm run storybook
    ```
 
@@ -212,31 +212,31 @@ Install [Storybook](https://storybook.js.org/) to develop UI components in isola
 
 1. Clone project from the GitHub repository:
 
-   ```
+   ``` bash
    git clone https://github.com/ONLYOFFICE/document-editor-vue
    ```
 
 2. Install the project dependencies:
 
-   ```
+   ``` bash
    npm install
    ```
 
 3. Test the component:
 
-   ```
+   ``` bash
    npm run test
    ```
 
 4. Build the project:
 
-   ```
+   ``` bash
    npm run build
    ```
 
 5. Create the package:
 
-   ```
+   ``` bash
    npm pack
    ```
 
