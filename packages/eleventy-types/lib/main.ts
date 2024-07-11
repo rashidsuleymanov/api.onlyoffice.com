@@ -207,7 +207,7 @@ export interface Page {
 /**
  * {@link https://www.11ty.dev/docs/data-eleventy-supplied/ Eleventy Reference}
  */
-export interface Context {
+export interface Context extends Data {
   collections: Collections
   content: Content
   eleventy: Eleventy
