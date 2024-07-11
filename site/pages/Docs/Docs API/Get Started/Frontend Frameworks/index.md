@@ -7,11 +7,8 @@ ONLYOFFICE Docs can be integrated with some of the existing frontend frameworks 
 
 Currently, the following frameworks are available:
 
-* [Angular](/editors/angular)
-* [React](/editors/react)
-* [Vue](/editors/vue)
-
-\
-
+* [Angular](Angular/index.md)
+* [React](React/index.md)
+* [Vue](Vue/index.md)
 
 If you have any further questions, please contact us at <integration@onlyoffice.com>.
