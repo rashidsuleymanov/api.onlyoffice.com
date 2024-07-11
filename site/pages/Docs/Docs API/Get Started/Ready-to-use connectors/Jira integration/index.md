@@ -18,7 +18,7 @@ The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https
 
 Upload the compiled *target/onlyoffice-jira-app.jar* to Jira on the **Manage apps** page.
 
-The latest compiled package files are available [here](https://github.com/ONLYOFFICE/onlyoffice-jira/releases) and on [Atlassian Marketplace](https://marketplace.atlassian.com/???).
+The latest compiled package files are available [here](https://github.com/ONLYOFFICE/onlyoffice-jira/releases) and on [Atlassian Marketplace](https://marketplace.atlassian.com/apps/1226616/onlyoffice-connector-for-jira).
 
 You can also install the app from the Jira administration panel:
 
