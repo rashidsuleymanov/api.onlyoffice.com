@@ -280,8 +280,7 @@ To deploy the application to a production environment, create the build-specific
                    "replace": "src/environments/environment.ts",
                    "with": "src/environments/environment.development.ts"
                }
-           ],
-           ...
+           ]
        }
    }
    ```
@@ -292,7 +291,7 @@ To deploy the application to a production environment, create the build-specific
 
    ``` json
    "configurations": {
-       "production": { ... },
+       "production": { },
        "staging": {
            "fileReplacements": [
                {
