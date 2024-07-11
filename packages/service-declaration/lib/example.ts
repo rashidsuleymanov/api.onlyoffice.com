@@ -1,6 +1,5 @@
-import type {Example} from "@onlyoffice/declaration-code-example"
-import {example} from "@onlyoffice/declaration-code-example"
-import type {RequestDeclaration} from "./main.ts"
+import {type Example, example} from "@onlyoffice/declaration-code-example"
+import {type RequestDeclaration} from "./main.ts"
 
 export function httpExample(req: RequestDeclaration): Example {
   const e = example()

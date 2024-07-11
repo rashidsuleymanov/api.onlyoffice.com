@@ -1,4 +1,4 @@
-import type {DocumentBuilder} from "@onlyoffice/document-builder-types"
+import {type DocumentBuilder} from "@onlyoffice/document-builder-types"
 
 export function fileType(c: string): string {
   let t = ""

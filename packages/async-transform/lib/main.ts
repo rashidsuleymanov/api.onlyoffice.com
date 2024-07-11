@@ -1,5 +1,4 @@
-import type {TransformCallback} from "node:stream"
-import {Transform} from "node:stream"
+import {Transform, type TransformCallback} from "node:stream"
 
 export class AsyncTransform extends Transform {
   _transform(ch: unknown, _: BufferEncoding, cb: TransformCallback): void {

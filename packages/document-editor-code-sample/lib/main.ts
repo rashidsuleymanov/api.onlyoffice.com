@@ -1,4 +1,4 @@
-import type {DocEditorConfig} from "@onlyoffice/document-server-types"
+import {type DocEditorConfig} from "@onlyoffice/document-server-types"
 import {cloneConfig} from "@onlyoffice/document-server-utils"
 import {toString} from "@onlyoffice/object-to-string"
 

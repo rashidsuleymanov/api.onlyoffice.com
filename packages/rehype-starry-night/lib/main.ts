@@ -1,11 +1,11 @@
 // Inspired by the rehype-highlight.
 // https://github.com/rehypejs/rehype-highlight/
 
-import type {createStarryNight} from "@wooorm/starry-night"
-import type {Element, Root} from "hast"
+import {type createStarryNight} from "@wooorm/starry-night"
+import {type Element, type Root} from "hast"
 import {toText} from "hast-util-to-text"
 import {visit} from "unist-util-visit"
-import type {VFile} from "vfile"
+import {type VFile} from "vfile"
 import pack from "../package.json" with {type: "json"}
 
 export type StarryNight = Awaited<ReturnType<typeof createStarryNight>>

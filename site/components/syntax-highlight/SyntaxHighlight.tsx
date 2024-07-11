@@ -1,7 +1,6 @@
 import {starryNight} from "@onlyoffice/eleventy-starry-night"
 import {rehypePreact} from "@onlyoffice/rehype-preact"
-import {Fragment, jsx, jsxs} from "preact/jsx-runtime"
-import type {JSX} from "preact"
+import {Fragment, type JSX, jsx, jsxs} from "preact/jsx-runtime"
 import {unified} from "unified"
 
 export interface RootParameters {

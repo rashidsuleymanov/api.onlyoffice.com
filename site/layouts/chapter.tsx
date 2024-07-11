@@ -1,5 +1,5 @@
 import {Sitemap, type SitemapEntity} from "@onlyoffice/eleventy-sitemap"
-import type {Context, Data} from "@onlyoffice/eleventy-types"
+import {type Context, type Data} from "@onlyoffice/eleventy-types"
 import {
   Chapter,
   ChapterContent,
@@ -15,7 +15,7 @@ import {
 } from "@onlyoffice/site-kit"
 import {GithubIcon} from "@onlyoffice/ui-icons/rich/24.tsx"
 import {Breadcrumb, BreadcrumbCrumb, Content} from "@onlyoffice/ui-kit"
-import {type JSX, Fragment, h} from "preact"
+import {Fragment, type JSX, h} from "preact"
 import {Tree} from "../components/tree/tree.ts"
 
 export function data(): Data {

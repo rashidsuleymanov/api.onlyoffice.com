@@ -1,4 +1,4 @@
-import type {Element} from "hast"
+import {type Element} from "hast"
 
 interface DocumentBuilderContainerElement extends Element {}
 

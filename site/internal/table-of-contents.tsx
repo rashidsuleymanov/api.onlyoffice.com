@@ -1,6 +1,6 @@
 import {Sitemap, type SitemapEntity} from "@onlyoffice/eleventy-sitemap"
 import {Callback} from "@onlyoffice/preact-callback"
-import {type JSX, Fragment, h} from "preact"
+import {Fragment, type JSX, h} from "preact"
 
 export interface TableOfContentsProperties {
   url: string

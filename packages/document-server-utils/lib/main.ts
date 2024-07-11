@@ -1,4 +1,4 @@
-import type {DocEditorConfig, DocEditorConfigEvents} from "@onlyoffice/document-server-types"
+import {type DocEditorConfig, type DocEditorConfigEvents} from "@onlyoffice/document-server-types"
 
 export function cloneConfig(cf: DocEditorConfig): DocEditorConfig {
   let cp = {...cf}

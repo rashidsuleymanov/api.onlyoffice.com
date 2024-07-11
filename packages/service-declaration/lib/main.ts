@@ -1,9 +1,8 @@
-import type {Example} from "@onlyoffice/declaration-code-example"
-import type {Reference} from "@onlyoffice/declaration-reference"
+import {type Example} from "@onlyoffice/declaration-code-example"
+import {type Reference} from "@onlyoffice/declaration-reference"
 
-export type {Example} from "@onlyoffice/declaration-code-example"
-export type {Reference} from "@onlyoffice/declaration-reference"
-export {reference} from "@onlyoffice/declaration-reference"
+export {type Example} from "@onlyoffice/declaration-code-example"
+export {type Reference, reference} from "@onlyoffice/declaration-reference"
 
 // todo?:
 // content-type, accept

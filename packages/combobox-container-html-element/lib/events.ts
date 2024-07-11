@@ -1,4 +1,4 @@
-import type {ComboboxContainer} from "./element.ts"
+import {type ComboboxContainer} from "./element.ts"
 
 export interface ComboboxContainerEventInit extends EventInit {
   option?: HTMLElement

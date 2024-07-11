@@ -1,4 +1,4 @@
-import type {UserConfig} from "@onlyoffice/eleventy-types"
+import {type UserConfig} from "@onlyoffice/eleventy-types"
 import {eleventyYAML} from "../lib/main.ts"
 
 function config(uc: UserConfig): void {

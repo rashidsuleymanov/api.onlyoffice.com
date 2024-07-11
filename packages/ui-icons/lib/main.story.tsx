@@ -1,5 +1,5 @@
-import type {Meta} from "@storybook/preact"
-import {type JSX, Fragment, h} from "preact"
+import {type Meta} from "@storybook/preact"
+import {Fragment, type JSX, h} from "preact"
 import * as poor24 from "../dist/poor/24.tsx"
 import * as rich24 from "../dist/rich/24.tsx"
 import * as rich32 from "../dist/rich/32.tsx"

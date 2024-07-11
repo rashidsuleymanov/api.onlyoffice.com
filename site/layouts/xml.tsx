@@ -1,4 +1,4 @@
-import type {Context} from "@onlyoffice/eleventy-types"
+import {type Context} from "@onlyoffice/eleventy-types"
 import {renderToString} from "../config/preact.ts"
 
 export async function render({content}: Context): Promise<string> {

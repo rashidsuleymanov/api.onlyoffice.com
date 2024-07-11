@@ -2,7 +2,7 @@ import {documentBuilder} from "@onlyoffice/document-builder-hast-element"
 import {fileType} from "@onlyoffice/document-builder-utils"
 import {template} from "@onlyoffice/template-hast-element"
 import {toText} from "hast-util-to-text"
-import type {Root} from "hast"
+import {type Root} from "hast"
 import {visit} from "unist-util-visit"
 import {documentBuilderContainer} from "./hast.ts"
 

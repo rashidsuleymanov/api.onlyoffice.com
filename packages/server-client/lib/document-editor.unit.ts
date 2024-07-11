@@ -1,8 +1,7 @@
 import {body} from "@onlyoffice/node-http"
 import {equal as eq, is, unreachable as un} from "uvu/assert"
 import {suite} from "uvu"
-import type {Teardown} from "./shared.ts"
-import {setup} from "./shared.ts"
+import {type Teardown, setup} from "./shared.ts"
 import {DocumentEditorService} from "./document-editor.ts"
 import {Client, ErrorResponse} from "./client.ts"
 

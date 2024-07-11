@@ -1,7 +1,7 @@
 import {readFile} from "node:fs/promises"
 import {join} from "node:path"
 import {URL, fileURLToPath} from "node:url"
-import type {Declaration} from "@onlyoffice/library-declaration"
+import {type Declaration} from "@onlyoffice/library-declaration"
 import {escape} from "@onlyoffice/node-path/win32.ts"
 
 export interface Resource {

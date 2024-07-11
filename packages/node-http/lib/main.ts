@@ -1,4 +1,4 @@
-import type {IncomingMessage} from "node:http"
+import {type IncomingMessage} from "node:http"
 
 export async function body(req: IncomingMessage): Promise<string> {
   return await new Promise<string>((res, rej) => {

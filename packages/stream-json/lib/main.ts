@@ -1,5 +1,4 @@
-import type {TransformCallback} from "node:stream"
-import {Transform} from "node:stream"
+import {Transform, type TransformCallback} from "node:stream"
 import Disassembler from "stream-json/Disassembler.js"
 
 /**

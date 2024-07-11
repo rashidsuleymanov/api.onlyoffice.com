@@ -1,5 +1,5 @@
-import type {DocumentEditorConfig} from "@onlyoffice/document-editor-html-element"
-import type {Element, ElementData, Properties} from "hast"
+import {type DocumentEditorConfig} from "@onlyoffice/document-editor-html-element"
+import {type Element, type ElementData, type Properties} from "hast"
 
 export interface DocumentEditor extends Element {
   properties: DocumentEditorProperties

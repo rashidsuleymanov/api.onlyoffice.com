@@ -1,4 +1,4 @@
-import type {Root} from "mdast"
+import {type Root} from "mdast"
 import rehypeStringify from "rehype-stringify"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"

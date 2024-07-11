@@ -1,5 +1,4 @@
-import type {TransformCallback} from "node:stream"
-import {Readable, Writable} from "node:stream"
+import {Readable, type TransformCallback, Writable} from "node:stream"
 
 export class StringWritable extends Writable {
   buf: string

@@ -1,6 +1,6 @@
-import type {Data} from "@onlyoffice/eleventy-types"
-import type {Declaration, Reference, Token} from "@onlyoffice/library-declaration"
-import type {Resource} from "@onlyoffice/library-resource"
+import {type Data} from "@onlyoffice/eleventy-types"
+import {type Declaration, type Reference, type Token} from "@onlyoffice/library-declaration"
+import {type Resource} from "@onlyoffice/library-resource"
 
 export function data({list, retrieve}: Resource): Data {
   return {

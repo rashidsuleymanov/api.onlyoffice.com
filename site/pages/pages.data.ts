@@ -1,5 +1,5 @@
 import {type SitemapData} from "@onlyoffice/eleventy-sitemap"
-import type {Data} from "@onlyoffice/eleventy-types"
+import {type Data} from "@onlyoffice/eleventy-types"
 import {cutPrefix, cutSuffix} from "@onlyoffice/strings"
 import {slug} from "github-slugger"
 

@@ -1,6 +1,6 @@
-import type {Data} from "@onlyoffice/eleventy-types"
-import type {Declaration} from "@onlyoffice/service-declaration"
-import type {Resource} from "@onlyoffice/service-resource"
+import {type Data} from "@onlyoffice/eleventy-types"
+import {type Declaration} from "@onlyoffice/service-declaration"
+import {type Resource} from "@onlyoffice/service-resource"
 
 export function data({list, resolve}: Resource): Data {
   return {

@@ -1,5 +1,5 @@
 import {spawn} from "node:child_process"
-import type {Writable} from "node:stream"
+import {type Writable} from "node:stream"
 
 /**
  * {@link https://github.com/jsdoc/jsdoc/blob/4.0.2/lib/jsdoc/schema.js/#L186 JSDoc Reference}

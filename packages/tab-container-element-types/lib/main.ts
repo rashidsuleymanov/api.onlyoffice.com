@@ -1,4 +1,4 @@
-import type {TabContainerElement} from "@github/tab-container-element"
+import {type TabContainerElement} from "@github/tab-container-element"
 
 declare global {
   namespace preact {

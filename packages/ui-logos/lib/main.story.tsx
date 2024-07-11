@@ -1,4 +1,4 @@
-import type {Meta} from "@storybook/preact"
+import {type Meta} from "@storybook/preact"
 import {type JSX, h} from "preact"
 import {OnlyofficeLogo} from "./main.tsx"
 

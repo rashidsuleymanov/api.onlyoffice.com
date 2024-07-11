@@ -1,4 +1,4 @@
-import type {Context, Data} from "@onlyoffice/eleventy-types"
+import {type Context, type Data} from "@onlyoffice/eleventy-types"
 import {
   Home,
   HomeHero,

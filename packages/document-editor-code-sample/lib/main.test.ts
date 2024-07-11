@@ -1,4 +1,4 @@
-import type {DocEditorConfig} from "@onlyoffice/document-server-types"
+import {type DocEditorConfig} from "@onlyoffice/document-server-types"
 import {assert} from "@open-wc/testing"
 import {html, js, json} from "./main.ts"
 

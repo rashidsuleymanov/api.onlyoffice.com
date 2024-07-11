@@ -1,5 +1,5 @@
-import type {UserConfig} from "@onlyoffice/eleventy-types"
-import type {createStarryNight} from "@wooorm/starry-night"
+import {type UserConfig} from "@onlyoffice/eleventy-types"
+import {type createStarryNight} from "@wooorm/starry-night"
 
 export type StarryNight = Awaited<ReturnType<typeof createStarryNight>>
 

@@ -2,11 +2,10 @@ import {Buffer} from "node:buffer"
 import {createHmac} from "node:crypto"
 import {stat} from "node:fs/promises"
 import {createReadStream} from "node:fs"
-import type {IncomingMessage, ServerResponse} from "node:http"
-import {createServer} from "node:http"
+import {type IncomingMessage, type ServerResponse, createServer} from "node:http"
 import {join} from "node:path"
 import {URL, fileURLToPath} from "node:url"
-import type {DocumentEditorConfig} from "@onlyoffice/document-editor-html-element"
+import {type DocumentEditorConfig} from "@onlyoffice/document-editor-html-element"
 import {uniqueString} from "@onlyoffice/strings"
 
 const config = {

@@ -1,5 +1,5 @@
 import {get} from "node:https"
-import type {Writable} from "node:stream"
+import {type Writable} from "node:stream"
 
 export function rawURL(o: string, rp: string, rf: string, p: string): string {
   const u = new URL(`/${o}/${rp}/${rf}/${p}`, "https://raw.githubusercontent.com/")
