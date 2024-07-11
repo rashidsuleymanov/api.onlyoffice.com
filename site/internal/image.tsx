@@ -45,7 +45,9 @@ export function Image(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
     if (typeof p.width === "object" && "peek" in p.width) {
       throw new Error("The 'width' attribute must not be a signal.")
     }
-    p.style.maxWidth = p.width
+    if (p.width !== -1) {
+      p.style.maxWidth = p.width
+    }
   }
 
   if (p.height !== undefined) {
@@ -58,7 +60,9 @@ export function Image(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
     if (typeof p.height === "object" && "peek" in p.height) {
       throw new Error("The 'height' attribute must not be a signal.")
     }
-    p.style.maxHeight = p.height
+    if (p.height !== -1) {
+      p.style.maxHeight = p.height
+    }
   }
 
   const o = options(p.src)
