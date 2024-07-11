@@ -89,4 +89,4 @@ Configure the IIS components for the server to work correctly:
 
 In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](../index.md#DemoPreview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](../index.md#demo-preview) on our site.
