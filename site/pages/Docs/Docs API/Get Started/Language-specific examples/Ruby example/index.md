@@ -2,7 +2,7 @@
 
 This example will help you integrate ONLYOFFICE Docs into your web application written on Ruby.
 
-It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+> It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
 
 ## Important security info
 
@@ -23,21 +23,21 @@ To run the example using [Docker](https://www.docker.com/), you will need [Docke
 
 Once you have everything installed, download the release archive and unarchive it:
 
-```
+``` bash
 curl --output Ruby.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip
 unzip Ruby.Example.zip
 ```
 
 Then open the example directory and [up containers](https://github.com/ONLYOFFICE/document-server-integration/blob/eaa06d1919ee92b72c945e14aa8d96871dd26879/web/documentserver-example/ruby/Makefile#L46):
 
-```
+``` bash
 cd "Ruby Example"
 make compose-prod
 ```
 
 By default, the server starts at *localhost:80*.
 
-To configure the example, you can edit the environment variables in [compose-base.yml](https://github.com/ONLYOFFICE/document-server-integration/blob/eaa06d1919ee92b72c945e14aa8d96871dd26879/web/documentserver-example/ruby/compose-base.yml). See [below](#configure) for more information about environment variables.
+To configure the example, you can edit the environment variables in [compose-base.yml](https://github.com/ONLYOFFICE/document-server-integration/blob/eaa06d1919ee92b72c945e14aa8d96871dd26879/web/documentserver-example/ruby/compose-base.yml). See [below](#step-3-configure-the-ruby-example) for more information about environment variables.
 
 **Option 2. On local machine**
 
@@ -51,14 +51,14 @@ To run the example on your local machine, you will need [Ruby 3.2.2](https://www
 
 Once you have everything installed, download the release archive and unarchive it:
 
-```
+``` bash
 curl --output Ruby.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip
 unzip Ruby.Example.zip
 ```
 
 Then open the example directory, [install dependencies](https://github.com/ONLYOFFICE/document-server-integration/blob/eaa06d1919ee92b72c945e14aa8d96871dd26879/web/documentserver-example/ruby/Makefile#L33), and [start the server](https://github.com/ONLYOFFICE/document-server-integration/blob/eaa06d1919ee92b72c945e14aa8d96871dd26879/web/documentserver-example/ruby/Makefile#L42):
 
-```
+``` bash
 cd "Ruby Example"
 make prod
 make server-prod
@@ -66,7 +66,7 @@ make server-prod
 
 By default, the server starts at *0.0.0.0:3000*.
 
-To configure the example, you can pass the environment variables before the command that starts the server. See [below](#configure) for more information about environment variables.
+To configure the example, you can pass the environment variables before the command that starts the server. See [below](#step-3-configure-the-ruby-example) for more information about environment variables.
 
 ## Step 2. Check accessibility
 
@@ -81,10 +81,10 @@ The example is configured by changing environment variables.
 | Parameter                      | Description                                                             | Example                |
 | ------------------------------ | ----------------------------------------------------------------------- | ---------------------- |
 | BINDING                        | The address where the server should be started.                         | 0.0.0.0                |
-| DOCUMENT\_SERVER\_PRIVATE\_URL | The URL through which the server will communicate with ONLYOFFICE Docs. | http\://proxy:8080     |
-| DOCUMENT\_SERVER\_PUBLIC\_URL  | The URL through which a user will communicate with ONLYOFFICE Docs.     | http\://localhost:8080 |
-| EXAMPLE\_URL                   | The URL through which ONLYOFFICE Docs will communicate with the server. | http\://proxy          |
+| DOCUMENT\_SERVER\_PRIVATE\_URL | The URL through which the server will communicate with ONLYOFFICE Docs. | http://proxy:8080     |
+| DOCUMENT\_SERVER\_PUBLIC\_URL  | The URL through which a user will communicate with ONLYOFFICE Docs.     | http://localhost:8080 |
+| EXAMPLE\_URL                   | The URL through which ONLYOFFICE Docs will communicate with the server. | http://proxy          |
 | JWT\_SECRET                    | JWT authorization secret. Leave blank to disable authorization.         | your-256-bit-secret    |
 | PORT                           | The port on which the server should be running.                         | 80                     |
 
-If you integrated the editors successfully the result should look like the [demo preview](/editors/demopreview#DemoPreview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](../index.md#demo-preview) on our site.
