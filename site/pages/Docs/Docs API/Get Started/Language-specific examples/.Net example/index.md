@@ -51,7 +51,7 @@ Configure the IIS components for the server to work correctly:
 
 2. In the opened window, find **Internet Information Services** and check all the features that are chosen in the following image:
 
-   ![Windows features](/assets/images/csharp/server-components.png)
+   <img alt="Windows features" src="/assets/images/csharp/server-components.png" width="778px">
 
 ## Step 4. Run your website with the editors
 
@@ -63,7 +63,7 @@ Configure the IIS components for the server to work correctly:
 
    On the **Connections** panel right-click the **Sites** node in the tree, then click **Add Website**.
 
-   ![Connections](/assets/images/csharp/add.png)
+   <img alt="Connections" src="/assets/images/csharp/add.png" width="320px">
 
 3. In the **Add Website** dialog box specify the name of the folder with the .Net (C#) / .Net (C# MVC) project in the **Site name** box.
 
@@ -71,19 +71,19 @@ Configure the IIS components for the server to work correctly:
 
    Specify the unique value used only for this website in the **Port** box.
 
-   ![Add website](/assets/images/csharp/sitename.png)
+   <img alt="Add website" src="/assets/images/csharp/sitename.png" width="583px">
 
 4. Check for the .NET platform version specified in IIS Manager for you website. Choose **v4.0.** version.
 
    **Application Pools** -> right-click the platform name -> **Set application Pool defaults** -> **.NET CLR version**
 
-   ![Advanced settings](/assets/images/csharp/platform.png)
+   <img alt="Advanced settings" src="/assets/images/csharp/platform.png" width="539px">
 
 5. Browse your website with the IIS Manager:
 
    Right-click the site -> **Manage Website** -> **Browse**
 
-   ![Browse website](/assets/images/csharp/browse.png)
+   <img alt="Browse website" src="/assets/images/csharp/browse.png" width="500px">
 
 ## Step 5. Check accessibility
 
