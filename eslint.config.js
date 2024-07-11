@@ -135,7 +135,7 @@ function config() {
         "@stylistic/arrow-parens": e,
         "@stylistic/arrow-spacing": e,
         "@stylistic/block-spacing": "off",
-        "@stylistic/brace-style": e,
+        "@stylistic/brace-style": [e, "1tbs", {allowSingleLine: true}],
         "@stylistic/comma-dangle": [e, "always-multiline"],
         "@stylistic/comma-spacing": e,
         "@stylistic/comma-style": e,
