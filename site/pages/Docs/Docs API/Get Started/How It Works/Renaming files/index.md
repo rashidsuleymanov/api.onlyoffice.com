@@ -1,6 +1,6 @@
 The reference figure and the steps below explain the process of renaming a document in ONLYOFFICE Docs.
 
-![Renaming File](/editor/rename.svg)
+![Renaming File](/assets/images/editor/rename.svg)
 
 1. The user gives a new name to the document in the **document editor**.
 2. The **document editor** informs the **document manager** about the new name of the document.
@@ -15,7 +15,7 @@ The reference figure and the steps below explain the process of renaming a docum
 
 2. Specify the event handler for opening the *Rename...* menu in the configuration script for Document Editor initialization. When the [onRequestRename](/editors/config/events#onRequestRename) event is called, the new name of the document without extension is sent to the software integrators which rename the document in the document storage service.
 
-   ![Renaming File](/editor/onRequestRename.png)
+   ![Renaming File](/assets/images/editor/onRequestRename.png)
 
    ```
    var onRequestRename = function(event) {

@@ -6,7 +6,7 @@ Adds comments to a cell of the spreadsheet.
 
 **Supported editors:** spreadsheets.
 
-![AddCommentInCell](/plugins/gifs/add-comment-in-cell.gif)
+![AddCommentInCell](/assets/images/plugins/gifs/add-comment-in-cell.gif)
 
 Installation
 

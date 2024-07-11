@@ -13,7 +13,7 @@ export const contextMenuItem: IContextMenuItem = {
 };
 ```
 
-![Context menu item](/docspace/context-menu-item.png)
+![Context menu item](/assets/images/docspace/context-menu-item.png)
 
 You can add more plugin types. For example, the **draw\.io** plugin can be accessed from the main button menu, so we need to specify the [main button item](/docspace/pluginssdk/codingplugin/pluginitems/mainbuttonitem):
 
@@ -53,7 +53,7 @@ const mainButtonItem: IMainButtonItem = {
 
 When the main button item is clicked, the modal window appears where you can type the diagram's name and open an empty *.drawio* file.
 
-![Create diagram](/docspace/create-diagram.png)
+![Create diagram](/assets/images/docspace/create-diagram.png)
 
 For the **draw\.io** plugin, you also need to configure the file plugin type which works when the user opens the specific *.drawio* file:
 
@@ -78,4 +78,4 @@ For the **draw\.io** plugin, you also need to configure the file plugin type whi
    };
    ```
 
-   ![Drawio file](/docspace/drawio-file.png)
+   ![Drawio file](/assets/images/docspace/drawio-file.png)

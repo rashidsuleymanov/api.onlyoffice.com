@@ -21,4 +21,4 @@ End Sub
 
 Result
 
-![Range as a table](/plugins/range_as_a_table.png)
+![Range as a table](/assets/images/plugins/range_as_a_table.png)

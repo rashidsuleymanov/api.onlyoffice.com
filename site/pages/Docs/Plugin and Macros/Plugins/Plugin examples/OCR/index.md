@@ -6,7 +6,7 @@ Connects the [TesseractJS-Core library](https://tesseract.projectnaptha.com/) fo
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![OCR](/plugins/gifs/ocr.gif)
+![OCR](/assets/images/plugins/gifs/ocr.gif)
 
 Installation
 

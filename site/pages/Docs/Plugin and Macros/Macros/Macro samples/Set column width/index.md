@@ -21,4 +21,4 @@ End Sub
 
 Result
 
-![Column width](/plugins/column_width.png)
+![Column width](/assets/images/plugins/column_width.png)

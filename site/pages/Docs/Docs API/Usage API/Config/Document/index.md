@@ -22,7 +22,7 @@ URL https\://example.com/url-to-example-document.xlsx
 
 Config.js
 
-![Copy](/copy-content.svg) When you copy, you get the HTML code for the whole example. HTML copied.
+![Copy](/assets/images/copy-content.svg) When you copy, you get the HTML code for the whole example. HTML copied.
 
 ```
 ```

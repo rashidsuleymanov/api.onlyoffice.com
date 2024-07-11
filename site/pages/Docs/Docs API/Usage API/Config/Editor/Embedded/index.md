@@ -18,7 +18,7 @@ Toolbar Docked top
 
 Config.js
 
-![Copy](/copy-content.svg) When you copy, you get the HTML code for the whole example. HTML copied.
+![Copy](/assets/images/copy-content.svg) When you copy, you get the HTML code for the whole example. HTML copied.
 
 ```
 ```
@@ -32,4 +32,4 @@ Parameters
 | saveUrl                               | Defines the absolute URL that will allow the document to be saved onto the user personal computer.             | string | "https\://example.com/download?doc=exampledocument1.docx"            |
 | shareUrl                              | Defines the absolute URL that will allow other users to share this document.                                   | string | "https\://example.com/view?doc=exampledocument1.docx"                |
 | toolbarDocked                         | Defines the place for the embedded viewer toolbar, can be either **top** or **bottom**.                        | string | "top"                                                                |
-| ![](/editor/embedded.png) |                                                                                                                |        |                                                                      |
+| ![](/assets/images/editor/embedded.png) |                                                                                                                |        |                                                                      |

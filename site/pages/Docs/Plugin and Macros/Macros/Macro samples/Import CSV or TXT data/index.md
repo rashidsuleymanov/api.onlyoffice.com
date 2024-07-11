@@ -42,4 +42,4 @@ Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [G
 
 Result
 
-![Import CSV/text data](/plugins/import-csv-macro.png)
+![Import CSV/text data](/assets/images/plugins/import-csv-macro.png)

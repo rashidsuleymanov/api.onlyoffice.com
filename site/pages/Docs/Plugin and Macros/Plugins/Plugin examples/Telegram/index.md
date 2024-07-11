@@ -10,7 +10,7 @@ The plugin has no access to the camera and microphone, so you will be unable to 
 
 **Analogues:** [Rainbow](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/rainbow), [Jitsi](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/jitsi).
 
-![Telegram](/plugins/gifs/telegram.gif)
+![Telegram](/assets/images/plugins/gifs/telegram.gif)
 
 Installation
 

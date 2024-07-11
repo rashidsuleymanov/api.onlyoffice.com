@@ -18,4 +18,4 @@ Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [G
 
 Result
 
-![Recalculate worksheet values](/plugins/recalculate-cell-values.png)
+![Recalculate worksheet values](/assets/images/plugins/recalculate-cell-values.png)

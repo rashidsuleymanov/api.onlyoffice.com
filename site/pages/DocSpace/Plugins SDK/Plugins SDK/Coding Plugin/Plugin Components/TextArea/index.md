@@ -4,7 +4,7 @@ Custom textarea.
 
 See the parameters of this component in [storybook](https://storybook.onlyoffice.io/?path=/docs/components-textarea--docs).
 
-![Textarea](/docspace/textarea.png)
+![Textarea](/assets/images/docspace/textarea.png)
 
 Example
 

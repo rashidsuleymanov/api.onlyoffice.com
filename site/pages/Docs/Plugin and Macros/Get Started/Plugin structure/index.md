@@ -8,4 +8,4 @@ The plugin folder must contain three files required for the plugin to work:
 
 The plugin folder can also contain other files such as plugin icons, styles, translations, readme, third-party services, etc. More information can be found [here](/plugin/gettingstarted).
 
-![Structure](/plugins/plugins-structure.png)
+![Structure](/assets/images/plugins/plugins-structure.png)

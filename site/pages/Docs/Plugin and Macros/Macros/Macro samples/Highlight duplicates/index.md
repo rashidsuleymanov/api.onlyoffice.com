@@ -106,4 +106,4 @@ End Sub
 
 Result
 
-![Highlight duplicates](/plugins/highlight_duplicates.png)
+![Highlight duplicates](/assets/images/plugins/highlight_duplicates.png)

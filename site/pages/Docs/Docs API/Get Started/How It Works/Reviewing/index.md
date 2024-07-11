@@ -1,6 +1,6 @@
 The **Review option** allows you to review a document, change sentences, phrases and other page elements, correct spelling, etc. without actually editing it. All the changes will be recorded and shown to the user who created the document.
 
-![](/editor/review.png)
+![](/assets/images/editor/review.png)
 
 ## Review access rights
 
@@ -8,7 +8,7 @@ In order to enable the review option, the [review](/editors/config/document/perm
 
 In case the *edit* parameter is set to **true** and the *review* parameter is also set to **true**, the user will be able to edit the document, accept or reject the changes and switch to the review mode him/herself.
 
-![Reviewing](/editor/accept_reject.png)
+![Reviewing](/assets/images/editor/accept_reject.png)
 
 In case the *edit* parameter is set to **false** and the *review* parameter is set to **true**, the document will be available for reviewing only.
 

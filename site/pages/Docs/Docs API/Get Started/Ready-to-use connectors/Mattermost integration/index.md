@@ -36,7 +36,7 @@ To start using ONLYOFFICE Docs with Mattermost, follow these steps:
 
 ## Configuring Mattermost ONLYOFFICE integration plugin
 
-![Mattermost settings](/editor/mattermost-settings.png)
+![Mattermost settings](/assets/images/editor/mattermost-settings.png)
 
 * **Enable Plugin**. Enable the Mattermost ONLYOFFICE integration plugin by setting this parameter to **true**.
 
@@ -61,19 +61,19 @@ When files are sent in the chat message, the following actions are available in 
 * **Open file in ONLYOFFICE** and **Change access rights** - for the author of the message.
 * **Open file in ONLYOFFICE** - for the recipient of the message.
 
-![Mattermost actions](/editor/mattermost-actions.png)
+![Mattermost actions](/assets/images/editor/mattermost-actions.png)
 
 When clicking on the **Open file in ONLYOFFICE** button, the corresponding ONLYOFFICE editor opens in the same window.
 
-![Mattermost editor](/editor/mattermost-editor.png)
+![Mattermost editor](/assets/images/editor/mattermost-editor.png)
 
 The author of the message with attached documents is able to change access rights to the file via the context menu using the **Change access rights** option. This action is available both in personal and group chats.
 
-![Mattermost share](/editor/mattermost-share.png)
+![Mattermost share](/assets/images/editor/mattermost-share.png)
 
 ONLYOFFICE bot sends notifications about changes in the document specifying the name of the user who made those changes.
 
-![Mattermost bot](/editor/mattermost-bot.png)
+![Mattermost bot](/assets/images/editor/mattermost-bot.png)
 
 ## How it works
 

@@ -12,7 +12,7 @@ For the **document editors** correct work with the document files it is recommen
 
 The reference figure and the steps below explain the process of document conversion.
 
-![Interim conversion needed for document editing](/editor/conversion.jpg)
+![Interim conversion needed for document editing](/assets/images/editor/conversion.jpg)
 
 1. The users selects a file on the computer hard disk drive that is to be uploaded to the **document manager**.
 2. The **document manager** uploads the selected file to the **document storage service**.
@@ -26,7 +26,7 @@ When the user needs to download the file in some format different from the Offic
 
 The reference figure and the steps below explain the process of document export.
 
-![Document export](/editor/export.jpg)
+![Document export](/assets/images/editor/export.jpg)
 
 1. The user selects the file in the **document manager** and the format the file must be downloaded in.
 2. The **document manager** transforms this user action into a request to the **document storage service**.

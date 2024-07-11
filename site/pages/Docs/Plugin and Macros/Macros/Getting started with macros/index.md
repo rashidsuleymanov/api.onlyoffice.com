@@ -19,6 +19,6 @@ How to start writing your macro:
 5. **Rename** your macro by clicking the corresponding button.
 6. When ready, click **Run** to run your code in the document.
 
-![Macros window](/plugins/macro_window.png)
+![Macros window](/assets/images/plugins/macro_window.png)
 
 If you want to delete an unnecessary macro, click the **Delete** button.

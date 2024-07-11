@@ -6,7 +6,7 @@ Inserts content controls (automatically or manually), navigates and selects them
 
 **Supported editors:** documents.
 
-![WorkWithContentControlsNavigation](/plugins/gifs/work-with-content-controls-navigation.gif)
+![WorkWithContentControlsNavigation](/assets/images/plugins/gifs/work-with-content-controls-navigation.gif)
 
 Installation
 

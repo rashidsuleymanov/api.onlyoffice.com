@@ -6,7 +6,7 @@ Searches for target text and changes its background color.
 
 **Supported editors:** documents.
 
-![SearchAndChangeTextBackgroundColor](/plugins/gifs/search-and-change-background-text.gif)
+![SearchAndChangeTextBackgroundColor](/assets/images/plugins/gifs/search-and-change-background-text.gif)
 
 Installation
 

@@ -53,4 +53,4 @@ Configure the settings plugin type to provide users with the administrator setti
 
 Each settings item is determined in separate files ([buttons](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/speech-to-text/src/Settings/Button.ts), [token](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/speech-to-text/src/Settings/Token.ts)).
 
-![Speech settings](/docspace/speech-settings.png)
+![Speech settings](/assets/images/docspace/speech-settings.png)

@@ -1,4 +1,4 @@
-![Show video](/video/install-plugins.png)
+![Show video](/assets/images/video/install-plugins.png)
 
 Install plugins in self-hosted ONLYOFFICE Docs
 
@@ -79,7 +79,7 @@ Follow the steps below to add the plugins to the editor using plugin manager:
 2. Click **Plugin Manager**.
 3. Find the plugin you need and click **Install**.
 
-![Plugins manager](/plugins/plugin-manager.png)
+![Plugins manager](/assets/images/plugins/plugin-manager.png)
 
 The plugin will be added to the opened editors and all the editors you will open afterwords and displayed within the **Plugins** tab.
 

@@ -22,13 +22,13 @@ Here are some fundamental concepts for building plugins step by step:
 
 5. Add a folder for your plugin to *onlyoffice.github.io/sdkjs-plugins/content/*.
 
-   ![New folder](/plugins/new-folder.png)
+   ![New folder](/assets/images/plugins/new-folder.png)
 
 ## Step 2. Coding
 
 [Develop](/plugin/developing) a plugin. Follow the plugin structure described [here](/plugin/structure). The plugin folder must contain three files required for the plugin to work: [config.json](/plugin/config), [index.html](/plugin/indexhtml), [pluginCode.js](/plugin/code).
 
-![Structure](/plugins/plugins-structure.png)
+![Structure](/assets/images/plugins/plugins-structure.png)
 
 Use plugin [methods](/plugin/plugin) and [events](/plugin/events) while writing the plugin code.
 
@@ -40,7 +40,7 @@ Add the ONLYOFFICE [style sheet](/plugin/styles) to the *index.html* file to adj
 <link rel="stylesheet" href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css">
 ```
 
-![Controls](/plugins/controls.png)
+![Controls](/assets/images/plugins/controls.png)
 
 ## Step 4. Localizing
 
@@ -50,7 +50,7 @@ Create the *translations* folder in the plugin directory with *.json* files for 
 
 1. Create an informative **About** window for your plugin. Add a short description and the plugin version, the company developer name and link to its website. Follow the instructions [here](/plugin/variations) to create an **About** variation in the *config.json* file.
 
-2. ![About window](/plugins/about-variation.png)
+2. ![About window](/assets/images/plugins/about-variation.png)
 
    Prepare icons for the plugin and put them into the *resources* folder. Follow the instructions [here](/plugin/icons) to specify icon parameters in the *config.json* file.
 
@@ -66,7 +66,7 @@ Put all the prepared files to the plugin folder and push it to the remote reposi
 
    You can run this app in the debug mode with the *--ascdesktop-support-debug-info* flag. To do this, follow the instructions [here](/desktop/debugging) depending on the operating system you use.
 
-   ![Hello world gif](/plugins/hello-world.gif)
+   ![Hello world gif](/assets/images/plugins/hello-world.gif)
 
 2. Test the plugin in the web version.
 
@@ -80,7 +80,7 @@ Put all the prepared files to the plugin folder and push it to the remote reposi
 
    To debug ONLYOFFICE plugins in the web editors, follow the instructions [here](/plugin/developing#web).
 
-   Please note that this is important to open your plugin in the **Plugin Manager** and check how it looks like in the **My Plugins** tab both in the light and dark themes. Improve the plugin display if necessary. ![Plugin manager](/plugins/plugin-manager.png)
+   Please note that this is important to open your plugin in the **Plugin Manager** and check how it looks like in the **My Plugins** tab both in the light and dark themes. Improve the plugin display if necessary. ![Plugin manager](/assets/images/plugins/plugin-manager.png)
 
 ## Step 7. Publishing
 

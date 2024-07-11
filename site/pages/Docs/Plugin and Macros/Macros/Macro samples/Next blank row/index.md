@@ -42,4 +42,4 @@ End Sub
 
 Result
 
-![Next blank row](/plugins/next_blank_row.png)
+![Next blank row](/assets/images/plugins/next_blank_row.png)

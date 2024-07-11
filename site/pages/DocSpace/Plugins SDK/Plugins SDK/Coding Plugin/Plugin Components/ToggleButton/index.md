@@ -4,7 +4,7 @@ Custom toggle button input.
 
 See the parameters of this component in [storybook](https://storybook.onlyoffice.io/?path=/docs/components-togglebutton--docs).
 
-![Toggle button](/docspace/toggle-button.png)
+![Toggle button](/assets/images/docspace/toggle-button.png)
 
 Example
 

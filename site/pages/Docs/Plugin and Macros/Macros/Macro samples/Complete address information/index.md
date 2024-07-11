@@ -96,4 +96,4 @@ For the macros to function, replace *yourAPIkey* with the API key obtained from 
 
 Result
 
-![Write data](/plugins/complete_address_information.png)
+![Write data](/assets/images/plugins/complete_address_information.png)

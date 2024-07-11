@@ -8,7 +8,7 @@ Connects the [LanguageTool](https://languagetool.org/) assistant, multilingual g
 
 **Analogue:** [Glavred](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/glavred), [Grammalecte](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/grammalecte).
 
-![LanguageTool](/plugins/gifs/language-tool.gif)
+![LanguageTool](/assets/images/plugins/gifs/language-tool.gif)
 
 Installation
 

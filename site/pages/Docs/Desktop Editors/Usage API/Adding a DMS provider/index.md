@@ -83,11 +83,11 @@ Create two icons for the application page and put to the folder specified in the
 
 1. The icon for the connection list. The required icon size is 36x36:
 
-   ![Connection list](/desktop/connection_list.png)
+   ![Connection list](/assets/images/desktop/connection_list.png)
 
 2. The icon for the provider button on the connection page when the **Connected clouds** list is empty. The required icon size is 148x38:
 
-   ![Provider button](/desktop/provider_button.png)
+   ![Provider button](/assets/images/desktop/provider_button.png)
 
 Supported image formats are *.png*, *.jpeg*, *.svg*. We recommend using a *.svg* file for correct display on HiDPI monitors with a 200% scale in the system.
 

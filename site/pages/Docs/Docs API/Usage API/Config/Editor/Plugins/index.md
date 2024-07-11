@@ -22,7 +22,7 @@ https\://example.com/plugins/chess-plugin/config.json
 
 Config.js
 
-![Copy](/copy-content.svg) When you copy, you get the HTML code for the whole example. HTML copied.
+![Copy](/assets/images/copy-content.svg) When you copy, you get the HTML code for the whole example. HTML copied.
 
 ```
 ```
@@ -34,4 +34,4 @@ Parameters
 | autostart                            | Defines the array of the identifiers (as entered in [config.json](/plugin/config#guid)) for the plugins, which will automatically start when the editor opens, and the order the plugins will run one-by-one. | array of string |                                 |
 | pluginsData                          | Defines the array of absolute URLs to the plugin configuration files ([config.json](/plugin/config)).                                                                                                         | array of string |                                 |
 | url                                  | Defines the absolute URL to the directory where the plugins are stored. Deprecated since version 4.3, please use the absolute URLs in [pluginsData](#pluginsData) field.                                      | string          | "https\://example.com/plugins/" |
-| ![](/editor/plugins.png) |                                                                                                                                                                                                               |                 |                                 |
+| ![](/assets/images/editor/plugins.png) |                                                                                                                                                                                                               |                 |                                 |

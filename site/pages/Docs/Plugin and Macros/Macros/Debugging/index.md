@@ -23,7 +23,7 @@ To debug ONLYOFFICE macros, follow the instructions below.
 
 4. Press the **Run** button to run your script.
 
-   Please note that the **debugger** command will only work if the development tools are open. Otherwise, the browser will ignore it. ![Debugger](/plugins/debugger.png)
+   Please note that the **debugger** command will only work if the development tools are open. Otherwise, the browser will ignore it. ![Debugger](/assets/images/plugins/debugger.png)
 
 The **debugger** command works as a breakpoint and pauses the execution at the script point where this command is inserted.
 

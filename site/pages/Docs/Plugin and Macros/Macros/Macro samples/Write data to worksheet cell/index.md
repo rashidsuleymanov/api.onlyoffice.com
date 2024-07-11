@@ -21,4 +21,4 @@ End Sub
 
 Result
 
-![Write data](/plugins/write_data_to_cell.png)
+![Write data](/assets/images/plugins/write_data_to_cell.png)

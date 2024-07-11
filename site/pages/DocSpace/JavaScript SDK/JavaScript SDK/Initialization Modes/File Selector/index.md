@@ -1,6 +1,6 @@
 Opens the file selector and allows you to select a file from a list of available files.
 
-![File-selector mode](/docspace/file-selector-mode.png)
+![File-selector mode](/assets/images/docspace/file-selector-mode.png)
 
 Method
 

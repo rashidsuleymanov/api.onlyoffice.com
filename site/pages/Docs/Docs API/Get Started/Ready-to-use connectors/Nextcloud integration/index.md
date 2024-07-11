@@ -1,4 +1,4 @@
-![Show video](/video/nextcloud_integration.png)
+![Show video](/assets/images/video/nextcloud_integration.png)
 
 How to integrate ONLYOFFICE Docs with Nextcloud
 
@@ -53,11 +53,11 @@ https\://\<documentserver>/
 
 where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the Nextcloud server. The Nextcloud server address must also be accessible from **ONLYOFFICE Docs** for correct work.
 
-![Local](/editor/nextcloud-local.jpg)
+![Local](/assets/images/editor/nextcloud-local.jpg)
 
 Sometimes your network configuration might not allow the requests between installed Nextcloud and ONLYOFFICE Docs using the public addresses. The **Advanced server settings** allows to set the ONLYOFFICE Docs address for internal requests from Nextcloud server and the returning Nextcloud address for the internal requests from ONLYOFFICE Docs. You need to enter them in the appropriate fields.
 
-![Public](/editor/nextcloud-public.jpg)
+![Public](/assets/images/editor/nextcloud-public.jpg)
 
 Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the Nextcloud administrative configuration. In the ONLYOFFICE Docs [config file](/editors/signature/), specify the same secret key and enable the validation.
 

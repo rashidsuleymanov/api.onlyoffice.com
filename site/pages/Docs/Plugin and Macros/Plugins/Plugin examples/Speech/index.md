@@ -6,7 +6,7 @@ Converts the selected text into speech. The plugin uses [guessLanguage](https://
 
 **Supported editors:** documents.
 
-![Speech](/plugins/gifs/speech.gif)
+![Speech](/assets/images/plugins/gifs/speech.gif)
 
 Installation
 

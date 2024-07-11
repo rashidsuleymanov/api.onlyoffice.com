@@ -18,4 +18,4 @@ Methods used: [GetPresentation](/officeapi/presentationapi/api/getpresentation),
 
 Result
 
-![Next blank row](/plugins/remove-shapes.png)
+![Next blank row](/assets/images/plugins/remove-shapes.png)

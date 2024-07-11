@@ -18,7 +18,7 @@ Width 100%
 
 Config.js
 
-![Copy](/copy-content.svg) When you copy, you get the HTML code for the whole example. HTML copied.
+![Copy](/assets/images/copy-content.svg) When you copy, you get the HTML code for the whole example. HTML copied.
 
 ```
 ```

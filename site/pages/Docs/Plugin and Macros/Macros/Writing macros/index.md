@@ -58,7 +58,7 @@ Now let's sum it up with the complete script code:
 
 Paste the code above to the macros window and click **Run**. The table rows from 1 to 200 will be colored alternately in less than a second.
 
-![Alternate raws](/plugins/alternate-raws.png)
+![Alternate raws](/assets/images/plugins/alternate-raws.png)
 
 ## Subscribing to events
 
@@ -74,7 +74,7 @@ Api.attachEvent("asc_onHyperlinkClick", function(){
 
 When you click any hyperlink in a document, the **asc\_onHyperlinkClick** event will be executed and the *"HYPERLINK!!!"* message will appear in the console.
 
-![Click hyperlink](/plugins/click-hyperlink.png)
+![Click hyperlink](/assets/images/plugins/click-hyperlink.png)
 
 ## Assigning macros
 
@@ -85,6 +85,6 @@ In the spreadsheet editor, you can assign a macro to the graphic object:
 3. Choose a macro in the appeared window. You can type the macro name in the corresponding field.
 4. Click the **OK** button.
 
-![Assign macro](/plugins/assign-macro.png)
+![Assign macro](/assets/images/plugins/assign-macro.png)
 
 To run the macro, just click the graphic object and the script will be executed.

@@ -17,4 +17,4 @@ Methods used: [GetDocument](/officeapi/textdocumentapi/api/getdocument), [Create
 Result
 
 \
-![Chart](/plugins/insert-text.png)
+![Chart](/assets/images/plugins/insert-text.png)

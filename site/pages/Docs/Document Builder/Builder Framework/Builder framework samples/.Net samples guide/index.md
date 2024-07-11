@@ -20,18 +20,18 @@ Download one of the Builder .Net samples archive and unzip it into a folder with
 
 ## Sample structure
 
-![C# Builder sample structure](/docbuilder/csharp/sample_structure.png)
+![C# Builder sample structure](/assets/images/docbuilder/csharp/sample_structure.png)
 
 Each sample includes a **code folder**, an **sln file**, and a **template file** if the sample uses a template.\
 The code folder consists of two files: a **project file** and a **program file**.
 
-![C# Builder project file](/docbuilder/csharp/project_file.png)
+![C# Builder project file](/assets/images/docbuilder/csharp/project_file.png)
 
 Please note that the **path to the DocBuilder .dll file in the project file is set to default**. Here you can change the path if DocBuilder is located in a different directory on your computer.
 
 ## Program structure
 
-![C# Builder program file](/docbuilder/csharp/program_file.png)
+![C# Builder program file](/assets/images/docbuilder/csharp/program_file.png)
 
 * Include doctrenderer library [.Net wrapper](/docbuilder/integrationapi/net) classes.
 
@@ -41,7 +41,7 @@ Please note that the **path to the DocBuilder .dll file in the project file is s
 
 * Call the **builder function** (this function is created by user and calls the DocBuilder method to work with documents).
 
-![C# Builder builder function](/docbuilder/csharp/builder_function.png)
+![C# Builder builder function](/assets/images/docbuilder/csharp/builder_function.png)
 
 * [Initialize](/docbuilder/integrationapi/net/cdocbuilder/initialize) the [DocBuilder](/docbuilder/integrationapi/net/cdocbuilder) from the working directory. After that Builder opens or creates a file so that [Context](/docbuilder/integrationapi/net/cdocbuildercontext), [Scope](/docbuilder/integrationapi/net/cdocbuildercontext/createscope) and [Global](/docbuilder/integrationapi/net/cdocbuildercontext/getglobal) classes can be accessed.
 
@@ -54,14 +54,14 @@ Please note that the **path to the DocBuilder .dll file in the project file is s
 Open .sln file inside the sample folder to build the project.\
 Run the program when the project is built.
 
-![Visual Studio build and run sample](/docbuilder/csharp/build_and_run.png)
+![Visual Studio build and run sample](/assets/images/docbuilder/csharp/build_and_run.png)
 
 ## Check the result
 
 After program execution the result file will be saved to the **result path**. It's sample folder root by default.
 
-![C# Builder sample structure result file](/docbuilder/csharp/sample_structure_after.png) ![C# Builder sample folder result file](/docbuilder/csharp/folder_root_after.png)
+![C# Builder sample structure result file](/assets/images/docbuilder/csharp/sample_structure_after.png) ![C# Builder sample folder result file](/assets/images/docbuilder/csharp/folder_root_after.png)
 
 Open **result file** and check the result.
 
-![C# Builder result file](/docbuilder/csharp/result_file.png)
+![C# Builder result file](/assets/images/docbuilder/csharp/result_file.png)

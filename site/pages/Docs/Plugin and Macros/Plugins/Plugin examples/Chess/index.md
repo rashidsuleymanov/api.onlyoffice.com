@@ -6,7 +6,7 @@ Inserts a Chess Board object into the document editor. The object makes it possi
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![Chess](/plugins/gifs/chess.gif)
+![Chess](/assets/images/plugins/gifs/chess.gif)
 
 Installation
 

@@ -6,7 +6,7 @@ Searches for target text and replaces it with something else.
 
 **Supported editors:** documents.
 
-![SearchandReplace](/plugins/gifs/search-and-replace.gif)
+![SearchandReplace](/assets/images/plugins/gifs/search-and-replace.gif)
 
 Installation
 

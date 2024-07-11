@@ -1,6 +1,6 @@
 The steps below explain the process of inserting data into the spreadsheet by an external link in ONLYOFFICE Docs.
 
-![Inserting external data](/editor/insert-external-data.svg)
+![Inserting external data](/assets/images/editor/insert-external-data.svg)
 
 1. The user copies the cell value to the clipboard from the **document editor** of the source spreadsheet. At the same time, the special data is also copied.
 2. The user inserts the copied data into the **document editor** of the destination spreadsheet.
@@ -52,7 +52,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
 6. If the clipboard has the source spreadsheet data specified in step 3, and the destination spreadsheet has the *onRequestReferenceData* event handler in the initialization config, then the *Paste link* button is displayed in the dialog box.
 
-   ![Paste link](/editor/paste-link.png)
+   ![Paste link](/assets/images/editor/paste-link.png)
 
 7. When the user clicks the *Paste link* button, the formula is inserted into the current cell, and the *referenceData* object is saved to the destination file. The inserted formula is displayed as follows:
 
@@ -83,7 +83,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
    };
    ```
 
-   ![Update values](/editor/update-values.png)
+   ![Update values](/assets/images/editor/update-values.png)
 
 9. In order to refresh the data from the source file, the [setReferenceData](/editors/methods#setReferenceData) method must be called. When calling this method, the token must be added to validate the parameters.
 
@@ -113,7 +113,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
    An object with the unique file data, the file path, and a new browser tab name are sent in the *data* parameter.
 
-   ![open-source](/editor/open-source.png)
+   ![open-source](/assets/images/editor/open-source.png)
 
    Example
 
@@ -145,7 +145,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
    When the button is clicked, you must call the [setReferenceSource](/editors/methods#setReferenceSource) method to change a source of the external data. When calling this method, the token must be added to validate the parameters. If the event is not declared, the *Change source* button will not be displayed.
 
-   To send the data to the *setReferenceSource* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* parameter is used. ![Change source](/editor/change-source.png)
+   To send the data to the *setReferenceSource* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* parameter is used. ![Change source](/assets/images/editor/change-source.png)
 
    Example
 

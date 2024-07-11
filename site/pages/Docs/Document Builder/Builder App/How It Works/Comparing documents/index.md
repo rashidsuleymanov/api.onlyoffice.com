@@ -44,4 +44,4 @@ If you need to compare two documents, you can use **Document Builder**. The step
 
 4. Download the document from the received link. Now you can check all the document differences and accept or reject them using the corresponding buttons on the top toolbar.
 
-   ![Compare documents](/docbuilder/compare-documents.png)
+   ![Compare documents](/assets/images/docbuilder/compare-documents.png)

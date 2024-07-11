@@ -17,7 +17,7 @@ You can debug any Document Builder [component](/docbuilder/basic#builder-compone
 
 4. Press the **Run** button to run your script.
 
-   Please note that the **debugger** command will only work if the development tools are open. Otherwise, the browser will ignore it. ![Builder debugger](/docbuilder/builder-debugger.png)
+   Please note that the **debugger** command will only work if the development tools are open. Otherwise, the browser will ignore it. ![Builder debugger](/assets/images/docbuilder/builder-debugger.png)
 
 The **debugger** command works as a breakpoint and pauses the execution at the script point where this command is inserted.
 
@@ -49,10 +49,10 @@ This instruction can also be used for any [Builder.Framework](/docbuilder/framew
 
 4. A link will appear in the terminal. You must open it in your Chrome/Chromium browser to connect to the JavaScript context.
 
-   ![Terminal](/docbuilder/terminal.png)
+   ![Terminal](/assets/images/docbuilder/terminal.png)
 
 5. Set the breakpoints by clicking the line numbers and run your script again.
 
 6. Now you can debug the executed methods.
 
-   ![DevTools](/docbuilder/devtools.png)
+   ![DevTools](/assets/images/docbuilder/devtools.png)

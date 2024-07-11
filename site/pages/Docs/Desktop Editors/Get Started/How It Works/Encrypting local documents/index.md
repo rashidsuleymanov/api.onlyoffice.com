@@ -142,7 +142,7 @@ The *index.html* file will look as follows:
 
 With it, we will get a new tab called **Encryption** on the main app page:
 
-![Encryption exabled](/desktop/encryption-enabled.png)
+![Encryption exabled](/assets/images/desktop/encryption-enabled.png)
 
 Enable encryption by ticking the checkbox:
 

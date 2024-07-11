@@ -42,4 +42,4 @@ The host can handle converted documents in a unique way, by handling the [PutRel
 
 The online office navigates to the [HostEditUrl](/editors/wopi/restapi/checkfileinfo#HostEditUrl) that's returned in the [PutRelativeFile](/editors/wopi/restapi/putrelativefile) response, which the host controls. So, hosts can send the user to any URL after the conversion is finished. For example, a host might redirect the user to an interstitial page that informs them that their document has been converted.
 
-![Convert binary files](/editor/convert-binary-files.jpg)
+![Convert binary files](/assets/images/editor/convert-binary-files.jpg)

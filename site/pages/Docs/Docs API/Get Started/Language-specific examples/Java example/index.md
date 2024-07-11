@@ -67,7 +67,7 @@ To run the Java example code, install the Java version appropriate for your OS a
 
    In the **Variable Value** field, enter your **JDK** or **JRE** installation path, for example *C:\Program Files\Java\jdk1.8.0\_65*.
 
-   <img alt="Add new environment variable" src="/java/make-var.png" width="832px">
+   <img alt="Add new environment variable" src="/assets/images/java/make-var.png" width="832px">
 
    Check if the variable created successfully by **echo** command in the **Command Prompt**:
 
@@ -89,7 +89,7 @@ To run the Java example code, install the Java version appropriate for your OS a
 
    You will see the new **Tomcat** console window displayed that provides the information and messages about Tomcat startup:
 
-   <img alt="Tomcat console window" src="/java/tomcat-cmd.jpg" width="832px">
+   <img alt="Tomcat console window" src="/assets/images/java/tomcat-cmd.jpg" width="832px">
 
    Test your Tomcat installation using the address in a web browser:
 
@@ -103,11 +103,11 @@ To run the Java example code, install the Java version appropriate for your OS a
 
 1. Open Tomcat Web Application Manager by clicking **Manager App:**
 
-   <img alt="Manager app" src="/java/manager.jpg" width="832px">
+   <img alt="Manager app" src="/assets/images/java/manager.jpg" width="832px">
 
 2. Tomcat Web Application Manager will request the **username** and the **password:**
 
-   <img alt="Sign in to Tomcat app" src="/java/author.jpg" width="300px">
+   <img alt="Sign in to Tomcat app" src="/assets/images/java/author.jpg" width="300px">
 
    Specify user data in *tomcat-users.xml* file in the Apache Tomcat installation folder. Define the **manager-gui** user role, specify the **user name** and **password** values:
 
@@ -120,12 +120,12 @@ To run the Java example code, install the Java version appropriate for your OS a
 
 3. Upload the Java project in Tomcat Web Application Manager. For that click **Choose File** in the **WAR file to deploy** section and find the *.war* file in the Java project folder, then click **Deploy**.
 
-   <img alt="Deploy WAR file" src="/java/upload-app.jpg" width="700px">
-   <img alt="Choose WAR file" src="/java/war-file.jpg" width="700px">
+   <img alt="Deploy WAR file" src="/assets/images/java/upload-app.jpg" width="700px">
+   <img alt="Choose WAR file" src="/assets/images/java/war-file.jpg" width="700px">
 
 4. You will see the project in the **Application List**:
 
-   <img alt="Application list" src="/java/manager-app.jpg" width="832px">
+   <img alt="Application list" src="/assets/images/java/manager-app.jpg" width="832px">
 
 5. Click the link with the application name to run it.
 

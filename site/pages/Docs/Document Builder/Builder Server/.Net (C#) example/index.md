@@ -34,7 +34,7 @@ If you want to run the example application using the Microsoft **IIS** service, 
 
    There select **Internet Information Services** -> **World Wide Web Services** -> **Application Development Features** and enable all the options for **.NET 4.6** (these include **.NET Extensibility 4.6** and **ASP.NET 4.6** options):
 
-   ![How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)](/docbuilder/csharp/net46.png)
+   ![How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)](/assets/images/docbuilder/csharp/net46.png)
 
    Please make sure that the **.NET Framework 4.6 Advanced Services** -> **ASP.NET 4.6** is also enabled.
 
@@ -46,7 +46,7 @@ If you want to run the example application using the Microsoft **IIS** service, 
 
    On the **Connections** panel right-click the **Sites** node in the tree, then click **Add Website...**:
 
-   ![How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)](/docbuilder/csharp/add.png)
+   ![How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)](/assets/images/docbuilder/csharp/add.png)
 
 4. #### Configure your website
 
@@ -56,19 +56,19 @@ If you want to run the example application using the Microsoft **IIS** service, 
 
    Specify the unique value used only for this website in the **Port** box:
 
-   ![How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)](/docbuilder/csharp/sitename.png)
+   ![How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)](/assets/images/docbuilder/csharp/sitename.png)
 
 5. #### Check for the .NET platform version specified in IIS manager for you website
 
    Choose the **v4.0.** version for **.NET CLR Version** clicking the **Application Pool** then right-clicking the platform name select the **Set application pool defaults** and finally set the necessary **.NET CLR version**:
 
-   ![How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)](/docbuilder/csharp/platform.png)
+   ![How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)](/assets/images/docbuilder/csharp/platform.png)
 
 6. #### Browse your website with the IIS manager
 
    Right-click the site, select the **Manage Website** contextual menu option, then use **Browse**:
 
-   ![How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)](/docbuilder/csharp/browse.png)
+   ![How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)](/assets/images/docbuilder/csharp/browse.png)
 
 If you want to experiment with the code changes, you can find the main application code in the *\DocumentBuilder\Controllers\\* control. The path to the **ONLYOFFICE Document Builder** executable can be changed in the **web.config** file in the following line:
 

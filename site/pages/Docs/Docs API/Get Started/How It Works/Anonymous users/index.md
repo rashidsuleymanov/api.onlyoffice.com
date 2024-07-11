@@ -1,6 +1,6 @@
 The reference figure and the steps below explain the process of setting a name to an anonymous user in ONLYOFFICE Docs.
 
-![Anonymous](/editor/anonymous-user.png)
+![Anonymous](/assets/images/editor/anonymous-user.png)
 
 1. The anonymous user uses the **document manager** to open a document for viewing or editing.
 
@@ -22,11 +22,11 @@ The reference figure and the steps below explain the process of setting a name t
 
 3. If the user name is not specified, it will be requested. The request can be turned off with the *"request"=false* value of the [editorConfig.customization.anonymous](/editors/config/editor/customization#anonymous) parameter.
 
-   ![Name request](/editor/name-request.png)
+   ![Name request](/assets/images/editor/name-request.png)
 
 4. After the anonymous user’s name is set, the postfix is added to it via the *label* field of the *editorConfig.customization.anonymous* parameter to distinguish guests during the coediting session. By default this postfix is *"Guest"*.
 
-   ![Label](/editor/label.png)
+   ![Label](/assets/images/editor/label.png)
 
    ```
    var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -54,6 +54,6 @@ The reference figure and the steps below explain the process of setting a name t
 
 To restrict anonymous users access to the editor or live viewer, set the [services.CoAuthoring.server.isAnonymousSupport](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-isAnonymousSupport) parameter in the configuration file to **false**. In this case, when the anonymous user tries to open the editor, a warning will occur.
 
-![Anonymous user warning](/editor/anonymous-warning.jpg)
+![Anonymous user warning](/assets/images/editor/anonymous-warning.jpg)
 
 The live viewer will switch to the offline viewer without warnings.

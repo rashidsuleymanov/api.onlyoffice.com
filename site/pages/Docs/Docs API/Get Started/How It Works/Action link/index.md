@@ -1,6 +1,6 @@
 The reference figure and the steps below explain the process of working with links in ONLYOFFICE Docs.
 
-![Action link](/editor/actionLink-create.png)
+![Action link](/assets/images/editor/actionLink-create.png)
 
 1. The user sends a request to get a link to the document which contains a bookmark in the **document editor**.
 2. The **document editor** sends the request to the **document manager** where the software integrators create the link.
@@ -12,7 +12,7 @@ The reference figure and the steps below explain the process of working with lin
 
 2. Specify the event handler for the *Get link* button to be displayed in the bookmark editing menu in the configuration script for Document Editor initialization. When the [onMakeActionLink](/editors/config/events#onMakeActionLink) event is called, the user request is sent to the software integrators which create the link in the document storage service.
 
-   ![Action link](/editor/onMakeActionLink.png)
+   ![Action link](/assets/images/editor/onMakeActionLink.png)
 
    ```
    var onMakeActionLink = function (event){
@@ -39,7 +39,7 @@ The reference figure and the steps below explain the process of working with lin
 
 ## Opening the bookmark
 
-![Action link](/editor/actionLink-open.png)
+![Action link](/assets/images/editor/actionLink-open.png)
 
 1. The user follows the link in the **document manager**.
 2. The **document manager** sends the initialization *editorConfig* to the **document editor**.

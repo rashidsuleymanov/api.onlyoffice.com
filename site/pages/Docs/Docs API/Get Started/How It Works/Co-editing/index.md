@@ -1,6 +1,6 @@
 The reference figure and the steps below explain the process of co-editing a document in ONLYOFFICE Docs.
 
-![Co-editing](/editor/coedit.jpg)
+![Co-editing](/assets/images/editor/coedit.jpg)
 
 1. User 1 and user 2 open one and the same document in **document editor**, i.e. when opening the file one and the same [document.key](/editors/config/document#key) has been used.
 2. User 1 makes changes to the opened document.
@@ -8,7 +8,7 @@ The reference figure and the steps below explain the process of co-editing a doc
 4. The **document editing service** sends the changes made by user 1 to the user 2 **document editor**.
 5. Now these changes become visible to user 2.
 
-![Co-editing](/editor/coedit-view.png)
+![Co-editing](/assets/images/editor/coedit-view.png)
 
 ## How this can be done in practice
 
@@ -255,12 +255,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
 The **Fast** mode is used by default and defines the real-time co-editing. All changes are saved automatically and the possibility to redo the last undone operation is not available. This mode displays the user cursors and tooltips with their names when they are editing the text.
 
-![Fast mode](/editor/fast-mode.png)
+![Fast mode](/assets/images/editor/fast-mode.png)
 
 ### Strict mode
 
 In the **Strict** mode, you need to use the **Save** button to sync the changes made by you and other users. Until you click this button, the changes made by others are hidden. When a document is being edited by several users simultaneously, the edited text is marked with dashed lines of different colors.
 
-When the user saves the changes by clicking the **Save** button, the others will receive a note about updates. To accept them and save your own changes to show them to other users, click the ![Save updates](/editor/save-updates.png "Save updates") button in the left upper corner of the top toolbar. The updates will be highlighted.
+When the user saves the changes by clicking the **Save** button, the others will receive a note about updates. To accept them and save your own changes to show them to other users, click the ![Save updates](/assets/images/editor/save-updates.png "Save updates") button in the left upper corner of the top toolbar. The updates will be highlighted.
 
-![Strict mode](/editor/strict-mode.png)
+![Strict mode](/assets/images/editor/strict-mode.png)

@@ -42,6 +42,6 @@
 
 3. Come up with the plugin's structure. All the required files are described [here](/docspace/pluginssdk/structure). Everything else can be organized as you wish. For example, in the **draw\.io** plugin, we put the code for each plugin type in separate folders, while in the **speech-to-text** plugin, this code is placed in the *src* folder.
 
-   ![Speech plugin structure](/docspace/speech-plugin-structure.png)
+   ![Speech plugin structure](/assets/images/docspace/speech-plugin-structure.png)
 
 4. Choose a name for your plugin and write a description for it.

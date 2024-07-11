@@ -4,7 +4,7 @@ Plain text.
 
 See the parameters of this component in [storybook](https://storybook.onlyoffice.io/?path=/docs/components-text--docs).
 
-![Text](/docspace/text.png)
+![Text](/assets/images/docspace/text.png)
 
 Extra parameters
 

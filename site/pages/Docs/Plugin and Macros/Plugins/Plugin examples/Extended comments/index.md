@@ -6,7 +6,7 @@ Pastes, edits, and removes comments and replies (with user data) in a document.
 
 **Supported editors:** documents.
 
-![ExtendedComments](/plugins/gifs/extended-comments.gif)
+![ExtendedComments](/assets/images/plugins/gifs/extended-comments.gif)
 
 Installation
 

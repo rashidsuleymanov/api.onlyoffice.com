@@ -6,7 +6,7 @@ Connects [Big Huge Thesaurus](https://words.bighugelabs.com/) to search for word
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![Thesaurus](/plugins/gifs/thesaurus.gif)
+![Thesaurus](/assets/images/plugins/gifs/thesaurus.gif)
 
 Installation
 

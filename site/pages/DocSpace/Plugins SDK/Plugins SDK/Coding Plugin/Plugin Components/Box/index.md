@@ -4,7 +4,7 @@ A container that lays out its contents in one direction. Box provides general CS
 
 See the parameters of this component in [storybook](https://storybook.onlyoffice.io/?path=/docs/components-box--docs).
 
-![Box](/docspace/box.png)
+![Box](/assets/images/docspace/box.png)
 
 Extra parameters
 

@@ -6,7 +6,7 @@ Searches for and replaces text in the document when it is reopened.
 
 **Supported editors:** documents.
 
-![SearchAndReplaceOnStart](/plugins/gifs/search-and-replace-on-start.gif)
+![SearchAndReplaceOnStart](/assets/images/plugins/gifs/search-and-replace-on-start.gif)
 
 Installation
 

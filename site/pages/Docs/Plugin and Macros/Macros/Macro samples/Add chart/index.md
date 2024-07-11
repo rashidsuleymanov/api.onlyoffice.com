@@ -23,4 +23,4 @@ End Sub
 
 Result
 
-![Chart](/plugins/add_chart.png)
+![Chart](/assets/images/plugins/add_chart.png)

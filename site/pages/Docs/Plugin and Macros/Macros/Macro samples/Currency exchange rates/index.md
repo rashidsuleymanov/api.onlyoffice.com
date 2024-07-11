@@ -62,4 +62,4 @@ Methods used: [GetSheet](/officeapi/spreadsheetapi/api/getsheet), [GetRangeByNum
 
 Result
 
-![Currency pair USD - EUR](/plugins/currencies-usd-eur.png)
+![Currency pair USD - EUR](/assets/images/plugins/currencies-usd-eur.png)

@@ -8,13 +8,13 @@ The plugin is available in the official [Alfresco Add-ons directory](https://com
 
 * The plugin will create a new **Edit in ONLYOFFICE** menu option within the document library for Office documents.
 
-  ![Edit in OnlyOffice](/editor/alfresco.png)
+  ![Edit in OnlyOffice](/assets/images/editor/alfresco.png)
 
   This allows multiple users to collaborate in real time and to save back those changes to Alfresco.
 
 * To convert ODT, ODP, ODS, DOC, XLS, PPT files into their OOXML counterparts, select the **Convert using ONLYOFFICE** option. Resulting files will be placed in the same folder. You can also configure rules for a folder, that will automatically convert files on upload or on change. Details you can find [here](https://docs.alfresco.com/content-services/latest/using/content/rules/).
 
-* To create a new document, open the folder where you want to create a document and click the **Create...** button. ![Create new...](/editor/alfresco-create.png)
+* To create a new document, open the folder where you want to create a document and click the **Create...** button. ![Create new...](/assets/images/editor/alfresco-create.png)
 
 ## Installing ONLYOFFICE Docs
 

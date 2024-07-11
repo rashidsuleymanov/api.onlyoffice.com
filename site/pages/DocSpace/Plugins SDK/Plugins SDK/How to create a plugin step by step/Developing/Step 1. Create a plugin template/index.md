@@ -27,11 +27,11 @@ Create a plugin template and configure its settings which will be displayed in t
    | Plugin homepage                                               | https\://github.com/ONLYOFFICE/docspace-plugin                                                                                 |
    | Select scopes (Press \<space> to select, Enter when finished) | API, Settings, Context menu                                                                                                    |
 
-   ![Speech template](/docspace/speech-template.png)
+   ![Speech template](/assets/images/docspace/speech-template.png)
 
    A folder with the plugin template will be placed at the path where you executed the command.
 
-   ![Speech template location](/docspace/speech-template-location.png)
+   ![Speech template location](/assets/images/docspace/speech-template-location.png)
 
    You can change all the specified parameters later in the [package.json](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/speech-to-text/package.json) file.
 

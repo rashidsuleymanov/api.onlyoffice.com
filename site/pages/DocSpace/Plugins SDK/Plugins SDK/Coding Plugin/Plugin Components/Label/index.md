@@ -4,7 +4,7 @@ Field name in the form.
 
 See the parameters of this component in [storybook](https://storybook.onlyoffice.io/?path=/docs/components-label--docs).
 
-![Label](/docspace/label.png)
+![Label](/assets/images/docspace/label.png)
 
 Example
 

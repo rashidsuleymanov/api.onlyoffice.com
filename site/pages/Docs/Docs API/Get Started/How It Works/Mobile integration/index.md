@@ -11,7 +11,7 @@ In this section, we will look at the integration process via [WKWebView](https:/
 
 This example demonstrates how to integrate ONLYOFFICE mobile web editors with the ONLYOFFICE [test or DMS sample](/editors/demopreview).
 
-![iOS integration via test sample](/editor/ios-test-sample.png)
+![iOS integration via test sample](/assets/images/editor/ios-test-sample.png)
 
 **Opening ONLYOFFICE editors**
 
@@ -50,11 +50,11 @@ This example demonstrates how to integrate ONLYOFFICE mobile web editors with th
    }
    ```
 
-   ![iOS error](/editor/ios-error.png)
+   ![iOS error](/assets/images/editor/ios-error.png)
 
    **DocumentServerURL is not specified**
 
-   ![iOS managing](/editor/ios-managing.png)
+   ![iOS managing](/assets/images/editor/ios-managing.png)
 
    **DocumentServerURL is specified**
 
@@ -98,15 +98,15 @@ This example demonstrates how to integrate ONLYOFFICE mobile web editors with th
 
    The full code for **DocumentServerViewController** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/DocumentServerDemo/DocumentServerViewController.swift).
 
-   ![Activity indicator](/editor/activity-indicator.png)
+   ![Activity indicator](/assets/images/editor/activity-indicator.png)
 
    **Activity Indicator**
 
-   ![Progress view](/editor/progress-view.png)
+   ![Progress view](/assets/images/editor/progress-view.png)
 
    **Progress View**
 
-   ![Buttons](/editor/buttons.png)
+   ![Buttons](/assets/images/editor/buttons.png)
 
    **Buttons**
 
@@ -169,7 +169,7 @@ func webView(_ webView: WKWebView,
 }
 ```
 
-![Go back](/editor/exit-button.png)
+![Go back](/assets/images/editor/exit-button.png)
 
 **Button to exit the editor**
 
@@ -179,7 +179,7 @@ The full code for **DocumentServerEditorViewController** can be found [here](htt
 
 This example demonstrates how to open the ONLYOFFICE editors via WKWebView using the editor configuration described in the [API documentation](/editors/basic) and the [configuration examples](/editors/try).
 
-![iOS integration via api](/editor/ios-api-config.png)
+![iOS integration via api](/assets/images/editor/ios-api-config.png)
 
 **Opening ONLYOFFICE editors**
 
@@ -247,7 +247,7 @@ This example demonstrates how to open the ONLYOFFICE editors via WKWebView using
    }
    ```
 
-   ![Editor samples](/editor/editor-samples.png)
+   ![Editor samples](/assets/images/editor/editor-samples.png)
 
    **ONLYOFFICE Editor Samples**
 
@@ -370,7 +370,7 @@ In this section, we will look at the integration process via [WebView](https://d
 
 This example demonstrates how to integrate ONLYOFFICE mobile web editors with the ONLYOFFICE [test or DMS sample](/editors/demopreview).
 
-![Android integration via test sample](/editor/android-test-sample.png)
+![Android integration via test sample](/assets/images/editor/android-test-sample.png)
 
 **Opening ONLYOFFICE editors**
 
@@ -403,11 +403,11 @@ This example demonstrates how to integrate ONLYOFFICE mobile web editors with th
    }
    ```
 
-   ![Android error](/editor/android-error.png)
+   ![Android error](/assets/images/editor/android-error.png)
 
    **DocumentServerURL is not specified**
 
-   ![Android managing](/editor/android-managing.png)
+   ![Android managing](/assets/images/editor/android-managing.png)
 
    **DocumentServerURL is specified**
 

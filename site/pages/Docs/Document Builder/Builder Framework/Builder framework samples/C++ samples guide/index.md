@@ -20,18 +20,18 @@ Download one of the Builder C++ samples archive and unzip it into a folder with 
 
 ## Sample structure
 
-![C++ Builder sample structure](/docbuilder/cpp/sample_structure.png)
+![C++ Builder sample structure](/assets/images/docbuilder/cpp/sample_structure.png)
 
 Each sample includes a **code folder**, an **sln file**, and a **template file** if the sample uses a template.\
 The code folder consists of a **C++ program file** and **project files**.
 
-![C++ Builder project file](/docbuilder/cpp/project_file.png)
+![C++ Builder project file](/assets/images/docbuilder/cpp/project_file.png)
 
 Please note that the **path to the DocBuilder .dll file in the project file is set to default**. You can change the path in the **Sample.vcxproj.user** file if DocBuilder is located in a different directory on your computer.
 
 ## Program structure
 
-![C# Builder program file](/docbuilder/cpp/program_file.png)
+![C# Builder program file](/assets/images/docbuilder/cpp/program_file.png)
 
 * Include doctrenderer library [C++ wrapper](/docbuilder/integrationapi/c)
 
@@ -39,7 +39,7 @@ Please note that the **path to the DocBuilder .dll file in the project file is s
 
 * Create the **main function** (this function works with the DocBuilder methods to edit documents).
 
-![C# Builder builder function](/docbuilder/cpp/builder_function.png)
+![C# Builder builder function](/assets/images/docbuilder/cpp/builder_function.png)
 
 * [Initialize](/docbuilder/integrationapi/c/cdocbuilder/initialize) the [DocBuilder](/docbuilder/integrationapi/c/cdocbuilder) from the working directory. After that Builder opens or creates a file so that [Context](/docbuilder/integrationapi/c/cdocbuildercontext), [Scope](/docbuilder/integrationapi/c/cdocbuildercontext/createscope) and [Global](/docbuilder/integrationapi/c/cdocbuildercontext/getglobal) classes can be accessed.
 
@@ -52,14 +52,14 @@ Please note that the **path to the DocBuilder .dll file in the project file is s
 Open .sln file inside the sample folder to build the project.\
 Run the program when the project is built.
 
-![Visual Studio build and run sample](/docbuilder/cpp/build_and_run.png)
+![Visual Studio build and run sample](/assets/images/docbuilder/cpp/build_and_run.png)
 
 ## Check the result
 
 After program execution the result file will be saved to the **result path**. It's sample folder root by default.
 
-![C# Builder sample structure result file](/docbuilder/cpp/sample_structure_after.png) ![C# Builder sample folder result file](/docbuilder/cpp/folder_root_after.png)
+![C# Builder sample structure result file](/assets/images/docbuilder/cpp/sample_structure_after.png) ![C# Builder sample folder result file](/assets/images/docbuilder/cpp/folder_root_after.png)
 
 Open **result file** and check the result.
 
-![C# Builder result file](/docbuilder/csharp/result_file.png)
+![C# Builder result file](/assets/images/docbuilder/csharp/result_file.png)

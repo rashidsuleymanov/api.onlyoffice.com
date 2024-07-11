@@ -1,6 +1,6 @@
 The reference figure and the steps below explain the process of mentioning users in comments in ONLYOFFICE Docs.
 
-![Mentions](/editor/mentions-create.png)
+![Mentions](/assets/images/editor/mentions-create.png)
 
 1. The user sends a request to get a list of users to mention by typing **+** sign in the comment field in the **document editor**.
 2. The **document editor** informs the **document manager** about the request.
@@ -14,7 +14,7 @@ The reference figure and the steps below explain the process of mentioning users
 
 2. In the configuration script for Document Editor initialization, specify the event handler for the hint about mentioning users in the comments to be displayed. When the user types the **+** sign, the [onRequestUsers](/editors/config/events#onRequestUsers) event is called and the commenter can select other users for mentioning in the comments. The *data.c* parameter with the *mention* operation type is passed in this event.
 
-   ![Mentions](/editor/onRequestUsers.png)
+   ![Mentions](/assets/images/editor/onRequestUsers.png)
 
    ```
    var onRequestUsers = function(event) {
@@ -66,7 +66,7 @@ The reference figure and the steps below explain the process of mentioning users
 
 ## Opening the comment
 
-![Mentions](/editor/actionLink-open.png)
+![Mentions](/assets/images/editor/actionLink-open.png)
 
 1. The user follows the link in the **document manager**.
 2. The **document manager** sends the initialization *editorConfig* to the **document editor**.
@@ -99,7 +99,7 @@ When the [onRequestSendNotify](/editors/config/events#onRequestSendNotify) event
 
 In the case when the [document.info.sharingSettings](/editors/config/document/info#sharingSettings) field is used in the document initialization but the list of the users from the [onRequestSendNotify](/editors/config/events#onRequestSendNotify) event is different, the [setSharingSettings](/editors/methods#setSharingSettings) method must be called.
 
-![Mentions](/editor/sharing_settings.png)
+![Mentions](/assets/images/editor/sharing_settings.png)
 
 ```
 docEditor.setSharingSettings({
@@ -121,4 +121,4 @@ In the case when the [onRequestSendNotify](/editors/config/events#onRequestSendN
 
 Please note that it will only be available for the comments if the [onRequestSendNotify](/editors/config/events#onRequestSendNotify) event is set.
 
-![Mentions](/editor/mentionShare.png)
+![Mentions](/assets/images/editor/mentionShare.png)

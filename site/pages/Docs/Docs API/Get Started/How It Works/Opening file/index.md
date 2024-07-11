@@ -1,6 +1,6 @@
 The reference figure and the steps below explain the process of opening a document in ONLYOFFICE Docs.
 
-![Opening File](/editor/opening.svg)
+![Opening File](/assets/images/editor/opening.svg)
 
 1. The user uses the **document manager** (found in his/her browser) to open the document for viewing or editing.
 
