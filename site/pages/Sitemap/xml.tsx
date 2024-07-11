@@ -1,7 +1,7 @@
 import {Sitemap} from "@onlyoffice/eleventy-sitemap"
 import {type Data} from "@onlyoffice/eleventy-types"
 import {Config} from "@onlyoffice/site-config"
-import {type JSX, Fragment, h} from "preact"
+import {Fragment, type JSX, h} from "preact"
 
 export function data(): Data {
   return {

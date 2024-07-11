@@ -1,4 +1,4 @@
-import type {DocEditorConfig} from "@onlyoffice/document-server-types"
+import {type DocEditorConfig} from "@onlyoffice/document-server-types"
 import {setProperty} from "dot-prop"
 
 type Control = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement

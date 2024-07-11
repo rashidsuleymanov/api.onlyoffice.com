@@ -14,11 +14,13 @@ import {Config} from "@onlyoffice/site-config"
 import {markupPlugin} from "./config/markup.ts"
 import {navigationPlugin} from "./config/navigation.ts"
 import {staticPlugin} from "./config/static.ts"
+import {eleventyMarkdown} from "./internal/markdown.tsx"
 
 function config(uc: UserConfig): unknown {
   uc.addPlugin(eleventyClean)
   uc.addPlugin(staticPlugin)
   uc.addPlugin(markupPlugin)
+  uc.addPlugin(eleventyMarkdown)
 
   uc.addPlugin(eleventyLightningcss, {
     filename: "assets/main.css",

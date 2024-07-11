@@ -1,14 +1,18 @@
 import {ComboboxContainer} from "./element.ts"
-import type {
-  ComboboxContainerChangeEventListener,
-  GlobalComboboxContainerChangeHandler
+import {
+  ComboboxContainerChangedEvent,
+  type ComboboxContainerChangedEventListener,
+  ComboboxContainerChangeEvent,
+  type ComboboxContainerChangeEventListener,
+  type GlobalComboboxContainerChangedHandler,
+  type GlobalComboboxContainerChangeHandler,
 } from "./events.ts"
-import {ComboboxContainerChangeEvent} from "./events.ts"
 
 declare global {
   interface Window {
     ComboboxContainer: typeof ComboboxContainer
     ComboboxContainerChangeEvent: typeof ComboboxContainerChangeEvent
+    ComboboxContainerChangedEvent: typeof ComboboxContainerChangedEvent
   }
 
   interface HTMLElementTagNameMap {
@@ -25,10 +29,12 @@ declare global {
 
   interface GlobalEventHandlersEventMap {
     comboboxcontainerchange: ComboboxContainerChangeEventListener
+    comboboxcontainerchanged: ComboboxContainerChangedEventListener
   }
 
   interface GlobalEventHandlers {
     oncomboboxcontainerchange: GlobalComboboxContainerChangeHandler | null
+    oncomboboxcontainerchanged: GlobalComboboxContainerChangedHandler | null
   }
 }
 
@@ -39,4 +45,5 @@ export function define(): void {
   window.ComboboxContainer = ComboboxContainer
   window.customElements.define(ComboboxContainer.tagName, ComboboxContainer)
   window.ComboboxContainerChangeEvent = ComboboxContainerChangeEvent
+  window.ComboboxContainerChangedEvent = ComboboxContainerChangedEvent
 }

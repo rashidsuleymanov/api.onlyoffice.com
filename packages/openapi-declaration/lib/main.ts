@@ -1,13 +1,12 @@
 import {createHash} from "node:crypto"
 import process from "node:process"
-import type {TransformCallback} from "node:stream"
-import {Transform} from "node:stream"
+import {Transform, type TransformCallback} from "node:stream"
 import {Console} from "@onlyoffice/console"
 import * as example from "@onlyoffice/service-declaration/example.ts"
 import type * as REST from "@onlyoffice/service-declaration"
 import * as service from "@onlyoffice/service-declaration"
 import {slug} from "github-slugger"
-import type {OpenAPIV3_1 as OpenAPI} from "openapi-types"
+import {type OpenAPIV3_1 as OpenAPI} from "openapi-types"
 import pack from "../package.json" with {type: "json"}
 
 const console = new Console(pack.name, process.stdout, process.stderr)

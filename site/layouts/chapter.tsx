@@ -1,5 +1,5 @@
 import {Sitemap, type SitemapEntity} from "@onlyoffice/eleventy-sitemap"
-import type {Context, Data} from "@onlyoffice/eleventy-types"
+import {type Context, type Data} from "@onlyoffice/eleventy-types"
 import {
   Chapter,
   ChapterContent,
@@ -15,7 +15,7 @@ import {
 } from "@onlyoffice/site-kit"
 import {GithubIcon} from "@onlyoffice/ui-icons/rich/24.tsx"
 import {Breadcrumb, BreadcrumbCrumb, Content} from "@onlyoffice/ui-kit"
-import {type JSX, Fragment, h} from "preact"
+import {Fragment, type JSX, h} from "preact"
 import {Tree} from "../components/tree/tree.ts"
 
 export function data(): Data {
@@ -27,24 +27,24 @@ export function data(): Data {
 export function render({content, ...ctx}: Context): JSX.Element {
   const s = Sitemap.shared
 
-  const pe = s.page(ctx.page.url)
-  if (!pe) {
+  const pe = s.find(ctx.page.url, "url")
+  if (!pe || pe.type !== "page") {
     throw new Error(`Page not found: ${ctx.page.url}`)
   }
 
-  const pt = s.path(pe)
+  const pt = s.trace(pe)
   if (pt.length < 3) {
     throw new Error(`Chapter layout requires at least three levels: ${pe.url}`)
   }
 
   const [, rd, cd] = pt
 
-  const re = s.entity(rd)
+  const re = s.find(rd, "id")
   if (!re || re.type !== "page") {
     throw new Error(`Part not found: ${rd}`)
   }
 
-  const ce = s.entity(cd)
+  const ce = s.find(cd, "id")
   if (!ce || ce.type !== "page") {
     throw new Error(`Chapter not found: ${cd}`)
   }
@@ -112,20 +112,20 @@ export function InternalChapterNavigation(p: InternalChapterNavigationProperties
   const s = Sitemap.shared
 
   let l = p.level
-  let e: SitemapEntity | undefined = s.page("/")
+  let e = s.find("/", "url")
   while (true) {
     if (!e || l === 0) {
       break
     }
     for (const id of e.children) {
-      const c = s.entity(id)
+      const c = s.find(id, "id")
       if (!c) {
         continue
       }
       let u = ""
       if (c.type === "group") {
-        const b = s.page(c.parent)
-        if (!b) {
+        const b = s.find(c.parent, "id")
+        if (!b || b.type !== "page") {
           continue
         }
         u = b.url
@@ -149,7 +149,7 @@ export function InternalChapterNavigation(p: InternalChapterNavigationProperties
 
   return <Tree>
     {e.children.map((id) => {
-      const e = s.entity(id)
+      const e = s.find(id, "id")
       if (!e || e.type !== "page") {
         return null
       }
@@ -162,7 +162,7 @@ export function InternalChapterNavigation(p: InternalChapterNavigationProperties
 
   function Sub({e}: {e: SitemapEntity}): JSX.Element | null {
     return <>{e.children.map((id) => {
-      const e = s.entity(id)
+      const e = s.find(id, "id")
       if (!e) {
         return null
       }
@@ -170,14 +170,14 @@ export function InternalChapterNavigation(p: InternalChapterNavigationProperties
         if (e.children.length === 0) {
           return null
         }
-        const r = s.entity(e.parent)
+        const r = s.find(e.parent, "id")
         if (!r) {
           return null
         }
         if (r.type !== "page") {
           throw new Error(`Nested group is not supported: ${e.id}`)
         }
-        const b = s.page(p.url)
+        const b = s.find(p.url, "url")
         if (!b) {
           return null
         }
@@ -206,16 +206,16 @@ export function InternalBreadcrumb(p: InternalBreadcrumbProperties): JSX.Element
   const a: JSX.Element[] = []
   const s = Sitemap.shared
 
-  let e: SitemapEntity | undefined = s.page(p.url)
+  let e = s.find(p.url, "url")
   while (true) {
     while (e && e.type === "group") {
-      e = s.entity(e.parent)
+      e = s.find(e.parent, "id")
     }
     if (!e || e.url === "/") {
       break
     }
     a.unshift(<BreadcrumbCrumb href={e.url}>{e.title}</BreadcrumbCrumb>)
-    e = s.entity(e.parent)
+    e = s.find(e.parent, "id")
   }
 
   if (a.length === 0) {

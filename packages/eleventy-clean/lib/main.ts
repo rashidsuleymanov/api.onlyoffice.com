@@ -1,5 +1,5 @@
 import {rm} from "node:fs/promises"
-import type {UserConfig} from "@onlyoffice/eleventy-types"
+import {type UserConfig} from "@onlyoffice/eleventy-types"
 
 export function eleventyClean(uc: UserConfig): void {
   let done = false

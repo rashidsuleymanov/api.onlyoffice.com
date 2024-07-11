@@ -4,7 +4,7 @@ import {tmpdir} from "node:os"
 import {join} from "node:path"
 import {equal as eq, is} from "uvu/assert"
 import {suite} from "uvu"
-import type {Resource} from "./main.ts"
+import {type Resource} from "./main.ts"
 import {nop, resource} from "./main.ts"
 import pack from "../package.json" with {type: "json"}
 

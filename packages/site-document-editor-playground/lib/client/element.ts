@@ -1,18 +1,194 @@
-import {type ComboboxContainer} from "@onlyoffice/combobox-container-html-element"
+import {ComboboxContainer, ComboboxContainerChangeEvent, ComboboxContainerChangedEvent} from "@onlyoffice/combobox-container-html-element"
 import * as configSample from "@onlyoffice/document-editor-code-sample"
 import {DocumentEditor, type DocumentEditorEventHandlerName} from "@onlyoffice/document-editor-html-element"
 import {DocumentEditorMirror} from "@onlyoffice/document-editor-mirror-html-element"
-import {type DocEditorConfig} from "@onlyoffice/document-server-types"
-import {cloneConfig} from "@onlyoffice/document-server-utils"
+import {type DocEditorConfigEvents, type DocEditorConfigurableOptions} from "@onlyoffice/document-server-types"
 import {type Client} from "@onlyoffice/server-client"
-import {setProperty} from "dot-prop"
+import {deepKeys, getProperty, setProperty} from "dot-prop"
 import {DocumentEditorPlaygroundErrorEvent} from "./events.ts"
 
-type Control = ComboboxContainer | HTMLInputElement | HTMLTextAreaElement
+interface DocumentEditorPlaygroundConfig extends DocEditorConfigurableOptions {
+  events?: Record<keyof DocEditorConfigEvents, string>
+}
 
 export class DocumentEditorPlayground extends HTMLElement {
   static get tagName(): string {
     return "document-editor-playground"
+  }
+
+  get #form(): HTMLFormElement | null {
+    return this.querySelector("form")
+  }
+
+  get #propertyCombobox(): ComboboxContainer | null {
+    const e = this.querySelector('combobox-container[name="property"]')
+    if (!e || !(e instanceof ComboboxContainer)) {
+      return null
+    }
+    return e
+  }
+
+  get #propertiesContainer(): HTMLElement | null {
+    const e = this.querySelector("[data-de-playground-properties-container]")
+    if (!e || !(e instanceof HTMLElement)) {
+      return null
+    }
+    return e
+  }
+
+  get #eventCombobox(): ComboboxContainer | null {
+    const e = this.querySelector('combobox-container[name="event"]')
+    if (!e || !(e instanceof ComboboxContainer)) {
+      return null
+    }
+    return e
+  }
+
+  get #eventsContainer(): HTMLElement | null {
+    const e = this.querySelector("[data-de-playground-events-container]")
+    if (!e || !(e instanceof HTMLElement)) {
+      return null
+    }
+    return e
+  }
+
+  get #scenarioCombobox(): ComboboxContainer | null {
+    const e = this.querySelector('combobox-container[name="scenario"]')
+    if (!e || !(e instanceof ComboboxContainer)) {
+      return null
+    }
+    return e
+  }
+
+  get #documentEditorMirror(): DocumentEditorMirror | null {
+    return this.querySelector("document-editor-mirror")
+  }
+
+  get #documentEditor(): DocumentEditor | null {
+    return this.querySelector("document-editor")
+  }
+
+  get #playButton(): HTMLButtonElement | null {
+    return this.querySelector('button[type="submit"][name="action"][value="play"]')
+  }
+
+  get #sharedConfig(): DocumentEditorPlaygroundConfig | undefined {
+    const p = new URLSearchParams(window.location.search)
+    let s = p.get("c")
+    if (!s) {
+      return undefined
+    }
+    s = decodeURIComponent(s)
+    return JSON.parse(s)
+  }
+
+  set #sharedConfig(c: DocumentEditorPlaygroundConfig) {
+    let s = JSON.stringify(c)
+    let u = window.location.origin + window.location.pathname
+
+    const p = new URLSearchParams(window.location.search)
+    if (s === "{}") {
+      if (p.has("c")) {
+        p.delete("c")
+      }
+    } else {
+      s = encodeURIComponent(s)
+      p.set("c", s)
+    }
+
+    s = p.toString()
+    if (s) {
+      u += `?${s}`
+    }
+
+    window.history.replaceState({}, "", u)
+  }
+
+  get #scenarioConfig(): DocumentEditorPlaygroundConfig {
+    const s = this.#scenarioCombobox
+    if (!s) {
+      return {}
+    }
+
+    const o = s.querySelector('[role="option"]')
+    if (!o || !(o instanceof HTMLElement)) {
+      return {}
+    }
+
+    if (!o.dataset.value) {
+      return {}
+    }
+
+    return JSON.parse(o.dataset.value)
+  }
+
+  set #scenarioConfig(c: DocumentEditorPlaygroundConfig) {
+    const s = this.#scenarioCombobox
+    if (!s) {
+      return
+    }
+
+    const o = s.querySelector('[role="option"]')
+    if (!o || !(o instanceof HTMLElement)) {
+      return
+    }
+
+    o.dataset.value = JSON.stringify(c)
+  }
+
+  get #currentConfig(): DocumentEditorPlaygroundConfig {
+    const cf: DocumentEditorPlaygroundConfig = {}
+
+    const pc = this.#propertyCombobox
+    if (!pc) {
+      return cf
+    }
+
+    const ec = this.#eventCombobox
+    if (!ec) {
+      return cf
+    }
+
+    const sc = this.#scenarioCombobox
+    if (!sc) {
+      return cf
+    }
+
+    const cs = this.querySelectorAll("combobox-container, input, textarea")
+
+    for (const c of cs) {
+      if (c === pc) {
+        continue
+      }
+      if (c === ec) {
+        continue
+      }
+      if (c === sc) {
+        continue
+      }
+
+      if (c instanceof ComboboxContainer && c.name) {
+        setProperty(cf, c.name, c.value)
+        continue
+      }
+
+      if (c instanceof HTMLInputElement && c.type === "checkbox" && c.name) {
+        setProperty(cf, c.name, c.checked)
+        continue
+      }
+
+      if (c instanceof HTMLInputElement && c.type === "text" && c.name) {
+        setProperty(cf, c.name, c.value)
+        continue
+      }
+
+      if (c instanceof HTMLTextAreaElement && c.name) {
+        setProperty(cf, c.name, c.value)
+        continue
+      }
+    }
+
+    return cf
   }
 
   #client: Client | undefined
@@ -25,210 +201,361 @@ export class DocumentEditorPlayground extends HTMLElement {
     this.#client = value
   }
 
-  #handlers = new Map<DocumentEditorEventHandlerName, string>()
+  #documentEditorHandlers = new Map<DocumentEditorEventHandlerName, string>()
 
-  async connectedCallback(): Promise<void> {
-    if (!this.#client) {
-      const er = new Error("Client instance is not registered")
-      const ev = new DocumentEditorPlaygroundErrorEvent({
-        bubbles: true,
-        error: er,
-        message: er.message
-      })
-      this.dispatchEvent(ev)
+  connectedCallback(): void {
+    this.#setup()
+    this.#listen()
+  }
+
+  #setup(): void {
+    let c: DocumentEditorPlaygroundConfig
+    const sh = this.#sharedConfig
+    if (sh) {
+      c = sh
+    } else {
+      c = this.#scenarioConfig
+    }
+    this.#renderConfig(c)
+    this.#renderSamples()
+    this.#clearOutput()
+    this.play()
+  }
+
+  #listen(): void {
+    this.addEventListener("comboboxcontainerchange", this)
+    this.addEventListener("comboboxcontainerchanged", this)
+    this.addEventListener("change", this)
+    this.addEventListener("click", this)
+
+    const fr = this.#form
+    if (fr) {
+      fr.addEventListener("submit", this)
+    }
+  }
+
+  handleEvent(e: Event): void {
+    if (
+      this.#propertyCombobox &&
+      e instanceof ComboboxContainerChangeEvent &&
+      e.target === this.#propertyCombobox
+    ) {
+      this.#handlePropertyChange(e)
       return
     }
 
-    const fr = this.querySelector("form")
-    if (!fr) {
-      const er = new Error("The form element not found")
-      const ev = new DocumentEditorPlaygroundErrorEvent({
-        bubbles: true,
-        error: er,
-        message: er.message
-      })
-      this.dispatchEvent(ev)
+    if (
+      this.#propertyCombobox &&
+      e instanceof ComboboxContainerChangeEvent &&
+      e.target === this.#eventCombobox
+    ) {
+      this.#handleEventChange(e)
       return
     }
 
-    const em = this.querySelector("document-editor-mirror")
-    if (!em) {
-      const er = new Error("The document-editor-mirror element not found")
-      const ev = new DocumentEditorPlaygroundErrorEvent({
-        bubbles: true,
-        error: er,
-        message: er.message
-      })
-      this.dispatchEvent(ev)
+    if (
+      this.#scenarioCombobox &&
+      e instanceof ComboboxContainerChangeEvent &&
+      e.target === this.#scenarioCombobox
+    ) {
+      this.#handleScenarioChange(e)
       return
     }
 
-    const de = this.querySelector("document-editor")
-    if (!de) {
-      const er = new Error("The document-editor element not found")
-      const ev = new DocumentEditorPlaygroundErrorEvent({
-        bubbles: true,
-        error: er,
-        message: er.message
-      })
-      this.dispatchEvent(ev)
+    if (
+      this.#propertyCombobox &&
+      e instanceof ComboboxContainerChangedEvent &&
+      e.target === this.#propertyCombobox
+    ) {
+      this.#handleComboboxChanged(e)
       return
     }
 
-    if (!de.editor) {
-      de.ondocumenteditorappready = this.connectedCallback.bind(this)
+    if (
+      this.#eventCombobox &&
+      e instanceof ComboboxContainerChangedEvent &&
+      e.target === this.#eventCombobox
+    ) {
+      this.#handleComboboxChanged(e)
       return
-      // const er = new Error("DocEditor instance is not registered")
-      // const ev = new DocumentEditorPlaygroundErrorEvent({bubbles: true, error: er, message: er.message})
-      // this.dispatchEvent(ev)
-      // return
     }
 
-    de.ondocumenteditorappready = null
-
-    let cf = this.#config(fr)
-    cf = cloneConfig(cf)
-
-    const af = cf
-    if (af.events) {
-      delete af.events
+    if (
+      e.type === "change" &&
+      e.target &&
+      e.target instanceof HTMLInputElement &&
+      (e.target.type === "checkbox" || e.target.type === "text")
+    ) {
+      this.#handleInputChange()
+      return
     }
 
-    try {
-      [de.config] = await this.#client.documentEditor.sign(af)
-    } catch (e) {
-      let m = "Failed to sign DocEditor configuration"
-      if (e instanceof Error) {
-        m += `: ${e.message}`
+    if (
+      e.type === "change" &&
+      e.target &&
+      e.target instanceof HTMLTextAreaElement
+    ) {
+      this.#handleTextareaChange()
+      return
+    }
+
+    if (
+      e instanceof MouseEvent &&
+      e.type === "click" &&
+      e.target &&
+      e.target instanceof HTMLButtonElement &&
+      e.target.name === "remove" &&
+      !e.target.value.startsWith("events.")
+    ) {
+      this.#handlePropertyRemoval(e)
+      return
+    }
+
+    if (
+      e instanceof MouseEvent &&
+      e.type === "click" &&
+      e.target &&
+      e.target instanceof HTMLButtonElement &&
+      e.target.name === "remove" &&
+      e.target.value.startsWith("events.")
+    ) {
+      this.#handleEventRemoval(e)
+      return
+    }
+
+    if (
+      this.#playButton &&
+      e instanceof SubmitEvent &&
+      e.submitter === this.#playButton
+    ) {
+      this.#handlePlayAction(e)
+      return
+    }
+  }
+
+  #handlePropertyChange(e: ComboboxContainerChangeEvent): void {
+    this.#appendProperty(e)
+    this.#renderSamples()
+  }
+
+  #handleEventChange(e: ComboboxContainerChangeEvent): void {
+    this.#appendEvent(e)
+    this.#renderSamples()
+  }
+
+  #handleScenarioChange(ev: ComboboxContainerChangeEvent): void {
+    const op = ev.option
+    if (!op) {
+      return
+    }
+
+    if (!op.dataset.value) {
+      return
+    }
+
+    this.#removePropertyControllers()
+    this.#showPropertyOptions()
+
+    this.#removeEventControllers()
+    this.#showEventOptions()
+
+    const cf: DocumentEditorPlaygroundConfig = JSON.parse(op.dataset.value)
+    this.#renderConfig(cf)
+    this.#renderSamples()
+
+    this.#sharedConfig = cf
+  }
+
+  #renderConfig(cf: DocumentEditorPlaygroundConfig): void {
+    for (const p of deepKeys(cf)) {
+      const v = getProperty(cf, p)
+      const c = this.#importControl(p, v)
+      if (!c) {
+        continue
       }
-      const ev = new DocumentEditorPlaygroundErrorEvent({error: e, message: m})
-      this.dispatchEvent(ev)
+      this.#appendControl2(p, c)
+      this.#hideOption2(p)
+    }
+  }
+
+  #importControl(p: string, v: unknown): DocumentFragment | undefined {
+    const t = this.querySelector(`[data-de-playground-property="${p}"]`)
+    if (!t || !(t instanceof HTMLTemplateElement)) {
       return
     }
 
-    fr.onsubmit = this.#submit.bind(this)
+    const f = document.importNode(t.content, true)
+    let c: HTMLElement | null = null
 
-    this.#handlers.clear()
-    em.ondocumenteditormirrorconsoleerror = null
-    em.ondocumenteditormirrorconsolelog = null
-    em.ondocumenteditormirrorthrow = null
+    c = f.querySelector("combobox-container")
+    if (c && c instanceof ComboboxContainer) {
+      let j = -1
 
-    if (cf.events) {
-      for (const [n, fn] of Object.entries(cf.events)) {
-        const hn = this.#handlerName(n)
-        if (!hn) {
-          const er = new Error(`The '${hn}' (${n}) event does not exist in the DocumentEditor`)
-          const ev = new DocumentEditorPlaygroundErrorEvent({
-            bubbles: true,
-            error: er,
-            message: er.message
-          })
-          this.dispatchEvent(ev)
-          continue
+      const s = c.querySelectorAll('[role="option"]')
+      for (const [i, e] of s.entries()) {
+        if (e instanceof HTMLElement && e.dataset.value === v) {
+          j = i
+          break
         }
-        this.#handlers.set(hn, n)
-        de[hn] = new Function(fn) as EventListener
       }
-      em.ondocumenteditormirrorconsolelog = this.#handle.bind(this)
-      em.ondocumenteditormirrorconsoleerror = this.#handle.bind(this)
-      em.ondocumenteditormirrorthrow = this.#handle.bind(this)
+
+      if (j === -1) {
+        return
+      }
+
+      c.defaultIndex = j
+      return f
     }
 
-    em.connectedCallback()
-    de.editor.requestClose()
-    de.editor.destroyEditor()
-    de.connectedCallback()
+    c = f.querySelector('input[type="checkbox"]')
+    if (c && c instanceof HTMLInputElement) {
+      c.checked = Boolean(v)
+      return f
+    }
 
-    const sm = document.querySelectorAll<HTMLElement>("[data-config-sample]")
-    for (const e of sm) {
-      const v = e.dataset.configSample
-      if (!v) {
-        continue
-      }
+    c = f.querySelector('input[type="text"]')
+    if (c && c instanceof HTMLInputElement) {
+      c.value = String(v)
+      return f
+    }
 
-      let s = ""
-
-      switch (v) {
-      case "html":
-        s = configSample.html(de.documentServerUrl, cf)
-        break
-      case "js":
-        s = configSample.js(cf)
-        break
-      case "json":
-        s = configSample.json(cf)
-        break
-      default:
-        const er = new Error(`Unknown config sample type: ${v}`)
-        const ev = new DocumentEditorPlaygroundErrorEvent({
-          bubbles: true,
-          error: er,
-          message: er.message
-        })
-        this.dispatchEvent(ev)
-        continue
-      }
-
-      e.textContent = s
+    c = f.querySelector("textarea")
+    if (c && c instanceof HTMLTextAreaElement) {
+      c.value = String(v)
+      return f
     }
   }
 
-  #config(el: HTMLElement): DocEditorConfig {
-    const cf: DocEditorConfig = {}
-    const cs: NodeListOf<Control> = el.querySelectorAll("combobox-container, input, textarea")
-    for (const c of cs) {
-      let v: unknown = c.value
-      if (c instanceof HTMLInputElement && c.type === "checkbox") {
-        v = c.checked
-      }
-      setProperty(cf, c.name, v)
-    }
-    return cf
-  }
-
-  #submit(se: SubmitEvent): void {
-    se.preventDefault()
-
-    if (!(se.submitter instanceof HTMLButtonElement)) {
-      const er = new Error("The submitter is not a button element")
-      const ev = new DocumentEditorPlaygroundErrorEvent({
-        bubbles: true,
-        error: er,
-        message: er.message
-      })
-      this.dispatchEvent(ev)
+  #appendControl2(p: string, n: Node): void {
+    const c = this.#resolveContainer(p)
+    if (!c) {
       return
     }
 
-    if (se.submitter.value === "play") {
-      this.connectedCallback()
+    c.append(n)
+  }
+
+  #hideOption2(p: string): void {
+    const c = this.#resolveCombobox(p)
+    if (!c) {
       return
     }
 
-    if (se.submitter.value === "reset") {
-      // todo: implement reset action
+    const o = c.querySelector(`[role="option"][data-value="${p}"]`)
+    if (!o || !(o instanceof HTMLElement)) {
       return
     }
 
-    const er = new Error(`Unknown submitter value: ${se.submitter.value}`)
-    const ev = new DocumentEditorPlaygroundErrorEvent({
-      bubbles: true,
-      error: er,
-      message: er.message
-    })
-    this.dispatchEvent(ev)
+    this.#hideOption(c, o)
   }
 
-  #handlerName(n: string): DocumentEditorEventHandlerName | undefined {
-    n = n.toLocaleLowerCase().slice(2)
-    n = `ondocumenteditor${n}`
-    if (!DocumentEditor.isDocumentEditorEventHandlerName(n)) {
-      return undefined
+  #resolveCombobox(p: string): ComboboxContainer | null {
+    if (p.startsWith("events.")) {
+      return this.#eventCombobox
     }
-    return n
+    return this.#propertyCombobox
   }
 
-  #handle(me: Event): void {
+  #resolveContainer(p: string): HTMLElement | null {
+    if (p.startsWith("events.")) {
+      return this.#eventsContainer
+    }
+    return this.#propertiesContainer
+  }
+
+  #handleComboboxChanged(ev: ComboboxContainerChangedEvent): void {
+    const cx = ev.target
+    if (!cx || !(cx instanceof ComboboxContainer)) {
+      return
+    }
+
+    const op = ev.option
+    if (!op) {
+      return
+    }
+
+    if (cx.selectedIndex === 0) {
+      return
+    }
+
+    cx.select(0)
+    this.#hideOption(cx, op)
+    this.#saveScenario()
+    this.#renderSamples()
+  }
+
+  #handleInputChange(): void {
+    this.#saveScenario()
+    this.#renderSamples()
+  }
+
+  #handleTextareaChange(): void {
+    this.#saveScenario()
+    this.#renderSamples()
+  }
+
+  #handlePropertyRemoval(ev: MouseEvent): void {
+    const cx = this.#propertyCombobox
+    if (!cx) {
+      return
+    }
+
+    const cr = this.#propertiesContainer
+    if (!cr) {
+      return
+    }
+
+    const et = ev.target
+    if (!et || !(et instanceof HTMLButtonElement)) {
+      return
+    }
+
+    const op = cx.querySelector(`[role="option"][data-value="${et.value}"]`)
+    if (!op || !(op instanceof HTMLElement)) {
+      return
+    }
+
+    this.#removeControl(cr, ev)
+    this.#showOption(cx, op)
+    this.#saveScenario()
+    this.#renderSamples()
+  }
+
+  #handleEventRemoval(ev: MouseEvent): void {
+    const cx = this.#eventCombobox
+    if (!cx) {
+      return
+    }
+
+    const cr = this.#eventsContainer
+    if (!cr) {
+      return
+    }
+
+    const et = ev.target
+    if (!et || !(et instanceof HTMLButtonElement)) {
+      return
+    }
+
+    const op = cx.querySelector(`[role="option"][data-value="${et.value}"]`)
+    if (!op || !(op instanceof HTMLElement)) {
+      return
+    }
+
+    this.#removeControl(cr, ev)
+    this.#showOption(cx, op)
+    this.#saveScenario()
+    this.#renderSamples()
+  }
+
+  #handlePlayAction(e: SubmitEvent): void {
+    e.preventDefault()
+    this.#clearOutput()
+    this.play()
+    this.#renderSamples()
+  }
+
+  #handleDocumentEditorMirrorEvent(me: Event): void {
     if (!(
       DocumentEditorMirror.isDocumentEditorMirrorConsoleErrorEvent(me) ||
       DocumentEditorMirror.isDocumentEditorMirrorConsoleLogEvent(me) ||
@@ -237,27 +564,13 @@ export class DocumentEditorPlayground extends HTMLElement {
       return
     }
 
-    const en = this.#handlers.get(me.source)
+    const en = this.#documentEditorHandlers.get(me.source)
     if (!en) {
-      const er = new Error(`The '${me.source}' event does register in the DocumentEditorPlayground`)
-      const ev = new DocumentEditorPlaygroundErrorEvent({
-        bubbles: true,
-        error: er,
-        message: er.message
-      })
-      this.dispatchEvent(ev)
       return
     }
 
-    const cd = this.querySelector(`[data-output-for="events.${en}"]`)
+    const cd = this.querySelector(`[data-de-playground-output-for="events.${en}"]`)
     if (!cd) {
-      const er = new Error(`The output element for the '${en}' event not found`)
-      const ev = new DocumentEditorPlaygroundErrorEvent({
-        bubbles: true,
-        error: er,
-        message: er.message
-      })
-      this.dispatchEvent(ev)
       return
     }
 
@@ -268,6 +581,284 @@ export class DocumentEditorPlayground extends HTMLElement {
       m = me.args.join(" ")
     }
 
-    cd.textContent = `${m} (${me.lineno}:${me.colno})`
+    cd.textContent += `${m} (${me.lineno}:${me.colno})\n`
+  }
+
+  #removePropertyControllers(): void {
+    const c = this.#propertiesContainer
+    if (!c) {
+      return
+    }
+
+    c.innerHTML = ""
+  }
+
+  #removeEventControllers(): void {
+    const c = this.#eventsContainer
+    if (!c) {
+      return
+    }
+
+    c.innerHTML = ""
+  }
+
+  #showPropertyOptions(): void {
+    const c = this.#propertyCombobox
+    if (!c) {
+      return
+    }
+
+    for (const o of c.options) {
+      this.#showOption(c, o)
+    }
+  }
+
+  #showEventOptions(): void {
+    const c = this.#eventCombobox
+    if (!c) {
+      return
+    }
+
+    for (const o of c.options) {
+      this.#showOption(c, o)
+    }
+  }
+
+  #appendProperty(e: ComboboxContainerChangeEvent): void {
+    const c = this.#propertiesContainer
+    if (!c) {
+      return
+    }
+
+    this.#appendControl(c, e)
+  }
+
+  #appendEvent(e: ComboboxContainerChangeEvent): void {
+    const c = this.#eventsContainer
+    if (!c) {
+      return
+    }
+
+    this.#appendControl(c, e)
+  }
+
+  #appendControl(el: HTMLElement, ev: ComboboxContainerChangeEvent): DocumentFragment | undefined {
+    const v = ev.optionValue
+    if (!v) {
+      return
+    }
+
+    const t = this.querySelector(`[data-de-playground-property="${v}"]`)
+    if (!t || !(t instanceof HTMLTemplateElement)) {
+      return
+    }
+
+    const f = document.importNode(t.content, true)
+    el.append(f)
+  }
+
+  #removeControl(el: HTMLElement, ev: MouseEvent): void {
+    let t = ev.target
+
+    while (true) {
+      if (!t || !(t instanceof HTMLElement) || t === el) {
+        break
+      }
+
+      for (const c of el.children) {
+        if (c instanceof HTMLElement && c === t) {
+          c.remove()
+          break
+        }
+      }
+
+      t = t.parentElement
+    }
+  }
+
+  #hideOption(co: ComboboxContainer, op: HTMLElement): void {
+    let t = op
+
+    while (true) {
+      if (!t || t === co) {
+        break
+      }
+
+      const p = t.parentElement
+      if (!p) {
+        break
+      }
+
+      if (p.role === "listbox") {
+        t.setAttribute("hidden", "")
+        break
+      }
+
+      t = p
+    }
+  }
+
+  #showOption(co: ComboboxContainer, op: HTMLElement): void {
+    let t = op
+
+    while (true) {
+      if (!t || t === co) {
+        break
+      }
+
+      const p = t.parentElement
+      if (!p) {
+        break
+      }
+
+      if (p.role === "listbox") {
+        t.removeAttribute("hidden")
+        break
+      }
+
+      t = p
+    }
+  }
+
+  #saveScenario(): void {
+    const s = this.#scenarioCombobox
+    if (!s) {
+      return
+    }
+
+    const c = this.#currentConfig
+    this.#scenarioConfig = c
+    s.select(0)
+    this.#sharedConfig = c
+  }
+
+  #clearOutput(): void {
+    const o = this.querySelectorAll("[data-de-playground-output-for]")
+    for (const e of o) {
+      e.textContent = ""
+    }
+  }
+
+  async play(): Promise<void> {
+    const cl = this.#client
+    if (!cl) {
+      return
+    }
+
+    const em = this.#documentEditorMirror
+    if (!em) {
+      return
+    }
+
+    const de = this.#documentEditor
+    if (!de) {
+      return
+    }
+
+    if (!de.editor) {
+      de.ondocumenteditorappready = this.play.bind(this)
+      return
+    }
+
+    de.ondocumenteditorappready = null
+
+    const cf = this.#currentConfig
+    const op: DocEditorConfigurableOptions = cf
+
+    const {events} = cf
+    if (cf.events) {
+      delete cf.events
+    }
+
+    try {
+      [de.config] = await cl.documentEditor.sign(op)
+    } catch (e) {
+      let m = "Failed to sign DocEditor configuration"
+      if (e instanceof Error) {
+        m += `: ${e.message}`
+      }
+      const ev = new DocumentEditorPlaygroundErrorEvent({
+        bubbles: true,
+        error: e,
+        message: m,
+      })
+      this.dispatchEvent(ev)
+      return
+    }
+
+    this.#documentEditorHandlers.clear()
+    em.ondocumenteditormirrorconsoleerror = null
+    em.ondocumenteditormirrorconsolelog = null
+    em.ondocumenteditormirrorthrow = null
+
+    if (events) {
+      for (const [n, fn] of Object.entries(events)) {
+        const hn = `ondocumenteditor${n.toLocaleLowerCase().slice(2)}`
+        if (!DocumentEditor.isDocumentEditorEventHandlerName(hn)) {
+          const er = new Error(`The '${hn}' (${n}) event does not exist in the DocumentEditor`)
+          const ev = new DocumentEditorPlaygroundErrorEvent({
+            bubbles: true,
+            error: er,
+            message: er.message,
+          })
+          this.dispatchEvent(ev)
+          continue
+        }
+
+        this.#documentEditorHandlers.set(hn, n)
+        de[hn] = new Function(fn) as EventListener
+      }
+
+      em.ondocumenteditormirrorconsolelog = this.#handleDocumentEditorMirrorEvent.bind(this)
+      em.ondocumenteditormirrorconsoleerror = this.#handleDocumentEditorMirrorEvent.bind(this)
+      em.ondocumenteditormirrorthrow = this.#handleDocumentEditorMirrorEvent.bind(this)
+    }
+
+    em.connectedCallback()
+    de.editor.requestClose()
+    de.editor.destroyEditor()
+    de.connectedCallback()
+  }
+
+  #renderSamples(): void {
+    const de = this.#documentEditor
+    if (!de) {
+      return
+    }
+
+    const cf = this.#currentConfig
+    delete cf.events
+
+    const op: DocEditorConfigurableOptions = cf
+
+    const sm = this.querySelectorAll("[data-de-playground-config-sample]")
+    for (const e of sm) {
+      if (!(e instanceof HTMLElement)) {
+        continue
+      }
+
+      const v = e.dataset.dePlaygroundConfigSample
+      if (!v) {
+        continue
+      }
+
+      let s = ""
+
+      switch (v) {
+      case "html":
+        s = configSample.html(de.documentServerUrl, op)
+        break
+      case "js":
+        s = configSample.js(op)
+        break
+      case "json":
+        s = configSample.json(op)
+        break
+      default:
+        continue
+      }
+
+      e.textContent = s
+    }
   }
 }

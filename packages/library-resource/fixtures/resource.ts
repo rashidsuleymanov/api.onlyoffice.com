@@ -1,5 +1,5 @@
 import {createRequire} from "node:module"
-import type {Declaration} from "@onlyoffice/library-declaration"
+import {type Declaration} from "@onlyoffice/library-declaration"
 
 const require = createRequire(import.meta.url)
 

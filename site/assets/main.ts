@@ -16,7 +16,7 @@ import "../components/tree/tree.client.ts"
 import "../components/document-builder-container/element.ts"
 import {Client} from "@onlyoffice/server-client"
 
-async function main(): Promise<void> {
+function main(): void {
   const c = new Client()
   if (import.meta && import.meta.env && import.meta.env.CONFIG_SERVER_BASE_URL) {
     c.baseURL = import.meta.env.CONFIG_SERVER_BASE_URL
@@ -25,7 +25,7 @@ async function main(): Promise<void> {
   const sp = document.querySelector("document-editor-playground")
   if (sp) {
     sp.client = c
-    await sp.connectedCallback()
+    sp.play()
   }
 }
 

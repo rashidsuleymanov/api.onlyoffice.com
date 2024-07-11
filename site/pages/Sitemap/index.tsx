@@ -1,4 +1,4 @@
-import type {Data} from "@onlyoffice/eleventy-types"
+import {type Data} from "@onlyoffice/eleventy-types"
 import {Content} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
 import {TableOfContents} from "@/internal/table-of-contents.tsx"

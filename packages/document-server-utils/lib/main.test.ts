@@ -1,4 +1,4 @@
-import type {DocEditorConfig} from "@onlyoffice/document-server-types"
+import {type DocEditorConfig} from "@onlyoffice/document-server-types"
 import {equal as eq, is} from "uvu/assert"
 import {test} from "uvu"
 import {cloneConfig} from "./main.ts"

@@ -1,5 +1,5 @@
-import type {DocEditorConfigurableOptions} from "@onlyoffice/document-server-types"
-import type {Client} from "./client.ts"
+import {type DocEditorConfigurableOptions} from "@onlyoffice/document-server-types"
+import {type Client} from "./client.ts"
 
 export type AssignResponse = DocEditorConfigurableOptions
 

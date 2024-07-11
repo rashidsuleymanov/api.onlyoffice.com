@@ -1,8 +1,7 @@
 import {env} from "node:process"
 
 /**
- * Checks if the current run mode is set to `build`.
- * @returns `true` if the run mode is `build`, `false` otherwise.
+ * {@link https://www.11ty.dev/docs/environment-vars/ Eleventy Reference}
  */
 export function isBuild(): boolean {
   const m = env.ELEVENTY_RUN_MODE
@@ -13,8 +12,7 @@ export function isBuild(): boolean {
 }
 
 /**
- * Checks if the current run mode is set to `serve`.
- * @returns `true` if the run mode is `serve`, `false` otherwise.
+ * {@link https://www.11ty.dev/docs/environment-vars/ Eleventy Reference}
  */
 export function isServe(): boolean {
   const m = env.ELEVENTY_RUN_MODE
@@ -22,4 +20,15 @@ export function isServe(): boolean {
     throw new Error("ELEVENTY_RUN_MODE is not defined")
   }
   return m === "serve"
+}
+
+/**
+ * {@link https://www.11ty.dev/docs/environment-vars/ Eleventy Reference}
+ */
+export function rootDir(): string {
+  const r = env.ELEVENTY_ROOT
+  if (r === undefined) {
+    throw new Error("ELEVENTY_ROOT is not defined")
+  }
+  return r
 }

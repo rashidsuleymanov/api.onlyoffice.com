@@ -1,6 +1,6 @@
-import type {Context, Data} from "@onlyoffice/eleventy-types"
+import {type Context, type Data} from "@onlyoffice/eleventy-types"
 import {ServiceDeclaration} from "@onlyoffice/site-kit"
-import {type JSX, Fragment, h} from "preact"
+import {Fragment, type JSX, h} from "preact"
 import {SyntaxHighlight} from "../components/syntax-highlight/syntax-highlight.ts"
 import {Markdown} from "@/internal/markdown.tsx"
 import {TableOfContents} from "@/internal/table-of-contents.tsx"

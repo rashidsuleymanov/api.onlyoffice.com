@@ -37,11 +37,14 @@
   border: 1px solid var(--color-select-combobox-neutral-border);
   box-sizing: border-box;
   color: var(--color-select-combobox-neutral-foreground);
+  max-height: 240px;
+  overflow-y: scroll;
   padding-bottom: 8px;
   padding-top: 8px;
   position: absolute;
   top: calc(100% + 5px);
   width: 100%;
+  z-index: 1;
 }
 
 .select [role="listbox"]:not([hidden]) {

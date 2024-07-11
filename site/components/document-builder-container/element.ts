@@ -1,4 +1,4 @@
-import type {DocumentEditorConfig} from "@onlyoffice/document-editor-html-element"
+import {type DocumentEditorConfig} from "@onlyoffice/document-editor-html-element"
 
 declare global {
   interface Window {

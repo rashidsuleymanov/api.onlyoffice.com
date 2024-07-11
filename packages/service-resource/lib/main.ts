@@ -2,7 +2,7 @@ import {readFile} from "node:fs/promises"
 import {join} from "node:path"
 import {URL, fileURLToPath} from "node:url"
 import {escape} from "@onlyoffice/node-path/win32.ts"
-import type {Component, Declaration} from "@onlyoffice/service-declaration"
+import {type Component, type Declaration} from "@onlyoffice/service-declaration"
 
 export interface Resource {
   list(): Declaration[]

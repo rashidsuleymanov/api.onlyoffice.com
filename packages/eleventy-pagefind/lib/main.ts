@@ -1,5 +1,5 @@
 import {join} from "node:path"
-import type {UserConfig} from "@onlyoffice/eleventy-types"
+import {type UserConfig} from "@onlyoffice/eleventy-types"
 
 export function eleventyPagefind(uc: UserConfig): void {
   // todo: support for rebuilding after each event, not just the first one

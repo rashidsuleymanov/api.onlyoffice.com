@@ -1,4 +1,4 @@
-import type {Context, Data} from "@onlyoffice/eleventy-types"
+import {type Context, type Data} from "@onlyoffice/eleventy-types"
 import {
   Help,
   Part,
@@ -9,7 +9,7 @@ import {
 } from "@onlyoffice/site-kit"
 import {SrOnly} from "@onlyoffice/ui-kit"
 import {GithubIcon} from "@onlyoffice/ui-icons/rich/24.tsx"
-import {type JSX, Fragment, h} from "preact"
+import {Fragment, type JSX, h} from "preact"
 import {Icon} from "@/internal/icon.tsx"
 
 declare module "@onlyoffice/eleventy-types" {

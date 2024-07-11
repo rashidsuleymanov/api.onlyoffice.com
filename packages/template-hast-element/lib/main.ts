@@ -1,4 +1,4 @@
-import type {Element} from "hast"
+import {type Element} from "hast"
 
 export interface Template extends Element {
   tagName: "template"

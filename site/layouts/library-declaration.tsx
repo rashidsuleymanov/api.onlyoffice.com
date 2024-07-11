@@ -1,4 +1,4 @@
-import type {Context, Data} from "@onlyoffice/eleventy-types"
+import {type Context, type Data} from "@onlyoffice/eleventy-types"
 import {LibraryDeclaration} from "@onlyoffice/site-kit"
 import {type JSX, h} from "preact"
 import {SyntaxHighlight} from "../components/syntax-highlight/syntax-highlight.ts"

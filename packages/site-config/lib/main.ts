@@ -1,6 +1,7 @@
 import {existsSync, readFileSync} from "node:fs"
 import {join} from "node:path"
 import {cwd} from "node:process"
+import {type DocEditorConfigEvents, type DocEditorConfigurableOptions} from "@onlyoffice/document-server-types"
 import yaml from "yaml"
 
 export interface InputConfig {
@@ -173,17 +174,14 @@ export class ServerConfig implements ServerConfigurable {
 
 export interface InputPlayground {
   documentEditor?: InputDocumentEditor
-  tabs?: Record<string, string>
 }
 
 export interface PlaygroundConfigurable {
   documentEditor: DocumentEditorConfigurable
-  tabs: TabConfigurable[]
 }
 
 export class PlaygroundConfig implements PlaygroundConfigurable {
   documentEditor = new DocumentEditorConfig()
-  tabs: TabConfig[] = []
 
   static fromJson(data: string): PlaygroundConfigurable {
     const o = JSON.parse(data)
@@ -205,15 +203,6 @@ export class PlaygroundConfig implements PlaygroundConfigurable {
       pl.documentEditor = DocumentEditorConfig.fromInput(ip.documentEditor)
     }
 
-    if (ip.tabs) {
-      for (const [id, lb] of Object.entries(ip.tabs)) {
-        const t = new TabConfig()
-        t.id = id
-        t.label = lb
-        pl.tabs.push(t)
-      }
-    }
-
     return pl
   }
 
@@ -228,14 +217,6 @@ export class PlaygroundConfig implements PlaygroundConfigurable {
       b.documentEditor
     )
 
-    if (a.tabs.length !== 0 && b.tabs.length !== 0) {
-      throw new Error("Merging of tabs is not supported")
-    } else if (a.tabs.length !== 0) {
-      pl.tabs = a.tabs
-    } else if (b.tabs.length !== 0) {
-      pl.tabs = b.tabs
-    }
-
     return pl
   }
 }
@@ -243,16 +224,19 @@ export class PlaygroundConfig implements PlaygroundConfigurable {
 export interface InputDocumentEditor {
   documentServerUrl?: string
   config?: InputProperty[]
+  scenarios?: InputScenario[]
 }
 
 export interface DocumentEditorConfigurable {
   documentServerUrl: string
   config: PropertyConfigurable[]
+  scenarios: ScenarioConfigurable[]
 }
 
 export class DocumentEditorConfig implements DocumentEditorConfigurable {
   documentServerUrl = ""
   config: PropertyConfig[] = []
+  scenarios: ScenarioConfigurable[] = []
 
   static fromJson(data: string): DocumentEditorConfigurable {
     const o = JSON.parse(data)
@@ -281,6 +265,10 @@ export class DocumentEditorConfig implements DocumentEditorConfigurable {
       }
     }
 
+    if (ide.scenarios) {
+      de.scenarios = ide.scenarios
+    }
+
     return de
   }
 
@@ -306,13 +294,20 @@ export class DocumentEditorConfig implements DocumentEditorConfigurable {
       de.config = b.config
     }
 
+    if (a.scenarios.length !== 0 && b.scenarios.length !== 0) {
+      throw new Error("Merging of scenarios is not supported")
+    } else if (a.scenarios.length !== 0) {
+      de.scenarios = a.scenarios
+    } else if (b.scenarios.length !== 0) {
+      de.scenarios = b.scenarios
+    }
+
     return de
   }
 }
 
 export interface InputProperty {
   path?: string
-  tab?: string
   href?: string
   type?: "boolean" | "function" | "number" | "string"
   format?: "percent"
@@ -322,7 +317,6 @@ export interface InputProperty {
 
 export interface PropertyConfigurable {
   path: string
-  tab: string
   href: string
   type: Type
   // format?: Format
@@ -331,7 +325,6 @@ export interface PropertyConfigurable {
 
 export class PropertyConfig implements PropertyConfigurable {
   path = ""
-  tab = ""
   href = ""
   type: Type = new UndefinedType()
   // format?: Format = undefined
@@ -355,10 +348,6 @@ export class PropertyConfig implements PropertyConfigurable {
 
     if (ip.path) {
       p.path = ip.path
-    }
-
-    if (ip.tab) {
-      p.tab = ip.tab
     }
 
     if (ip.href) {
@@ -495,12 +484,13 @@ export interface TypeNode {
   type: string
 }
 
-export interface TabConfigurable {
-  id: string
-  label: string
+export interface InputScenario {
+  name?: string
+  configs: InputScenarioConfig[]
 }
 
-export class TabConfig implements TabConfigurable {
-  id: string = ""
-  label: string = ""
+interface InputScenarioConfig extends DocEditorConfigurableOptions {
+  events?: Record<keyof DocEditorConfigEvents, string>
 }
+
+type ScenarioConfigurable = InputScenario

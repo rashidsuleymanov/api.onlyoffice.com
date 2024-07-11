@@ -1,5 +1,5 @@
 import {type SitemapData} from "@onlyoffice/eleventy-sitemap"
-import type {Data} from "@onlyoffice/eleventy-types"
+import {type Data} from "@onlyoffice/eleventy-types"
 import {cutPrefix, cutSuffix} from "@onlyoffice/strings"
 import {slug} from "github-slugger"
 
@@ -55,6 +55,7 @@ export function data(): Data {
       return {
         title: d.title,
         url: d.page?.url,
+        path: d.page?.inputPath,
         order: d.order || 0,
         data: d,
       }
