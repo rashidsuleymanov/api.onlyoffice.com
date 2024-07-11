@@ -8,6 +8,7 @@ import {rehypeStarryNight} from "@onlyoffice/rehype-starry-night"
 import {jsx, jsxs} from "preact/jsx-runtime"
 import {Fragment, type JSX, h} from "preact"
 import rehypeAutolink from "rehype-autolink-headings"
+import rehypeRaw from "rehype-raw"
 import rehypeSlug from "rehype-slug"
 import remarkGfm from "remark-gfm"
 import remarkParse from "remark-parse"
@@ -48,7 +49,12 @@ export function eleventyMarkdown(uc: UserConfig): void {
 export function markdown() {
   return unified()
     .use(remarkParse)
-    .use({plugins: [...remarkPlugins(), remarkRehype, ...rehypePlugins()]})
+    .use({plugins: [
+      ...remarkPlugins(),
+      [remarkRehype, {allowDangerousHtml: true}],
+      rehypeRaw,
+      ...rehypePlugins(),
+    ]})
     // @ts-ignore
     .use(rehypePreact, {Fragment, jsx, jsxs})
     .freeze()
