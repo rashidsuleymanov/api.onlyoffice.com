@@ -1,24 +1,87 @@
+import {randomUUID} from "node:crypto"
 import {extname} from "node:path"
 import {type Data, type UserConfig} from "@onlyoffice/eleventy-types"
-import {randomUUID} from "node:crypto"
+import {isEmpty} from "@onlyoffice/objects"
 
 declare module "@onlyoffice/eleventy-types" {
   interface Data {
-    sitemap?(d: Data): SitemapData
+    sitemap?: SitemapData
+  }
+
+  interface EleventyComputed {
+    sitemap?(data: Data): SitemapData | undefined
   }
 }
 
 export interface SitemapData {
-  title?: string
-  url?: string
-  path?: string
-  order?: number
-  groups?(): {
+  title: string
+  url: string
+  path: string
+  order: number
+  groups: {
     title?: string
     order?: number
   }[]
-  group?(): string
-  data?: Data
+  group: string
+  data: Data
+}
+
+export class SitemapDatum implements SitemapData {
+  title = ""
+  url = ""
+  path = ""
+  order = 0
+  groups: SitemapData["groups"] = []
+  group = ""
+  data: SitemapData["data"] = {}
+
+  static merge(a: SitemapData, b: SitemapData): SitemapData {
+    const c = new SitemapDatum()
+
+    if (b.title) {
+      c.title = b.title
+    } else if (a.title) {
+      c.title = a.title
+    }
+
+    if (b.url) {
+      c.url = b.url
+    } else if (a.url) {
+      c.url = a.url
+    }
+
+    if (b.path) {
+      c.path = b.path
+    } else if (a.path) {
+      c.path = a.path
+    }
+
+    if (b.order) {
+      c.order = b.order
+    } else if (a.order) {
+      c.order = a.order
+    }
+
+    if (b.groups.length !== 0) {
+      c.groups = b.groups
+    } else if (a.groups.length !== 0) {
+      c.groups = a.groups
+    }
+
+    if (b.group) {
+      c.group = b.group
+    } else if (a.group) {
+      c.group = a.group
+    }
+
+    if (!isEmpty(b.data)) {
+      c.data = b.data
+    } else if (!isEmpty(a.data)) {
+      c.data = a.data
+    }
+
+    return c
+  }
 }
 
 export interface SitemapAccessible {
@@ -105,22 +168,9 @@ export function eleventySitemap(uc: UserConfig): void {
         continue
       }
 
-      const d = te.data.sitemap(te.data)
+      const d = te.data.sitemap
       if (!d) {
         continue
-      }
-
-      if (!d.title) {
-        throw new Error("No title")
-      }
-      if (!d.url) {
-        throw new Error("No URL")
-      }
-      if (!d.path) {
-        throw new Error("No path")
-      }
-      if (!d.data) {
-        throw new Error("No data")
       }
 
       const p = new SitemapPage()
@@ -155,7 +205,7 @@ export function eleventySitemap(uc: UserConfig): void {
       }
 
       if (d.groups) {
-        const a = d.groups()
+        const a = d.groups
         for (const d of a) {
           if (!d.title) {
             throw new Error("No title")
@@ -185,10 +235,7 @@ export function eleventySitemap(uc: UserConfig): void {
       }
 
       if (d.group) {
-        const n = d.group()
-        if (n) {
-          c.set(p.id, n)
-        }
+        c.set(p.id, d.group)
       }
     }
 

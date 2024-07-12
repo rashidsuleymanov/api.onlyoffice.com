@@ -815,6 +815,9 @@ importers:
       '@onlyoffice/eleventy-types':
         specifier: workspace:^
         version: link:../eleventy-types
+      '@onlyoffice/objects':
+        specifier: workspace:^
+        version: link:../objects
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
