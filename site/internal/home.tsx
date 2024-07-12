@@ -26,7 +26,7 @@ declare module "@onlyoffice/eleventy-types" {
   }
 
   interface EleventyComputed {
-    home?(data: Data): HomeData
+    home?(data: Data): HomeData | undefined
   }
 }
 

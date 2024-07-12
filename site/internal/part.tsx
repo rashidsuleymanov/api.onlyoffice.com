@@ -18,7 +18,7 @@ declare module "@onlyoffice/eleventy-types" {
   }
 
   interface EleventyComputed {
-    part?(data: Data): PartData
+    part?(data: Data): PartData | undefined
   }
 }
 

@@ -15,7 +15,7 @@ declare module "@onlyoffice/eleventy-types" {
   }
 
   interface EleventyComputed {
-    globalNavigation?(data: Data): GlobalNavigationData
+    globalNavigation?(data: Data): GlobalNavigationData | undefined
   }
 }
 
