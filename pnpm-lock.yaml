@@ -2736,6 +2736,9 @@ importers:
       '@onlyoffice/site-config':
         specifier: workspace:^
         version: link:../packages/site-config
+      '@onlyoffice/site-env':
+        specifier: workspace:^
+        version: link:../packages/site-env
       '@onlyoffice/site-kit':
         specifier: workspace:^
         version: link:../packages/site-kit
