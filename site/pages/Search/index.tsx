@@ -2,7 +2,7 @@ import {type Context, type Data} from "@onlyoffice/eleventy-types"
 import {
   Chapter,
   ChapterContent,
-  ChapterNavigation,
+  ChapterNavigation as SChapterNavigation,
   SearchClear,
   SearchContainer,
   SearchField,
@@ -12,7 +12,7 @@ import {
 } from "@onlyoffice/site-kit"
 import {Content} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
-import {InternalChapterNavigation, InternalBreadcrumb} from "../../layouts/chapter.tsx"
+import {ChapterNavigation, Breadcrumb} from "../../internal/chapter.tsx"
 
 export function data(): Data {
   return {
@@ -23,7 +23,7 @@ export function data(): Data {
 
 export function render({content, ...ctx}: Context): JSX.Element {
   return <Chapter>
-    <ChapterNavigation>
+    <SChapterNavigation>
       <SearchContainer>
         <SearchPlaceholder>Type <kbd>/</kbd> to search</SearchPlaceholder>
         <SearchField label="Search" />
@@ -35,10 +35,10 @@ export function render({content, ...ctx}: Context): JSX.Element {
           </li>
         </SearchTemplate>
       </SearchContainer>
-      <InternalChapterNavigation level={0} url="/" />
-    </ChapterNavigation>
+      <ChapterNavigation level={0} url="/" />
+    </SChapterNavigation>
     <ChapterContent>
-      <InternalBreadcrumb url={ctx.page.url} />
+      <Breadcrumb url={ctx.page.url} />
       <SearchOutput hidden={false}>
         <Content>
           <h1 aria-live="polite"><span data-search-container-counter></span> Results</h1>

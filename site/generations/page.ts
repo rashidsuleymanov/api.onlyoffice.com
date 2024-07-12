@@ -2,6 +2,7 @@ import {type SitemapData, SitemapDatum} from "@onlyoffice/eleventy-sitemap"
 import {type Data} from "@onlyoffice/eleventy-types"
 import {cutSuffix} from "@onlyoffice/strings"
 import {slug} from "github-slugger"
+import {type ChapterData, ChapterDatum} from "../internal/chapter.tsx"
 import {type GlobalNavigationData, GlobalNavigationDatum} from "../internal/global-navigation.tsx"
 import {type HelpData, HelpDatum} from "../internal/help.tsx"
 import {type HomeData, HomeDatum} from "../internal/home.tsx"
@@ -22,6 +23,7 @@ declare module "@onlyoffice/eleventy-types" {
     defaultSitemap?: SitemapData
     defaultGlobalNavigation?: GlobalNavigationData
     defaultHelp?: HelpData
+    defaultChapter?: ChapterData
     defaultPart?: PartData
     defaultHome?: HomeData
   }
@@ -37,6 +39,7 @@ declare module "@onlyoffice/eleventy-types" {
     defaultSitemap?(data: Data): SitemapData | undefined
     defaultGlobalNavigation?(data: Data): GlobalNavigationData | undefined
     defaultHelp?(data: Data): HelpData | undefined
+    defaultChapter?(data: Data): ChapterData | undefined
     defaultPart?(data: Data): PartData | undefined
     defaultHome?(data: Data): HomeData | undefined
   }
@@ -158,6 +161,26 @@ export function data(): Data {
 
       defaultHelp(d) {
         const m = new HelpDatum()
+        if (d.title) {
+          m.title = d.title
+        }
+        return m
+      },
+
+      chapter(d) {
+        const a = d.defaultChapter
+        if (!a) {
+          return
+        }
+        const b = d.chapter
+        if (!b) {
+          return a
+        }
+        return ChapterDatum.merge(a, b)
+      },
+
+      defaultChapter(d) {
+        const m = new ChapterDatum()
         if (d.title) {
           m.title = d.title
         }
