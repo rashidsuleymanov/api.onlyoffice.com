@@ -42,7 +42,7 @@
 
     <p>将编译好的 <em>target/onlyoffice-jira-app.jar</em> 上传到 <b>管理应用</b> 页面的 Jira。</p>
     <p>最新的编译包文件可在 <a href="https://github.com/ONLYOFFICE/onlyoffice-jira/releases" target="_blank">此处</a>
-        和 <a href="https://marketplace.atlassian.com/???" target="_blank">Atlassian Marketplace</a>上获得。</p>
+        和 <a href="https://marketplace.atlassian.com/apps/1226616/onlyoffice-connector-for-jira" target="_blank">Atlassian Marketplace</a>上获得。</p>
     <p>您还可以从 Jira 管理面板安装该应用程序：</p>
     <ol>
         <li>导航到 <b>管理应用程序</b> 页面。</li>
