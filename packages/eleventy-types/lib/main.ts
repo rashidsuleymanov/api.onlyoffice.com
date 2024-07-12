@@ -185,6 +185,11 @@ export interface Pagination {
  */
 export interface EleventyComputed {
   [k: string]: unknown
+
+  /**
+   * {@link https://www.11ty.dev/docs/layouts/ Eleventy Reference}
+   */
+  layout?(data: Data): string | undefined
 }
 
 /**
