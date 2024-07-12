@@ -36,7 +36,15 @@ export function data({list, retrieve}: Resource): Data {
       },
 
       sitemap(data) {
-        const a = data.defaultSitemap(data)
+        if (!data.pagination || !data.pagination.items) {
+          return
+        }
+
+        const a = data.defaultSitemap
+        if (!a) {
+          return
+        }
+
         const b = new SitemapDatum()
 
         const [d]: Declaration[] = data.pagination.items
