@@ -44,7 +44,7 @@ The reference figure and the steps below explain the process of working with lin
 
 When the user follows the link, the **document editor** sends the initialization *editorConfig* to the **document editing service**. The ACTION\_DATA received from the [onMakeActionLink](../../../Usage%20API/Config/Events/index.md#onmakeactionlink) event is specified in the [data.actionLink](../../../Usage%20API/Config/Editor/index.md#actionlink) parameter of the *editorConfig*:
 
-``` javascript
+``` json
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "actionLink": ACTION_DATA,

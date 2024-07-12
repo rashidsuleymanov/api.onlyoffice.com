@@ -28,7 +28,7 @@ The reference figure and the steps below explain the process of setting a name t
 
    ![Label](/assets/images/editor/label.png)
 
-   ``` javascript
+   ``` json
    var docEditor = new DocsAPI.DocEditor("placeholder", {
        "editorConfig": {
            "customization": {
