@@ -20,6 +20,7 @@ import {
 import {Fragment, type JSX, h} from "preact"
 import {Tree} from "../components/tree/tree.ts"
 import {TableOfContents} from "./table-of-contents.tsx"
+import {Help} from "./help.tsx"
 
 declare module "@onlyoffice/eleventy-types" {
   interface Data {
@@ -34,11 +35,13 @@ declare module "@onlyoffice/eleventy-types" {
 export interface ChapterData {
   title?: string
   tableOfContents?: boolean
+  help?: boolean
 }
 
 export class ChapterDatum implements ChapterData {
   title = ""
   tableOfContents = false
+  help = true
 
   static merge(a: ChapterData, b: ChapterData): ChapterData {
     const c = new ChapterDatum()
@@ -53,6 +56,12 @@ export class ChapterDatum implements ChapterData {
       c.tableOfContents = b.tableOfContents
     } else if (a.tableOfContents) {
       c.tableOfContents = a.tableOfContents
+    }
+
+    if (b.help) {
+      c.help = b.help
+    } else if (a.help) {
+      c.help = a.help
     }
 
     return c
@@ -140,6 +149,7 @@ export function Chapter(p: ChapterProperties): JSX.Element {
           <h1>{ud.title}</h1>
           {p.children}
           {ud.tableOfContents && <TableOfContents url={p.url} depth={1} />}
+          {ud.help && <Help current={p.url} />}
         </Content>
       </SearchHidable>
       <SearchOutput>
