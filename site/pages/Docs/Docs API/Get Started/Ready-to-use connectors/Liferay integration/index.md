@@ -20,7 +20,7 @@ Either install it from [Liferay Marketplace](https://web.liferay.com/marketplace
 
 In order to configure connector, you must navigate to **System Settings** (**Control Panel -> Configuration -> System Settings**). In **Platform** section click the **Connectors** category and select **ONLYOFFICE**.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Liferay **System Settings** page. In the ONLYOFFICE Docs [config file](/editors/signature/), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Liferay **System Settings** page. In the ONLYOFFICE Docs [config file](../../../Additional%20API/Signature/index.md), specify the same secret key and enable the validation.
 
 ## Compiling ONLYOFFICE Connector for Liferay
 
@@ -28,7 +28,7 @@ Simply run *gradle build*. Output **.jar** will be placed inside the *build/libs
 
 ## How it works
 
-The ONLYOFFICE integration follows the API documented [here](/editors/basic).
+The ONLYOFFICE integration follows the API documented [here](../../Basic%20concepts/index.md).
 
 1. User navigates to the **Documents and Media** section within Liferay and selects the **Edit in ONLYOFFICE** action.
 
@@ -49,11 +49,8 @@ The ONLYOFFICE integration follows the API documented [here](/editors/basic).
 
 7. When all users and client browsers are done with editing, they close the editing window.
 
-8. After [10 seconds](/editors/save#savedelay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting Liferay know that the clients have finished editing the document and closed it.
+8. After [10 seconds](../../How%20It%20Works/Saving%20file/#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting Liferay know that the clients have finished editing the document and closed it.
 
 9. Liferay downloads a new version of the document, replacing the old one.
-
-\
-
 
 Download the ONLYOFFICE Connector for Liferay [here](https://github.com/ONLYOFFICE/onlyoffice-liferay).
