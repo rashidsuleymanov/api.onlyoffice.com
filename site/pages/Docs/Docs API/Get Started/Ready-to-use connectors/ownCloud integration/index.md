@@ -1,10 +1,4 @@
-![Show video](/assets/images/video/owncloud_integration.png)
-
-How to integrate ONLYOFFICE Docs with ownCloud
-
-[Close]()
-
-×
+<iframe src="https://www.youtube.com/embed/IAjhUxBWKkQ?wmode=transparent" class="video-frame" width="700px" height="400px" frameborder="0" allowfullscreen></iframe>
 
 This [app](https://github.com/ONLYOFFICE/onlyoffice-owncloud) enables users to edit office documents from [ownCloud](https://owncloud.com) using ONLYOFFICE Docs.
 
@@ -33,17 +27,31 @@ The ownCloud administrator can install the integration app from the in-built app
 
 If the server with the ownCloud installed does not have the Internet access, or if you need it for some other reason, the administrator can install the application manually. To start using ONLYOFFICE Docs with ownCloud, the following steps must be performed:
 
-1. Go to the ownCloud server *apps/* directory (or some other directory [used](https://doc.owncloud.org/server/admin_manual/installation/apps_management_installation.html#using-custom-app-directories) to connect applications): cd apps/
+1. Go to the ownCloud server *apps/* directory (or some other directory [used](https://doc.owncloud.org/server/admin_manual/installation/apps_management_installation.html#using-custom-app-directories) to connect applications):
+
+  ``` bash
+  cd apps/
+  ```
 
 2. Get the ownCloud ONLYOFFICE integration app. There are several ways to do that:
 
    1. Download the latest signed version from the official store for [ownCloud](https://marketplace.owncloud.com/apps/onlyoffice).
    2. Download the latest signed version from the application [release page](https://github.com/ONLYOFFICE/onlyoffice-owncloud/releases) on GitHub.
-   3. Clone the application source code and compile it yourself: git clone https\://github.com/ONLYOFFICE/onlyoffice-owncloud.git onlyoffice cd onlyoffice git submodule update --init --recursive
+   3. Clone the application source code and compile it yourself:
+   
+    ``` bash
+    git clone https://github.com/ONLYOFFICE/onlyoffice-owncloud.git onlyoffice
+    cd onlyoffice
+    git submodule update --init --recursive
+    ```
 
-   ownCloud does not work with unsigned applications giving an alert, so you will need to use either the option **a** or **b** to get the application.
+   > ownCloud does not work with unsigned applications giving an alert, so you will need to use either the option **a** or **b** to get the application.
 
-3. Change the owner to update the application right from ownCloud web interface: chown -R www-data:www-data onlyoffice
+3. Change the owner to update the application right from ownCloud web interface:
+
+  ``` bash
+  chown -R www-data:www-data onlyoffice
+  ```
 
 4. In ownCloud, open the *\~/settings/admin?sectionid=apps\&category=disabled* page with **Not enabled** apps by administrator and click **Enable** for the **ONLYOFFICE** application.
 
@@ -51,7 +59,9 @@ If the server with the ownCloud installed does not have the Internet access, or 
 
 In ownCloud, open the *\~/settings/admin?sectionid=additional#onlyoffice* page with administrative settings for **ONLYOFFICE** section. Enter the following address to connect ONLYOFFICE Docs:
 
-https\://\<documentserver>/
+```
+https://<documentserver>/
+```
 
 where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the ownCloud server. The ownCloud server address must also be accessible from **ONLYOFFICE Docs** for correct work.
 
@@ -61,7 +71,7 @@ Sometimes your network configuration might not allow the requests between instal
 
 ![Public](/assets/images/editor/owncloud-public.jpg)
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the ownCloud administrative configuration. In the ONLYOFFICE Docs [config file](/editors/signature/), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the ownCloud administrative configuration. In the ONLYOFFICE Docs [config file](../../../Additional%20API/Signature/index.md), specify the same secret key and enable the validation.
 
 Enable or disable the **Open file in the same tab** setting.
 
@@ -71,7 +81,9 @@ The **Open in ONLYOFFICE** action will be added to the file context menu. You ca
 
 You can check the connection to ONLYOFFICE Docs by using the following occ command:
 
+``` bash
 occ onlyoffice:documentserver --check
+```
 
 You will see a text either with information about the successful connection or the cause of the error.
 
@@ -84,7 +96,7 @@ To enable work within **ownCloud Web**, register the connector in the ownCloud W
 
 To register the connector, use these lines:
 
-```
+``` json
 "external_apps": [
     {
         "id": "onlyoffice",
@@ -97,7 +109,7 @@ Depending on your webserver configuration you can drop the *index.php* segment f
 
 ## How it works
 
-The ONLYOFFICE integration follows the API documented [here](https://api.onlyoffice.com/editors/basic).
+The ONLYOFFICE integration follows the API documented [here](../../Basic%20concepts/index.md).
 
 1. When creating a new file, the user navigates to a document folder within ownCloud and clicks the **Document**, **Spreadsheet** or **Presentation** item in the **new (+)** menu.
 
@@ -124,7 +136,7 @@ The ONLYOFFICE integration follows the API documented [here](https://api.onlyoff
 
 10. When all users and client browsers are done with editing, they close the editing window.
 
-11. After [10 seconds](/editors/save#savedelay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting ownCloud know that the clients have finished editing the document and closed it.
+11. After [10 seconds](../../How%20It%20Works/Saving%20file/#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting ownCloud know that the clients have finished editing the document and closed it.
 
 12. ownCloud downloads a new version of the document, replacing the old one.
 
@@ -134,16 +146,14 @@ The ONLYOFFICE integration follows the API documented [here](https://api.onlyoff
 
 * **Encrypting file storage**. ownCloud provides an option to encrypt the file storage. But if the encryption with the *per-user encryption keys* (used by default in ownCloud **Default encryption module** app) is enabled, ONLYOFFICE Docs cannot open the encrypted files for editing and save them after the editing. The ONLYOFFICE section of the administrative settings page will display a notification about it. However, if you set the encryption with the *master key*, ONLYOFFICE application will work as intended. The instruction on enabling *master key* based encryption is available in the official documentation on [ownCloud](https://doc.owncloud.org/server/admin_manual/configuration/files/encryption/encryption_configuration.html#enabling-master-key-based-encryption-from-the-command-line) websites.
 
-  Please note
-
-  ownCloud recommends using *master encryption key* only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of *per-user encryption keys* **might be lost forever** after you enable *master key* based encryption on them.
+  > ownCloud recommends using *master encryption key* only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of *per-user encryption keys* **might be lost forever** after you enable *master key* based encryption on them.
 
 * **Validating certificate**. If you are using a self-signed certificate for your Document Server, ownCloud will not validate such a certificate and will not allow connection to/from ONLYOFFICE Docs. This issue can be solved in two ways:
 
   1. Check the **Disable certificate verification (insecure)** box on the ONLYOFFICE administration page, Server settings section, within your ownCloud.
   2. Change the ownCloud config file manually. Locate the ownCloud config file (*/owncloud/config/config.php*) and open it. Insert the following section to it:
 
-  ```
+  ``` php
   'onlyoffice' => array (
       'verify_peer_off' => true
   )
@@ -151,7 +161,7 @@ The ONLYOFFICE integration follows the API documented [here](https://api.onlyoff
 
   This will disable the certificate verification and allow ownCloud to establish connection with ONLYOFFICE Docs.
 
-  Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the ownCloud config file.
+  > Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the ownCloud config file.
 
 * **Background task**. If the editors don't open or save documents after a period of proper functioning, the reason can be a problem in changing network settings or disabling any relevant services, or issues with the SSL certificate.
 
@@ -163,7 +173,7 @@ The ONLYOFFICE integration follows the API documented [here](https://api.onlyoff
 
   By default, this background task runs once a day. If necessary, you can change the frequency. To do so, open the ownCloud config file (*\_/owncloud/config/config.php\_*). Insert the following section and enter the required value in minutes:
 
-  ```
+  ``` php
   "onlyoffice" => array (
       "editors_check_interval" => 3624
   )
@@ -178,8 +188,5 @@ The ONLYOFFICE integration follows the API documented [here](https://api.onlyoff
   In case the source ownCloud file format was different from the base one, and you still want to save it to the original format, the file will be converted to this format from OOXML. As the formats are fundamentally different, some data (such as charts, tables, autoshapes or images) and formatting can be lost due to the simple reason that some formats (*csv*, *txt*, etc.) do not support them or treat them differently than OOXML standard does. That is why all the non-OOXML files by default are opened for viewing only, although there is an option to convert the file in the context menu. If you realise the data/formatting loss risks after the conversion, but still want to open non-OOXML files for editing, you can check them in the list in the settings. Editing for *csv* and *txt* files is available by default.
 
 * When accessing a document without download permission, file printing and using the system clipboard are not available. Copying and pasting within the editor is available via buttons in the editor toolbar and in the context menu.
-
-\
-
 
 Download the ownCloud ONLYOFFICE integration app [here](https://github.com/ONLYOFFICE/onlyoffice-owncloud).
