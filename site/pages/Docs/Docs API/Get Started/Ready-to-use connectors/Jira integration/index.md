@@ -31,11 +31,13 @@ You can also install the app from the Jira administration panel:
 
 Find the uploaded app on the **Manage apps** page. Click **Configure** and enter the name of the server with ONLYOFFICE Docs installed:
 
-http\://documentserver/
+```
+http://documentserver/
+```
 
 where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the Jira server. The Jira server address must also be accessible from **ONLYOFFICE Docs** for correct work.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Jira administration page. In the ONLYOFFICE Docs [config file](/editors/signature/), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Jira administration page. In the ONLYOFFICE Docs [config file](../../../Additional%20API/Signature/index.md), specify the same secret key and enable the validation.
 
 Sometimes your network configuration might not allow the requests between Jira and ONLYOFFICE Docs using the public addresses. The **Advanced server settings** section allows you to set the ONLYOFFICE Docs address for internal requests from Jira and the returning Jira address for internal requests from ONLYOFFICE Docs.
 
@@ -45,11 +47,18 @@ If you plan to compile the Jira ONLYOFFICE integration app yourself (e.g. edit t
 
 1. The stable Java version is necessary for the successful build. If you do not have it installed, use the following commands to install **Open JDK 8**:
 
-   sudo apt-get update sudo apt-get install openjdk-8-jdk
+   ``` bash
+   sudo apt-get update
+   sudo apt-get install openjdk-8-jdk
+   ```
 
 2. Install **Atlassian Plugin SDK**. Installation process is described [here](https://developer.atlassian.com/server/framework/atlassian-sdk/set-up-the-atlassian-plugin-sdk-and-build-a-project/).
 
-3. Compile package: atlas-package
+3. Compile package:
+
+   ```
+   atlas-package
+   ```
 
 ## Using Jira ONLYOFFICE integration app
 
@@ -61,7 +70,7 @@ After the editing session is over, a document with all the changes will be saved
 
 ## How it works
 
-The ONLYOFFICE integration follows the API documented [here](/editors/basic).
+The ONLYOFFICE integration follows the API documented [here](../../Basic%20concepts/index.md).
 
 1. User navigates to the Jira attachments and selects the **Edit in ONLYOFFICE** action.
 
@@ -85,11 +94,8 @@ The ONLYOFFICE integration follows the API documented [here](/editors/basic).
 
 8. When all users and client browsers are done with editing, they close the editing window.
 
-9. After [10 seconds](/editors/save#savedelay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting Jira know that the clients have finished editing the document and closed it.
+9. After [10 seconds](../../How%20It%20Works/Saving%20file/#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting Jira know that the clients have finished editing the document and closed it.
 
 10. The document with all the changes is saved as a new attachment with the postfix added to the file name.
-
-\
-
 
 Download the Jira ONLYOFFICE integration app [here](https://github.com/ONLYOFFICE/onlyoffice-jira).
