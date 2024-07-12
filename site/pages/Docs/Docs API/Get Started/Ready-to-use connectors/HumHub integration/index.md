@@ -23,11 +23,11 @@ Either install it from [HumHub Marketplace](https://marketplace.humhub.com/modul
 
 In order to configure plugin, you must navigate to **Administation -> Modules**. Find ONLYOFFICE plugin and click **Configure**.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **JWT Secret** on the HumHub configuration page. In the ONLYOFFICE Docs [config file](/editors/signature/), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **JWT Secret** on the HumHub configuration page. In the ONLYOFFICE Docs [config file](../../../Additional%20API/Signature/index.md), specify the same secret key and enable the validation.
 
 ## How it works
 
-The ONLYOFFICE integration follows the API documented [here](/editors/basic).
+The ONLYOFFICE integration follows the API documented [here](../../Basic%20concepts/index.md).
 
 1. When creating a new file, the user will be provided with **Document**, **Spreadsheet** or **Presentation** options in the **Create document** menu.
 
@@ -56,11 +56,8 @@ The ONLYOFFICE integration follows the API documented [here](/editors/basic).
 
 10. When all users and client browsers are done with editing, they close the editing window.
 
-11. After [10 seconds](/editors/save#savedelay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting HumHub know that the clients have finished editing the document and closed it.
+11. After [10 seconds](../../How%20It%20Works/Saving%20file/#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting HumHub know that the clients have finished editing the document and closed it.
 
 12. HumHub downloads a new version of the document, replacing the old one.
-
-\
-
 
 Download the HumHub ONLYOFFICE connector [here](https://github.com/ONLYOFFICE/onlyoffice-humhub).
