@@ -18,19 +18,21 @@ Install it from [marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace).
 
 You can also install it using [nuxeoctl](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/).
 
+``` bash
 nuxeoctl mp-install /path/to/onlyoffice-nuxeo-package-x.x.zip
+```
 
 ## Configuring Nuxeo ONLYOFFICE integration plugin
 
 Open the [nuxeo.conf](https://doc.nuxeo.com/nxdoc/configuration-parameters-index-nuxeoconf/) file and enter the name of the server with ONLYOFFICE Docs installed:
 
-```
+``` javascript
 onlyoffice.docserv.url=http://documentserver/
 ```
 
 where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Nuxeo server. The Nuxeo server address must also be accessible from **ONLYOFFICE Docs** for correct work.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own secret key by adding the **onlyoffice.jwt.secret=yoursecret** line to the *nuxeo.conf* file. In the ONLYOFFICE Docs [config file](/editors/signature/), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own secret key by adding the **onlyoffice.jwt.secret=yoursecret** line to the *nuxeo.conf* file. In the ONLYOFFICE Docs [config file](../../../Additional%20API/Signature/index.md), specify the same secret key and enable the validation.
 
 ## Compiling Nuxeo ONLYOFFICE plugin
 
@@ -38,7 +40,7 @@ To build Nuxeo plugin, the following steps must be performed for Ubuntu:
 
 1. The stable Java version is necessary for the successful build. If you do not have it installed, use the following commands to install **Open JDK 8**:
 
-   ```
+   ``` bash
    sudo apt-get update
    sudo apt-get install openjdk-8-jdk
    ```
@@ -47,13 +49,13 @@ To build Nuxeo plugin, the following steps must be performed for Ubuntu:
 
 3. Download the Nuxeo ONLYOFFICE integration plugin source code:
 
-   ```
+   ``` bash
    git clone https://github.com/onlyoffice/onlyoffice-nuxeo.git
    ```
 
 4. Compile Nuxeo ONLYOFFICE integration plugin:
 
-   ```
+   ``` bash
    cd onlyoffice-nuxeo/
    mvn clean install
    ```
@@ -62,9 +64,6 @@ To build Nuxeo plugin, the following steps must be performed for Ubuntu:
 
 ## How it works
 
-The ONLYOFFICE integration follows the API documented [here](https://api.onlyoffice.com/editors/basic).
-
-\
-
+The ONLYOFFICE integration follows the API documented [here](../../Basic%20concepts/index.md).
 
 Download the Nuxeo ONLYOFFICE integration plugin [here](https://github.com/ONLYOFFICE/onlyoffice-nuxeo).
