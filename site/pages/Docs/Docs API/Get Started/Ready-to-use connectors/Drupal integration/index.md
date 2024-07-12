@@ -34,7 +34,7 @@ There are two options to add the Drupal module.
 
 Enter the following command at the root of your site:
 
-```
+``` bash
 composer require onlyoffice/onlyoffice-drupal
 ```
 
@@ -52,7 +52,7 @@ There are two options to enable the Drupal module.
 
 1. Run the following **Drush** command, giving the project name as a parameter:
 
-   ```
+   ``` bash
    drush pm:enable onlyoffice
    ```
 
@@ -68,7 +68,7 @@ https://<documentserver>/
 
 where **documentserver** is the name of the server with the ONLYOFFICE Docs installed. The address must be accessible for the user browser and from the Drupal server. The Drupal server address must also be accessible from ONLYOFFICE Docs for correct work.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the Drupal administrative configuration. In the ONLYOFFICE Docs [config file](/editors/signature/), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the Drupal administrative configuration. In the ONLYOFFICE Docs [config file](../../../Additional%20API/Signature/index.md), specify the same secret key and enable the validation.
 
 ## Using Drupal ONLYOFFICE connector module
 
@@ -96,9 +96,6 @@ Your site visitors will also be able to view the created page (**People -> Permi
 
 ## How it works
 
-The ONLYOFFICE integration follows the API documented [here](/editors/basic).
-
-\
-
+The ONLYOFFICE integration follows the API documented [here](../../Basic%20concepts/index.md).
 
 Download the Drupal ONLYOFFICE connector module [here](https://github.com/ONLYOFFICE/onlyoffice-drupal).
