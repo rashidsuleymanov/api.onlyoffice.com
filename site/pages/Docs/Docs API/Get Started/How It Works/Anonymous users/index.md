@@ -4,9 +4,9 @@ The reference figure and the steps below explain the process of setting a name t
 
 1. The anonymous user uses the **document manager** to open a document for viewing or editing.
 
-   Anonymous user is a user with an empty [user id](/editors/config/editor#user).
+   > Anonymous user is a user with an empty [user id](../../../Usage%20API/Config/Editor/index.md#user).
 
-2. The **document storage service** sends the initialization config to the **document editor** using the [JavaScript API](/editors/basic) but the user name is not specified there.
+2. The **document storage service** sends the initialization config to the **document editor** using the [JavaScript API](../../Basic%20concepts/index.md) but the user name is not specified there.
 
 3. The **document editor** requests the user name.
 
@@ -16,11 +16,11 @@ The reference figure and the steps below explain the process of setting a name t
 
 ## How this can be done in practice
 
-1. Create an *html* file to [Open the document](/editors/open#apply).
+1. Create an *html* file to [Open the document](../Opening%20file/index.md#how-this-can-be-done-in-practice).
 
 2. If the anonymous user’s name is specified, it is displayed on the top toolbar.
 
-3. If the user name is not specified, it will be requested. The request can be turned off with the *"request"=false* value of the [editorConfig.customization.anonymous](/editors/config/editor/customization#anonymous) parameter.
+3. If the user name is not specified, it will be requested. The request can be turned off with the *"request"=false* value of the [editorConfig.customization.anonymous](../../../Usage%20API/Config/Editor/Customization/index.md#anonymous) parameter.
 
    ![Name request](/assets/images/editor/name-request.png)
 
@@ -28,7 +28,7 @@ The reference figure and the steps below explain the process of setting a name t
 
    ![Label](/assets/images/editor/label.png)
 
-   ```
+   ``` javascript
    var docEditor = new DocsAPI.DocEditor("placeholder", {
        "editorConfig": {
            "customization": {
@@ -36,11 +36,8 @@ The reference figure and the steps below explain the process of setting a name t
                    "request": true,
                    "label": "Guest"
                },
-               ...
            },
-           ...
        },
-       ...
    });
    ```
 
@@ -54,6 +51,6 @@ The reference figure and the steps below explain the process of setting a name t
 
 To restrict anonymous users access to the editor or live viewer, set the [services.CoAuthoring.server.isAnonymousSupport](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-isAnonymousSupport) parameter in the configuration file to **false**. In this case, when the anonymous user tries to open the editor, a warning will occur.
 
-![Anonymous user warning](/assets/images/editor/anonymous-warning.jpg)
+<img alt="Anonymous user warning" src="/assets/images/editor/anonymous-warning.jpg" width="400px">
 
 The live viewer will switch to the offline viewer without warnings.
