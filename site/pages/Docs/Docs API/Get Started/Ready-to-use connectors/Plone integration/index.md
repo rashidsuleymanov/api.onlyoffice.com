@@ -16,52 +16,98 @@ The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https
 
 To start using ONLYOFFICE Docs with Plone, the following steps must be performed:
 
-1. Install plugin by adding it to your *buildout.cfg*: \[buildout] ... eggs = onlyoffice.plone
+1. Install plugin by adding it to your *buildout.cfg*:
+
+   ``` javascript
+   [buildout]
+   
+   eggs = onlyoffice.plone
+   ```
+
 2. Run *bin/buildout*.
 3. Go to **Site Setup -> Add-ons** and press the **Install** button to enable plugin.
 
 You could also install plugin via Docker:
 
+``` bash
 docker run --rm -p 8080:8080 -e ADDONS="onlyoffice.plone" plone
+```
 
 Both options will automatically install plugin from [PyPi](https://pypi.org/project/onlyoffice.plone/).
 
-Please note that if you have the previous plugin version installed (earlier plugin versions with the previous name *onlyoffice.connector*), please remove it before installing the new version.
+> Please note that if you have the previous plugin version installed (earlier plugin versions with the previous name *onlyoffice.connector*), please remove it before installing the new version.
 
 ## Configuring Plone ONLYOFFICE integration plugin
 
 To configure plugin, go to **Site Setup**. Scroll down to **Add-ons Configuration** section and press the **ONLYOFFICE Configuration** button.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Plone configuration page. In the ONLYOFFICE Docs [config file](/editors/signature/), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Plone configuration page. In the ONLYOFFICE Docs [config file](../../../Additional%20API/Signature/index.md), specify the same secret key and enable the validation.
 
 ## Developing Plone ONLYOFFICE plugin
 
-1. Clone repository and change directory: git clone --branch deploy git\@github.com:ONLYOFFICE/onlyoffice-plone.git cd onlyoffice-plone
+1. Clone repository and change directory:
+
+   ``` bash
+   git clone --branch deploy git@github.com:ONLYOFFICE/onlyoffice-plone.git
+   cd onlyoffice-plone
+   ```
+
 2. Create a *virtualenv* in the package.
 3. Install requirements with pip.
-4. Run *buildout*: virtualenv . ./bin/pip install -r requirements.txt ./bin/buildout
-5. Start Plone in foreground: ./bin/instance fg
+4. Run *buildout*:
+
+   ``` bash
+   virtualenv .
+   ./bin/pip install -r requirements.txt
+   ./bin/buildout
+   ```
+
+5. Start Plone in foreground:
+
+   ``` bash
+   ./bin/instance fg
+   ```
 
 If you have a working Plone instance, you can install plugin by adding the project files to the *scr* directory:
 
 1. In the *scr* directory create the *onlyoffice.plone* directory.
 2. Put your project files received by Git into the *onlyoffice.plone* directory.
-3. Edit the *buildout.cfg* file: \[buildout] ... eggs = onlyoffice.plone develop = src/onlyoffice.plone
-4. Rerun buildout for the changes to take effect: .bin/buildout
+3. Edit the *buildout.cfg* file:
+
+   ``` javascript
+   [buildout]
+   
+   eggs = onlyoffice.plone
+   develop = src/onlyoffice.plone
+   ```
+
+4. Rerun buildout for the changes to take effect:
+
+   ``` bash
+   .bin/buildout
+   ```
+
 5. Then start or restart your Plone instance.
 
-Plone is based on **Zope server** and will not run as *root* user. If you intend to run it as *root* user, you must supply [effective-user directive](https://zope.readthedocs.io/en/2.12/SETUID.html). In order to do so, add *effective-user \<username>* line to *./parts/instance/etc/zope.conf*.
+> Plone is based on **Zope server** and will not run as *root* user. If you intend to run it as *root* user, you must supply [effective-user directive](https://zope.readthedocs.io/en/2.12/SETUID.html). In order to do so, add *effective-user \<username>* line to *./parts/instance/etc/zope.conf*.
 
 ## Upgrade Plone ONLYOFFICE integration plugin
 
-1. If you specified a concrete plugin version in your *buildout.cfg* file (so-called *pinning*, and a recommended practice), like *onlyoffice.plone = 1.0.0*, update this reference to point to the newer version. If the plugin version is not specified, then the latest version will be automatically loaded: \[versions] ... onlyoffice.plone = 1.0.1
+1. If you specified a concrete plugin version in your *buildout.cfg* file (so-called *pinning*, and a recommended practice), like *onlyoffice.plone = 1.0.0*, update this reference to point to the newer version. If the plugin version is not specified, then the latest version will be automatically loaded:
+
+   ``` javascript
+   [versions]
+
+   onlyoffice.plone = 1.0.1
+   ```
+
 2. Run *bin/buildout*. Wait until a new version is downloaded and installed.
 3. Restart Plone. Your site may look weird, or even be inaccessible until you have performed the next step.
 4. Navigate to the **Add-on** screen (add */prefs\_install\_products\_form* to your site URL) and in the **Upgrades** list select **onlyoffice.plone** and click **Upgrade onlyoffice.plone**.
 
 ## How it works
 
-The ONLYOFFICE integration follows the API documented [here](https://api.onlyoffice.com/editors/basic).
+The ONLYOFFICE integration follows the API documented [here](../../Basic%20concepts/index.md).
 
 1. User navigates to a document within Plone and selects the **ONLYOFFICE Edit** action.
 
@@ -82,11 +128,8 @@ The ONLYOFFICE integration follows the API documented [here](https://api.onlyoff
 
 7. When all users and client browsers are done with editing, they close the editing window.
 
-8. After [10 seconds](/editors/save#savedelay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting Plone know that the clients have finished editing the document and closed it.
+8. After [10 seconds](../../How%20It%20Works/Saving%20file/#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting Plone know that the clients have finished editing the document and closed it.
 
 9. Plone downloads a new version of the document, replacing the old one.
-
-\
-
 
 Download the Plone ONLYOFFICE integration plugin [here](https://github.com/ONLYOFFICE/onlyoffice-plone).
