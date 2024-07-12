@@ -3,7 +3,9 @@ import {type Data} from "@onlyoffice/eleventy-types"
 import {cutPrefix, cutSuffix} from "@onlyoffice/strings"
 import {slug} from "github-slugger"
 import {type GlobalNavigationData, GlobalNavigationDatum} from "@/internal/global-navigation.tsx"
+import {type HelpData, HelpDatum} from "@/internal/help.tsx"
 import {type HomeData, HomeDatum} from "@/internal/home.tsx"
+import {type PartData, PartDatum} from "@/internal/part.tsx"
 
 declare module "@onlyoffice/eleventy-types" {
   interface Data {
@@ -13,6 +15,8 @@ declare module "@onlyoffice/eleventy-types" {
     slug?(data: Data): string
     defaultSitemap?(d: Data): SitemapData
     defaultHome?(data: Data): HomeData
+    defaultPart?(data: Data): PartData
+    defaultHelp?(data: Data): HelpData
     defaultGlobalNavigation?(data: Data): GlobalNavigationData
   }
 
@@ -75,6 +79,19 @@ export function data(): Data {
       return m
     },
 
+    defaultPart(d) {
+      const m = new PartDatum()
+      m.title = d.title
+      m.description = d.description
+      return m
+    },
+
+    defaultHelp(d) {
+      const m = new HelpDatum()
+      m.title = d.title
+      return m
+    },
+
     defaultGlobalNavigation(d) {
       const m = new GlobalNavigationDatum()
       m.icon = d.icon
@@ -108,6 +125,24 @@ export function data(): Data {
           return a
         }
         return HomeDatum.merge(a, b)
+      },
+
+      part(d) {
+        const a = d.defaultPart(d)
+        const b = d.part
+        if (!b) {
+          return a
+        }
+        return PartDatum.merge(a, b)
+      },
+
+      help(d) {
+        const a = d.defaultHelp(d)
+        const b = d.help
+        if (!b) {
+          return
+        }
+        return HelpDatum.merge(a, b)
       },
 
       globalNavigation(d) {
