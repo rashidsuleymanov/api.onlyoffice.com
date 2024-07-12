@@ -33,7 +33,6 @@ declare module "@onlyoffice/eleventy-types" {
 export function data(): Data {
   return {
     layout: "chapter",
-    tags: ["navigation"],
 
     permalink(data) {
       let p = data.page.filePathStem

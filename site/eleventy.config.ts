@@ -12,7 +12,6 @@ import {type UserConfig} from "@onlyoffice/eleventy-types"
 import {eleventyYAML} from "@onlyoffice/eleventy-yaml"
 import {Config} from "@onlyoffice/site-config"
 import {markupPlugin} from "./config/markup.ts"
-import {navigationPlugin} from "./config/navigation.ts"
 import {staticPlugin} from "./config/static.ts"
 import {eleventyMarkdown} from "./internal/markdown.tsx"
 
@@ -40,7 +39,6 @@ function config(uc: UserConfig): unknown {
     sortAttributes: true
   })
 
-  uc.addPlugin(navigationPlugin)
   uc.addPlugin(eleventyStarryNight)
 
   uc.addPlugin(eleventyYAML)
