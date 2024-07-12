@@ -29,7 +29,7 @@ jobs:
     - name: Build Site
       timeout-minutes: 60
       working-directory: site
-      run: /usr/bin/time -l pnpm build
+      run: time -v pnpm build
 
     - name: Sync bucket
       run: |
