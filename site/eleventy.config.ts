@@ -1,5 +1,6 @@
 // todo: normalize naming of eleventy, remark, and other plugins.
 
+import {cwd} from "node:process"
 import {eleventyClean} from "@onlyoffice/eleventy-clean"
 import {isBuild} from "@onlyoffice/eleventy-env"
 import {eleventyEsbuild} from "@onlyoffice/eleventy-esbuild"
@@ -16,6 +17,8 @@ import {staticPlugin} from "./config/static.ts"
 import {eleventyMarkdown} from "./internal/markdown.tsx"
 
 function config(uc: UserConfig): unknown {
+  Config.shared = Config.read(cwd())
+
   uc.addPlugin(eleventyClean)
   uc.addPlugin(staticPlugin)
   uc.addPlugin(markupPlugin)
@@ -45,7 +48,7 @@ function config(uc: UserConfig): unknown {
   uc.addPlugin(eleventySitemap)
 
   uc.addPlugin(eleventyEsbuild, () => {
-    const c = Config.read()
+    const c = Config.shared
     return {
       passthrough: {
         input: "assets/main.ts",

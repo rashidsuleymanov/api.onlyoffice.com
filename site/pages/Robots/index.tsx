@@ -12,7 +12,7 @@ export function data(): Data {
 }
 
 export function render(): string {
-  const c = Config.read()
+  const c = Config.shared
   const s = sitemap()
   return `Sitemap: ${c.baseUrl}${s.permalink}\nUser-agent: *`
 }

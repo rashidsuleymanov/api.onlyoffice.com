@@ -12,8 +12,8 @@ export function data(): Data {
 }
 
 export function render(): JSX.Element {
+  const c = Config.shared
   const s = Sitemap.shared
-  const c = Config.read()
   return <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {s.entities.map((e) => {
       if (e.type !== "page") {

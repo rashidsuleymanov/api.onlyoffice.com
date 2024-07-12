@@ -1,6 +1,5 @@
 import {existsSync, readFileSync} from "node:fs"
 import {join} from "node:path"
-import {cwd} from "node:process"
 import {type DocEditorConfigEvents, type DocEditorConfigurableOptions} from "@onlyoffice/document-server-types"
 import yaml from "yaml"
 
@@ -17,23 +16,13 @@ export interface Configurable {
 }
 
 export class Config implements Configurable {
+  static shared: Configurable
+
   baseUrl = ""
   server = new ServerConfig()
   playground = new PlaygroundConfig()
 
-  static #config: Configurable
-  static #done = false
-
-  static read(m?: string): Configurable {
-    if (this.#done) {
-      return this.#config
-    }
-    this.#done = true
-    this.#config = this.load(cwd(), m)
-    return this.#config
-  }
-
-  static load(d: string, m?: string): Configurable {
+  static read(d: string, m?: string): Configurable {
     // It is crucial to use synchronous operations. This will allow
     // configuration to be loaded within the Eleventy or JSX components.
 
@@ -494,3 +483,7 @@ interface InputScenarioConfig extends DocEditorConfigurableOptions {
 }
 
 type ScenarioConfigurable = InputScenario
+
+if (!Config.shared) {
+  Config.shared = new Config()
+}
