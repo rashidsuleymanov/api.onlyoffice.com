@@ -173,6 +173,8 @@ export interface Data {
  * {@link https://www.11ty.dev/docs/pagination/ Eleventy Reference}
  */
 export interface Pagination {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  items?: any[]
   data?: string
   size?: number
   addAllPagesToCollections?: boolean
