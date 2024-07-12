@@ -27,11 +27,13 @@ Once the plugin is installed, the plugin settings page will be opened. Alternati
 
 * Enter the name of the server with ONLYOFFICE Docs installed in the **Document Editing Service address** field:
 
-  http\://documentserver/
+  ```
+  http://documentserver/
+  ```
 
   where **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Moodle server. The Moodle server address must also be accessible from **ONLYOFFICE Docs** for correct work.
 
-* Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Document Server Secret** on the Moodle **Settings** page. In the ONLYOFFICE Docs [config file](/editors/signature/), specify the same secret key and enable the validation.
+* Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Document Server Secret** on the Moodle **Settings** page. In the ONLYOFFICE Docs [config file](../../../Additional%20API/Signature/index.md), specify the same secret key and enable the validation.
 
 ## Using Moodle ONLYOFFICE integration plugin
 
@@ -49,9 +51,6 @@ Clicking the activity name/link in the course page opens the *ONLYOFFICE editor*
 
 ## How it works
 
-The ONLYOFFICE integration follows the API documented [here](/editors/basic).
-
-\
-
+The ONLYOFFICE integration follows the API documented [here](../../Basic%20concepts/index.md).
 
 Download the Moodle ONLYOFFICE integration plugin [here](https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor).
