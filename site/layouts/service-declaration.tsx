@@ -17,7 +17,7 @@ export function render(ctx: Context): JSX.Element {
   switch (d.kind) {
   case "group":
     // todo: move to the ServiceDeclaration
-    return <TableOfContents url={ctx.page.url} />
+    return <TableOfContents url={ctx.page.url} depth={1} />
   case "request":
     return <ServiceDeclaration
       declaration={d}
