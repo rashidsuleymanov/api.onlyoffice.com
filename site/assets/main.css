@@ -15,10 +15,6 @@
   --typography-line-height: 1.5;
 }
 
-[hidden] {
-  display: none !important;
-}
-
 html {
   background-color: var(--color-page-header-background);
   color: var(--color-foreground-default);
@@ -28,7 +24,6 @@ html {
 }
 
 body {
-  margin: 0;
   background-color: var(--color-background-default);
 }
 
