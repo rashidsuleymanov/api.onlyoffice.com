@@ -1,22 +1,28 @@
 The reference figure and the steps below explain the process of saving a document in ONLYOFFICE Docs.
 
-![Opening File](/assets/images/editor/saving.jpg)
+<img alt="Saving file" src="/assets/images/editor/saving.jpg" width="720px">
 
 1. The user edits the document in the **document editor**.
+
 2. The **document editor** sends the changes to the **document editing service**.
+
 3. The user closes the **document editor**.
+
 4. The **document editing service** watches the end of work with the document and collects the changes sent from the **document editor** into one document.
+
 5. The **document editing service** informs the **document storage service** about the end of the document editing using the *callbackUrl* from [JavaScript API](/editors/basic) and returns the link to the modified document.
 
-   Please note that since version 5.5, [callbackUrl](/editors/config/editor#callbackUrl) is selected based on [status](/editors/callback#status) of the request. Starting from version 4.4 to version 5.5, *callbackUrl* is used from the last user who joined the co-editing. Prior to version 4.4, when co-editing, *callbackUrl* is used from the user who first opened the file for editing.
+   > Please note that since version 5.5, [callbackUrl](/editors/config/editor#callbackUrl) is selected based on [status](../../../Usage%20API/Callback%20handler/index.md#status) of the request. Starting from version 4.4 to version 5.5, *callbackUrl* is used from the last user who joined the co-editing. Prior to version 4.4, when co-editing, *callbackUrl* is used from the user who first opened the file for editing.
+
 6. The **document storage service** downloads the document file with all the saved changes from the **document editing service** and stores it.
 
 ## How this can be done in practice
 
 1. Create a [callback handler](/editors/callback) to save the document from **document editing service**.
-2. Create an *html* file to [Open the document](/editors/open#apply).
-3. In the configuration script for Document Editor initialization specify the URL to the file with the *Callback handler* in the [parameter line](/editors/config/editor#callbackUrl). Be sure to add a [token](/editors/security) when using local links. Otherwise, an error will occur.
-   ```
+2. Create an *html* file to [Open the document](../Opening%20file/index.md#how-this-can-be-done-in-practice).
+3. In the configuration script for Document Editor initialization specify the URL to the file with the *Callback handler* in the [parameter line](../../../Usage%20API/Config/Editor/index.md#callbackurl). Be sure to add a [token](../Security/index.md) when using local links. Otherwise, an error will occur.
+
+   ``` json
    new DocsAPI.DocEditor("placeholder", {
        "document": {
            "fileType": "docx",
@@ -47,17 +53,17 @@ For Windows - *%ProgramFiles%\ONLYOFFICE\DocumentServer\config\\**default.json**
 
 If you want to change it, you can use the *local.json* file, where all the edited parameters should be stored. This file is located in the same directory as the *default.json* file and the **whole object structure** for the necessary parameter **must be retained** (see the examples below).
 
-Please do not edit the contents of the *default.json* file directly. The default values will be restored each time you restart Docker container or upgrade **ONLYOFFICE Docs** to a new version and all your changes will be lost.
+> Please do not edit the contents of the *default.json* file directly. The default values will be restored each time you restart Docker container or upgrade **ONLYOFFICE Docs** to a new version and all your changes will be lost.
 
-Parameters
+### Parameters
 
 | Parameter                                    | Description                                                                                         | Type    | Example |
 | -------------------------------------------- | --------------------------------------------------------------------------------------------------- | ------- | ------- |
 | services.CoAuthoring.server.savetimeoutdelay | Defines the conversion start delay time (measured in milliseconds) after the edited file is closed. | integer | 5000    |
 
-Sample local.json configuration
+### Sample local.json configuration
 
-```
+``` json
 {
     "services": {
         "CoAuthoring": {
@@ -71,11 +77,11 @@ Sample local.json configuration
 
 ## Force saving
 
-**Document editing service** allows to get the current document state before the editing is finished. The process is called *forcesave* in ONLYOFFICE Docs. When forcesave is initiated, **document editing service** performs request to the [callback handler](/editors/callback) with the link to the document as the *url* parameter and with the **6** value for the *status* parameter. The forcesave process can be initiated the following ways:
+**Document editing service** allows to get the current document state before the editing is finished. The process is called *forcesave* in ONLYOFFICE Docs. When forcesave is initiated, **document editing service** performs request to the [callback handler](../../../Usage%20API/Callback%20handler/index.md) with the link to the document as the *url* parameter and with the **6** value for the *status* parameter. The forcesave process can be initiated the following ways:
 
-* By the request to the [document command service](/editors/command) with the [forcesave](/editors/command/forcesave) value in the *c* parameter. The *forcesavetype* parameter will have the **0** value when sending the request to the **callback handler**.
+* By the request to the [document command service](/editors/command) with the [forcesave](../../../Additional%20API/Command%20service/forcesave/index.md) value in the *c* parameter. The *forcesavetype* parameter will have the **0** value when sending the request to the **callback handler**.
 
-* Enable the [editorConfig.customization.forcesave](/editors/config/editor/customization#forcesave) mode setting it to **true** in the editor initialization configuration. In this case each time the user clicks the **Save** button, the forcesave will be done, and the *forcesavetype* parameter will have the **1** value when sending the request to the **callback handler**.
+* Enable the [editorConfig.customization.forcesave](../../../Usage%20API/Config/Editor/Customization/index.md#forcesave) mode setting it to **true** in the editor initialization configuration. In this case each time the user clicks the **Save** button, the forcesave will be done, and the *forcesavetype* parameter will have the **1** value when sending the request to the **callback handler**.
 
 * You can enable [the repeating forcesave start](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#AutoAssembly) in the **ONLYOFFICE Docs** additional configuration file, which can be either found at (in case you have already created it) or placed to the following path:
 
@@ -83,16 +89,16 @@ Sample local.json configuration
 
   For Windows - *%ProgramFiles%\ONLYOFFICE\DocumentServer\config\\**local.json***.
 
-  Parameters
+  ### Parameters
 
   | Parameter                                  | Description                                                                             | Type    | Example |
   | ------------------------------------------ | --------------------------------------------------------------------------------------- | ------- | ------- |
   | services.CoAuthoring.autoAssembly.enable   | Defines if the automatic forcesaving is enabled or not. The default value is **false**. | boolean | false   |
   | services.CoAuthoring.autoAssembly.interval | Defines the interval time in minutes for initiating the automatic forcesaving.          | string  | 5m      |
 
-  Sample local.json configuration
+  ### Sample local.json configuration
 
-  ```
+  ``` json
   {
       "services": {
           "CoAuthoring": {
@@ -107,21 +113,21 @@ Sample local.json configuration
 
   The *forcesavetype* parameter will have the **2** value when sending the request to the **callback handler**.
 
-Please note that you cannot see the document versions created with the force saving option in the document history. The reason is that ONLYOFFICE Docs [highlights the changes](/editors/history#apply-changes) made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted.
+> Please note that you cannot see the document versions created with the force saving option in the document history. The reason is that ONLYOFFICE Docs [highlights the changes](/editors/history#apply-changes) made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted.
 
 ## Saving in original format
 
 Starting from version 7.0, the [assemblyFormatAsOrigin](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-assemblyFormatAsOrigin) server setting is enabled by default to save the assembled file in its original format. It is used to change the file format from OOXML to ODF or to save files with macros.
 
-Parameters
+### Parameters
 
 | Parameter                                          | Description                                                                                          | Type    | Example |
 | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------- | ------- |
 | services.CoAuthoring.server.assemblyFormatAsOrigin | Defines if the assembled file is saved in its original format or not. The default value is **true**. | boolean | true    |
 
-Sample local.json configuration
+### Sample local.json configuration
 
-```
+``` json
 {
     "services": {
         "CoAuthoring": {
@@ -133,4 +139,4 @@ Sample local.json configuration
 }
 ```
 
-Remember that this setting can crash some integrators which open the documents without prior conversion (for example, in the *.doc* format which is unavailable for saving in ONLYOFFICE Docs). Disable this setting if necessary.
+> Remember that this setting can crash some integrators which open the documents without prior conversion (for example, in the *.doc* format which is unavailable for saving in ONLYOFFICE Docs). Disable this setting if necessary.
