@@ -4,24 +4,24 @@ order: -5
 
 The parameters, which can be changed for ONLYOFFICE Docs, can be subdivided into the following main sections:
 
-[**config**](/editors/config/) - allows to change the platform type used, document display size (width and height) and type of the document opened;
+[**config**](../Config/index.md) - allows to change the platform type used, document display size (width and height) and type of the document opened;
 
-* [**document**](/editors/config/document) - contains all the parameters pertaining to the document (title, url, file type, etc.);
+* [**document**](../Config/Document/index.md) - contains all the parameters pertaining to the document (title, url, file type, etc.);
 
-  * [**info**](/editors/config/document/info) - contains additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings);
-  * [**permissions**](/editors/config/document/permissions) - defines whether the document can be edited and downloaded or not;
+  * [**info**](../Config/Document/Info/index.md) - contains additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings);
+  * [**permissions**](../Config/Document/Permissions/index.md) - defines whether the document can be edited and downloaded or not;
 
-* [**editorConfig**](/editors/config/editor) - defines parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.);
+* [**editorConfig**](../Config/Editor/index.md) - defines parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.;
 
-  * [**customization**](/editors/config/editor/customization) - allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details;
-  * [**embedded**](/editors/config/editor/embedded) - is used for the embedded document type only and allows to change the behavior of the buttons used to control the embedded mode;
-  * [**plugins**](/editors/config/editor/plugins) - is used to connect the necessary [plugins](/plugin/basic) to your ONLYOFFICE Docs, so that they become visible to all document editor users;
+  * [**customization**](../Config/Editor/Customization/index.md) - allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details;
+  * [**embedded**](../Config/Editor/Embedded/index.md) - is used for the embedded document type only and allows to change the behavior of the buttons used to control the embedded mode;
+  * [**plugins**](../Config/Editor/Plugins/index.md) - is used to connect the necessary [plugins](../../../Plugin%20and%20Macros/Get%20Started/Overview/index.md) to your ONLYOFFICE Docs, so that they become visible to all document editor users;
 
-* [**events**](/editors/config/events) - is the list of special events called when some action is applied to the document (when it is loaded, modified, etc.).
+* [**events**](../Config/Events/index.md) - is the list of special events called when some action is applied to the document (when it is loaded, modified, etc.).
 
 The complete *config* with all the additional parameters looks the following way:
 
-```
+``` json
 config = {
     "document": {
         "fileType": "docx",
@@ -39,7 +39,6 @@ config = {
                     "permissions": "Read Only",
                     "user": "External link"
                 },
-                ...
             ],
             "uploaded": "2010-07-07 3:46 PM"
         },
@@ -167,12 +166,10 @@ config = {
              "autostart": [
                  "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
                  "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
-                 ...
              ],
              "pluginsData": [
                  "https://example.com/plugin1/config.json",
                  "https://example.com/plugin2/config.json",
-                 ...
              ]
         },
         "recent": [
@@ -186,7 +183,6 @@ config = {
                 "title": "exampledocument2.docx",
                 "url": "https://example.com/exampledocument2.docx"
             },
-            ...
         ],
         "region": "en-US",
         "templates": [
@@ -200,7 +196,6 @@ config = {
                 "title": "exampletemplate2.docx",
                 "url": "https://example.com/url-to-create-template2"
             },
-            ...
         ],
         "user": {
             "group": "Group1,Group2",
@@ -250,4 +245,4 @@ config = {
 };
 ```
 
-Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](/editors/howitworks) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
