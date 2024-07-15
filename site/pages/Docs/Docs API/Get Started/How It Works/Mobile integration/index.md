@@ -48,13 +48,9 @@ This example demonstrates how to integrate ONLYOFFICE mobile web editors with th
    }
    ```
 
-   <img alt="iOS error" src="/assets/images/editor/ios-error.png" width="591px">
+   <img alt="iOS error" src="/assets/images/editor/ios-error.png" width="260px">
 
-   **DocumentServerURL is not specified**
-
-   <img alt="iOS managing" src="/assets/images/editor/ios-managing.png" width="591px">
-
-   **DocumentServerURL is specified**
+   <img alt="iOS managing" src="/assets/images/editor/ios-managing.png" width="260px">
 
 5. Use the **DocumentServerViewController** controller to open the editors correctly on iOS devices. In this controller, define a function to open a document via WKWebView component. First, request an absolute URL and check if it contains the *"/editor?"* string. If so, add an additional query parameter (the mobile platform type) to the link:
 
@@ -96,17 +92,11 @@ This example demonstrates how to integrate ONLYOFFICE mobile web editors with th
 
    The full code for **DocumentServerViewController** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/DocumentServerDemo/DocumentServerViewController.swift).
 
-   <img alt="Activity indicator" src="/assets/images/editor/activity-indicator.png" width="591px">
+   <img alt="Activity indicator" src="/assets/images/editor/activity-indicator.png" width="260px">
 
-   **Activity Indicator**
+   <img alt="Progress view" src="/assets/images/editor/progress-view.png" width="260px">
 
-   <img alt="Progress view" src="/assets/images/editor/progress-view.png" width="591px">
-
-   **Progress View**
-
-   <img alt="Buttons" src="/assets/images/editor/buttons.png" width="591px">
-
-   **Buttons**
+   <img alt="Buttons" src="/assets/images/editor/buttons.png" width="260px">
 
 8. To start working with documents, display the ONLYOFFICE editor on your mobile device via the WKWebView component. To do this, set up WKWebView and layout in the **DocumentServerEditorViewController** controller as follows:
 
@@ -164,9 +154,7 @@ func webView(_ webView: WKWebView,
 }
 ```
 
-<img alt="Go back" src="/assets/images/editor/exit-button.png" width="591px">
-
-**Button to exit the editor**
+<img alt="Go back" src="/assets/images/editor/exit-button.png" width="260px">
 
 The full code for **DocumentServerEditorViewController** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/DocumentServerEditor/DocumentServerEditorViewController.swift).
 
@@ -242,9 +230,7 @@ This example demonstrates how to open the ONLYOFFICE editors via WKWebView using
    }
    ```
 
-   <img alt="Editor samples" src="/assets/images/editor/editor-samples.png" width="591px">
-
-   **ONLYOFFICE Editor Samples**
+   <img alt="Editor samples" src="/assets/images/editor/editor-samples.png" width="260px">
 
    The full code for **EditorViewController** can be found [here](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/Editor/EditorViewController.swift).
 
@@ -397,13 +383,9 @@ This example demonstrates how to integrate ONLYOFFICE mobile web editors with th
    }
    ```
 
-   <img alt="Android error" src="/assets/images/editor/android-error.png" width="576px">
+   <img alt="Android error" src="/assets/images/editor/android-error.png" width="260px">
 
-   **DocumentServerURL is not specified**
-
-   <img alt="Android managing" src="/assets/images/editor/android-managing.png" width="576px">
-
-   **DocumentServerURL is specified**
+   <img alt="Android managing" src="/assets/images/editor/android-managing.png" width="260px">
 
 5. Use the **MainFragment.kt** controller to open the editors correctly on Android devices. In this controller, define a function to open a document via WebView component. Request a URL and check if it contains the *"editor"* string which specifies that the document will be opened:
 
