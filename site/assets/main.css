@@ -1,5 +1,6 @@
+@import "./font.css";
+
 @import "../node_modules/@onlyoffice/ui-kit/lib/main.css";
-@import "../node_modules/@onlyoffice/documentation-ui-kit/lib/kit.font.css";
 @import "../node_modules/@onlyoffice/site-kit/lib/main.css";
 
 @import "../components/syntax-highlight/syntax-highlight.css";

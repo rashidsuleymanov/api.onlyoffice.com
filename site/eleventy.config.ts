@@ -14,14 +14,12 @@ import {eleventyYAML} from "@onlyoffice/eleventy-yaml"
 import {configMode} from "@onlyoffice/site-env"
 import {Config} from "@onlyoffice/site-config"
 import {markupPlugin} from "./config/markup.ts"
-import {staticPlugin} from "./config/static.ts"
 import {eleventyMarkdown} from "./internal/markdown.tsx"
 
 function config(uc: UserConfig): unknown {
   Config.shared = Config.read(cwd(), configMode())
 
   uc.addPlugin(eleventyClean)
-  uc.addPlugin(staticPlugin)
   uc.addPlugin(markupPlugin)
   uc.addPlugin(eleventyMarkdown)
 
@@ -75,6 +73,8 @@ function config(uc: UserConfig): unknown {
   })
 
   uc.addPlugin(eleventyPagefind)
+
+  uc.addPassthroughCopy({static: "."})
 
   return {
     dir: {

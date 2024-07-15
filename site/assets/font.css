@@ -1,0 +1,75 @@
+@font-face {
+  font-display: swap;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/OpenSans-Regular.woff2") format("woff2"), url("/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  ascent-override: 101.58%;
+  descent-override: 27.84%;
+  font-family: "Open Sans Fallback";
+  font-style: normal;
+  font-weight: 400;
+  line-gap-override: 0.00%;
+  size-adjust: 105.22%;
+  src: local("Arial");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/OpenSans-Medium.woff2") format("woff2"), url("/OpenSans-Medium.woff") format("woff");
+}
+
+@font-face {
+  ascent-override: 99.63%;
+  descent-override: 27.31%;
+  font-family: "Open Sans Medium Fallback";
+  font-style: normal;
+  font-weight: 500;
+  line-gap-override: 0.00%;
+  size-adjust: 107.28%;
+  src: local("Arial");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/OpenSans-SemiBold.woff2") format("woff2"), url("/OpenSans-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  ascent-override: 105.77%;
+  descent-override: 28.99%;
+  font-family: "Open Sans SemiBold Fallback";
+  font-style: normal;
+  font-weight: 600;
+  line-gap-override: 0.00%;
+  size-adjust: 101.06%;
+  src: local("Arial Bold");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: bold;
+  src: url("/OpenSans-Bold.woff2") format("woff2"), url("/OpenSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  ascent-override: 101.97%;
+  descent-override: 27.95%;
+  font-family: "Open Sans Fallback";
+  font-style: normal;
+  font-weight: 700;
+  line-gap-override: 0.00%;
+  size-adjust: 104.82%;
+  src: local("Arial Bold");
+}
