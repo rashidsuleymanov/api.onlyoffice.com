@@ -2902,49 +2902,6 @@ importers:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
 
-  ui/font:
-    devDependencies:
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      preact-render-to-string:
-        specifier: ^6.4.1
-        version: 6.4.1(preact@10.22.0)
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-
-  ui/kit:
-    dependencies:
-      '@onlyoffice/documentation-ui-font':
-        specifier: workspace:^
-        version: link:../font
-      '@onlyoffice/documentation-ui-typography':
-        specifier: workspace:^
-        version: link:../typography
-    devDependencies:
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      preact-render-to-string:
-        specifier: ^6.4.1
-        version: 6.4.1(preact@10.22.0)
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-
-  ui/typography:
-    devDependencies:
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      preact-render-to-string:
-        specifier: ^6.4.1
-        version: 6.4.1(preact@10.22.0)
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-
 packages:
 
   '@11ty/dependency-tree@2.0.1':
