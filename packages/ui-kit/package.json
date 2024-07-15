@@ -15,6 +15,7 @@
   "dependencies": {
     "@onlyoffice/ui-article-card": "workspace:^",
     "@onlyoffice/ui-badge": "workspace:^",
+    "@onlyoffice/ui-base": "workspace:^",
     "@onlyoffice/ui-breadcrumb": "workspace:^",
     "@onlyoffice/ui-button": "workspace:^",
     "@onlyoffice/ui-code-editor": "workspace:^",

@@ -2443,6 +2443,9 @@ importers:
       '@onlyoffice/ui-badge':
         specifier: workspace:^
         version: link:../ui-badge
+      '@onlyoffice/ui-base':
+        specifier: workspace:^
+        version: link:../ui-base
       '@onlyoffice/ui-breadcrumb':
         specifier: workspace:^
         version: link:../ui-breadcrumb
