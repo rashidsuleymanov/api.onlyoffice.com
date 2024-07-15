@@ -2321,33 +2321,6 @@ importers:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
 
-  packages/ui-colors:
-    devDependencies:
-      '@types/color':
-        specifier: ^3.0.6
-        version: 3.0.6
-      '@types/node':
-        specifier: ^20.12.12
-        version: 20.12.12
-      color:
-        specifier: ^4.2.3
-        version: 4.2.3
-      dot-prop:
-        specifier: ^9.0.0
-        version: 9.0.0
-      sade:
-        specifier: ^1.8.1
-        version: 1.8.1
-      tsx:
-        specifier: ^4.10.5
-        version: 4.11.0
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-      yaml:
-        specifier: ^2.4.1
-        version: 2.4.1
-
   packages/ui-content:
     dependencies:
       '@github/tab-container-element':
@@ -2461,9 +2434,6 @@ importers:
       '@onlyoffice/ui-code-preview':
         specifier: workspace:^
         version: link:../ui-code-preview
-      '@onlyoffice/ui-colors':
-        specifier: workspace:^
-        version: link:../ui-colors
       '@onlyoffice/ui-content':
         specifier: workspace:^
         version: link:../ui-content
@@ -2473,6 +2443,9 @@ importers:
       '@onlyoffice/ui-logos':
         specifier: workspace:^
         version: link:../ui-logos
+      '@onlyoffice/ui-primitives':
+        specifier: workspace:^
+        version: link:../ui-primitives
       '@onlyoffice/ui-select':
         specifier: workspace:^
         version: link:../ui-select
@@ -2504,6 +2477,33 @@ importers:
       vite:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
+
+  packages/ui-primitives:
+    devDependencies:
+      '@types/color':
+        specifier: ^3.0.6
+        version: 3.0.6
+      '@types/node':
+        specifier: ^20.12.12
+        version: 20.12.12
+      color:
+        specifier: ^4.2.3
+        version: 4.2.3
+      dot-prop:
+        specifier: ^9.0.0
+        version: 9.0.0
+      sade:
+        specifier: ^1.8.1
+        version: 1.8.1
+      tsx:
+        specifier: ^4.10.5
+        version: 4.11.0
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+      yaml:
+        specifier: ^2.4.1
+        version: 2.4.1
 
   packages/ui-select:
     dependencies:

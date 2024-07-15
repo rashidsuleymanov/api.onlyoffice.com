@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/ui-colors",
+  "name": "@onlyoffice/ui-primitives",
   "private": true,
   "type": "module",
   "exports": {

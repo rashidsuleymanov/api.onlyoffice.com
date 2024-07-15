@@ -7,7 +7,7 @@ import sade from "sade"
 import {Colors} from "./colors.ts"
 
 function main(): void {
-  sade("ui-colors", true)
+  sade("ui-primitives", true)
     .action(build)
     .parse(argv)
 }
