@@ -2,7 +2,7 @@ The steps below explain the process of connecting several editors to the same ht
 
 > Simultaneous work with several editors is available starting from version 5.5.
 
-![Inline editors](/assets/images/editor/inlineEditors.png)
+<img alt="Inline editors" src="/assets/images/editor/inlineEditors.png" width="720px">
 
 1. Create an empty *html* file.
 

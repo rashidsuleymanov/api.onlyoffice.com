@@ -1,6 +1,6 @@
 The reference figure and the steps below explain the process of mentioning users in comments in ONLYOFFICE Docs.
 
-![Create mensions](/assets/images/editor/mentions-create.png)
+<img alt="Create mentions" src="/assets/images/editor/mentions-create.png" width="720px">
 
 1. The user sends a request to get a list of users to mention by typing **+** sign in the comment field in the **document editor**.
 2. The **document editor** informs the **document manager** about the request.
@@ -62,7 +62,7 @@ The reference figure and the steps below explain the process of mentioning users
 
 ## Opening the comment
 
-![Open action link](/assets/images/editor/actionLink-open.png)
+<img alt="Open action link" src="/assets/images/editor/actionLink-open.png" width="720px">
 
 1. The user follows the link in the **document manager**.
 2. The **document manager** sends the initialization *editorConfig* to the **document editor**.

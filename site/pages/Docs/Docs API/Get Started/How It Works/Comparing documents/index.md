@@ -1,6 +1,6 @@
 The reference figure and the steps below explain the process of comparing documents in ONLYOFFICE Docs.
 
-![Comparing documents](/assets/images/editor/compare.png)
+<img alt="Comparing documents" src="/assets/images/editor/compare.png" width="720px">
 
 1. The user opens the document for viewing or editing using the **document manager** (found in his/her browser).
 2. The **document storage service** sends the document information using the [JavaScript API](../../Basic%20concepts/index.md) to the **document editor** and specifies the possibility to choose the file from the **document manager**.
@@ -15,7 +15,7 @@ The reference figure and the steps below explain the process of comparing docume
 
 2. Specify the event handler for the *Document from Storage* button to be displayed in the *Compare* options in the configuration script for Document Editor initialization. When the user clicks the button, the [onRequestCompareFile](../../../Usage%20API/Config/Editor/Customization/index.md#onrequestcomparefile) event is called and they can select the document for comparing from the Storage.
 
-   ![Comparing files](/assets/images/editor/onRequestCompareFile.png)
+   ![onRequestCompareFile](/assets/images/editor/onRequestCompareFile.png)
 
    ``` json
    var onRequestCompareFile = function() {

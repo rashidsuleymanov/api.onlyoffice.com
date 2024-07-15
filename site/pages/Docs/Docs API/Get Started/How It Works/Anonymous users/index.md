@@ -1,6 +1,6 @@
 The reference figure and the steps below explain the process of setting a name to an anonymous user in ONLYOFFICE Docs.
 
-![Anonymous](/assets/images/editor/anonymous-user.png)
+<img alt="Anonymous" src="/assets/images/editor/anonymous-user.png" width="720px">
 
 1. The anonymous user uses the **document manager** to open a document for viewing or editing.
 

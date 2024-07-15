@@ -1,6 +1,6 @@
 The reference figure and the steps below explain the process of co-editing a document in ONLYOFFICE Docs.
 
-![Co-editing](/assets/images/editor/coedit.jpg)
+<img alt="Co-editing scheme" src="/assets/images/editor/coedit.jpg" width="720px">
 
 1. User 1 and user 2 open one and the same document in **document editor**, i.e. when opening the file one and the same [document.key](../../../Usage%20API/Config/Document/index.md#key) has been used.
 2. User 1 makes changes to the opened document.
@@ -8,7 +8,7 @@ The reference figure and the steps below explain the process of co-editing a doc
 4. The **document editing service** sends the changes made by user 1 to the user 2 **document editor**.
 5. Now these changes become visible to user 2.
 
-![Co-editing](/assets/images/editor/coedit-view.png)
+![Co-editing view](/assets/images/editor/coedit-view.png)
 
 ## How this can be done in practice
 
