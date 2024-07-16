@@ -1,15 +1,15 @@
 .form-control {
   align-items: center;
   display: grid;
+  gap: var(--base-size-8);
   grid-template-columns: 1fr min-content;
-  gap: 9px;
 }
 
 .form-control__label {
-  font-size: 13px;
-  font-weight: 400;
+  font-size: var(--text-body-font-size-small);
   grid-column: 1;
   grid-row: 1;
+  line-height: var(--text-body-line-height-small);
 }
 
 .form-control__action {
@@ -20,6 +20,7 @@
 .form-control__action button {
   background-color: transparent;
   border: none;
+  color: var(--color-foreground-muted);
   cursor: pointer;
   display: block;
   font-size: inherit;
