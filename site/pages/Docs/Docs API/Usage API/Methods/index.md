@@ -29,9 +29,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
 * [showMessage](#showmessage) - display tooltip with the message.
 * [startFilling](#startfilling) - start filling out the ready forms and lock the pdf editing.
 
-## Methods and their description:
 
-* ### createConnector*
+## createConnector*
 
 Create the [connector](../Automation%20API/index.mdr) to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
 
@@ -39,7 +38,7 @@ Create the [connector](../Automation%20API/index.mdr) to interact with text docu
   docEditor.createConnector();
   ```
 
-* ### denyEditingRights
+## denyEditingRights
 
 Deny editing. This method can be called when you want to make the document editing unavailable.
 
@@ -51,7 +50,7 @@ Deny editing. This method can be called when you want to make the document editi
   | --------- | ------------------------------------- | ------ | -------- |
   | message   | Defines the text messages for dialog. | string | optional |
 
-* ### destroyEditor
+## destroyEditor
 
 Destroy *docEditor* object. This method can be called when you want to reinit document editor with another configurations. Used since version 4.3.
 
@@ -59,7 +58,7 @@ Destroy *docEditor* object. This method can be called when you want to reinit do
   docEditor.destroyEditor();
   ```
 
-* ### downloadAs
+## downloadAs
 
 Download the edited file. This method can be called only when the existence of the [onDownloadAs](../Config/Events/index.md#ondownloadas) events. **Document editing service** asynchronously creates a document and triggers the **onDownloadAs** event with a link in parameter.
 
@@ -73,7 +72,7 @@ Download the edited file. This method can be called only when the existence of t
 
   > Please note that conversion from the *djvu*, *pdf*, *xps* formats are not available. The original format will be downloaded.
 
-* ### insertImage
+## insertImage
 
 Insert an image into the file. Starting from version 7.0, this method allows a user to insert several images. The *images* array is used to do it. This method must be called after the [onRequestInsertImage](../Config/Events/index.md#onrequestinsertimage) events.
 
@@ -118,7 +117,7 @@ Insert an image into the file. Starting from version 7.0, this method allows a u
   >
   > Please note that this structure is deprecated and will not be supported by the next editors versions. Please use a new one.
 
-* ### refreshHistory
+## refreshHistory
 
 Show the document version history. This method must be called after the [onRequestHistory](../Config/Events/index.md#onrequesthistory) events.
 
@@ -204,7 +203,7 @@ Show the document version history. This method must be called after the [onReque
   | history.user.name     | Defines the name of the user who is the author of the document version.                                                                           | string  | optional |
   | history.version       | Defines the document version number.                                                                                                              | integer | required |
 
-* ### requestClose
+## requestClose
 
 Request to close the editor. It is recommended to call this method before the [destroyEditor](#destroyeditor) method to check if there is some unsaved data in the editor or not. If the unsaved data exists, then the dialog box will be displayed to ask the user whether they want to continue editing or close the editor losing all the unsaved data. If the *Close* option will be chosen, then the [onRequestClose](../Config/Events/index.md#onrequestclose) event will be called.
 
@@ -212,7 +211,7 @@ Request to close the editor. It is recommended to call this method before the [d
   docEditor.requestClose();
   ```
 
-* ### setActionLink
+## setActionLink
 
 Set the link to the document which contains a bookmark. This method must be called after the [onMakeActionLink](../Config/Events/index.md#onmakeactionlink) event. The software integrator must process the *ACTION\_DATA* received from the **document editing service** to set the link. The link is created by the software integrators who use ONLYOFFICE Docs in their **document manager**.
 
@@ -224,7 +223,7 @@ Set the link to the document which contains a bookmark. This method must be call
   | --------- | --------------------------------------------------------------------------------- | ------ | -------- |
   | link      | Defines the link which allows scrolling to the bookmark position in the document. | string | required |
 
-* ### setFavorite
+## setFavorite
 
 Change the *Favorite* icon state. This method must be called after the [onMetaChange](../Config/Events/index.md#onmetachange) event.
 
@@ -236,7 +235,7 @@ Change the *Favorite* icon state. This method must be called after the [onMetaCh
   | --------- | ---------------------------------------------------------------------------- | ------- | -------- |
   | favorite  | Defines if the *Favorite* icon is highlighted (**true**) or not (**false**). | boolean | true     |
 
-* ### setHistoryData
+## setHistoryData
 
 Send the link to the document for viewing the version history. This method must be called after the [onRequestHistoryData](../Config/Events/index.md#onrequesthistorydata) events.
 
@@ -295,7 +294,7 @@ Send the link to the document for viewing the version history. This method must 
   | url | Defines the url address of the current document version. Can be downloaded by the *url* link from [the JSON object](../Callback%20handler/index.md#url) returned after saving the document. Be sure to add a [token](../../Get%20Started/How%20It%20Works/index.md) when using local links. Otherwise, an error will occur.   | string  | required |
   | version | Defines the document version number.  | integer | required |
 
-* ### setMailMergeRecipients
+## setMailMergeRecipients
 
 Insert recipient data for mail merge into the file. This method must be called after the [onRequestMailMergeRecipients](../Config/Events/index.md#onrequestmailmergerecipients) event. Deprecated since version 7.5, please use [setRequestedSpreadsheet](#setrequestedspreadsheet) instead.
 
@@ -315,7 +314,7 @@ Insert recipient data for mail merge into the file. This method must be called a
   | token | Defines the encrypted signature added to the parameter in the form of a [token](../../Additional%20API/Signature/Browser/index.md#setmailmergerecipients). | string | optional |
   | url  | Defines the absolute URL where the source data is stored. Be sure to add a [token](../../Get%20Started/How%20It%20Works/Security/index.md) when using local links. Otherwise, an error will occur. | string | required |
 
-* ### setReferenceData*
+## setReferenceData*
 
 Refresh data by a link to a file which is specified with the *referenceData*, *path*, or *link* parameters. This method must be called after the [onRequestReferenceData](../Config/Events/index.md#onrequestreferencedata) event.
 
@@ -354,7 +353,7 @@ Refresh data by a link to a file which is specified with the *referenceData*, *p
   | token  | Defines the encrypted signature added to the parameter in the form of a [token](../../Additional%20API/Signature/Browser/index.md#setreferencedata). | string | optional |
   | url  | Defines the URL address to download the current file.   | string | required |
 
-* ### setReferenceSource
+## setReferenceSource
 
 Change a source of the external data. This method can be called after the [onRequestReferenceSource](../Config/Events/index.md#onrequestreferencesource) event.
 
@@ -393,7 +392,7 @@ Change a source of the external data. This method can be called after the [onReq
   | token | Defines the encrypted signature added to the parameter in the form of a [token](../../Additional%20API/Signature/Browser/index.md#setreferencesource). | string | optional |
   | url | Defines the URL address to download the current file. | string | required |
 
-* ### setRequestedDocument[\*\*](#requireddescr2)
+## setRequestedDocument[\*\*](#requireddescr2)
 
 Select a document for comparing or combining. This method must be called after the [onRequestSelectDocument](../Config/Events/index.md#onrequestselectdocument) event.
 
@@ -415,7 +414,7 @@ Select a document for comparing or combining. This method must be called after t
   | token  | Defines the encrypted signature added to the parameter in the form of a [token](../../Additional%20API/Signature/Browser/index.md#setrequesteddocument). | string | optional |
   | url | Defines the absolute URL where the source document is stored. Be sure to add a [token](../../Get%20Started/How%20It%20Works/Security/index.md) when using local links. Otherwise, an error will occur. | string | required |
 
-* ### setRequestedSpreadsheet
+## setRequestedSpreadsheet
 
 Insert recipient data for mail merge into the file. This method must be called after the [onRequestSelectSpreadsheet](../Config/Events/index.md#onrequestselectspreadsheet) event.
 
@@ -437,7 +436,7 @@ Insert recipient data for mail merge into the file. This method must be called a
   | token  | Defines the encrypted signature added to the parameter in the form of a [token](../../Additional%20API/Signature/Browser/index.md#setrequestedspreadsheet).  | string | optional |
   | url  | Defines the absolute URL where the source data is stored. Be sure to add a [token](../../Get%20Started/How%20It%20Works/Security/index.md) when using local links. Otherwise, an error will occur. | string | required |
 
-* ### setRevisedFile[\*\*](#requireddescr2)
+## setRevisedFile[\*\*](#requireddescr2)
 
 Select a document for comparing. This method must be called after the [onRequestCompareFile](../Config/Events/index.md#onrequestcomparefile) events. Deprecated since version 7.5, please use [setRequestedDocument](#setrequesteddocument) instead.
 
@@ -457,7 +456,7 @@ Select a document for comparing. This method must be called after the [onRequest
   | token     | Defines the encrypted signature added to the parameter in the form of a [token](../../Additional%20API/Signature/Browser/index.md#setrevisedfile).  | string | optional |
   | url       | Defines the absolute URL where the source document is stored. Be sure to add a [token](../../Get%20Started/How%20It%20Works/Security/index.md) when using local links. Otherwise, an error will occur. | string | required |
 
-* ### setSharingSettings
+## setSharingSettings
 
 Update the [information](../Config/Document/Info/index.md#sharingsettings) about the settings which allow to share the document with other users. This method can be called after the [onRequestSharingSettings](../Config/Events/index.md#onrequestsharingsettings) events.
 
@@ -483,7 +482,7 @@ Update the [information](../Config/Document/Info/index.md#sharingsettings) about
   | sharingSettings.permissions | Defines the access rights for the user with the name above.             | string          | optional |
   | sharingSettings.user        | Defines the name of the user with whom the document will be shared.     | string          | optional |
 
-* ### setUsers
+## setUsers
 
 Set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. This method must be called after the [onRequestUsers](../Config/Events/index.md#onrequestusers) events.
 
@@ -522,7 +521,7 @@ Set a list of users to mention in the comments, grant the access rights to edit 
 
   > Please note that if you are subscribed to the *onRequestUsers* event and send an avatar using the *setUsers* method, the [user.image](../Config/Editor/index.md#user) field in the initialization config is not required. We especially don't recommend to specify this parameter if the avatar is sent in the base64 format and the initialization config is signed with JWT. In this case, the token will be too long.
 
-* ### showMessage
+## showMessage
 
 Display a tooltip with a message. This method can be called only after the [onAppReady](../Config/Events/index.md#onappready) events.
 
@@ -536,7 +535,7 @@ Display a tooltip with a message. This method can be called only after the [onAp
 
   > Please note that displaying a tooltip with a message is not supported in the embedded platform [type](../Config/index.md#type).
 
-* ### startFilling
+## startFilling
 
 Start filling out the ready forms and lock the pdf editing (only pdf viewing becomes available). This method can be called only after the [onRequestStartFilling](../Config/Events/index.md#onrequeststartfilling) event.
 
