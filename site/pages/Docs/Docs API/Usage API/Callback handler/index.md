@@ -2,61 +2,166 @@
 order: -1
 ---
 
-The **document editing service** informs the **document storage service** about the status of the document editing using the *callbackUrl* from [JavaScript API](/editors/basic). The **document editing service** use the POST request with the information in body.
+The **document editing service** informs the **document storage service** about the status of the document editing using the *callbackUrl* from [JavaScript API](../../Get%20Started/Basic%20concepts/index.md). The **document editing service** use the POST request with the information in body.
 
-## Parameters and their description:
+## actions
 
-| Parameter      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Type            | Presence |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | -------- |
-| actions        | Defines the object received when the user takes an action with the document. The *type* field value can have the following values:- **0** - the user disconnects from the document co-editing,
-- **1** - the new user connects to the document co-editing,
-- **2** - the user clicks the [forcesave button](/editors/config/editor/customization#forcesave).The *userid* field value is the user identifier.                                                                                                                                                                                                                                                                                                                                                                                                                                         | array of object | optional |
-| changeshistory | Defines the array of objects with the document changes history. The object is present when the *status* value is equal to **2** or **3** only. Must be sent as a property *changes* of the object sent as the argument to the [refreshHistory](/editors/methods#refreshHistory) method. Removed since version 4.2, please use [history](#history) instead.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | array of object | optional |
-| changesurl     | Defines the link to the file with the document editing data used to track and display the document changes history. The link is present when the *status* value is equal to **2** or **3** only. The file must be saved and its address must be sent as *changesUrl* parameter using the [setHistoryData](/editors/methods#setHistoryData) method to show the changes corresponding to the specific document version.                                                                                                                                                                                                                                                                                                                                                                                                                                | string          | optional |
-| filetype       | Defines an extension of the document that is downloaded from the link specified with the [url](#url) parameter. The file type is OOXML by default but if the [assemblyFormatAsOrigin](/editors/save#assemblyFormatAsOrigin) server setting is enabled, the file will be saved in its original format.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | string          | optional |
-| forcesavetype  | Defines the type of initiator when the [force saving](/editors/save#forcesave) request is performed. Can have the following values:- **0** - the force saving request is performed to the [command service](/editors/command/forcesave),
-- **1** - the force saving request is performed each time the saving is done (e.g. the **Save** button is clicked), which is only available when the [forcesave](/editors/config/editor/customization#forcesave) option is set to *true*.
-- **2** - the force saving request is performed by timer with the settings from the server config.
-- **3** - the force saving request is performed each time the form is submitted (e.g. the [Complete & Submit](/editors/config/editor/customization#submitForm) button is clicked).The type is present when the *status* value is equal to **6** or **7** only. | integer         | optional |
-| formsdataurl   | Defines the URL to the JSON file with the submitted form data. The array structure with the form data is described [here](/docbuilder/global#FormData). This file contains the following parameters:- **key** - the form key. If the current form is a radio button, then this field contains the form group key, **type**: string, **example**: "Text1";
-- **tag** - the form tag, **type**: string, **example**: "";
-- **value** - the current form value, **type**: string, **example**: "inner text";
-- **type** - the form type (**text**, **checkBox**, **picture**, **comboBox**, **dropDownList**, **dateTime**, **radio**), **type**: string, **example**: "text".The object is present when the *status* value is equal to *6* and the *forcesavetype* value is equal to *3*.                                                              | object          | optional |
-| history        | Defines the object with the document changes history. The object is present when the *status* value is equal to **2** or **3** only. It contains the object *changes* and *serverVersion*, which must be sent as properties *changes* and *serverVersion* of the object sent as the argument to the [refreshHistory](/editors/methods#refreshHistory) method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | object          | optional |
-| key            | Defines the edited document identifier.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | string          | required |
-| status         | Defines the status of the document. Can have the following values:- **1** - document is being edited,
-- **2** - document is ready for saving,
-- **3** - document saving error has occurred,
-- **4** - document is closed with no changes,
-- **6** - document is being edited, but the current document state is saved,
-- **7** - error has occurred while force saving the document.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | integer         | required |
-| url            | Defines the link to the edited document to be saved with the document storage service. The link is present when the *status* value is equal to **2**, **3**, **6** or **7** only.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | string          | optional |
-| userdata       | Defines the custom information sent to the command service for the [forcesave](/editors/command/forcesave) and [info](/editors/command/info) commands in case it was present in the request.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | string          | optional |
-| users          | Defines the list of the identifiers of the users who opened the document for editing; when the document has been changed the **users** will return the identifier of the user who was the last to edit the document (for *status* **2** and *status* **6** replies).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | array of string | optional |
+Defines the object received when the user takes an action with the document. The *type* field value can have the following values:
+
+* **0** - the user disconnects from the document co-editing;
+* **1** - the new user connects to the document co-editing;
+* **2** - the user clicks the [forcesave button](../Config/Editor/Customization/index.md#forcesave).
+
+The *userid* field value is the user identifier.
+
+**Type**: array of object
+
+
+## changeshistory
+
+Defines the array of objects with the document changes history. The object is present when the *status* value is equal to **2** or **3** only. Must be sent as a property *changes* of the object sent as the argument to the [refreshHistory](../Methods/index.md#refreshhistory) method. Removed since version 4.2, please use [history](#history) instead.
+
+**Type**: array of object
+
+
+## changesurl
+
+Defines the link to the file with the document editing data used to track and display the document changes history. The link is present when the *status* value is equal to **2** or **3** only. The file must be saved and its address must be sent as *changesUrl* parameter using the [setHistoryData](../Methods/index.mds#sethistorydata) method to show the changes corresponding to the specific document version.
+
+**Type**: string
+
+
+## filetype
+
+Defines an extension of the document that is downloaded from the link specified with the [url](#url) parameter. The file type is OOXML by default but if the [assemblyFormatAsOrigin](../../Get%20Started/How%20It%20Works/Saving%20file/index.md#saving-in-original-format) server setting is enabled, the file will be saved in its original format.
+
+**Type**: string
+
+
+## forcesavetype
+
+Defines the type of initiator when the [force saving](../../Get%20Started/How%20It%20Works/Saving%20file/index.md#force-saving) request is performed. Can have the following values:
+
+* **0** - the force saving request is performed to the [command service](../../Additional%20API/Command%20service/forcesave/index.md);
+* **1** - the force saving request is performed each time the saving is done (e.g. the **Save** button is clicked), which is only available when the [forcesave](../Config/Editor/Customization/index.md#forcesave) option is set to *true*;
+* **2** - the force saving request is performed by timer with the settings from the server config;
+* **3** - the force saving request is performed each time the form is submitted (e.g. the [Complete & Submit](../Config/Editor/Customization/index.md#submitform) button is clicked).
+
+The type is present when the *status* value is equal to **6** or **7** only.
+
+**Type**: integer
+
+
+## formsdataurl
+
+Defines the URL to the JSON file with the submitted form data. The array structure with the form data is described [here](/docbuilder/global#FormData). This file contains the following parameters:
+
+| Parameter | Description               | Type   | Example |
+| --------- | ------------------------- | ------ | -------- |
+| key   | The form key. If the current form is a radio button, then this field contains the form group key. | string | "Text1" |
+| tag   | The form tag. | string | "" |
+| value   | The current form value. | string | "inner text" |
+| type   | The form type (**text**, **checkBox**, **picture**, **comboBox**, **dropDownList**, **dateTime**, **radio**). | string | "text" |
+
+The object is present when the *status* value is equal to *6* and the *forcesavetype* value is equal to *3*.
+
+**Type**: object
+
+
+## history
+
+Defines the object with the document changes history. The object is present when the *status* value is equal to **2** or **3** only. It contains the object *changes* and *serverVersion*, which must be sent as properties *changes* and *serverVersion* of the object sent as the argument to the [refreshHistory](../Methods/index.md#refreshhistory) method.
+
+**Type**: object
+
+
+## key*
+
+Defines the edited document identifier.
+
+**Type**: string
+
+
+## status*
+
+Defines the status of the document. Can have the following values:
+
+* **1** - document is being edited;
+* **2** - document is ready for saving;
+* **3** - document saving error has occurred;
+* **4** - document is closed with no changes;
+* **6** - document is being edited, but the current document state is saved;
+* **7** - error has occurred while force saving the document.
+
+**Type**: integer
+
+
+## url
+
+Defines the link to the edited document to be saved with the document storage service. The link is present when the *status* value is equal to **2**, **3**, **6** or **7** only.
+
+**Type**: string
+
+
+## userdata
+
+Defines the custom information sent to the command service for the [forcesave](../../Additional%20API/Command%20service/forcesave/index.md) and [info](../../Additional%20API/Command%20service/info/index.md) commands in case it was present in the request.
+
+**Type**: string
+
+
+## users
+
+Defines the list of the identifiers of the users who opened the document for editing; when the document has been changed the **users** will return the identifier of the user who was the last to edit the document (for *status* **2** and *status* **6** replies).
+
+**Type**: array of string
+
+\* *- required parameter*
+
 
 The server stores all *callbackUrls* and chooses which one to use depending on the user who performed the action.
 
-Since version 5.5, [callbackUrl](/editors/config/editor#callbackUrl) is selected depending on the *status* of the request. Starting from version 4.4 to version 5.5, *callbackUrl* is used from the last user who joined the co-editing. Prior to version 4.4, when co-editing, *callbackUrl* is used from the user who first opened the file for editing.
+Since version 5.5, [callbackUrl](../Config/Editor/index.md#callbackurl) is selected depending on the *status* of the request. Starting from version 4.4 to version 5.5, *callbackUrl* is used from the last user who joined the co-editing. Prior to version 4.4, when co-editing, *callbackUrl* is used from the user who first opened the file for editing.
 
 Since version 7.0, *callbackUrl* is used from the last tab of the same user. Prior to version 7.0, *callbackUrl* from the first user tab was used.
 
-Possible document statuses and their description
 
-| Status                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Status* **1**         | It is received every user connection to or disconnection from document co-editing. Their *callbackUrl* is used.Please note that the *status* **1** can be also received when the user is returned to the document with no changes after the Internet problems. This situation can be described as follows:- When the user opens a document, the *status* **1** is sent.
-- If the Internet connection is lost and the user has not made any changes to the document, the *status* **4** is sent. An error is displayed on the screen and the document is opened in the viewer.
-- Within 100 seconds, the Internet connection is restored, the user is reconnected to the document and the *status* **1** is sent again.
-- Now the user can continue to edit the document. The *status* **2** or **4** will be received depending on whether the user made any changes to the document or not. |
-| *Status* **2** (**3**) | It is received [10 seconds](/editors/save#savedelay) after the document is closed for editing with the identifier of the user who was the last to send the changes to the document editing service. The *callbackUrl* from the user who made the last changes to the file is used.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| *Status* **4**         | It is received after the document is closed for editing with no changes by the last user. Their *callbackUrl* is used.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| *Status* **6** (**7**) | It is received when the force saving request is performed.The *callbackUrl* depends on *forcesavetype* parameter:- If *forcesavetype* parameter is set to **1**, the *callbackUrl* from the user who clicked the **Save** button is used.
-- If *forcesavetype* parameter is set to **0** or **2**, the *callbackUrl* from the user who made the last changes to the file is used.
-- If *forcesavetype* parameter is set to **3**, the *callbackUrl* from the user who clicked the **Submit** button is used.Starting from version 5.5 to version 6.1, the *callbackUrl* from the user who made the last changes to the file is always used.                                                                                                                                                                                                                                                  |
+# Possible document statuses and their description
 
-Sample of JSON object sent to the "callbackUrl" address by document editing service when two users are co-editing the document
+## Status 1
 
-```
+It is received every user connection to or disconnection from document co-editing. Their *callbackUrl* is used.
+
+Please note that the *status* **1** can be also received when the user is returned to the document with no changes after the Internet problems. This situation can be described as follows:
+
+* When the user opens a document, the *status* **1** is sent.
+* If the Internet connection is lost and the user has not made any changes to the document, the *status* **4** is sent. An error is displayed on the screen and the document is opened in the viewer.
+* Within 100 seconds, the Internet connection is restored, the user is reconnected to the document and the *status* **1** is sent again.
+* Now the user can continue to edit the document. The *status* **2** or **4** will be received depending on whether the user made any changes to the document or not.
+
+
+## Status 2 (3)
+
+It is received [10 seconds](../../Get%20Started/How%20It%20Works/Saving%20file/index.md#save-delay) after the document is closed for editing with the identifier of the user who was the last to send the changes to the document editing service. The *callbackUrl* from the user who made the last changes to the file is used.
+
+
+## Status 4
+
+It is received after the document is closed for editing with no changes by the last user. Their *callbackUrl* is used.
+
+
+## Status 6 (7)
+
+It is received when the force saving request is performed.The *callbackUrl* depends on *forcesavetype* parameter:
+
+* If *forcesavetype* parameter is set to **1**, the *callbackUrl* from the user who clicked the **Save** button is used.
+* If *forcesavetype* parameter is set to **0** or **2**, the *callbackUrl* from the user who made the last changes to the file is used.
+* If *forcesavetype* parameter is set to **3**, the *callbackUrl* from the user who clicked the **Submit** button is used.Starting from version 5.5 to version 6.1, the *callbackUrl* from the user who made the last changes to the file is always used.
+
+
+### Sample of JSON object sent to the "callbackUrl" address by document editing service when two users are co-editing the document
+
+``` json
 {
     "actions": [{"type": 1, "userid": "78e1e841"}],
     "key": "Khirz6zTPdfd7",
@@ -65,9 +170,9 @@ Sample of JSON object sent to the "callbackUrl" address by document editing serv
 }
 ```
 
-Sample of JSON object sent to the "callbackUrl" address by document editing service when the user changed the document and closed it for editing
+### Sample of JSON object sent to the "callbackUrl" address by document editing service when the user changed the document and closed it for editing
 
-```
+``` json
 {
     "actions": [{"type": 0, "userid": "78e1e841"}],
     "changesurl": "https://documentserver/url-to-changes.zip",
@@ -83,18 +188,18 @@ Sample of JSON object sent to the "callbackUrl" address by document editing serv
 }
 ```
 
-Sample of JSON object sent to the "callbackUrl" address by document editing service when the last user closed the document for editing without changes
+### Sample of JSON object sent to the "callbackUrl" address by document editing service when the last user closed the document for editing without changes
 
-```
+``` json
 {
     "key": "Khirz6zTPdfd7",
     "status": 4
 }
 ```
 
-Sample of JSON object sent to the "callbackUrl" address by document editing service after the [forcesave](/editors/command/forcesave) command had been received
+### Sample of JSON object sent to the "callbackUrl" address by document editing service after the [forcesave](../../Additional%20API/Command%20service/forcesave/index.md) command had been received
 
-```
+``` json
 {
     "changesurl": "https://documentserver/url-to-changes.zip",
     "forcesavetype": 0,
@@ -111,11 +216,11 @@ Sample of JSON object sent to the "callbackUrl" address by document editing serv
 }
 ```
 
-Response from the document storage service
+### Response from the document storage service
 
 The **document storage service** must return the following response, otherwise the **document editor** will display an error message:
 
-```
+``` json
 {
     "error": 0
 }
@@ -123,9 +228,9 @@ The **document storage service** must return the following response, otherwise t
 
 The **document manager** and **document storage service** are either included to ONLYOFFICE Workspace or must be implemented by the software integrators who use ONLYOFFICE Docs on their own server.
 
-.Net (C#) document save example
+### .Net (C#) document save example
 
-```
+``` csharp
 public class WebEditor : IHttpHandler
 {
     public void ProcessRequest(HttpContext context)
@@ -153,11 +258,11 @@ public class WebEditor : IHttpHandler
 }
 ```
 
-*PATH\_FOR\_SAVE* is the absolute path to your computer folder where the file will be saved including the file name.
+> *PATH\_FOR\_SAVE* is the absolute path to your computer folder where the file will be saved including the file name.
 
-Java document save example
+### Java document save example
 
-```
+```javascript
 public class IndexServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -194,11 +299,11 @@ public class IndexServlet extends HttpServlet {
 }
 ```
 
-*pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
+> *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
 
-Node.js document save example
+### Node.js document save example
 
-```
+``` javascript
 var fs = require("fs");
 var syncRequest = require("sync-request");
 
@@ -234,11 +339,11 @@ app.post("/track", function (req, res) {
 });
 ```
 
-*pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
+> *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
 
-PHP document save example
+### PHP document save example
 
-```
+``` php
 <?php
 
 if (($body_stream = file_get_contents("php://input"))===FALSE){
@@ -261,11 +366,11 @@ echo "{\"error\":0}";
 ?>
 ```
 
-*$path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
+> *$path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
 
-Ruby document save example
+### Ruby document save example
 
-```
+``` ruby
 class ApplicationController < ActionController::Base
     def index
         body = request.body.read
@@ -296,4 +401,4 @@ class ApplicationController < ActionController::Base
 end
 ```
 
-*path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
+> *path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
