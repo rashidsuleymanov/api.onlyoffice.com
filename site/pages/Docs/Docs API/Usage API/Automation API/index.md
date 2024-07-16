@@ -92,7 +92,7 @@ The function called to add an item to the toolbar menu.
   | Name           | Description       | Type    |
   | -------------- | ----------------- | ------- |
   | id             | The item ID.      | string  |
-  | type           | The possible values of the base which the relative vertical position of the toolbar menu item will be calculated from. | [ToolbarMenuItemType](../../../Plugin%20and%20Macros/Usage%20API/Common%20API/Simple%20types/index.md#toolbarmenuitemtype) |
+  | type           | The possible values of the base which the relative vertical position of the toolbar menu item will be calculated from. | [ToolbarMenuItemType](/plugin/global#ToolbarMenuItemType) |
   | text           | The item text. | string   |
   | hint           | The item hint.  | string  |
   | icons          | The item icons (see the plugins [config](../../../Plugin%20and%20Macros/Usage%20API/Config/index.md#icons) documentation).  | string  |
@@ -153,7 +153,7 @@ The function called to add an item to the toolbar menu.
 
 * ### attachEvent
 
-The function called to add an event listener, a function that will be called whenever the specified event is delivered to the target. The list of all the available events is the same as for the plugins. It can be found [here](../../../Plugin%20and%20Macros/Usage%20API/Common%20API/Events/index.md).
+The function called to add an event listener, a function that will be called whenever the specified event is delivered to the target. The list of all the available events is the same as for the plugins. It can be found [here](/plugin/events).
 
   ### Parameters
 
@@ -185,7 +185,7 @@ The function called to send the data back to the editor. It allows the connector
   | callback | The result that the method returns. It is an optional parameter.  | function |
   | isNoCalc | Defines whether the document will be recalculated or not. The **true** value is used to recalculate the document after executing the function in the *command* parameter. The **false** value will not recalculate the document (use it only when your edits surely will not require document recalculation). The default value is **false**. | boolean  |
 
-  This method is executed in its context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use [Asc.scope](../../../Plugin%20and%20Macros/Usage%20API/Common%20API/scope/index.md) object.
+  This method is executed in its context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use [Asc.scope](/plugin/scope) object.
 
   ### Example
 
@@ -242,7 +242,7 @@ The function called to disconnect the connector from the editor.
 
 * ### executeMethod
 
-The function called to execute certain editor methods using the connector. The full list of these methods is the same as for the plugins. It can be found [here](../../../Plugin%20and%20Macros/Usage%20API/Common%20API/executeMethod/index.md).
+The function called to execute certain editor methods using the connector. The full list of these methods is the same as for the plugins. It can be found [here](/plugin/executemethod/).
 
   ### Parameters
 

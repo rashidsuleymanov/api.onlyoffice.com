@@ -6,7 +6,7 @@ Manages review process from an external source.
 
 ## How it works
 
-1. When the user clicks the **Accept / Reject** buttons in the custom interface, the [AcceptReviewChanges](/pages/Docs/Plugin%20and%20Macros/Usage%20API/Text%20Document%20API/AcceptReviewChanges.md) / [RejectReviewChanges](/pages/Docs/Plugin%20and%20Macros/Usage%20API/Text%20Document%20API/RejectReviewChanges.md) methods are executed to accept / reject the selected change in the editor:
+1. When the user clicks the **Accept / Reject** buttons in the custom interface, the [AcceptReviewChanges](/plugin/executemethod/text/acceptreviewchanges) / [RejectReviewChanges](/plugin/executemethod/text/rejectreviewchanges) methods are executed to accept / reject the selected change in the editor:
 
    ``` javascript
    $("#accept").on("click", function () {
@@ -18,7 +18,7 @@ Manages review process from an external source.
    });
    ```
 
-2. When the user clicks the arrow buttons in the custom interface, the [MoveToNextReviewChange](/pages/Docs/Plugin%20and%20Macros/Usage%20API/Text%20Document%20API/MoveToNextReviewChange.md) method is executed to move between the next and previous review changes:
+2. When the user clicks the arrow buttons in the custom interface, the [MoveToNextReviewChange](/plugin/executemethod/text/movetonextreviewchange) method is executed to move between the next and previous review changes:
 
    ``` javascript
    $("#prev").on("click", function () {

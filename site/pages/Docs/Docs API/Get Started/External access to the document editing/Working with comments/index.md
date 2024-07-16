@@ -6,7 +6,7 @@ Collects all the comments from the document and displays them in the custom inte
 
 ## How it works
 
-1. When the user opens a document, the [GetAllComments](/pages/Docs/Plugin%20and%20Macros/Usage%20API/Text%20Document%20API/GetAllComments.md) method is executed to collect all the comments from the document and display them in the custom interface. The following comment data is displayed: the comment author, the time when the comment was posted, the comment text, and the comment replies:
+1. When the user opens a document, the [GetAllComments](/plugin/executemethod/text/getallcomments) method is executed to collect all the comments from the document and display them in the custom interface. The following comment data is displayed: the comment author, the time when the comment was posted, the comment text, and the comment replies:
 
    ``` javascript
    var comments = [];
@@ -21,7 +21,7 @@ Collects all the comments from the document and displays them in the custom inte
    }
    ```
 
-2. When the user clicks the **Add comment** button in the custom interface, the [AddComment](/pages/Docs/Plugin%20and%20Macros/Usage%20API/Text%20Document%20API/AddComment.md) method is executed to add a new comment to the document. After this method is called, the [onAddComment](/pages/Docs/Plugin%20and%20Macros/Usage%20API/Common%20API/Events/onAddComment.md) event is fired to add a new comment to an array with all the document comments:
+2. When the user clicks the **Add comment** button in the custom interface, the [AddComment](/plugin/executemethod/text/addcomment) method is executed to add a new comment to the document. After this method is called, the [onAddComment](/plugin/events/onaddcomment) event is fired to add a new comment to an array with all the document comments:
 
    ``` javascript
    var onDocumentReady = function () {
@@ -52,7 +52,7 @@ Collects all the comments from the document and displays them in the custom inte
    });
    ```
 
-3. When the user clicks the **Remove comment** button in the custom interface, the [RemoveComments](/pages/Docs/Plugin%20and%20Macros/Usage%20API/Text%20Document%20API/RemoveComments.md) method is executed to remove a comment from the document. After this method is called, the [onRemoveComment](/pages/Docs/Plugin%20and%20Macros/Usage%20API/Common%20API/Events/onRemoveComment.md) event is fired to remove a comment from an array with all the document comments:
+3. When the user clicks the **Remove comment** button in the custom interface, the [RemoveComments](/plugin/executemethod/text/removecomments) method is executed to remove a comment from the document. After this method is called, the [onRemoveComment](/plugin/events/onremovecomment) event is fired to remove a comment from an array with all the document comments:
 
    ``` javascript
    var onDocumentReady = function () {
@@ -75,13 +75,13 @@ Collects all the comments from the document and displays them in the custom inte
    });
    ```
 
-4. When the user clicks the arrow buttons in the custom interface, the [MoveToComment](/pages/Docs/Plugin%20and%20Macros/Usage%20API/Text%20Document%20API/MoveToComment.md) method is executed to move between the comments in the document:
+4. When the user clicks the arrow buttons in the custom interface, the [MoveToComment](/plugin/executemethod/text/movetocomment) method is executed to move between the comments in the document:
 
    ``` javascript
    connector.executeMethod("MoveToComment", [comments[indexComment]["Id"]]);
    ```
 
-5. When the user clicks the **Add reply** button in the custom interface, the [ChangeComment](/pages/Docs/Plugin%20and%20Macros/Usage%20API/Text%20Document%20API/ChangeComment.md) method is executed to add a reply to the existing comment by changing the *CommentData* object. After this method is called, the [onChangeCommentData](/pages/Docs/Plugin%20and%20Macros/Usage%20API/Common%20API/Events/onChangeCommentData.md) event is fired to add a new comment reply to an array with all the document comments:
+5. When the user clicks the **Add reply** button in the custom interface, the [ChangeComment](/plugin/executemethod/text/changecomment) method is executed to add a reply to the existing comment by changing the *CommentData* object. After this method is called, the [onChangeCommentData](/plugin/events/onchangecommentdata) event is fired to add a new comment reply to an array with all the document comments:
 
    ``` javascript
    var onDocumentReady = function () {
