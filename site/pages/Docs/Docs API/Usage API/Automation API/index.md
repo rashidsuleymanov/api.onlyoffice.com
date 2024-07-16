@@ -26,9 +26,7 @@ The connector has the same interface as plugins. Below you can find methods that
 * [executeMethod](#executemethod) - execute certain editor methods using the connector.
 * [updateContextMenuItem](#updatecontextmenuitem) - update an item in the context menu with the specified items.
 
-## Methods and their description:
-
-* ### addContextMenuItem
+## addContextMenuItem
 
 The function called to add an item to the context menu.
 
@@ -62,7 +60,7 @@ The function called to add an item to the context menu.
   connector.addContextMenuItem(items);
   ```
 
-* ### addToolbarMenuItem
+## addToolbarMenuItem
 
 The function called to add an item to the toolbar menu.
 
@@ -151,7 +149,7 @@ The function called to add an item to the toolbar menu.
   connector.addToolbarMenuItem(oToolbarMenuMainItem);
   ```
 
-* ### attachEvent
+## attachEvent
 
 The function called to add an event listener, a function that will be called whenever the specified event is delivered to the target. The list of all the available events is the same as for the plugins. It can be found [here](/plugin/events).
 
@@ -171,7 +169,7 @@ The function called to add an event listener, a function that will be called whe
   });
   ```
 
-* ### callCommand
+## callCommand
 
 The function called to send the data back to the editor. It allows the connector to send structured data that can be inserted into the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).
 
@@ -202,7 +200,7 @@ The function called to send the data back to the editor. It allows the connector
   }, function() { console.log("callback command"); });
   ```
 
-* ### connect
+## connect
 
 The function called to connect the connector to the editor.
 
@@ -214,7 +212,7 @@ The function called to connect the connector to the editor.
   connector.connect()
   ```
 
-* ### detachEvent
+## detachEvent
 
 The function called to remove an event listener.
 
@@ -230,7 +228,7 @@ The function called to remove an event listener.
   connector.detachEvent("onChangeContentControl");
   ```
 
-* ### disconnect
+## disconnect
 
 The function called to disconnect the connector from the editor.
 
@@ -240,7 +238,7 @@ The function called to disconnect the connector from the editor.
   connector.disconnect()
   ```
 
-* ### executeMethod
+## executeMethod
 
 The function called to execute certain editor methods using the connector. The full list of these methods is the same as for the plugins. It can be found [here](/plugin/executemethod/).
 
@@ -258,7 +256,7 @@ The function called to execute certain editor methods using the connector. The f
   connector.executeMethod("SetFormValue",[forms[i]["InternalId"],"OnlyOffice BANK"],null);
   ```
 
-* ### updateContextMenuItem
+## updateContextMenuItem
 
 The function called to update an item in the context menu with the specified items.
 
