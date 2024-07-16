@@ -1473,7 +1473,6 @@
     <Content Include="App_Data\officeapi\examples\slide\ApiTable.MergeCells.docbuilder" />
     <Content Include="App_Data\officeapi\examples\slide\ApiTable.RemoveColumn.docbuilder" />
     <Content Include="App_Data\officeapi\examples\slide\ApiTable.RemoveRow.docbuilder" />
-    <Content Include="App_Data\officeapi\examples\slide\ApiTable.Select.docbuilder" />
     <Content Include="App_Data\officeapi\examples\slide\ApiTable.SetShd.docbuilder" />
     <Content Include="App_Data\officeapi\examples\slide\ApiTable.SetTableLook.docbuilder" />
     <Content Include="App_Data\officeapi\examples\slide\ApiTable.ToJSON.docbuilder" />
