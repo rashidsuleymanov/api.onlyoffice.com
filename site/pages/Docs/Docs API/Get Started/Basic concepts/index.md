@@ -54,11 +54,3 @@ From now the *docEditor* object can be used to call the **document editor** [Met
 The example above includes all the parameters necessary for ONLYOFFICE Docs correct startup. There are additional non-obligatory parameters though which can be changed to achieve different goals with your document (change access rights for the document, display different information about the document, etc.). See the [Advanced parameters](../../Usage%20API/Advanced%20parameters/index.md) section to find out what these parameters are and how you can change them.
 
 To prevent the substitution of important parameters, add an encrypted signature to the requests in the form of [token](../../Additional%20API/Signature/index.md).
-
-## Get help
-
-If you have any questions about ONLYOFFICE Docs, try to find them in the [FAQ](../../More%20Information/FAQ/index.md) section first.
-
-You can request a feature or report a bug by posting an issue on [GitHub](https://github.com/ONLYOFFICE/DocumentServer/issues).
-
-You can also ask our developers on [ONLYOFFICE forum](https://forum.onlyoffice.com/c/document-api/39) (registration required).
