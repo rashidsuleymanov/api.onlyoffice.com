@@ -1,35 +1,65 @@
-Description
+The embedded section is for the **embedded** document type only (see the [config](../../index.md#type) section to find out how to define the **embedded** document type). It allows to change the settings which define the behavior of the buttons in the embedded mode.
 
-The embedded section is for the **embedded** document type only (see the [config](/editors/config/#type) section to find out how to define the **embedded** document type). It allows to change the settings which define the behavior of the buttons in the embedded mode.
+## embedUrl
 
-Example
+Defines the absolute URL to the document serving as a source file for the document embedded into the web page.
 
-The **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](/editors/howitworks) section to find out more on ONLYOFFICE Docs service client-server interactions.
+**Type**: string
 
-Embed Url https\://example.com/embedded?doc=exampledocument1.docx
+**Example**: `https://example.com/embedded?doc=exampledocument1.docx`
 
-Fullscreen Url https\://example.com/embedded?doc=exampledocument1.docx#fullscreen
 
-Save Url https\://example.com/download?doc=exampledocument1.docx
+## fullscreenUrl
 
-Share Url https\://example.com/view?doc=exampledocument1.docx
+Defines the absolute URL to the document which will open in full screen mode.
 
-Toolbar Docked top
+**Type**: string
 
-Config.js
+**Example**: `https://example.com/embedded?doc=exampledocument1.docx#fullscreen`
 
-![Copy](/assets/images/copy-content.svg) When you copy, you get the HTML code for the whole example. HTML copied.
 
+## saveUrl
+
+Defines the absolute URL that will allow the document to be saved onto the user personal computer.
+
+**Type**: string
+
+**Example**: `https://example.com/download?doc=exampledocument1.docx`
+
+
+## shareUrl
+
+Defines the absolute URL that will allow other users to share this document.
+
+**Type**: string
+
+**Example**: `https://example.com/view?doc=exampledocument1.docx`
+
+
+## toolbarDocked
+
+Defines the place for the embedded viewer toolbar, can be either **top** or **bottom**.
+
+**Type**: string
+
+**Example**: "top"
+
+![Embedded](/assets/images/editor/embedded.png)
+
+
+### Example
+
+``` json
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "editorConfig": {
+        "embedded": {
+            "embedUrl": "https://example.com/embedded?doc=exampledocument1.docx",
+            "fullscreenUrl": "https://example.com/embedded?doc=exampledocument1.docx#fullscreen",
+            "saveUrl": "https://example.com/download?doc=exampledocument1.docx",
+            "shareUrl": "https://example.com/view?doc=exampledocument1.docx",
+            "toolbarDocked": "top"
+        }
+        ,
+    },
+});
 ```
-```
-
-Parameters
-
-| Name                                  | Description                                                                                                    | Type   | Example                                                              |
-| ------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------- |
-| embedUrl                              | Defines the absolute URL to the document serving as a source file for the document embedded into the web page. | string | "https\://example.com/embedded?doc=exampledocument1.docx"            |
-| fullscreenUrl                         | Defines the absolute URL to the document which will open in full screen mode.                                  | string | "https\://example.com/embedded?doc=exampledocument1.docx#fullscreen" |
-| saveUrl                               | Defines the absolute URL that will allow the document to be saved onto the user personal computer.             | string | "https\://example.com/download?doc=exampledocument1.docx"            |
-| shareUrl                              | Defines the absolute URL that will allow other users to share this document.                                   | string | "https\://example.com/view?doc=exampledocument1.docx"                |
-| toolbarDocked                         | Defines the place for the embedded viewer toolbar, can be either **top** or **bottom**.                        | string | "top"                                                                |
-| ![](/assets/images/editor/embedded.png) |                                                                                                                |        |                                                                      |
