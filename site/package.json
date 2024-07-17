@@ -5,9 +5,15 @@
   "scripts": {
     "demo:editor": "docker run --env JWT_HEADER=Authorization --env JWT_SECRET=your-256-bit-secret --publish 3000:80 onlyoffice/documentserver-de:8.0",
     "demo:server": "store-demo",
-    "build": "node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js --config ./eleventy.config.ts",
+    "build:dev": "pnpm build:do",
+    "build:do": "node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js --config ./eleventy.config.ts",
+    "build:prod": "SITE_CONFIG_MODE=production pnpm build:do",
+    "build": "pnpm build:prod",
     "preview": "eleventy-dev-server --dir dist",
-    "serve": "node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js --serve --quiet --config ./eleventy.config.ts"
+    "serve:dev": "pnpm serve:do",
+    "serve:do": "node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js --serve --quiet --config ./eleventy.config.ts",
+    "serve:prod": "SITE_CONFIG_MODE=production pnpm serve:do",
+    "serve": "pnpm serve:dev"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
@@ -56,6 +62,7 @@
     "@onlyoffice/service-declaration": "workspace:^",
     "@onlyoffice/service-resource": "workspace:^",
     "@onlyoffice/site-config": "workspace:^",
+    "@onlyoffice/site-env": "workspace:^",
     "@onlyoffice/site-kit": "workspace:^",
     "@onlyoffice/store-demo": "workspace:^",
     "@onlyoffice/strings": "workspace:^",

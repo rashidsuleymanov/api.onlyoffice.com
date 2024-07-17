@@ -6,10 +6,57 @@
 
 import {Sitemap} from "@onlyoffice/eleventy-sitemap"
 import {type JSX, h} from "preact"
-import {Icon} from "@/internal/icon.tsx"
+import {Icon} from "./icon.tsx"
+import {Link} from "./link.tsx"
+
+declare module "@onlyoffice/eleventy-types" {
+  interface Data {
+    globalNavigation?: GlobalNavigationData
+  }
+
+  interface EleventyComputed {
+    globalNavigation?(data: Data): GlobalNavigationData | undefined
+  }
+}
+
+export interface GlobalNavigationData {
+  icon: string
+  title: string
+  path: string
+}
+
+export class GlobalNavigationDatum implements GlobalNavigationData {
+  icon = ""
+  title = ""
+  path = ""
+
+  static merge(a: GlobalNavigationData, b: GlobalNavigationData): GlobalNavigationData {
+    const c = new GlobalNavigationDatum()
+
+    if (b.icon) {
+      c.icon = b.icon
+    } else if (a.icon) {
+      c.icon = a.icon
+    }
+
+    if (b.title) {
+      c.title = b.title
+    } else if (a.title) {
+      c.title = a.title
+    }
+
+    if (b.path) {
+      c.path = b.path
+    } else if (a.path) {
+      c.path = a.path
+    }
+
+    return c
+  }
+}
 
 export interface GlobalNavigationProperties {
-  url: string
+  current: string
 }
 
 export function GlobalNavigation(p: GlobalNavigationProperties): JSX.Element {
@@ -32,7 +79,7 @@ export function GlobalNavigation(p: GlobalNavigationProperties): JSX.Element {
         }
 
         let c = "global-navigation__menu-link"
-        if (p.url.startsWith(e.url)) {
+        if (p.current.startsWith(e.url)) {
           c += " global-navigation__menu-link_active"
         }
 
@@ -48,9 +95,14 @@ export function GlobalNavigation(p: GlobalNavigationProperties): JSX.Element {
                 throw new Error(`Entity is not a page: ${id}`)
               }
 
+              const n = e.data.globalNavigation
+              if (!n) {
+                throw new Error(`Global navigation data not found: ${id}`)
+              }
+
               return <li class="global-navigation__submenu-item">
-                <Icon src="rich24" name={e.data.icon} height={24} width={24} />
-                <a class="global-navigation__submenu-link" href={e.url}>{e.title}</a>
+                <Icon src="rich24" name={n.icon} height={24} width={24} />
+                <Link class="global-navigation__submenu-link" href={n.path}>{n.title}</Link>
               </li>
             })}
           </ul>

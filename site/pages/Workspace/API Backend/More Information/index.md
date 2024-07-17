@@ -1,3 +1,4 @@
 ---
-layout: table-of-contents
+chapter:
+  tableOfContents: true
 ---

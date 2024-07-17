@@ -1,3 +1,4 @@
+import {SitemapDatum} from "@onlyoffice/eleventy-sitemap"
 import {type Data} from "@onlyoffice/eleventy-types"
 import {type Declaration, type Reference, type Token} from "@onlyoffice/library-declaration"
 import {type Resource} from "@onlyoffice/library-resource"
@@ -22,40 +23,6 @@ export function data({list, retrieve}: Resource): Data {
       return `${p}/index`
     },
 
-    sitemap(data) {
-      const s = data.defaultSitemap(data)
-
-      s.groups = function groups() {
-        const [d]: Declaration[] = data.pagination.items
-        if (d.kind !== "class") {
-          return []
-        }
-        return [
-          {title: "Constructors"},
-          {title: "Events"},
-          {title: "Methods"},
-          {title: "Properties"},
-        ]
-      }
-
-      s.group = function group() {
-        const [d]: Declaration[] = data.pagination.items
-        switch (d.kind) {
-        case "constructor":
-          return "Constructors"
-        case "event":
-          return "Events"
-        case "method":
-          return "Methods"
-        case "property":
-          return "Properties"
-        }
-        return ""
-      }
-
-      return s
-    },
-
     onRetrieve(r: Reference): Declaration | undefined {
       return retrieve(r.id)
     },
@@ -66,6 +33,45 @@ export function data({list, retrieve}: Resource): Data {
           throw new Error("No pagination")
         }
         return data.pagination.items[0].title
+      },
+
+      sitemap(data) {
+        if (!data.pagination || !data.pagination.items) {
+          return
+        }
+
+        const a = data.defaultSitemap
+        if (!a) {
+          return
+        }
+
+        const b = new SitemapDatum()
+
+        const [d]: Declaration[] = data.pagination.items
+        switch (d.kind) {
+        case "class":
+          b.groups = [
+            {title: "Constructors"},
+            {title: "Events"},
+            {title: "Methods"},
+            {title: "Properties"},
+          ]
+          break
+        case "constructor":
+          b.group = "Constructors"
+          break
+        case "event":
+          b.group = "Events"
+          break
+        case "method":
+          b.group = "Methods"
+          break
+        case "property":
+          b.group = "Properties"
+          break
+        }
+
+        return SitemapDatum.merge(a, b)
       },
 
       onLink(data) {

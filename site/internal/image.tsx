@@ -1,4 +1,5 @@
-import {basename, extname, isAbsolute} from "node:path"
+import path from "node:path"
+import {rootDir} from "@onlyoffice/eleventy-env"
 import {type ImageOptions} from "@11ty/eleventy-img"
 import {modify} from "@onlyoffice/hast-util-eleventy-img"
 import {generate} from "@onlyoffice/preact-eleventy-img"
@@ -7,6 +8,7 @@ import {type Root} from "hast"
 import {type HTMLAttributes} from "preact/compat"
 import {type JSX, h} from "preact"
 import {visit} from "unist-util-visit"
+import {type VFile} from "vfile"
 
 export function Image(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
   let r: JSX.Element | null = null
@@ -19,21 +21,18 @@ export function Image(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
     p.alt = ""
   }
 
-  if (!p.src || typeof p.src !== "string") {
+  if (p.src === undefined) {
     throw new Error("The 'src' attribute is required, but missing.")
   }
-
-  if (!URL.canParse(p.src) && !isAbsolute(p.src)) {
+  if (typeof p.src !== "string") {
+    throw new Error("The 'src' attribute must be a string.")
+  }
+  if (!URL.canParse(p.src) && !path.isAbsolute(p.src)) {
     throw new Error("The 'src' attribute must be an absolute URL.")
   }
 
-  if (isAbsolute(p.src)) {
-    p.src = `.${p.src}`
-  }
-
-  // todo: this is a temporary solution during the migration.
-  if (p.src.startsWith("./content")) {
-    return null
+  if (path.isAbsolute(p.src)) {
+    p.src = decodeURIComponent(`.${p.src}`)
   }
 
   if (p.width !== undefined) {
@@ -46,7 +45,9 @@ export function Image(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
     if (typeof p.width === "object" && "peek" in p.width) {
       throw new Error("The 'width' attribute must not be a signal.")
     }
-    p.style.maxWidth = p.width
+    if (p.width !== -1) {
+      p.style.maxWidth = p.width
+    }
   }
 
   if (p.height !== undefined) {
@@ -59,7 +60,9 @@ export function Image(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
     if (typeof p.height === "object" && "peek" in p.height) {
       throw new Error("The 'height' attribute must not be a signal.")
     }
-    p.style.maxHeight = p.height
+    if (p.height !== -1) {
+      p.style.maxHeight = p.height
+    }
   }
 
   const o = options(p.src)
@@ -72,8 +75,12 @@ export function Image(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
   return <Suspense>{() => r}</Suspense>
 }
 
-export function rehypeImage() {
-  return async function (t: Root) {
+export interface RehypeImageTransform {
+  (tree: Root, file: VFile): Promise<unknown>
+}
+
+export function rehypeImage(): RehypeImageTransform {
+  return async function (t, f) {
     let r = Promise.resolve()
 
     visit(t, "element", (n, i, pa) => {
@@ -82,22 +89,32 @@ export function rehypeImage() {
       }
 
       const p = n.properties
-      if (p.style === undefined || p.style === null) {
+      if (!p.style) {
         p.style = ""
       }
 
-      // todo: this is a temporary solution during the migration.
+      // todo: this is temporary solutions during the migration.
       if (!p.alt) {
         p.alt = ""
       }
-
-      if (!p.src || typeof p.src !== "string") {
-        throw new Error("The 'src' attribute is required, but missing.")
+      if (p.src && typeof p.src === "string" && p.src.startsWith("/content")) {
+        return
       }
 
-      // todo: this is a temporary solution during the migration.
-      if (p.src.startsWith("./content")) {
+      if (typeof p.src !== "string") {
         return
+      }
+
+      if (!URL.canParse(p.src)) {
+        let u = ""
+        if (path.isAbsolute(p.src)) {
+          u = `.${p.src}`
+        } else {
+          u = path.dirname(f.path)
+          u = path.resolve(u, p.src)
+          u = u.replace(rootDir(), ".")
+        }
+        p.src = decodeURIComponent(u)
       }
 
       if (p.width !== undefined && p.width !== null) {
@@ -150,13 +167,13 @@ function options(s: string): ImageOptions {
     urlPath: "/assets/",
     outputDir: "dist/assets/",
     filenameFormat(id: string, s: string, w: number, f: string) {
-      const e = extname(s)
-      const n = basename(s, e)
+      const e = path.extname(s)
+      const n = path.basename(s, e)
       return `${n}-${w}w-${id}.${f}`
-    }
+    },
   }
 
-  const e = extname(s)
+  const e = path.extname(s)
   if (e === ".svg") {
     o.formats = ["svg"]
   }

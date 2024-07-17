@@ -10,6 +10,6 @@ export function data(): Data {
 }
 
 export function render(): JSX.Element {
-  const c = Config.read()
+  const c = Config.shared
   return <DocumentEditorPlayground config={c.playground} />
 }

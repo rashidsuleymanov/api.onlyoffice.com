@@ -32,7 +32,7 @@ export function render({content, ...ctx}: Context): JSX.Element {
         <a href="/"><OnlyofficeLogo height={38} /></a>
       </PageHeaderLogo>
       <PageHeaderMenu>
-        <GlobalNavigation url={ctx.page.url} />
+        <GlobalNavigation current={ctx.page.url} />
       </PageHeaderMenu>
     </PageHeader>
     <main>{content}</main>

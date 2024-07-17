@@ -1,5 +1,6 @@
 // todo: normalize naming of eleventy, remark, and other plugins.
 
+import {cwd} from "node:process"
 import {eleventyClean} from "@onlyoffice/eleventy-clean"
 import {isBuild} from "@onlyoffice/eleventy-env"
 import {eleventyEsbuild} from "@onlyoffice/eleventy-esbuild"
@@ -10,13 +11,15 @@ import {eleventySitemap} from "@onlyoffice/eleventy-sitemap"
 import {eleventyStarryNight} from "@onlyoffice/eleventy-starry-night"
 import {type UserConfig} from "@onlyoffice/eleventy-types"
 import {eleventyYAML} from "@onlyoffice/eleventy-yaml"
+import {configMode} from "@onlyoffice/site-env"
 import {Config} from "@onlyoffice/site-config"
 import {markupPlugin} from "./config/markup.ts"
-import {navigationPlugin} from "./config/navigation.ts"
 import {staticPlugin} from "./config/static.ts"
 import {eleventyMarkdown} from "./internal/markdown.tsx"
 
 function config(uc: UserConfig): unknown {
+  Config.shared = Config.read(cwd(), configMode())
+
   uc.addPlugin(eleventyClean)
   uc.addPlugin(staticPlugin)
   uc.addPlugin(markupPlugin)
@@ -40,14 +43,13 @@ function config(uc: UserConfig): unknown {
     sortAttributes: true
   })
 
-  uc.addPlugin(navigationPlugin)
   uc.addPlugin(eleventyStarryNight)
 
   uc.addPlugin(eleventyYAML)
   uc.addPlugin(eleventySitemap)
 
   uc.addPlugin(eleventyEsbuild, () => {
-    const c = Config.read()
+    const c = Config.shared
     return {
       passthrough: {
         input: "assets/main.ts",

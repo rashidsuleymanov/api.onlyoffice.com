@@ -815,6 +815,9 @@ importers:
       '@onlyoffice/eleventy-types':
         specifier: workspace:^
         version: link:../eleventy-types
+      '@onlyoffice/objects':
+        specifier: workspace:^
+        version: link:../objects
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -1208,6 +1211,22 @@ importers:
         version: 0.5.6
 
   packages/object-to-string:
+    dependencies:
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+    devDependencies:
+      c8:
+        specifier: ^9.1.0
+        version: 9.1.0
+      tsx:
+        specifier: ^4.10.5
+        version: 4.11.0
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
+
+  packages/objects:
     dependencies:
       typescript:
         specifier: ^5.4.5
@@ -1753,6 +1772,22 @@ importers:
       vite:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
+
+  packages/site-env:
+    dependencies:
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+    devDependencies:
+      c8:
+        specifier: ^9.1.0
+        version: 9.1.0
+      tsx:
+        specifier: ^4.10.5
+        version: 4.11.0
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
 
   packages/site-help:
     dependencies:
@@ -2701,6 +2736,9 @@ importers:
       '@onlyoffice/site-config':
         specifier: workspace:^
         version: link:../packages/site-config
+      '@onlyoffice/site-env':
+        specifier: workspace:^
+        version: link:../packages/site-env
       '@onlyoffice/site-kit':
         specifier: workspace:^
         version: link:../packages/site-kit

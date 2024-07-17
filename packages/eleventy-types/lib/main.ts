@@ -173,6 +173,8 @@ export interface Data {
  * {@link https://www.11ty.dev/docs/pagination/ Eleventy Reference}
  */
 export interface Pagination {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  items?: any[]
   data?: string
   size?: number
   addAllPagesToCollections?: boolean
@@ -183,6 +185,11 @@ export interface Pagination {
  */
 export interface EleventyComputed {
   [k: string]: unknown
+
+  /**
+   * {@link https://www.11ty.dev/docs/layouts/ Eleventy Reference}
+   */
+  layout?(data: Data): string | undefined
 }
 
 /**
@@ -207,7 +214,7 @@ export interface Page {
 /**
  * {@link https://www.11ty.dev/docs/data-eleventy-supplied/ Eleventy Reference}
  */
-export interface Context {
+export interface Context extends Data {
   collections: Collections
   content: Content
   eleventy: Eleventy

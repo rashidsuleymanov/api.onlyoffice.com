@@ -9,7 +9,7 @@ export interface TableOfContentsProperties {
 
 export function TableOfContents(p: TableOfContentsProperties): JSX.Element {
   const s = Sitemap.shared
-  const {depth = 1} = p
+  const {depth = -1} = p
   const e = s.find(p.url, "url")
   if (!e) {
     return <></>

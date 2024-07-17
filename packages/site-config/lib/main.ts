@@ -1,6 +1,5 @@
 import {existsSync, readFileSync} from "node:fs"
 import {join} from "node:path"
-import {cwd} from "node:process"
 import {type DocEditorConfigEvents, type DocEditorConfigurableOptions} from "@onlyoffice/document-server-types"
 import yaml from "yaml"
 
@@ -17,23 +16,13 @@ export interface Configurable {
 }
 
 export class Config implements Configurable {
+  static shared: Configurable
+
   baseUrl = ""
   server = new ServerConfig()
   playground = new PlaygroundConfig()
 
-  static #config: Configurable
-  static #done = false
-
-  static read(m?: string): Configurable {
-    if (this.#done) {
-      return this.#config
-    }
-    this.#done = true
-    this.#config = this.load(cwd(), m)
-    return this.#config
-  }
-
-  static load(d: string, m?: string): Configurable {
+  static read(d: string, m?: string): Configurable {
     // It is crucial to use synchronous operations. This will allow
     // configuration to be loaded within the Eleventy or JSX components.
 
@@ -107,12 +96,10 @@ export class Config implements Configurable {
   static merge(a: Configurable, b: Configurable): Configurable {
     const co = new Config()
 
-    if (a.baseUrl && b.baseUrl) {
+    if (b.baseUrl) {
       co.baseUrl = b.baseUrl
     } else if (a.baseUrl) {
       co.baseUrl = a.baseUrl
-    } else if (b.baseUrl) {
-      co.baseUrl = b.baseUrl
     }
 
     co.server = ServerConfig.merge(a.server, b.server)
@@ -160,12 +147,10 @@ export class ServerConfig implements ServerConfigurable {
   ): ServerConfigurable {
     const s = new ServerConfig()
 
-    if (a.baseUrl && b.baseUrl) {
+    if (b.baseUrl) {
       s.baseUrl = b.baseUrl
     } else if (a.baseUrl) {
       s.baseUrl = a.baseUrl
-    } else if (b.baseUrl) {
-      s.baseUrl = b.baseUrl
     }
 
     return s
@@ -278,28 +263,26 @@ export class DocumentEditorConfig implements DocumentEditorConfigurable {
   ): DocumentEditorConfigurable {
     const de = new DocumentEditorConfig()
 
-    if (a.documentServerUrl && b.documentServerUrl) {
+    if (b.documentServerUrl) {
       de.documentServerUrl = b.documentServerUrl
     } else if (a.documentServerUrl) {
       de.documentServerUrl = a.documentServerUrl
-    } else if (b.documentServerUrl) {
-      de.documentServerUrl = b.documentServerUrl
     }
 
     if (a.config.length !== 0 && b.config.length !== 0) {
       throw new Error("Merging of config is not supported")
-    } else if (a.config.length !== 0) {
-      de.config = a.config
     } else if (b.config.length !== 0) {
       de.config = b.config
+    } else if (a.config.length !== 0) {
+      de.config = a.config
     }
 
     if (a.scenarios.length !== 0 && b.scenarios.length !== 0) {
       throw new Error("Merging of scenarios is not supported")
-    } else if (a.scenarios.length !== 0) {
-      de.scenarios = a.scenarios
     } else if (b.scenarios.length !== 0) {
       de.scenarios = b.scenarios
+    } else if (a.scenarios.length !== 0) {
+      de.scenarios = a.scenarios
     }
 
     return de
@@ -494,3 +477,7 @@ interface InputScenarioConfig extends DocEditorConfigurableOptions {
 }
 
 type ScenarioConfigurable = InputScenario
+
+if (!Config.shared) {
+  Config.shared = new Config()
+}
