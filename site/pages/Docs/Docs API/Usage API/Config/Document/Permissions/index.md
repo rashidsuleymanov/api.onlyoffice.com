@@ -245,6 +245,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "editCommentAuthorOnly": false,
             "fillForms": true,
             "modifyContentControl": true,
+            "modifyFilter": true,
             "print": true,
             "protect": true,
             "review": false,
