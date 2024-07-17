@@ -1,34 +1,38 @@
-import {Client} from "@onlyoffice/server-client"
-import {ConfigFixture} from "@onlyoffice/site-config-fixtures"
+// todo: resuscitate stories
+// Separate the node logic with the common one in the config fixtures package.
+
+// import {Client} from "@onlyoffice/server-client"
+// import {ConfigFixture} from "@onlyoffice/site-config-fixtures"
 import {type Meta} from "@storybook/preact"
-import {useEffect} from "preact/hooks"
+// import {useEffect} from "preact/hooks"
 import {type JSX, h} from "preact"
-import {DocumentEditorPlayground} from "./main.tsx"
+// import {DocumentEditorPlayground} from "./main.tsx"
 
 export default {
-  title: "Site/Document Editor Playground"
+  title: "Site/Document Editor Playground",
 } satisfies Meta
 
 export function Default(): JSX.Element {
-  document.addEventListener("documentbuildererror", console.error)
-  document.addEventListener("documenteditorerror", console.error)
-  document.addEventListener("documenteditorplaygrounderror", console.error)
+  // document.addEventListener("documentbuildererror", console.error)
+  // document.addEventListener("documenteditorerror", console.error)
+  // document.addEventListener("documenteditorplaygrounderror", console.error)
 
-  useEffect(() => {
-    setup()
-  }, [])
+  // useEffect(() => {
+  //   setup()
+  // }, [])
 
-  const c = new ConfigFixture()
-  return <DocumentEditorPlayground config={c.playground} />
+  // const c = new ConfigFixture()
+  // return <DocumentEditorPlayground config={c.playground} />
+  return <div></div>
 }
 
-async function setup(): Promise<void> {
-  const c = new Client()
-  c.baseURL = "http://0.0.0.0:4000/"
+// async function setup(): Promise<void> {
+//   const c = new Client()
+//   c.baseURL = "http://0.0.0.0:4000/"
 
-  const sp = document.querySelector("document-editor-playground")
-  if (sp) {
-    sp.client = c
-    await sp.connectedCallback()
-  }
-}
+//   const sp = document.querySelector("document-editor-playground")
+//   if (sp) {
+//     sp.client = c
+//     await sp.connectedCallback()
+//   }
+// }
