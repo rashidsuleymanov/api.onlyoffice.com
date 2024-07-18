@@ -10,6 +10,7 @@ import {type JSX, h} from "preact"
 
 export default {
   title: "Site/Document Editor Playground",
+  tags: ["!dev"],
 } satisfies Meta
 
 export function Default(): JSX.Element {
