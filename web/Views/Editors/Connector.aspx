@@ -28,22 +28,22 @@ var connector = docEditor.createConnector()
     <p>连接器与插件具有相同的接口。下面可以找到可用于此类的方法。</p>
 
     <ul>
-        <li><a href="#addContextMenuItem">addContextMenuItem</a> - add an item to the context menu.</li>
-        <li><a href="#addToolbarMenuItem">addToolbarMenuItem</a> - add an item to the toolbar menu.</li>
+        <li><a href="#addContextMenuItem">addContextMenuItem</a> - 向上下文菜单添加一个项目。</li>
+        <li><a href="#addToolbarMenuItem">addToolbarMenuItem</a> - 向工具栏菜单添加一个项目。</li>
         <li><a href="#attachEvent">attachEvent</a> -添加事件侦听器。</li>
         <li><a href="#callCommand">callCommand</a> -将数据发送回编辑器。</li>
         <li><a href="#connect">connect</a> -将连接器连接到编辑器。</li>
         <li><a href="#detachEvent">detachEvent</a> -删除事件侦听器。</li>
         <li><a href="#disconnect">disconnect</a> -断开连接器与编辑器的连接。</li>
         <li><a href="#executeMethod">executeMethod</a> -使用连接器执行某些编辑器方法。</li>
-        <li><a href="#updateContextMenuItem">updateContextMenuItem</a> - update an item in the context menu with the specified items.</li>
+        <li><a href="#updateContextMenuItem">updateContextMenuItem</a> - 使用指定的项目更新上下文菜单中的项目。</li>
     </ul>
 
     <h2>方法及其描述：</h2>
     <ul>
         <li>
-            <p><b id="addContextMenuItem" class="copy-link">addContextMenuItem</b> - the function called to add an item to the context menu.</p>
-            <div class="header-gray">Parameters</div>
+            <p><b id="addContextMenuItem" class="copy-link">addContextMenuItem</b> - 调用该函数将项目添加到上下文菜单。</p>
+            <div class="header-gray">参数</div>
             <table class="table">
                 <colgroup>
                     <col class="table-name" />
@@ -52,16 +52,16 @@ var connector = docEditor.createConnector()
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Name</td>
-                        <td>Description</td>
-                        <td>Type</td>
+                        <td>名称</td>
+                        <td>描述</td>
+                        <td>类型</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>items</td>
-                        <td>An array containing the context menu item parameters.</td>
-                        <td>array of <a href="#ContextMenuItem">ContextMenuItem</a></td>
+                        <td>包含上下文菜单项参数的数组。</td>
+                        <td><a href="#ContextMenuItem">ContextMenuItem</a></td> 的数组
                     </tr>
                 </tbody>
             </table>
@@ -70,53 +70,53 @@ var connector = docEditor.createConnector()
             <div id="ContextMenuItem" class="copy-link header-gray">ContextMenuItem</div>
             <table class="table">
                 <colgroup>
-                    <col class="table-name" />
-                    <col />
-                    <col class="table-type" />
+                <col class="table-name" />
+                <col />
+                <col class="table-type" />
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Name</td>
-                        <td>Description</td>
-                        <td>Type</td>
+                        <td>名称</td>
+                        <td>描述</td>
+                        <td>类型</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>id</td>
-                        <td>The item ID.</td>
-                        <td>string</td>
+                        <td>项目 ID。</td>
+                        <td>字符串</td>
                     </tr>
                     <tr class="tablerow">
                         <td>text</td>
-                        <td>The item text.</td>
-                        <td>string</td>
+                        <td>项目文本。</td>
+                        <td>字符串</td>
                     </tr>
                     <tr class="tablerow">
                         <td>data</td>
-                        <td>The item data (this data will be sent to the click event callback).</td>
+                        <td>项目数据（此数据将发送到点击事件回调）。</td>
                         <td>string</td>
                     </tr>
                     <tr class="tablerow">
                         <td>disabled</td>
-                        <td>Specifies if the current item is disabled or not.</td>
+                        <td>指定当前项是否已禁用。</td>
                         <td>boolean</td>
                     </tr>
                     <tr class="tablerow">
                         <td>icons</td>
-                        <td>The item icons (see the plugins <a href="<%= Url.Action("config", "plugin") %>#icons">config</a> documentation).</td>
+                        <td>项目图标（请参阅插件 <a href="<%= Url.Action("config", "plugin") %>#icons">config</a> 文档）。</td>
                         <td>string</td>
                     </tr>
                     <tr class="tablerow">
                         <td>items</td>
-                        <td>An array containing the context menu items for the current item.</td>
-                        <td>array of ContextMenuItem</td>
+                        <td>包含当前项的上下文菜单项的数组。</td>
+                        <td>ContextMenuItem 数组</td>
                     </tr>
                 </tbody>
             </table>
             <div class="mobile-content"></div>
 
-            <div class="header-gray">Example</div>
+            <div class="header-gray">示例</div>
             <pre>
 var items: [
     {
@@ -130,8 +130,8 @@ connector.addContextMenuItem(items);
         </li>
 
         <li>
-            <p><b id="addToolbarMenuItem" class="copy-link">addToolbarMenuItem</b> - the function called to add an item to the toolbar menu.</p>
-            <div class="header-gray">Parameters</div>
+            <p><b id="addToolbarMenuItem" class="copy-link">addToolbarMenuItem</b> - 调用该函数将项目添加到工具栏菜单。</p>
+            <div class="header-gray">参数</div>
             <table class="table">
                 <colgroup>
                     <col class="table-name" />
@@ -140,21 +140,21 @@ connector.addContextMenuItem(items);
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Name</td>
-                        <td>Description</td>
-                        <td>Type</td>
+                        <td>名称</td>
+                        <td>描述</td>
+                        <td>类型</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>items</td>
-                        <td>The toolbar main menu item parameters.</td>
+                        <td>工具栏主菜单项参数。</td>
                         <td><a href="#ToolbarMenuMainItem">ToolbarMenuMainItem</a></td>
                     </tr>
                 </tbody>
             </table>
             <div class="mobile-content"></div>
-
+            
             <div id="ToolbarMenuMainItem" class="copy-link header-gray">ToolbarMenuMainItem</div>
             <table class="table">
                 <colgroup>
@@ -164,26 +164,26 @@ connector.addContextMenuItem(items);
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Name</td>
-                        <td>Description</td>
-                        <td>Type</td>
+                        <td>名称</td>
+                        <td>说明</td>
+                        <td>类型</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>guid</td>
-                        <td>The plugin guid.</td>
+                        <td>插件 guid。</td>
                         <td>string</td>
                     </tr>
                     <tr class="tablerow">
                         <td>tabs</td>
-                        <td>An array containing the toolbar menu tabs for the current item.</td>
-                        <td>array of <a href="#ToolbarMenuTab">ToolbarMenuTab</a></td>
+                        <td>包含当前工具栏菜单选项卡的数组项。</td>
+                        <td><a href="#ToolbarMenuTab">ToolbarMenuTab</a 的数组></td>
                     </tr>
                 </tbody>
             </table>
             <div class="mobile-content"></div>
-
+            
             <div id="ToolbarMenuTab" class="copy-link header-gray">ToolbarMenuTab</div>
             <table class="table">
                 <colgroup>
@@ -193,31 +193,31 @@ connector.addContextMenuItem(items);
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Name</td>
-                        <td>Description</td>
-                        <td>Type</td>
+                        <td>名称</td>
+                        <td>描述</td>
+                        <td>类型</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>id</td>
-                        <td>The tab ID.</td>
-                        <td>string</td>
+                        <td>标签 ID。</td>
+                        <td>字符串</td>
                     </tr>
                     <tr class="tablerow">
                         <td>text</td>
-                        <td>The tab text.</td>
+                        <td>标签文本。</td>
                         <td>string</td>
                     </tr>
                     <tr class="tablerow">
                         <td>items</td>
-                        <td>An array containing the toolbar menu items for the current tab.</td>
-                        <td>array of <a href="#ToolbarMenuItem">ToolbarMenuItem</a></td>
+                        <td>包含当前标签的工具栏菜单项的数组。</td>
+                        <td><a href="#ToolbarMenuItem">ToolbarMenuItem</a></td> 的数组
                     </tr>
                 </tbody>
             </table>
             <div class="mobile-content"></div>
-
+            
             <div id="ToolbarMenuItem" class="copy-link header-gray">ToolbarMenuItem</div>
             <table class="table">
                 <colgroup>
@@ -227,77 +227,77 @@ connector.addContextMenuItem(items);
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Name</td>
-                        <td>Description</td>
-                        <td>Type</td>
+                        <td>名称</td>
+                        <td>描述</td>
+                        <td>类型</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>id</td>
-                        <td>The item ID.</td>
-                        <td>string</td>
+                        <td>项目 ID。</td>
+                        <td>字符串</td>
                     </tr>
                     <tr class="tablerow">
-                        <td>type</td>
-                        <td>The possible values of the base which the relative vertical position of the toolbar menu item will be calculated from.</td>
+                        <td>类型</td>
+                        <td>工具栏菜单项的相对垂直位置将根据其计算的基准的可能值。</td>
                         <td><a href="<%= Url.Action("global", "plugin") %>#ToolbarMenuItemType">ToolbarMenuItemType</a></td>
                     </tr>
                     <tr class="tablerow">
                         <td>text</td>
-                        <td>The item text.</td>
+                        <td>项目文本。</td>
                         <td>string</td>
                     </tr>
                     <tr class="tablerow">
                         <td>hint</td>
-                        <td>The item hint.</td>
+                        <td>项目提示。</td>
                         <td>string</td>
                     </tr>
                     <tr class="tablerow">
                         <td>icons</td>
-                        <td>The item icons (see the plugins <a href="<%= Url.Action("config", "plugin") %>#icons">config</a> documentation).</td>
+                        <td>项目图标（请参阅插件 <a href="<%= Url.Action("config", "plugin") %>#icons">config</a> 文档）。</td>
                         <td>string</td>
                     </tr>
                     <tr class="tablerow">
                         <td>disabled</td>
-                        <td>Specifies if the current item is disabled or not.</td>
+                        <td>指定当前项目是否已禁用。</td>
                         <td>boolean</td>
                     </tr>
                     <tr class="tablerow">
                         <td>enableToggle</td>
-                        <td>Specifies if an item toggle is enabled or not.</td>
+                        <td>指定是否启用项目切换。</td>
                         <td>boolean</td>
                     </tr>
                     <tr class="tablerow">
                         <td>lockInViewMode</td>
-                        <td>Specifies if the current item is locked in the view mode or not.</td>
+                        <td>指定当前项目是否在查看模式下锁定。</td>
                         <td>boolean</td>
                     </tr>
                     <tr class="tablerow">
                         <td>separator</td>
-                        <td>Specifies if a separator is used between the toolbar menu items or not.</td>
+                        <td>指定工具栏菜单项之间是否使用分隔符。</td>
                         <td>boolean</td>
                     </tr>
                     <tr class="tablerow">
                         <td>split</td>
-                        <td>Specifies if the toolbar menu items are split or not.</td>
+                        <td>指定工具栏菜单项是否拆分。</td>
                         <td>boolean</td>
                     </tr>
                     <tr class="tablerow">
                         <td>onClick</td>
-                        <td>The click event callback.</td>
+                        <td>点击事件回调。</td>
                         <td>function</td>
                     </tr>
                     <tr class="tablerow">
                         <td>items</td>
-                        <td>An array containing the <a href="#ContextMenuItem">context menu items</a> for the current item.</td>
-                        <td>array of ContextMenuItem</td>
+                        <td>包含当前项目的 <a href="#ContextMenuItem">上下文菜单项</a> 的数组。</td>
+                        <td>ContextMenuItem 数组</td>
                     </tr>
                 </tbody>
             </table>
             <div class="mobile-content"></div>
-
-            <div class="header-gray">Example</div>
+                
+            <div class="header-gray">示例</div>
             <pre>
 var oToolbarMenuItem = {
     "id": "MeaningItem",
@@ -536,8 +536,8 @@ connector.executeMethod("SetFormValue",[forms[i]["InternalId"],"OnlyOffice BANK"
         </li>
 
         <li>
-            <p><b id="updateContextMenuItem" class="copy-link">updateContextMenuItem</b> - the function called to update an item in the context menu with the specified items.</p>
-            <div class="header-gray">Parameters</div>
+            <p><b id="updateContextMenuItem" class="copy-link">updateContextMenuItem</b> - 调用该函数来使用指定项更新上下文菜单中的项。</p>
+            <div class="header-gray">参数</div>
             <table class="table">
                 <colgroup>
                     <col class="table-name" />
@@ -546,16 +546,16 @@ connector.executeMethod("SetFormValue",[forms[i]["InternalId"],"OnlyOffice BANK"
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Name</td>
-                        <td>Description</td>
-                        <td>Type</td>
+                        <td>名称</td>
+                        <td>描述</td>
+                        <td>类型</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>items</td>
-                        <td>An array containing the context menu item parameters.</td>
-                        <td>array of <a href="#toolbar-ContextMenuItem">ContextMenuItem</a></td>
+                        <td>包含上下文菜单项参数的数组。</td>
+                        <td><a href="#toolbar-ContextMenuItem">ContextMenuItem</a></td> 的数组
                     </tr>
                 </tbody>
             </table>
@@ -570,47 +570,47 @@ connector.executeMethod("SetFormValue",[forms[i]["InternalId"],"OnlyOffice BANK"
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Name</td>
-                        <td>Description</td>
-                        <td>Type</td>
+                        <td>名称</td>
+                        <td>说明</td>
+                        <td>类型</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>id</td>
-                        <td>The item ID.</td>
+                        <td>项目 ID。</td>
                         <td>string</td>
                     </tr>
                     <tr class="tablerow">
                         <td>text</td>
-                        <td>The item text.</td>
+                        <td>项目文本。</td>
                         <td>string</td>
                     </tr>
                     <tr class="tablerow">
                         <td>data</td>
-                        <td>The item data (this data will be sent to the click event callback).</td>
+                        <td>项目数据（此数据将发送到点击事件回调）。</td>
                         <td>string</td>
                     </tr>
                     <tr class="tablerow">
                         <td>disabled</td>
-                        <td>Specifies if the current item is disabled or not.</td>
+                        <td>指定当前项目是否已禁用。</td>
                         <td>boolean</td>
                     </tr>
                     <tr class="tablerow">
                         <td>icons</td>
-                        <td>The item icons (see the plugins <a href="<%= Url.Action("config", "plugin") %>#icons">config</a> documentation).</td>
+                        <td>项目图标（请参阅插件 <a href="<%= Url.Action("config", "plugin") %>#icons">config</a> 文档）。</td>
                         <td>string</td>
                     </tr>
                     <tr class="tablerow">
                         <td>items</td>
-                        <td>An array containing the context menu items for the current item.</td>
-                        <td>array of ContextMenuItem</td>
+                        <td>包含当前项。</td>
+                        <td>ContextMenuItem 数组</td>
                     </tr>
                 </tbody>
             </table>
             <div class="mobile-content"></div>
 
-            <div class="header-gray">Example</div>
+            <div class="header-gray">示例</div>
             <pre>
 var items: [
     {

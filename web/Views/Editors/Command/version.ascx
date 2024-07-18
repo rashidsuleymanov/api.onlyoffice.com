@@ -77,7 +77,7 @@
         </tr>
         <tr class="tablerow">
             <td>version</td>
-            <td>Defines the document server version.</td>
+            <td>定义文档服务器版本。</td>
             <td>string</td>
             <td>必需的</td>
         </tr>

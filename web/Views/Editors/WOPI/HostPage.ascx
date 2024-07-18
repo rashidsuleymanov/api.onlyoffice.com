@@ -10,7 +10,7 @@
     <p>主机页面必须包含以下元素：</p>
     <ul>
         <li>出于安全目的，主机必须通过一个 <em>form</em> 元素将 <a href="#access_token">access_token</a> 和 <a href="#access_token_ttl">access_token_ttl</a> 参数 <em>POST</em> 到online office iframe。
-        The <a href="#docs_api_config">docs_api_config</a> parameter is optional.</li>
+        <a href="#docs_api_config">docs_api_config</a> 参数是可选的。</li>
         <li>使用 <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>与online office iframe 交互的 JavaScript 代码。</li>
         <li>Body元素和online office的特定 CSS 样式，以避免视觉包。此外，
         主机页面应使用 <a href="<%= Url.Action("wopi/discovery") %>">WOPI 发现</a>中提供的网站图标 URL 为页面设置适当的网站图标。</li>
@@ -111,17 +111,17 @@
                     访问令牌过期的时间，表示为自 1970 年 1 月 1 日 UTC 以来的毫秒数。
                     建议将此参数设置为 10 小时。
                     <br />
-                    This parameter can be also set to 0. This means for the client that the token expiry is either infinite or unknown.
-                    In this case, clients might disable any UI prompting users to refresh their sessions. This can lead to unexpected data loss due to access token expiry.
-                    So, this is strongly recommended to specify a value for <em>access_token_ttl</em>.
+                    此参数也可以设置为 0。对于客户端来说，这意味着令牌的有效期是无限的或未知的。
+                    在这种情况下，客户端可能会禁用任何提示用户刷新会话的 UI。这可能会导致访问令牌过期而导致意外的数据丢失。
+                    因此，强烈建议为 <em>access_token_ttl</em> 指定一个值。
                 </td>
                 <td>integer</td>
             </tr>
             <tr>
                 <td id="docs_api_config" class="copy-link">docs_api_config</td>
-                <td>The optional <a href="<%= Url.Action("config") %>">config</a> parameters for opening the editor via Docs API
-                that are not supported by the WOPI protocol. For example, to enable the <a href="<%= Url.Action("save") %>#forcesave">forcesaving</a> functionality
-                by clicking the <b>Save</b> button, the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">editorConfig.customization.forcesave</a> parameter must be passed in this object.</td>
+                <td>可选的<a href="<%= Url.Action("config") %>">config</a> 参数，用来通过 Docs API
+                打开编辑器，这些参数不受 WOPI 协议支持。例如，要通过单击 <b>保存</b> 按钮启用 <a href="<%= Url.Action("save") %>#forcesave">forcesaving</a> 功能，
+                必须在此对象中传递 <a href="<%= Url.Action("config/editor/customization") %>#forcesave">editorConfig.customization.forcesave</a> 参数。</td>
                 <td>string</td>
             </tr>
         </tbody>

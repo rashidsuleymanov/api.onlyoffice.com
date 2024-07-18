@@ -40,7 +40,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         <li><a href="#setSharingSettings">setSharingSettings</a> - 更新有关允许与其他用户共享文档的设置的 <em>信息</em>。</li>
         <li><a href="#setUsers">setUsers</a> - 设置用户列表,用来在评论中提及、授予编辑特定工作表范围的访问权限，或设置用户头像。</li>
         <li><a href="#showMessage">showMessage</a> - 显示带有消息的工具提示。</li>
-        <li><a href="#startFilling">startFilling</a> - start filling out the ready forms and lock the pdf editing.</li>
+        <li><a href="#startFilling">startFilling</a> - 开始填写准备好的表格并锁定pdf编辑。</li>
     </ul>
 
     <h2>方法及其描述：</h2>
@@ -1344,9 +1344,9 @@ docEditor.showMessage(message);
 
         <li>
             <p>
-                <b id="startFilling" class="copy-link">startFilling</b> - start filling out the ready forms and lock the pdf editing (only pdf viewing becomes available).
-                This method can be called only after the <a href="<%= Url.Action("config/events") %>#onRequestStartFilling">onRequestStartFilling</a> event.
-            </p>
+                <b id="startFilling" class="copy-link">startFilling</b> - 开始填写准备好的表格并锁定 pdf 编辑（仅可查看 pdf）。
+                仅在 <a href="<%= Url.Action("config/events") %>#onRequestStartFilling">onRequestStartFilling</a> 事件之后才可调用此方法。
+                </p>
             <pre>
 docEditor.startFilling();
 </pre>

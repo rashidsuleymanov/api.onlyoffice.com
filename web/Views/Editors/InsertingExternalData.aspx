@@ -137,7 +137,7 @@ var onRequestReferenceData = function (event) {
         </li>
         <li>
             <p>为了刷新源文件中的数据，必须调用 <a href="<%= Url.Action("methods") %>#setReferenceData">setReferenceData</a> 方法。
-                When calling this method, the token must be added to validate the parameters.</p>
+                调用该方法时必须添加token来验证参数。</p>
             <note>请注意，仅当用户对源文件具有权限时才会执行此方法。</note>
             <pre>
 docEditor.setReferenceData({

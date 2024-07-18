@@ -43,7 +43,7 @@
         <img alt="Not found" src="<%= Url.Content("~/content/img/not-found.svg") %>" />
         <% if (Html.IfController("Home"))
            { %>
-        <p><a href="<%= Url.Action("index", "home") %>">Go to main page</a></p>
+        <p><a href="<%= Url.Action("index", "home") %>">转至主页</a></p>
         <% } %>
     </div>
     <% } %>

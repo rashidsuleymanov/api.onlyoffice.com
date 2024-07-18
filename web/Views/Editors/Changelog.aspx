@@ -18,25 +18,25 @@
     <p class="dscr">ONLYOFFICE文档服务器API的更改列表。</p>
     <h2 id="81" class="copy-link">Version 8.1</h2>
     <ul>
-        <li>Added the <a href="<%= Url.Action("methods") %>#startFilling">startFilling</a> method.</li>
-        <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestStartFilling">events.onRequestStartFilling</a> event.</li>
-        <li>Added the <a href="<%= Url.Action("wopi/hostpage") %>#docs_api_config">docs_api_config</a> parameter to the <em>form</em> element of the WOPI host page.</li>
-        <li>Added the <a href="<%= Url.Action("conversionapi") %>#pdf">pdf</a> field to the conversion request.</li>
-        <li>Added the <a href="<%= Url.Action("config/events") %>#onSubmit">events.onSubmit</a> event.</li>
-        <li>The <em>docxf</em> format is deprecated, please use the <em>pdf</em> format to create and edit forms.</li>
-        <li>Changed the <a href="<%= Url.Action("config/") %>#documentType">documentType</a> of the <em>docxf</em> and <em>oform</em> formats to <em>pdf</em>.</li>
-        <li>Added the <em>roles</em> field to the <a href="<%= Url.Action("config/editor/customization") %>#features">editorConfig.customization.features</a> parameter.</li>
-        <li>Added the <a href="<%= Url.Action("howitworks") %>#shardkey">shardkey</a> parameter to the URL query string when sending requests to the document command service,
-            document conversion service, or document builder service.</li>
-        <li>Added the <a href="<%= Url.Action("connector") %>#addContextMenuItem">addContextMenuItem</a>, <a href="<%= Url.Action("connector") %>#addToolbarMenuItem ">addToolbarMenuItem</a>
-            and <a href="<%= Url.Action("connector") %>#updateContextMenuItem">updateContextMenuItem</a> methods to the <em>Automation API</em>.</li>
-        <li>Added the <a href="<%= Url.Action("conversionapi") %>#error-codes">-10 error code</a> to the Conversion API.</li>
-        <li>The <a href="<%= Url.Action("config/editor/customization") %>#logo">editorConfig.customization.logo</a> parameter is now available for the mobile editors.</li>
-        <li>Added the <em>visible</em> field to the <a href="<%= Url.Action("config/editor/customization") %>#logo">editorConfig.customization.logo</a> parameter.</li>
-        <li>Added the <a href="<%= Url.Action("wopi/discovery") %>#formsubmit">formsubmit</a> action to the WOPI discovery.</li>
-        <li>The <a href="<%= Url.Action("config/editor/customization") %>#goback">editorConfig.customization.goback.requestClose</a> field is deprecated, please use the <a href="<%= Url.Action("config/editor/customization") %>#close">editorConfig.customization.close</a> field instead.</li>
-        <li>Added the <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>#save-as">Save Copy As</a> functionality to WOPI.</li>
-        <li>Change the default value of the <a href="<%= Url.Action("config/editor/customization") %>#hideRightMenu">editorConfig.customization.hideRightMenu</a> parameter to <em>true</em>.</li>
+        <li>添加了 <a href="<%= Url.Action("methods") %>#startFilling">startFilling</a> 方法。</li>
+        <li>添加了 <a href="<%= Url.Action("config/events") %>#onRequestStartFilling">events.onRequestStartFilling</a> 事件。</li>
+        <li>向 WOPI 主机页面的 <em>form</em> 元素添加了 <a href="<%= Url.Action("wopi/hostpage") %>#docs_api_config">docs_api_config</a> 参数。</li>
+        <li>向转换请求添加了 <a href="<%= Url.Action("conversionapi") %>#pdf">pdf</a> 字段。</li>
+        <li>添加了 <a href="<%= Url.Action("config/events") %>#onSubmit">events.onSubmit</a> 事件。</li>
+        <li><em>docxf</em> 格式已弃用，请使用 <em>pdf</em> 格式创建和编辑表单。</li>
+        <li>将 <em>docxf</em> 和 <em>oform</em> 格式的 <a href="<%= Url.Action("config/") %>#documentType">documentType</a> 更改为 <em>pdf</em>。</li>
+        <li>将 <em>roles</em> 字段添加到 <a href="<%= Url.Action("config/editor/customization") %>#features">editorConfig.customization.features</a> 参数。</li>
+        <li>发送时将 <a href="<%= Url.Action("howitworks") %>#shardkey">shardkey</a> 参数添加到 URL 查询字符串请求到文档命令服务、
+            文档转换服务或文档生成器服务。</li>
+        <li>向 <em>Automation API</em> 添加了 <a href="<%= Url.Action("connector") %>#addContextMenuItem">addContextMenuItem</a>、<a href="<%= Url.Action("connector") %>#addToolbarMenuItem ">addToolbarMenuItem</a>和
+            <a href="<%= Url.Action("connector") %>#updateContextMenuItem">updateContextMenuItem</a> 方法。</li>
+        <li>向 Conversion API 添加了 <a href="<%= Url.Action("conversionapi") %>#error-codes">-10 错误代码</a>。</li>
+        <li><a href="<%= Url.Action("config/editor/customization") %>#logo">editorConfig.customization.logo</a> 参数现在可用于移动编辑器。</li>
+        <li>向 <a href="<%= Url.Action("config/editor/customization") %>#logo">editorConfig.customization.logo</a> 参数添加了 <em>visible</em> 字段。</li>
+        <li>向 WOPI 发现添加了 <a href="<%= Url.Action("wopi/discovery") %>#formsubmit">formsubmit</a> 操作。</li>
+        <li><a href="<%= Url.Action("config/editor/customization") %>#goback">editorConfig.customization.goback.requestClose</a> 字段已弃用，请使用 <a href="<%= Url.Action("config/editor/customization") %>#close">editorConfig.customization.close</a> 字段。</li>
+        <li>向 WOPI 添加了 <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>#save-as">Save Copy As</a> 功能。</li>
+        <li>将 <a href="<%= Url.Action("config/editor/customization") %>#hideRightMenu">editorConfig.customization.hideRightMenu</a> 参数的默认值更改为 <em>true</em>。</li>
     </ul>
 
     <h2 id="80" class="copy-link">版本 8.0</h2>

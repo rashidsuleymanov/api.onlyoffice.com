@@ -19,8 +19,8 @@
         请求参数在请求正文中以 JSON 格式输入。
         请求被发送到 <span class="fakelink">https://documentserver/docbuilder</span> 地址，其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档服务器的服务器的名称。
     </p>
-    <p>Starting from version 8.1, it is recommended to add the <a href="<%= Url.Action("howitworks") %>#shardkey">shardkey</a> parameter to the URL <em>QueryString</em> with the <em>key</em> value in it.
-        For example, <em>?shardkey=Khirz6zTPdfd7</em>. This allows you to load balance requests.</p>
+    <p>从 8.1 版开始，建议将 <a href="<%= Url.Action("howitworks") %>#shardkey">shardkey</a> 参数添加到 URL <em>QueryString</em>，其中包含 <em>key</em> 值。
+        例如，<em>?shardkey=Khirz6zTPdfd7</em>。这允许您对请求进行负载平衡。</p>
 
     <h2>参数及其说明：</h2>
     <table class="table">
@@ -98,7 +98,7 @@
 
     <p>
         您可以在 <a href="<%= Url.Action("integrationapi/usingdocbuilderfile", "DocBuilder") %>">此处</a> 找到有关 <em>.docbuilder</em> 文件语法的更多信息。
-        Please read <a href="<%= Url.Action("basic", "officeapi") %>">Office JavaScript API documentation</a> for the detailed information on what classes and methods are used to generate the documents with the help of <em>.docbuilder</em> files.
+        请阅读<a href="<%= Url.Action("basic", "officeapi") %>">Office JavaScript API 文档</a>，了解使用哪些类和方法借助 <em>.docbuilder</em> 文件生成文档的详细信息。
     </p>
 
     <div id="sample-sync-first" class="header-gray copy-link">发送到 <b>文档生成器服务</b> 的 JSON 对象示例，用于第一个异步请求</div>

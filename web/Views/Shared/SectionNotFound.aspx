@@ -8,10 +8,10 @@
 %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Section Not Found
+	未找到章节
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Section Not Found</h2>
-    <p>You can search in documentation</p>
+    <h2>未找到章节</h2>
+    <p>您可以在文档中搜索</p>
 </asp:Content>

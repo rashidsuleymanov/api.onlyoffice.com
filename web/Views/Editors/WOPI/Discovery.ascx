@@ -50,14 +50,14 @@
             </tr>
             <tr>
                 <td id="convert" class="copy-link">convert</td>
-                <td>Converts a document in a <a href="<%= Url.Action("wopi/editingbinary") %>">binary format</a> (<em>doc, ppt, xls</em>) into a modern format (<em>docx, pptx, xlsx</em>)
-                so that it can be edited in the online office. This action is available starting from version 7.3.</td>
+                <td>将<a href="<%= Url.Action("wopi/editingbinary") %>">二进制格式</a> (<em>doc、ppt、xls</em>) 的文档转换为现代格式 (<em>docx、pptx、xlsx</em>)，
+                以便可以在在线办公中进行编辑。此操作从版本 7.3 开始可用。</td>
             </tr>
             <tr>
                 <td id="formsubmit" class="copy-link">formsubmit</td>
-                <td>Supports opening <em>pdf</em> files in the form filling mode.
-                In this case, a user might be able to make changes to a <em>pdf</em> file even if they didn't have permission to use the <em>edit</em> action.
-                This action is available starting from version 8.1.</td>
+                <td>支持在表单填写模式下打开 <em>pdf</em> 文件。
+                在这种情况下，即使用户没有使用 <em>edit</em> 操作的权限，他们也可能能够对 <em>pdf</em> 文件进行更改。
+                此操作从 8.1 版开始可用。</td>
             </tr>
         </tbody>
     </table>

@@ -15,7 +15,7 @@
     <div class="background-body mainBody">
         <div class="products-info">
             <h1>
-                <span class="hdr title-main">Welcome to ONLYOFFICE API</span>
+                <span class="hdr title-main">欢迎使用 ONLYOFFICE API</span>
             </h1>
         </div>
         <div class="search-box-main">

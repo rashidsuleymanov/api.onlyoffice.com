@@ -158,7 +158,7 @@
                         <li>打开 <a href="<%= Url.Action("wopi/postmessage") %>#UI_Sharing">共享访问</a> 设置对话框</li>
                         <li>打开文档 <a href="<%= Url.Action("wopi/postmessage") %>#UI_FileVersions">版本历史</a></li>
                         <li>从存储中<a href="<%= Url.Action("wopi/postmessage") %>#UI_InsertGraphic">插入图像</a></li>
-                        <li>Request to <a href="<%= Url.Action("wopi/restapi/putrelativefile") %>#save-as">save</a> a file in a different format</li>
+                        <li>请求以不同格式<a href="<%= Url.Action("wopi/restapi/putrelativefile") %>#save-as">保存</a>文件</li>
                     </ul>
                 </td>
             </tr>

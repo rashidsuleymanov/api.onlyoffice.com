@@ -597,22 +597,22 @@
         <tr>
             <td id="close" class="copy-link">close</td>
             <td>
-                Defines settings for the cross button to close the editor:
+                定义用于关闭编辑器的关闭按钮的设置：
                 <ul>
                     <li>
-                        <b>visible</b> - defines if the cross button to close the editor is displayed or hidden.
-                        The default value is <b>true</b>,
+                        <b>visible</b> - 定义用于关闭编辑器的关闭按钮是显示还是隐藏。
+                        默认值为 <b>true</b>,
                         <br />
                         <b>type</b>: boolean,
                         <br />
                         <b>example</b>: true;
-                    </li>
-                    <li>
-                        <b>text</b> - defines the tooltip text for a button in the editor header or the menu item text in the mobile editors and in the <b>File</b> menu of the web editors,
+                        </li>
+                        <li>
+                        <b>text</b> - 定义编辑器标题中按钮的工具提示文本或移动编辑器中的菜单项文本以及 Web 编辑器的 <b>File</b> 菜单中的按钮的工具提示文本，
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "Close file".
+                        <b>example</b>: "关闭文件"。
                     </li>
                 </ul>
 
@@ -625,9 +625,9 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <div class="note">Please note that it will only be available if the <a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a> event is set.
-                If the event is not declared and the <em>close</em> parameter is not specified, the cross button will not be displayed.</div>
-                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
+                <div class="note">请注意，仅当设置了 <a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a> 事件时，该参数才可用。
+                如果未声明该事件且未指定 <em>close</em> 参数，则不会显示关闭按钮。</div>
+                <div class="note">请注意，此参数也适用于移动编辑器。</div>
                 <img class="screenshot max-width-832" alt="Cross button in the header" src="<%= Url.Content("~/content/img/editor/cross-button.jpg") %>" />
             </td>
         </tr>
@@ -784,10 +784,10 @@
                 如果可能，定义用户可以禁用或自定义的参数：
                 <ul>
                     <li>
-                        <b>roles<a href="#requiredDescr" class="required">*</a></b> - defines if the role settings will be disabled in the pdf forms or not.
-                        If the parameter is equal to <b>false</b>, then the role manager is hidden and viewing the form on behalf of a specific role is disabled.
-                        In this case, the <b>Manage Roles</b> and <b>View Form</b> buttons on the <b>Forms</b> tab and a drop-down list
-                        for setting the field role in the right panel will not be displayed. The default value is <b>true</b>,
+                       <b>roles<a href="#requiredDescr" class="required">*</a></b> - 定义是否在 pdf 表单中禁用角色设置。
+                        如果该参数等于 <b>false</b>，则隐藏角色管理器，并禁用代表特定角色查看表单。
+                        在这种情况下，<b>表单</b>选项卡上的<b>管理角色</b>和<b>查看表单</b>按钮以及右侧面板中用于设置字段角色的下拉列表将不会显示。
+                        默认值为 <b>true</b>，
                         <br />
                         <b>type</b>: boolean,
                         <br />
@@ -929,7 +929,7 @@
                     </li>
                     <li>
                         <b>requestClose</b> - 定义如果单击打开文件位置按钮，将调用 <a href="<%= Url.Action("config/events") %>#onRequestClose">events.onRequestClose</a> 事件而不是打开浏览器选项卡或窗口。
-                        Deprecated since version 8.1. Please use the <a href="#close">close</a> parameter instead,
+                        自 8.1 版起已弃用。请使用 <a href="#close">close</a> 参数代替，
                         <br />
                         <b>类型</b>：boolean，
                         <br />
@@ -1049,11 +1049,11 @@
                         <b>类型</b>：object，
                     </li>
                     <li>
-                        <b>header.editMode</b> - defines if a button for switching editor modes will be displayed in the header or not. The default value is <b>true</b>,
+                        <b>header.editMode</b> - 定义是否在标题中显示用于切换编辑器模式的按钮。默认值为 <b>true</b>,
                         <br />
-                        <b>type</b>: boolean,
+                        <b>类型</b>: boolean,
                         <br />
-                        <b>example</b>: true;
+                        <b>示例</b>: true;
                     </li>
                     <li>
                         <b>header.save</b> - 定义编辑器标题中的保存按钮是显示还是隐藏。默认值为 <b>true</b>。
@@ -1157,24 +1157,24 @@
                         如果此参数是布尔值，则指定是显示还是隐藏工具栏。
                         默认值为 <b>true</b>，
                         <br />
-                        <b>type</b>: object or boolean,
+                        <b>类型</b>: object or boolean,
                         <br />
-                        <b>example</b>: true;
+                        <b>示例</b>: true;
                     </li>
                     <li>
-                        <b>toolbar.collaboration</b> - defines the <b>Collaboration</b> tab settings.
-                        If this parameter is a boolean value, then it specifies whether the <b>Collaboration</b> tab will be displayed or hidden.
-                        The default value is <b>true</b>,
+                        <b>toolbar.collaboration</b> - 定义 <b>Collaboration</b> 选项卡设置。
+                        如果此参数是布尔值，则指定是否显示或隐藏 <b>Collaboration</b> 选项卡。
+                        默认值为 <b>true</b>,
                         <br />
-                        <b>type</b>: object or boolean,
+                        <b>类型</b>：对象或布尔值，
                         <br />
-                        <b>example</b>: true;
+                        <b>示例</b>：true;
                     </li>
                     <li>
-                        <b>toolbar.collaboration.mailmerge</b> - defines if the button for choosing the mail merge base is displayed or hidden.
-                        The default value is <b>true</b>,
+                        <b>toolbar.collaboration.mailmerge</b> - 定义选择邮件合并基础的按钮是否显示或隐藏。
+                        默认值为 <b>true</b>,
                         <br />
-                        <b>type</b>: boolean,
+                        <b>类型</b>：boolean,
                         <br />
                         <b>示例</b>：true；
                     </li>
@@ -1228,8 +1228,8 @@
                         <b>类型</b>：object，
                     </li>
                     <li>
-                        <b>toolbar.home.mailmerge</b> - defines if the button for choosing the mail merge base is displayed or hidden.
-                        This parameter is deprecated, please use the <em>toolbar.collaboration.mailmerge</em> parameter instead,
+                        <b>toolbar.home.mailmerge</b> - 定义是否显示或隐藏用于选择邮件合并基础的按钮。
+                        此参数已弃用，请改用 <em>toolbar.collaboration.mailmerge</em> 参数，
                         <br />
                         <b>类型</b>：boolean，
                         <br />
@@ -1405,11 +1405,11 @@
                         <b>示例</b>："https://example.com";
                     </li>
                     <li>
-                        <b>visible</b> - shows or hides the logo. The default value is <b>true</b>,
+                        <b>visible</b> - 显示或隐藏徽标。默认值为 <b>true</b>，
                         <br />
-                        <b>type</b>: boolean,
+                        <b>类型</b>: boolean,
                         <br />
-                        <b>example</b>: true.
+                        <b>示例</b>: true.
                     </li>
                 </ul>
             </td>
@@ -1423,7 +1423,7 @@
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
-                <div class="note">Please note that this parameter is also available for the mobile editors.</div>
+                <div class="note">请注意，此参数也适用于移动编辑器。</div>
             </td>
         </tr>
         <tr class="tablerow">

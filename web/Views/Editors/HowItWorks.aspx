@@ -83,12 +83,12 @@
         <b>文档管理器</b> 和 <b>文档存储服务</b> 要么包含在社区服务器中，要么必须由在自己的服务器上使用 ONLYOFFICE 文档服务器的软件集成商实施。
     </p>
 
-    <h2 id="shardkey" class="copy-link">Shard key</h2>
-    <p>Starting from version 8.1, the <em>shardkey</em> parameter is added to the URL <em>QueryString</em> when sending requests to the <b>document command service</b>,
-        <b>document conversion service</b>, or <b>document builder service</b>. It is also added to the browser-server interaction during the collaborative editing
-        as the <a href="<%= Url.Action("wopi/") %>#wopisrc">WOPISrc</a> query parameter.</p>
-    <p>The <em>key</em> field is used as a value. For example, <em>?shardkey=Khirz6zTPdfd7</em>.
-        If there is no key in the body, you do not have to send it (for example, in the <a href="<%= Url.Action("command/getForgottenList") %>">getForgottenList</a> command).</p>
-    <p>This is a recommendation when working with an editor server cluster to load balance requests during the collaborative editing: all users editing the same document are served by the same server.</p>
+    <h2 id="shardkey" class="copy-link">分片键</h2>
+    <p>从 8.1 版开始，在向<b>文档命令服务</b>、
+        <b>文档转换服务</b>或<b>文档生成器服务</b>发送请求时，会将<em>shardkey</em>参数添加到 URL <em>QueryString</em> 中。
+        它还会在协同编辑期间作为<a href="<%= Url.Action("wopi/") %>#wopisrc">WOPISrc</a>查询参数添加到浏览器与服务器的交互中。</p>
+    <p><em>key</em>字段用作值。例如，<em>?shardkey=Khirz6zTPdfd7</em>。
+        如果正文中没有密钥，则不必发送它（例如，在 <a href="<%= Url.Action("command/getForgottenList") %>">getForgottenList</a> 命令中）。</p>
+    <p>在使用编辑器服务器群集在协作编辑期间平衡请求负载时，建议这样做：编辑同一文档的所有用户都由同一台服务器提供服务。</p>
 
 </asp:Content>

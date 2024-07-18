@@ -13,16 +13,16 @@
     <h1>
         <span class="hdr">将表单嵌入网页</span>
     </h1>
-    <p class="dscr">Starting from version 7.0, ONLYOFFICE Docs offers the possibility to create, edit and collaborate on online forms, fill them out, and save forms as PDF.</p>
-    <p>ONLYOFFICE forms are available in the PDF format which is intended for creating form templates from blank or any existing DOCX file
-        and used for filling out the ready forms.</p>
+    <p class="dscr">从 7.0 版开始，ONLYOFFICE Docs 提供了创建、编辑和协作在线表单、填写表单以及将表单保存为 PDF 的可能性。</p>
+    <p>ONLYOFFICE 表单提供 PDF 格式，用于从空白或任何现有 DOCX
+        文件创建表单模板并用于填写现成的表单。</p>
     <note>
-        <p>Please note that starting from version 8.0, the OFORM format is deprecated. To fill out the ready forms, only the PDF format is used.</p>
-        <p>Starting from version 8.1, the DOCXF format is deprecated. To create and edit forms, only the PDF format is used.</p>
+        <p>请注意，从 8.0 版开始，OFORM 格式已弃用。要填写现成的表单，只能使用 PDF 格式。</p>
+        <p>从 8.1 版开始，DOCXF 格式已弃用。要创建和编辑表单，只能使用 PDF 格式。</p>
     </note>
-    <p>These instructions help you add an online form to your website, making it available for saving as PDF and filling in.</p>
-    <note>Please note that these instructions will only work when JWT is disabled. Starting from version 7.2, JWT is enabled by default, so you need to disable it.
-        More information about token can be found <a href="<%= Url.Action("signature/") %>">here</a>.</note>
+    <p>这些说明可帮助您将在线表单添加到您的网站，使其可保存为 PDF 并填写。</p>
+    <note>请注意，这些说明仅在禁用 JWT 时才有效。从 7.2 版本开始，JWT 默认启用，因此您需要禁用它。
+        有关 token 的更多信息，请参见<a href="<%= Url.Action("signature/") %>">此处</a>。</note>
 
     <div class="container">
         <ul class="browser">
@@ -30,7 +30,7 @@
             <li class="browser tab copy-link" id="filling">填写表单</li>
         </ul>
         <div id="editing" class="content active">
-            <h2 id="pdf-for-editing" class="copy-link">How to open PDF form for editing from website</h2>
+            <h2 id="pdf-for-editing" class="copy-link">如何从网站打开 PDF 表单进行编辑</h2>
             <p>要在您的网站上打开DOCXF格式的在线表单进行编辑，请执行以下步骤：</p>
             <ol>
                 <li>查找并打开ONLYOFFICE文档的 <em>index.html</em> 文件。</li>
@@ -41,7 +41,7 @@
 </pre>
                 </li>
                 <li>
-                    <p>Add the <em>button</em> element to open the PDF form:</p>
+                    <p>添加<em>按钮</em>元素以打开 PDF 表单：</p>
                     <pre>
 &lt;button onclick="open_form_template()"&gt;打开表单模板&lt;/button&gt;
 </pre>
@@ -61,7 +61,7 @@ if (this.docEditor)
 </pre>
                 </li>
                 <li>
-                    <p>Create the full URL address to the PDF form you need to open:</p>
+                    <p>创建您需要打开的 PDF 表单的完整 URL 地址：</p>
                     <pre>
 const url = "https://example.com/url-to-example-form.pdf";
 </pre>
@@ -119,12 +119,12 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
     }
 &lt;/script&gt;
 </pre>
-            <p>Once done, the PDF form can be opened for editing. After editing this file, you can fill out the ready forms. To do so, click the <b>Start filling</b> button.</p>
-            <img class="screenshot max-width-832" alt="Embed pdf form for editing" src="<%= Url.Content("~/content/img/editor/embed-pdf-for-editing.png") %>" />
+            <p>完成后，可以打开 PDF 表单进行编辑。编辑此文件后，您可以填写准备好的表格。为此，请单击<b>开始填写</b>按钮。</p>
+            <img class="screenshot max-width-832" alt="嵌入 PDF 表单进行编辑" src="<%= Url.Content("~/content/img/editor/embed-pdf-for-editing.png") %>" />
         </div>
         <div id="filling" class="content">
-            <h2 id="pdf" class="copy-link">How to open PDF form for filling from website</h2>
-            <p>To make an online form in the PDF format available for filling in, follow the steps below:</p>
+            <h2 id="pdf" class="copy-link">如何从网站打开 PDF 表单进行填写</h2>
+            <p>要使 PDF 格式的在线表单可供填写，请按照以下步骤操作：</p>
             <ol>
                 <li>查找并打开ONLYOFFICE文档的 <em>index.html</em> 文件。</li>
                 <li>
@@ -134,7 +134,7 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
 </pre>
                 </li>
                 <li>
-                    <p>Add the <em>button</em> element to open the PDF form:</p>
+                    <p>添加<em>按钮</em>元素以打开 PDF 表单：</p>
                     <pre>
 &lt;button onclick="open_form()"&gt;打开表单&lt;/button&gt;
 </pre>
@@ -154,7 +154,7 @@ if (this.docEditor) {
 </pre>
                 </li>
                 <li>
-                    <p>Create the full URL address to the PDF form you need to open:</p>
+                    <p>创建您需要打开的 PDF 表单的完整 URL 地址：</p>
                     <pre>
 const url = "https://example.com/url-to-example-form.pdf";
 </pre>
@@ -164,9 +164,9 @@ const url = "https://example.com/url-to-example-form.pdf";
                     <pre>
 const key = filename + ".pdf";
 </pre>
-                    <note>Please note that the <em>key</em> field is not passed to the configuration of the editors. This field will be automatically generated as a random number.
-                        This allows making all sessions of opening the form independent. So, collaboration on the PDF form is disabled.
-                        That's why anyone can open the form and fill it out without disturbing others.</note>
+                    <note>请注意，<em>key</em> 字段不会传递给编辑器的配置。此字段将自动生成为随机数。
+                        这允许使打开表单的所有会话独立。这样，PDF 表单上的协作被禁用。
+                        这就是为什么任何人都可以打开表单并填写而不会打扰其他人的原因。</note>
                 </li>
                 <li>
                     <p>使用要打开的文档的配置，添加初始化文档编辑器的脚本，并在placeholder元素中打开编辑器：</p>
@@ -215,8 +215,8 @@ this.docEditor = new DocsAPI.DocEditor("placeholder",
     }
 &lt;/script&gt;
 </pre>
-            <p>Once done, the PDF form can be opened for filling. After filling in all the required fields, you can submit your data.
-                To do so, click the <b>Complete & Submit</b> button.</p>
+            <p>完成后，可以打开 PDF 表单进行填写。填写完所有必填字段后，您可以提交数据。
+                为此，请单击<b>完成并提交</b>按钮。</p>
             <img class="screenshot max-width-832" alt="Embed pdf form" src="<%= Url.Content("~/content/img/editor/embed-pdf.png") %>" />
         </div>
     </div>

@@ -39,8 +39,8 @@
     <li><a href="#onRequestSelectSpreadsheet">onRequestSelectSpreadsheet</a> - 用户尝试通过单击<em>邮件合并</em>按钮来选择收件人数据。</li>
     <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - 用户在评论中被提及。</li>
     <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - 用户尝试通过单击 <em>更改访问权限</em> 按钮来管理文档访问权限。</li>
-    <li><a href="#onRequestStartFilling">onRequestStartFilling</a> - the user is trying to start filling out the ready forms by clicking the <em>Start filling</em> button in the pdf editing mode.</li>
-    <li><a href="#onRequestUsers">onRequestUsers</a> - the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.</li>
+    <li><a href="#onRequestStartFilling">onRequestStart Filling</a> - 用户正尝试通过单击 pdf 编辑模式下的<em>开始填写</em>按钮来开始填写准备好的表单。</li>
+    <li><a href="#onRequestUsers">onRequestUsers</a> -用户可以选择其他用户在评论中提及，授予编辑特定工作表范围的访问权限，或设置用户头像。</li>
     <li><a href="#onRequestUsers">onRequestUsers</a> - 用户可以选择的其他用户, 用来在评论中提及、授予编辑特定工作表范围的访问权限或设置用户头像。</li>
     <li><a href="#onWarning">onWarning</a> - 出现警告。</li>
 </ul>
@@ -536,10 +536,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestClose" class="copy-link">onRequestClose</b> - the function called when the user is trying to end the work with the editor and close it by clicking the cross button.
-        If the method is not declared, the <a href="<%= Url.Action("config/editor/customization") %>#close">editorConfig.customization.close</a> parameter will not be available, and
-        the cross button will not be displayed.</p>
-        <div class="header-gray">Example</div>
+       <p><b id="onRequestClose" class="copy-link">onRequestClose</b> - 当用户尝试结束编辑器工作并通过单击交叉按钮将其关闭时调用的函数。
+        如果未声明该方法，则 <a href="<%= Url.Action("config/editor/customization") %>#close">editorConfig.customization.close</a> 参数将不可用，
+        并且不会显示关闭按钮。</p>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestClose = function () {
     if (window.opener) {
@@ -589,10 +589,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestEditRights" class="copy-link">onRequestEditRights</b> - the function called when the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit current file</em> button.
-            This event also fires when the user clicks the <em>Edit PDF</em> button in the forms that are open in the <em>view</em> or <em>fillForms</em> mode.
-            When the function is called, the editor must be initialized again, in editing mode.
-            If the method is not declared the <em>Edit current file</em> and <em>Edit PDF</em> buttons will not be displayed.
+            <b id="onRequestEditRights" class="copy-link">onRequestEditRights</b> - 当用户尝试通过单击 <em>编辑当前文件</em> 按钮将文档从查看模式切换到编辑模式时调用的函数。
+            当用户在 <em>view</em> 或 <em>fillForms</em> 模式下打开的表单中单击 <em>编辑 PDF</em> 按钮时，也会触发此事件。
+            调用该函数时，必须在编辑模式下再次初始化编辑器。
+            如果未声明该方法，则不会显示 <em>编辑当前文件</em> 和 <em>编辑 PDF</em> 按钮。
         </p>
         <div class="note">
             当 <a href="<%= Url.Action("config/editor") %>#mode">editorConfig</a> <em>模式</em> 参数设置为<b>view</b> 并且 <em>编辑</em> 文档的 <em>权限</em> （<a href="<%= Url.Action("config/document/permissions") %>#edit">文档权限</a>）设置为 <b>true</b> 时， <b>onRequestEditRights</b> 参数是强制性的，以便用户可以切换到编辑模式。
@@ -1124,10 +1124,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestStartFilling" class="copy-link">onRequestStartFilling</b> - the function called when the user is trying to start filling out the ready forms by clicking the <em>Start filling</em> button in the pdf editing mode.
-        If the event is not declared, this button will not be displayed.</p>
-        <p>When the user clicks the <em>Start filling</em> button, the <a href="<%= Url.Action("methods") %>#startFilling">startFilling</a> method is called to lock the pdf editing (only pdf viewing becomes available).</p>
-        <div class="header-gray">Example</div>
+        <p><b id="onRequestStartFilling" class="copy-link">onRequestStartFilling</b> - 当用户尝试通过单击 pdf 编辑模式下的 <em>开始填写</em> 按钮开始填写准备好的表单时调用的函数。
+        如果未声明事件，则不会显示此按钮。</p>
+        <p>当用户单击 <em>开始填写</em> 按钮时，将调用 <a href="<%= Url.Action("methods") %>#startFilling">startFilling</a> 方法来锁定 pdf 编辑（仅可查看 pdf）。</p>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestStartFilling = function () {
     docEditor.startFilling();
@@ -1199,10 +1199,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onSubmit" class="copy-link">onSubmit</b> - the function called when the force saving request of the <em>3</em> <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> is successfully performed,
-            i.e. when the <b>Complete & Submit</b> button is clicked and the form is submitted.
+            <b id="onSubmit" class="copy-link">onSubmit</b> - <em>3</em> <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> 的强制保存请求成功执行时调用的函数，
+            即点击<b>完成并提交</b>按钮并提交表单时调用的函数。
         </p>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onSubmit = function (event) {
     console.log("The form was submitted.");
