@@ -192,9 +192,11 @@ Defines the use of functionality only compatible with the OOXML format. For exam
 **Example**: false
 
 
-## customer*
+## customer
 
 Contains the information which will be displayed in the editor **About** section and visible to all the editor users.
+
+> This parameter is available for editing only for ONLYOFFICE Developer Edition.
 
 **Type**: object
 
@@ -304,9 +306,11 @@ Defines the parameters that the user can disable or customize if possible.
 }
 ```
 
-### features.roles*
+### features.roles
 
 Defines if the role settings will be disabled in the pdf forms or not. If the parameter is equal to **false**, then the role manager is hidden and viewing the form on behalf of a specific role is disabled. In this case, the **Manage Roles** and **View Form** buttons on the **Forms** tab and a drop-down list for setting the field role in the right panel will not be displayed. The default value is **true**.
+
+> This parameter is available for editing only for ONLYOFFICE Developer Edition.
 
 **Type**: boolean
 
@@ -491,9 +495,11 @@ Defines the mode of embedding editors into the web page. The **embed** value dis
 **Example**: "embed"
 
 
-## logo*
+## logo
 
 Changes the image file at the top left corner of the editor header. The recommended image height is 20 pixels.
+
+> This parameter is available for editing only for ONLYOFFICE Developer Edition.
 
 **Type**: object
 
@@ -831,9 +837,6 @@ Defines the document display zoom value measured in percent. Can take values lar
 
 
 ![Customization](/assets/images/editor/customization.png)
-
-
-\* *- available for editing only for ONLYOFFICE Developer Edition*
 
 
 ### Example

@@ -22,9 +22,11 @@ Specifies the data received from the **document editing service** using the [onM
 **Example**: ACTION\_DATA
 
 
-## callbackUrl*
+## callbackUrl
 
 Specifies absolute URL to the **document storage service** (which [must be implemented](../../Callback%20handler/index.md) by the software integrators who use ONLYOFFICE Docs on their own server).
+
+> This parameter is required.
 
 **Type**: string
 
@@ -291,9 +293,6 @@ The full name of the user. The length is limited to 128 symbols. Used since vers
 **Type**: string
 
 **Example**: "John Smith"
-
-
-\* *- required field*
 
 
 ### Example

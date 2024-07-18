@@ -1,23 +1,27 @@
 The document section allows to change all the parameters pertaining to the document (title, url, file type, etc.).
 
-## fileType*
+## fileType
 
 Defines the type of the file for the source viewed or edited document. Must be lowercase. The following file types are available: *.csv, .djvu, .doc, .docm, .docx, .docxf, .dot, .dotm, .dotx, .epub, .fb2, .fodp, .fods, .fodt, .htm, .html, .mht, .odp, .ods, .odt, .oform, .otp, .ots, .ott, .oxps, .pdf, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .rtf, .txt, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml, .xps*.
+
+> This parameter is required.
 
 **Type**: string
 
 **Example**: "docx"
 
 
-## key*
+## key
 
 Defines the unique document identifier used by the service to recognize the document. In case the known key is sent, the document will be taken from the cache. Every time the document is edited and saved, the key must be generated anew. The document url can be used as the **key** but without the special characters and the length is limited to 128 symbols.
+
+> The key characters can be used: **0-9**, **a-z**, **A-Z**, **-.\_=**. The maximal key length is **128** characters.
+
+> This parameter is required.
 
 **Type**: string
 
 **Example**: "Khirz6zTPdfd7"
-
-> The key characters can be used: **0-9**, **a-z**, **A-Z**, **-.\_=**. The maximal key length is **128** characters.
 
 
 ## referenceData
@@ -62,25 +66,26 @@ Defines the unique document identifier used by the service to take the data from
 **Example**: "Khirz6zTPdfd7"
 
 
-## title*
+## title
 
 Defines the desired file name for the viewed or edited document which will also be used as file name when the document is downloaded. The length is limited to 128 symbols.
+
+> This parameter is required.
 
 **Type**: string
 
 **Example**: "Example Document Title.docx"
 
 
-## url*
+## url
 
 Defines the absolute URL where the source viewed or edited document is stored. Be sure to add a [token](../../../Get%20Started/How%20It%20Works/Security/index.md) when using local links. Otherwise, an error will occur.
+
+> This parameter is required.
 
 **Type**: string
 
 **Example**: `https://example.com/url-to-example-document.docx`
-
-
-\* *- required field*
 
 
 ### Example

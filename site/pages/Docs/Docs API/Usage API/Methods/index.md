@@ -30,9 +30,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
 * [startFilling](#startfilling) - start filling out the ready forms and lock the pdf editing.
 
 
-## createConnector*
+## createConnector
 
 Create the [connector](../Automation%20API/index.mdr) to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
+
+> This parameter is available for editing only for ONLYOFFICE Developer Edition.
 
   ``` javascript
   docEditor.createConnector();
@@ -314,9 +316,11 @@ Insert recipient data for mail merge into the file. This method must be called a
   | token | Defines the encrypted signature added to the parameter in the form of a [token](../../Additional%20API/Signature/Browser/index.md#setmailmergerecipients). | string | optional |
   | url  | Defines the absolute URL where the source data is stored. Be sure to add a [token](../../Get%20Started/How%20It%20Works/Security/index.md) when using local links. Otherwise, an error will occur. | string | required |
 
-## setReferenceData*
+## setReferenceData
 
 Refresh data by a link to a file which is specified with the *referenceData*, *path*, or *link* parameters. This method must be called after the [onRequestReferenceData](../Config/Events/index.md#onrequestreferencedata) event.
+
+  > This parameter is available for editing only for ONLYOFFICE Developer Edition.
 
   > Please note that this method is executed only when the user has permissions to the file from which the data is taken.
 
@@ -392,9 +396,11 @@ Change a source of the external data. This method can be called after the [onReq
   | token | Defines the encrypted signature added to the parameter in the form of a [token](../../Additional%20API/Signature/Browser/index.md#setreferencesource). | string | optional |
   | url | Defines the URL address to download the current file. | string | required |
 
-## setRequestedDocument[\*\*](#requireddescr2)
+## setRequestedDocument
 
 Select a document for comparing or combining. This method must be called after the [onRequestSelectDocument](../Config/Events/index.md#onrequestselectdocument) event.
+
+> This parameter is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
 
   ``` javascript
   docEditor.setRequestedDocument({
@@ -436,9 +442,11 @@ Insert recipient data for mail merge into the file. This method must be called a
   | token  | Defines the encrypted signature added to the parameter in the form of a [token](../../Additional%20API/Signature/Browser/index.md#setrequestedspreadsheet).  | string | optional |
   | url  | Defines the absolute URL where the source data is stored. Be sure to add a [token](../../Get%20Started/How%20It%20Works/Security/index.md) when using local links. Otherwise, an error will occur. | string | required |
 
-## setRevisedFile[\*\*](#requireddescr2)
+## setRevisedFile
 
 Select a document for comparing. This method must be called after the [onRequestCompareFile](../Config/Events/index.md#onrequestcomparefile) events. Deprecated since version 7.5, please use [setRequestedDocument](#setrequesteddocument) instead.
+
+> This parameter is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
 
   ``` javascript
   docEditor.setRevisedFile({
@@ -542,7 +550,3 @@ Start filling out the ready forms and lock the pdf editing (only pdf viewing bec
   ``` javascript
   docEditor.startFilling();
   ```
-
-\* *- available for editing only for ONLYOFFICE Developer Edition*
-
-\*\* *- available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition*
