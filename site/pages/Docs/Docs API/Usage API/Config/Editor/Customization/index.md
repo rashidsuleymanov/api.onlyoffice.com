@@ -1,5 +1,6 @@
 The customization section allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details.
 
+* [about](#about)
 * [anonymous](#anonymous)
 * [autosave](#autosave)
 * [chat](#chat)
@@ -12,6 +13,7 @@ The customization section allows to customize the editor interface so that it lo
 * [customer](#customer)
 * [features](#features)
 * [feedback](#feedback)
+* [font](#font)
 * [forcesave](#forcesave)
 * [goback](#goback)
 * [help](#help)
@@ -19,6 +21,10 @@ The customization section allows to customize the editor interface so that it lo
 * [hideRightMenu](#hiderightmenu)
 * [hideRulers](#hiderulers)
 * [integrationMode](#integrationmode)
+* [layout](#layout)
+* [leftMenu](#leftmenu)
+* [loaderLogo](#loaderlogo)
+* [loaderName](#loadername)
 * [logo](#logo)
 * [macros](#macros)
 * [macrosMode](#macrosmode)
@@ -27,9 +33,12 @@ The customization section allows to customize the editor interface so that it lo
 * [plugins](#plugins)
 * [review](#review)
 * [reviewDisplay](#reviewdisplay)
+* [rightMenu](#rightmenu)
 * [showReviewChanges](#showreviewchanges)
 * [spellcheck](#spellcheck)
+* [statusBar](#statusbar)
 * [submitForm](#submitform)
+* [toolbar](#toolbar)
 * [toolbarHideFileName](#toolbarhidefilename)
 * [toolbarNoTabs](#toolbarnotabs)
 * [trackChanges](#trackchanges)
@@ -39,6 +48,17 @@ The customization section allows to customize the editor interface so that it lo
 
 
 > Please note that only the following parameters are available for the mobile editors: [close](#close), [feedback](#feedback), [goback](#goback), [help](#help), [logo](#logo), [macrosMode](#macrosmode), [mobileForceView](#mobileforceview).
+
+
+## about
+
+Defines if the **About** menu button is displayed or hidden. The default value is **true**.
+
+> This parameter is an extended white label option for Developer Edition.
+
+**Type**: boolean
+
+**Example**: true
 
 
 ## anonymous
@@ -301,7 +321,8 @@ Defines the parameters that the user can disable or customize if possible.
 {
     "roles": true,
     "spellcheck": {
-        "mode": true
+        "mode": true,
+        "change": true
     }
 }
 ```
@@ -333,6 +354,18 @@ Defines if the spell checker is automatically switched on or off when the editor
 **Type**: boolean
 
 **Example**: true
+
+
+### features.spellcheck.change
+
+Defines if the spell checker setting will be displayed or not. Spell checker setting is available in all editor types.
+
+> This parameter is an extended white label option for Developer Edition.
+
+**Type**: boolean
+
+**Example**: true
+
 
 > Please note that in case *spellcheck* setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.features.spellcheck* parameter.
 
@@ -368,6 +401,41 @@ Shows or hides the **Feedback & Support** menu button.
 **Type**: boolean
 
 **Example**: true
+
+
+## font
+
+Defines the font for the interface elements (buttons, tabs, etc.).
+
+> This parameter is an extended white label option for Developer Edition.
+
+**Type**:  object
+
+**Example**:
+
+``` json
+{
+    "name": "Arial",
+    "size": "11px"
+}
+```
+
+### font.name
+
+The font name.
+
+**Type**: string
+
+**Example**: "Arial"
+
+
+### font.size
+
+The font size.
+
+**Type**: string
+
+**Example**: "11px"
 
 
 ## forcesave
@@ -493,6 +561,458 @@ Defines the mode of embedding editors into the web page. The **embed** value dis
 **Type**: string
 
 **Example**: "embed"
+
+
+## layout
+
+Defines the parameters that the user can use to hide the interface elements but not to disable features completely (for example, if this functionality is available from other elements such as context menu, or via hotkeys).
+
+> This parameter is an extended white label option for Developer Edition.
+
+**Type**:  object
+
+**Example**:
+
+``` json
+{
+    "header": {
+        "editMode": true,
+        "save": true,
+        "users": true
+    },
+    "leftMenu": {
+        "mode": true,
+        "navigation": true,
+        "spellcheck": true
+    },
+    "rightMenu": {
+        "mode": true
+    },
+    "statusBar": {
+        "actionStatus": true,
+        "docLang": true,
+        "textLang": true
+    },
+    "toolbar": {
+        "collaboration": {
+            "mailmerge": true
+        },
+        "draw": true,
+        "file": {
+            "close": true,
+            "info": true,
+            "save": true,
+            "settings": true
+        },
+        "home": {},
+        "layout": true,
+        "plugins": true,
+        "protect": true,
+        "references": true,
+        "save": true,
+        "view": {
+            "navigation": true
+        }
+    }
+}
+```
+
+### layout.header
+
+Defines the editor header settings.
+
+**Type**: object
+
+**Example**:
+
+``` json
+{
+    "editMode": true,
+    "save": true,
+    "users": true
+}
+```
+
+
+### layout.header.editMode
+
+Defines if a button for switching editor modes will be displayed in the header or not. The default value is **true**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.header.save
+
+Defines if the **Save** button in the editor header is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](#compactheader) parameter is set to **false**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.header.users
+
+Defines if the button with the editing users is displayed or hidden. The default value is **true**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.leftMenu
+
+Defines the left menu settings. If this parameter is a boolean value, then it specifies whether the left menu will be displayed or hidden. The default value is **true**.
+
+**Type**: object or boolean
+
+**Example**:
+
+``` json
+{
+    "mode": true,
+    "navigation": true,
+    "spellcheck": true
+}
+```
+
+
+### layout.leftMenu.mode
+
+Defines the initial value of the left panel visibility - displayed or hidden. It is used for the **Left panel** menu option on the **View** tab. The default value is **true**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.leftMenu.navigation
+
+Defines if the **Navigation** button is displayed or hidden. The default value is **true**. This parameter will only be available for the document editor.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.leftMenu.spellcheck
+
+Defines if the **Spellcheck** button is displayed or hidden. The default value is **true**. This parameter will only be available for the spreadsheet editor.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.rightMenu
+
+Defines the right menu settings. If this parameter is a boolean value, then it specifies whether the right menu will be displayed or hidden. The default value is **true**.
+
+**Type**: object or boolean
+
+**Example**:
+
+``` json
+{
+    "mode": true
+}
+```
+
+
+### layout.rightMenu.mode
+
+Defines the initial value of the right panel visibility - displayed or hidden. It is used for the **Right panel** menu option on the **View** tab. The default value is **true**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.statusBar
+
+Defines the status bar settings. If this parameter is a boolean value, then it specifies whether the status bar will be displayed or hidden. The default value is **true**.
+
+**Type**: object or boolean
+
+**Example**:
+
+``` json
+{
+    "actionStatus": true,
+    "docLang": true,
+    "textLang": true
+}
+```
+
+
+### layout.statusBar.actionStatus
+
+Defines if an action status is displayed or hidden. The default value is **true**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.statusBar.docLang
+
+Defines if a button for choosing the document language is displayed or hidden. The default value is **true**. This parameter will only be available for the document editor and the presentation editor.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.statusBar.textLang
+
+Defines if a button for choosing the text language is displayed or hidden. The default value is **true**. This parameter will only be available for the document editor and the presentation editor.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.toolbar
+
+Defines the toolbar settings. If this parameter is a boolean value, then it specifies whether the toolbar will be displayed or hidden. The default value is **true**.
+
+**Type**: object or boolean
+
+**Example**:
+
+``` json
+{
+    "collaboration": {
+        "mailmerge": true
+    },
+    "draw": true,
+    "file": {
+        "close": true,
+        "info": true,
+        "save": true,
+        "settings": true
+    },
+    "home": {},
+    "layout": true,
+    "plugins": true,
+    "protect": true,
+    "references": true,
+    "save": true,
+    "view": {
+        "navigation": true
+    }
+}
+```
+
+
+### layout.toolbar.collaboration
+
+Defines the **Collaboration** tab settings. If this parameter is a boolean value, then it specifies whether the **Collaboration** tab will be displayed or hidden. The default value is **true**.
+
+**Type**: object or boolean
+
+**Example**:
+
+``` json
+{
+    "mailmerge": true
+}
+```
+
+
+### layout.toolbar.collaboration.mailmerge
+
+Defines if the button for choosing the mail merge base is displayed or hidden. The default value is **true**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.toolbar.draw
+
+Defines if the **Draw** tab is displayed or hidden. The default value is **true**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.toolbar.file
+
+Defines the **File** tab settings. If this parameter is a boolean value, then it specifies whether the **File** tab will be displayed or hidden. The default value is **true**.
+
+**Type**: object or boolean
+
+**Example**:
+
+``` json
+{
+    "close": true,
+    "info": true,
+    "save": true,
+    "settings": true
+}
+```
+
+
+### layout.toolbar.file.close
+
+Defines if the **Close menu** option is displayed or hidden. The default value is **true**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.toolbar.file.info
+
+Defines if the **Document info** option is displayed or hidden. The default value is **true**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.toolbar.file.save
+
+Defines if the **Save** option is displayed or hidden. The default value is **true**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.toolbar.file.settings
+
+Defines if the **Advanced settings** option is displayed or hidden. The default value is **true**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.toolbar.home
+
+Defines the **Home** tab settings. This tab cannot be hidden.
+
+**Type**: object
+
+**Example**: {}
+
+
+### layout.toolbar.home.mailmerge
+
+Defines if the button for choosing the mail merge base is displayed or hidden. This parameter is deprecated, please use the *toolbar.collaboration.mailmerge* parameter instead.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.toolbar.layout
+
+Defines if the **Layout** tab is displayed or hidden. This parameter will only be available for the document editor and the spreadsheet editor. The default value is **true**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.toolbar.plugins
+
+Defines if the **Plugins** tab is displayed or hidden. The default value is **true**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.toolbar.protect
+
+Defines if the **Protection** tab is displayed or hidden. The default value is **true**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.toolbar.references
+
+Defines if the **References** tab is displayed or hidden. This parameter will only be available for the document editor. The default value is **true**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.toolbar.save
+
+Defines if the **Save** button on the toolbar is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](#compactheader) parameter is set to **true**.
+
+**Type**: boolean
+
+**Example**: true
+
+
+### layout.toolbar.view
+
+Defines the **View** tab settings. If this parameter is a boolean value, then it specifies whether the **View** tab will be displayed or hidden. The default value is **true**.
+
+**Type**: object or boolean
+
+**Example**:
+
+``` json
+{
+    "navigation": true
+}
+```
+
+
+### layout.toolbar.view.navigation
+
+Defines if the **Navigation** button is displayed or hidden. The default value is **true**. This parameter will only be available for the document editor.
+
+**Type**: boolean
+
+**Example**: true
+
+
+## leftMenu
+
+Defines if the left menu panel is displayed or hidden. The default value is **true**.
+
+> This parameter is an extended white label option for Developer Edition.
+
+> Deprecated since version 7.1. Please use the [layout.leftMenu](#layoutleftmenu) parameter instead.
+
+**Type**: boolean
+
+**Example**: true
+
+
+## loaderLogo
+
+Defines the path to the image logo which will be displayed while the document is being loaded (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background). The image will be proportionally resized to the height of 160 pixels when displayed in the editors.
+
+> This parameter is an extended white label option for Developer Edition.
+
+**Type**: string
+
+**Example**: `https://example.com/loader-logo.png`
+
+
+## loaderName
+
+Defines the text which will be displayed while the document is being loaded.
+
+> This parameter is an extended white label option for Developer Edition.
+
+**Type**: string
+
+**Example**: "The document is loading, please wait..."
 
 
 ## logo
@@ -720,6 +1240,19 @@ The default value is **original** for viewer and **markup** for editor.
 > Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.reviewDisplay* parameter.
 
 
+## rightMenu
+
+Defines if the right menu panel is displayed or hidden. The default value is **true**.
+
+> This parameter is an extended white label option for Developer Edition.
+
+> Deprecated since version 7.1. Please use the [layout.rightMenu](#layoutrightmenu) parameter instead.
+
+**Type**: boolean
+
+**Example**: true
+
+
 ## showReviewChanges
 
 Defines if the review changes panel is automatically displayed or hidden when the editor is loaded. The default value is **false**.
@@ -744,6 +1277,19 @@ Defines if the spell checker is automatically switched on or off when the editor
 > Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.spellcheck* parameter.
 
 
+## statusBar
+
+Defines if the status bar is displayed or hidden. The default value is **true**.
+
+> This parameter is an extended white label option for Developer Edition.
+
+> Deprecated since version 7.1. Please use the [layout.statusBar](#layoutstatusbar) parameter instead.
+
+**Type**: boolean
+
+**Example**: true
+
+
 ## submitForm
 
 Defines if the **Complete & Submit** button is displayed or hidden on the top toolbar. Button will only be available for the *pdf* format. The default value is **false**.
@@ -753,6 +1299,19 @@ Defines if the **Complete & Submit** button is displayed or hidden on the top to
 **Example**: true
 
 ![Submit button](/assets/images/editor/submitForm.png)
+
+
+## toolbar
+
+Defines if the top toolbar is displayed or hidden. The default value is **true**.
+
+> This parameter is an extended white label option for Developer Edition.
+
+> Deprecated since version 7.1. Please use the [layout.toolbar](#layouttoolbar) parameter instead.
+
+**Type**: boolean
+
+**Example**: true
 
 
 ## toolbarHideFileName
@@ -845,6 +1404,7 @@ Defines the document display zoom value measured in percent. Can take values lar
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "customization": {
+            "about": true,
             "anonymous": {
                 "request": true,
                 "label": "Guest"
@@ -871,12 +1431,17 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "features": {
                 "roles": true,
                 "spellcheck": {
-                    "mode": true
+                    "mode": true,
+                    "change": true
                 }
             },
             "feedback": {
                 "url": "https://example.com",
                 "visible": true
+            },
+            "font": {
+                "name": "Arial",
+                "size": "11px"
             },
             "forcesave": false,
             "goback": {
@@ -889,6 +1454,49 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "hideRightMenu": true,
             "hideRulers": false,
             "integrationMode": "embed",
+            "layout": {
+                "header": {
+                    "editMode": true,
+                    "save": true,
+                    "users": true
+                },
+                "leftMenu": {
+                    "mode": true,
+                    "navigation": true,
+                    "spellcheck": true
+                },
+                "rightMenu": {
+                    "mode": true
+                },
+                "statusBar": {
+                    "actionStatus": true,
+                    "docLang": true,
+                    "textLang": true
+                },
+                "toolbar": {
+                    "collaboration": {
+                        "mailmerge": true
+                    },
+                    "draw": true,
+                    "file": {
+                        "close": true,
+                        "info": true,
+                        "save": true,
+                        "settings": true
+                    },
+                    "home": {},
+                    "layout": true,
+                    "plugins": true,
+                    "protect": true,
+                    "references": true,
+                    "save": true,
+                    "view": {
+                        "navigation": true
+                    }
+                }
+            },
+            "loaderLogo": "https://example.com/loader-logo.png",
+            "loaderName": "The document is loading, please wait...",
             "logo": {
                 "image": "https://example.com/logo.png",
                 "imageDark": "https://example.com/dark-logo.png",
@@ -913,10 +1521,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "uiTheme": "theme-dark",
             "unit": "cm",
             "zoom": 100
-        }
-        ,
+        },
     },
-
 });
 ```
 

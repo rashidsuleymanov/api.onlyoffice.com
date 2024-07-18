@@ -83,6 +83,7 @@ config = {
         },
         "createUrl": "https://example.com/url-to-create-document/",
         "customization": {
+            "about": true,
             "anonymous": {
                 "request": true,
                 "label": "Guest"
@@ -109,12 +110,17 @@ config = {
             "features": {
                 "roles": true,
                 "spellcheck": {
-                    "mode": true
+                    "mode": true,
+                    "change": true
                 }
             },
             "feedback": {
                 "url": "https://example.com",
                 "visible": true
+            },
+            "font": {
+                "name": "Arial",
+                "size": "11px"
             },
             "forcesave": false,
             "goback": {
@@ -127,6 +133,49 @@ config = {
             "hideRightMenu": true,
             "hideRulers": false,
             "integrationMode": "embed",
+            "layout": {
+                "header": {
+                    "editMode": true,
+                    "save": true,
+                    "users": true
+                },
+                "leftMenu": {
+                    "mode": true,
+                    "navigation": true,
+                    "spellcheck": true
+                },
+                "rightMenu": {
+                    "mode": true
+                },
+                "statusBar": {
+                    "actionStatus": true,
+                    "docLang": true,
+                    "textLang": true
+                },
+                "toolbar": {
+                    "collaboration": {
+                        "mailmerge": true
+                    },
+                    "draw": true,
+                    "file": {
+                        "close": true,
+                        "info": true,
+                        "save": true,
+                        "settings": true
+                    },
+                    "home": {},
+                    "layout": true,
+                    "plugins": true,
+                    "protect": true,
+                    "references": true,
+                    "save": true,
+                    "view": {
+                        "navigation": true
+                    }
+                }
+            },
+            "loaderLogo": "https://example.com/loader-logo.png",
+            "loaderName": "The document is loading, please wait...",
             "logo": {
                 "image": "https://example.com/logo.png",
                 "imageDark": "https://example.com/dark-logo.png",
