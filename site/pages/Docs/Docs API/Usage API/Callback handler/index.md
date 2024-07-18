@@ -56,12 +56,12 @@ The type is present when the *status* value is equal to **6** or **7** only.
 
 Defines the URL to the JSON file with the submitted form data. The array structure with the form data is described [here](/docbuilder/global#FormData). This file contains the following parameters:
 
-| Parameter | Description               | Type   | Example |
-| --------- | ------------------------- | ------ | -------- |
-| key   | The form key. If the current form is a radio button, then this field contains the form group key. | string | "Text1" |
-| tag   | The form tag. | string | "" |
-| value   | The current form value. | string | "inner text" |
-| type   | The form type (**text**, **checkBox**, **picture**, **comboBox**, **dropDownList**, **dateTime**, **radio**). | string | "text" |
+| Parameter | Description                                                                                                   | Type   | Example      |
+| --------- | ------------------------------------------------------------------------------------------------------------- | ------ | ------------ |
+| key       | The form key. If the current form is a radio button, then this field contains the form group key.             | string | "Text1"      |
+| tag       | The form tag.                                                                                                 | string | ""           |
+| value     | The current form value.                                                                                       | string | "inner text" |
+| type      | The form type (**text**, **checkBox**, **picture**, **comboBox**, **dropDownList**, **dateTime**, **radio**). | string | "text"       |
 
 The object is present when the *status* value is equal to *6* and the *forcesavetype* value is equal to *3*.
 

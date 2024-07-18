@@ -38,14 +38,14 @@ The function called to add an item to the context menu.
 
   ### ContextMenuItem
 
-  | Name     | Description                                                                    | Type                     |
-  | -------- | ------------------------------------------------------------------------------ | ------------------------ |
-  | id       | The item ID.                                                                   | string                   |
-  | text     | The item text.                                                                 | string                   |
-  | data     | The item data (this data will be sent to the click event callback).            | string                   |
-  | disabled | Specifies if the current item is disabled or not.                              | boolean                  |
+  | Name     | Description                                                                                                                | Type                     |
+  | -------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+  | id       | The item ID.                                                                                                               | string                   |
+  | text     | The item text.                                                                                                             | string                   |
+  | data     | The item data (this data will be sent to the click event callback).                                                        | string                   |
+  | disabled | Specifies if the current item is disabled or not.                                                                          | boolean                  |
   | icons    | The item icons (see the plugins [config](../../../Plugin%20and%20Macros/Usage%20API/Config/index.md#icons) documentation). | string                   |
-  | items    | An array containing the context menu items for the current item.               | array of ContextMenuItem |
+  | items    | An array containing the context menu items for the current item.                                                           | array of ContextMenuItem |
 
   ### Example
 
@@ -87,20 +87,20 @@ The function called to add an item to the toolbar menu.
 
   ### ToolbarMenuItem
 
-  | Name           | Description       | Type    |
-  | -------------- | ----------------- | ------- |
-  | id             | The item ID.      | string  |
-  | type           | The possible values of the base which the relative vertical position of the toolbar menu item will be calculated from. | [ToolbarMenuItemType](/plugin/global#ToolbarMenuItemType) |
-  | text           | The item text. | string   |
-  | hint           | The item hint.  | string  |
-  | icons          | The item icons (see the plugins [config](../../../Plugin%20and%20Macros/Usage%20API/Config/index.md#icons) documentation).  | string  |
-  | disabled       | Specifies if the current item is disabled or not. | boolean  |
-  | enableToggle   | Specifies if an item toggle is enabled or not. | boolean  |
-  | lockInViewMode | Specifies if the current item is locked in the view mode or not.  | boolean  |
-  | separator      | Specifies if a separator is used between the toolbar menu items or not. | boolean  |
-  | split          | Specifies if the toolbar menu items are split or not.  | boolean |
-  | onClick        | The click event callback.  | function  |
-  | items          | An array containing the [context menu items](#contextmenuitem) for the current item.  | array of ContextMenuItem  |
+  | Name           | Description                                                                                                                | Type                                                      |
+  | -------------- | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+  | id             | The item ID.                                                                                                               | string                                                    |
+  | type           | The possible values of the base which the relative vertical position of the toolbar menu item will be calculated from.     | [ToolbarMenuItemType](/plugin/global#ToolbarMenuItemType) |
+  | text           | The item text.                                                                                                             | string                                                    |
+  | hint           | The item hint.                                                                                                             | string                                                    |
+  | icons          | The item icons (see the plugins [config](../../../Plugin%20and%20Macros/Usage%20API/Config/index.md#icons) documentation). | string                                                    |
+  | disabled       | Specifies if the current item is disabled or not.                                                                          | boolean                                                   |
+  | enableToggle   | Specifies if an item toggle is enabled or not.                                                                             | boolean                                                   |
+  | lockInViewMode | Specifies if the current item is locked in the view mode or not.                                                           | boolean                                                   |
+  | separator      | Specifies if a separator is used between the toolbar menu items or not.                                                    | boolean                                                   |
+  | split          | Specifies if the toolbar menu items are split or not.                                                                      | boolean                                                   |
+  | onClick        | The click event callback.                                                                                                  | function                                                  |
+  | items          | An array containing the [context menu items](#contextmenuitem) for the current item.                                       | array of ContextMenuItem                                  |
 
   ### Example
 
@@ -177,11 +177,11 @@ The function called to send the data back to the editor. It allows the connector
 
   ### Parameters
 
-  | Name     | Description | Type     |
-  | -------- | ----------- | -------- |
-  | command  | Defines the command written in JavaScript which purpose is to form structured data which can be inserted into the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors. The command must be compatible with [Office JavaScript API](../../../Office%20API/Get%20Started/Overview/index.md) syntax.   | function |
-  | callback | The result that the method returns. It is an optional parameter.  | function |
-  | isNoCalc | Defines whether the document will be recalculated or not. The **true** value is used to recalculate the document after executing the function in the *command* parameter. The **false** value will not recalculate the document (use it only when your edits surely will not require document recalculation). The default value is **false**. | boolean  |
+  | Name     | Description                                                                                                                                                                                                                                                                                                                                                                      | Type     |
+  | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+  | command  | Defines the command written in JavaScript which purpose is to form structured data which can be inserted into the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors. The command must be compatible with [Office JavaScript API](../../../Office%20API/Get%20Started/Overview/index.md) syntax. | function |
+  | callback | The result that the method returns. It is an optional parameter.                                                                                                                                                                                                                                                                                                                 | function |
+  | isNoCalc | Defines whether the document will be recalculated or not. The **true** value is used to recalculate the document after executing the function in the *command* parameter. The **false** value will not recalculate the document (use it only when your edits surely will not require document recalculation). The default value is **false**.                                    | boolean  |
 
   This method is executed in its context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use [Asc.scope](/plugin/scope) object.
 
@@ -262,20 +262,20 @@ The function called to update an item in the context menu with the specified ite
 
   ### Parameters
 
-  | Name  | Description                                           | Type                                                 |
-  | ----- | ----------------------------------------------------- | ---------------------------------------------------- |
+  | Name  | Description                                           | Type                                         |
+  | ----- | ----------------------------------------------------- | -------------------------------------------- |
   | items | An array containing the context menu item parameters. | array of [ContextMenuItem](#contextmenuitem) |
 
   ### ContextMenuItem
 
-  | Name     | Description                                                                    | Type                     |
-  | -------- | ------------------------------------------------------------------------------ | ------------------------ |
-  | id       | The item ID.                                                                   | string                   |
-  | text     | The item text.                                                                 | string                   |
-  | data     | The item data (this data will be sent to the click event callback).            | string                   |
-  | disabled | Specifies if the current item is disabled or not.                              | boolean                  |
+  | Name     | Description                                                                                                                | Type                     |
+  | -------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+  | id       | The item ID.                                                                                                               | string                   |
+  | text     | The item text.                                                                                                             | string                   |
+  | data     | The item data (this data will be sent to the click event callback).                                                        | string                   |
+  | disabled | Specifies if the current item is disabled or not.                                                                          | boolean                  |
   | icons    | The item icons (see the plugins [config](../../../Plugin%20and%20Macros/Usage%20API/Config/index.md#icons) documentation). | string                   |
-  | items    | An array containing the context menu items for the current item.               | array of ContextMenuItem |
+  | items    | An array containing the context menu items for the current item.                                                           | array of ContextMenuItem |
 
   ### Example
 
