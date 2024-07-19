@@ -77,17 +77,17 @@
                 </td>
             </tr>
             <tr>
-                <th>Editing forms</th>
+                <th>编辑表单</th>
                 <td>
-                    <div><a title="Open PDF form file for editing" href="<%= Url.Action("editor") %>?method=pdfEditor" class="button button-upper doc" target="_blank">PDF</a><a title="View source code" class="button-popap-try" data-code="pdfEditorCode"></a></div>
+                    <div><a title="打开 PDF 表单文件进行编辑" href="<%= Url.Action("editor") %>?method=pdfEditor" class="button button-upper doc" target="_blank">PDF</a><a title="查看源代码" class="button-popap-try" data-code="pdfEditorCode"></a></div>
                 </td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
-                <th>Filling in forms</th>
+                <th>填写表单</th>
                 <td>
-                    <div><a title="Open PDF file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="_blank">PDF</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode"></a></div>
+                    <div><a title="打开 PDF 文件以填写表单" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="_blank">PDF</a><a title="查看源代码" class="button-popap-try" data-code="fillFormsCode"></a></div>
                 </td>
                 <td></td>
                 <td></td>
