@@ -137,7 +137,7 @@ Specifies if the WOPI client will notify the WOPI server in case the user tries 
 
 ## PostMessageOrigin
 
-A domain that the WOPI client must use as the [targetOrigin](../../PostMessage/index.md#parameters) parameter when sending messages as described in [\[W3C-HTML5WEBMSG\]](https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages).
+A domain that the WOPI client must use as the [targetOrigin](../../PostMessage/index.md#targetorigin) parameter when sending messages as described in [\[W3C-HTML5WEBMSG\]](https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages).
 
 **Type**: string
 
