@@ -154,6 +154,7 @@
                             },
                         IntegrationMode = "embed",
                 },
+                Mode = "edit",
                 Lang = "zh"
             },
         Height = "550px",
