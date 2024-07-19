@@ -33,29 +33,29 @@
         <tbody>
             <tr>
                 <th>编辑</th>
-                <td><a title="打开 DOCX 文件进行编辑" href="<%= Url.Action("editor") %>?method=docxEditor" class="button button-upper doc" target="blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxEditorCode"></a>
+                <td><a title="打开 DOCX 文件进行编辑" href="<%= Url.Action("editor") %>?method=docxEditor" class="button button-upper doc" target="_blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxEditorCode"></a>
                     <br />
-                    <a title="打开 DOC 文件进行编辑" href="<%= Url.Action("editor") %>?method=docEditor" class="button button-upper doc" target="blank">DOC</a><a title="查看源代码" class="button-popap-try" data-code="docEditorCode"></a>
+                    <a title="打开 DOC 文件进行编辑" href="<%= Url.Action("editor") %>?method=docEditor" class="button button-upper doc" target="_blank">DOC</a><a title="查看源代码" class="button-popap-try" data-code="docEditorCode"></a>
                     <br />
-                    <a title="打开 ODT 文件进行编辑" href="<%= Url.Action("editor") %>?method=odtEditor" class="button button-upper doc" target="blank">ODT</a><a title="查看源代码" class="button-popap-try" data-code="odtEditorCode"></a>
+                    <a title="打开 ODT 文件进行编辑" href="<%= Url.Action("editor") %>?method=odtEditor" class="button button-upper doc" target="_blank">ODT</a><a title="查看源代码" class="button-popap-try" data-code="odtEditorCode"></a>
                     <br />
-                    <a title="打开 TXT 文件进行编辑" href="<%= Url.Action("editor") %>?method=txtEditor" class="button button-upper doc" target="blank">TXT</a><a title="查看源代码" class="button-popap-try" data-code="txtEditorCode"></a>
+                    <a title="打开 TXT 文件进行编辑" href="<%= Url.Action("editor") %>?method=txtEditor" class="button button-upper doc" target="_blank">TXT</a><a title="查看源代码" class="button-popap-try" data-code="txtEditorCode"></a>
                 </td>
-                <td><a title="打开 XLSX 文件进行编辑" href="<%= Url.Action("editor") %>?method=xlsxEditor" class="button button-upper spread" target="blank">XLSX</a><a title="查看源代码" class="button-popap-try" data-code="xlsxEditorCode"></a>
+                <td><a title="打开 XLSX 文件进行编辑" href="<%= Url.Action("editor") %>?method=xlsxEditor" class="button button-upper spread" target="_blank">XLSX</a><a title="查看源代码" class="button-popap-try" data-code="xlsxEditorCode"></a>
                     <br />
-                    <a title="打开 XLS 文件进行编辑" href="<%= Url.Action("editor") %>?method=xlsEditor" class="button button-upper spread" target="blank">XLS</a><a title="查看源代码" class="button-popap-try" data-code="xlsEditorCode"></a>
+                    <a title="打开 XLS 文件进行编辑" href="<%= Url.Action("editor") %>?method=xlsEditor" class="button button-upper spread" target="_blank">XLS</a><a title="查看源代码" class="button-popap-try" data-code="xlsEditorCode"></a>
                     <br />
-                    <a title="打开 ODS 文件进行编辑" href="<%= Url.Action("editor") %>?method=odsEditor" class="button button-upper spread" target="blank">ODS</a><a title="查看源代码" class="button-popap-try" data-code="odsEditorCode"></a>
+                    <a title="打开 ODS 文件进行编辑" href="<%= Url.Action("editor") %>?method=odsEditor" class="button button-upper spread" target="_blank">ODS</a><a title="查看源代码" class="button-popap-try" data-code="odsEditorCode"></a>
                     <br />
-                    <a title="打开 CSV 文件进行编辑" href="<%= Url.Action("editor") %>?method=csvEditor" class="button button-upper spread" target="blank">CSV</a><a title="查看源代码" class="button-popap-try" data-code="csvEditorCode"></a>
+                    <a title="打开 CSV 文件进行编辑" href="<%= Url.Action("editor") %>?method=csvEditor" class="button button-upper spread" target="_blank">CSV</a><a title="查看源代码" class="button-popap-try" data-code="csvEditorCode"></a>
                 </td>
-                <td><a title="打开 PPTX 文件进行编辑" href="<%= Url.Action("editor") %>?method=pptxEditor" class="button button-upper present" target="blank">PPTX</a><a title="查看源代码" class="button-popap-try" data-code="pptxEditorCode"></a>
+                <td><a title="打开 PPTX 文件进行编辑" href="<%= Url.Action("editor") %>?method=pptxEditor" class="button button-upper present" target="_blank">PPTX</a><a title="查看源代码" class="button-popap-try" data-code="pptxEditorCode"></a>
                     <br />
-                    <a title="打开 PPT 文件进行编辑" href="<%= Url.Action("editor") %>?method=pptEditor" class="button button-upper present" target="blank">PPT</a><a title="查看源代码" class="button-popap-try" data-code="pptEditorCode"></a>
+                    <a title="打开 PPT 文件进行编辑" href="<%= Url.Action("editor") %>?method=pptEditor" class="button button-upper present" target="_blank">PPT</a><a title="查看源代码" class="button-popap-try" data-code="pptEditorCode"></a>
                     <br />
-                    <a title="打开 PPSX 文件进行编辑" href="<%= Url.Action("editor") %>?method=ppsxEditor" class="button button-upper present" target="blank">PPSX</a><a title="View source code" class="button-popap-try" data-code="ppsxEditorCode"></a>
+                    <a title="打开 PPSX 文件进行编辑" href="<%= Url.Action("editor") %>?method=ppsxEditor" class="button button-upper present" target="_blank">PPSX</a><a title="View source code" class="button-popap-try" data-code="ppsxEditorCode"></a>
                     <br />
-                    <a title="打开 ODP 文件进行编辑" href="<%= Url.Action("editor") %>?method=odpEditor" class="button button-upper present" target="blank">ODP</a><a title="查看源代码" class="button-popap-try" data-code="odpEditorCode"></a>
+                    <a title="打开 ODP 文件进行编辑" href="<%= Url.Action("editor") %>?method=odpEditor" class="button button-upper present" target="_blank">ODP</a><a title="查看源代码" class="button-popap-try" data-code="odpEditorCode"></a>
                 </td>
             </tr>
             <tr>
@@ -79,7 +79,7 @@
             <tr>
                 <th>Editing forms</th>
                 <td>
-                    <div><a title="Open PDF form file for editing" href="<%= Url.Action("editor") %>?method=pdfEditor" class="button button-upper doc" target="blank">PDF</a><a title="View source code" class="button-popap-try" data-code="pdfEditorCode"></a></div>
+                    <div><a title="Open PDF form file for editing" href="<%= Url.Action("editor") %>?method=pdfEditor" class="button button-upper doc" target="_blank">PDF</a><a title="View source code" class="button-popap-try" data-code="pdfEditorCode"></a></div>
                 </td>
                 <td></td>
                 <td></td>
@@ -87,7 +87,7 @@
             <tr>
                 <th>Filling in forms</th>
                 <td>
-                    <div><a title="Open PDF file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="blank">PDF</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode"></a></div>
+                    <div><a title="Open PDF file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="_blank">PDF</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode"></a></div>
                 </td>
                 <td></td>
                 <td></td>
@@ -102,95 +102,95 @@
             </tr>
             <tr>
                 <th>审阅</th>
-                <td><a title="打开 DOCX 文件进行" href="<%= Url.Action("editor") %>?method=docxReview" class="button button-upper doc" target="blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxReviewCode"></a>
+                <td><a title="打开 DOCX 文件进行" href="<%= Url.Action("editor") %>?method=docxReview" class="button button-upper doc" target="_blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxReviewCode"></a>
                 </td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <th>受限审阅</th>
-                <td><a title="打开 DOCX 文件进行受限审阅" href="<%= Url.Action("editor") %>?method=docxReviewGroups" class="button button-upper doc" target="blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxReviewGroupsCode"></a>
+                <td><a title="打开 DOCX 文件进行受限审阅" href="<%= Url.Action("editor") %>?method=docxReviewGroups" class="button button-upper doc" target="_blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxReviewGroupsCode"></a>
                 </td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <th>内容控制<br /> 设置限制</th>
-                <td><a title="打开 DOCX 文件而不访问内容控件的设置" href="<%= Url.Action("editor") %>?method=modifyContentControl" class="button button-upper doc" target="blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="modifyContentControl"></a>
+                <td><a title="打开 DOCX 文件而不访问内容控件的设置" href="<%= Url.Action("editor") %>?method=modifyContentControl" class="button button-upper doc" target="_blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="modifyContentControl"></a>
                 </td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <th>评论</th>
-                <td><a title="打开 DOCX 文件进行评论" href="<%= Url.Action("editor") %>?method=docxComment" class="button button-upper doc" target="blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxCommentCode"></a>
+                <td><a title="打开 DOCX 文件进行评论" href="<%= Url.Action("editor") %>?method=docxComment" class="button button-upper doc" target="_blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxCommentCode"></a>
                 </td>
-                <td><a title="打开 XLSX 文件进行评论" href="<%= Url.Action("editor") %>?method=xlsxComment" class="button button-upper spread" target="blank">XLSX</a><a title="查看源代码" class="button-popap-try" data-code="xlsxCommentCode"></a>
+                <td><a title="打开 XLSX 文件进行评论" href="<%= Url.Action("editor") %>?method=xlsxComment" class="button button-upper spread" target="_blank">XLSX</a><a title="查看源代码" class="button-popap-try" data-code="xlsxCommentCode"></a>
                 </td>
-                <td><a title="打开 PPTX 文件进行评论" href="<%= Url.Action("editor") %>?method=pptxComment" class="button button-upper present" target="blank">PPTX</a><a title="查看源代码" class="button-popap-try" data-code="pptxCommentCode"></a>
+                <td><a title="打开 PPTX 文件进行评论" href="<%= Url.Action("editor") %>?method=pptxComment" class="button button-upper present" target="_blank">PPTX</a><a title="查看源代码" class="button-popap-try" data-code="pptxCommentCode"></a>
                 </td>
             </tr>
             <tr>
                 <th>受限评论</th>
-                <td><a title="打开 DOCX 文件进行受限评论" href="<%= Url.Action("editor") %>?method=docxCommentGroups" class="button button-upper doc" target="blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxCommentGroupsCode"></a>
+                <td><a title="打开 DOCX 文件进行受限评论" href="<%= Url.Action("editor") %>?method=docxCommentGroups" class="button button-upper doc" target="_blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxCommentGroupsCode"></a>
                 </td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <th>查看</th>
-                <td><a title="打开 DOCX 文件进行查看" href="<%= Url.Action("editor") %>?method=docxViewer" class="button button-upper doc" target="blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxViewerCode"></a>
+                <td><a title="打开 DOCX 文件进行查看" href="<%= Url.Action("editor") %>?method=docxViewer" class="button button-upper doc" target="_blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxViewerCode"></a>
                     <br />
-                    <a title="打开 PDF 文件进行查看" href="<%= Url.Action("editor") %>?method=pdfViewer" class="button button-upper doc" target="blank">PDF</a><a title="查看源代码" class="button-popap-try" data-code="pdfViewerCode"></a>
+                    <a title="打开 PDF 文件进行查看" href="<%= Url.Action("editor") %>?method=pdfViewer" class="button button-upper doc" target="_blank">PDF</a><a title="查看源代码" class="button-popap-try" data-code="pdfViewerCode"></a>
                 </td>
-                <td><a title="打开 XLSX 文件进行查看" href="<%= Url.Action("editor") %>?method=xlsxViewer" class="button button-upper spread" target="blank">XLSX</a><a title="查看源代码" class="button-popap-try" data-code="xlsxViewerCode"></a>
+                <td><a title="打开 XLSX 文件进行查看" href="<%= Url.Action("editor") %>?method=xlsxViewer" class="button button-upper spread" target="_blank">XLSX</a><a title="查看源代码" class="button-popap-try" data-code="xlsxViewerCode"></a>
                 </td>
-                <td><a title="打开 PPTX 文件进行查看" href="<%= Url.Action("editor") %>?method=pptxViewer" class="button button-upper present" target="blank">PPTX</a><a title="查看源代码" class="button-popap-try" data-code="pptxViewerCode"></a>
+                <td><a title="打开 PPTX 文件进行查看" href="<%= Url.Action("editor") %>?method=pptxViewer" class="button button-upper present" target="_blank">PPTX</a><a title="查看源代码" class="button-popap-try" data-code="pptxViewerCode"></a>
                 </td>
             </tr>
             <tr>
                 <th>品牌重塑</th>
-                <td><a title="打开包含品牌重塑的 DOCX 文件" href="<%= Url.Action("editor") %>?method=rebrandingDocxEditor" class="button button-upper doc" target="blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="rebrandingDocxEditorCode"></a>
+                <td><a title="打开包含品牌重塑的 DOCX 文件" href="<%= Url.Action("editor") %>?method=rebrandingDocxEditor" class="button button-upper doc" target="_blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="rebrandingDocxEditorCode"></a>
                 </td>
-                <td><a title="打开包含品牌重塑的 DOCX 文件" href="<%= Url.Action("editor") %>?method=rebrandingXlsxEditor" class="button button-upper spread" target="blank">XLSX</a><a title="查看源代码" class="button-popap-try" data-code="rebrandingXlsxEditorCode"></a>
+                <td><a title="打开包含品牌重塑的 DOCX 文件" href="<%= Url.Action("editor") %>?method=rebrandingXlsxEditor" class="button button-upper spread" target="_blank">XLSX</a><a title="查看源代码" class="button-popap-try" data-code="rebrandingXlsxEditorCode"></a>
                 </td>
-                <td><a title="打开包含品牌重塑的 PPTX 文件" href="<%= Url.Action("editor") %>?method=rebrandingPptxEditor" class="button button-upper present" target="blank">PPTX</a><a title="查看源代码" class="button-popap-try" data-code="rebrandingPptxEditorCode"></a>
+                <td><a title="打开包含品牌重塑的 PPTX 文件" href="<%= Url.Action("editor") %>?method=rebrandingPptxEditor" class="button button-upper present" target="_blank">PPTX</a><a title="查看源代码" class="button-popap-try" data-code="rebrandingPptxEditorCode"></a>
                 </td>
             </tr>
 <%--            <tr>
                 <th>在移动设备上编辑</th>
                 <td>
-                    <div><a title="打开 DOCX 文件以在移动设备上进行编辑" href="<%= Url.Action("editor") %>?method=docxEditorMobile" class="button button-upper doc" target="blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxEditorMobileCode"></a></div>
+                    <div><a title="打开 DOCX 文件以在移动设备上进行编辑" href="<%= Url.Action("editor") %>?method=docxEditorMobile" class="button button-upper doc" target="_blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxEditorMobileCode"></a></div>
                 </td>
                 <td>
-                    <div><a title="打开 XLSX 文件以在移动设备上进行编辑" href="<%= Url.Action("editor") %>?method=xlsxEditorMobile" class="button button-upper spread" target="blank">XLSX</a><a title="查看源代码" class="button-popap-try" data-code="xlsxEditorMobileCode"></a></div>
+                    <div><a title="打开 XLSX 文件以在移动设备上进行编辑" href="<%= Url.Action("editor") %>?method=xlsxEditorMobile" class="button button-upper spread" target="_blank">XLSX</a><a title="查看源代码" class="button-popap-try" data-code="xlsxEditorMobileCode"></a></div>
                 </td>
                 <td>
-                    <div><a title="打开 PPTX 文件以在移动设备上进行编辑" href="<%= Url.Action("editor") %>?method=pptxEditorMobile" class="button button-upper present" target="blank">PPTX</a><a title="查看源代码" class="button-popap-try" data-code="pptxEditorMobileCode"></a></div>
+                    <div><a title="打开 PPTX 文件以在移动设备上进行编辑" href="<%= Url.Action("editor") %>?method=pptxEditorMobile" class="button button-upper present" target="_blank">PPTX</a><a title="查看源代码" class="button-popap-try" data-code="pptxEditorMobileCode"></a></div>
                 </td>
             </tr>
             <tr>
                 <th>在移动设备上查看</th>
                 <td>
-                    <div><a title="打开 DOCX 文件以便在移动设备上查看" href="<%= Url.Action("editor") %>?method=docxViewerMobile" class="button button-upper doc" target="blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxViewerMobileCode"></a></div>
+                    <div><a title="打开 DOCX 文件以便在移动设备上查看" href="<%= Url.Action("editor") %>?method=docxViewerMobile" class="button button-upper doc" target="_blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxViewerMobileCode"></a></div>
                 </td>
                 <td>
-                    <div><a title="打开 XLSX 文件以在移动设备上查看" href="<%= Url.Action("editor") %>?method=xlsxViewerMobile" class="button button-upper spread" target="blank">XLSX</a><a title="查看源代码" class="button-popap-try" data-code="xlsxViewerMobileCode"></a></div>
+                    <div><a title="打开 XLSX 文件以在移动设备上查看" href="<%= Url.Action("editor") %>?method=xlsxViewerMobile" class="button button-upper spread" target="_blank">XLSX</a><a title="查看源代码" class="button-popap-try" data-code="xlsxViewerMobileCode"></a></div>
                 </td>
                 <td>
-                    <div><a title="打开 PPTX 文件以在移动设备上查看" href="<%= Url.Action("editor") %>?method=pptxViewerMobile" class="button button-upper present" target="blank">PPTX</a><a title="查看源代码" class="button-popap-try" data-code="pptxViewerMobileCode"></a></div>
+                    <div><a title="打开 PPTX 文件以在移动设备上查看" href="<%= Url.Action("editor") %>?method=pptxViewerMobile" class="button button-upper present" target="_blank">PPTX</a><a title="查看源代码" class="button-popap-try" data-code="pptxViewerMobileCode"></a></div>
                 </td>
             </tr>--%>
             <tr>
                 <th>嵌入式查看</th>
                 <td>
-                    <div><a title="打开 DOCX 文件进行嵌入查看" href="<%= Url.Action("editor") %>?method=docxEmbed" class="button button-upper doc" target="blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxEmbedCode"></a></div>
+                    <div><a title="打开 DOCX 文件进行嵌入查看" href="<%= Url.Action("editor") %>?method=docxEmbed" class="button button-upper doc" target="_blank">DOCX</a><a title="查看源代码" class="button-popap-try" data-code="docxEmbedCode"></a></div>
                 </td>
                 <td>
-                    <div><a title="打开 XLSX 文件进行嵌入式查看" href="<%= Url.Action("editor") %>?method=xlsxEmbed" class="button button-upper spread" target="blank">XLSX</a><a title="查看源代码" class="button-popap-try" data-code="xlsxEmbedCode"></a></div>
+                    <div><a title="打开 XLSX 文件进行嵌入式查看" href="<%= Url.Action("editor") %>?method=xlsxEmbed" class="button button-upper spread" target="_blank">XLSX</a><a title="查看源代码" class="button-popap-try" data-code="xlsxEmbedCode"></a></div>
                 </td>
                 <td>
-                    <div><a title="打开 PPTX 文件进行嵌入查看" href="<%= Url.Action("editor") %>?method=pptxEmbed" class="button button-upper present" target="blank">PPTX</a><a title="查看源代码" class="button-popap-try" data-code="pptxEmbedCode"></a></div>
+                    <div><a title="打开 PPTX 文件进行嵌入查看" href="<%= Url.Action("editor") %>?method=pptxEmbed" class="button button-upper present" target="_blank">PPTX</a><a title="查看源代码" class="button-popap-try" data-code="pptxEmbedCode"></a></div>
                 </td>
             </tr>
         </tbody>
