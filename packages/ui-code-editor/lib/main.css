@@ -1,19 +1,22 @@
 .code-editor {
-  background-color: var(--color-code-editor-background);
-  border-color: var(--color-code-editor-border);
-  border-radius: 3px;
+  --code-editor-min-line-count: 4.65;
+  --code-editor-min-height: calc(var(--base-size-12) * 2 + var(--text-code-block-line-height-size-default) * var(--code-editor-min-line-count));
+
+  background-color: var(--color-code-editor-default-background);
+  border-color: var(--color-code-editor-default-border);
+  border-radius: var(--size-border-radius-small);
   border-style: solid;
-  border-width: 1px;
-  box-sizing: border-box;
-  color: var(--color-code-editor-foreground);
+  border-width: var(--size-border-width-thin);
   display: block;
-  font-family: var(--typography-monospace-font);
-  font-size: 95%;
+  font-family: var(--base-text-font-family-monospace);
+  font-size: var(--text-code-block-font-size-default);
+  line-height: var(--text-code-block-line-height-default);
   margin-bottom: 0;
-  margin-top: 16px;
-  max-width: 100%;
-  min-height: 42px; /* todo: calculate it using line-height */
+  margin-top: 0;
+  min-height: var(--code-editor-min-height);
   min-width: 100%;
-  padding: 12px 32px;
-  text-wrap: nowrap;
+  overflow: scroll;
+  padding: var(--base-size-12) var(--base-size-16);
+  tab-size: 2;
+  white-space: nowrap;
 }
