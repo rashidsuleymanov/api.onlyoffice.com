@@ -25,7 +25,7 @@ export function SearchContainer(p: SearchContainerProperties): JSX.Element {
 
   return <search-container {...o}>
     <form class={cls()} id="search" action="https://duckduckgo.com/" method="get">
-      <MagnifyingGlassIcon class="search__glass" width={24} height={24} />
+      <MagnifyingGlassIcon class="search__glass" width={18} height={18} />
       {slots.placeholder}
       {slots.field}
       <input name="sites" aria-hidden="true" hidden />
