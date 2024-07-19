@@ -459,7 +459,7 @@
                         <b>例如</b>："John"；
                     </li>
                     <li>
-                        <b>group</b> - the group (or several groups separated with commas) the user belongs to,
+                        <b>group</b> - 用户所属的组（或用逗号分隔的多个组），
                         <br />
                         <b>类型</b>：string，
                         <br />

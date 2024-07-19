@@ -8,14 +8,14 @@
     <meta charset="UTF-8" />
     <% if (Html.IfController("Home") && Html.IfAction("Index"))
         { %>
-    <meta name="description" content="ONLYOFFICE API Documentation: read our detailed documentation for developers to learn the API fundamentals of ONLYOFFICE products and find out which API methods and events can be used in your applications. Open our How to ... tutorials which will help you understand how product features work and how to implement them step by step in your project. You can also download test samples and experiment with them following our instructions." />
+    <meta name="description" content="ONLYOFFICE API 文档：阅读我们为开发人员提供的详细文档，了解 ONLYOFFICE 产品 API 的基础知识，并了解哪些 API 方法和事件可用于您的应用程序。打开我们的教程，了解产品功能的工作原理，以及如何在您的项目中实现这些功能。您还可以下载测试样本，并按照我们的说明进行实践探索。" />
     <% } else if (Html.IfController("Docs") && Html.IfAction("Index"))
         { %>
-        <meta name="description" content="ONLYOFFICE Docs API Documentation. In this section, you will learn how to bring document editing and co-authoring to your web app users, set up, configure and integrate ONLYOFFICE Docs, extend its functionality using your own plugins/macros, and integrate document editors into the desktop applications. You will also find the information on how to use Document Builder to generate documents easily without running document editors." />
+        <meta name="description" content="ONLYOFFICE 文档 API。在本节中，您将学习如何为您的 Web 应用程序用户提供文档编辑和共同协作功能，设置、配置和集成 ONLYOFFICE 文档，利用自定义插件/宏扩展其功能，以及将文档编辑器集成到桌面应用程序中。您还将了解到如何使用文档生成器，无需运行文档编辑器即可生成所需文档的相关信息。" />
     <% }
         else
        { %>
-    <meta name="description" content="ONLYOFFICE Developer API" />
+    <meta name="description" content="ONLYOFFICE 开发者版 API" />
     <% } %>
     <meta name="author" content="Ascensio System SIA" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

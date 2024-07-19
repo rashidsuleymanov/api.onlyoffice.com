@@ -560,7 +560,7 @@
             </div>
 
             <div id="pdfEditorCode">
-                <div class="popap-header">Open pdf form for editing</div>
+                <div class="popap-header">打开 pdf 表单进行编辑</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
