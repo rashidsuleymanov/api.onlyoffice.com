@@ -1,5 +1,5 @@
 import {useSlots} from "@onlyoffice/preact-slots"
-import {ChevronRightIcon} from "@onlyoffice/ui-icons/poor/12.tsx"
+import {ArrowDropdownIcon} from "@onlyoffice/ui-icons/poor/24.tsx"
 import { clsx } from "clsx"
 import type { JSX } from "preact"
 import { h } from "preact"
@@ -87,7 +87,7 @@ export function Item(
   return (
     <li class="tree__branch">
       <div class={clsx("tree__twig", !expanded && "tree__twig_closed")}>
-        <button class="tree__fruit" type="button"><ChevronRightIcon /></button>{slots.link}
+        <button class="tree__fruit" type="button"><ArrowDropdownIcon width={24} height={24} /></button>{slots.link}
       </div>
       <ul class="tree__limb">
         {outer}
