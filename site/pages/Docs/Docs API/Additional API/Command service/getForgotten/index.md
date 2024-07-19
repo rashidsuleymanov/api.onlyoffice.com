@@ -1,26 +1,24 @@
-Description
-
 Requests a forgotten file.
 
-Request example
+### Request example
 
-```
+``` json
 {
     "c": "getForgotten",
     "key": "Khirz6zTPdfd7"
 }
 ```
 
-Parameters
+### Parameters
 
 | Parameter | Description                                                                       | Type   | Presence |
 | --------- | --------------------------------------------------------------------------------- | ------ | -------- |
 | c         | Defines the command type.                                                         | string | required |
 | key       | Defines the document identifier used to unambiguously identify the document file. | string | required |
 
-Response example
+### Response example
 
-```
+``` json
 {
     "error": 0,
     "key": "Khirz6zTPdfd7",
@@ -28,7 +26,7 @@ Response example
 }
 ```
 
-Parameters
+### Parameters
 
 | Parameter | Description                                                                       | Type    | Presence |
 | --------- | --------------------------------------------------------------------------------- | ------- | -------- |
