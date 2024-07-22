@@ -8,7 +8,7 @@ The "Download failed" message is displayed at the editors loading process.
 
 The **Document editing service** cannot upload the file for editing.
 
-Check if the link to the file specified in the [document.url](/editors/config/document#url) is correct. The link must be accessible from the **document editing service**.
+Check if the link to the file specified in the [document.url](../../Usage%20API/Config/Document/index.md#url) is correct. The link must be accessible from the **document editing service**.
 
 ## No changes
 
@@ -16,7 +16,7 @@ When closing the editor after the editing, the file is unchanged in the **docume
 
 The **document editing service** could not send the data to the **document storage service**.
 
-Check if the [editorConfig.callbackUrl](/editors/config/editor#callbackUrl) link is correct. The saving in the **document manager** must be implemented through the [Callback handler](/editors/callback#implement)
+Check if the [editorConfig.callbackUrl](../../Usage%20API/Config/Editor/index.md#callbackurl) link is correct. The saving in the **document manager** must be implemented through the [Callback handler](../../Usage%20API/Callback%20handler/index.md#net-c-document-save-example)
 
 ## Could not be saved
 
@@ -24,9 +24,9 @@ Check if the [editorConfig.callbackUrl](/editors/config/editor#callbackUrl) link
 
 The editor is loaded with the "The document could not be saved" message.
 
-The **document editing service** cannot connect to the **document storage service** at the [editorConfig.callbackUrl](/editors/config/editor#callbackUrl) address.
+The **document editing service** cannot connect to the **document storage service** at the [editorConfig.callbackUrl](../../Usage%20API/Config/Editor/index.md#callbackurl) address.
 
-Check if the [Callback handler](/editors/callback#implement) is working correctly. The **document storage service** must return [{"error": 0}](/editors/callback#error-0) in response.
+Check if the [Callback handler](../../Usage%20API/Callback%20handler/index.md#net-c-document-save-example) is working correctly. The **document storage service** must return [{"error": 0}](../../Usage%20API/Callback%20handler/index.md#response-from-the-document-storage-service) in response.
 
 ## The file version has been changed
 
@@ -36,7 +36,7 @@ The editor is loaded with the "The file version has been changed. The page will 
 
 The **document editing service** cannot open the previously edited and saved file for editing.
 
-Do not forget that every time the document is edited and saved, the [document.key](/editors/config/document#key) must be generated anew.
+Do not forget that every time the document is edited and saved, the [document.key](../../Usage%20API/Config/Document/index.md#key) must be generated anew.
 
 ## The file version cannot be opened
 
@@ -44,7 +44,7 @@ Do not forget that every time the document is edited and saved, the [document.ke
 
 The **document editing service** cannot open the file version.
 
-Check if the *changesUrl* link from the [setHistoryData](/editors/methods#setHistoryData) method corresponds to the *previous.url* parameter.
+Check if the *changesUrl* link from the [setHistoryData](../../Usage%20API/Methods/index.md#sethistorydata) method corresponds to the *previous.url* parameter.
 
 ## No collaborative editing
 
@@ -54,7 +54,7 @@ No co-editing is available when the document is opened for editing by different 
 
 The **document editing service** opens **two different** files for editing.
 
-Check if the [document.key](/editors/config/document#key) values coincide to be able to co-edit the same document. The *key* value must change after the save, must differ for different documents and coincide when co-editing one and the same document.
+Check if the [document.key](../../Usage%20API/Config/Document/index.md#key) values coincide to be able to co-edit the same document. The *key* value must change after the save, must differ for different documents and coincide when co-editing one and the same document.
 
 ## Invalid token
 
@@ -64,4 +64,4 @@ The editor is loaded with the "The document security token is not correctly form
 
 The **document editing service** requests an encrypted **signature**.
 
-Check if the [token](/editors/config/#token) is correct. The token must be generated in accordance with the [JWT (JSON Web Tokens) standard](/editors/security) and present in **ONLYOFFICE Docs** config.
+Check if the [token](../../Usage%20API/Config/index.md#token) is correct. The token must be generated in accordance with the [JWT (JSON Web Tokens) standard](../../Get%20Started/How%20It%20Works/Security/index.md) and present in **ONLYOFFICE Docs** config.
