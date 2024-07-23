@@ -108,7 +108,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-            <img class="screenshot max-width-300" alt="打开文件" src="<%= Url.Content("~/content/img/editor/history.png") %>" />
+            <img class="screenshot max-width-832" alt="打开文件" src="<%= Url.Content("~/content/img/editor/history.png") %>" />
         </li>
         <li>
             <p>
