@@ -42,21 +42,16 @@ export function render({content, ...ctx}: Context): JSX.Element {
       </SrOnly>
       <PageFooterLinkContainer label="Links related to">
         <h3>Get Information</h3>
-        <a href="/">Get information</a>
-        <a href="/">Blog for developers</a>
-        <a href="/">For contributors</a>
-        <a href="/">Legal notice</a>
+        <a href="https://www.onlyoffice.com/blog/category/for-developers?from=api" target="_blank">Blog for developers</a>
+        <a href="https://www.onlyoffice.com/contribute.aspx?from=api" target="_blank">For contributors</a>
+        <a href="https://www.onlyoffice.com/legalterms.aspx?from=api" target="_blank">Legal notice</a>
       </PageFooterLinkContainer>
       <PageFooterLinkContainer label="Links related to">
         <h3>Get Help</h3>
-        <a href="/">Forum</a>
-        <a href="/">Code on GitHub</a>
-        <a href="/">Installation guides</a>
-        <a href="/">Support contact form</a>
-      </PageFooterLinkContainer>
-      <PageFooterLinkContainer label="Links related to">
-        <h3>Try Now</h3>
-        <a href="/">Developer Profile</a>
+        <a href="https://forum.onlyoffice.com" target="_blank">Forum</a>
+        <a href="https://github.com/ONLYOFFICE/" target="_blank">Code on GitHub</a>
+        <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-index.aspx?from=api" target="_blank">Installation guides</a>
+        <a href="https://www.onlyoffice.com/support-contact-form.aspx?from=api" target="_blank">Support contact form</a>
       </PageFooterLinkContainer>
       <PageFooterThemeSwitcher>
         <ThemeSwitcher>
