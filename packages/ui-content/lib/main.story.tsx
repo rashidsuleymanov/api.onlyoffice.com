@@ -19,14 +19,43 @@ export function Default(): JSX.Element {
     <h1>Heading Level 1</h1>
     <h2>Heading Level 2</h2>
     <h3>Heading Level 3</h3>
-    <hr />
+
     <p>Paragraph, first line.<br />Same paragraph, second line.</p>
     <p><b>Bold</b>, <i>Italic</i>, <code>Code</code>, <a href="/">Link</a>.</p>
     <pre><code dangerouslySetInnerHTML={{__html: "Pre with Code"}}></code></pre>
+
+    <hr />
     <blockquote>Quote</blockquote>
+
+    <p>img in picture</p>
+    <picture>
+      <img src="/docspace-preview.svg" width={400} />
+    </picture>
+
+    <p>img in figure</p>
     <figure>
-      <img src="https://pepelsbey.dev/articles/road-to-htmhell/images/semantics.svg" />
+      <img src="/docspace-preview.svg" width={400} />
+      <figcaption>Caption</figcaption>
     </figure>
+
+    <p>Plain img</p>
+    <img src="/docspace-preview.svg" width={400} />
+
+    <p>Paragraph before tabs</p>
+    <ContentTabContainer>
+      <ContentTabList label="Group of Tabs">
+        <ContentTab id="first">First Tab</ContentTab>
+        <ContentTab id="second">Second Tab</ContentTab>
+      </ContentTabList>
+      <ContentTabPanel by="first">
+        <p>First Tab Content</p>
+      </ContentTabPanel>
+      <ContentTabPanel by="second">
+        <p>Second Tab Content</p>
+      </ContentTabPanel>
+    </ContentTabContainer>
+    <p>Paragraph after tabs</p>
+
     <ul>
       <li>First list item.</li>
       <li>Second list item.</li>
@@ -41,6 +70,41 @@ export function Default(): JSX.Element {
       <dt>Second term</dt>
       <dd>Description for the second term.</dd>
     </dl>
+
+    <ul>
+      <li>
+        First list item.
+        <ul>
+          <li>First list subitem.</li>
+          <li>Second list subitem.</li>
+        </ul>
+      </li>
+      <li>
+        Second list item.
+        <ul>
+          <li>First list subitem.</li>
+          <li>Second list subitem.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <ol>
+      <li>
+        First list item.
+        <ol>
+          <li>First list subitem.</li>
+          <li>Second list subitem.</li>
+        </ol>
+      </li>
+      <li>
+        Second list item.
+        <ol>
+          <li>First list subitem.</li>
+          <li>Second list subitem.</li>
+        </ol>
+      </li>
+    </ol>
+
     <table>
       <thead>
         <tr>
@@ -135,25 +199,6 @@ oWorksheet.SetColumnWidth(0, 20);                // set the width of the first c
 oWorksheet.GetRange("A1").SetValue("New cell");  // set the 'New cell' value to the A1 spreadsheet cell
 builder.SaveFile("xlsx", "example.xlsx");        // save the resulting spreadsheet as a file in the .xlsx format with a new 'example.xlsx' name
 builder.CloseFile();                             // close the spreadsheet file and finish work with ONLYOFFICE Document Builder`
-}
-
-export function WithTabContainer(): JSX.Element {
-  return <Content>
-    <p>Paragraph before tabs</p>
-    <ContentTabContainer>
-      <ContentTabList label="Group of Tabs">
-        <ContentTab id="first">First Tab</ContentTab>
-        <ContentTab id="second">Second Tab</ContentTab>
-      </ContentTabList>
-      <ContentTabPanel by="first">
-        <p>First Tab Content</p>
-      </ContentTabPanel>
-      <ContentTabPanel by="second">
-        <p>Second Tab Content</p>
-      </ContentTabPanel>
-    </ContentTabContainer>
-    <p>Paragraph after tabs</p>
-  </Content>
 }
 
 export function WithCodeEditor(): JSX.Element {
