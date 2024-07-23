@@ -1,8 +1,12 @@
 .code-preview {
-  background-color: var(--color-scale-gray-8);
-  border-radius: 3px;
-  border: 1px solid var(--color-scale-gray-3);
-  padding: 14px 26px;
+  background-color: var(--color-code-editor-default-background);
+  border-color: var(--color-code-editor-default-border);
+  border-radius: var(--size-border-radius-small);
+  border-style: solid;
+  border-width: var(--size-border-width-thin);
+  font-family: var(--base-text-font-family-monospace);
+  font-size: var(--text-body-font-size-small);
+  padding: var(--base-size-8) var(--base-size-12);
 }
 
 .code-preview pre {
