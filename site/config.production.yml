@@ -1,4 +1,5 @@
 baseUrl: https://api.onlyoffice.com/
+analytics: true
 
 server:
   baseUrl: https://api.teamlab.info/
