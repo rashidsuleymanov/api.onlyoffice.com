@@ -1,3 +1,7 @@
+---
+order: -13
+---
+
 The steps below explain the process of connecting several editors to the same html page in ONLYOFFICE Docs.
 
 > Simultaneous work with several editors is available starting from version 5.5.

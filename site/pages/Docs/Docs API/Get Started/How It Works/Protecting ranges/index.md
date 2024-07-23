@@ -1,3 +1,7 @@
+---
+order: -3
+---
+
 The reference figure and the steps below explain the process of protecting ranges in spreadsheets in ONLYOFFICE Docs.
 
 ![Protect ranges](/assets/images/editor/protect-ranges-scheme.svg)

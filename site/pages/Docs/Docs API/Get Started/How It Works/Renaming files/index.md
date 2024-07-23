@@ -1,3 +1,7 @@
+---
+order: -15
+---
+
 The reference figure and the steps below explain the process of renaming a document in ONLYOFFICE Docs.
 
 ![Renaming File](/assets/images/editor/rename.svg)

@@ -1,3 +1,7 @@
+---
+order: -8
+---
+
 The reference figure and the steps below explain the process of comparing documents in ONLYOFFICE Docs.
 
 <img alt="Comparing documents" src="/assets/images/editor/compare.png" width="720px">

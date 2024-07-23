@@ -1,3 +1,7 @@
+---
+order: -14
+---
+
 The **Review option** allows you to review a document, change sentences, phrases and other page elements, correct spelling, etc. without actually editing it. All the changes will be recorded and shown to the user who created the document.
 
 ![Review scheme](/assets/images/editor/review.png)
