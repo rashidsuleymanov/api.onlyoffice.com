@@ -2,6 +2,11 @@ name: Publish
 
 on:
   workflow_dispatch:
+    inputs:
+      site_mode:
+        description: Site mode can be either "production", "testing" or "development".
+        required: true
+        default: production
 
 jobs:
   publish:
@@ -29,7 +34,18 @@ jobs:
     - name: Build Site
       timeout-minutes: 60
       working-directory: site
-      run: /usr/bin/time --verbose pnpm build
+      run: |
+        m="${{github.event.inputs.site_mode}}"
+        if [ "$m" = "production" ]; then
+          /usr/bin/time --verbose pnpm build:prod
+        else if [ "$m" = "testing" ]; then
+          /usr/bin/time --verbose pnpm build:test
+        else if [ "$m" = "development" ]; then
+          /usr/bin/time --verbose pnpm build:dev
+        else
+          echo "Invalid site mode: $m"
+          exit 1
+        fi
 
     - name: Sync bucket
       run: |
