@@ -135,7 +135,7 @@ export function Chapter(p: ChapterProperties): JSX.Element {
         <SearchClear label="Clear" />
         <SearchTemplate>
           <li>
-            <a data-search-container-link></a>
+            <p><a data-search-container-link></a></p>
             <p data-search-container-matches></p>
           </li>
         </SearchTemplate>
