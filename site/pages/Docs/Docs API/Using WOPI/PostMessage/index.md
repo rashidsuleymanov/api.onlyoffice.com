@@ -14,32 +14,32 @@ otherWindow.postMessage (msg, targetOrigin)
 
 The message data.
 
-**Type**: string or JSON object
+Type: string or JSON object
 
 
 ### msg.MessageId
 
 The message name.
 
-**Type**: string
+Type: string
 
-**Example**: "App\_LoadingStatus"
+Example: "App\_LoadingStatus"
 
 
 ### msg.SendTime
 
 The time the message was sent, expressed as milliseconds since midnight 1 January 1970 UTC.
 
-**Type**: integer
+Type: integer
 
-**Example**: 1329014075000
+Example: 1329014075000
 
 
 ### msg.Values
 
 The message properties.
 
-**Type**: JSON object
+Type: JSON object
 
 
 ## targetOrigin
@@ -48,7 +48,7 @@ The *otherWindow* origin that must be for the event to be dispatched. It will be
 
 \**otherWindow* is a reference to another window that *msg* will be posted to.
 
-**Type**: string
+Type: string
 
 
 Here you can find the messages that are available for ONLYOFFICE Docs to send to the host page. The process of receiving messages by the online office will be available later.

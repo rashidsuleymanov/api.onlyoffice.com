@@ -17,9 +17,9 @@ The editorConfig section allows to change the parameters pertaining to the edito
 
 Specifies the data received from the **document editing service** using the [onMakeActionLink](../Events/index.md#onmakeactionlink) event or the [onRequestSendNotify](../Events/index.md#onrequestsendnotify) event in *data.actionLink* parameter, which contains the information about the action in the document that will be scrolled to.
 
-**Type**: object
+Type: object
 
-**Example**: ACTION\_DATA
+Example: ACTION\_DATA
 
 
 ## callbackUrl
@@ -28,9 +28,9 @@ Specifies absolute URL to the **document storage service** (which [must be imple
 
 > This parameter is required.
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/url-to-callback.ashx`
+Example: `https://example.com/url-to-callback.ashx`
 
 
 ## coEditing
@@ -39,7 +39,7 @@ Defines the co-editing mode (*Fast* or *Strict*) and the possibility to change i
 
 This parameter is used to apply the [co-editing](../../../Get%20Started/How%20It%20Works/Co-editing/index.md#co-editing-modes) and [viewing](../../../Get%20Started/How%20It%20Works/Viewing/index.md) modes.
 
-**Type**: object
+Type: object
 
 **Example**:
 
@@ -54,9 +54,9 @@ This parameter is used to apply the [co-editing](../../../Get%20Started/How%20It
 
 The co-editing mode (*fast* or *strict*). The default value is **fast**.
 
-**Type**: string
+Type: string
 
-**Example**: "fast"
+Example: "fast"
 
 > Please note that in case *mode* setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.coEditing.mode* parameter.
 
@@ -65,9 +65,9 @@ The co-editing mode (*fast* or *strict*). The default value is **fast**.
 
 Defines if the co-editing mode can be changed in the editor interface or not. The default value is **true**.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 ![Coediting mode](/assets/images/editor/coediting-mode.png)
 
@@ -76,9 +76,9 @@ Defines if the co-editing mode can be changed in the editor interface or not. Th
 
 Defines the absolute URL of the document where it will be created and available after creation. If not specified, there will be no creation button. Instead of this field, you can use the [onRequestCreateNew](../Events/index.md#onrequestcreatenew) event.
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/url-to-create-document/`
+Example: `https://example.com/url-to-create-document/`
 
 ![Create URL](/assets/images/editor/create.png)
 
@@ -87,9 +87,9 @@ Defines the absolute URL of the document where it will be created and available 
 
 Defines the editor interface language (if some other languages other than English are present). Is set using the two letter (**de**, **ru**, **it**, etc.) language codes. The default value is **"en"**.
 
-**Type**: string
+Type: string
 
-**Example**: "en"
+Example: "en"
 
 > Please note that to translate the editor interface into Portuguese (Portugal) or Chinese (Traditional, Taiwan) (these languages were added in version 7.2), you need to use the four letter language codes - **pt-PT** or **zh-TW**, respectively. The two letter **pt** language code sets Portuguese (Brazil) and the **zh** code specifies Chinese (People's Republic of China).
 
@@ -98,9 +98,9 @@ Defines the editor interface language (if some other languages other than Englis
 
 Defines the default measurement units. Specify **us** or **ca** to set inches. The default value is **""**.
 
-**Type**: string
+Type: string
 
-**Example**: ""
+Example: ""
 
 > Please note that when **us** or **ca** values are set, the default measurement units are inches.
 
@@ -109,16 +109,16 @@ Defines the default measurement units. Specify **us** or **ca** to set inches. T
 
 Defines the editor opening mode. Can be either **view** to open the document for viewing, or **edit** to open the document in the editing mode allowing to apply changes to the document data. The default value is **"edit"**.
 
-**Type**: string
+Type: string
 
-**Example**: "edit"
+Example: "edit"
 
 
 ## recent
 
 Defines the presence or absence of the documents in the **Open Recent...** menu option.
 
-**Type**: array of object
+Type: array of object
 
 **Example**:
 
@@ -136,27 +136,27 @@ Defines the presence or absence of the documents in the **Open Recent...** menu 
 
 The folder where the document is stored (can be empty in case the document is stored in the root folder).
 
-**Type**: string
+Type: string
 
-**Example**: "Example Files"
+Example: "Example Files"
 
 
 ### recent.title
 
 The document title that will be displayed in the **Open Recent...** menu option.
 
-**Type**: string
+Type: string
 
-**Example**: "exampledocument1.docx"
+Example: "exampledocument1.docx"
 
 
 ### recent.url
 
 The absolute URL to the document where it is stored.
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/exampledocument1.docx`
+Example: `https://example.com/exampledocument1.docx`
 
 
 ![Recent documents](/assets/images/editor/recent.png) 
@@ -166,16 +166,16 @@ The absolute URL to the document where it is stored.
 
 Defines the default display format for currency and date and time (in the **Spreadsheet Editor** only). Is set using the four letter (**en-US**, **fr-FR**, etc.) language codes. For the default value the *lang* parameter is taken, or, if no regional setting corresponding to the *lang* value is available, **en-US** is used.
 
-**Type**: string
+Type: string
 
-**Example**: "en-US"
+Example: "en-US"
 
 
 ## templates
 
 Defines the presence or absence of the templates in the **Create New\...** menu option.
 
-**Type**: array of object
+Type: array of object
 
 **Example**:
 
@@ -193,27 +193,27 @@ Defines the presence or absence of the templates in the **Create New\...** menu 
 
 The absolute URL to the image for template.
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/exampletemplate1.png`
+Example: `https://example.com/exampletemplate1.png`
 
 
 ### templates.title
 
 The template title that will be displayed in the **Create New\...** menu option.
 
-**Type**: string
+Type: string
 
-**Example**: "exampletemplate1.docx"
+Example: "exampletemplate1.docx"
 
 
 ### templates.url
 
 The absolute URL to the document where it will be created and available after creation.
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/url-to-create-template1`
+Example: `https://example.com/url-to-create-template1`
 
 
 ![Templates](/assets/images/editor/templates.png)
@@ -223,7 +223,7 @@ The absolute URL to the document where it will be created and available after cr
 
 Defines the user currently viewing or editing the document.
 
-**Type**: object
+Type: object
 
 **Example**:
 
@@ -245,54 +245,54 @@ Defines the user currently viewing or editing the document.
 
 The first name of the user. Deprecated since version 4.2, please use *name* instead.
 
-**Type**: string
+Type: string
 
-**Example**: "John"
+Example: "John"
 
 
 ### user.group
 
 The group (or several groups separated with commas) the user belongs to.
 
-**Type**: string
+Type: string
 
-**Example**: "Group1,Group2"
+Example: "Group1,Group2"
 
 
 ### user.id
 
 The identification of the user. The length is limited to 128 symbols. This information is stored and used to distinguish co-authors, indicate the [author](../../Callback%20handler/index.md#users) of the last changes when saving and highlighting history (in the list of [changes](../../Callback%20handler/index.md#changeshistory)), and count users with access for a license based on the number of users. We recommend using some unique anonymized hash. Do not use sensitive data, like name or email for this field.
 
-**Type**: string
+Type: string
 
-**Example**: "78e1e841"
+Example: "78e1e841"
 
 
 ### user.image
 
 The path to the user's avatar.
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/url-to-user-avatar.png`
+Example: `https://example.com/url-to-user-avatar.png`
 
 
 ### user.lastname
 
 The last name of the user. Deprecated since version 4.2, please use *name* instead.
 
-**Type**: string
+Type: string
 
-**Example**: "Smith"
+Example: "Smith"
 
 
 ### user.name
 
 The full name of the user. The length is limited to 128 symbols. Used since version 4.2.
 
-**Type**: string
+Type: string
 
-**Example**: "John Smith"
+Example: "John Smith"
 
 
 ### Example

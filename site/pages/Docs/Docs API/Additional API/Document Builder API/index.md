@@ -6,7 +6,7 @@ Starting from version 8.1, it is recommended to add the [shardkey](../../Get%20S
 
 Defines the arguments to pass to the created document.
 
-**Type**: object
+Type: object
 
 **Presence**: optional
 
@@ -22,7 +22,7 @@ Supported values:
 
 When the asynchronous request type is used, the response is formed instantly. In this case to get the result it is necessary to send requests without parameter change until the document generation is finished. The default value is **false**.
 
-**Type**: boolean
+Type: boolean
 
 **Presence**: optional
 
@@ -31,7 +31,7 @@ When the asynchronous request type is used, the response is formed instantly. In
 
 Defines the request identifier used to unambiguously identify the request. The key is formed on the **document builder service** side and is returned as the response to the first request. When the asynchronous request is used (the *async* parameter is set to **true**) the key is not present in the first request, but must be present in all the following requests which will be send before the generation is complete. When the synchronous request is used (the *async* parameter is set to **false**), this parameter is not required.
 
-**Type**: string
+Type: string
 
 **Presence**: required
 
@@ -40,7 +40,7 @@ Defines the request identifier used to unambiguously identify the request. The k
 
 Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../Signature/Request/Token%20in%20body/index.md#builder).
 
-**Type**: string
+Type: string
 
 **Presence**: required by configuration
 
@@ -49,7 +49,7 @@ Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the f
 
 Defines the absolute URL to the .docbuilder file.
 
-**Type**: string
+Type: string
 
 **Presence**: required
 

@@ -14,9 +14,9 @@ Defines the document type to be opened:
 * **slide** - presentation (*.dps, .dpt, .fodp, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .sxi*);
 * **pdf** - portable document format (*.djvu, .docxf, .oform, .oxps, .pdf, .xps*).
 
-**Type**: string
+Type: string
 
-**Example**: "cell"
+Example: "cell"
 
 > **text**, **spreadsheet** and **presentation** values are deprecated since version 6.1. Please use new values instead.
 
@@ -25,18 +25,18 @@ Defines the document type to be opened:
 
 Defines the document height (**100%** by default) in the browser window.
 
-**Type**: string
+Type: string
 
-**Example**: "100%"
+Example: "100%"
 
 
 ## token
 
 Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../../Additional%20API/Signature/Browser/index.md).
 
-**Type**: string
+Type: string
 
-**Example**: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"
+Example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"
 
 
 ## type
@@ -49,18 +49,18 @@ Defines the platform type used to access the document. Can be:
 
 The default value is **desktop**.
 
-**Type**: string
+Type: string
 
-**Example**: "desktop"
+Example: "desktop"
 
 
 ## width
 
 Defines the document width (**100%** by default) in the browser window.
 
-**Type**: string
+Type: string
 
-**Example**: "100%"
+Example: "100%"
 
 
 ### Example
