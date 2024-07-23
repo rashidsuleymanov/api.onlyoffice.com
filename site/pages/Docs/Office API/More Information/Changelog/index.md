@@ -2,16 +2,13 @@ The list of changes for Office JavaScript API.
 
 ## Version 8.1
 
-**Date form methods**
+### Date form methods
 
 * Added the [ApiDateForm](/officeapi/textdocumentapi/apidateform) class to Text document API.
 * Added the [Api/CreateDateForm](/officeapi/formapi/api/createdateform) method to Form API.
 * Added the [ApiDateForm/Clear](/officeapi/textdocumentapi/apidateform/clear) method to Text document API.
 * Added the [ApiDateForm/Copy](/officeapi/textdocumentapi/apidateform/copy) method to Text document API.
 * Added the [ApiDateForm/GetClassType](/officeapi/textdocumentapi/apidateform/getclasstype) method to Text document API.
-
-More
-
 * Added the [ApiDateForm/GetFormat](/officeapi/textdocumentapi/apidateform/getformat) method to Text document API.
 * Added the [ApiDateForm/GetFormKey](/officeapi/textdocumentapi/apidateform/getformkey) method to Text document API.
 * Added the [ApiDateForm/GetFormType](/officeapi/textdocumentapi/apidateform/getformtype) method to Text document API.
@@ -37,19 +34,14 @@ More
 * Added the [DateFormPr](/officeapi/global#DateFormPr) type to the simple type definitions.
 * Added the [DateFormPrBase](/officeapi/global#DateFormPrBase) type to the simple type definitions.
 
-\
 
-
-**Methods for setting text properties**
+### Methods for setting text properties
 
 * Added the [ApiTextPr/GetBold](/officeapi/textdocumentapi/apitextpr/getbold) method to Text document API.
 * Added the [ApiTextPr/GetCaps](/officeapi/textdocumentapi/apitextpr/getcaps) method to Text document API.
 * Added the [ApiTextPr/GetColor](/officeapi/textdocumentapi/apitextpr/getcolor) method to Text document API.
 * Added the [ApiTextPr/GetDoubleStrikeout](/officeapi/textdocumentapi/apitextpr/getdoublestrikeout) method to Text document API.
 * Added the [ApiTextPr/GetFontFamily](/officeapi/textdocumentapi/apitextpr/getfontfamily) method to Text document API.
-
-More
-
 * Added the [ApiTextPr/GetFontSize](/officeapi/textdocumentapi/apitextpr/getfontsize) method to Text document API.
 * Added the [ApiTextPr/GetHighlight](/officeapi/textdocumentapi/apitextpr/gethighlight) method to Text document API.
 * Added the [ApiTextPr/GetItalic](/officeapi/textdocumentapi/apitextpr/getitalic) method to Text document API.
@@ -90,10 +82,8 @@ More
 * Added the [ApiTextPr/GetTextFill](/officeapi/presentationapi/apitextpr/gettextfill) method to Presentation API.
 * Added the [ApiTextPr/GetUnderline](/officeapi/presentationapi/apitextpr/getunderline) method to Presentation API.
 
-\
 
-
-**Worksheet function methods**
+### Worksheet function methods
 
 * Added the [ApiWorksheetFunction](/officeapi/spreadsheetapi/apiworksheetfunction) class to Spreadsheet API.
 * Added the [Api/GetWorksheetFunction](/officeapi/spreadsheetapi/api/getworksheetfunction) method to Spreadsheet API.
@@ -102,9 +92,6 @@ More
 * Added the [ApiWorksheetFunction/ACCRINTM](/officeapi/spreadsheetapi/apiworksheetfunction/accrintm) method to Spreadsheet API.
 * Added the [ApiWorksheetFunction/ACOS](/officeapi/spreadsheetapi/apiworksheetfunction/acos) method to Spreadsheet API.
 * Added the [ApiWorksheetFunction/ACOSH](/officeapi/spreadsheetapi/apiworksheetfunction/acosh) method to Spreadsheet API.
-
-More
-
 * Added the [ApiWorksheetFunction/ACOT](/officeapi/spreadsheetapi/apiworksheetfunction/acot) method to Spreadsheet API.
 * Added the [ApiWorksheetFunction/ACOTH](/officeapi/spreadsheetapi/apiworksheetfunction/acoth) method to Spreadsheet API.
 * Added the [ApiWorksheetFunction/AGGREGATE](/officeapi/spreadsheetapi/apiworksheetfunction/aggregate) method to Spreadsheet API.
@@ -516,19 +503,14 @@ More
 * Added the [ApiWorksheetFunction/ZTEST](/officeapi/spreadsheetapi/apiworksheetfunction/ztest) method to Spreadsheet API.
 * Added the *WorksheetFunction* property to the [Api](/officeapi/spreadsheetapi/api) object of Spreadsheet API.
 
-\
 
-
-**Protected range methods**
+### Protected range methods
 
 * Added the [ApiProtectedRange](/officeapi/spreadsheetapi/apiprotectedrange) class to Spreadsheet API.
 * Added the [ApiProtectedRange/AddUser](/officeapi/spreadsheetapi/apiprotectedrange/adduser) method to Spreadsheet API.
 * Added the [ApiProtectedRange/DeleteUser](/officeapi/spreadsheetapi/apiprotectedrange/deleteuser) method to Spreadsheet API.
 * Added the [ApiProtectedRange/GetAllUsers](/officeapi/spreadsheetapi/apiprotectedrange/getallusers) method to Spreadsheet API.
 * Added the [ApiProtectedRange/GetUser](/officeapi/spreadsheetapi/apiprotectedrange/getuser) method to Spreadsheet API.
-
-More
-
 * Added the [ApiProtectedRange/SetAnyoneType](/officeapi/spreadsheetapi/apiprotectedrange/setanyonetype) method to Spreadsheet API.
 * Added the [ApiProtectedRange/SetRange](/officeapi/spreadsheetapi/apiprotectedrange/setrange) method to Spreadsheet API.
 * Added the [ApiProtectedRange/SetTitle](/officeapi/spreadsheetapi/apiprotectedrange/settitle) method to Spreadsheet API.
@@ -542,20 +524,16 @@ More
 * Added the *AllProtectedRanges* property to the [ApiWorksheet](/officeapi/spreadsheetapi/apiworksheet) object of Spreadsheet API.
 * Added the [ProtectedRangeUserType](/officeapi/global#ProtectedRangeUserType) type to the simple type definitions.
 
-\
 
-
-**Reference style methods**
+### Reference style methods
 
 * Added the [Api/GetReferenceStyle](/officeapi/spreadsheetapi/api/getreferencestyle) method to Spreadsheet API.
 * Added the [Api/SetReferenceStyle](/officeapi/spreadsheetapi/api/setreferencestyle) method to Spreadsheet API.
 * Added the *ReferenceStyle* property to the [Api](/officeapi/spreadsheetapi/api) object of Spreadsheet API.
 * Added the [ReferenceStyle](/officeapi/global#ReferenceStyle) type to the simple type definitions.
 
-\
 
-
-**Methods for pasting / cutting ranges**
+### Methods for pasting / cutting ranges
 
 * Added the [ApiRange/Cut](/officeapi/spreadsheetapi/apirange/cut) method to Spreadsheet API.
 * Added the [ApiRange/PasteSpecial](/officeapi/spreadsheetapi/apirange/pastespecial) method to Spreadsheet API.
@@ -563,53 +541,41 @@ More
 * Added the [PasteSpecialOperation](/officeapi/global#PasteSpecialOperation) type to the simple type definitions.
 * Added the [PasteType](/officeapi/global#PasteType) type to the simple type definitions.
 
-\
 
-
-**Methods for moving a cursor**
+### Methods for moving a cursor
 
 * Added the [ApiBlockLvlSdt/MoveCursorOutside](/officeapi/textdocumentapi/apiblocklvlsdt/movecursoroutside) method to Text document API.
 * Added the [ApiFormBase/MoveCursorOutside](/officeapi/textdocumentapi/apiformbase/movecursoroutside) method to Text document API.
 * Added the [ApiInlineLvlSdt/MoveCursorOutside](/officeapi/textdocumentapi/apiinlinelvlsdt/movecursoroutside) method to Text document API.
 
-\
 
-
-**Custom function methods**
+### Custom function methods
 
 * Added the [Api/AddCustomFunction](/officeapi/spreadsheetapi/api/addcustomfunction) method to Spreadsheet API.
 * Added the [Api/ClearCustomFunctions](/officeapi/spreadsheetapi/api/clearcustomfunctions) method to Spreadsheet API.
 * Added the [Api/RemoveCustomFunction](/officeapi/spreadsheetapi/api/removecustomfunction) method to Spreadsheet API.
 
-\
 
-
-**RGB color methods**
+### RGB color methods
 
 * Added the [ApiUniColor/GetRGB](/officeapi/textdocumentapi/apiunicolor/getrgb) method to Text document API.
 * Added the [ApiColor/GetRGB](/officeapi/spreadsheetapi/apicolor/getrgb) method to Spreadsheet API.
 
-\
 
-
-**Other methods**
+### Other methods
 
 * Added the *nWidth* and *nHeight* parameters to the [ApiPictureForm/SetImage](/officeapi/textdocumentapi/apipictureform/setimage) method of Text document API.
-
-\
 
 
 ## Version 8.0
 
-**Form methods**
+### Form methods
 
 * Added the [ApiDocument/GetFormsData](/officeapi/textdocumentapi/apidocument/getformsdata) method to Text document API.
 * Added the [ApiDocument/SetFormsData](/officeapi/textdocumentapi/apidocument/setformsdata) method to Text document API.
 
-\
 
-
-**Freeze panes methods**
+### Freeze panes methods
 
 * Added the [Api/GetFreezePanesType](/officeapi/spreadsheetapi/api/getfreezepanestype) method to Spreadsheet API.
 * Added the [Api/SetFreezePanesType](/officeapi/spreadsheetapi/api/setfreezepanestype) method to Spreadsheet API.
@@ -622,10 +588,8 @@ More
 * Added the *FreezePanes* property to the [Api](/officeapi/spreadsheetapi/api) object of Spreadsheet API.
 * Added the *FreezePanes* property to the [ApiWorksheet](/officeapi/spreadsheetapi/apiworksheet) object of Spreadsheet API.
 
-\
 
-
-**Comment methods**
+### Comment methods
 
 * Added the *sUserId* parameter to the [Api/AddComment](/officeapi/textdocumentapi/api/addcomment) method of Text document API.
 * Added the *sUserId* parameter to the [ApiBlockLvlSdt/AddComment](/officeapi/textdocumentapi/apiblocklvlsdt/addcomment) method of Text document API.
@@ -635,9 +599,6 @@ More
 * Added the *sUserId* parameter to the [ApiRange/AddComment](/officeapi/textdocumentapi/apirange/addcomment) method of Text document API.
 * Added the *sUserId* parameter to the [ApiRun/AddComment](/officeapi/textdocumentapi/apirun/addcomment) method of Text document API.
 * Added the *sUserId* parameter to the [ApiTable/AddComment](/officeapi/textdocumentapi/apitable/addcomment) method of Text document API.
-
-More
-
 * Added the [Api/GetAllComments](/officeapi/spreadsheetapi/api/getallcomments) method to Spreadsheet API.
 * Added the [ApiComment/AddReply](/officeapi/presentationapi/apicomment/addreply) method to Presentation API.
 * Added the [ApiComment/Delete](/officeapi/presentationapi/apicomment/delete) method to Presentation API.
@@ -664,47 +625,36 @@ More
 * Added the [ApiCommentReply/SetUserId](/officeapi/presentationapi/apicommentreply/setuserid) method to Presentation API.
 * Added the [ApiPresentation/GetAllComments](/officeapi/presentationapi/apipresentation/getallcomments) method to Presentation API.
 
-\
 
-
-**Section methods**
+### Section methods
 
 * Added the [ApiSection/GetPageHeight](/officeapi/textdocumentapi/apisection/getpageheight) method to Text document API.
 * Added the [ApiSection/GetPageWidth](/officeapi/textdocumentapi/apisection/getpagewidth) method to Text document API.
 
-\
 
-
-**Simple types**
+### Simple types
 
 * Added the [FormData](/officeapi/global#FormData) object to the simple type definitions.
 * Added the [FormSpecificType](/officeapi/global#FormSpecificType) type to the simple type definitions.
 * Added the [FreezePaneType](/officeapi/global#FreezePaneType) type to the simple type definitions.
 
-\
 
-
-**Other methods**
+### Other methods
 
 * Removed the *ApiBlockLvlSdt/SetBackgroundColor* method from Text document API.
 * Added the [ApiDocument/AddDrawingToPage](/officeapi/textdocumentapi/apidocument/adddrawingtopage) method to Text document API.
 * Added the *bWithotPaddings* parameter to the [ApiWorksheet/SetColumnWidth](/officeapi/spreadsheetapi/apiworksheet/setcolumnwidth) method of Spreadsheet API.
 
-\
-
 
 ## Version 7.5
 
-**Methods of combo box / dropdown list content control**
+### Methods of combo box / dropdown list content control
 
 * Added the [ApiBlockLvlSdt/GetDropdownList](/officeapi/textdocumentapi/apiblocklvlsdt/getdropdownlist) method to Text document API.
 * Added the [ApiContentControlList](/officeapi/textdocumentapi/apicontentcontrollist) class to Text document API.
 * Added the [ApiContentControlList/Add](/officeapi/textdocumentapi/apicontentcontrollist/add) method to Text document API.
 * Added the [ApiContentControlList/Clear](/officeapi/textdocumentapi/apicontentcontrollist/clear) method to Text document API.
 * Added the [ApiContentControlList/GetAllItems](/officeapi/textdocumentapi/apicontentcontrollist/getallitems) method to Text document API.
-
-More
-
 * Added the [ApiContentControlList/GetClassType](/officeapi/textdocumentapi/apicontentcontrollist/getclasstype) method to Text document API.
 * Added the [ApiContentControlList/GetElementsCount](/officeapi/textdocumentapi/apicontentcontrollist/getelementscount) method to Text document API.
 * Added the [ApiContentControlList/GetItem](/officeapi/textdocumentapi/apicontentcontrollist/getitem) method to Text document API.
@@ -724,10 +674,8 @@ More
 * Added the [ApiContentControlListEntry/SetValue](/officeapi/textdocumentapi/apicontentcontrollistentry/setvalue) method to Text document API.
 * Added the [ApiInlineLvlSdt/GetDropdownList](/officeapi/textdocumentapi/apiinlinelvlsdt/getdropdownlist) method to Text document API.
 
-\
 
-
-**Watermark methods**
+### Watermark methods
 
 * Added the [ApiDocument/GetWatermarkSettings](/officeapi/textdocumentapi/apidocument/getwatermarksettings) method to Text document API.
 * Added the [ApiDocument/RemoveWatermark](/officeapi/textdocumentapi/apidocument/removewatermark) method to Text document API.
@@ -736,9 +684,6 @@ More
 * Added the [ApiWatermarkSettings/GetClassType](/officeapi/textdocumentapi/apiwatermarksettings/getclasstype) method to Text document API.
 * Added the [ApiWatermarkSettings/GetDirection](/officeapi/textdocumentapi/apiwatermarksettings/getdirection) method to Text document API.
 * Added the [ApiWatermarkSettings/GetImageHeight](/officeapi/textdocumentapi/apiwatermarksettings/getimageheight) method to Text document API.
-
-More
-
 * Added the [ApiWatermarkSettings/GetImageURL](/officeapi/textdocumentapi/apiwatermarksettings/getimageurl) method to Text document API.
 * Added the [ApiWatermarkSettings/GetImageWidth](/officeapi/textdocumentapi/apiwatermarksettings/getimagewidth) method to Text document API.
 * Added the [ApiWatermarkSettings/GetOpacity](/officeapi/textdocumentapi/apiwatermarksettings/getopacity) method to Text document API.
@@ -753,28 +698,22 @@ More
 * Added the [ApiWatermarkSettings/SetTextPr](/officeapi/textdocumentapi/apiwatermarksettings/settextpr) method to Text document API.
 * Added the [ApiWatermarkSettings/SetType](/officeapi/textdocumentapi/apiwatermarksettings/settype) method to Text document API.
 
-\
 
-
-**Simple types**
+### Simple types
 
 * Added the [SearchData](/officeapi/global#SearchData) object to the simple type definitions.
 * Added the [ReplaceData](/officeapi/global#ReplaceData) object to the simple type definitions.
 
-\
 
-
-**Slide methods**
+### Slide methods
 
 * Added the [ApiSlide/GetVisible](/officeapi/presentationapi/apislide/getvisible) method to Presentation API.
 * Added the [ApiSlide/SetVisible](/officeapi/presentationapi/apislide/setvisible) method to Presentation API.
 
-\
-
 
 ## Version 7.4
 
-**Characters methods**
+### Characters methods
 
 * Added the [ApiCharacters](/officeapi/spreadsheetapi/apicharacters) class to Spreadsheet API.
 * Added the [ApiCharacters/Delete](/officeapi/spreadsheetapi/apicharacters/delete) method to Spreadsheet API.
@@ -787,10 +726,8 @@ More
 * Added the [ApiCharacters/SetCaption](/officeapi/spreadsheetapi/apicharacters/setcaption) method to Spreadsheet API.
 * Added the [ApiCharacters/SetText](/officeapi/spreadsheetapi/apicharacters/settext) method to Spreadsheet API.
 
-\
 
-
-**Font methods**
+### Font methods
 
 * Added the [ApiFont](/officeapi/spreadsheetapi/apifont) class to Spreadsheet API.
 * Added the [ApiFont/GetBold](/officeapi/spreadsheetapi/apifont/getbold) method to Spreadsheet API.
@@ -799,9 +736,6 @@ More
 * Added the [ApiFont/GetName](/officeapi/spreadsheetapi/apifont/getname) method to Spreadsheet API.
 * Added the [ApiFont/GetParent](/officeapi/spreadsheetapi/apifont/getparent) method to Spreadsheet API.
 * Added the [ApiFont/GetSize](/officeapi/spreadsheetapi/apifont/getsize) method to Spreadsheet API.
-
-More
-
 * Added the [ApiFont/GetStrikethrough](/officeapi/spreadsheetapi/apifont/getstrikethrough) method to Spreadsheet API.
 * Added the [ApiFont/GetSubscript](/officeapi/spreadsheetapi/apifont/getsubscript) method to Spreadsheet API.
 * Added the [ApiFont/GetSuperscript](/officeapi/spreadsheetapi/apifont/getsuperscript) method to Spreadsheet API.
@@ -816,10 +750,8 @@ More
 * Added the [ApiFont/SetSuperscript](/officeapi/spreadsheetapi/apifont/setsuperscript) method to Spreadsheet API.
 * Added the [ApiFont/SetUnderline](/officeapi/spreadsheetapi/apifont/setunderline) method to Spreadsheet API.
 
-\
 
-
-**Range methods**
+### Range methods
 
 * Added the [ApiRange/Find](/officeapi/spreadsheetapi/apirange/find) class to Spreadsheet API.
 * Added the [ApiRange/FindNext](/officeapi/spreadsheetapi/apirange/findnext) class to Spreadsheet API.
@@ -827,10 +759,8 @@ More
 * Added the [ApiRange/GetCharacters](/officeapi/spreadsheetapi/apirange/getcharacters) class to Spreadsheet API.
 * Added the [ApiRange/Replace](/officeapi/spreadsheetapi/apirange/replace) class to Spreadsheet API.
 
-\
 
-
-**Other methods**
+### Other methods
 
 * Added the [ApiComment/GetId](/officeapi/textdocumentapi/apicomment/getid) method to Text document API.
 * Added the [ApiDocument/GetAllStyles](/officeapi/textdocumentapi/apidocument/getallstyles) method to Text document API.
@@ -848,9 +778,10 @@ More
 * Added the [Api/GetFullName](/officeapi/presentationapi/api/getfullname) method to Presentation API.
 * Added the [ApiDocument/InsertTextForm](/officeapi/formapi/apidocument/inserttextform) method to Form API.
 
+
 ## Version 7.3
 
-**Comment methods**
+### Comment methods
 
 * Added the [ApiBlockLvlSdt/AddComment](/officeapi/textdocumentapi/apiblocklvlsdt/addcomment) method to Text document API.
 * Added the [ApiComment](/officeapi/textdocumentapi/apicomment) class to Text document API.
@@ -859,9 +790,6 @@ More
 * Added the [ApiComment/GetAuthorName](/officeapi/textdocumentapi/apicomment/getauthorname) method to Text document API.
 * Added the [ApiComment/GetClassType](/officeapi/textdocumentapi/apicomment/getclasstype) method to Text document API.
 * Added the [ApiComment/GetQuoteText](/officeapi/textdocumentapi/apicomment/getquotetext) method to Text document API.
-
-More
-
 * Added the [ApiComment/GetRepliesCount](/officeapi/textdocumentapi/apicomment/getrepliescount) method to Text document API.
 * Added the [ApiComment/GetReply](/officeapi/textdocumentapi/apicomment/getreply) method to Text document API.
 * Added the [ApiComment/GetText](/officeapi/textdocumentapi/apicomment/gettext) method to Text document API.
@@ -892,19 +820,15 @@ More
 * Added the [ApiTable/AddComment](/officeapi/textdocumentapi/apitable/addcomment) method to Text document API.
 * Added the [Api/GetComments](/officeapi/spreadsheetapi/api/getcomments) method to Spreadsheet API.
 
-\
 
-
-**Table of contents/figures methods**
+### Table of contents/figures methods
 
 * Added the [ApiDocument/AddTableOfContents](/officeapi/textdocumentapi/apidocument/addtableofcontents) method to Text document API.
 * Added the [ApiDocument/AddTableOfFigures](/officeapi/textdocumentapi/apidocument/addtableoffigures) method to Text document API.
 * Added the [ApiParagraph/AddCaption](/officeapi/textdocumentapi/apiparagraph/addcaption) method to Text document API.
 
-\
 
-
-**Other methods**
+### Other methods
 
 * Added the [ApiBlockLvlSdt/SetBackgroundColor](/officeapi/textdocumentapi/apiblocklvlsdt/setbackgroundcolor) method to Text document API.
 * Added the [ApiDocument/GetPageCount](/officeapi/textdocumentapi/apidocument/getpagecount) method to Text document API.
@@ -912,9 +836,10 @@ More
 * Added the [ApiDocument/SetControlsHighlight](/officeapi/textdocumentapi/apidocument/setcontrolshighlight) method to Text document API.
 * Added the [ApiRange/GetRange](/officeapi/textdocumentapi/apirange/getrange) method to Text document API.
 
+
 ## Version 7.2
 
-**Events**
+### Events
 
 * Added the [Api/attachEvent](/officeapi/textdocumentapi/api/attachevent) method to Text document API.
 * Added the [Api/detachEvent](/officeapi/textdocumentapi/api/detachevent) method to Text document API.
@@ -924,10 +849,8 @@ More
 * Added the [Api/attachEvent](/officeapi/presentationapi/api/attachevent) method to Presentation API.
 * Added the [Api/detachEvent](/officeapi/presentationapi/api/detachevent) method to Presentation API.
 
-\
 
-
-**Form methods**
+### Form methods
 
 * Added the [ApiComplexForm](/officeapi/textdocumentapi/apicomplexform) class to Text document API.
 * Added the [ApiDocument/GetTagsOfAllContentControls](/officeapi/textdocumentapi/apidocument/gettagsofallcontentcontrols) method to Text document API.
@@ -935,10 +858,8 @@ More
 * Added the [ApiDocument/GetContentControlsByTag](/officeapi/textdocumentapi/apidocument/getcontentcontrolsbytag) method to Text document API.
 * Added the [ApiDocument/GetFormsByTag](/officeapi/textdocumentapi/apidocument/getformsbytag) method to Text document API.
 
-\
 
-
-**Methods for converting to/from JSON**
+### Methods for converting to/from JSON
 
 * Added the [Api/FromJSON](/officeapi/textdocumentapi/api/fromjson) method to Text document API.
 * Added the [ApiBlockLvlSdt/ToJSON](/officeapi/textdocumentapi/apiblocklvlsdt/tojson) method to Text document API.
@@ -947,9 +868,6 @@ More
 * Added the [ApiDrawing/ToJSON](/officeapi/textdocumentapi/apidrawing/tojson) method to Text document API.
 * Added the [ApiFill/ToJSON](/officeapi/textdocumentapi/apifill/tojson) method to Text document API.
 * Added the [ApiGradientStop/ToJSON](/officeapi/textdocumentapi/apigradientstop/tojson) method to Text document API.
-
-More
-
 * Added the [ApiHyperlink/ToJSON](/officeapi/textdocumentapi/apihyperlink/tojson) method to Text document API.
 * Added the [ApiInlineLvlSdt/ToJSON](/officeapi/textdocumentapi/apiinlinelvlsdt/tojson) method to Text document API.
 * Added the [ApiNumbering/ToJSON](/officeapi/textdocumentapi/apinumbering/tojson) method to Text document API.
@@ -984,35 +902,27 @@ More
 * Added the [ApiThemeFontScheme/ToJSON](/officeapi/presentationapi/apithemefontscheme/tojson) method to Presentation API.
 * Added the [ApiThemeFormatScheme/ToJSON](/officeapi/presentationapi/apithemeformatscheme/tojson) method to Presentation API.
 
-\
 
-
-**Word Art methods**
+### Word Art methods
 
 * Added the [Api/CreateWordArt](/officeapi/textdocumentapi/api/createwordart) method to Text document API.
 * Added the [ApiWorksheet/AddWordArt](/officeapi/spreadsheetapi/apiworksheet/addwordart) method to Spreadsheet API.
 * Added the [Api/CreateWordArt](/officeapi/presentationapi/api/createwordart) method to Presentation API.
 
-\
 
-
-**Table of contents/figures methods**
+### Table of contents/figures methods
 
 * Added the [ApiDocument/UpdateAllTOC](/officeapi/textdocumentapi/apidocument/updatealltoc) method to Text document API.
 * Added the [ApiDocument/UpdateAllTOF](/officeapi/textdocumentapi/apidocument/updatealltof) method to Text document API.
 
-\
 
-
-**Footnote/endnote methods**
+### Footnote/endnote methods
 
 * Added the [ApiDocument/AddEndnote](/officeapi/textdocumentapi/apidocument/addendnote) method to Text document API.
 * Added the [ApiDocument/AddFootnote](/officeapi/textdocumentapi/apidocument/addfootnote) method to Text document API.
 
-\
 
-
-**Chart methods**
+### Chart methods
 
 * Added the [ApiChart/ApplyChartStyle](/officeapi/textdocumentapi/apichart/applychartstyle) method to Text document API.
 * Added the [ApiChart/RemoveSeria](/officeapi/textdocumentapi/apichart/removeseria) method to Text document API.
@@ -1021,9 +931,6 @@ More
 * Added the [ApiChart/SetDataPointFill](/officeapi/textdocumentapi/apichart/setdatapointfill) method to Text document API.
 * Added the [ApiChart/SetDataPointNumFormat](/officeapi/textdocumentapi/apichart/setdatapointnumformat) method to Text document API.
 * Added the [ApiChart/SetDataPointOutLine](/officeapi/textdocumentapi/apichart/setdatapointoutline) method to Text document API.
-
-More
-
 * Added the [ApiChart/SetLegendFill](/officeapi/textdocumentapi/apichart/setlegendfill) method to Text document API.
 * Added the [ApiChart/SetLegendOutLine](/officeapi/textdocumentapi/apichart/setlegendoutline) method to Text document API.
 * Added the [ApiChart/SetMarkerFill](/officeapi/textdocumentapi/apichart/setmarkerfill) method to Text document API.
@@ -1079,10 +986,8 @@ More
 * Added the [ApiChart/SetTitleOutLine](/officeapi/presentationapi/apichart/settitleoutline) method to Presentation API.
 * Added the [ApiChart/SetXValues](/officeapi/presentationapi/apichart/setxvalues) method to Presentation API.
 
-\
 
-
-**Drawing methods**
+### Drawing methods
 
 * Added the [ApiDocument/GetSelectedDrawings](/officeapi/textdocumentapi/apidocument/getselecteddrawings) method to Text document API.
 * Added the [ApiDocument/ReplaceDrawing](/officeapi/textdocumentapi/apidocument/replacedrawing) method to Text document API.
@@ -1090,9 +995,6 @@ More
 * Added the [ApiDocumentContent/GetAllDrawingObjects](/officeapi/textdocumentapi/apidocumentcontent/getalldrawingobjects) method to Text document API.
 * Added the [ApiDocumentContent/GetAllImages](/officeapi/textdocumentapi/apidocumentcontent/getallimages) method to Text document API.
 * Added the [ApiDocumentContent/GetAllShapes](/officeapi/textdocumentapi/apidocumentcontent/getallshapes) method to Text document API.
-
-More
-
 * Added the [ApiDrawing/GetHeight](/officeapi/textdocumentapi/apidrawing/getheight) method to Text document API.
 * Added the [ApiDrawing/GetLockValue](/officeapi/textdocumentapi/apidrawing/getlockvalue) method to Text document API.
 * Added the [ApiDrawing/GetWidth](/officeapi/textdocumentapi/apidrawing/getwidth) method to Text document API.
@@ -1107,10 +1009,8 @@ More
 * Added the [ApiDrawing/GetWidth](/officeapi/presentationapi/apidrawing/getwidth) method to Presentation API.
 * Added the [ApiDrawing/SetLockValue](/officeapi/presentationapi/apidrawing/setlockvalue) method to Presentation API.
 
-\
 
-
-**OLE object methods**
+### OLE object methods
 
 * Added the [ApiOleObject](/officeapi/textdocumentapi/apioleobject) class to Text document API.
 * Added the [Api/CreateOleObject](/officeapi/textdocumentapi/api/createoleobject) method to Text document API.
@@ -1122,9 +1022,6 @@ More
 * Added the [ApiOleObject/SetApplicationId](/officeapi/textdocumentapi/apioleobject/setapplicationid) method to Text document API.
 * Added the [ApiOleObject/SetData](/officeapi/textdocumentapi/apioleobject/setdata) method to Text document API.
 * Added the [ApiParagraph/GetAllOleObjects](/officeapi/textdocumentapi/apiparagraph/getalloleobjects) method to Text document API.
-
-More
-
 * Added the [ApiOleObject](/officeapi/spreadsheetapi/apioleobject) class to Spreadsheet API.
 * Added the [ApiWorksheet/AddOleObject](/officeapi/spreadsheetapi/apiworksheet/addoleobject) method to Spreadsheet API.
 * Added the [ApiWorksheet/GetAllOleObjects](/officeapi/spreadsheetapi/apiworksheet/getalloleobjects) method to Spreadsheet API.
@@ -1144,10 +1041,8 @@ More
 * Added the [ApiOleObject/SetApplicationId](/officeapi/presentationapi/apioleobject/setapplicationid) method to Presentation API.
 * Added the [ApiOleObject/SetData](/officeapi/presentationapi/apioleobject/setdata) method to Presentation API.
 
-\
 
-
-**Table methods**
+### Table methods
 
 * Added the [ApiTable/GetPosInParent](/officeapi/textdocumentapi/apitable/getposinparent) method to Text document API.
 * Added the [ApiTable/GetTableDescription](/officeapi/textdocumentapi/apitable/gettabledescription) method to Text document API.
@@ -1160,10 +1055,8 @@ More
 * Added the [ApiTablePr/SetTableDescription](/officeapi/textdocumentapi/apitablepr/settabledescription) method to Text document API.
 * Added the [ApiTablePr/SetTableTitle](/officeapi/textdocumentapi/apitablepr/settabletitle) method to Text document API.
 
-\
 
-
-**Run methods**
+### Run methods
 
 * Added the [ApiRun/GetFontNames](/officeapi/textdocumentapi/apirun/getfontnames) method to Text document API.
 * Added the [ApiRun/SetOutLine](/officeapi/textdocumentapi/apirun/setoutline) method to Text document API.
@@ -1175,10 +1068,8 @@ More
 * Added the [ApiRun/SetOutLine](/officeapi/presentationapi/apirun/setoutline) method to Presentation API.
 * Added the [ApiRun/SetTextFill](/officeapi/presentationapi/apirun/settextfill) method to Presentation API.
 
-\
 
-
-**Methods for setting text properties**
+### Methods for setting text properties
 
 * Added the [ApiTextPr/SetOutLine](/officeapi/textdocumentapi/apitextpr/setoutline) method to Text document API.
 * Added the [ApiTextPr/SetTextFill](/officeapi/textdocumentapi/apitextpr/settextfill) method to Text document API.
@@ -1188,10 +1079,8 @@ More
 * Added the [ApiTextPr/SetOutLine](/officeapi/presentationapi/apitextpr/setoutline) method to Presentation API.
 * Added the [ApiTextPr/SetTextFill](/officeapi/presentationapi/apitextpr/settextfill) method to Presentation API.
 
-\
 
-
-**Other methods**
+### Other methods
 
 * Added the [Api/CreateTextPr](/officeapi/textdocumentapi/api/createtextpr) method to Text document API.
 * Added the [ApiBlockLvlSdt/GetPosInParent](/officeapi/textdocumentapi/apiblocklvlsdt/getposinparent) method to Text document API.
@@ -1199,9 +1088,6 @@ More
 * Added the [ApiDocument/GetContent](/officeapi/textdocumentapi/apidocument/getcontent) method to Text document API.
 * Added the [ApiDocument/ReplaceCurrentImage](/officeapi/textdocumentapi/apidocument/replacecurrentimage) method to Text document API.
 * Added the [ApiDocumentContent/GetContent](/officeapi/textdocumentapi/apidocumentcontent/getcontent) method to Text document API.
-
-More
-
 * Added the [ApiParagraph/GetFontNames](/officeapi/textdocumentapi/apiparagraph/getfontnames) method to Text document API.
 * Added the [ApiParagraph/GetPosInParent](/officeapi/textdocumentapi/apiparagraph/getposinparent) method to Text document API.
 * Added the [ApiParagraph/ReplaceByElement](/officeapi/textdocumentapi/apiparagraph/replacebyelement) method to Text document API.
@@ -1215,9 +1101,10 @@ More
 * Added the [ApiPresentation/GetHeight](/officeapi/presentationapi/apipresentation/getheight) method to Presentation API.
 * Added the [ApiPresentation/GetWidth](/officeapi/presentationapi/apipresentation/getwidth) method to Presentation API.
 
+
 ## Version 7.1
 
-**Form methods**
+### Form methods
 
 * Added the [Form API](/officeapi/formapi).
 * Added the [Api/CreateCheckBoxForm](/officeapi/formapi/api/createcheckboxform) method to Form API.
@@ -1227,9 +1114,6 @@ More
 * Added the [ApiBlockLvlSdt/GetPlaceholderText](/officeapi/textdocumentapi/apiblocklvlsdt/getplaceholdertext) method to Text document API.
 * Added the [ApiBlockLvlSdt/SetPlaceholderText](/officeapi/textdocumentapi/apiblocklvlsdt/setplaceholdertext) method to Text document API.
 * Added the [ApiCheckBoxForm](/officeapi/textdocumentapi/apicheckboxform) class to Text document API.
-
-More
-
 * Added the [ApiCheckBoxForm/Clear](/officeapi/textdocumentapi/apicheckboxform/clear) method to Text document API.
 * Added the [ApiCheckBoxForm/Copy](/officeapi/textdocumentapi/apicheckboxform/copy) method to Text document API.
 * Added the [ApiCheckBoxForm/GetClassType](/officeapi/textdocumentapi/apicheckboxform/getclasstype) method to Text document API.
@@ -1372,10 +1256,8 @@ More
 * Added the [ApiTextForm/ToFixed](/officeapi/textdocumentapi/apitextform/tofixed) method to Text document API.
 * Added the [ApiTextForm/ToInline](/officeapi/textdocumentapi/apitextform/toinline) method to Text document API.
 
-\
 
-
-**Cross-reference methods**
+### Cross-reference methods
 
 * Added the [ApiDocument/GetAllBookmarksNames](/officeapi/textdocumentapi/apidocument/getallbookmarksnames) method to Text document API.
 * Added the [ApiDocument/GetAllCaptionParagraphs](/officeapi/textdocumentapi/apidocument/getallcaptionparagraphs) method to Text document API.
@@ -1390,28 +1272,22 @@ More
 * Added the [ApiParagraph/AddHeadingCrossRef](/officeapi/textdocumentapi/apiparagraph/addheadingcrossref) method to Text document API.
 * Added the [ApiParagraph/AddNumberedCrossRef](/officeapi/textdocumentapi/apiparagraph/addnumberedcrossref) method to Text document API.
 
-\
 
-
-**Review methods**
+### Review methods
 
 * Added the [ApiDocument/AcceptAllRevisionChanges](/officeapi/textdocumentapi/apidocument/acceptallrevisionchanges) method to Text document API.
 * Added the [ApiDocument/RejectAllRevisionChanges](/officeapi/textdocumentapi/apidocument/rejectallrevisionchanges) method to Text document API.
 
-\
 
-
-**Table background methods**
+### Table background methods
 
 * Added the [ApiTable/SetBackgroundColor](/officeapi/textdocumentapi/apitable/setbackgroundcolor) method to Text document API.
 * Added the [ApiTableCell/SetBackgroundColor](/officeapi/textdocumentapi/apitablecell/setbackgroundcolor) method to Text document API.
 * Added the [ApiTableCell/SetColumnBackgroundColor](/officeapi/textdocumentapi/apitablecell/setcolumnbackgroundcolor) method to Text document API.
 * Added the [ApiTableRow/SetBackgroundColor](/officeapi/textdocumentapi/apitablerow/setbackgroundcolor) method to Text document API.
 
-\
 
-
-**Areas methods**
+### Areas methods
 
 * Added the [ApiAreas](/officeapi/spreadsheetapi/apiareas) class to Spreadsheet API.
 * Added the *Areas* property to the [ApiRange](/officeapi/spreadsheetapi/apirange) object of Spreadsheet API.
@@ -1419,10 +1295,8 @@ More
 * Added the [ApiAreas/GetItem](/officeapi/spreadsheetapi/apiareas/getitem) method to Spreadsheet API.
 * Added the [ApiAreas/GetParent](/officeapi/spreadsheetapi/apiareas/getparent) method to Spreadsheet API.
 
-\
 
-
-**Range methods**
+### Range methods
 
 * Added the [ApiRange/AutoFit](/officeapi/spreadsheetapi/apirange/autofit) method to Spreadsheet API.
 * Added the [ApiRange/Copy](/officeapi/spreadsheetapi/apirange/copy) method to Spreadsheet API.
@@ -1432,10 +1306,8 @@ More
 * Added the [ApiRange/Paste](/officeapi/spreadsheetapi/apirange/paste) method to Spreadsheet API.
 * Changed the *data* parameter type of the [ApiRange/SetValue](/officeapi/spreadsheetapi/apirange/setvalue) method of Spreadsheet API.
 
-\
 
-
-**Layout methods**
+### Layout methods
 
 * Added the [Api/CreateLayout](/officeapi/presentationapi/api/createlayout) method to Presentation API.
 * Added the [ApiLayout](/officeapi/presentationapi/apilayout) class to Presentation API.
@@ -1445,9 +1317,6 @@ More
 * Added the [ApiLayout/Delete](/officeapi/presentationapi/apilayout/delete) method to Presentation API.
 * Added the [ApiLayout/Duplicate](/officeapi/presentationapi/apilayout/duplicate) method to Presentation API.
 * Added the [ApiLayout/FollowMasterBackground](/officeapi/presentationapi/apilayout/followmasterbackground) method to Presentation API.
-
-More
-
 * Added the [ApiLayout/GetAllCharts](/officeapi/presentationapi/apilayout/getallcharts) method to Presentation API.
 * Added the [ApiLayout/GetAllDrawings](/officeapi/presentationapi/apilayout/getalldrawings) method to Presentation API.
 * Added the [ApiLayout/GetAllImages](/officeapi/presentationapi/apilayout/getallimages) method to Presentation API.
@@ -1459,10 +1328,8 @@ More
 * Added the [ApiLayout/SetBackground](/officeapi/presentationapi/apilayout/setbackground) method to Presentation API.
 * Added the [ApiLayout/SetName](/officeapi/presentationapi/apilayout/setname) method to Presentation API.
 
-\
 
-
-**Master methods**
+### Master methods
 
 * Added the [Api/CreateMaster](/officeapi/presentationapi/api/createmaster) method to Presentation API.
 * Added the [ApiMaster](/officeapi/presentationapi/apimaster) class to Presentation API.
@@ -1472,9 +1339,6 @@ More
 * Added the [ApiMaster/Copy](/officeapi/presentationapi/apimaster/copy) method to Presentation API.
 * Added the [ApiMaster/Delete](/officeapi/presentationapi/apimaster/delete) method to Presentation API.
 * Added the [ApiMaster/Duplicate](/officeapi/presentationapi/apimaster/duplicate) method to Presentation API.
-
-More
-
 * Added the [ApiMaster/GetAllCharts](/officeapi/presentationapi/apimaster/getallcharts) method to Presentation API.
 * Added the [ApiMaster/GetAllDrawings](/officeapi/presentationapi/apimaster/getalldrawings) method to Presentation API.
 * Added the [ApiMaster/GetAllImages](/officeapi/presentationapi/apimaster/getallimages) method to Presentation API.
@@ -1488,20 +1352,16 @@ More
 * Added the [ApiMaster/SetBackground](/officeapi/presentationapi/apimaster/setbackground) method to Presentation API.
 * Added the [ApiMaster/SetTheme](/officeapi/presentationapi/apimaster/settheme) method to Presentation API.
 
-\
 
-
-**Placeholder methods**
+### Placeholder methods
 
 * Added the [Api/CreatePlaceholder](/officeapi/presentationapi/api/createplaceholder) method to Presentation API.
 * Added the [ApiPlaceholder](/officeapi/presentationapi/apiplaceholder) class to Presentation API.
 * Added the [ApiPlaceholder/GetClassType](/officeapi/presentationapi/apiplaceholder/getclasstype) method to Presentation API.
 * Added the [ApiPlaceholder/SetType](/officeapi/presentationapi/apiplaceholder/settype) method to Presentation API.
 
-\
 
-
-**Theme methods**
+### Theme methods
 
 * Added the [Api/CreateTheme](/officeapi/presentationapi/api/createtheme) method to Presentation API.
 * Added the [Api/CreateThemeColorScheme](/officeapi/presentationapi/api/createthemecolorscheme) method to Presentation API.
@@ -1512,9 +1372,6 @@ More
 * Added the [ApiTheme/GetColorScheme](/officeapi/presentationapi/apitheme/getcolorscheme) method to Presentation API.
 * Added the [ApiTheme/GetFontScheme](/officeapi/presentationapi/apitheme/getfontscheme) method to Presentation API.
 * Added the [ApiTheme/GetFormatScheme](/officeapi/presentationapi/apitheme/getformatscheme) method to Presentation API.
-
-More
-
 * Added the [ApiTheme/GetMaster](/officeapi/presentationapi/apitheme/getmaster) method to Presentation API.
 * Added the [ApiTheme/SetColorScheme](/officeapi/presentationapi/apitheme/setcolorscheme) method to Presentation API.
 * Added the [ApiTheme/SetFontScheme](/officeapi/presentationapi/apitheme/setfontscheme) method to Presentation API.
@@ -1538,10 +1395,8 @@ More
 * Added the [ApiThemeFormatScheme/GetClassType](/officeapi/presentationapi/apithemeformatscheme/getclasstype) method to Presentation API.
 * Added the [ApiThemeFormatScheme/SetSchemeName](/officeapi/presentationapi/apithemeformatscheme/setschemename) method to Presentation API.
 
-\
 
-
-**Drawing methods**
+### Drawing methods
 
 * Added the [ApiDrawing/Copy](/officeapi/presentationapi/apidrawing/copy) method to Presentation API.
 * Added the [ApiDrawing/Delete](/officeapi/presentationapi/apidrawing/delete) method to Presentation API.
@@ -1552,10 +1407,8 @@ More
 * Added the [ApiDrawing/GetPlaceholder](/officeapi/presentationapi/apidrawing/getplaceholder) method to Presentation API.
 * Added the [ApiDrawing/SetPlaceholder](/officeapi/presentationapi/apidrawing/setplaceholder) method to Presentation API.
 
-\
 
-
-**Slide methods**
+### Slide methods
 
 * Changed the return value for the [ApiSlide/AddObject](/officeapi/presentationapi/apislide/addobject) method of Presentation API.
 * Added the [ApiSlide/ApplyLayout](/officeapi/presentationapi/apislide/applylayout) method to Presentation API.
@@ -1564,9 +1417,6 @@ More
 * Added the [ApiSlide/Copy](/officeapi/presentationapi/apislide/copy) method to Presentation API.
 * Added the [ApiSlide/Delete](/officeapi/presentationapi/apislide/delete) method to Presentation API.
 * Added the [ApiSlide/Duplicate](/officeapi/presentationapi/apislide/duplicate) method to Presentation API.
-
-More
-
 * Added the [ApiSlide/FollowLayoutBackground](/officeapi/presentationapi/apislide/followlayoutbackground) method to Presentation API.
 * Added the [ApiSlide/FollowMasterBackground](/officeapi/presentationapi/apislide/followmasterbackground) method to Presentation API.
 * Added the [ApiSlide/GetAllCharts](/officeapi/presentationapi/apislide/getallcharts) method to Presentation API.
@@ -1579,10 +1429,8 @@ More
 * Added the [ApiSlide/MoveTo](/officeapi/presentationapi/apislide/moveto) method to Presentation API.
 * Added the [ApiSlide/RemoveObject](/officeapi/presentationapi/apislide/removeobject) method to Presentation API.
 
-\
 
-
-**Presentation methods**
+### Presentation methods
 
 * Added the [ApiPresentation/AddMaster](/officeapi/presentationapi/apipresentation/addmaster) method to Presentation API.
 * Added the [ApiPresentation/ApplyTheme](/officeapi/presentationapi/apipresentation/applytheme) method to Presentation API.
@@ -1591,14 +1439,13 @@ More
 * Added the [ApiPresentation/GetSlidesCount](/officeapi/presentationapi/apipresentation/getslidescount) method to Presentation API.
 * Added the [ApiPresentation/RemoveSlides](/officeapi/presentationapi/apipresentation/removeslides) method to Presentation API.
 
-\
 
-
-**Other methods**
+### Other methods
 
 * Added the *sParaTab* and *sParaNewLine* parameters to the [Api/ReplaceTextSmart](/officeapi/textdocumentapi/api/replacetextsmart) method of Text document API.
 * Added the [ApiInlineLvlSdt/GetParentParagraph](/officeapi/textdocumentapi/apiinlinelvlsdt/getparentparagraph) method to Text document API.
 * Removed the *ApiShape/GetDocContent* method from Spreadsheet API.
+
 
 ## Version 7.0
 
@@ -1613,8 +1460,6 @@ More
 * Added the [ApiRange/SetSort](/officeapi/spreadsheetapi/apirange/setsort) method to Spreadsheet API.
 * Added the [Api/RecalculateAllFormulas](/officeapi/spreadsheetapi/api/recalculateallformulas) method to Spreadsheet API.
 * Added the [ApiPresentation/SetLanguage](/officeapi/presentationapi/apipresentation/setlanguage) method to Presentation API.
-
-\
 
 
 ## Version 6.4
