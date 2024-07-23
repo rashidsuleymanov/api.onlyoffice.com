@@ -135,7 +135,7 @@ export function Chapter(p: ChapterProperties): JSX.Element {
         <SearchClear label="Clear" />
         <SearchTemplate>
           <li>
-            <a data-search-container-link></a>
+            <p><a data-search-container-link></a></p>
             <p data-search-container-matches></p>
           </li>
         </SearchTemplate>
@@ -149,7 +149,6 @@ export function Chapter(p: ChapterProperties): JSX.Element {
           <h1>{ud.title}</h1>
           {p.children}
           {ud.tableOfContents && <TableOfContents url={p.url} depth={1} />}
-          {ud.help && <Help current={p.url} />}
         </Content>
       </SearchHidable>
       <SearchOutput>
@@ -158,6 +157,7 @@ export function Chapter(p: ChapterProperties): JSX.Element {
           <ol data-search-container-results></ol>
         </Content>
       </SearchOutput>
+      {ud.help && <Help current={p.url} />}
     </ChapterContent>
   </SChapter>
 }

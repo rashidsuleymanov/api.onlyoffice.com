@@ -1,0 +1,8 @@
+{
+  "name": "@onlyoffice/ui-base",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./main.css": "./dist/main.css"
+  }
+}

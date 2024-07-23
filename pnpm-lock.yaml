@@ -2221,6 +2221,8 @@ importers:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
 
+  packages/ui-base: {}
+
   packages/ui-breadcrumb:
     dependencies:
       '@onlyoffice/preact-types':
@@ -2319,33 +2321,6 @@ importers:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
 
-  packages/ui-colors:
-    devDependencies:
-      '@types/color':
-        specifier: ^3.0.6
-        version: 3.0.6
-      '@types/node':
-        specifier: ^20.12.12
-        version: 20.12.12
-      color:
-        specifier: ^4.2.3
-        version: 4.2.3
-      dot-prop:
-        specifier: ^9.0.0
-        version: 9.0.0
-      sade:
-        specifier: ^1.8.1
-        version: 1.8.1
-      tsx:
-        specifier: ^4.10.5
-        version: 4.11.0
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-      yaml:
-        specifier: ^2.4.1
-        version: 2.4.1
-
   packages/ui-content:
     dependencies:
       '@github/tab-container-element':
@@ -2441,6 +2416,9 @@ importers:
       '@onlyoffice/ui-badge':
         specifier: workspace:^
         version: link:../ui-badge
+      '@onlyoffice/ui-base':
+        specifier: workspace:^
+        version: link:../ui-base
       '@onlyoffice/ui-breadcrumb':
         specifier: workspace:^
         version: link:../ui-breadcrumb
@@ -2456,9 +2434,6 @@ importers:
       '@onlyoffice/ui-code-preview':
         specifier: workspace:^
         version: link:../ui-code-preview
-      '@onlyoffice/ui-colors':
-        specifier: workspace:^
-        version: link:../ui-colors
       '@onlyoffice/ui-content':
         specifier: workspace:^
         version: link:../ui-content
@@ -2468,12 +2443,12 @@ importers:
       '@onlyoffice/ui-logos':
         specifier: workspace:^
         version: link:../ui-logos
+      '@onlyoffice/ui-primitives':
+        specifier: workspace:^
+        version: link:../ui-primitives
       '@onlyoffice/ui-select':
         specifier: workspace:^
         version: link:../ui-select
-      '@onlyoffice/ui-sizes':
-        specifier: workspace:^
-        version: link:../ui-sizes
       '@onlyoffice/ui-sr-only':
         specifier: workspace:^
         version: link:../ui-sr-only
@@ -2503,6 +2478,33 @@ importers:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
 
+  packages/ui-primitives:
+    devDependencies:
+      '@types/color':
+        specifier: ^3.0.6
+        version: 3.0.6
+      '@types/node':
+        specifier: ^20.12.12
+        version: 20.12.12
+      color:
+        specifier: ^4.2.3
+        version: 4.2.3
+      dot-prop:
+        specifier: ^9.0.0
+        version: 9.0.0
+      sade:
+        specifier: ^1.8.1
+        version: 1.8.1
+      tsx:
+        specifier: ^4.10.5
+        version: 4.11.0
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+      yaml:
+        specifier: ^2.4.1
+        version: 2.4.1
+
   packages/ui-select:
     dependencies:
       '@onlyoffice/combobox-container-html-element':
@@ -2524,27 +2526,6 @@ importers:
       vite:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
-
-  packages/ui-sizes:
-    devDependencies:
-      '@types/node':
-        specifier: ^20.12.12
-        version: 20.12.12
-      dot-prop:
-        specifier: ^9.0.0
-        version: 9.0.0
-      sade:
-        specifier: ^1.8.1
-        version: 1.8.1
-      tsx:
-        specifier: ^4.10.5
-        version: 4.11.0
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-      yaml:
-        specifier: ^2.4.1
-        version: 2.4.1
 
   packages/ui-sr-only:
     dependencies:
@@ -2646,9 +2627,6 @@ importers:
       '@onlyoffice/document-editor-mirror-html-element':
         specifier: workspace:^
         version: link:../packages/document-editor-mirror-html-element
-      '@onlyoffice/documentation-ui-kit':
-        specifier: workspace:^
-        version: link:../ui/kit
       '@onlyoffice/eleventy-clean':
         specifier: workspace:^
         version: link:../packages/eleventy-clean
@@ -2790,6 +2768,9 @@ importers:
       esbuild-register:
         specifier: ^3.5.0
         version: 3.5.0(esbuild@0.19.12)
+      fontpie:
+        specifier: ^0.3.0
+        version: 0.3.0
       github-slugger:
         specifier: ^2.0.0
         version: 2.0.0
@@ -2901,49 +2882,6 @@ importers:
       vite:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
-
-  ui/font:
-    devDependencies:
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      preact-render-to-string:
-        specifier: ^6.4.1
-        version: 6.4.1(preact@10.22.0)
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-
-  ui/kit:
-    dependencies:
-      '@onlyoffice/documentation-ui-font':
-        specifier: workspace:^
-        version: link:../font
-      '@onlyoffice/documentation-ui-typography':
-        specifier: workspace:^
-        version: link:../typography
-    devDependencies:
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      preact-render-to-string:
-        specifier: ^6.4.1
-        version: 6.4.1(preact@10.22.0)
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-
-  ui/typography:
-    devDependencies:
-      preact:
-        specifier: ^10.22.0
-        version: 10.22.0
-      preact-render-to-string:
-        specifier: ^6.4.1
-        version: 6.4.1(preact@10.22.0)
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
 
 packages:
 
@@ -4877,6 +4815,12 @@ packages:
     peerDependencies:
       eslint: '>=8.40.0'
 
+  '@swc/helpers@0.4.14':
+    resolution: {integrity: sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==}
+
+  '@swc/helpers@0.4.36':
+    resolution: {integrity: sha512-5lxnyLEYFskErRPenYItLRSge5DjrJngYKdVjRSrWfza9G6KkgHEXi0vUZiyUeMU5JfXH1YnvXZzSp8ul88o2Q==}
+
   '@textlint/ast-node-types@13.4.1':
     resolution: {integrity: sha512-qrZyhCh8Ekk6nwArx3BROybm9BnX6vF7VcZbijetV/OM3yfS4rTYhoMWISmhVEP2H2re0CtWEyMl/XF+WdvVLQ==}
 
@@ -5610,6 +5554,9 @@ packages:
     resolution: {integrity: sha512-uA9fOtlTRC0iqKfzff1W34DXUA3GyVqbUaeo3Rw3d4gd1eavKVCETXrn3NzO74W+UVkG3UHu8WxUi+XvKI/huA==}
     engines: {node: '>= 10.16.0'}
 
+  brotli@1.3.3:
+    resolution: {integrity: sha512-oTKjJdShmDuGW94SyyaoQvAjf30dZaHnjJ8uAF+u2/vGJkJbJPJAT1gDiOJP5v1Zb6f9KEyW/1HpuaWIXtGHPg==}
+
   browser-assert@1.2.1:
     resolution: {integrity: sha512-nfulgvOR6S4gt9UKCeGJOuSGBPGiFT6oQ/2UBnvTY/5aQ1PnksW72fhZkM30DzoRRv2WpwZf1vHHEr3mtuXIWQ==}
 
@@ -5841,6 +5788,10 @@ packages:
     resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
     engines: {node: '>= 10'}
 
+  commander@9.5.0:
+    resolution: {integrity: sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==}
+    engines: {node: ^12.20.0 || >=14}
+
   commondir@1.0.1:
     resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
 
@@ -6064,6 +6015,9 @@ packages:
 
   devtools-protocol@0.0.1286932:
     resolution: {integrity: sha512-wu58HMQll9voDjR4NlPyoDEw1syfzaBNHymMMZ/QOXiHRNluOnDgu9hp1yHOKYoMlxCh4lSSiugLITe6Fvu1eA==}
+
+  dfa@1.2.0:
+    resolution: {integrity: sha512-ED3jP8saaweFTjeGX8HQPjeC1YYyZs98jGNZx6IiBvxW7JG5v492kamAQB3m2wop07CvU/RQmzcKr6bgcC5D/Q==}
 
   diff@5.2.0:
     resolution: {integrity: sha512-uIFDxqpRZGZ6ThOk84hEfqWoHx2devRFvpTZcTHur85vImfaxUbTW9Ryh4CpCuDnToOP1CEtXKIgytHBPVff5A==}
@@ -6517,6 +6471,18 @@ packages:
   flow-parser@0.230.0:
     resolution: {integrity: sha512-ZAfKaarESYYcP/RoLdM91vX0u/1RR7jI5TJaFLnxwRlC2mp0o+Rw7ipIY7J6qpIpQYtAobWb/J6S0XPeu0gO8g==}
     engines: {node: '>=0.4.0'}
+
+  fontkit@2.0.2:
+    resolution: {integrity: sha512-jc4k5Yr8iov8QfS6u8w2CnHWVmbOGtdBtOXMze5Y+QD966Rx6PEVWXSEGwXlsDlKtu1G12cJjcsybnqhSk/+LA==}
+
+  fontpie-calc@0.2.0:
+    resolution: {integrity: sha512-FuO1CLiK0cGQI3te1W7SfIJONSfpHXLGmEv661UPsEIdM1xxl5Yd+z9DBYvnHW36QlOkMmutwG1hF2BP15pV6Q==}
+    peerDependencies:
+      fontkit: ^2.0.2
+
+  fontpie@0.3.0:
+    resolution: {integrity: sha512-8Fy7vTrBocyFpnbiv7E5HkC+ZQyft5U/Su9UktN9AgfK35lgDhAnR01JbkgcrzB6OXTCfpjVj1wn6R2b5Clksw==}
+    hasBin: true
 
   for-each@0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
@@ -8501,6 +8467,9 @@ packages:
     resolution: {integrity: sha512-l+sSefzHpj5qimhFSE5a8nufZYAM3sBSVMAPtYkmC+4EH2anSGaEMXSD0izRQbu9nfyQ9y5JrVmp7E8oZrUjvA==}
     engines: {node: '>=8'}
 
+  restructure@3.0.2:
+    resolution: {integrity: sha512-gSfoiOEA0VPE6Tukkrr7I0RBdE0s7H1eFCDBk05l1KIQT1UIKNc5JZy6jdyW6eYH3aR3g5b3PuL77rq0hvwtAw==}
+
   reusify@1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
@@ -8884,6 +8853,9 @@ packages:
   through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
 
+  tiny-inflate@1.0.3:
+    resolution: {integrity: sha512-pkY1fj1cKHb2seWDy0B16HeWyczlJA9/WW3u3c4z/NiWDsO3DOU5D7nhTLE9CF0yXv/QZFY7sEJmj24dK+Rrqw==}
+
   tiny-invariant@1.3.3:
     resolution: {integrity: sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg==}
 
@@ -9073,9 +9045,15 @@ packages:
     resolution: {integrity: sha512-qxkjQt6qjg/mYscYMC0XKRn3Rh0wFPlfxB0xkt9CfyTvpX1Ra0+rAmdX2QyAobptSEvuy4RtpPRui6XkV+8wjA==}
     engines: {node: '>=4'}
 
+  unicode-properties@1.4.1:
+    resolution: {integrity: sha512-CLjCCLQ6UuMxWnbIylkisbRj31qxHPAurvena/0iwSVbQ2G1VY5/HjV0IRabOEbDHlzZlRdCrD4NhB0JtU40Pg==}
+
   unicode-property-aliases-ecmascript@2.1.0:
     resolution: {integrity: sha512-6t3foTQI9qne+OZoVQB/8x8rk2k1eVy1gRXhV3oFQ5T6R1dqQ1xtin3XqSlx3+ATBkliTaR/hHyJBm+LVPNM8w==}
     engines: {node: '>=4'}
+
+  unicode-trie@2.0.0:
+    resolution: {integrity: sha512-x7bc76x0bm4prf1VLg79uhAzKw8DVboClSN5VxJuQ+LKDOVEW9CdH+VY7SP+vX7xCYQqzzgQpFqz15zeLvAtZQ==}
 
   unicorn-magic@0.1.0:
     resolution: {integrity: sha512-lRfVq8fE8gz6QMBuDM6a+LO3IAzTi05H6gCVaUpir2E1Rwpo4ZUog45KpNXKC/Mn3Yb9UDuHumeFTo9iV/D9FQ==}
@@ -11658,6 +11636,15 @@ snapshots:
       - supports-color
       - typescript
 
+  '@swc/helpers@0.4.14':
+    dependencies:
+      tslib: 2.6.2
+
+  '@swc/helpers@0.4.36':
+    dependencies:
+      legacy-swc-helpers: '@swc/helpers@0.4.14'
+      tslib: 2.6.2
+
   '@textlint/ast-node-types@13.4.1': {}
 
   '@tootallnate/quickjs-emscripten@0.23.0': {}
@@ -12615,6 +12602,10 @@ snapshots:
     dependencies:
       duplexer: 0.1.1
 
+  brotli@1.3.3:
+    dependencies:
+      base64-js: 1.5.1
+
   browser-assert@1.2.1: {}
 
   browserify-zlib@0.1.4:
@@ -12857,6 +12848,8 @@ snapshots:
 
   commander@7.2.0: {}
 
+  commander@9.5.0: {}
+
   commondir@1.0.1: {}
 
   compressible@2.0.18:
@@ -13065,6 +13058,8 @@ snapshots:
       dequal: 2.0.3
 
   devtools-protocol@0.0.1286932: {}
+
+  dfa@1.2.0: {}
 
   diff@5.2.0: {}
 
@@ -13780,6 +13775,28 @@ snapshots:
   flatted@3.3.1: {}
 
   flow-parser@0.230.0: {}
+
+  fontkit@2.0.2:
+    dependencies:
+      '@swc/helpers': 0.4.36
+      brotli: 1.3.3
+      clone: 2.1.2
+      dfa: 1.2.0
+      fast-deep-equal: 3.1.3
+      restructure: 3.0.2
+      tiny-inflate: 1.0.3
+      unicode-properties: 1.4.1
+      unicode-trie: 2.0.0
+
+  fontpie-calc@0.2.0(fontkit@2.0.2):
+    dependencies:
+      fontkit: 2.0.2
+
+  fontpie@0.3.0:
+    dependencies:
+      commander: 9.5.0
+      fontkit: 2.0.2
+      fontpie-calc: 0.2.0(fontkit@2.0.2)
 
   for-each@0.3.3:
     dependencies:
@@ -16283,6 +16300,8 @@ snapshots:
       onetime: 5.1.2
       signal-exit: 3.0.7
 
+  restructure@3.0.2: {}
+
   reusify@1.0.4: {}
 
   rimraf@2.6.3:
@@ -16764,6 +16783,8 @@ snapshots:
 
   through@2.3.8: {}
 
+  tiny-inflate@1.0.3: {}
+
   tiny-invariant@1.3.3: {}
 
   to-fast-properties@2.0.0: {}
@@ -16935,7 +16956,17 @@ snapshots:
 
   unicode-match-property-value-ecmascript@2.1.0: {}
 
+  unicode-properties@1.4.1:
+    dependencies:
+      base64-js: 1.5.1
+      unicode-trie: 2.0.0
+
   unicode-property-aliases-ecmascript@2.1.0: {}
+
+  unicode-trie@2.0.0:
+    dependencies:
+      pako: 0.2.9
+      tiny-inflate: 1.0.3
 
   unicorn-magic@0.1.0: {}
 

@@ -1,76 +1,96 @@
 .select {
+  --select-min-option-count: 6.2;
+  --select-option-total-height: calc(var(--base-size-8) * 2 + var(--text-body-line-height-size-small));
+  --select-listbox-outer-height: calc(var(--size-border-width-thin) * 2 + var(--base-size-8) * 2);
+  --select-listbox-max-height: calc(var(--select-listbox-outer-height) + var(--select-option-total-height) * var(--select-min-option-count));
+
   display: inline-block;
-  font-size: 12px;
-  line-height: inherit;
+  font-size: var(--text-body-font-size-small);
+  line-height: var(--text-body-line-height-small);
   min-width: 264px;
   position: relative;
 }
 
+.select[state-selected] [role="combobox"],
+.select:state(selected) [role="combobox"] {
+  color: var(--color-control-default-foreground-active);
+}
+
+.select[state-selected] [role="combobox"]:hover,
+.select:state(selected) [role="combobox"]:hover {
+  color: var(--color-control-default-foreground-active);
+}
+
 .select [role="combobox"] {
-  background-color: var(--color-select-combobox-neutral-background);
-  border-radius: 3px;
-  border: 1px solid var(--color-select-combobox-neutral-border);
-  box-sizing: border-box;
-  color: var(--color-select-combobox-neutral-foreground);
+  background-color: var(--color-control-default-background-rest);
+  border-color: var(--color-control-default-border-rest);
+  border-radius: var(--size-border-radius-small);
+  border-style: solid;
+  border-width: var(--size-border-width-thin);
+  color: var(--color-control-default-foreground-rest);
   cursor: pointer;
-  padding: 8px 12px;
-  width: 100%;
+  padding-block: var(--size-control-padding-block-medium);
+  padding-inline: var(--size-control-padding-inline-medium);
 }
 
 .select [role="combobox"]:focus-visible {
-  outline: 2px solid var(--color-select-combobox-neutral-outline);
+  outline-color: var(--color-focus-default-outline);
+  outline-style: solid;
+  outline-width: var(--side-outline-width-default);
 }
 
 .select [role="combobox"]:hover {
-  border-color: var(--color-select-combobox-neutral-hover-border);
+  background-color: var(--color-control-default-background-hover);
+  border-color: var(--color-control-default-border-hover);
+  color: var(--color-control-default-foreground-hover);
 }
 
 .select [role="combobox"][aria-expanded="true"] {
-  background-color: var(--color-select-combobox-neutral-active-background);
-  border-color: var(--color-select-combobox-neutral-active-border);
-  color: var(--color-select-combobox-neutral-active-foreground);
+  background-color: var(--color-control-default-background-active);
+  border-color: var(--color-control-default-border-active);
+  color: var(--color-control-default-foreground-active);
 }
 
 .select [role="listbox"] {
-  background-color: var(--color-select-combobox-neutral-background);
-  border-radius: 3px;
-  border: 1px solid var(--color-select-combobox-neutral-border);
-  box-sizing: border-box;
-  color: var(--color-select-combobox-neutral-foreground);
-  max-height: 240px;
+  background-color: var(--color-control-default-background-active);
+  border-color: var(--color-control-default-border-active);
+  border-radius: var(--size-border-radius-small);
+  border-style: solid;
+  border-width: var(--size-border-width-thin);
+  color: var(--color-control-default-foreground-active);
+  max-height: var(--select-listbox-max-height);
   overflow-y: scroll;
-  padding-bottom: 8px;
-  padding-top: 8px;
+  padding-bottom: var(--base-size-8);
+  padding-top: var(--base-size-8);
   position: absolute;
-  top: calc(100% + 5px);
+  top: calc(100% + var(--base-size-6));
   width: 100%;
   z-index: 1;
 }
 
 .select [role="listbox"]:not([hidden]) {
-  background-color: var(--color-select-option-neutral-active-background);
-  border-color: var(--color-select-option-neutral-active-border);
-  color: var(--color-select-option-neutral-active-foreground);
+  background-color: var(--color-control-default-background-active);
+  border-color: var(--color-control-default-border-active);
+  color: var(--color-control-default-foreground-active);
 }
 
 .select__option-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: var(--base-size-6);
+  padding-right: var(--base-size-6);
 }
 
 .select__option-container:hover {
-  background-color: var(--color-select-option-neutral-hover-background);
+  background-color: var(--color-control-default-background-hover);
 }
 
 .select [role="option"] {
-  border-radius: 3px;
+  border-radius: var(--size-border-radius-small);
   cursor: pointer;
-  grid-column: 1 / 3;
-  padding: 8px calc(12px - 6px);
+  padding: var(--base-size-8) var(--base-size-6);
 }
 
 .select [role="option"][aria-current="true"] {
-  outline: 2px solid var(--color-select-option-neutral-outline);
+  outline-color: var(--color-focus-default-outline);
+  outline-style: solid;
+  outline-width: var(--side-outline-width-default);
 }

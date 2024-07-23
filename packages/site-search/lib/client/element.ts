@@ -353,7 +353,7 @@ export class SearchContainer extends HTMLElement {
     // todo: rewrite with for loop
     const ae = await Promise.all(sr.results.slice(0, 100).map(async (r) => {
       const d = await r.data()
-      return this.#createFragment(d)
+      return this.#createFragment(qs, d)
     }))
 
     const re = this.#resultsElement
@@ -410,7 +410,7 @@ export class SearchContainer extends HTMLElement {
     this.#filled = false
   }
 
-  #createFragment(d: PagefindFragment): DocumentFragment | undefined {
+  #createFragment(q: string, d: PagefindFragment): DocumentFragment | undefined {
     const t = this.#templateElement
     if (!t) {
       return undefined
@@ -418,13 +418,15 @@ export class SearchContainer extends HTMLElement {
 
     const f = document.importNode(t.content, true)
 
-    const u = f.querySelector("[data-search-container-link]")
-    if (u && u instanceof HTMLAnchorElement) {
-      u.href = d.url
+    const l = f.querySelector("[data-search-container-link]")
+    if (l && l instanceof HTMLAnchorElement) {
+      const u = new URL(d.url, "http://localhost/")
+      u.hash = `#:~:text=${encodeURIComponent(q)}`
+      l.href = u.toString().replace(u.origin, "")
       if (!d.meta || !d.meta.title) {
-        u.textContent = d.url
+        l.textContent = d.url
       } else {
-        u.textContent = d.meta.title
+        l.textContent = d.meta.title
       }
     }
 

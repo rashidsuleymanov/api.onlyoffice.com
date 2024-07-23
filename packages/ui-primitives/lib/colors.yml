@@ -1,0 +1,443 @@
+regular:
+  dark:
+    # Basics
+
+    base:
+      transparent: "#FFFFFF00"
+      black: "#1F1F1F" # hsl(0deg, 0%, 12%)
+      white: "#FAFAFA" # hsl(0deg, 0%, 98%)
+      gray:
+      - "#EDEDED" # hsl(0deg, 0%, 92.9%)
+      - "#D9D9D9" # hsl(0deg, 0%, 85.1%)
+      - "#C9C9C9" # hsl(0deg, 0%, 78.8%)
+      - "#B5B5B5" # hsl(0deg, 0%, 71%)
+      - "#9E9E9E" # hsl(0deg, 0%, 62%)
+      - "#858585" # hsl(0deg, 0%, 52.2%)
+      - "#6E6E6E" # hsl(0deg, 0%, 43.1%)
+      - "#595959" # hsl(0deg, 0%, 34.9%)
+      - "#454545" # hsl(0deg, 0%, 27.1%)
+      - "#333333" # hsl(0deg, 0%, 20%)
+      orange:
+      - "#FF855C" # hsl(15deg, 100%, 68%)
+      - "#FF6E3D" # hsl(15.2deg, 100%, 62%)
+      - "#F16741" # hsl(13deg, 86.3%, 60%)
+      red:
+      - "#B93737" # hsl(0deg, 54.2%, 47.1%)
+
+    # Functional
+
+    background:
+      default: base.gray[9]
+      muted: base.black
+      accent:
+        emphasis: base.orange[1]
+        muted: base.orange[0]
+
+    foreground:
+      default: base.white
+      muted: base.gray[4]
+      link: base.orange[1]
+      accent: base.orange[1]
+      danger: base.red[0]
+
+    border:
+      default: base.gray[6]
+      muted: base.gray[8]
+      transparent: base.transparent
+      accent:
+        emphasis: base.orange[1]
+        muted: base.orange[0]
+
+    # Patterns
+
+    window:
+      default:
+        background: base.gray[9]
+
+    focus:
+      default:
+        outline: base.orange[0]
+
+    temp-shadow:
+      default:
+        small: "0 7px 15px 0 #5454541A"
+        xxlarge: "0 12px 100px 0 #FF6E3D33"
+
+    button:
+      default:
+        foreground:
+          rest: foreground.default
+          hover: foreground.accent
+        background:
+          rest: background.default
+          hover: background.default
+        border:
+          rest: border.default
+          hover: border.accent.emphasis
+      accent:
+        foreground:
+          rest: base.white
+          hover: base.white
+        background:
+          rest: background.accent.emphasis
+          hover: background.accent.muted
+        border:
+          rest: border.accent.emphasis
+          hover: border.accent.muted
+
+    control:
+      default:
+        foreground:
+          rest: base.gray[6]
+          hover: base.gray[6]
+          active: foreground.default
+        background:
+          rest: base.gray[8]
+          hover: base.gray[8]
+          active: background.default
+        border:
+          rest: border.default
+          hover: base.gray[5]
+          active: base.white
+
+    code-editor:
+      default:
+        foreground: foreground.default
+        background: background.muted
+        border: border.default
+
+    code-editor-tab:
+      default:
+        background: base.gray[9]
+      active:
+        background: base.gray[8]
+
+    page-header:
+      default:
+        background: base.gray[9]
+        foreground: base.gray[4]
+        border: border.muted
+
+    page-footer:
+      default:
+        background:
+          rest: base.gray[9]
+          muted: base.gray[8]
+        foreground:
+          rest: foreground.default
+          muted: base.gray[6]
+        border:
+          rest: border.muted
+          muted: base.gray[7]
+
+    library-declaration:
+      default:
+        foreground:
+          decoration: foreground.muted
+          identifier: foreground.default
+          keyword: foreground.default
+          reference: foreground.link
+          text: foreground.default
+
+    # The colors below are inspired by the `starry-night/both` theme.
+    temp-sh:
+      comment: "#8b949e"
+      constant: "#79c0ff"
+      entity: "#d2a8ff"
+      storage-modifier-import: "#c9d1d9"
+      entity-tag: "#7ee787"
+      keyword: "#ff7b72"
+      string: "#a5d6ff"
+      variable: "#ffa657"
+      brackethighlighter-unmatched: "#f85149"
+      invalid-illegal-text: "#f0f6fc"
+      invalid-illegal-bg: "#8e1519"
+      carriage-return-text: "#f0f6fc"
+      carriage-return-bg: "#b62324"
+      string-regexp: "#7ee787"
+      markup-list: "#f2cc60"
+      markup-heading: "#1f6feb"
+      markup-italic: "#c9d1d9"
+      markup-bold: "#c9d1d9"
+      markup-deleted-text: "#ffdcd7"
+      markup-deleted-bg: "#67060c"
+      markup-inserted-text: "#aff5b4"
+      markup-inserted-bg: "#033a16"
+      markup-changed-text: "#ffdfb6"
+      markup-changed-bg: "#5a1e02"
+      markup-ignored-text: "#c9d1d9"
+      markup-ignored-bg: "#1158c7"
+      meta-diff-range: "#d2a8ff"
+      brackethighlighter-angle: "#8b949e"
+      sublimelinter-gutter-mark: "#484f58"
+      constant-other-reference-link: "#a5d6ff"
+
+    temp-base-icon:
+      black: "#333333"
+      white: "#FFFFFF"
+      gray:
+      - "#EFEFEF"
+      - "#C4C4C4"
+      - "#AAAAAA"
+      - "#808080"
+      - "#666666"
+      - "#444444"
+      sky:
+      - "#7CC6E4"
+      - "#9ADAF3"
+      - "#BDECFF"
+      - "#D9F4FF"
+      orange:
+      - "#FF6F3D"
+      - "#FF7541"
+      - "#FF8E3D"
+      - "#FFC671"
+
+    temp-icon:
+      24:
+        any:
+        - foreground.default
+        - temp-base-icon.orange[0]
+      48:
+        desktop-editors:
+        - temp-base-icon.black     # "#333333"
+        - temp-base-icon.gray[2]   # "#AAAAAA"
+        - temp-base-icon.gray[4]   # "#666666"
+        - temp-base-icon.sky[1]    # "#9ADAF3"
+        - temp-base-icon.sky[1]    # "#9ADAF3"
+        - temp-base-icon.gray[3]   # "#808080"
+        - temp-base-icon.orange[0] # "#FF6F3D"
+        - temp-base-icon.gray[3]   # "#808080"
+        - temp-base-icon.orange[2] # "#FF8E3D"
+      64:
+        desktop-editors:
+        - temp-base-icon.black     # "#333333"
+        - temp-base-icon.gray[2]   # "#AAAAAA"
+        - temp-base-icon.gray[4]   # "#666666"
+        - temp-base-icon.sky[1]    # "#9ADAF3"
+        - temp-base-icon.sky[1]    # "#9ADAF3"
+        - temp-base-icon.gray[3]   # "#808080"
+        - temp-base-icon.orange[0] # "#FF6F3D"
+        - temp-base-icon.orange[2] # "#FF8E3D"
+
+  light:
+    # Basics
+
+    base:
+      transparent: "#FFFFFF00"
+      black: "#333333" # hsl(0deg, 0%, 20%)
+      white: "#FFFFFF"
+      gray:
+      - "#FAFAFA" # hsl(0deg, 0%, 98%)
+      - "#F5F5F5" # hsl(0deg, 0%, 96.1%)
+      - "#EDEDED" # hsl(0deg, 0%, 92.9%)
+      - "#DEDEDE" # hsl(0deg, 0%, 87.1%)
+      - "#C7C7C7" # hsl(0deg, 0%, 78%)
+      - "#A6A6A6" # hsl(0deg, 0%, 65.1%)
+      - "#878787" # hsl(0deg, 0%, 52.9%)
+      - "#666666" # hsl(0deg, 0%, 40%)
+      - "#4F4F4F" # hsl(0deg, 0%, 31%)
+      - "#424242" # hsl(0deg, 0%, 25.9%)
+      orange:
+      - "#FF855C" # hsl(15deg, 100%, 68%)
+      - "#FF6E3D" # hsl(15.2deg, 100%, 62%)
+      - "#F16741" # hsl(13deg, 86.3%, 60%)
+      red:
+      - "#B93737" # hsl(0deg, 54.2%, 47.1%)
+
+    # Functional
+
+    background:
+      default: base.white
+      muted: base.gray[1]
+      accent:
+        emphasis: base.orange[1]
+        muted: base.orange[0]
+
+    foreground:
+      default: base.black
+      muted: base.gray[6]
+      link: base.orange[1]
+      accent: base.orange[1]
+      danger: base.red[0]
+
+    border:
+      default: base.gray[4]
+      muted: base.gray[2]
+      transparent: base.transparent
+      accent:
+        emphasis: base.orange[1]
+        muted: base.orange[0]
+
+    # Patterns
+
+    window:
+      default:
+        background: base.gray[9]
+
+    focus:
+      default:
+        outline: base.orange[0]
+
+    temp-shadow:
+      default:
+        small: "0 7px 15px 0 #5454541A"
+        xxlarge: "0 12px 100px 0 #FF6E3D33"
+
+    # badge:
+
+    button:
+      default:
+        foreground:
+          rest: foreground.default
+          hover: foreground.accent
+        background:
+          rest: background.default
+          hover: background.default
+        border:
+          rest: border.default
+          hover: border.accent.emphasis
+      accent:
+        foreground:
+          rest: base.white
+          hover: base.white
+        background:
+          rest: background.accent.emphasis
+          hover: background.accent.muted
+        border:
+          rest: border.accent.emphasis
+          hover: border.accent.muted
+
+    control:
+      default:
+        foreground:
+          rest: base.gray[4]
+          hover: base.gray[4]
+          active: foreground.default
+        background:
+          rest: base.gray[0]
+          hover: base.gray[0]
+          active: background.default
+        border:
+          rest: border.default
+          hover: base.gray[5]
+          active: base.black
+
+    code-editor:
+      default:
+        background: background.muted
+        border: border.default
+
+    code-editor-tab:
+      default:
+        background: base.gray[2]
+      active:
+        background: base.white
+
+    page-header:
+      default:
+        background: base.gray[9]
+        foreground: base.gray[4]
+        border: base.gray[9]
+
+    page-footer:
+      default:
+        background:
+          rest: base.gray[9]
+          muted: base.gray[8]
+        foreground:
+          rest: base.white
+          muted: base.gray[6]
+        border:
+          rest: base.gray[9]
+          muted: base.gray[7]
+
+    library-declaration:
+      default:
+        foreground:
+          decoration: foreground.muted
+          identifier: foreground.default
+          keyword: foreground.default
+          reference: foreground.link
+          text: foreground.default
+
+    # The colors below are inspired by the `starry-night/both` theme.
+    temp-sh:
+      comment: "#57606a"
+      constant: "#0550ae"
+      entity: "#6639ba"
+      storage-modifier-import: "#24292f"
+      entity-tag: "#116329"
+      keyword: "#cf222e"
+      string: "#0a3069"
+      variable: "#953800"
+      brackethighlighter-unmatched: "#82071e"
+      invalid-illegal-text: "#f6f8fa"
+      invalid-illegal-bg: "#82071e"
+      carriage-return-text: "#f6f8fa"
+      carriage-return-bg: "#cf222e"
+      string-regexp: "#116329"
+      markup-list: "#3b2300"
+      markup-heading: "#0550ae"
+      markup-italic: "#24292f"
+      markup-bold: "#24292f"
+      markup-deleted-text: "#82071e"
+      markup-deleted-bg: "#ffebe9"
+      markup-inserted-text: "#116329"
+      markup-inserted-bg: "#dafbe1"
+      markup-changed-text: "#953800"
+      markup-changed-bg: "#ffd8b5"
+      markup-ignored-text: "#eaeef2"
+      markup-ignored-bg: "#0550ae"
+      meta-diff-range: "#8250df"
+      brackethighlighter-angle: "#57606a"
+      sublimelinter-gutter-mark: "#8c959f"
+      constant-other-reference-link: "#0a3069"
+
+    temp-base-icon:
+      black: "#333333"
+      white: "#FFFFFF"
+      gray:
+      - "#F9F9F9"
+      - "#F5F5F5"
+      - "#EFEFEF"
+      - "#E2E2E2"
+      - "#C4C4C4"
+      - "#AAAAAA"
+      - "#444444"
+      sky:
+      - "#D9F4FF"
+      - "#BDECFF"
+      - "#9ADAF3"
+      orange:
+      - "#FF6F3D"
+      - "#FF7541"
+      - "#FF8E3D"
+      - "#FFC671"
+
+    temp-icon:
+      24:
+        any:
+        - foreground.default
+        - temp-base-icon.orange[0]
+      48:
+        desktop-editors:
+        - temp-base-icon.gray[6]   # "#333333"
+        - temp-base-icon.white     # white
+        - temp-base-icon.white     # white
+        - temp-base-icon.sky[2]    # "#9ADAF3"
+        - temp-base-icon.sky[0]    # "#D9F4FF"
+        - temp-base-icon.white     # white
+        - temp-base-icon.orange[0] # "#FF6F3D"
+        - temp-base-icon.white     # white
+        - temp-base-icon.orange[2] # "#FF8E3D"
+      64:
+        desktop-editors:
+        - temp-base-icon.gray[6]   # "#333333"
+        - temp-base-icon.white     # white
+        - temp-base-icon.white     # white
+        - temp-base-icon.sky[2]    # "#9ADAF3"
+        - temp-base-icon.sky[0]    # "#D9F4FF"
+        - temp-base-icon.white     # white
+        - temp-base-icon.orange[0] # "#FF6F3D"
+        - temp-base-icon.orange[2] # "#FF8E3D"

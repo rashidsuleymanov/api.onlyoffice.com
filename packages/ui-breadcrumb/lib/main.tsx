@@ -11,14 +11,14 @@ export function Breadcrumb(p: HTMLAttributes<HTMLElement>): JSX.Element {
   const crumbs = toChildArray(children)
 
   return <nav class="breadcrumb" {...props}>
-    {crumbs.map((c, i) => <C key={i} index={i}>{c}</C>)}
+    {crumbs.map((c, i) => <C index={i}>{c}</C>)}
   </nav>
 
   function C(p: ChildrenIncludable & {index: number}): JSX.Element {
     if (p.index === crumbs.length - 1) {
       return cloneElement(p.children, {"aria-current": "page"})
     }
-    return <>{p.children}<ChevronRightIcon class="breadcrumb__separator" /></>
+    return <>{p.children}<ChevronRightIcon width={11} class="breadcrumb__separator" /></>
   }
 }
 

@@ -5,7 +5,7 @@
 .tree__limb {
   list-style: none;
   margin: 0;
-  padding-inline-start: 16px;
+  padding-inline-start: 23px;
 }
 
 .tree__limb_bole {
@@ -13,7 +13,7 @@
 }
 
 .tree__branch {
-  margin-top: 8px;
+  margin-top: var(--base-size-12);
 }
 
 .tree__branch:first-of-type {
@@ -21,7 +21,7 @@
 }
 
 .tree__branch_bole {
-  margin-top: 30px;
+  margin-top: var(--base-size-32);
 }
 
 .tree__branch_bole > .tree__limb {
@@ -29,27 +29,39 @@
 }
 
 .tree__twig {
-  pointer-events: none;
+  display: flex;
   overflow-x: hidden;
+  pointer-events: none;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .tree__twig ~ .tree__limb {
-  margin-top: 8px;
+  margin-top: var(--base-size-16);
 }
 
 .tree__twig_closed ~ .tree__limb {
   display: none;
 }
 
+.tree__twig_closed > .tree__fruit {
+  margin-top: -1px;
+}
+
+.tree__twig_closed > .tree__fruit svg {
+  transform: rotate(-90deg);
+}
+
 .tree__fruit {
-  pointer-events: auto;
-  cursor: pointer;
   background-color: transparent;
   border: 0;
+  cursor: pointer;
+  display: flex;
+  margin-bottom: -4px;
+  margin-left: -5px;
+  margin-top: 0;
   padding: 0;
-  width: 8px;
+  pointer-events: auto;
 }
 
 .tree__fruit * {
@@ -57,34 +69,34 @@
 }
 
 .tree__fruit svg {
-  color: var(--tree-dropdown-color);
+  color: var(--color-foreground-muted);
 }
 
 .tree__leaf {
   pointer-events: auto;
   color: inherit;
-  font-size: 13px;
-  padding-inline-start: 16px;
+  font-size: var(--text-body-font-size-medium);
+  line-height: var(--text-body-line-height-medium);
+  padding-inline-start: 23px;
   text-decoration: none;
 }
 
 .tree__leaf:hover,
 .tree__leaf:focus {
-  color: var(--tree-focus-foreground-color);
+  color: var(--color-foreground-link);
 }
 
 .tree__leaf_current {
-  color: var(--tree-focus-foreground-color);
+  color: var(--color-foreground-link);
 }
 
 .tree__leaf_bole {
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--tree-heading-foreground-color);
   padding-inline-start: 0;
 }
 
 .tree__fruit ~ .tree__leaf {
-  margin-left: 8px;
+  margin-left: 4px;
   padding-inline-start: 0;
 }

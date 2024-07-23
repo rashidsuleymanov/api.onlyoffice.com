@@ -1,30 +1,30 @@
 /* The styles below are inspired by the `starry-night/both` theme */
 
 .pl-c {
-  color: var(--syntax-highlight-comment-color);
+  color: var(--temp-color-sh-comment);
 }
 
 .pl-c1,
 .pl-s .pl-v {
-  color: var(--syntax-highlight-constant-color);
+  color: var(--temp-color-sh-constant);
 }
 
 .pl-e,
 .pl-en {
-  color: var(--syntax-highlight-entity-color);
+  color: var(--temp-color-sh-entity);
 }
 
 .pl-smi,
 .pl-s .pl-s1 {
-  color: var(--syntax-highlight-storage-modifier-import-color);
+  color: var(--temp-color-sh-storage-modifier-import);
 }
 
 .pl-ent {
-  color: var(--syntax-highlight-entity-tag-color);
+  color: var(--temp-color-sh-entity-tag);
 }
 
 .pl-k {
-  color: var(--syntax-highlight-keyword-color);
+  color: var(--temp-color-sh-keyword);
 }
 
 .pl-s,
@@ -34,88 +34,88 @@
 .pl-sr .pl-cce,
 .pl-sr .pl-sre,
 .pl-sr .pl-sra {
-  color: var(--syntax-highlight-string-color);
+  color: var(--temp-color-sh-string);
 }
 
 .pl-v,
 .pl-smw {
-  color: var(--syntax-highlight-variable-color);
+  color: var(--temp-color-sh-variable);
 }
 
 .pl-bu {
-  color: var(--syntax-highlight-brackethighlighter-unmatched-color);
+  color: var(--temp-color-sh-brackethighlighter-unmatched);
 }
 
 .pl-ii {
-  color: var(--syntax-highlight-invalid-illegal-text-color);
-  background-color: var(--syntax-highlight-invalid-illegal-bg-color);
+  color: var(--temp-color-sh-invalid-illegal-text);
+  background-color: var(--temp-color-sh-invalid-illegal-bg);
 }
 
 .pl-c2 {
-  color: var(--syntax-highlight-carriage-return-text-color);
-  background-color: var(--syntax-highlight-carriage-return-bg-color);
+  color: var(--temp-color-sh-carriage-return-text);
+  background-color: var(--temp-color-sh-carriage-return-bg);
 }
 
 .pl-sr .pl-cce {
   font-weight: bold;
-  color: var(--syntax-highlight-string-regexp-color);
+  color: var(--temp-color-sh-string-regexp);
 }
 
 .pl-ml {
-  color: var(--syntax-highlight-markup-list-color);
+  color: var(--temp-color-sh-markup-list);
 }
 
 .pl-mh,
 .pl-mh .pl-en,
 .pl-ms {
   font-weight: bold;
-  color: var(--syntax-highlight-markup-heading-color);
+  color: var(--temp-color-sh-markup-heading);
 }
 
 .pl-mi {
   font-style: italic;
-  color: var(--syntax-highlight-markup-italic-color);
+  color: var(--temp-color-sh-markup-italic);
 }
 
 .pl-mb {
   font-weight: bold;
-  color: var(--syntax-highlight-markup-bold-color);
+  color: var(--temp-color-sh-markup-bold);
 }
 
 .pl-md {
-  color: var(--syntax-highlight-markup-deleted-text-color);
-  background-color: var(--syntax-highlight-markup-deleted-bg-color);
+  color: var(--temp-color-sh-markup-deleted-text);
+  background-color: var(--temp-color-sh-markup-deleted-bg);
 }
 
 .pl-mi1 {
-  color: var(--syntax-highlight-markup-inserted-text-color);
-  background-color: var(--syntax-highlight-markup-inserted-bg-color);
+  color: var(--temp-color-sh-markup-inserted-text);
+  background-color: var(--temp-color-sh-markup-inserted-bg);
 }
 
 .pl-mc {
-  color: var(--syntax-highlight-markup-changed-text-color);
-  background-color: var(--syntax-highlight-markup-changed-bg-color);
+  color: var(--temp-color-sh-markup-changed-text);
+  background-color: var(--temp-color-sh-markup-changed-bg);
 }
 
 .pl-mi2 {
-  color: var(--syntax-highlight-markup-ignored-text-color);
-  background-color: var(--syntax-highlight-markup-ignored-bg-color);
+  color: var(--temp-color-sh-markup-ignored-text);
+  background-color: var(--temp-color-sh-markup-ignored-bg);
 }
 
 .pl-mdr {
   font-weight: bold;
-  color: var(--syntax-highlight-meta-diff-range-color);
+  color: var(--temp-color-sh-meta-diff-range);
 }
 
 .pl-ba {
-  color: var(--syntax-highlight-brackethighlighter-angle-color);
+  color: var(--temp-color-sh-brackethighlighter-angle);
 }
 
 .pl-sg {
-  color: var(--syntax-highlight-sublimelinter-gutter-mark-color);
+  color: var(--temp-color-sh-sublimelinter-gutter-mark);
 }
 
 .pl-corl {
   text-decoration: underline;
-  color: var(--syntax-highlight-constant-other-reference-link-color);
+  color: var(--temp-color-sh-constant-other-reference-link);
 }

@@ -1,0 +1,42 @@
+/*
+Modern browsers already handle basic styles quite well. Therefore, the purpose
+of this package is not to normalize them, but rather to establish the basics
+that will make subsequent work easier. That being said, we can still draw
+inspiration from the good old normalize.css.
+
+https://github.com/necolas/normalize.css/tree/8.0.1/
+*/
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+[hidden] {
+  display: none !important;
+}
