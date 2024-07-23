@@ -1,34 +1,35 @@
 .button {
-  background-color: var(--color-button-neutral-background);
-  border-radius: 3px;
-  border: 1px solid var(--color-button-neutral-border);
-  color: var(--color-button-neutral-foreground);
+  background-color: var(--color-button-default-background-rest);
+  border-color: var(--color-button-default-border-rest);
+  border-radius: var(--size-border-radius-small);
+  border-style: solid;
+  border-width: var(--size-border-width-thin);
+  color: var(--color-button-default-foreground-rest);
   cursor: pointer;
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: inherit;
-  padding: 8px 12px;
+  font-size: var(--text-body-font-size-small);
+  font-weight: var(--base-text-font-weight-medium);
+  padding-block: var(--size-control-padding-block-medium);
+  padding-inline: var(--size-control-padding-inline-medium);
   text-transform: uppercase;
   white-space: nowrap;
 }
 
-.button:hover,
-.button:focus {
-  background-color: var(--color-button-neutral-focus-background);
-  border-color: var(--color-button-neutral-focus-border);
-  color: var(--color-button-neutral-focus-foreground);
+.button:focus-visible,
+.button:hover {
+  background-color: var(--color-button-default-background-hover);
+  border-color: var(--color-button-default-border-hover);
+  color: var(--color-button-default-foreground-hover);
 }
 
 .button_accent {
-  background-color: var(--color-button-accent-background);
-  border-color: var(--color-button-accent-border);
-  color: var(--color-button-accent-foreground);
+  background-color: var(--color-button-accent-background-rest);
+  border-color: var(--color-button-accent-border-rest);
+  color: var(--color-button-accent-foreground-rest);
 }
 
-.button_accent:hover,
-.button_accent:focus {
-  background-color: var(--color-button-accent-focus-background);
-  border-color: var(--color-button-accent-focus-border);
-  color: var(--color-button-accent-focus-foreground);
+.button_accent:focus-visible,
+.button_accent:hover {
+  background-color: var(--color-button-accent-background-hover);
+  border-color: var(--color-button-accent-border-hover);
+  color: var(--color-button-accent-foreground-hover);
 }
