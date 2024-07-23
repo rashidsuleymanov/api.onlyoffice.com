@@ -544,6 +544,9 @@ function createParameter(s: OpenAPI.ParameterObject): REST.Property | undefined 
   if (s.required === true) {
     p.required = true
   }
+  if (s.example !== undefined) {
+    p.example = s.example
+  }
   return p
 }
 
@@ -766,6 +769,9 @@ function createObjectType(s: OpenAPI.NonArraySchemaObject): REST.ObjectType {
         p.identifier = k
         if (s.required !== undefined && s.required.includes(k)) {
           p.required = true
+        }
+        if (!("$ref" in v) && v.example !== undefined) {
+          p.example = v.example
         }
         return p
       })
