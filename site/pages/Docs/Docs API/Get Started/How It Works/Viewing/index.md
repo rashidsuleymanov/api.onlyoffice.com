@@ -1,3 +1,7 @@
+---
+order: -7
+---
+
 The viewing opening mode allows the user to view the document only without modifying its data. In order to enable this mode, the [editorConfig.mode](../../../Usage%20API/Config/Editor/index.md#mode) parameter must be set to **view**.
 
 Starting from version 7.2, the **live viewer** is added to the text document, spreadsheet and presentation editors. To apply viewing modes, use the [editorConfig.coEditing](../../../Usage%20API/Config/Editor/index.md#coediting) parameter:

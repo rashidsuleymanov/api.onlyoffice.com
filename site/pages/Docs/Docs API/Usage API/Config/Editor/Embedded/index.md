@@ -4,45 +4,45 @@ The embedded section is for the **embedded** document type only (see the [config
 
 Defines the absolute URL to the document serving as a source file for the document embedded into the web page.
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/embedded?doc=exampledocument1.docx`
+Example: `https://example.com/embedded?doc=exampledocument1.docx`
 
 
 ## fullscreenUrl
 
 Defines the absolute URL to the document which will open in full screen mode.
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/embedded?doc=exampledocument1.docx#fullscreen`
+Example: `https://example.com/embedded?doc=exampledocument1.docx#fullscreen`
 
 
 ## saveUrl
 
 Defines the absolute URL that will allow the document to be saved onto the user personal computer.
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/download?doc=exampledocument1.docx`
+Example: `https://example.com/download?doc=exampledocument1.docx`
 
 
 ## shareUrl
 
 Defines the absolute URL that will allow other users to share this document.
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/view?doc=exampledocument1.docx`
+Example: `https://example.com/view?doc=exampledocument1.docx`
 
 
 ## toolbarDocked
 
 Defines the place for the embedded viewer toolbar, can be either **top** or **bottom**.
 
-**Type**: string
+Type: string
 
-**Example**: "top"
+Example: "top"
 
 ![Embedded](/assets/images/editor/embedded.png)
 

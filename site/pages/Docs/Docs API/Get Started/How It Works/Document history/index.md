@@ -1,3 +1,7 @@
+---
+order: -18
+---
+
 You can view the history of text documents, spreadsheets or presentations using the **document editor**.
 
 The document history is stored with the document storage service. The **document editor** displays the document history as a version list at the left-side panel. When you select a document version from the list it will be displayed for preview.

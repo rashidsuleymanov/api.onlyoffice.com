@@ -27,18 +27,18 @@ Returns information about the file properties, access rights and editor settings
 
 A file name without a path that is displayed in the user interface (UI) and determines the file extension.
 
-**Type**: string
+Type: string
 
-**Example**: "Example File Name.docx"
+Example: "Example File Name.docx"
 
 
 ## Version
 
 The current version of the file based on the server file version schema. Every time the document is edited and saved, the version must be changed. The version values must never repeat for a given file.
 
-**Type**: string
+Type: string
 
-**Example**: "Khirz6zTPdfd7"
+Example: "Khirz6zTPdfd7"
 
 
 # Breadcrumb properties
@@ -47,45 +47,45 @@ The current version of the file based on the server file version schema. Every t
 
 A name that the WOPI client displays to the user to indicate the brand name of the WOPI server.
 
-**Type**: string
+Type: string
 
-**Example**: "Example Brand Name"
+Example: "Example Brand Name"
 
 
 ## BreadcrumbBrandUrl
 
 URL to a web page that the WOPI client navigates to when the user clicks the UI displaying [BreadcrumbBrandName](#breadcrumbbrandname).
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/url-to-breadcrumb-brand-page.com`
+Example: `https://example.com/url-to-breadcrumb-brand-page.com`
 
 
 ## BreadcrumbDocName
 
 A file name that the WOPI client displays to the user. If this parameter is not specified, then the [BaseFileName](#basefilename) parameter is used.
 
-**Type**: string
+Type: string
 
-**Example**: "Example Breadcrumb File Name.docx"
+Example: "Example Breadcrumb File Name.docx"
 
 
 ## BreadcrumbFolderName
 
 A name that the WOPI client displays to the user that indicates the name of the folder that contains the file.
 
-**Type**: string
+Type: string
 
-**Example**: "Example Folder Name" 
+Example: "Example Folder Name" 
 
 
 ## BreadcrumbFolderUrl
 
 URL to a web page that the WOPI client navigates to when the user clicks the UI displaying [BreadcrumbFolderName](#breadcrumbfoldername).
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/url-to-breadcrumb-brand-folder`
+Example: `https://example.com/url-to-breadcrumb-brand-folder`
 
 
 # PostMessage properties
@@ -94,54 +94,54 @@ URL to a web page that the WOPI client navigates to when the user clicks the UI 
 
 Specifies if the WOPI client should notify the WOPI server in case the user closes the rendering or editing client currently using this file. The host expects to receive the [UI\_Close](../../PostMessage/index.md#ui_close) PostMessage when the *Close* UI in the online office is activated.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 
 ## EditModePostMessage
 
 Specifies if the WOPI client should notify the WOPI server in case the user tries to edit a file. The host expects to receive the [UI\_Edit](../../PostMessage/index.md#ui_edit) PostMessage when the *Edit* UI in the online office is activated.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 
 ## EditNotificationPostMessage
 
 Specifies if the WOPI client should notify the WOPI server in case the user tries to edit a file. The host expects to receive the [Edit\_Notification](../../PostMessage/index.md#edit_notification) PostMessage.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 
 ## FileSharingPostMessage
 
 Specifies if the WOPI client should notify the WOPI server in case the user tries to share a file. The host expects to receive the [UI\_Sharing](../../PostMessage/index.md#ui_sharing) PostMessage when the *Share* UI in the online office is activated.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 
 ## FileVersionPostMessage
 
 Specifies if the WOPI client will notify the WOPI server in case the user tries to navigate to the previous file version. The host expects to receive the [UI\_FileVersions](../../PostMessage/index.md#ui_fileversions) PostMessage when the *Previous Versions* UI in the online office is activated.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 
 ## PostMessageOrigin
 
 A domain that the WOPI client must use as the [targetOrigin](../../PostMessage/index.md#targetorigin) parameter when sending messages as described in [\[W3C-HTML5WEBMSG\]](https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages).
 
-**Type**: string
+Type: string
 
-**Example**: `https://exampledomain.com`
+Example: `https://exampledomain.com`
 
 
 # File URL properties
@@ -150,36 +150,36 @@ A domain that the WOPI client must use as the [targetOrigin](../../PostMessage/i
 
 URL to a web page that the implementer deems useful to the user in case the user closes the rendering or editing client currently using this file.
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/url-to-close-page.com`
+Example: `https://example.com/url-to-close-page.com`
 
 
 ## FileSharingUrl
 
 URL to the location that allows the user to share a file.
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/url-to-sharing-page.com`
+Example: `https://example.com/url-to-sharing-page.com`
 
 
 ## FileVersionUrl
 
 URL to the location that allows the user to view the previous file version.
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/url-to-previous-version-page.com`
+Example: `https://example.com/url-to-previous-version-page.com`
 
 
 ## HostEditUrl
 
 URL to a web page where a file can be edited using the WOPI client.
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/url-to-host-page.com`
+Example: `https://example.com/url-to-host-page.com`
 
 
 # Other miscellaneous properties
@@ -192,45 +192,45 @@ Specifies if the WOPI client must disable the **Copy and Paste** functionality w
 * **BlockAll** - the **Copy and Paste** functionality is completely disabled within the application;
 * **CurrentDocumentOnly** - the **Copy and Paste** functionality is enabled but content can only be copied and pasted within the file currently open in the application.
 
-**Type**: string
+Type: string
 
-**Example**: "BlockAll"
+Example: "BlockAll"
 
 
 ## DisablePrint
 
 Specifies if the WOPI client must disable any print functionality under its control.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 
 ## FileExtension
 
 A file extension which must begin with a ".".
 
-**Type**: string
+Type: string
 
-**Example**: ".docx"
+Example: ".docx"
 
 
 ## FileNameMaxLength
 
 The maximum length of a file name, including the file extension, supported by the WOPI server.
 
-**Type**: integer
+Type: integer
 
-**Example**: 20
+Example: 20
 
 
 ## LastModifiedTime
 
 The last time when the file was modified. This time must always be a UTC time, and must be formatted in ISO 8601 round-trip format. This property can be specified as an alternative to the [Version](#version) property.
 
-**Type**: string
+Type: string
 
-**Example**: "2009-06-15T13:45:30.0000000Z"
+Example: "2009-06-15T13:45:30.0000000Z"
 
 
 # User metadata properties
@@ -239,27 +239,27 @@ The last time when the file was modified. This time must always be a UTC time, a
 
 Specifies if the user is anonymous.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 
 ## UserFriendlyName
 
 A user name. If it is undefined, the WOPI client may be configured to use a placeholder string in some scenarios, or to show no name at all.
 
-**Type**: string
+Type: string
 
-**Example**: "John Smith"
+Example: "John Smith"
 
 
 ## UserId
 
 A unique user identifier that is specified by the WOPI server.
 
-**Type**: string
+Type: string
 
-**Example**: "uid-1"
+Example: "uid-1"
 
 
 # User permissions properties
@@ -268,45 +268,45 @@ A unique user identifier that is specified by the WOPI server.
 
 Specifies if a file cannot be changed by the current user.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 
 ## UserCanNotWriteRelative
 
 Specifies if the user has permissions to create new files on the WOPI server or not. The **true** value means that the [PutRelativeFile](../PutRelativeFile/index.md) execution will fail for this user on the current file. By default, this parameter is **false** and the *PutRelativeFile* operation is executed.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: false
+Example: false
 
 
 ## UserCanRename
 
 Specifies if the user has permissions to rename a file.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 
 ## UserCanReview
 
 Specifies if the user has permissions to review a file.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 
 ## UserCanWrite
 
 Specifies if the user has permissions to edit a file.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 
 # WOPI host capabilities properties
@@ -315,36 +315,36 @@ Specifies if the user has permissions to edit a file.
 
 Specifies if the WOPI server supports the [Lock](../Lock/index.md), [Unlock](/editors/wopi/restapi/unlock), and [RefreshLock](../RefreshLock/index.md) operations.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 
 ## SupportsRename
 
 Specifies if the WOPI server supports the renaming permission.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 
 ## SupportsReviewing
 
 Specifies if the WOPI server supports the review permission.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 
 ## SupportsUpdate
 
 Specifies if the WOPI server supports the [PutFile](../PutFile/index.md) and [PutRelativeFile](../PutRelativeFile/index.md) operations.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 
 # Nextcloud/Collabora/Seafile properties
@@ -353,15 +353,15 @@ Specifies if the WOPI server supports the [PutFile](../PutFile/index.md) and [Pu
 
 Specifies whether to enable the menu entry and toolbar item which call the [UI\_InsertGraphic](../../PostMessage/index.md#ui_insertgraphic) message. This property is used to display a user interface element (for example, a dialog) allowing the user to pick an image from the integration. The integration is supposed to provide a temporary URL that may be downloaded once, and return it back via the [Action\_InsertGraphic](../../PostMessage/index.md#action_insertgraphic) message with *Values* set to the temporary URL.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: true
+Example: true
 
 
 ## HidePrintOption
 
 Specifies if the WOPI server hides the print option from the file menu bar in the UI.
 
-**Type**: boolean
+Type: boolean
 
-**Example**: false
+Example: false

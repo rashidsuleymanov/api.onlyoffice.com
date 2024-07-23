@@ -14,28 +14,28 @@ Defines the object received when the user takes an action with the document. The
 
 The *userid* field value is the user identifier.
 
-**Type**: array of object
+Type: array of object
 
 
 ## changeshistory
 
 Defines the array of objects with the document changes history. The object is present when the *status* value is equal to **2** or **3** only. Must be sent as a property *changes* of the object sent as the argument to the [refreshHistory](../Methods/index.md#refreshhistory) method. Removed since version 4.2, please use [history](#history) instead.
 
-**Type**: array of object
+Type: array of object
 
 
 ## changesurl
 
 Defines the link to the file with the document editing data used to track and display the document changes history. The link is present when the *status* value is equal to **2** or **3** only. The file must be saved and its address must be sent as *changesUrl* parameter using the [setHistoryData](../Methods/index.mds#sethistorydata) method to show the changes corresponding to the specific document version.
 
-**Type**: string
+Type: string
 
 
 ## filetype
 
 Defines an extension of the document that is downloaded from the link specified with the [url](#url) parameter. The file type is OOXML by default but if the [assemblyFormatAsOrigin](../../Get%20Started/How%20It%20Works/Saving%20file/index.md#saving-in-original-format) server setting is enabled, the file will be saved in its original format.
 
-**Type**: string
+Type: string
 
 
 ## forcesavetype
@@ -49,7 +49,7 @@ Defines the type of initiator when the [force saving](../../Get%20Started/How%20
 
 The type is present when the *status* value is equal to **6** or **7** only.
 
-**Type**: integer
+Type: integer
 
 
 ## formsdataurl
@@ -65,21 +65,21 @@ Defines the URL to the JSON file with the submitted form data. The array structu
 
 The object is present when the *status* value is equal to *6* and the *forcesavetype* value is equal to *3*.
 
-**Type**: object
+Type: object
 
 
 ## history
 
 Defines the object with the document changes history. The object is present when the *status* value is equal to **2** or **3** only. It contains the object *changes* and *serverVersion*, which must be sent as properties *changes* and *serverVersion* of the object sent as the argument to the [refreshHistory](../Methods/index.md#refreshhistory) method.
 
-**Type**: object
+Type: object
 
 
 ## key*
 
 Defines the edited document identifier.
 
-**Type**: string
+Type: string
 
 
 ## status*
@@ -93,28 +93,28 @@ Defines the status of the document. Can have the following values:
 * **6** - document is being edited, but the current document state is saved;
 * **7** - error has occurred while force saving the document.
 
-**Type**: integer
+Type: integer
 
 
 ## url
 
 Defines the link to the edited document to be saved with the document storage service. The link is present when the *status* value is equal to **2**, **3**, **6** or **7** only.
 
-**Type**: string
+Type: string
 
 
 ## userdata
 
 Defines the custom information sent to the command service for the [forcesave](../../Additional%20API/Command%20service/forcesave/index.md) and [info](../../Additional%20API/Command%20service/info/index.md) commands in case it was present in the request.
 
-**Type**: string
+Type: string
 
 
 ## users
 
 Defines the list of the identifiers of the users who opened the document for editing; when the document has been changed the **users** will return the identifier of the user who was the last to edit the document (for *status* **2** and *status* **6** replies).
 
-**Type**: array of string
+Type: array of string
 
 \* *- required parameter*
 

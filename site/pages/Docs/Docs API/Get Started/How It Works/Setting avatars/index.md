@@ -1,3 +1,7 @@
+---
+order: -1
+---
+
 The reference figure and the steps below explain the process of setting the avatars for the users in ONLYOFFICE Docs.
 
 <img alt="Setting avatars" src="/assets/images/editor/avatars.png" width="720px">

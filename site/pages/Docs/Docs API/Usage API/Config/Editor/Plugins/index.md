@@ -4,27 +4,27 @@ The plugins section allows to connect the special add-ons to your ONLYOFFICE Doc
 
 Defines the array of the identifiers (as entered in [config.json](../../../../../Plugin%20and%20Macros/Usage%20API/Config/index.md#guid)) for the plugins, which will automatically start when the editor opens, and the order the plugins will run one-by-one.
 
-**Type**: array of string
+Type: array of string
 
-**Example**: ["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]
+Example: ["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]
 
 
 ## pluginsData
 
 Defines the array of absolute URLs to the plugin configuration files ([config.json](../../../../../Plugin%20and%20Macros/Usage%20API/Config/index.md)).
 
-**Type**: array of string
+Type: array of string
 
-**Example**: `["https://example.com/plugins/chess-plugin/config.json"]`
+Example: `["https://example.com/plugins/chess-plugin/config.json"]`
 
 
 ## url
 
 Defines the absolute URL to the directory where the plugins are stored. Deprecated since version 4.3, please use the absolute URLs in [pluginsData](#pluginsdata) field.
 
-**Type**: string
+Type: string
 
-**Example**: `https://example.com/plugins/`
+Example: `https://example.com/plugins/`
 
 ![Plugins](/assets/images/editor/plugins.png)
 

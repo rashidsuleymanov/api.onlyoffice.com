@@ -53,13 +53,3 @@ Please keep in mind the following security aspects when you are using test examp
    * **Ruby** - *web/documentserver-example/ruby/config/application.rb*
 
 4. In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. And you must also make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
-
-The result should look like the demo preview below.
-
-## Demo Preview
-
-|                                                                    |                                                                              |                                                                                |                                                              |
-| ------------------------------------------------------------------ | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Demo Document editor](/editors/demopreview?type=text#DemoPreview) | [Demo Spreadsheet editor](/editors/demopreview?type=spreadsheet#DemoPreview) | [Demo Presentation editor](/editors/demopreview?type=presentation#DemoPreview) | [Demo Pdf editor](/editors/demopreview?type=pdf#DemoPreview) |
-
-If you have any further questions, please contact us at <integration@onlyoffice.com>.

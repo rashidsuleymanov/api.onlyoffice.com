@@ -653,12 +653,9 @@ Defines if the current text is displayed underlined or not.
 
 ## Text document file formats
 
-|     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     | **Output format** |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ----------------- | --- | --- |
 
-|                  |     |      |      |       |      |      |      |     |     |      |     |     |     |     |      |     |     |     |
+| | bmp | docm | docx | docxf | dotm | dotx | epub | fb2 | gif | html | jpg | odt | ott | pdf | pdfa | png | rtf | txt |
 | ---------------- | --- | ---- | ---- | ----- | ---- | ---- | ---- | --- | --- | ---- | --- | --- | --- | --- | ---- | --- | --- | --- |
-| **Input format** | bmp | docm | docx | docxf | dotm | dotx | epub | fb2 | gif | html | jpg | odt | ott | pdf | pdfa | png | rtf | txt |
 | djvu             | +   |      |      |       |      |      |      |     | +   |      | +   |     |     | +   | +    | +   |     |     |
 | doc              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
 | docm             | +   |      | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
@@ -689,12 +686,9 @@ Defines if the current text is displayed underlined or not.
 
 ## Spreadsheet file formats
 
-|     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     | **Output format** |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ----------------- | --- | --- |
 
-|                  |     |     |     |     |     |     |     |      |     |      |      |      |      |
+| | bmp | csv | gif | jpg | ods | ots | pdf | pdfa | png | xlsm | xlsx | xltm | xltx |
 | ---------------- | --- | --- | --- | --- | --- | --- | --- | ---- | --- | ---- | ---- | ---- | ---- |
-| **Input format** | bmp | csv | gif | jpg | ods | ots | pdf | pdfa | png | xlsm | xlsx | xltm | xltx |
 | csv              | +   |     | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
 | et               | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
 | ett              | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
@@ -713,12 +707,8 @@ Defines if the current text is displayed underlined or not.
 
 ## Presentation file formats
 
-|     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     | **Output format** |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ----------------- | --- | --- |
-
-|                  |     |     |     |     |     |     |      |     |      |      |      |      |      |      |
+| | bmp | gif | jpg | odp | otp | pdf | pdfa | png | potm | potx | ppsm | ppsx | pptm | pptx |
 | ---------------- | --- | --- | --- | --- | --- | --- | ---- | --- | ---- | ---- | ---- | ---- | ---- | ---- |
-| **Input format** | bmp | gif | jpg | odp | otp | pdf | pdfa | png | potm | potx | ppsm | ppsx | pptm | pptx |
 | dps              | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
 | dpt              | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
 | fodp             | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |

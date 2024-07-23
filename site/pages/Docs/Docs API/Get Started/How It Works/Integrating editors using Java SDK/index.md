@@ -1,3 +1,7 @@
+---
+order: -2
+---
+
 [ONLYOFFICE Docs Integration SDK](https://central.sonatype.com/artifact/com.onlyoffice/docs-integration-sdk) provides common interfaces and default implementations for integrating ONLYOFFICE Docs into your own website or application on Java.
 
 ## Prerequisites
