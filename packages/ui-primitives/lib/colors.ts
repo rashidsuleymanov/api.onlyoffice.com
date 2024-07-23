@@ -167,7 +167,8 @@ export class Component {
       if (Array.isArray(cv)) {
         for (const [i, p] of cv.entries()) {
           const h = value(v, p)
-          s += `--color-${k}-${ck}-${i}: ${h};\n`
+          const n = name(`${k}-${ck}-${i}`)
+          s += `${n}: ${h};\n`
         }
         continue
       }
@@ -176,22 +177,39 @@ export class Component {
         continue
       }
       const h = value(v, cv)
-      s += `--color-${k}-${ck}: ${h};\n`
+      const n = name(`${k}-${ck}`)
+      s += `${n}: ${h};\n`
     }
     return s
 
     function value(v: Variant, s: string): string {
       try {
+        if (s.includes(" ")) {
+          return s
+        }
         const h = Color(s)
-        return h.hsl().toString()
+        return h.hexa().toString()
       } catch {
         const p = getProperty(v, s)
         if (!p) {
           throw new Error(`Property '${s}' not found in variant`)
         }
         const n = s.replaceAll(/\.|\[/g, "-").replaceAll("]", "")
-        return `var(--color-${n})`
+        return `var(${name(n)})`
       }
+    }
+
+    function name(n: string): string {
+      if (n.startsWith("base")) {
+        return `--base-color-${n.slice(5)}`
+      }
+      if (n.startsWith("temp-base")) {
+        return `--temp-base-color-${n.slice(10)}`
+      }
+      if (n.startsWith("temp")) {
+        return `--temp-color-${n.slice(5)}`
+      }
+      return `--color-${n}`
     }
   }
 }

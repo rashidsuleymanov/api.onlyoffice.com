@@ -15,7 +15,8 @@ function main(): void {
 async function build(): Promise<void> {
   await prepare()
   const c = await readColors()
-  await writeStyles(c)
+  const s = await readStyles()
+  await writeStyles(c, s)
 }
 
 async function prepare(): Promise<void> {
@@ -27,20 +28,27 @@ async function prepare(): Promise<void> {
   await mkdir(dd)
 }
 
-async function readColors(): Promise<Colors> {
+async function readStyles(): Promise<string> {
   const rd = rootDir()
-  const dd = dataDir(rd)
-  const ef = entryFile(dd)
-  const ec = await readFile(ef, "utf8")
-  return Colors.fromYaml(ec)
+  const dd = libDir(rd)
+  const sf = stylesFile(dd)
+  return await readFile(sf, "utf8")
 }
 
-async function writeStyles(c: Colors): Promise<void> {
+async function readColors(): Promise<Colors> {
+  const rd = rootDir()
+  const dd = libDir(rd)
+  const cf = colorsFile(dd)
+  const cc = await readFile(cf, "utf8")
+  return Colors.fromYaml(cc)
+}
+
+async function writeStyles(c: Colors, s: string): Promise<void> {
   const rd = rootDir()
   const dd = distDir(rd)
   const of = outputFile(dd)
   const oc = Colors.toStyles(c)
-  await writeFile(of, oc)
+  await writeFile(of, `${oc}\n${s}`)
 }
 
 function rootDir(): string {
@@ -48,12 +56,16 @@ function rootDir(): string {
   return fileURLToPath(u)
 }
 
-function dataDir(d: string): string {
-  return join(d, "data")
+function libDir(d: string): string {
+  return join(d, "lib")
 }
 
-function entryFile(d: string): string {
+function colorsFile(d: string): string {
   return join(d, "colors.yml")
+}
+
+function stylesFile(d: string): string {
+  return join(d, "main.css")
 }
 
 function distDir(d: string): string {
