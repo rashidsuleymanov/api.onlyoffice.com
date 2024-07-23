@@ -1,21 +1,22 @@
 .breadcrumb {
   align-items: center;
-  /* color: var(--breadcrumb-crumb-foreground-color); */
+  column-gap: var(--base-size-12);
   display: flex;
-  font-size: 13px;
-  column-gap: 10px;
+  font-size: var(--text-body-font-size-small);
 }
 
 .breadcrumb__crumb {
   color: inherit;
+  overflow: hidden;
   text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .breadcrumb__crumb[aria-current="page"] {
-  /* color: var(--breadcrumb-crumb-active-foreground-color); */
+  color: var(--color-foreground-accent);
 }
 
 .breadcrumb__separator {
-  /* color: var(--breadcrumb-delimiter-foreground-color); */
-  width: 11px;
+  color: var(--color-foreground-muted);
 }
