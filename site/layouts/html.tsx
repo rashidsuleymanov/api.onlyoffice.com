@@ -1,4 +1,3 @@
-import {Font} from "@onlyoffice/documentation-ui-kit"
 import {type Context} from "@onlyoffice/eleventy-types"
 // import {wait} from "@onlyoffice/documentation-utils/wait.ts"
 import {h} from "preact"
@@ -35,7 +34,12 @@ export async function render(
         <meta name="description" content={description} />
         <meta name="generator" content={eleventy.generator} />
 
-        <Font.Links root="/" />
+        {[
+          "OpenSans-Regular.woff2",
+          "OpenSans-Medium.woff2",
+          "OpenSans-SemiBold.woff2",
+          "OpenSans-Bold.woff2",
+        ].map((f) => <link rel="preload" href={`/${f}`} crossorigin="" as="font" type="font/woff2" />)}
 
         <link rel="stylesheet" href="/assets/main.css" />
         {/* <meta name="theme-color" media="(prefers-color-scheme: light)" content="#000000" /> */}

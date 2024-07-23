@@ -5,10 +5,10 @@ import {type JSX, h} from "preact"
 import {Default as ChapterStory} from "../../site-chapter/lib/main.story.tsx"
 import {Default as HomeStory} from "../../site-home/lib/main.story.tsx"
 import {Default as PartStory} from "../../site-part/lib/main.story.tsx"
-import {
-  Default as PlaygroundStory,
-  WithDocumentEditor as PlaygroundDocumentEditorStory
-} from "../../site-playground/lib/main.story.tsx"
+// import {
+//   Default as PlaygroundStory,
+//   WithDocumentEditor as PlaygroundDocumentEditorStory
+// } from "../../site-playground/lib/main.story.tsx"
 import {Default as ThemeSwitcherStory} from "../../site-theme-switcher/lib/main.story.tsx"
 import {
   Page,
@@ -18,11 +18,11 @@ import {
   PageFooterThemeSwitcher,
   PageHeader,
   PageHeaderLogo,
-  PageHeaderMenu
+  PageHeaderMenu,
 } from "./main.tsx"
 
 export default {
-  title: "Site/Page"
+  title: "Site/Page",
 } satisfies Meta
 
 export function Default({children}: ChildrenIncludable): JSX.Element {
@@ -33,7 +33,7 @@ export function Default({children}: ChildrenIncludable): JSX.Element {
       </SrOnly>
       <PageHeaderLogo>
         <a href="/">
-          <OnlyofficeLogo height={38} style={{display: "block"}} />
+          <OnlyofficeLogo height={38} />
         </a>
       </PageHeaderLogo>
       <PageHeaderMenu>
@@ -83,10 +83,10 @@ export function WithChapter(): JSX.Element {
   return <Default><ChapterStory /></Default>
 }
 
-export function WithPlayground(): JSX.Element {
-  return <Default><PlaygroundStory /></Default>
-}
+// export function WithPlayground(): JSX.Element {
+//   return <Default><PlaygroundStory /></Default>
+// }
 
-export function WithPlaygroundDocumentEditor(): JSX.Element {
-  return <Default><PlaygroundDocumentEditorStory /></Default>
-}
+// export function WithPlaygroundDocumentEditor(): JSX.Element {
+//   return <Default><PlaygroundDocumentEditorStory /></Default>
+// }

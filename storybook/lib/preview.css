@@ -1,14 +1,14 @@
-@import "../../ui/font/lib/font.css";
-@import "../../ui/typography/lib/typography.css";
-
+@import "../../site/assets/font.css";
 @import "../node_modules/@onlyoffice/ui-kit/lib/main.css";
 @import "../node_modules/@onlyoffice/site-kit/lib/main.css";
 
 html {
-  color: hsla(0, 0%, 20%, 1);
-  font-family: var(--typography-sans-serif-font);
-  font-size: 14px;
-  line-height: var(--typography-line-height);
+  background-color: var(--color-background-default);
+  color: var(--color-foreground-default);
+  font-family: var(--base-text-font-family-sans-serif);
+  font-size: var(--text-body-font-size-medium);
+  font-weight: var(--base-text-font-weight-normal);
+  line-height: var(--text-body-line-height-medium);
   transition: padding 0.3s;
 }
 

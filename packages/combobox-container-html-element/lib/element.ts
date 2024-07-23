@@ -12,6 +12,10 @@
 
 // todo: Implement type-searching in the combobox.
 
+// todo: Support for the default-value attribute.
+// todo: Rename the data-value attribute to the data-combobox-container-value.
+// todo: Support for the disabled state.
+
 import {
   ComboboxContainerChangedEvent,
   ComboboxContainerChangeEvent,
@@ -29,6 +33,20 @@ export interface ComboboxContainerAttributes {
   "page-size"?: string
   "oncomboboxcontainerchange"?: string
   "oncomboboxcontainerchanged"?: string
+}
+
+export type ComboboxContainerFallbackStatesName =
+  keyof ComboboxContainerFallbackStates
+
+export type ComboboxContainerFallbackStates = {
+  [K in keyof ComboboxContainerStates as `state-${string & K}`]: string
+}
+
+export type ComboboxContainerStateName =
+  keyof ComboboxContainerStates
+
+export interface ComboboxContainerStates {
+  selected?: boolean
 }
 
 export type ComboboxContainerEvent =
@@ -185,6 +203,14 @@ export class ComboboxContainer extends HTMLElement {
       return v
     }
     return ""
+  }
+
+  get selected(): boolean {
+    return this.#hasState("selected")
+  }
+
+  set #selected(s: boolean) {
+    this.#changeState("selected", s)
   }
 
   #disabled = false
@@ -352,12 +378,10 @@ export class ComboboxContainer extends HTMLElement {
     this.select(i)
   }
 
-  get #setupIndex(): number {
-    let i = this.defaultIndex
-    if (i < 0) {
-      i = this.selectedIndex
-    }
-    return Math.max(0, i)
+  #connectedIndex = -1
+
+  get connectedIndex(): number {
+    return this.#connectedIndex
   }
 
   get #labels(): Set<Node> {
@@ -537,8 +561,8 @@ export class ComboboxContainer extends HTMLElement {
     this.#attach()
     this.#create()
     this.#setup()
-    this.#move(this.#setupIndex)
-    this.#select(this.#setupIndex, true)
+    this.#move(this.#connectedIndex)
+    this.#select(this.#connectedIndex, true)
     this.#listen()
     if (this.disabled) {
       this.#disable()
@@ -606,6 +630,8 @@ export class ComboboxContainer extends HTMLElement {
     this.#setupListbox()
     this.#setupCombobox()
     this.#setupEdges()
+    this.#setupIndex()
+    this.#setupState()
   }
 
   #setupListbox(): void {
@@ -718,6 +744,24 @@ export class ComboboxContainer extends HTMLElement {
     if (se) {
       se.assign(...al)
     }
+  }
+
+  #setupIndex(): void {
+    let i = this.defaultIndex
+    if (i < 0) {
+      i = this.selectedIndex
+    }
+    this.#connectedIndex = Math.max(this.firstIndex, i)
+  }
+
+  #setupState(): void {
+    if (this.#internals && isStateSyntaxSupported()) {
+      this.#hasState = this.#hasModernState
+      this.#changeState = this.#changeModernState
+      return
+    }
+    this.#hasState = this.#hasFallbackState
+    this.#changeState = this.#changeFallbackState
   }
 
   #listen(): void {
@@ -1065,6 +1109,12 @@ export class ComboboxContainer extends HTMLElement {
       })
       this.dispatchEvent(de)
     }
+
+    if (i !== this.#connectedIndex) {
+      this.#selected = true
+    } else {
+      this.#selected = false
+    }
   }
 
   #move(i: number): void {
@@ -1173,6 +1223,46 @@ export class ComboboxContainer extends HTMLElement {
     return ev instanceof Event &&
       ev.target instanceof Node &&
       this.#labels.has(ev.target)
+  }
+
+  #hasState: (k: string) => boolean = () => false
+
+  #hasFallbackState(k: string): boolean {
+    const s = this.getAttribute(`state-${k}`)
+    if (s === null) {
+      return false
+    }
+    return true
+  }
+
+  #hasModernState(k: string): boolean {
+    const t = this.#internals
+    if (!t) {
+      return false
+    }
+    return t.states.has(k)
+  }
+
+  #changeState: (k: string, v: boolean) => void = () => void 0
+
+  #changeFallbackState(k: string, v: boolean): void {
+    if (!v) {
+      this.removeAttribute(`state-${k}`)
+      return
+    }
+    this.setAttribute(`state-${k}`, "")
+  }
+
+  #changeModernState(k: string, v: boolean): void {
+    const t = this.#internals
+    if (!t) {
+      return
+    }
+    if (!v) {
+      t.states.delete(k)
+      return
+    }
+    t.states.add(k)
   }
 }
 
@@ -1313,6 +1403,10 @@ function isTouchstartEvent(ev: unknown): ev is TouchEvent {
   return window.TouchEvent !== undefined &&
     ev instanceof TouchEvent &&
     ev.type === "touchstart"
+}
+
+function isStateSyntaxSupported(): boolean {
+  return CSS.supports("selector(:state(_))")
 }
 
 function nopNodeList(): NodeList {

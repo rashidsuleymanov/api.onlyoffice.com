@@ -3,30 +3,30 @@
 }
 
 .theme-switcher radiogroup-container {
-  display: inline-block;
+  display: block;
 }
 
 .theme-switcher [role="radiogroup"] {
-  background-color: var(--color-theme-switcher-background-default);
-  border-radius: 20px;
-  border: 1px solid var(--color-theme-switcher-border);
-  color: var(--color-theme-switcher-foreground-default);
+  background-color: var(--color-page-footer-default-background-rest);
+  border-color: var(--color-page-footer-default-border-muted);
+  border-radius: var(--size-border-radius-small);
+  border-style: solid;
+  border-width: var(--size-border-width-thin);
+  color: var(--color-page-footer-default-foreground-muted);
+  column-gap: var(--size-border-width-thin);
   display: flex;
-  font-size: 13px;
+  font-size: var(--text-body-font-size-small);
+  line-height: var(--text-body-line-height-small);
 }
 
 .theme-switcher [role="radio"] {
-  border-radius: 20px;
+  border-radius: calc(var(--size-border-radius-small) - var(--size-border-width-thin));
   cursor: default;
-  margin-left: 6px;
-  padding: 3px 16px;
-}
-
-.theme-switcher [role="radio"]:first-of-type {
-  margin-left: 0;
+  padding-block: var(--size-control-padding-block-small);
+  padding-inline: var(--size-control-padding-inline-small);
 }
 
 .theme-switcher [role="radio"][aria-checked="true"] {
-  background-color: var(--color-theme-switcher-background-active);
-  color: var(--color-theme-switcher-foreground-active);
+  background-color: var(--color-page-footer-default-background-muted);
+  color: var(--color-page-footer-default-foreground-rest);
 }
