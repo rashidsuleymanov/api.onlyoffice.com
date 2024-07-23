@@ -14,7 +14,7 @@
         <span class="hdr">插入外部数据</span>
     </h1>
     <p class="dscr">下面的参考图和步骤解释了在 ONLYOFFICE 文档服务器中通过外部链接将数据插入电子表格的过程。</p>
-    <img alt="插入外部数据" src="<%= Url.Content("~/content/img/editor/inserting-external-data.png") %>" />
+    <img alt="插入外部数据" src="<%= Url.Content("~/content/img/editor/insert-external-data.svg") %>" />
     <ol>
         <li>用户将单元格值从源电子表格的 <b>文档编辑器</b> 复制到剪贴板。同时，特殊数据也被复制。</li>
         <li>用户将复制的数据插入到目标电子表格的 <b>文档编辑器</b> 中。</li>
