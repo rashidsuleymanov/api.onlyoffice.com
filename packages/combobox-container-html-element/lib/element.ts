@@ -12,6 +12,10 @@
 
 // todo: Implement type-searching in the combobox.
 
+// todo: Support for the default-value attribute.
+// todo: Rename the data-value attribute to the data-combobox-container-value.
+// todo: Support for the disabled state.
+
 import {
   ComboboxContainerChangedEvent,
   ComboboxContainerChangeEvent,
