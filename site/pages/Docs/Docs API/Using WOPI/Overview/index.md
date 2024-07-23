@@ -30,7 +30,7 @@ For Linux - */etc/onlyoffice/documentserver/**local.json***.
 
 For Windows - *%ProgramFiles%\ONLYOFFICE\DocumentServer\config\\**local.json***.
 
-> the default values are available in the *default.json* configuration file, which is available in the folders above (for Linux and Windows). Please do not edit the contents of the *default.json* file directly. The default values will be restored each time you restart Docker container or upgrade **ONLYOFFICE Docs** to a new version and all your changes will be lost.
+> The default values are available in the *default.json* configuration file, which is available in the folders above (for Linux and Windows). Please do not edit the contents of the *default.json* file directly. The default values will be restored each time you restart Docker container or upgrade **ONLYOFFICE Docs** to a new version and all your changes will be lost.
 
 ## Enabling WOPI
 
