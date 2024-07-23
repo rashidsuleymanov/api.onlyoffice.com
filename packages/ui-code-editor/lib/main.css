@@ -15,7 +15,7 @@
   margin-top: 0;
   min-height: var(--code-editor-min-height);
   min-width: 100%;
-  overflow: scroll;
+  overflow: auto;
   padding: var(--base-size-12) var(--base-size-16);
   tab-size: 2;
   white-space: nowrap;
