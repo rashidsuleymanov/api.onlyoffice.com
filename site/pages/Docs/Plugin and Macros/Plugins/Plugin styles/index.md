@@ -1,3 +1,7 @@
+---
+order: -3
+---
+
 ONLYOFFICE provides a style sheet for different interface elements. To adjust your plugin interface to the ONLYOFFICE style, connect the [plugin.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css) to the [index.html](/plugin/indexhtml) file with the following link:
 
 ```

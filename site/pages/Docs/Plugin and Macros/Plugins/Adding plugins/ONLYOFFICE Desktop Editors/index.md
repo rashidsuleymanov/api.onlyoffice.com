@@ -1,3 +1,7 @@
+---
+order: -3
+---
+
 ![Show video](/assets/images/video/install-plugins-desktop.png)
 
 Install plugins in ONLYOFFICE Desktop Editors

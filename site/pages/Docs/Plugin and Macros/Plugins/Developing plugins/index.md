@@ -1,3 +1,7 @@
+---
+order: -6
+---
+
 To develop a plugin for ONLYOFFICE editors, follow the instructions below.
 
 * Web editors

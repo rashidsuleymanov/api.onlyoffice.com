@@ -1,3 +1,8 @@
+---
+order: -2
+---
+
+
 The following plugin types can be distinguished:
 
 1. **Visual/non-visual** (marked with the [isVisual](/plugin/config#isVisual) flag in the *config.json*):

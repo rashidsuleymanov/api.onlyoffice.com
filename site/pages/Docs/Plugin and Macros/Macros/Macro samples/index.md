@@ -1,3 +1,7 @@
+---
+order: -1
+---
+
 The following examples will show you how to use ONLYOFFICE macros and compare the JavaScript code with Microsoft Visual Basic for Applications code so that you could see the difference and understand what can be done to convert the VBA code to ONLYOFFICE macros.
 
 * [](/plugin/macrosamples/writedatatoworksheetcell)

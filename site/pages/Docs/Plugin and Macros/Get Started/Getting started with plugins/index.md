@@ -1,3 +1,8 @@
+---
+order: -3
+---
+
+
 Here are some fundamental concepts for building plugins step by step:
 
 1. Preparing
@@ -26,7 +31,7 @@ Here are some fundamental concepts for building plugins step by step:
 
 ## Step 2. Coding
 
-[Develop](/plugin/developing) a plugin. Follow the plugin structure described [here](/plugin/structure). The plugin folder must contain three files required for the plugin to work: [config.json](/plugin/config), [index.html](/plugin/indexhtml), [pluginCode.js](/plugin/code).
+[Develop](../../Plugins/Developing%20plugins/index.md) a plugin. Follow the plugin structure described [here](/plugin/structure). The plugin folder must contain three files required for the plugin to work: [config.json](../../Usage%20API/Config/index.md), [index.html](../../Usage%20API/index.html/index.md), [pluginCode.js](../../Usage%20API/Common%20API/index.mdx).
 
 ![Structure](/assets/images/plugins/plugins-structure.png)
 

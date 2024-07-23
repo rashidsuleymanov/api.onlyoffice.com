@@ -1,3 +1,7 @@
+---
+order: -2
+---
+
 ![Show video](/assets/images/video/install-plugins.png)
 
 Install plugins in self-hosted ONLYOFFICE Docs

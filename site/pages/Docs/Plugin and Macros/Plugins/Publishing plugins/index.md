@@ -1,3 +1,7 @@
+---
+order: -2
+---
+
 If you want your plugin to be available to other users in the **ONLYOFFICE Plugin Marketplace**, suggest it for publishing:
 
 1. Create a fork of the <https://github.com/ONLYOFFICE/onlyoffice.github.io> repository.

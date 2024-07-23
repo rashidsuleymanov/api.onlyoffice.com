@@ -1,3 +1,7 @@
+---
+order: -3
+---
+
 To debug ONLYOFFICE macros, follow the instructions below.
 
 1. Open the **Plugins** tab and click **Macros**.

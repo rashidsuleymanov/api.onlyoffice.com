@@ -1,3 +1,8 @@
+---
+order: -6
+---
+
+
 Each plugin acts in its own iframe. The editor will connect the *index.html* file, specified in the [config.json](/plugin/config) plugin configuration file. The *index.html* file is the plugin entry point, connecting the [plugin.js](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js) file - the base file needed for work with plugins in the editors.
 
 Example

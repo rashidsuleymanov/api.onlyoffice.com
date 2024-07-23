@@ -1,3 +1,8 @@
+---
+order: -1
+---
+
+
 Each plugin for the server version is a folder with files. To use the plugins with the [desktop version](/desktop/plugins), you need to pack these files into a single zip archive file (see the [Adding plugins](/plugin/installation/) section for more information on how to add plugins to the editors).
 
 The plugin folder must contain three files required for the plugin to work:
