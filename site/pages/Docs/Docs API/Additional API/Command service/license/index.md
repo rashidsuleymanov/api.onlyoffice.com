@@ -45,8 +45,7 @@ Requests the license from ONLYOFFICE Docs with information about the server and 
             {
                 "userid": "uid-1",
                 "expire": "2021-07-09T23:59:59.000Z"
-            },
-            ...
+            }
         ],
         "users_view": [
             {
@@ -56,8 +55,7 @@ Requests the license from ONLYOFFICE Docs with information about the server and 
             {
                 "userid": "uid-1",
                 "expire": "2021-07-09T23:59:59.000Z"
-            },
-            ...
+            }
         ]
     }
 }
