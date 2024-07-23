@@ -137,6 +137,7 @@ export interface PropertyReference extends PropertyNode, ValueReference {}
 
 export interface PropertyNode {
   identifier: string
+  example?: unknown
 }
 
 export type Value = ValueMap[keyof ValueMap] | ValueReference
