@@ -34,6 +34,10 @@ export async function render(
         <meta name="description" content={description} />
         <meta name="generator" content={eleventy.generator} />
 
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
+
         {[
           "OpenSans-Regular.woff2",
           "OpenSans-Medium.woff2",

@@ -22,6 +22,7 @@ paths:
           enum:
           - application/json
           - application/xml
+        example: application/json
 
       - name: Content-Type
         in: header
@@ -32,6 +33,7 @@ paths:
           enum:
           - application/json
           - application/xml
+        example: application/json
 
       - name: Authorization
         in: header
@@ -39,6 +41,7 @@ paths:
         required: true
         schema:
           type: string
+        example: Bearer <token>
 
       responses:
         200:
@@ -76,6 +79,7 @@ paths:
           enum:
           - application/json
           - application/xml
+        example: application/json
 
       - name: Content-Type
         in: header
@@ -86,6 +90,7 @@ paths:
           enum:
           - application/json
           - application/xml
+        example: application/json
 
       - name: Authorization
         in: header
@@ -93,6 +98,7 @@ paths:
         required: true
         schema:
           type: string
+        example: Bearer <token>
 
       - name: id
         in: path
@@ -101,6 +107,7 @@ paths:
         schema:
           type: string
           format: uuid
+        example: 123e4567-e89b-12d3-a456-426614174000
 
       - name: fields
         in: query
@@ -110,6 +117,7 @@ paths:
           type: array
           items:
             type: string
+        example: id,name,age
 
       responses:
         200:
@@ -144,6 +152,7 @@ paths:
           enum:
           - application/json
           - application/xml
+        example: application/json
 
       - name: Content-Type
         in: header
@@ -154,6 +163,7 @@ paths:
           enum:
           - application/json
           - application/xml
+        example: application/json
 
       - name: Authorization
         in: header
@@ -161,6 +171,7 @@ paths:
         required: true
         schema:
           type: string
+        example: Bearer <token>
 
       - name: id
         in: path
@@ -169,6 +180,7 @@ paths:
         schema:
           type: string
           format: uuid
+        example: 123e4567-e89b-12d3-a456-426614174000
 
       requestBody:
         required: true
@@ -180,10 +192,13 @@ paths:
                 id:
                   type: string
                   format: uuid
+                  example: 123e4567-e89b-12d3-a456-426614174000
                 name:
                   type: string
+                  example: Lion
                 age:
                   type: number
+                  example: 5
                 image:
                   type: string
                   format: uri
@@ -214,12 +229,15 @@ components:
         id:
           type: string
           format: uuid
+          example: 123e4567-e89b-12d3-a456-426614174000
         pack:
           $ref: "#/components/schemas/pack"
         name:
           type: string
+          example: Lion
         age:
           type: number
+          example: 5
         image:
           type: string
           format: uri
@@ -230,8 +248,10 @@ components:
         id:
           type: string
           format: uuid
+          example: 123e4567-e89b-12d3-a456-426614174000
         size:
           type: number
+          example: 5
         members:
           type: array
           items:

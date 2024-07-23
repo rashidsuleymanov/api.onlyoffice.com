@@ -37,8 +37,7 @@ function config(uc: UserConfig): unknown {
     removeAttributeQuotes: true,
     removeComments: true,
     removeEmptyAttributes: true,
-    removeRedundantAttributes: true,
-    sortAttributes: true
+    sortAttributes: true,
   })
 
   uc.addPlugin(eleventyStarryNight)

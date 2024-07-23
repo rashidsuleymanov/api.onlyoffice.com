@@ -372,6 +372,7 @@ function PropertyDescription({property: p}: PropertyDescriptionProperties): JSX.
     return <dd>
       <ValueDescription value={p} />
       <TypeDescription type={p} />
+      {p.example && <ExampleDescription example={p.example} />}
       {p.properties && <details>
         <summary>Properties of <code>{p.identifier}</code></summary>
         <Properties properties={p.properties} />
@@ -386,6 +387,7 @@ function PropertyDescription({property: p}: PropertyDescriptionProperties): JSX.
     return <dd>
       <ValueDescription value={p} />
       <TypeDescription type={p} />
+      {p.example && <ExampleDescription example={p.example} />}
     </dd>
   }
 
@@ -499,4 +501,12 @@ function TypeDescription({type: t}: TypeDescriptionProperties): JSX.Element {
   }
 
   return <p>{d}</p>
+}
+
+interface ExampleDescriptionProperties {
+  example: unknown
+}
+
+function ExampleDescription({example: e}: ExampleDescriptionProperties): JSX.Element {
+  return <p>Example: {String(e)}</p>
 }
