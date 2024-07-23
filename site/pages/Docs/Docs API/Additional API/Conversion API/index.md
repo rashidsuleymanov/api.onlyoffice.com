@@ -36,7 +36,7 @@ Supported values:
 
 When the asynchronous request type is used, the response is formed instantly. In this case to get the result it is necessary to send requests without parameter change until the conversion is finished. The default value is **false**.
 
-Type: boolean
+**Type**: boolean
 
 **Presence**: optional
 
@@ -57,7 +57,7 @@ Main supported values:
 
 You can find all the supported values [in this file](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js).
 
-Type: integer
+**Type**: integer
 
 **Presence**: optional
 
@@ -75,7 +75,7 @@ Supported values:
 * **4** - comma;
 * **5** - space.
 
-Type: integer
+**Type**: integer
 
 **Presence**: optional
 
@@ -84,7 +84,7 @@ Type: integer
 
 Defines the document layout which specifies parameters for printing forms as *pdf* documents or images.
 
-Type: object
+**Type**: object
 
 **Presence**: optional
 
@@ -93,7 +93,7 @@ Type: object
 
 Defines if placeholders will be drawn or not.
 
-Type: boolean
+**Type**: boolean
 
 **Presence**: optional
 
@@ -102,7 +102,7 @@ Type: boolean
 
 Defines if forms will be highlighted or not.
 
-Type: boolean
+**Type**: boolean
 
 **Presence**: optional
 
@@ -111,7 +111,7 @@ Type: boolean
 
 Defines if the print mode is turned on or off. This parameter is used only for converting *docx/docxf* into *pdf*. If this parameter is equal to **true**, the *drawPlaceHolders* and *drawFormHighlight* flags are used as described above. If this parameter is **false**, the *drawFormHighlight* flag does not work and the *drawPlaceHolders* parameter allows saving the forms in the *pdf* format. The default value is **false**.
 
-Type: boolean
+**Type**: boolean
 
 **Presence**: optional
 
@@ -120,7 +120,7 @@ Type: boolean
 
 Defines the document renderer when converting from *pdf*, *xps*, *oxps*.
 
-Type: object
+**Type**: object
 
 **Presence**: optional
 
@@ -136,7 +136,7 @@ Defines the rendering mode that can have the following values:
 
 The default value is **plainLine**.
 
-Type: string
+**Type**: string
 
 **Presence**: optional
 
@@ -147,7 +147,7 @@ Defines the type of the document file to be converted.
 
 > In the tables below you can see possibility of conversion your documents into the most known file formats, where the **Input format** column corresponds to the values of the **filetype** parameter and the **Output format** columns correspond to the values of the **outputtype** parameter.
 
-Type: string
+**Type**: string
 
 **Presence**: required
 
@@ -156,7 +156,7 @@ Type: string
 
 Defines the document identifier used to unambiguously identify the document file.
 
-Type: string
+**Type**: string
 
 **Presence**: required
 
@@ -170,7 +170,7 @@ Defines the resulting converted document type. Starting from version 7.0, file f
 
 > In the tables below you can see possibility of conversion your documents into the most known file formats, where the **Input format** column corresponds to the values of the **filetype** parameter and the **Output format** columns correspond to the values of the **outputtype** parameter.
 
-Type: string
+**Type**: string
 
 **Presence**: required
 
@@ -179,7 +179,7 @@ Type: string
 
 Defines the password for the document file if it is protected with a password.
 
-Type: string
+**Type**: string
 
 **Presence**: optional
 
@@ -188,7 +188,7 @@ Type: string
 
 Defines settings for converting document files to pdf.
 
-Type: object
+**Type**: object
 
 **Presence**: optional
 
@@ -197,7 +197,7 @@ Type: object
 
 Defines whether the document will be converted to the *pdf* form (**true**) or to a regular *pdf* file (**false**). If this parameter is omitted, the document contents will not be changed. If the document has fields, they will remain in the converted document. If has not, the converted document will not contain them either. For example, you don't need to specify this parameter when converting *docxf* and *oform* formats to *pdf*. They will always be converted to *pdf* forms.
 
-Type: boolean
+**Type**: boolean
 
 **Presence**: optional
 
@@ -206,7 +206,7 @@ Type: boolean
 
 Defines the default display format for currency and date and time when converting from *Spreadsheet format* to *pdf*. Is set using the four letter (**en-US**, **fr-FR**, etc.) language codes. The default value is **en-US**.
 
-Type: string
+**Type**: string
 
 **Presence**: optional
 
@@ -217,7 +217,7 @@ Defines settings for converting the spreadsheet to pdf.
 
 > Please note that the maximum number of pages that can be returned at once after converting a spreadsheet into pdf or image formats is no more than 1500.
 
-Type: object
+**Type**: object
 
 **Presence**: optional
 
@@ -226,7 +226,7 @@ Type: object
 
 Sets the height of the converted area, measured in the number of pages. The default value is **0**.
 
-Type: integer
+**Type**: integer
 
 **Presence**: optional
 
@@ -235,7 +235,7 @@ Type: integer
 
 Sets the width of the converted area, measured in the number of pages. The default value is **0**.
 
-Type: integer
+**Type**: integer
 
 **Presence**: optional
 
@@ -244,7 +244,7 @@ Type: integer
 
 Allows to include grid lines to the output PDF file or not. The default value is **false**.
 
-Type: boolean
+**Type**: boolean
 
 **Presence**: optional
 
@@ -253,7 +253,7 @@ Type: boolean
 
 Allows to include the headings to the output PDF file or not. The default value is **false**.
 
-Type: boolean
+**Type**: boolean
 
 **Presence**: optional
 
@@ -262,7 +262,7 @@ Type: boolean
 
 Determines whether to ignore the print area chosen for the spreadsheet file or not. The default value is **true**.
 
-Type: boolean
+**Type**: boolean
 
 **Presence**: optional
 
@@ -271,7 +271,7 @@ Type: boolean
 
 Sets the margins of the output PDF file.
 
-Type: object
+**Type**: object
 
 **Presence**: optional
 
@@ -280,7 +280,7 @@ Type: object
 
 Sets the bottom margin of the output PDF file. The default value is **19.1mm**.
 
-Type: string
+**Type**: string
 
 **Presence**: optional
 
@@ -289,7 +289,7 @@ Type: string
 
 Sets the left margin of the output PDF file. The default value is **17.8mm**.
 
-Type: string
+**Type**: string
 
 **Presence**: optional
 
@@ -298,7 +298,7 @@ Type: string
 
 Sets the right margin of the output PDF file. The default value is **17.8mm**.
 
-Type: string
+**Type**: string
 
 **Presence**: optional
 
@@ -307,7 +307,7 @@ Type: string
 
 Sets the top margin of the output PDF file. The default value is **19.1mm**.
 
-Type: string
+**Type**: string
 
 **Presence**: optional
 
@@ -316,7 +316,7 @@ Type: string
 
 Sets the orientation of the output PDF file. May be **landscape**, **portrait**. The default value is **portrait**.
 
-Type: string
+**Type**: string
 
 **Presence**: optional
 
@@ -325,7 +325,7 @@ Type: string
 
 Sets the page size of the output PDF file.
 
-Type: object
+**Type**: object
 
 **Presence**: optional
 
@@ -334,7 +334,7 @@ Type: object
 
 Sets the page height of the output PDF file. The default value is **297mm**.
 
-Type: string
+**Type**: string
 
 **Presence**: optional
 
@@ -343,7 +343,7 @@ Type: string
 
 Sets the page width of the output PDF file. The default value is **210mm**.
 
-Type: string
+**Type**: string
 
 **Presence**: optional
 
@@ -352,7 +352,7 @@ Type: string
 
 Allows to set the scale of the output PDF file. The default value is **100**.
 
-Type: integer
+**Type**: integer
 
 **Presence**: optional
 
@@ -361,7 +361,7 @@ Type: integer
 
 Defines the settings for the thumbnail when specifying the image formats (*bmp*, *gif*, *jpg*, *png*) as **outputtype**.
 
-Type: object
+**Type**: object
 
 **Presence**: optional
 
@@ -376,7 +376,7 @@ Defines the mode to fit the image to the height and width specifyed. Supported v
 
 The default value is **2**.
 
-Type: integer
+**Type**: integer
 
 **Presence**: optional
 
@@ -385,7 +385,7 @@ Type: integer
 
 Defines if the thumbnails should be generated for the first page only or for all the document pages. If false, the zip archive containing thumbnails for all the pages will be created. The default value is **true**.
 
-Type: boolean
+**Type**: boolean
 
 **Presence**: optional
 
@@ -394,7 +394,7 @@ Type: boolean
 
 Defines the thumbnail height in pixels. The default value is **100**.
 
-Type: integer
+**Type**: integer
 
 **Presence**: optional
 
@@ -403,7 +403,7 @@ Type: integer
 
 Defines the thumbnail width in pixels. The default value is **100**.
 
-Type: integer
+**Type**: integer
 
 **Presence**: optional
 
@@ -412,7 +412,7 @@ Type: integer
 
 Defines the converted file name.
 
-Type: string
+**Type**: string
 
 **Presence**: optional
 
@@ -421,7 +421,7 @@ Type: string
 
 Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../../Additional%20API/Signature/Request/Token%20in%20body/index.md#request-to-convert-the-document).
 
-Type: string
+**Type**: string
 
 **Presence**: required by configuration
 
@@ -430,7 +430,7 @@ Type: string
 
 Defines the absolute URL to the document to be converted. Be sure to add a [token](../../Get%20Started/How%20It%20Works/Security/index.md) when using local links. Otherwise, an error will occur.
 
-Type: string
+**Type**: string
 
 **Presence**: required
 
@@ -439,7 +439,7 @@ Type: string
 
 Defines a JSON object containing the [properties](/plugin/global#watermark_on_draw) of a watermark which is inserted into the pdf and image files during conversion.
 
-Type: object
+**Type**: object
 
 **Presence**: optional
 
@@ -448,7 +448,7 @@ Type: object
 
 Defines the watermark transparency degree.
 
-Type: float
+**Type**: float
 
 **Presence**: optional
 
@@ -457,7 +457,7 @@ Type: float
 
 Defines the [shape type](/docbuilder/global#ShapeType) which specifies the preset shape geometry for the current watermark.
 
-Type: string
+**Type**: string
 
 **Presence**: optional
 
@@ -466,7 +466,7 @@ Type: string
 
 Defines the watermark width measured in millimeters.
 
-Type: integer
+**Type**: integer
 
 **Presence**: optional
 
@@ -475,7 +475,7 @@ Type: integer
 
 Defines the watermark height measured in millimeters.
 
-Type: integer
+**Type**: integer
 
 **Presence**: optional
 
@@ -484,7 +484,7 @@ Type: integer
 
 Defines the watermark rotation angle measured in degrees.
 
-Type: integer
+**Type**: integer
 
 **Presence**: optional
 
@@ -493,7 +493,7 @@ Type: integer
 
 Defines the text margins measured in millimeters in the watermark shape.
 
-Type: array of integers
+**Type**: array of integers
 
 **Presence**: optional
 
@@ -502,7 +502,7 @@ Type: array of integers
 
 Defines the watermark fill color in the RGB format, or the URL to image (base64 support: *data:image/png;...*). The empty array \[] means that the watermark has no fill.
 
-Type: array of integers \| string
+**Type**: array of integers \| string
 
 **Presence**: optional
 
@@ -511,7 +511,7 @@ Type: array of integers \| string
 
 Defines the watermark stroke width measured in millimeters.
 
-Type: integer
+**Type**: integer
 
 **Presence**: optional
 
@@ -520,7 +520,7 @@ Type: integer
 
 Defines the watermark stroke color in the RGB format. The empty array \[] means that the watermark stroke has no fill.
 
-Type: array of integers
+**Type**: array of integers
 
 **Presence**: optional
 
@@ -529,7 +529,7 @@ Type: array of integers
 
 Defines the vertical text align in the watermark shape: **0** - bottom, **1** - center, **4** - top.
 
-Type: integer
+**Type**: integer
 
 **Presence**: optional
 
@@ -538,7 +538,7 @@ Type: integer
 
 Defines the array with paragraphs from the current watermark with their properties.
 
-Type: array of objects
+**Type**: array of objects
 
 **Presence**: optional
 
@@ -547,7 +547,7 @@ Type: array of objects
 
 Defines the horizontal text align in the current paragraph: **0** - right, **1** - left, **2** - center, **3** - justify.
 
-Type: integer
+**Type**: integer
 
 **Presence**: optional
 
@@ -556,7 +556,7 @@ Type: integer
 
 Defines the paragraph highlight in the RGB format. The empty array \[] means that the paragraph is not highlighted.
 
-Type: array of integers
+**Type**: array of integers
 
 **Presence**: optional
 
@@ -565,7 +565,7 @@ Type: array of integers
 
 Defines the text linespacing in the current paragraph.
 
-Type: integer
+**Type**: integer
 
 **Presence**: optional
 
@@ -574,7 +574,7 @@ Type: integer
 
 Defines the array with runs from the current paragraph with their properties.
 
-Type: array of objects
+**Type**: array of objects
 
 **Presence**: optional
 
@@ -583,7 +583,7 @@ Type: array of objects
 
 Defines the run text.
 
-Type: string
+**Type**: string
 
 **Presence**: optional
 
@@ -592,7 +592,7 @@ Type: string
 
 Defines the text highlight in the RGB format. The empty array \[] means that the text is not highlighted.
 
-Type: array of integers
+**Type**: array of integers
 
 **Presence**: optional
 
@@ -601,7 +601,7 @@ Type: array of integers
 
 Defines the text font family.
 
-Type: string
+**Type**: string
 
 **Presence**: optional
 
@@ -610,7 +610,7 @@ Type: string
 
 Defines the text font size measured in points (pt).
 
-Type: string
+**Type**: string
 
 **Presence**: optional
 
@@ -619,7 +619,7 @@ Type: string
 
 Defines if the current text is displayed bold or not.
 
-Type: boolean
+**Type**: boolean
 
 **Presence**: optional
 
@@ -628,7 +628,7 @@ Type: boolean
 
 Defines if the current text is displayed italic or not.
 
-Type: boolean
+**Type**: boolean
 
 **Presence**: optional
 
@@ -637,7 +637,7 @@ Type: boolean
 
 Defines if the current text is displayed struck through or not.
 
-Type: boolean
+**Type**: boolean
 
 **Presence**: optional
 
@@ -646,19 +646,16 @@ Type: boolean
 
 Defines if the current text is displayed underlined or not.
 
-Type: boolean
+**Type**: boolean
 
 **Presence**: optional
 
 
 ## Text document file formats
 
-|     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     | **Output format** |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ----------------- | --- | --- |
 
-|                  |     |      |      |       |      |      |      |     |     |      |     |     |     |     |      |     |     |     |
+| | bmp | docm | docx | docxf | dotm | dotx | epub | fb2 | gif | html | jpg | odt | ott | pdf | pdfa | png | rtf | txt |
 | ---------------- | --- | ---- | ---- | ----- | ---- | ---- | ---- | --- | --- | ---- | --- | --- | --- | --- | ---- | --- | --- | --- |
-| **Input format** | bmp | docm | docx | docxf | dotm | dotx | epub | fb2 | gif | html | jpg | odt | ott | pdf | pdfa | png | rtf | txt |
 | djvu             | +   |      |      |       |      |      |      |     | +   |      | +   |     |     | +   | +    | +   |     |     |
 | doc              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
 | docm             | +   |      | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
@@ -689,12 +686,9 @@ Type: boolean
 
 ## Spreadsheet file formats
 
-|     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     | **Output format** |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ----------------- | --- | --- |
 
-|                  |     |     |     |     |     |     |     |      |     |      |      |      |      |
+| | bmp | csv | gif | jpg | ods | ots | pdf | pdfa | png | xlsm | xlsx | xltm | xltx |
 | ---------------- | --- | --- | --- | --- | --- | --- | --- | ---- | --- | ---- | ---- | ---- | ---- |
-| **Input format** | bmp | csv | gif | jpg | ods | ots | pdf | pdfa | png | xlsm | xlsx | xltm | xltx |
 | csv              | +   |     | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
 | et               | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
 | ett              | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
@@ -713,12 +707,8 @@ Type: boolean
 
 ## Presentation file formats
 
-|     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     | **Output format** |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ----------------- | --- | --- |
-
-|                  |     |     |     |     |     |     |      |     |      |      |      |      |      |      |
+| | bmp | gif | jpg | odp | otp | pdf | pdfa | png | potm | potx | ppsm | ppsx | pptm | pptx |
 | ---------------- | --- | --- | --- | --- | --- | --- | ---- | --- | ---- | ---- | ---- | ---- | ---- | ---- |
-| **Input format** | bmp | gif | jpg | odp | otp | pdf | pdfa | png | potm | potx | ppsm | ppsx | pptm | pptx |
 | dps              | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
 | dpt              | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
 | fodp             | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
