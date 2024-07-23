@@ -1,0 +1,9 @@
+baseUrl: https://api2.teamlab.info/
+analytics: false
+
+server:
+  baseUrl: https://api.teamlab.info/
+
+playground:
+  documentEditor:
+    documentServerUrl: https://api.docs.teamlab.info/
