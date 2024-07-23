@@ -1,37 +1,28 @@
 .dr {
+  color: var(--color-library-declaration-default-foreground-decoration);
   text-decoration: none;
 }
 
-.dr code {
-  background-color: transparent;
-  border-radius: 0;
-  border: none;
-  color: var(--code-declaration-decoration-foreground-color);
-  font-family: var(--typography-monospace-font);
-  font-size: 90%;
-  padding: 0;
-}
-
 .dr:hover .dr-id {
-  color: var(--code-declaration-reference-foreground-color);
+  color: var(--color-library-declaration-default-foreground-reference);
 }
 
 .dr-id {
-  color: var(--code-declaration-text-foreground-color);
+  color: var(--color-library-declaration-default-foreground-text);
 }
 
 .dt-de {
-  color: var(--code-declaration-decoration-foreground-color);
+  color: var(--color-library-declaration-default-foreground-decoration);
 }
 
 .dt-id {
-  color: var(--code-declaration-identifier-foreground-color);
+  color: var(--color-library-declaration-default-foreground-identifier);
 }
 
 .dt-ke {
-  color: var(--code-declaration-keyword-foreground-color);
+  color: var(--color-library-declaration-default-foreground-keyword);
 }
 
 .dt-re {
-  color: var(--code-declaration-reference-foreground-color);
+  color: var(--color-library-declaration-default-foreground-reference);
 }
