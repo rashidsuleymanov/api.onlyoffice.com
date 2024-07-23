@@ -1,0 +1,146 @@
+/* [prefix]-[pattern*]-[variant]-[property*]-[scale] */
+/* https://primer.style/primitives/storybook/ */
+/* https://github.com/system-fonts/modern-font-stacks/ */
+
+/* Typography: Basics */
+
+:root {
+  /* prefix: base, variant: text, property: font-family */
+  --base-text-font-family-sans-serif: "Open Sans", "Open Sans Fallback", system-ui, sans-serif;
+  --base-text-font-family-monospace: Monaco, "Andale Mono", "Courier New", ui-monospace, monospace;
+
+  /* prefix: base, variant: text, property: font-size */
+  --base-text-font-size-12: 12px;
+  --base-text-font-size-14: 14px;
+  --base-text-font-size-16: 16px;
+  --base-text-font-size-18: 18px;
+  --base-text-font-size-26: 26px;
+  --base-text-font-size-32: 32px;
+
+  /* prefix: base, variant: text, property: font-weight */
+  --base-text-font-weight-normal: 400;
+  --base-text-font-weight-medium: 500;
+  --base-text-font-weight-semi-bold: 600;
+  --base-text-font-weight-bold: 700;
+
+  /* prefix: base, variant: text, property: letter-spacing */
+  --base-text-letter-spacing-0-04: 0.04em;
+
+  /* prefix: base, variant: text, property: line-height */
+  --base-text-line-height-1-25: 1.25;
+  --base-text-line-height-1-50: 1.5;
+}
+
+/* Typography: Functional */
+
+:root {
+  /* prefix: text, variant: display */
+  --text-display-font-size-default: var(--base-text-font-size-32);
+  --text-display-font-weight-default: var(--base-text-font-weight-bold);
+  --text-display-line-height-default: var(--base-text-line-height-1-50);
+
+  /* prefix: text, variant: title, property: font-size */
+  --text-title-font-size-small: var(--base-text-font-size-14);
+  --text-title-font-size-medium: var(--base-text-font-size-18);
+  --text-title-font-size-large: var(--base-text-font-size-26);
+
+  /* prefix: text, variant: title, property: font-weight */
+  --text-title-font-weight-small: var(--base-text-font-weight-bold);
+  --text-title-font-weight-medium: var(--base-text-font-weight-bold);
+  --text-title-font-weight-large: var(--base-text-font-weight-bold);
+
+  /* prefix: text, variant: title, property: line-height */
+  --text-title-line-height-small: var(--base-text-line-height-1-25);
+  --text-title-line-height-medium: var(--base-text-line-height-1-25);
+  --text-title-line-height-large: var(--base-text-line-height-1-25);
+
+  /* prefix: text, variant: body, property: font-size */
+  --text-body-font-size-small: var(--base-text-font-size-12);
+  --text-body-font-size-medium: var(--base-text-font-size-14);
+  --text-body-font-size-large: var(--base-text-font-size-16);
+
+  /* prefix: text, variant: body, property: line-height */
+  --text-body-line-height-small: var(--base-text-line-height-1-50);
+  --text-body-line-height-medium: var(--base-text-line-height-1-50);
+  --text-body-line-height-large: var(--base-text-line-height-1-50);
+
+  /* prefix: text, variant: body, property: line-height-size */
+  --text-body-line-height-size-small: calc(var(--text-body-font-size-small) * var(--text-body-line-height-small));
+  --text-body-line-height-size-medium: calc(var(--text-body-font-size-medium) * var(--text-body-line-height-medium));
+  --text-body-line-height-size-large: calc(var(--text-body-font-size-large) * var(--text-body-line-height-large));
+
+  /* prefix: text, variant: code-block */
+  --text-code-block-font-size-default: var(--base-text-font-size-12);
+  --text-code-block-line-height-default: var(--base-text-line-height-1-50);
+  --text-code-block-line-height-size-default: calc(var(--text-code-block-font-size-default) * var(--text-code-block-line-height-default));
+
+  /* prefix: text, variant: code-inline */
+  --text-code-inline-font-size-default: var(--base-text-font-size-12);
+}
+
+/* Sizes: Basics */
+
+:root {
+  /* prefix: base, variant: size */
+  --base-size-2: 2px;
+  --base-size-4: 4px;
+  --base-size-6: 6px;
+  --base-size-8: 8px;
+  --base-size-12: 12px;
+  --base-size-16: 16px;
+  --base-size-20: 20px;
+  --base-size-24: 24px;
+  --base-size-28: 28px;
+  --base-size-32: 32px;
+  --base-size-36: 36px;
+  --base-size-40: 40px;
+  --base-size-44: 44px;
+  --base-size-48: 48px;
+  --base-size-64: 64px;
+  --base-size-80: 80px;
+  --base-size-96: 96px;
+  --base-size-112: 112px;
+  --base-size-128: 128px;
+}
+
+/* Sizes: Functional */
+
+/* prefix: size, variant: viewport, property: width */
+@custom-media --size-viewport-width-phone (width < 543px);
+@custom-media --size-viewport-width-tablet (width >= 544px);
+@custom-media --size-viewport-width-laptop (width >= 768px);
+@custom-media --size-viewport-width-desktop (width >= 1400px);
+
+:root {
+  /* prefix: size, variant: breakpoint */
+  --size-breakpoint-xsmall: 320px;
+  --size-breakpoint-small: 544px;
+  --size-breakpoint-medium: 768px;
+  --size-breakpoint-large: 1012px;
+  --size-breakpoint-xlarge: 1280px;
+  --size-breakpoint-xxlarge: 1400px;
+
+  /* prefix: size, variant: border-width */
+  --size-border-width-thin: 1px;
+  --size-border-width-thick: 2px;
+
+  /* prefix: size, variant: outline-width */
+  --side-outline-width-default: 2px;
+
+  /* prefix: size, variant: border-radius */
+  --size-border-radius-small: 3px;
+  --size-border-radius-medium: 6px;
+  --size-border-radius-large: 10px;
+
+  /* prefix: size, variant: control, property: padding-block */
+  --size-control-padding-block-small: var(--base-size-4);
+  --size-control-padding-block-medium: var(--base-size-8);
+
+  /* prefix: size, variant: control, property: padding-inline */
+  --size-control-padding-inline-small: var(--base-size-12);
+  --size-control-padding-inline-medium: var(--base-size-12);
+
+  /* prefix: size, variant: control, property: gap */
+  --size-control-gap-small: var(--base-size-4);
+  --size-control-gap-medium: var(--base-size-8);
+}
