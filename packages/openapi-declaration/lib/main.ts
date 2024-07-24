@@ -58,12 +58,12 @@ export class ProcessPath extends Transform {
         } else {
           const u = m.toUpperCase()
           s.tags.forEach((t) => {
-            const a = t.split("/")
+            const a = t.split("/").map((s) => s.trim())
             a.forEach((t, i) => {
               // todo: support overloading, ex portal and Portal.
               // temp solution
               const g = a.slice(0, i + 1).join("/")
-              const s = g.split("/").map(slug).join("/")
+              const s = g.split("/").map((v) => slug(v)).join("/")
               let ct = this._cache.groups[s]
               if (ct === undefined) {
                 ct = {
@@ -230,7 +230,7 @@ function populateRequestHero(req: REST.RequestDeclaration, m: string, p: string,
     if (s.tags !== undefined) {
       const [t] = s.tags
       if (t !== undefined) {
-        a = t.split("/")
+        a = t.split("/").map((s) => s.trim())
       } else {
         console.warn("first tag is missing")
       }
