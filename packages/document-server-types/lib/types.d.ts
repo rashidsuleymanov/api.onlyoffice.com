@@ -806,7 +806,7 @@ export interface DocEditorConfigEditorConfigCustomization {
   /**
    * {@link https://api.onlyoffice.com/editors/config/editor/customization#logo ONLYOFFICE Reference}
    */
-  logo: DocEditorConfigEditorConfigCustomizationLogo
+  logo?: DocEditorConfigEditorConfigCustomizationLogo
 
   /**
    * {@link https://api.onlyoffice.com/editors/config/editor/customization#macros ONLYOFFICE Reference}

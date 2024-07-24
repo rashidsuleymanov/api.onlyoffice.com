@@ -3,7 +3,7 @@ import {visit} from "unist-util-visit"
 
 declare module "hast" {
   interface Properties {
-    dataUseDocumentBuilder?: boolean
+    dataDocumentBuilder?: string
   }
 }
 
@@ -20,7 +20,7 @@ export function remarkDocumentBuilder(): Transform {
 
       let has = false
       for (const el of node.meta.split(" ")) {
-        if (el === "use-document-builder") {
+        if (el === "document-builder") {
           has = true
           break
         }
@@ -42,7 +42,7 @@ export function remarkDocumentBuilder(): Transform {
         d.hProperties = p
       }
 
-      p.dataUseDocumentBuilder = true
+      p.dataDocumentBuilder = "true"
     })
   }
 }

@@ -109,7 +109,7 @@
   grid-template-columns: var(--base-size-16) 1fr var(--base-size-16);
   margin-bottom: 0;
   margin-top: var(--base-size-20);
-  overflow: scroll;
+  overflow: auto;
   padding-bottom: var(--base-size-12);
   padding-top: var(--base-size-12);
   tab-size: 2;

@@ -61,7 +61,7 @@ export function render({content, ...ctx}: Context): JSX.Element {
         </ThemeSwitcher>
       </PageFooterThemeSwitcher>
       <PageFooterCopyright>
-        <a href="/">onlyoffice.com</a>
+        <a href="https://onlyoffice.com/">onlyoffice.com</a>
         <p>© Ascensio System SIA 2024. All right reserved</p>
       </PageFooterCopyright>
     </PageFooter>
