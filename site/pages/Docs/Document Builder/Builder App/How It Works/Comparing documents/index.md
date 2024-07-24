@@ -1,3 +1,7 @@
+---
+order: -1
+---
+
 If you need to compare two documents, you can use **Document Builder**. The steps below will show you how to do it:
 
 1. Create the *compare.docbuilder* script file with the following code:

@@ -1,3 +1,7 @@
+---
+order: -3
+---
+
 ## Structure used for .docbuilder file
 
 All **.docbuilder** files have simple structure which allows to create them easily. They consist of the following main parts each of them having the appropriate [CDocBuilder](/docbuilder/integrationapi/c/cdocbuilder) class method used:

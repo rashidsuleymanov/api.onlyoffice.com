@@ -1,3 +1,7 @@
+---
+order: -2
+---
+
 ## Before you start
 
 For the samples to work correctly, make sure that two conditions are met:

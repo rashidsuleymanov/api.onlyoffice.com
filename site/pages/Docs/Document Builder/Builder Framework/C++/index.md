@@ -1,3 +1,7 @@
+---
+order: -4
+---
+
 For the integration of **ONLYOFFICE Document Builder** into any application, the C++ **doctrenderer** library is used. The current application version contains six main classes:
 
 * *CDoctrenderer* class - used by **ONLYOFFICE Document Builder** in the file conversion process.

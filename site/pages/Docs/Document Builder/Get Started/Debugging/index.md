@@ -1,3 +1,7 @@
+---
+order: -1
+---
+
 You can debug any Document Builder [component](/docbuilder/basic#builder-components). To do this, follow the instructions below.
 
 ## Executing from a browser (for plugins and macros)
