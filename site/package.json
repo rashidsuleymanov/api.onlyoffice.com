@@ -8,11 +8,13 @@
     "build:dev": "pnpm build:do",
     "build:do": "node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js --config ./eleventy.config.ts",
     "build:prod": "SITE_CONFIG_MODE=production pnpm build:do",
+    "build:test": "SITE_CONFIG_MODE=testing pnpm build:do",
     "build": "pnpm build:prod",
     "preview": "eleventy-dev-server --dir dist",
     "serve:dev": "pnpm serve:do",
     "serve:do": "node --require esbuild-register --max-old-space-size=8192 ./node_modules/@11ty/eleventy/cmd.js --serve --quiet --config ./eleventy.config.ts",
     "serve:prod": "SITE_CONFIG_MODE=production pnpm serve:do",
+    "serve:test": "SITE_CONFIG_MODE=testing pnpm serve:do",
     "serve": "pnpm serve:dev"
   },
   "devDependencies": {

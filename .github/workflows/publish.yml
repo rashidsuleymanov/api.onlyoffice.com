@@ -2,6 +2,11 @@ name: Publish
 
 on:
   workflow_dispatch:
+    inputs:
+      site_mode:
+        description: Site mode can be either "production", "testing" or "development".
+        required: true
+        default: production
 
 jobs:
   publish:
@@ -22,14 +27,25 @@ jobs:
         aws-access-key-id: ${{ secrets.ACCESS_KEY }}
         aws-secret-access-key: ${{ secrets.SECRET_KEY }}
         aws-region: us-east-1
-        
+
     - name: Build Packages
       run: pnpm build
-        
+
     - name: Build Site
       timeout-minutes: 60
       working-directory: site
-      run: /usr/bin/time --verbose pnpm build
+      run: |
+        m="${{github.event.inputs.site_mode}}"
+        if [ "$m" = "production" ]; then
+          /usr/bin/time --verbose pnpm build:prod
+        else if [ "$m" = "testing" ]; then
+          /usr/bin/time --verbose pnpm build:test
+        else if [ "$m" = "development" ]; then
+          /usr/bin/time --verbose pnpm build:dev
+        else
+          echo "Invalid site mode: $m"
+          exit 1
+        fi
 
     - name: Sync bucket
       run: |
@@ -38,4 +54,3 @@ jobs:
 
     - name: Invalidate CLOUDFRONT cache
       run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths '/*'
-

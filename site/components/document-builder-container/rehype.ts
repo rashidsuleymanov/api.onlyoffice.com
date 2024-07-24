@@ -1,5 +1,6 @@
 import {documentBuilder} from "@onlyoffice/document-builder-hast-element"
 import {fileType} from "@onlyoffice/document-builder-utils"
+import {Config} from "@onlyoffice/site-config"
 import {template} from "@onlyoffice/template-hast-element"
 import {toText} from "hast-util-to-text"
 import {type Root} from "hast"
@@ -12,6 +13,8 @@ interface Transform {
 
 export function rehypeDocumentBuilderContainer(): Transform {
   return function transform(tree) {
+    const c = Config.shared
+
     visit(tree, "element", (node, index, parent) => {
       if (!(
         node.tagName === "pre" &&
@@ -26,13 +29,13 @@ export function rehypeDocumentBuilderContainer(): Transform {
         code &&
         code.type === "element" &&
         code.tagName === "code" &&
-        code.properties.dataUseDocumentBuilder
+        "dataDocumentBuilder" in code.properties
       )) {
         return
       }
 
-      const c = toText(code, {whitespace: "pre-wrap"})
-      const t = fileType(c)
+      const s = toText(code, {whitespace: "pre-wrap"})
+      const t = fileType(s)
       if (!t) {
         // todo?: throw error
         return
@@ -41,12 +44,33 @@ export function rehypeDocumentBuilderContainer(): Transform {
       const dc = documentBuilderContainer()
       const te = template()
       const db = documentBuilder()
-      db.data.config = {document: {fileType: t}}
+      db.data.documentServerUrl = c.playground.documentEditor.documentServerUrl
+      db.data.config = {
+        document: {
+          fileType: t,
+          key: "",
+          title: "",
+          url: "",
+        },
+        editorConfig: {
+          customization: {
+            compactHeader: true,
+            compactToolbar: true,
+            hideRightMenu: true,
+            hideRulers: true,
+            integrationMode: "embed",
+            toolbarHideFileName: true,
+            toolbarNoTabs: true,
+          },
+          callbackUrl: "",
+        },
+      }
+      db.data.command = s.trim()
       te.children = [db]
       dc.children = [node, te]
       parent.children[index] = dc
 
-      delete code.properties.dataUseDocumentBuilder
+      delete code.properties.dataDocumentBuilder
     })
   }
 }

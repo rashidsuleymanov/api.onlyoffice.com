@@ -1,7 +1,9 @@
 import {type Context} from "@onlyoffice/eleventy-types"
 // import {wait} from "@onlyoffice/documentation-utils/wait.ts"
+import {Config} from "@onlyoffice/site-config"
 import {h} from "preact"
 import {renderToString} from "../config/preact.ts"
+import {GoogleTagManagerNoscript, GoogleTagManagerScript} from "../internal/google-tag-manager.tsx"
 
 export async function render(
   {
@@ -17,7 +19,9 @@ export async function render(
   // todo: validate the context.
   // For example, if description is missing, print an error.
 
-  const c = await renderToString(
+  const c = Config.shared
+
+  const s = await renderToString(
     // todo: do not forget to change the lang after localization.
     <html
       lang="en"
@@ -52,12 +56,14 @@ export async function render(
         {/* <style media="(prefers-color-scheme: light)">{light}</style> */}
         {/* <style>{regular}</style> */}
 
+        {c.analytics && <GoogleTagManagerScript />}
         <script defer type="module" src="/assets/main.js" />
       </head>
       <body>
+        {c.analytics && <GoogleTagManagerNoscript />}
         {content}
       </body>
     </html>
   )
-  return `<!DOCTYPE html>${c}`
+  return `<!DOCTYPE html>${s}`
 }

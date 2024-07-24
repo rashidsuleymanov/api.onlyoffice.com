@@ -1,39 +1,42 @@
 .de-playground {
   background-color: var(--color-background-muted);
   padding-bottom: 140px;
-  padding-top: 32px;
+  padding-top: var(--base-size-32);
 }
 
 .de-playground__inner {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   max-width: 1440px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: var(--base-size-24);
+  padding-right: var(--base-size-24);
   width: 100%;
 }
 
 .de-playground__heading {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.25;
-  margin-bottom: 32px;
-  margin-top: 22px;
+  font-size: var(--text-display-font-size-default);
+  font-weight: var(--text-display-font-weight-default);
+  line-height: var(--text-display-line-height-default);
+  margin-bottom: var(--base-size-32);
+  margin-top: var(--base-size-24);
 }
 
 .de-playground__islands {
   display: grid;
-  grid-gap: 16px;
+  grid-gap: var(--base-size-16);
   grid-template-columns: repeat(11, 1fr);
   grid-template-rows: 1fr min-content min-content min-content min-content;
 }
 
 .de-playground__island {
   background-color: var(--color-background-default);
-  border-radius: 4px;
-  border: 1px solid var(--color-scale-gray-5);
-  padding: 12px;
+  border-color: var(--color-border-muted);
+  border-radius: var(--size-border-radius-small);
+  border-style: solid;
+  border-width: var(--size-border-width-thin);
+  padding: var(--base-size-12);
 }
 
 .de-playground__scenarios {
@@ -67,7 +70,7 @@
 }
 
 .de-playground__container {
-  margin-top: 18px;
+  margin-top: var(--base-size-20);
 }
 
 .de-playground__container:empty {
@@ -75,7 +78,7 @@
 }
 
 .de-playground__function-property {
-  margin-top: 18px;
+  margin-top: var(--base-size-20);
 }
 
 .de-playground__function-property:first-of-type {
@@ -83,7 +86,7 @@
 }
 
 .de-playground__function-property output pre {
-  margin-top: 9px;
+  margin-top: var(--base-size-8);
 }
 
 .de-playground document-editor-playground {
@@ -96,14 +99,14 @@
 }
 
 .de-playground document-editor {
-  border-radius: 3px;
+  border-radius: var(--size-border-radius-small);
   display: block;
   height: inherit;
   overflow: hidden;
 }
 
 .de-playground .form-control {
-  margin-top: 18px;
+  margin-top: var(--base-size-20);
 }
 
 .de-playground .form-control:first-of-type {
@@ -111,7 +114,7 @@
 }
 
 .de-playground .form-control__label a {
-  color: var(--color-foreground-anchor);
+  color: var(--color-foreground-link);
 }
 
 .de-playground .form-control__label a:focus-visible,

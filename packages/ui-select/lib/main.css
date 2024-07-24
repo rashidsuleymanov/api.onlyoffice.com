@@ -59,7 +59,7 @@
   border-width: var(--size-border-width-thin);
   color: var(--color-control-default-foreground-active);
   max-height: var(--select-listbox-max-height);
-  overflow-y: scroll;
+  overflow-y: auto;
   padding-bottom: var(--base-size-8);
   padding-top: var(--base-size-8);
   position: absolute;

@@ -84,8 +84,12 @@ table {
   width: auto !important;
 }
 
-/* todo: temp solution */
-document-builder {
+.content document-builder-container {
+  display: block;
+  margin-top: var(--base-size-20);
+}
+
+.content document-builder {
   display: block;
   height: 550px;
 }

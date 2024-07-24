@@ -182,7 +182,7 @@
 
 .page .chapter__navigation {
   max-height: calc(100vh - var(--page-header-content-height));
-  overflow-y: scroll;
+  overflow-y: auto;
   position: sticky;
   top: var(--page-header-content-height);
 }

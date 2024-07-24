@@ -5,12 +5,14 @@ import yaml from "yaml"
 
 export interface InputConfig {
   baseUrl?: string
+  analytics?: boolean
   server?: InputServer
   playground?: InputPlayground
 }
 
 export interface Configurable {
   baseUrl: string
+  analytics: boolean
   server: ServerConfigurable
   playground: PlaygroundConfigurable
 }
@@ -19,6 +21,7 @@ export class Config implements Configurable {
   static shared: Configurable
 
   baseUrl = ""
+  analytics = false
   server = new ServerConfig()
   playground = new PlaygroundConfig()
 
@@ -82,6 +85,10 @@ export class Config implements Configurable {
       co.baseUrl = ic.baseUrl
     }
 
+    if (ic.analytics !== undefined) {
+      co.analytics = ic.analytics
+    }
+
     if (ic.server) {
       co.server = ServerConfig.fromInput(ic.server)
     }
@@ -100,6 +107,12 @@ export class Config implements Configurable {
       co.baseUrl = b.baseUrl
     } else if (a.baseUrl) {
       co.baseUrl = a.baseUrl
+    }
+
+    if (b.analytics !== undefined) {
+      co.analytics = b.analytics
+    } else if (a.analytics !== undefined) {
+      co.analytics = a.analytics
     }
 
     co.server = ServerConfig.merge(a.server, b.server)

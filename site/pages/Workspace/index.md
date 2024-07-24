@@ -31,12 +31,3 @@ help:
   issues: http://0.0.0.0/
   forum: http://0.0.0.0/
 ---
-
-```js use-document-builder
-builder.CreateFile("docx")
-const document = Api.GetDocument()
-const paragraph = document.GetElement(0)
-paragraph.AddText("This is just a sample text")
-builder.SaveFile("docx", "document.docx")
-builder.CloseFile()
-```

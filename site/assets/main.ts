@@ -26,6 +26,12 @@ function main(): void {
     sp.client = c
     sp.play()
   }
+
+  const bc = document.querySelector("document-builder-container")
+  if (bc) {
+    bc.client = c
+    bc.play()
+  }
 }
 
 function onError(...args: unknown[]): void {
