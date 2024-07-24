@@ -6,7 +6,7 @@ on:
       site_mode:
         description: Site mode can be either "production", "testing" or "development".
         required: true
-        default: production
+        default: testing
 
 jobs:
   publish:
@@ -38,9 +38,9 @@ jobs:
         m="${{github.event.inputs.site_mode}}"
         if [ "$m" = "production" ]; then
           /usr/bin/time --verbose pnpm build:prod
-        else if [ "$m" = "testing" ]; then
+        elif [ "$m" = "testing" ]; then
           /usr/bin/time --verbose pnpm build:test
-        else if [ "$m" = "development" ]; then
+        elif [ "$m" = "development" ]; then
           /usr/bin/time --verbose pnpm build:dev
         else
           echo "Invalid site mode: $m"
