@@ -31,7 +31,7 @@ Here are some fundamental concepts for building plugins step by step:
 
 ## Step 2. Coding
 
-[Develop](../../Plugins/Developing%20plugins/index.md) a plugin. Follow the plugin structure described [here](../Plugin%20structure/index.md). The plugin folder must contain three files required for the plugin to work: [config.json](../../Usage%20API/Config/index.md), [index.html](../../Usage%20API/index.html/index.md), [pluginCode.js](../../Usage%20API/Common%20API/index.mdx).
+[Develop](../../Plugins/Developing%20plugins/index.md) a plugin. Follow the plugin structure described [here](../Plugin%20structure/index.md). The plugin folder must contain three files required for the plugin to work: [config.json](../../Usage%20API/Config/index.md), [index.html](../../Usage%20API/index.html/index.md), [pluginCode.js](../../Usage%20API/Plugin%20object/index.md).
 
 ![Structure](/assets/images/plugins/plugins-structure.png)
 

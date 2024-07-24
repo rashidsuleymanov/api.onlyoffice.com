@@ -1,10 +1,10 @@
-Plugin icon image files that are specified in the [config.json](/plugin/config#icons2) file to display the plugin extensions. Here you can find all the available plugin icon parameters.
+Plugin icon image files that are specified in the [config.json](../index.md#icons2) file to display the plugin extensions. Here you can find all the available plugin icon parameters.
 
 ## Scaling
 
 There can be several scaling types for plugin icons: 100%, 125%, 150%, 175%, 200%, etc. For each type the icon has its *normal* state:
 
-```
+``` json
 "icons": [
     {
         "100%": { "normal": "icon.png" },
@@ -29,7 +29,7 @@ The *style* parameter is also used to specify the icon appearance:
 | ----- | ----------------------------------------------------------------------------- | ------ | ------- |
 | style | The theme type of the plugin icons. It can have the *light* or *dark* values. | string | "dark"  |
 
-```
+``` json
 "icons": [
     {
         "style" : "dark"
@@ -37,4 +37,4 @@ The *style* parameter is also used to specify the icon appearance:
 ]
 ```
 
-This parameter is only used when the icons are different in light and dark themes.
+> This parameter is only used when the icons are different in light and dark themes.
