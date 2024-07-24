@@ -6,7 +6,7 @@ on:
       site_mode:
         description: Site mode can be either "production", "testing" or "development".
         required: true
-        default: production
+        default: testing
 
 jobs:
   publish:
