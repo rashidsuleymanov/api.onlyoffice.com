@@ -1,4 +1,4 @@
-import {type DocumentEditorConfig} from "@onlyoffice/document-editor-html-element"
+import {type Client} from "@onlyoffice/server-client"
 
 declare global {
   interface Window {
@@ -35,9 +35,11 @@ export class DocumentBuilderContainer extends HTMLElement {
     return "document-builder-container"
   }
 
-  async connectedCallback(): Promise<void> {
-    const ce = this.querySelector("code")
-    if (!(ce && ce.textContent)) {
+  client: Client | undefined
+
+  async play(): Promise<void> {
+    const cl = this.client
+    if (!cl) {
       return
     }
 
@@ -52,44 +54,12 @@ export class DocumentBuilderContainer extends HTMLElement {
       return
     }
 
-    const cu = new URL("/config", "http://0.0.0.0:4000/")
-    cu.searchParams.set("fileType", db.config.document.fileType)
-
-    const cr = await fetch(cu)
-    const cs = await cr.json() as DocumentEditorConfig
-    cs.editorConfig = {
-      customization: {
-        compactHeader: true,
-        compactToolbar: true,
-        hideRightMenu: true,
-        hideRulers: true,
-        integrationMode: "embed",
-        toolbarHideFileName: true,
-        toolbarNoTabs: true
-      }
+    if (!db.config) {
+      return
     }
 
-    db.documentServerUrl = "http://0.0.0.0:3000/"
-    db.config = cs
-    db.setAttribute("command", ce.textContent)
-
-    db.addEventListener("documenteditorappready", () => {
-      console.log("Document Editor is ready")
-    })
-    db.addEventListener("documentbuilderready", () => {
-      console.log("Document Builder is ready")
-    })
-    db.addEventListener("documenteditorerror", (e) => {
-      console.error(`Document Editor: ${e.message}`)
-    })
-    db.addEventListener("documentbuildererror", (e) => {
-      console.error(`Document Builder: ${e.message}`)
-    })
-    db.addEventListener("error", (e) => {
-      console.error(`Unknown error: ${e.message}`)
-    })
-
-    this.insertBefore(tc, this.firstChild)
+    [db.config] = await cl.documentEditor.sign(db.config)
+    this.insertBefore(db, this.firstChild)
   }
 }
 
