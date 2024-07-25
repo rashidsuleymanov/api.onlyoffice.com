@@ -4,6 +4,7 @@ import {Config} from "@onlyoffice/site-config"
 import {h} from "preact"
 import {renderToString} from "../config/preact.ts"
 import {GoogleTagManagerNoscript, GoogleTagManagerScript} from "../internal/google-tag-manager.tsx"
+import {Style} from "../internal/style.tsx"
 
 export async function render(
   {
@@ -49,7 +50,7 @@ export async function render(
           "OpenSans-Bold.woff2",
         ].map((f) => <link rel="preload" href={`/${f}`} crossorigin="" as="font" type="font/woff2" />)}
 
-        <link rel="stylesheet" href="/assets/main.css" />
+        <Style href="/assets/main.css" />
         {/* <meta name="theme-color" media="(prefers-color-scheme: light)" content="#000000" /> */}
         {/* <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" /> */}
         {/* <style media="(prefers-color-scheme: dark)">{dark}</style> */}
