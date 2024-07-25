@@ -63,8 +63,8 @@ function config(uc: UserConfig): unknown {
       includes: "../components",
       input: "pages",
       layouts: "../layouts",
-      output: "dist"
-    }
+      output: "dist",
+    },
   }
 }
 
