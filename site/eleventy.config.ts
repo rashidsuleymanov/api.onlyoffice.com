@@ -1,5 +1,3 @@
-// todo: normalize naming of eleventy, remark, and other plugins.
-
 import {cwd} from "node:process"
 import {eleventyClean} from "@onlyoffice/eleventy-clean"
 import {isBuild} from "@onlyoffice/eleventy-env"
