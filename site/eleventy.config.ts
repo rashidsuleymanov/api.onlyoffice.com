@@ -6,7 +6,6 @@ import {eleventyPagefind} from "@onlyoffice/eleventy-pagefind"
 import {eleventySitemap} from "@onlyoffice/eleventy-sitemap"
 import {eleventyStarryNight} from "@onlyoffice/eleventy-starry-night"
 import {type UserConfig} from "@onlyoffice/eleventy-types"
-import {eleventyYAML} from "@onlyoffice/eleventy-yaml"
 import {configMode} from "@onlyoffice/site-env"
 import {Config} from "@onlyoffice/site-config"
 import {markupPlugin} from "./config/markup.ts"
@@ -32,7 +31,6 @@ function config(uc: UserConfig): unknown {
   })
 
   uc.addPlugin(eleventyStarryNight)
-  uc.addPlugin(eleventyYAML)
   uc.addPlugin(eleventySitemap)
   uc.addPlugin(eleventyPagefind)
 

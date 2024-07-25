@@ -847,31 +847,6 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
 
-  packages/eleventy-yaml:
-    dependencies:
-      '@onlyoffice/eleventy-types':
-        specifier: workspace:^
-        version: link:../eleventy-types
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-      yaml:
-        specifier: ^2.4.1
-        version: 2.4.1
-    devDependencies:
-      '@11ty/eleventy':
-        specifier: ^2.0.1
-        version: 2.0.1
-      c8:
-        specifier: ^9.1.0
-        version: 9.1.0
-      tsx:
-        specifier: ^4.10.5
-        version: 4.10.5
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
-
   packages/eslint-presentation:
     dependencies:
       '@eslint/js':
@@ -2642,9 +2617,6 @@ importers:
       '@onlyoffice/eleventy-types':
         specifier: workspace:^
         version: link:../packages/eleventy-types
-      '@onlyoffice/eleventy-yaml':
-        specifier: workspace:^
-        version: link:../packages/eleventy-yaml
       '@onlyoffice/hast-util-eleventy-img':
         specifier: workspace:^
         version: link:../packages/hast-util-eleventy-img
