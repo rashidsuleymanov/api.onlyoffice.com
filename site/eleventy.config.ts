@@ -1,3 +1,4 @@
+import {tmpdir} from "node:os"
 import {cwd} from "node:process"
 import {eleventyClean} from "@onlyoffice/eleventy-clean"
 import {isBuild} from "@onlyoffice/eleventy-env"
@@ -8,14 +9,34 @@ import {eleventyStarryNight} from "@onlyoffice/eleventy-starry-night"
 import {type UserConfig} from "@onlyoffice/eleventy-types"
 import {configMode} from "@onlyoffice/site-env"
 import {Config} from "@onlyoffice/site-config"
-import {markupPlugin} from "./config/markup.ts"
+import esbuild from "esbuild"
+import requireFromString from "require-from-string"
 import {eleventyMarkdown} from "./internal/markdown.tsx"
 
 function config(uc: UserConfig): unknown {
   Config.shared = Config.read(cwd(), configMode())
 
   uc.addPlugin(eleventyClean)
-  uc.addPlugin(markupPlugin)
+
+  // https://github.com/11ty/eleventy/issues/235
+  uc.addTemplateFormats("11ty.js")
+  uc.addExtension("tsx", {key: "11ty.js"})
+
+  // https://github.com/11ty/eleventy/issues/577#issuecomment-2145656296
+  uc.setDataFileSuffixes([".data"])
+  uc.addDataExtension("ts", {
+    async parser(_, f) {
+      const r = await esbuild.build({
+        entryPoints: [f],
+        format: "cjs",
+        outdir: tmpdir(),
+        write: false,
+      })
+      const m = requireFromString(r.outputFiles[0].text)
+      return m.data()
+    },
+  })
+
   uc.addPlugin(eleventyMarkdown)
 
   uc.addPlugin(eleventyHtmlMinifierTerser, {
