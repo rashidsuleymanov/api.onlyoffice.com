@@ -5,7 +5,6 @@ import {eleventyClean} from "@onlyoffice/eleventy-clean"
 import {isBuild} from "@onlyoffice/eleventy-env"
 import {eleventyEsbuild} from "@onlyoffice/eleventy-esbuild"
 import {eleventyHtmlMinifierTerser} from "@onlyoffice/eleventy-html-minifier-terser"
-import {eleventyLightningcss} from "@onlyoffice/eleventy-lightningcss"
 import {eleventyPagefind} from "@onlyoffice/eleventy-pagefind"
 import {eleventySitemap} from "@onlyoffice/eleventy-sitemap"
 import {eleventyStarryNight} from "@onlyoffice/eleventy-starry-night"
@@ -22,11 +21,6 @@ function config(uc: UserConfig): unknown {
   uc.addPlugin(eleventyClean)
   uc.addPlugin(markupPlugin)
   uc.addPlugin(eleventyMarkdown)
-
-  uc.addPlugin(eleventyLightningcss, {
-    filename: "assets/main.css",
-    minify: isBuild(),
-  })
 
   uc.addPlugin(eleventyHtmlMinifierTerser, {
     minify: isBuild(),
