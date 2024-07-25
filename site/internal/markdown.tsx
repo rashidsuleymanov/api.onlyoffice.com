@@ -13,7 +13,7 @@ import rehypeSlug from "rehype-slug"
 import remarkGfm from "remark-gfm"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
-import {type PluggableList, unified} from "unified"
+import {unified} from "unified"
 import {VFile} from "vfile"
 import {rehypeDocumentBuilderContainer} from "../components/document-builder-container/rehype.ts"
 import {rehypeImage} from "./image.tsx"
@@ -50,30 +50,18 @@ export function markdown() {
   return unified()
     .use(remarkParse)
     .use({plugins: [
-      ...remarkPlugins(),
+      remarkDocumentBuilder,
+      remarkGfm,
       [remarkRehype, {allowDangerousHtml: true}],
       rehypeRaw,
-      ...rehypePlugins(),
+      rehypeSlug,
+      [rehypeAutolink, {behavior: "wrap"}],
+      rehypeLink,
+      rehypeImage,
+      [rehypeStarryNight, starryNight],
+      rehypeDocumentBuilderContainer,
     ]})
     // @ts-ignore
     .use(rehypePreact, {Fragment, jsx, jsxs})
     .freeze()
-}
-
-export function remarkPlugins(): PluggableList {
-  return [
-    remarkDocumentBuilder,
-    remarkGfm
-  ]
-}
-
-export function rehypePlugins(): PluggableList {
-  return [
-    rehypeSlug,
-    [rehypeAutolink, {behavior: "wrap"}],
-    rehypeLink,
-    rehypeImage,
-    [rehypeStarryNight, starryNight],
-    rehypeDocumentBuilderContainer
-  ]
 }
