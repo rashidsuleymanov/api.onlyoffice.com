@@ -1,4 +1,4 @@
-Description
+## Description
 
 Inserts a Chess Board object into the document editor. The object makes it possible to edit and save the chess position in the *FEN* format.
 
@@ -8,17 +8,17 @@ Inserts a Chess Board object into the document editor. The object makes it possi
 
 ![Chess](/assets/images/plugins/gifs/chess.gif)
 
-Installation
+## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/chess) and install it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/chess) and install it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
-Usage
+## Usage
 
 1. Open the **Plugins** tab and press **Chess**.
 2. A chessboard window will appear on the screen and you can play chess.
 3. To interrupt the game, press the **Ok** button. The game preview in form of an image will appear in your document with all the changes saved. Click it to continue the game.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/chess>.
 
@@ -26,9 +26,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/c
 2. Icons
 3. *index\_about.html* for the plugin **About** window
 
-Config
+## Config
 
-```
+``` json
 {
     "name": "Chess",
     "nameLocale": {
@@ -150,7 +150,7 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
 * [button](/plugin/events/button)
 * [init](/plugin/events/init)
@@ -166,6 +166,6 @@ Methods and events
 * [info.resize](/plugin/info#resize)
 * [info.width](/plugin/info#width)
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

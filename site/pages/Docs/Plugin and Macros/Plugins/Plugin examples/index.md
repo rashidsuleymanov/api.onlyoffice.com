@@ -2,289 +2,267 @@
 order: -1
 ---
 
-Filter
 
-* Editor types
+- [](Add%20comment%20in%20cell/index.md)
 
-* * Text editor
-  * Spreadsheet editor
-  * Presentation editor
-
-* Visual & non-visual
-
-* * Visual
-  * Non-visual
-  * Input helper
-
-* System & non-system
-
-* * Non-system
-  * System
-
-* OLE-objects
-
-* Others
-
-- [](/plugin/example/addcommentincell)
-
-  [Add comment in cell](/plugin/example/addcommentincell)
+  [Add comment in cell](Add%20comment%20in%20cell/index.md)
 
   Adds comments to spreadsheets.
 
-  [More](/plugin/example/addcommentincell)
+  [More](Add%20comment%20in%20cell/index.md)
 
-- [](/plugin/example/addcustomfields)
+- [](Add%20custom%20fields/index.md)
 
-  [Add custom fields](/plugin/example/addcustomfields)
+  [Add custom fields](Add%20custom%20fields/index.md)
 
   Inserts custom fields into the document.
 
-  [More](/plugin/example/addcustomfields)
+  [More](Add%20custom%20fields/index.md)
 
-- [](/plugin/example/autocomplete)
+- [](Autocomplete/index.md)
 
-  [Autocomplete](/plugin/example/autocomplete)
+  [Autocomplete](Autocomplete/index.md)
 
   Helps the user to input text quickly.
 
-  [More](/plugin/example/autocomplete)
+  [More](Autocomplete/index.md)
 
-- [](/plugin/example/chess)
+- [](Chess/index.md)
 
-  [Chess](/plugin/example/chess)
+  [Chess](Chess/index.md)
 
   Inserts a Chess Board object into the document editor.
 
-  [More](/plugin/example/chess)
+  [More](Chess/index.md)
 
-- [](/plugin/example/clippy)
+- [](Clippy/index.md)
 
-  [Clippy](/plugin/example/clippy)
+  [Clippy](Clippy/index.md)
 
   Adds the clippy assistant to the document editor.
 
-  [More](/plugin/example/clippy)
+  [More](Clippy/index.md)
 
-- [](/plugin/example/contextmenuandevents)
+- [](Context%20menu%20and%20events/index.md)
 
-  [Context menu and events](/plugin/example/contextmenuandevents)
+  [Context menu and events](Context%20menu%20and%20events/index.md)
 
   Tracks the events of calling the context menu and clicking on its items. It also tracks the cursor position change.
 
-  [More](/plugin/example/contextmenuandevents)
+  [More](Context%20menu%20and%20events/index.md)
 
-- [](/plugin/example/countwordsandcharacters)
+- [](Count%20words%20and%20characters/index.md)
 
-  [Count words and characters](/plugin/example/countwordsandcharacters)
+  [Count words and characters](Count%20words%20and%20characters/index.md)
 
   Counts paragraphs, words and characters.
 
-  [More](/plugin/example/countwordsandcharacters)
+  [More](Count%20words%20and%20characters/index.md)
 
-- [](/plugin/example/extendedcomments)
+- [](Extended%20comments/index.md)
 
-  [Extended comments](/plugin/example/extendedcomments)
+  [Extended comments](Extended%20comments/index.md)
 
   Pastes, edits and removes comments and replies (with user data) in a document.
 
-  [More](/plugin/example/extendedcomments)
+  [More](Extended%20comments/index.md)
 
-- [](/plugin/example/getandpastehtml)
+- [](Get%20and%20paste%20html/index.md)
 
-  [Get and paste html](/plugin/example/getandpastehtml)
+  [Get and paste html](Get%20and%20paste%20html/index.md)
 
   Gets the document content as HTML code.
 
-  [More](/plugin/example/getandpastehtml)
+  [More](Get%20and%20paste%20html/index.md)
 
-- [](/plugin/example/helloworld)
+- [](Hello%20world/index.md)
 
-  [Hello World](/plugin/example/helloworld)
+  [Hello World](Hello%20world/index.md)
 
   Inserts the *Hello world!* phrase into the document.
 
-  [More](/plugin/example/helloworld)
+  [More](Hello%20world/index.md)
 
-- [](/plugin/example/highlightcode)
+- [](Highlight%20code/index.md)
 
-  [Highlight code](/plugin/example/highlightcode)
+  [Highlight code](Highlight%20code/index.md)
 
   Connects the Highlight.js library for highlighting the code syntax.
 
-  [More](/plugin/example/highlightcode)
+  [More](Highlight%20code/index.md)
 
-- [](/plugin/example/invoices)
+- [](Invoices/index.md)
 
-  [Invoices](/plugin/example/invoices)
+  [Invoices](Invoices/index.md)
 
   Inserts template fields for invoice information.
 
-  [More](/plugin/example/invoices)
+  [More](Invoices/index.md)
 
-- [](/plugin/example/languagetool)
+- [](Language%20tool/index.md)
 
-  [Language tool](/plugin/example/languagetool)
+  [Language tool](Language%20tool/index.md)
 
   Connects the LanguageTool assistant to check the text for grammar, style and spell errors.
 
-  [More](/plugin/example/languagetool)
+  [More](Language%20tool/index.md)
 
-- [](/plugin/example/loadcustomfields)
+- [](Load%20custom%20fields/index.md)
 
-  [Load custom fields](/plugin/example/loadcustomfields)
+  [Load custom fields](Load%20custom%20fields/index.md)
 
   Loads custom fields from the document.
 
-  [More](/plugin/example/loadcustomfields)
+  [More](Load%20custom%20fields/index.md)
 
-- [](/plugin/example/movecursor)
+- [](Move%20cursor/index.md)
 
-  [Move cursor](/plugin/example/movecursor)
+  [Move cursor](Move%20cursor/index.md)
 
   Moves the text cursor to the document start/end.
 
-  [More](/plugin/example/movecursor)
+  [More](Move%20cursor/index.md)
 
-- [](/plugin/example/ocr)
+- [](OCR/index.md)
 
-  [OCR](/plugin/example/ocr)
+  [OCR](OCR/index.md)
 
   Connects the TesseractJS-Core library for extracting text from an image.
 
-  [More](/plugin/example/ocr)
+  [More](OCR/index.md)
 
-- [](/plugin/example/photoeditor)
+- [](Photo%20editor/index.md)
 
-  [Photo Editor](/plugin/example/photoeditor)
+  [Photo Editor](Photo%20editor/index.md)
 
   Connects the Toast UI Image Editor for editing images right in the document.
 
-  [More](/plugin/example/photoeditor)
+  [More](Photo%20editor/index.md)
 
-- [](/plugin/example/searchandchangetextbackgroundcolor)
+- [](Search%20and%20change%20text%20background%20color/index.md)
 
-  [Search and change text background color](/plugin/example/searchandchangetextbackgroundcolor)
+  [Search and change text background color](Search%20and%20change%20text%20background%20color/index.md)
 
   Searches for text and changes its background color.
 
-  [More](/plugin/example/searchandchangetextbackgroundcolor)
+  [More](Search%20and%20change%20text%20background%20color/index.md)
 
-- [](/plugin/example/searchandreplace)
+- [](Search%20and%20replace/index.md)
 
-  [Search & replace](/plugin/example/searchandreplace)
+  [Search & replace](Search%20and%20replace/index.md)
 
   Searches the text and replaces it with another one.
 
-  [More](/plugin/example/searchandreplace)
+  [More](Search%20and%20replace/index.md)
 
-- [](/plugin/example/searchandreplaceonstart)
+- [](Search%20and%20replace%20on%20start/index.md)
 
-  [Search & replace on start](/plugin/example/searchandreplaceonstart)
+  [Search & replace on start](Search%20and%20replace%20on%20start/index.md)
 
   Searches and replaces text in the document when it is reopened.
 
-  [More](/plugin/example/searchandreplaceonstart)
+  [More](Search%20and%20replace%20on%20start/index.md)
 
-- [](/plugin/example/settings)
+- [](Settings/index.md)
 
-  [Settings](/plugin/example/settings)
+  [Settings](Settings/index.md)
 
   Protects a document using a watermark.
 
-  [More](/plugin/example/settings)
+  [More](Settings/index.md)
 
-- [](/plugin/example/speech)
+- [](Speech/index.md)
 
-  [Speech](/plugin/example/speech)
+  [Speech](Speech/index.md)
 
   Connects the guessLanguage.js library and the ResponsiveVoice service.
 
-  [More](/plugin/example/speech)
+  [More](Speech/index.md)
 
-- [](/plugin/example/symboltable)
+- [](Symbol%20table/index.md)
 
-  [Symbol Table](/plugin/example/symboltable)
+  [Symbol Table](Symbol%20table/index.md)
 
   Inserts special symbols into the document.
 
-  [More](/plugin/example/symboltable)
+  [More](Symbol%20table/index.md)
 
-- [](/plugin/example/telegram)
+- [](Telegram/index.md)
 
-  [Telegram](/plugin/example/telegram)
+  [Telegram](Telegram/index.md)
 
   Connects the Telegram within ONLYOFFICE editors.
 
-  [More](/plugin/example/telegram)
+  [More](Telegram/index.md)
 
-- [](/plugin/example/templates)
+- [](Templates/index.md)
 
-  [Templates](/plugin/example/templates)
+  [Templates](Templates/index.md)
 
   Inserts templates generated by the Document Builder script.
 
-  [More](/plugin/example/templates)
+  [More](Templates/index.md)
 
-- [](/plugin/example/thesaurus)
+- [](Thesaurus/index.md)
 
-  [Thesaurus](/plugin/example/thesaurus)
+  [Thesaurus](Thesaurus/index.md)
 
   Connects Big Huge Thesaurus to search for word synonyms and antonyms.
 
-  [More](/plugin/example/thesaurus)
+  [More](Thesaurus/index.md)
 
-- [](/plugin/example/translator)
+- [](Translator/index.md)
 
-  [Translator](/plugin/example/translator)
+  [Translator](Translator/index.md)
 
   Connects Google Translate API for translating the selected text.
 
-  [More](/plugin/example/translator)
+  [More](Translator/index.md)
 
-- [](/plugin/example/typograf)
+- [](Typograf/index.md)
 
-  [Typograf](/plugin/example/typograf)
+  [Typograf](Typograf/index.md)
 
   Connects the Typograf assistant which prepares text for publishing.
 
-  [More](/plugin/example/typograf)
+  [More](Typograf/index.md)
 
-- [](/plugin/example/workwithcontentcontrolscontent)
+- [](Work%20with%20content%20controls%20content/index.md)
 
-  [Work with content controls content](/plugin/example/workwithcontentcontrolscontent)
+  [Work with content controls content](Work%20with%20content%20controls%20content/index.md)
 
   Inserts the content of one content control into another.
 
-  [More](/plugin/example/workwithcontentcontrolscontent)
+  [More](Work%20with%20content%20controls%20content/index.md)
 
-- [](/plugin/example/workwithcontentcontrolsnavigation)
+- [](Work%20with%20content%20controls%20navigation/index.md)
 
-  [Work with content controls navigation](/plugin/example/workwithcontentcontrolsnavigation)
+  [Work with content controls navigation](Work%20with%20content%20controls%20navigation/index.md)
 
   Navigates content controls, selects and inserts text into them.
 
-  [More](/plugin/example/workwithcontentcontrolsnavigation)
+  [More](Work%20with%20content%20controls%20navigation/index.md)
 
-- [](/plugin/example/workwithcontentcontrolstags)
+- [](Work%20with%20content%20controls%20tags/index.md)
 
-  [Work with content controls tags](/plugin/example/workwithcontentcontrolstags)
+  [Work with content controls tags](Work%20with%20content%20controls%20tags/index.md)
 
   Gets the list of content controls tags.
 
-  [More](/plugin/example/workwithcontentcontrolstags)
+  [More](Work%20with%20content%20controls%20tags/index.md)
 
-- [](/plugin/example/youtube)
+- [](YouTube/index.md)
 
-  [YouTube](/plugin/example/youtube)
+  [YouTube](YouTube/index.md)
 
   Embeds YouTube videos into the documents.
 
-  [More](/plugin/example/youtube)
+  [More](YouTube/index.md)
 
-- [](/plugin/example/zotero)
+- [](Zotero/index.md)
 
-  [Zotero](/plugin/example/zotero)
+  [Zotero](Zotero/index.md)
 
   Creates bibliographies in ONLYOFFICE editors.
 
-  [More](/plugin/example/zotero)
+  [More](Zotero/index.md)

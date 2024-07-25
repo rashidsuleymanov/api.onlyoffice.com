@@ -1,4 +1,4 @@
-Description
+## Description
 
 Inserts the *Hello world!* phrase when the user presses the button.
 
@@ -8,16 +8,16 @@ Inserts the *Hello world!* phrase when the user presses the button.
 
 ![HelloWorld](/assets/images/plugins/gifs/hello-world.gif)
 
-Installation
+## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld) and install it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld) and install it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
-Usage
+## Usage
 
 1. Find the plugin on the **Plugins** tab.
 2. Click the **hello world** button.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld>.
 
@@ -25,9 +25,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/h
 2. Icons
 3. *index\_about.html* for the plugin **About** window
 
-Config
+## Config
 
-```
+``` json
 {
     "name"       : "hello world",
     "guid"       : "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
@@ -76,7 +76,7 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
 * [button](/plugin/events/button)
 * [init](/plugin/events/init)
@@ -84,6 +84,6 @@ Methods and events
 * [Asc.scope object](/plugin/scope)
 * [info.recalculate](/plugin/info#recalculate)
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

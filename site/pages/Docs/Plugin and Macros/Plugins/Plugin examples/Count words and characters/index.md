@@ -1,12 +1,12 @@
-Description
+## Description
 
 Counts paragraphs, words, and characters with or without spaces in the selected part of the document.
 
-The following elements are not included in the word count:
-
-* footnotes/endnotes;
-* numbers from numbered lists;
-* page numbers.
+> The following elements are not included in the word count:
+>
+> * footnotes/endnotes;
+> * numbers from numbered lists;
+> * page numbers.
 
 **Plugin type:** visual, non-system.
 
@@ -14,19 +14,19 @@ The following elements are not included in the word count:
 
 ![CountWordsAndCharacters](/assets/images/plugins/gifs/count-words-and-characters.gif)
 
-Installation
+## Installation
 
 Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace).
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/word-counter) and install it following the [desktop](/plugin/installation/desktop) or [cloud](/plugin/installation/cloud) installation instructions.
+You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/word-counter) and install it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md) or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
-Usage
+## Usage
 
 1. Select the text.
 2. Open the **Plugins** tab and press **Count words and characters**.
 3. Calculations will be displayed in the plugin window automatically.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/wordscounter>.
 
@@ -34,9 +34,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 2. Icons
 3. The *translations* folder contains translations into Russian, German, Spanish, Czech, and French.
 
-Config
+## Config
 
-```
+``` json
 {
     "name": "Word counter",
     "nameLocale": {
@@ -125,13 +125,13 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
 * [button](/plugin/events/button)
 * [init](/plugin/events/init)
 * [onTargetPositionChanged](/plugin/events/ontargetpositionchanged)
 * [onTranslate](/plugin/events/ontranslate)
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).
