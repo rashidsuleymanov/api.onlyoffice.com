@@ -3,7 +3,6 @@
 import {cwd} from "node:process"
 import {eleventyClean} from "@onlyoffice/eleventy-clean"
 import {isBuild} from "@onlyoffice/eleventy-env"
-import {eleventyEsbuild} from "@onlyoffice/eleventy-esbuild"
 import {eleventyHtmlMinifierTerser} from "@onlyoffice/eleventy-html-minifier-terser"
 import {eleventyPagefind} from "@onlyoffice/eleventy-pagefind"
 import {eleventySitemap} from "@onlyoffice/eleventy-sitemap"
@@ -35,36 +34,8 @@ function config(uc: UserConfig): unknown {
   })
 
   uc.addPlugin(eleventyStarryNight)
-
   uc.addPlugin(eleventyYAML)
   uc.addPlugin(eleventySitemap)
-
-  uc.addPlugin(eleventyEsbuild, () => {
-    const c = Config.shared
-    return {
-      passthrough: {
-        input: "assets/main.ts",
-        target: "assets",
-      },
-      copy: {
-        rename() {
-          return "main.js"
-        },
-      },
-      esbuild: {
-        define: {
-          "import.meta.env": JSON.stringify({
-            DEV: !isBuild(),
-            CONFIG_SERVER_BASE_URL: c.server.baseUrl,
-          }),
-        },
-        format: "esm",
-        minify: isBuild(),
-        platform: "browser",
-      },
-    }
-  })
-
   uc.addPlugin(eleventyPagefind)
 
   uc.addPassthroughCopy({static: "."})

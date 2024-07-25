@@ -4,6 +4,7 @@ import {Config} from "@onlyoffice/site-config"
 import {h} from "preact"
 import {renderToString} from "../config/preact.ts"
 import {GoogleTagManagerNoscript, GoogleTagManagerScript} from "../internal/google-tag-manager.tsx"
+import {Script} from "../internal/script.tsx"
 import {Style} from "../internal/style.tsx"
 
 export async function render(
@@ -58,7 +59,7 @@ export async function render(
         {/* <style>{regular}</style> */}
 
         {c.analytics && <GoogleTagManagerScript />}
-        <script defer type="module" src="/assets/main.js" />
+        <Script src="/assets/main.ts" />
       </head>
       <body>
         {c.analytics && <GoogleTagManagerNoscript />}
