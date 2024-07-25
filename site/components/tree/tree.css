@@ -30,10 +30,7 @@
 
 .tree__twig {
   display: flex;
-  overflow-x: hidden;
   pointer-events: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .tree__twig ~ .tree__limb {

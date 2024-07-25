@@ -21,7 +21,7 @@ test("does nothing if no option is specified", async () => {
 })
 
 test("does nothing if no language is specified", async () => {
-  const c = "``` use-document-builder\n\n```"
+  const c = "``` document-builder\n\n```"
   const f = await unified()
     .use(remarkParse)
     .use(remarkDocumentBuilder)
@@ -33,18 +33,18 @@ test("does nothing if no language is specified", async () => {
 })
 
 test("does not exposes the data property if not language is specified", async () => {
-  const c = "``` use-document-builder\n\n```"
+  const c = "``` document-builder\n\n```"
   const f = await unified()
     .use(remarkParse)
     .use(remarkDocumentBuilder)
     .use(remarkRehype)
     .use(rehypeStringify)
     .process(c)
-  is(f.value, '<pre><code class="language-use-document-builder"></code></pre>')
+  is(f.value, '<pre><code class="language-document-builder"></code></pre>')
 })
 
 test("populates hProperties if a language is specified", async () => {
-  const c = "```js use-document-builder\n\n```"
+  const c = "```js document-builder\n\n```"
   const f = await unified()
     .use(remarkParse)
     .use(remarkDocumentBuilder)
@@ -66,11 +66,11 @@ test("populates hProperties if a language is specified", async () => {
     return
   }
 
-  is(p.dataUseDocumentBuilder, true)
+  is(p.dataDocumentBuilder, "true")
 })
 
 test("does not overrides hProperties if they already exist", async () => {
-  const c = "```js use-document-builder\n\n```"
+  const c = "```js document-builder\n\n```"
   const f = await unified()
     .use(remarkParse)
     .use(() => {
@@ -103,14 +103,14 @@ test("does not overrides hProperties if they already exist", async () => {
 })
 
 test("exposes the data property if a language is specified", async () => {
-  const c = "```js use-document-builder\n\n```"
+  const c = "```js document-builder\n\n```"
   const f = await unified()
     .use(remarkParse)
     .use(remarkDocumentBuilder)
     .use(remarkRehype)
     .use(rehypeStringify)
     .process(c)
-  is(f.value, '<pre><code class="language-js" data-use-document-builder></code></pre>')
+  is(f.value, '<pre><code class="language-js" data-document-builder></code></pre>')
 })
 
 test.run()

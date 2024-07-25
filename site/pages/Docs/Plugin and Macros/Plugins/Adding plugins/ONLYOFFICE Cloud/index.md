@@ -10,7 +10,7 @@ You can add a plugin to the **Cloud service** as an **extension**. It can be don
 
 2. Fork the plugin marketplace repository: <https://github.com/ONLYOFFICE/onlyoffice.github.io>.
 
-   You get a repository with the following address - *https\://github.com/YOUR-USERNAME/ONLYOFFICE/onlyoffice.github.io*.
+   You get a repository with the following address - `https://github.com/YOUR-USERNAME/ONLYOFFICE/onlyoffice.github.io`.
 
 3. Build your own GitHub Pages site from this repository. Explore the official [GitHub documentation](https://docs.github.com/en/pages/quickstart) to learn how to do it.
 
@@ -22,23 +22,20 @@ You can add a plugin to the **Cloud service** as an **extension**. It can be don
 
 6. Open the *onlyoffice.github.io/store/plugin-dev/extension/inject.js* file and assign the path to your plugin on GitHub Pages site to the **URL\_TO\_PLUGIN** variable:
 
-   ```
+   ``` javascript
    var URL_TO_PLUGIN = "https://YOUR-USERNAME.github.io/onlyoffice.github.io/sdkjs-plugins/content/helloworld/"
    ```
 
 The *onlyoffice.github.io/store/plugin-dev/extension* folder is a new extension.
 
-Please note that when adding an extension to [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory), the **Title** and **Summary** are filled in automatically with the **name** and **description** parameters from the *manifest.json* file. You cannot change them later in the store.
+> Please note that when adding an extension to [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory), the **Title** and **Summary** are filled in automatically with the **name** and **description** parameters from the *manifest.json* file. You cannot change them later in the store.
 
 ## Step 2. Uploading extensions to the browser
 
 After your extension is ready, upload it to the browser. Follow the instructions below for the browser you use.
 
-* Google Chrome
-* Opera
-* Microsoft Edge
 
-**Installing extensions to Google Chrome**
+### Installing extensions to Google Chrome
 
 1. Launch your Chrome browser and go to *chrome://extensions/*.
 
@@ -58,8 +55,6 @@ After your extension is ready, upload it to the browser. Follow the instructions
 
    ![Hello world icon](/assets/images/plugins/helloworld_icon.png)
 
-\
-
 
 **Removing extensions from Google Chrome**
 
@@ -69,7 +64,8 @@ Click the **Remove** button on the extension tab and, in the opened window, conf
 
 The plugin will be removed from ONLYOFFICE Cloud after page reload.
 
-**Installing extensions to Opera**
+
+### Installing extensions to Opera
 
 1. Launch your Opera browser.
 
@@ -93,8 +89,6 @@ The plugin will be removed from ONLYOFFICE Cloud after page reload.
 
    ![Hello world icon](/assets/images/plugins/helloworld_icon.png)
 
-\
-
 
 **Removing plugins from Opera**
 
@@ -112,7 +106,8 @@ To remove the extension completely from the Opera browser:
 
 The plugin will be removed from ONLYOFFICE Cloud after page reload.
 
-**Installing extensions to Microsoft Edge**
+
+### Installing extensions to Microsoft Edge
 
 1. Launch your Microsoft Edge browser and go to *edge://extensions/*.
 
@@ -131,8 +126,6 @@ The plugin will be removed from ONLYOFFICE Cloud after page reload.
 5. Launch ONLYOFFICE Cloud and open any document to check if the new plugin is available in the editors:
 
    ![](/assets/images/plugins/helloworld_icon.png)
-
-\
 
 
 **Removing plugins from Microsoft Edge**
