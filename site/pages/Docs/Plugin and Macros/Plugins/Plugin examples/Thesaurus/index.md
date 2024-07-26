@@ -1,4 +1,4 @@
-Description
+## Description
 
 Connects [Big Huge Thesaurus](https://words.bighugelabs.com/) to search for word synonyms and antonyms.
 
@@ -8,22 +8,22 @@ Connects [Big Huge Thesaurus](https://words.bighugelabs.com/) to search for word
 
 ![Thesaurus](/assets/images/plugins/gifs/thesaurus.gif)
 
-Installation
+## Installation
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+You can remove it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
 The plugin guid: {BE5CBF95-C0AD-4842-B157-AC40FEDD9840}.
 
-Usage
+## Usage
 
 1. Open the **Plugins** tab and press **Thesaurus**.
 2. Select the necessary word. The list of synonyms and antonyms will be displayed automatically in the plugin window.
 3. Choose a suitable synonym or antonym and click it.
 4. The chosen synonym or antonym replaces the selected word in the text.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/thesaurus>.
 
@@ -40,9 +40,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
    * [jQuery](https://jquery.com) - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. License: [MIT License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/thesaurus/licenses/jQuery.license).
    * [Big Huge Thesaurus](https://words.bighugelabs.com/) - the developer-friendly API for getting synonyms and antonyms for your apps and websites. License: [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
 
-Config
+## Config
 
-```
+``` json
 {
     "name": "Thesaurus",
     "nameLocale": {
@@ -131,7 +131,7 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
 * [button](/plugin/events/button)
 * [init](/plugin/events/init)
@@ -140,6 +140,6 @@ Methods and events
 * [executeMethod ("GetSelectedText")](/plugin/executemethod/common/getselectedtext)
 * [executeMethod ("PasteText")](/plugin/executemethod/common/pastetext)
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

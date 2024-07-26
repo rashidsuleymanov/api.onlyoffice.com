@@ -1,4 +1,4 @@
-Description
+## Description
 
 Inserts template fields for invoice information.
 
@@ -8,25 +8,25 @@ Inserts template fields for invoice information.
 
 ![Invoices](/assets/images/plugins/gifs/invoices.gif)
 
-Installation
+## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/invoices) and install it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/invoices) and install it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
-Usage
+## Usage
 
 1. Open the **Plugins** tab and press **Invoices**.
 2. Press the **+** or **Mark** buttons to add template fields into the document.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/invoices>.
 
 1. *config.json*, *index.html*, and *code.js*
 2. Icons
 
-Config
+## Config
 
-```
+``` json
 {
     "name" : "Invoices",
     "guid" : "asc.{6B6715E5-A558-4F70-8058-40704CD659CF}",
@@ -53,12 +53,12 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
 * [button](/plugin/events/button)
 * [init](/plugin/events/init)
 * [info.recalculate](/plugin/info#recalculate)
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

@@ -1,8 +1,8 @@
-Description
+## Description
 
 Loads custom fields from the document.
 
-The fields should be already added to the document with the [Example add custom fields](/plugin/example/addcustomfields) plugin.
+> The fields should be already added to the document with the [Example add custom fields](/plugin/example/addcustomfields) plugin.
 
 **Plugin type:** visual, non-system.
 
@@ -10,11 +10,11 @@ The fields should be already added to the document with the [Example add custom 
 
 ![LoadCustomFields](/assets/images/plugins/gifs/load-custom-fields.gif)
 
-Installation
+## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_load) and install it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_load) and install it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
-Usage
+## Usage
 
 1. Open the **Plugins** tab and press **Example load custom fields**.
 2. To answer a **simple question**, type your answer in the **type here...** field.
@@ -22,16 +22,16 @@ Usage
 4. Press the **Next** button to go to the next question or the **Back** button to go back to the previous one.
 5. When all the questions are answered, the plugin will be automatically closed. Your answers will appear in the document.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_load>.
 
 1. *config.json*, *index.html*, and *code.js*
 2. Icons
 
-Config
+## Config
 
-```
+``` json
 {
     "name" : "Example loading custom fields",
     "guid" : "asc.{E5A81B17-C871-4C4B-A90A-62D3A7EC0751}",
@@ -98,7 +98,7 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
 * [button](/plugin/events/button)
 * [init](/plugin/events/init)
@@ -106,6 +106,6 @@ Methods and events
 * [executeMethod ("GetAllContentControls")](/plugin/executemethod/text/getallcontentcontrols)
 * [executeMethod ("InsertAndReplaceContentControls")](/plugin/executemethod/text/insertandreplacecontentcontrols)
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

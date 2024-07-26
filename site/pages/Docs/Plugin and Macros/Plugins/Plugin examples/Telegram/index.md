@@ -1,8 +1,8 @@
-Description
+## Description
 
 Connects the Telegram application for instant messaging within the ONLYOFFICE editors.
 
-The plugin has no access to the camera and microphone, so you will be unable to record voice and video messages. Also, it does not work in the incognito mode.
+> The plugin has no access to the camera and microphone, so you will be unable to record voice and video messages. Also, it does not work in the incognito mode.
 
 **Plugin type:** visual, non-system.
 
@@ -12,20 +12,20 @@ The plugin has no access to the camera and microphone, so you will be unable to 
 
 ![Telegram](/assets/images/plugins/gifs/telegram.gif)
 
-Installation
+## Installation
 
 Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace).
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/telegram) and install it following the [desktop](/plugin/installation/desktop) or [cloud](/plugin/installation/cloud) installation instructions.
+You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/telegram) and install it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md) or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
-Usage
+## Usage
 
 1. Find the plugin on the **Plugins** tab.
 2. Log in to your Telegram account.
 
 By default, this plugin uses *https\://evgeny-nadymov.github.io/telegram-react/*. If you need to change it, open the *index.html* file and insert the new URL in the **iframe src** field.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/telegram>.
 
@@ -34,9 +34,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 3. Third-party service:
    * [Telegram-react application](https://github.com/evgeny-nadymov/telegram-react) - the application which uses the ReactJS JavaScript framework and TDLib (Telegram Database library) compiled to WebAssembly. License: [GNU General Public License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/telegram/licenses/telegram-react.license).
 
-Config
+## Config
 
-```
+``` json
 {
     "name" : "Telegram",
     "nameLocale": {
@@ -92,12 +92,12 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
 * [button](/plugin/events/button)
 * [init](/plugin/events/init)
 * [onExternalMouseUp](/plugin/events/onexternalmouseup)
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

@@ -1,4 +1,4 @@
-Description
+## Description
 
 Searches for target text and changes its background color.
 
@@ -8,11 +8,11 @@ Searches for target text and changes its background color.
 
 ![SearchAndChangeTextBackgroundColor](/assets/images/plugins/gifs/search-and-change-background-text.gif)
 
-Installation
+## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color) and install it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color) and install it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
-Usage
+## Usage
 
 1. Open the **Plugins** tab and press **Example search and change background text**.
 2. Enter the required text in the field.
@@ -21,16 +21,16 @@ Usage
 5. Press the **Color all** button to change the background color for all the found results.
 6. Press the **Reset** button to reset the background color for the selected text.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color>.
 
 1. *config.json*, *index.html*, and *code.js*
 2. Icons
 
-Config
+## Config
 
-```
+``` json
 {
     "name" : "Example search and change background text",
     "guid" : "asc.{EF5735E0-69A7-4D4A-9ABE-F58FD70F488J}",
@@ -97,13 +97,13 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
 * [button](/plugin/events/button)
 * [init](/plugin/events/init)
 * [callCommand](/plugin/callcommand)
 * [Asc.scope object](/plugin/scope)
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

@@ -1,4 +1,4 @@
-Description
+## Description
 
 Connects the [LanguageTool](https://languagetool.org/) assistant, multilingual grammar, and style checker to check the text for grammar, style, and spell errors.
 
@@ -10,11 +10,11 @@ Connects the [LanguageTool](https://languagetool.org/) assistant, multilingual g
 
 ![LanguageTool](/assets/images/plugins/gifs/language-tool.gif)
 
-Installation
+## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/languagetool) and install it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/languagetool) and install it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
-Usage
+## Usage
 
 1. Open the **Plugins** tab and press **Languagetool**.
 2. Select the necessary text or write it in the plugin window.
@@ -23,7 +23,7 @@ Usage
 5. You will receive information about the stylistic and grammatical mistakes and tips for correcting them.
 6. To replace the selected text in your document with the corrected text from the field, click **Replace**.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/languagetool>.
 
@@ -43,9 +43,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
    * [Select2](https://select2.org/) gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options. License: [MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/languagetool/licenses/Select2.license).
    * [Languagetool](https://languagetool.org/) is a multilingual grammar and style checker. License: [GNU LESSER GENERAL PUBLIC LICENSE](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/languagetool/licenses/Languagetool's.license).
 
-Config
+## Config
 
-```
+``` json
 {
     "name": "LanguageTool",
     "nameLocale": {
@@ -173,7 +173,7 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
 * [button](/plugin/events/button)
 * [init](/plugin/events/init)
@@ -188,6 +188,6 @@ Methods and events
 * [info.editorType](/plugin/info#editorType)
 * [info.recalculate](/plugin/info#recalculate)
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).
