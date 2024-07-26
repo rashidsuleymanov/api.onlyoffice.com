@@ -4,11 +4,11 @@ order: -2
 
 If you need to pass some arguments to the created document using the command line, you can do that with **Document Builder**. To do that you will need to modify the code of your **.docbuilder** script file and include the arguments you need into the command running **Document Builder**.
 
-This is the same as using the [SetProperty](/docbuilder/integrationapi/c/cdocbuilder/setproperty) method.
+This is the same as using the [SetProperty](../../Builder%20Framework/C++/CDocBuilder/SetProperty/index.md) method.
 
 In this case the command will look like this:
 
-```
+```bash
 docbuilder.exe "--argument={\"company\":\"ONLYOFFICE\",\"product\":\"ONLYOFFICE Document Builder\",\"compatibility\":\"100%\"}" "path-to-file\sample_with_arguments.docbuilder"
 ```
 
@@ -16,7 +16,7 @@ The sample code for the **.docbuilder** script file can be like this:
 
 ## Example
 
-```
+```js
 builder.CreateFile("docx");
 var sCompany   = Argument["company"];
 var sProduct = Argument["product"];
