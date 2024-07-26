@@ -9,7 +9,7 @@ import {jsx, jsxs} from "preact/jsx-runtime"
 import {Fragment, type JSX, h} from "preact"
 import rehypeAutolink from "rehype-autolink-headings"
 import rehypeRaw from "rehype-raw"
-import rehypeSlug from "rehype-slug"
+import rehypeSlug from "rehype-slug-custom-id"
 import remarkGfm from "remark-gfm"
 import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
@@ -54,7 +54,7 @@ export function markdown() {
       remarkGfm,
       [remarkRehype, {allowDangerousHtml: true}],
       rehypeRaw,
-      rehypeSlug,
+      [rehypeSlug, {enableCustomId: true}],
       [rehypeAutolink, {behavior: "wrap"}],
       rehypeLink,
       rehypeImage,
