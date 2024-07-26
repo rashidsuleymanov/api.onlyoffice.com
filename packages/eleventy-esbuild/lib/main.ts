@@ -1,69 +1,93 @@
+import {createHash} from "node:crypto"
+import {writeFile} from "node:fs/promises"
 import {tmpdir} from "node:os"
+import path from "node:path"
 import process from "node:process"
-import {AsyncTransform} from "@onlyoffice/async-transform"
 import {Console} from "@onlyoffice/console"
-import {type RecursiveCopyOptions, type UserConfig} from "@onlyoffice/eleventy-types"
 import {type BuildOptions, build} from "esbuild"
+import {default as PQueue} from "p-queue"
 import pack from "../package.json" with {type: "json"}
 
 // In the future, we should replace our custom logger with the eleventy one
 // (see for the ConsoleLogger type for the @onlyoffice/eleventy-types).
 const console = new Console(pack.name, process.stdout, process.stderr)
 
-export interface EleventyEsbuildCallback {
-  (): EleventyEsbuildOptions
-}
-
 export interface EleventyEsbuildOptions {
-  passthrough: {
-    input: string
-    target: string
-  }
-  copy: RecursiveCopyOptions
-  esbuild: BuildOptions
+  urlPath: string
+  outputDir: string
+  filenameFormat?(id: string, src: string): string
+  buildOptions?: BuildOptions
 }
 
-export function eleventyEsbuild(uc: UserConfig, cb: EleventyEsbuildCallback): void {
-  const o = cb()
-  uc.addPassthroughCopy({[o.passthrough.input]: o.passthrough.target}, {
-    transform() {
-      return new Build(o)
-    },
-    ...o.copy,
-  })
+export class BuildResult {
+  type = ""
+  src = ""
 }
 
-class Build extends AsyncTransform {
-  _o: EleventyEsbuildOptions
+export class EleventyEsbuild {
+  static #queue = new PQueue({concurrency: 1})
+  static #cache = new Map<string, BuildResult>()
 
-  constructor(o: EleventyEsbuildOptions) {
-    super()
-    this._o = o
+  #opts: EleventyEsbuildOptions
+
+  constructor(opts: EleventyEsbuildOptions) {
+    this.#opts = opts
   }
 
-  async _atransform(_: unknown): Promise<void> {
-    try {
+  async build(f: string): Promise<BuildResult> {
+    return EleventyEsbuild.#queue.add(async () => {
+      const c = EleventyEsbuild.#cache.get(f)
+      if (c !== undefined) {
+        return c
+      }
+
       // Esbuild populates the console itself.
-      const r = await build({
+      const a = await build({
         bundle: true,
-        entryPoints: [this._o.passthrough.input],
+        entryPoints: [f],
         outdir: tmpdir(),
         write: false,
-        ...this._o.esbuild,
+        ...this.#opts.buildOptions,
       })
-      if (r.errors.length !== 0) {
+      if (a.errors.length !== 0) {
         return
       }
-      const s = Buffer.from(r.outputFiles[0].contents)
-      this.push(s)
-    } catch (e) {
-      let m = "Unknown error"
-      if (e instanceof Error) {
-        // I could not find a right lightning interface.
-        // @ts-ignore
-        m = `${e.fileName}: ${e.message} (${e.loc.line}:${e.loc.column})`
+      if (!a.outputFiles) {
+        console.error("No output files")
+        return
       }
-      console.error(m)
-    }
+
+      const s = a.outputFiles[0].contents
+
+      const h = this.#hash(s)
+      let b = this.#base(f, h)
+      if (this.#opts.filenameFormat) {
+        b = this.#opts.filenameFormat(h, f)
+      }
+      const o = path.join(this.#opts.outputDir, b)
+      await writeFile(o, s)
+
+      const r = new BuildResult()
+      if (this.#opts.buildOptions && this.#opts.buildOptions.format === "esm") {
+        r.type = "module"
+      }
+      r.src = `${this.#opts.urlPath}${b}`
+
+      EleventyEsbuild.#cache.set(f, r)
+
+      return r
+    })
+  }
+
+  #base(f: string, h: string): string {
+    const p = path.parse(f)
+    p.name = `${p.name}-${h}`
+    p.base = `${p.name}${p.ext}`
+    return p.base
+  }
+
+  // https://github.com/sindresorhus/rev-hash/
+  #hash(c: string | Uint8Array): string {
+    return createHash("md5").update(c).digest("hex").slice(0, 10)
   }
 }
