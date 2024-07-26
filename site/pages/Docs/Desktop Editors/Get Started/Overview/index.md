@@ -2,15 +2,14 @@
 order: -2
 ---
 
-ONLYOFFICE Desktop Editorsv8.1
 
 **ONLYOFFICE Desktop Editors** is an open-source office suite for working with documents stored on your computer. This application allows you to create, edit and view text documents, spreadsheets and presentations without constant connection to the Internet. Most popular formats are supported: DOCX, ODT, XLSX, ODS, CVS, PPTX, ODP, etc.
 
 This documentation describes:
 
-* How to enable [debug mode](/desktop/debugging) to detect and fix all the possible errors
-* How to extend editor functionality with ready-to-use [plugins](/desktop/plugins) or creating your own ones
-* How to integrate desktop editors into the [document management systems (DMS) providers](/desktop/addingdms/), [open](/desktop/addingdms/opening) and [encrypt](/desktop/addingdms/encryption) documents in them
+* How to enable [debug mode](../../Usage%20API/Debugging/index.md) to detect and fix all the possible errors
+* How to extend editor functionality with ready-to-use [plugins](../../Usage%20API/Adding%20plugins/index.md) or creating your own ones
+* How to integrate desktop editors into the [document management systems (DMS) providers](../../Usage%20API/Adding%20a%20DMS%20provider/index.md), [open](../../Usage%20API/Adding%20a%20DMS%20provider/Opening%20documents/index.md) and [encrypt](../../Usage%20API/Adding%20a%20DMS%20provider/Encryption/index.md) documents in them
 
 ## How to install
 
@@ -24,12 +23,4 @@ For some Linux distributions, like Zorin OS, Linux Mint, Linkat, Linspire, etc.,
 
 ## What’s new
 
-ONLYOFFICE Desktop Editors Api is constantly updated. To stay up to date with our new features and enhancements, visit the [Changelog](/desktop/changelog) section.
-
-## Get help
-
-If you have any questions about ONLYOFFICE Desktop Editors, try to find them in the [FAQ](/desktop/faq) section first.
-
-You can request a feature or report a bug by posting an issue on [GitHub](https://github.com/ONLYOFFICE/DesktopEditors/issues).
-
-You can also ask our developers on [ONLYOFFICE forum](https://forum.onlyoffice.com/c/desktop-editors/35) (registration required).
+ONLYOFFICE Desktop Editors Api is constantly updated. To stay up to date with our new features and enhancements, visit the [Changelog](../../More%20Information/Changelog/index.md) section.
