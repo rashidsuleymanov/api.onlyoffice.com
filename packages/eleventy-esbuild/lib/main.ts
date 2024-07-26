@@ -1,10 +1,10 @@
 import {createHash} from "node:crypto"
-import {writeFile} from "node:fs/promises"
+import {writeFileSync} from "node:fs"
 import {tmpdir} from "node:os"
 import path from "node:path"
 import process from "node:process"
 import {Console} from "@onlyoffice/console"
-import {type BuildOptions, build} from "esbuild"
+import {type BuildOptions, buildSync} from "esbuild"
 import {default as PQueue} from "p-queue"
 import pack from "../package.json" with {type: "json"}
 
@@ -26,7 +26,7 @@ export class BuildResult {
 
 export class EleventyEsbuild {
   static #queue = new PQueue({concurrency: 1})
-  static #cache = new Map<string, BuildResult>()
+  static #cache = new Map<string, Promise<BuildResult>>()
 
   #opts: EleventyEsbuildOptions
 
@@ -35,14 +35,16 @@ export class EleventyEsbuild {
   }
 
   async build(f: string): Promise<BuildResult> {
-    return EleventyEsbuild.#queue.add(async () => {
-      const c = EleventyEsbuild.#cache.get(f)
-      if (c !== undefined) {
-        return c
-      }
+    const c = EleventyEsbuild.#cache.get(f)
+    if (c !== undefined) {
+      return c
+    }
+
+    const p = EleventyEsbuild.#queue.add(() => {
+      const r = new BuildResult()
 
       // Esbuild populates the console itself.
-      const a = await build({
+      const a = buildSync({
         bundle: true,
         entryPoints: [f],
         outdir: tmpdir(),
@@ -50,11 +52,11 @@ export class EleventyEsbuild {
         ...this.#opts.buildOptions,
       })
       if (a.errors.length !== 0) {
-        return
+        return r
       }
       if (!a.outputFiles) {
         console.error("No output files")
-        return
+        return r
       }
 
       const s = a.outputFiles[0].contents
@@ -65,18 +67,19 @@ export class EleventyEsbuild {
         b = this.#opts.filenameFormat(h, f)
       }
       const o = path.join(this.#opts.outputDir, b)
-      await writeFile(o, s)
+      writeFileSync(o, s)
 
-      const r = new BuildResult()
       if (this.#opts.buildOptions && this.#opts.buildOptions.format === "esm") {
         r.type = "module"
       }
       r.src = `${this.#opts.urlPath}${b}`
 
-      EleventyEsbuild.#cache.set(f, r)
-
       return r
     })
+
+    EleventyEsbuild.#cache.set(f, p)
+
+    return p
   }
 
   #base(f: string, h: string): string {
