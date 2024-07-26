@@ -1,3 +1,7 @@
+---
+order: -1
+---
+
 ONLYOFFICE Desktop Editors allows users to access the documents from the cloud and collaborate on them with their teammates. In this case, an Internet connection is required. Currently, users can connect the application to ONLYOFFICE Workspace (SaaS or on-premises), Nextcloud, ownCloud or Seafile, but you can extend this list adding your own DMS.
 
 Follow the steps below to add your own document management system (DMS) to the connection list:

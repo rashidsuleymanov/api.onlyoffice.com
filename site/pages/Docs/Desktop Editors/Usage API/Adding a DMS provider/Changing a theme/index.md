@@ -1,3 +1,7 @@
+---
+order: -3
+---
+
 Starting from version 7.5, you can change a theme of the desktop editor tab. To do this, use the *portal:uitheme* command of the [execCommand](/desktop/execcommand) method.
 
 ```

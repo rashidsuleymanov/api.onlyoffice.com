@@ -1,3 +1,7 @@
+---
+order: -2
+---
+
 The list of changes for ONLYOFFICE Desktop Editors API.
 
 ## Version 8.1

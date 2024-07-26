@@ -1,3 +1,7 @@
+---
+order: -8
+---
+
 Once your DMS is [added](/desktop/addingdms/) to the connection list, configure the DMS/Desktop Editors interaction:
 
 * [log in](/desktop/addingdms/loginlogout) to your DMS so that it will be displayed in the **Connected clouds** list,

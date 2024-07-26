@@ -1,3 +1,7 @@
+---
+order: -3
+---
+
 To run ONLYOFFICE Desktop Editors in debug mode, follow the instructions depending on the operating system you use.
 
 * Windows
