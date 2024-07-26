@@ -52,7 +52,7 @@ export interface UserConfig {
   /**
    * {@link https://www.11ty.dev/docs/data-custom/ Eleventy Reference}
    */
-  addDataExtension(extension: string, options: unknown): void
+  addDataExtension(extension: string, options: DataExtensionOptions): void
 
   /**
    * {@link https://www.11ty.dev/docs/languages/custom/ Eleventy Reference}
@@ -85,6 +85,11 @@ export interface UserConfig {
   addTransform(name: string, callback: (content: unknown, file: string) => unknown): void
 
   /**
+   * {@link https://www.11ty.dev/docs/config/#change-file-suffix-for-data-files Eleventy Reference}
+   */
+  setDataFileSuffixes(suffixes: string[]): void
+
+  /**
    * {@link https://www.11ty.dev/docs/events/ Eleventy Reference}
    */
   on(type: string, cb: unknown): void
@@ -96,7 +101,7 @@ export interface UserConfig {
 export interface ExtensionOptions {
   key?: string
   outputFileExtension?: string
-  compile(content: string, file: string): () => unknown | Promise<unknown>
+  compile?(content: string, file: string): () => unknown | Promise<unknown>
 }
 
 /**
@@ -107,6 +112,13 @@ export interface ConsoleLogger {
    * {@link https://github.com/11ty/eleventy/blob/v2.0.1/src/Util/ConsoleLogger.js#L83 Eleventy Reference}
    */
   message(message: string, type?: "log" | "warn" | "error", chalkColor?: boolean, forceToConsole?: boolean): void
+}
+
+/**
+ * {@link https://www.11ty.dev/docs/data-custom/ Eleventy Reference}
+ */
+export interface DataExtensionOptions {
+  parser?(content: string, file: string): unknown | Promise<unknown>
 }
 
 /**

@@ -1,32 +1,43 @@
-// todo: normalize naming of eleventy, remark, and other plugins.
-
+import {tmpdir} from "node:os"
 import {cwd} from "node:process"
 import {eleventyClean} from "@onlyoffice/eleventy-clean"
 import {isBuild} from "@onlyoffice/eleventy-env"
-import {eleventyEsbuild} from "@onlyoffice/eleventy-esbuild"
 import {eleventyHtmlMinifierTerser} from "@onlyoffice/eleventy-html-minifier-terser"
-import {eleventyLightningcss} from "@onlyoffice/eleventy-lightningcss"
 import {eleventyPagefind} from "@onlyoffice/eleventy-pagefind"
 import {eleventySitemap} from "@onlyoffice/eleventy-sitemap"
 import {eleventyStarryNight} from "@onlyoffice/eleventy-starry-night"
 import {type UserConfig} from "@onlyoffice/eleventy-types"
-import {eleventyYAML} from "@onlyoffice/eleventy-yaml"
 import {configMode} from "@onlyoffice/site-env"
 import {Config} from "@onlyoffice/site-config"
-import {markupPlugin} from "./config/markup.ts"
+import esbuild from "esbuild"
+import requireFromString from "require-from-string"
 import {eleventyMarkdown} from "./internal/markdown.tsx"
 
 function config(uc: UserConfig): unknown {
   Config.shared = Config.read(cwd(), configMode())
 
   uc.addPlugin(eleventyClean)
-  uc.addPlugin(markupPlugin)
-  uc.addPlugin(eleventyMarkdown)
 
-  uc.addPlugin(eleventyLightningcss, {
-    filename: "assets/main.css",
-    minify: isBuild(),
+  // https://github.com/11ty/eleventy/issues/235
+  uc.addTemplateFormats("11ty.js")
+  uc.addExtension("tsx", {key: "11ty.js"})
+
+  // https://github.com/11ty/eleventy/issues/577#issuecomment-2145656296
+  uc.setDataFileSuffixes([".data"])
+  uc.addDataExtension("ts", {
+    async parser(_, f) {
+      const r = await esbuild.build({
+        entryPoints: [f],
+        format: "cjs",
+        outdir: tmpdir(),
+        write: false,
+      })
+      const m = requireFromString(r.outputFiles[0].text)
+      return m.data()
+    },
   })
+
+  uc.addPlugin(eleventyMarkdown)
 
   uc.addPlugin(eleventyHtmlMinifierTerser, {
     minify: isBuild(),
@@ -41,36 +52,7 @@ function config(uc: UserConfig): unknown {
   })
 
   uc.addPlugin(eleventyStarryNight)
-
-  uc.addPlugin(eleventyYAML)
   uc.addPlugin(eleventySitemap)
-
-  uc.addPlugin(eleventyEsbuild, () => {
-    const c = Config.shared
-    return {
-      passthrough: {
-        input: "assets/main.ts",
-        target: "assets",
-      },
-      copy: {
-        rename() {
-          return "main.js"
-        },
-      },
-      esbuild: {
-        define: {
-          "import.meta.env": JSON.stringify({
-            DEV: !isBuild(),
-            CONFIG_SERVER_BASE_URL: c.server.baseUrl,
-          }),
-        },
-        format: "esm",
-        minify: isBuild(),
-        platform: "browser",
-      },
-    }
-  })
-
   uc.addPlugin(eleventyPagefind)
 
   uc.addPassthroughCopy({static: "."})
@@ -81,8 +63,8 @@ function config(uc: UserConfig): unknown {
       includes: "../components",
       input: "pages",
       layouts: "../layouts",
-      output: "dist"
-    }
+      output: "dist",
+    },
   }
 }
 

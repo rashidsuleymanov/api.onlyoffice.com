@@ -1,48 +1,78 @@
+import {createHash} from "node:crypto"
+import {writeFile} from "node:fs/promises"
+import path from "node:path"
 import process from "node:process"
-import {AsyncTransform} from "@onlyoffice/async-transform"
 import {Console} from "@onlyoffice/console"
-import {type UserConfig} from "@onlyoffice/eleventy-types"
 import {type BundleAsyncOptions, type CustomAtRules, bundleAsync} from "lightningcss"
+import {default as PQueue} from "p-queue"
 import pack from "../package.json" with {type: "json"}
 
 // In the future, we should replace our custom logger with the eleventy one
 // (see for the ConsoleLogger type for the @onlyoffice/eleventy-types).
 const console = new Console(pack.name, process.stdout, process.stderr)
 
-export function eleventyLightningcss(uc: UserConfig, p: BundleAsyncOptions<CustomAtRules>): void {
-  uc.addPassthroughCopy(p.filename, {
-    // todo: support the rename function to be able to add a hash to the filename
-    transform() {
-      return new Build(p)
-    }
-  })
+export interface EleventyLightningcssOptions {
+  urlPath: string
+  outputDir: string
+  buildOptions?: Omit<BundleAsyncOptions<CustomAtRules>, "filename">
 }
 
-class Build extends AsyncTransform {
-  _p: BundleAsyncOptions<CustomAtRules>
+export class BuildResult {
+  rel = ""
+  href = ""
+}
 
-  constructor(p: BundleAsyncOptions<CustomAtRules>) {
-    super()
-    this._p = p
+export class EleventyLightningcss {
+  static #queue = new PQueue({concurrency: 1})
+  static #cache = new Map<string, BuildResult>()
+
+  #opts: EleventyLightningcssOptions
+
+  constructor(opts: EleventyLightningcssOptions) {
+    this.#opts = opts
   }
 
-  async _atransform(_: unknown): Promise<void> {
-    try {
-      const r = await bundleAsync(this._p)
-      if (r.warnings) {
-        for (const w of r.warnings) {
+  async build(f: string): Promise<BuildResult> {
+    return EleventyLightningcss.#queue.add(async () => {
+      const c = EleventyLightningcss.#cache.get(f)
+      if (c !== undefined) {
+        return c
+      }
+
+      const a = await bundleAsync({
+        filename: f,
+        ...this.#opts.buildOptions,
+      })
+      if (a.warnings) {
+        for (const w of a.warnings) {
           console.warn(w.message)
         }
       }
-      this.push(r.code)
-    } catch (e) {
-      let m = "Unknown error"
-      if (e instanceof Error) {
-        // I could not find a right lightning interface.
-        // @ts-ignore
-        m = `${e.fileName}: ${e.message} (${e.loc.line}:${e.loc.column})`
-      }
-      console.error(m)
-    }
+
+      const h = this.#hash(a.code)
+      const b = this.#base(f, h)
+      const o = path.join(this.#opts.outputDir, b)
+      await writeFile(o, a.code)
+
+      const r = new BuildResult()
+      r.rel = "stylesheet"
+      r.href = `${this.#opts.urlPath}${b}`
+
+      EleventyLightningcss.#cache.set(f, r)
+
+      return r
+    })
+  }
+
+  #base(f: string, h: string): string {
+    const p = path.parse(f)
+    p.name = `${p.name}-${h}`
+    p.base = `${p.name}${p.ext}`
+    return p.base
+  }
+
+  // https://github.com/sindresorhus/rev-hash/
+  #hash(c: string | Uint8Array): string {
+    return createHash("md5").update(c).digest("hex").slice(0, 10)
   }
 }
