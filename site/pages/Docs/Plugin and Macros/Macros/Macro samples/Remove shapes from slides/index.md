@@ -1,8 +1,12 @@
-Description
+---
+order: -3
+---
+
+## Description
 
 Removes shapes from slides in a presentation.
 
-```
+``` javascript
 (function()
 {
   var oPresentation = Api.GetPresentation();
@@ -16,6 +20,6 @@ Removes shapes from slides in a presentation.
 
 Methods used: [GetPresentation](/officeapi/presentationapi/api/getpresentation), [GetSlideByIndex](/officeapi/presentationapi/apipresentation/getslidebyindex), [GetAllShapes](/officeapi/presentationapi/apislide/getallshapes)
 
-Result
+## Result
 
 ![Next blank row](/assets/images/plugins/remove-shapes.png)

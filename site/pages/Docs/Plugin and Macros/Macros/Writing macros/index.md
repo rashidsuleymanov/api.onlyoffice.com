@@ -9,46 +9,50 @@ Now that you know how macros work, try to write your own macro. We have a table 
 2. Now open the **Plugins** tab and select **Macros**. The macros window will pop up.
 
 3. Click **New**. You will be presented with the basic function wrapper which will allow you to enter the necessary code:
-   ```
+
+   ``` javascript
    (function()
    {
        // ... your code goes here ...
    })();
    ```
 
-4. Let's consult the [Office API documentation](/officeapi/spreadsheetapi) to see what we need to complete our task:
+4. Let's consult the [Office API documentation](../../../Office%20API/Office%20API/Spreadsheet%20API/index.mdx) to see what we need to complete our task:
 
    * First, get the current worksheet using the [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet) method:
-     ```
+
+     ``` javascript
      var oWorksheet = Api.GetActiveSheet();
      ```
 
    * Then create a loop to run from the first to the last row:
-     ```
+
+     ``` javascript
      for (var i = 1; i < 200; i += 2) {
      }
      ```
 
    * Set two variables: one for odd rows, the second for even rows:
-     ```
+
+     ``` javascript
      var rowOdd = i, rowEven = i + 1;
      ```
 
    * Now that we can access both the odd and even rows, let's color them in proper colors. Set the desired colors using the [CreateColorFromRGB](/officeapi/spreadsheetapi/api/createcolorfromrgb) method. Get the cell range within the row using the [GetRange](/officeapi/spreadsheetapi/apiworksheet/getrange) method and set the color for the odd rows:
 
-     ```
+     ``` javascript
      oWorksheet.GetRange("A" + rowOdd + ":S" + rowOdd).SetFillColor(Api.CreateColorFromRGB(138, 181, 155));
      ```
 
      The same is for the even rows, but with a different color:
 
-     ```
+     ``` javascript
      oWorksheet.GetRange("A" + rowEven + ":S" + rowEven).SetFillColor(Api.CreateColorFromRGB(216, 227, 220));
      ```
 
 Now let's sum it up with the complete script code:
 
-```
+``` javascript
 (function()
 {
     var oWorksheet = Api.GetActiveSheet();
@@ -70,7 +74,7 @@ To subscribe to the specified event and call the callback function when the even
 
 For example, to subscribe to an event when a hyperlink in a document is clicked, use the following lines:
 
-```
+``` javascript
 Api.attachEvent("asc_onHyperlinkClick", function(){
     console.log("HYPERLINK!!!");
 });

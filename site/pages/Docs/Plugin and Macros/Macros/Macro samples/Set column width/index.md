@@ -1,8 +1,12 @@
-Description
+---
+order: -13
+---
+
+## Description
 
 Sets the width for the column **B**.
 
-```
+``` javascript
 (function()
 {
     Api.GetActiveSheet().SetColumnWidth(1, 25);
@@ -11,14 +15,14 @@ Sets the width for the column **B**.
 
 Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [SetColumnWidth](/officeapi/spreadsheetapi/apiworksheet/setcolumnwidth)
 
-Reference Microsoft VBA macro code
+## Reference Microsoft VBA macro code
 
-```
+``` javascript
 Sub example()
     Columns("B").ColumnWidth = 25
 End Sub
 ```
 
-Result
+## Result
 
 ![Column width](/assets/images/plugins/column_width.png)

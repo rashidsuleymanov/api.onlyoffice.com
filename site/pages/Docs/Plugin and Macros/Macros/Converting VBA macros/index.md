@@ -8,7 +8,7 @@ This can be the reason for some inconvenience in case you previously used Micros
 
 The process is not too complicated. Let's see the following example:
 
-```
+``` javascript
 Sub Example()
     Dim myRange
     Dim result
@@ -32,7 +32,7 @@ The macro counts the sum of the values from the three cell ranges of the **A** c
 
 The exact same thing can be achieved using ONLYOFFICE macros, the code will be almost identical and easy to understand if you know both Visual Basic for Applications and JavaScript:
 
-```
+``` javascript
 (function()
 {
     for (let run = 1; run <= 3; run++)

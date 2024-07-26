@@ -1,8 +1,13 @@
-Description
+---
+order: -9
+---
+
+
+## Description
 
 Finds the next available blank row in a worksheet. This macro allows you to get the blank at the very end of your data (not between it).
 
-```
+``` javascript
 (function () 
 {
     // Getting the active sheet
@@ -30,16 +35,16 @@ Finds the next available blank row in a worksheet. This macro allows you to get 
 
 Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [GetRangeByNumber](/officeapi/spreadsheetapi/apiworksheet/getrangebynumber), [Select](/officeapi/spreadsheetapi/apirange/select)
 
-Reference Microsoft VBA macro code
+## Reference Microsoft VBA macro code
 
 [This VBA macro](https://www.teachexcel.com/excel-tutorial/find-the-next-blank-row-with-vba-macros-in-excel_1261.html) was used as a base.
 
-```
+``` javascript
 Sub example()
     Range("A" & Rows.Count).End(xlUp).Offset(1).Select
 End Sub
 ```
 
-Result
+## Result
 
 ![Next blank row](/assets/images/plugins/next_blank_row.png)

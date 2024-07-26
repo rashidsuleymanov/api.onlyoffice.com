@@ -1,8 +1,12 @@
-Description
+---
+order: -2
+---
+
+## Description
 
 Inserts a unique id into a form document.
 
-```
+``` javascript
 (function()
 {
     function generate () {
@@ -26,6 +30,6 @@ Inserts a unique id into a form document.
 
 Methods used: [GetDocument](/officeapi/textdocumentapi/api/getdocument), [CreateParagraph](/officeapi/textdocumentapi/api/createparagraph), [AddText](/officeapi/textdocumentapi/apiparagraph/addtext), [InsertContent](/officeapi/textdocumentapi/apidocument/insertcontent)
 
-Result
+## Result
 
 ![Insert id](/assets/images/plugins/insert_id.png)
