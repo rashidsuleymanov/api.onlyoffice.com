@@ -1,9 +1,9 @@
 import {createHash} from "node:crypto"
-import {writeFile} from "node:fs/promises"
+import {existsSync, mkdirSync, writeFileSync} from "node:fs"
 import path from "node:path"
 import process from "node:process"
 import {Console} from "@onlyoffice/console"
-import {type BundleAsyncOptions, type CustomAtRules, bundleAsync} from "lightningcss"
+import {type BundleAsyncOptions, type CustomAtRules, bundle} from "lightningcss"
 import {default as PQueue} from "p-queue"
 import pack from "../package.json" with {type: "json"}
 
@@ -24,7 +24,7 @@ export class BuildResult {
 
 export class EleventyLightningcss {
   static #queue = new PQueue({concurrency: 1})
-  static #cache = new Map<string, BuildResult>()
+  static #cache = new Map<string, Promise<BuildResult>>()
 
   #opts: EleventyLightningcssOptions
 
@@ -33,13 +33,15 @@ export class EleventyLightningcss {
   }
 
   async build(f: string): Promise<BuildResult> {
-    return EleventyLightningcss.#queue.add(async () => {
-      const c = EleventyLightningcss.#cache.get(f)
-      if (c !== undefined) {
-        return c
-      }
+    const c = EleventyLightningcss.#cache.get(f)
+    if (c !== undefined) {
+      return c
+    }
 
-      const a = await bundleAsync({
+    const p = EleventyLightningcss.#queue.add(() => {
+      const r = new BuildResult()
+
+      const a = bundle({
         filename: f,
         ...this.#opts.buildOptions,
       })
@@ -49,19 +51,25 @@ export class EleventyLightningcss {
         }
       }
 
+      const d = this.#opts.outputDir
+      if (!existsSync(d)) {
+        mkdirSync(d, {recursive: true})
+      }
+
       const h = this.#hash(a.code)
       const b = this.#base(f, h)
-      const o = path.join(this.#opts.outputDir, b)
-      await writeFile(o, a.code)
+      const o = path.join(d, b)
+      writeFileSync(o, a.code)
 
-      const r = new BuildResult()
       r.rel = "stylesheet"
       r.href = `${this.#opts.urlPath}${b}`
 
-      EleventyLightningcss.#cache.set(f, r)
-
       return r
     })
+
+    EleventyLightningcss.#cache.set(f, p)
+
+    return p
   }
 
   #base(f: string, h: string): string {
