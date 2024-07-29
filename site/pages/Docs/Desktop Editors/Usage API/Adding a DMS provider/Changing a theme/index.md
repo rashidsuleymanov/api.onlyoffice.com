@@ -2,22 +2,30 @@
 order: -3
 ---
 
-Starting from version 7.5, you can change a theme of the desktop editor tab. To do this, use the *portal:uitheme* command of the [execCommand](/desktop/execcommand) method.
+Starting from version 7.5, you can change a theme of the desktop editor tab. To do this, use the *portal:uitheme* command of the [execCommand](../execCommand/index.md) method.
 
-```
+``` javascript
 window.AscDesktopEditor.execCommand ("portal:uitheme", editorTheme);
 ```
 
-Parameters
+## editorTheme
 
-| Name        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Type   | Example      |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ------------ |
-| editorTheme | Defines the editor theme settings. It can be set in two ways:- **theme id** - the user sets the theme parameter by its id (**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**),
-- **default theme** - the default dark or light theme value will be set (**default-dark**, **default-light**). The default light theme is **theme-classic-light**.The first option has higher priority.Apart from the available editor themes, the user can also customize their own [color themes](https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx) for the application interface. | string | "theme-dark" |
+Defines the editor theme settings. It can be set in two ways:
 
-Example
+* **theme id** - the user sets the theme parameter by its id (**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**);
+* **default theme** - the default dark or light theme value will be set (**default-dark**, **default-light**). The default light theme is **theme-classic-light**.
 
-```
+The first option has higher priority.
+
+Apart from the available editor themes, the user can also customize their own [color themes](https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx) for the application interface.
+
+Type: string
+
+Example: "theme-dark"
+
+### Example
+
+``` javascript
 window.AscDesktopEditor.execCommand("portal:uitheme", "theme-dark")
 ```
 
