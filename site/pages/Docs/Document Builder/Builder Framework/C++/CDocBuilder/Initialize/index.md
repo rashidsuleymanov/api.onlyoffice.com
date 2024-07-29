@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilder.Initialize* method
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;
