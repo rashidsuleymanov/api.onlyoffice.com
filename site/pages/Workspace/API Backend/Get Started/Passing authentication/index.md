@@ -2,9 +2,9 @@ The user needs to perform several easy steps to pass authentication:
 
 1. Send POST request, containing the **userName** and **password** parameters to the [api/2.0/authentication](/portals/method/authentication/post/api/2.0/authentication) address:
 
-   Authentication Request
+   ### Authentication Request
 
-   ```
+   ``` http
    POST /api/2.0/authentication.json HTTP/1.1
    Host: yourportal.onlyoffice.com
    Content-Type: application/json
@@ -16,11 +16,11 @@ The user needs to perform several easy steps to pass authentication:
    }
    ```
 
-   Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+   > Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
 
-   Response
+   ### Response
 
-   ```
+   ``` http
    HTTP/1.1 201 Created
    Cache-Control: private
    Content-Type: application/json; charset=utf-8
@@ -39,7 +39,7 @@ The user needs to perform several easy steps to pass authentication:
 
 3. Use this token every time you call API methods inserting it to the **Authorization** HTTP header:
 
-   Sample API Request
+   ### Sample API Request
 
    ```
    GET api/2.0/people/@self.json HTTP/1.1
@@ -48,11 +48,11 @@ The user needs to perform several easy steps to pass authentication:
    Authorization:sdjhfskjdhkqy739459234
    ```
 
-   Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+   > Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
 
-C# authentication request example
+### C# authentication request example
 
-```
+``` csharp
 var request = System.Net.WebRequest.Create("https://yourportal.onlyoffice.com/api/2.0/authentication.json");
 request.Method = "POST";
 request.ContentType = "application/json";
@@ -70,12 +70,12 @@ var response = (System.Net.HttpWebResponse)request.GetResponse();
 var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
 ```
 
-Please note, that you have to enter your own portal address instead of *yourportal.onlyoffice.com* address.
+> Please note, that you have to enter your own portal address instead of *yourportal.onlyoffice.com* address.
 
-cURL authentication request example
+### cURL authentication request example
 
-```
+``` bash
 curl --request POST --header "Content-Type: application/json" --data "{\"username\":\"yourusername\",\"password\":\"yourpassword\"}" "https://yourportal.onlyoffice.com/api/2.0/authentication.json"
 ```
 
-Please note, that you have to enter your own portal address instead of *yourportal.onlyoffice.com* address.
+> Please note, that you have to enter your own portal address instead of *yourportal.onlyoffice.com* address.

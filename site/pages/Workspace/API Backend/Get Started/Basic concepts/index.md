@@ -1,10 +1,8 @@
-ONLYOFFICE Workspace API Backendv12.6
-
 The ONLYOFFICE Workspace API is implemented as REST over HTTP using GET/POST/PUT/DELETE. All the resources, like posts or comments, have their own URLs and are designed to be manipulated in isolation.
 
 ## Authentication
 
-Authentication in the ONLYOFFICE Workspace API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header. For information and examples please visit the [Authentication](/portals/workspaceapi/auth) section.
+Authentication in the ONLYOFFICE Workspace API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header. For information and examples please visit the [Authentication](../Passing%20authentication/index.md) section.
 
 ## Making requests
 
