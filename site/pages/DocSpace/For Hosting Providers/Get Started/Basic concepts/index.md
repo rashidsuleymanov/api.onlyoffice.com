@@ -1,3 +1,7 @@
+---
+order: -2
+---
+
 ONLYOFFICE DocSpace For hosting providersv2.5
 
 The ONLYOFFICE Hosted Solution is implemented as REST over HTTP using GET/POST. All the resources, like client creation, portal registration, etc, have their own URLs and are designed to be manipulated in isolation.
