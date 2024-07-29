@@ -10,7 +10,7 @@ For example, the [api/2.0/people](/docspace/method/people/get/api/2.0/people) re
 api/2.0/people?startIndex=10&count=25
 ```
 
-Request parameters
+### Request parameters
 
 | Parameter    | Description                                                                                                                                                         |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

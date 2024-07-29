@@ -2,11 +2,8 @@
 order: -3
 ---
 
-Expand all
 
-Collapse all
-
-* What is the date/time format used in the response to the requests?
+## What is the date/time format used in the response to the requests?
 
   The response to the requests uses the **Roundtrip** format: 2008-04-10T06:30:00.0000000-07:00\
   where *-07:00* is UTC offset which is set on the portal.
@@ -19,6 +16,6 @@ Collapse all
 
   Please note that the UTC date and time without the offset are used in this case.
 
-- Is the response data pagination supported?
+## Is the response data pagination supported?
 
-  Yes. More information you can find in the [Request filtering](/docspace/apisystem/filters) section.
+  Yes. More information you can find in the [Request filtering](../Filtering/index.md) section.
