@@ -2,13 +2,12 @@
 order: -2
 ---
 
-ONLYOFFICE Workspace For hosting providersv12.6
 
 The ONLYOFFICE Hosted Solution is implemented as REST over HTTP using GET/POST. All the resources, like client creation, portal registration, etc, have their own URLs and are designed to be manipulated in isolation.
 
 ## Authentication
 
-Authentication in the ONLYOFFICE Hosted Solution is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header. For information and examples please visit the [Authentication](/portals/apisystem/authentication) section.
+Authentication in the ONLYOFFICE Hosted Solution is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header. For information and examples please visit the [Authentication](../Authentication/index.md) section.
 
 ## Making requests
 
@@ -20,7 +19,7 @@ To identify the request and response format, please make sure that both the **Co
 
 **If a request fails, a non-200 status code will be returned** in JSON format, containing the error code and additional error information (if available) as the response content.
 
-Possible error codes and their description
+### Possible error codes and their description
 
 | HTTP Status Code | Error code             | Description                                                                                                                                                                            |
 | ---------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -38,7 +37,3 @@ Possible error codes and their description
 | 500              | authorization          | Internal server error when decoding the authorization key.                                                                                                                             |
 | 500              | registerNewTenantError | Internal server error when registering a new portal.                                                                                                                                   |
 | 500              | error                  | Internal server error.                                                                                                                                                                 |
-
-## Get help
-
-If you have any questions or feature requests about ONLYOFFICE Hosted Solution, please visit [ONLYOFFICE forum](https://forum.onlyoffice.com/c/cloud/31) (registration required).
