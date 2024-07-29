@@ -12,7 +12,7 @@ Sets the path to the folder where the program will temporarily save files needed
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;
@@ -22,6 +22,6 @@ CDocBuilder::Dispose();
 
 #### .docbuilder
 
-```
+```js
 builder.SetTmpFolder("DocBuilderTemp");
 ```

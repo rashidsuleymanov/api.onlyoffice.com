@@ -15,7 +15,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilder.ExecuteCommand* me
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;
@@ -25,6 +25,6 @@ CDocBuilder::Dispose();
 
 #### .docbuilder
 
-```
+```js
 oParagraph.AddText("Hello, world!");
 ```

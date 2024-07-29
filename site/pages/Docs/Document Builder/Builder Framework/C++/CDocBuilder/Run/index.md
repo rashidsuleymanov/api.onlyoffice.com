@@ -12,7 +12,7 @@ Runs the **ONLYOFFICE Document Builder** executable. If you do not want to write
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 int wmain(int argc, wchar_t *argv[])
 {
@@ -31,6 +31,6 @@ int wmain(int argc, wchar_t *argv[])
 
 #### .docbuilder
 
-```
+```js
 docbuilder.exe mydocument.docbuilder
 ```

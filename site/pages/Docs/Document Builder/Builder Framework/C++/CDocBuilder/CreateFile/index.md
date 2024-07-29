@@ -6,13 +6,13 @@ Creates a new file. The type of the file which will be created needs to be set.
 
 | Name         | Type             | Description                                                                                                                                                                                   |
 | ------------ | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *sExtension* | const wchar\_t\* | The file extension. The following values are possible: **docx**, **xlsx**, **pptx**, or **pdf** (see [AVS\_OFFICESTUDIO\_FILE\_XXX](/docbuilder/integrationapi/default#format-types) values). |
+| *sExtension* | const wchar\_t\* | The file extension. The following values are possible: **docx**, **xlsx**, **pptx**, or **pdf** (see [AVS\_OFFICESTUDIO\_FILE\_XXX](../../../../Builder%20App/Overview/index.md#format-types) values). |
 
 ## Example
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;
