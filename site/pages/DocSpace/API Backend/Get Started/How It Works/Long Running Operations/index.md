@@ -4,9 +4,9 @@ order: -3
 
 The user initiates a long-running operation by sending a request to the appropriate API endpoint, which returns an object containing information about the initiated operation. An [example](/docspace/method/files/put/api/2.0/files/rooms/%7bid%7d/archive) of such a request and response:
 
-Example Request
+### Example Request
 
-```
+``` http
 PUT api/2.0/files/rooms/1234/archive
 Host: yourportal.onlyoffice.com
 Content-Type: application/json
@@ -17,9 +17,9 @@ Accept: application/json
 }
 ```
 
-Example Response
+### Example Response
 
-```
+``` json
 {
     "error": "",
     "finished": false,
