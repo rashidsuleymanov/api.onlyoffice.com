@@ -12,13 +12,13 @@ An HTTP header is required to pass the authentication when performing the API re
 
 The hash value is calculated using the HMAC-SHA1 function with the key from the *core.machinekey* value of the Hosted Solution site *appSettings* configuration.
 
-Please note, that the token is valid for **5** minutes only, starting with the **datetime**.
+> Please note, that the token is valid for **5** minutes only, starting with the **datetime**.
 
 Authentication Token example will look like this: "*ASC abc:20100707140603:E7lwEXOplYS-0lbnV1XQnDSbi3w*"
 
-.Net(C#) generating token example
+### .Net(C#) generating token example
 
-```
+``` csharp
 public string CreateAuthToken(string pkey, string machinekey)
 {
     using (var hasher = new System.Security.Cryptography.HMACSHA1(System.Text.Encoding.UTF8.GetBytes(machinekey)))
@@ -31,9 +31,9 @@ public string CreateAuthToken(string pkey, string machinekey)
 }
 ```
 
-Bash generating token example
+### Bash generating token example
 
-```
+``` bash
 CreateAuthToken() {
     pkey="$1";
     machinekey=$(echo -n "$2");
@@ -46,9 +46,9 @@ CreateAuthToken() {
 }
 ```
 
-Node.js generating token example
+### Node.js generating token example
 
-```
+``` javascript
 var moment = require("moment");
 var crypto = require("crypto");
 
@@ -65,9 +65,9 @@ var createToken = function (pkey, machinekey) {
 };
 ```
 
-PHP generating token example
+### PHP generating token example
 
-```
+``` php
 function CreateAuthToken($pkey, $machinekey) {
     $now=gmdate('YmdHis');
 
@@ -79,9 +79,9 @@ function CreateAuthToken($pkey, $machinekey) {
 }
 ```
 
-PowerShell generating token example
+### PowerShell generating token example
 
-```
+``` powershell
 function CreateAuthToken([string]$pkey, [string]$machinekey) {
     $hmacsha = New-Object System.Security.Cryptography.HMACSHA1
     $hmacsha.Key = [System.Text.Encoding]::UTF8.GetBytes($machinekey)
@@ -96,9 +96,9 @@ function CreateAuthToken([string]$pkey, [string]$machinekey) {
 }
 ```
 
-Ruby generating token example
+### Ruby generating token example
 
-```
+``` ruby
 def create_auth_token(pkey, machine_key)
     now = Time.now.strftime('%Y%m%d%H%M%S')
     hash = Base64.strict_encode64(OpenSSL::HMAC.digest('sha1', machine_key, [now, pkey].join("\n")))
@@ -106,9 +106,9 @@ def create_auth_token(pkey, machine_key)
 end
 ```
 
-Python generating token example
+### Python generating token example
 
-```
+``` python
 import base64
 import hashlib
 import hmac
@@ -132,9 +132,9 @@ def create_auth_token(pkey, machine_key):
     return token
 ```
 
-Java generating token example
+### Java generating token example
 
-```
+``` javascript
 public String createAuthToken(String pkey, String machinekey) throws Exception
 {
     java.time.OffsetDateTime date = java.time.OffsetDateTime.now(java.time.ZoneOffset.UTC);
