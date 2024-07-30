@@ -1,3 +1,7 @@
+---
+order: -2
+---
+
 Allows you to open the SDK as a document editor for viewing by specifying the [id](/docspace/jssdk/config#id) parameter for a file.
 
 ![Viewer mode](/assets/images/docspace/viewer-mode.png)

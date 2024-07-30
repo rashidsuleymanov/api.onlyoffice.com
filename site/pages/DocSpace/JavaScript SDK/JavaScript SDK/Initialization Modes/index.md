@@ -1,3 +1,7 @@
+---
+order: -4
+---
+
 *api.js* allows you to initialize the SDK in the following modes:
 
 * [manager](/docspace/jssdk/initmodes/manager) - displays a list of entities depending on the specified *rootPath*;

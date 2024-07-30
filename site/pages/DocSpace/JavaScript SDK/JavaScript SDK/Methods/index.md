@@ -1,3 +1,7 @@
+---
+order: -2
+---
+
 After initializing SDK, you will get an object that can be used to call the methods:
 
 ```
