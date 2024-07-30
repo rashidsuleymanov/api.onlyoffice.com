@@ -2,16 +2,16 @@
 order: -6
 ---
 
-Displays a list of entities depending on the specified [rootPath](/docspace/jssdk/config#rootPath). It allows you to create rooms, folders, and files and work with them.
+Displays a list of entities depending on the specified [rootPath](../../Config/index.md#rootpath). It allows you to create rooms, folders, and files and work with them.
 
 ![Manager](/assets/images/docspace/manager-mode.png)
 
-Method
+### Method
 
-| Name                                               | Description                                      |
-| -------------------------------------------------- | ------------------------------------------------ |
-| [initManager](/docspace/jssdk/methods#initManager) | Initializes the SDK frame in the "manager" mode. |
+| Name                                              | Description                                      |
+| ------------------------------------------------- | ------------------------------------------------ |
+| [initManager](../../Methods/index.md#initmanager) | Initializes the SDK frame in the "manager" mode. |
 
-```
+``` javascript
 var docSpace = DocSpace.SDK.initManager({config});
 ```
