@@ -1,3 +1,7 @@
+---
+order: -7
+---
+
 Before starting plugin development, create a plugin template and configure its settings which will be displayed in the DocSpace plugin settings.
 
 1. Install the *@onlyoffice/docspace-plugin-sdk* npm package globally:

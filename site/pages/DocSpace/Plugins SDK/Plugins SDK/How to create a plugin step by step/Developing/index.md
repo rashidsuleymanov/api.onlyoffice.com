@@ -1,3 +1,7 @@
+---
+order: -3
+---
+
 Now that all the preparation work is done, you can start developing your plugin.
 
 * [Step 1](/docspace/pluginssdk/plugintutorial/developing/creatingtemplate). Create a plugin template

@@ -1,3 +1,7 @@
+---
+order: -1
+---
+
 Here are the fundamental steps for building plugins:
 
 1. Preparing

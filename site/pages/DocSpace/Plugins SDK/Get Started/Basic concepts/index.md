@@ -1,3 +1,7 @@
+---
+order: -2
+---
+
 ONLYOFFICE DocSpace Plugins SDKv2.5
 
 **DocSpace Plugins SDK** allows developers to create their own plugins and add them to the DocSpace portal.

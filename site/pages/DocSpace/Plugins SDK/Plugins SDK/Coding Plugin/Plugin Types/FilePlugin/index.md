@@ -1,3 +1,8 @@
+---
+order: -1
+---
+
+
 The plugin that can interact with the file list.
 
 **Interface**: IFilePlugin.

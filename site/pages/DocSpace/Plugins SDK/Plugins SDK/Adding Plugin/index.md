@@ -1,3 +1,7 @@
+---
+order: -2
+---
+
 You can upload your own plugins to your server. For the DocSpace Saas solution, only system plugins created by our developers are available.
 
 ## Enabling system plugins

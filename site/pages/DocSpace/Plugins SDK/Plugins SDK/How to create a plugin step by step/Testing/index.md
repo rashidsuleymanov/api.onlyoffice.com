@@ -1,3 +1,7 @@
+---
+order: -2
+---
+
 To check the plugin's functionality and fix any bugs that may arise, test the plugin:
 
 1. Build the prepared plugin following the instructions [here](/docspace/pluginssdk/buildingplugin).

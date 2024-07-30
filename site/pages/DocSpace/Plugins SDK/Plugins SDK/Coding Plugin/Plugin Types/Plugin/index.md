@@ -1,3 +1,8 @@
+---
+order: -9
+---
+
+
 The default plugin.
 
 **Interface**: IPlugin.

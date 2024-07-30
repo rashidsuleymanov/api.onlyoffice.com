@@ -1,3 +1,7 @@
+---
+order: -4
+---
+
 **Step 1**. Install all the necessary packages and programs
 
 * ONLYOFFICE DocSpace on-premises.

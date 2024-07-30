@@ -1,3 +1,8 @@
+---
+order: -5
+---
+
+
 The plugin that is embedded as a separate tab in the file info panel.
 
 **Interface**: IInfoPanelPlugin.

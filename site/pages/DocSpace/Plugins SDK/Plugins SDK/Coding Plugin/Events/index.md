@@ -1,3 +1,8 @@
+---
+order: -2
+---
+
+
 The events from the [Actions](/docspace/pluginssdk/codingplugin/pluginmessage#actions) collection are processed on the portal side. The specified actions are performed depending on the set of values:
 
 ## Events and their description:

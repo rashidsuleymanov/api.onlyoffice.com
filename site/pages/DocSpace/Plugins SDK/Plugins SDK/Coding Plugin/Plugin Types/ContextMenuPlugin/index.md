@@ -1,3 +1,8 @@
+---
+order: -6
+---
+
+
 The plugin that is embedded in the context menu of files, folders, rooms, images, video (audio).
 
 **Interface**: IContextMenuPlugin.

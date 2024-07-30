@@ -1,3 +1,8 @@
+---
+order: -3
+---
+
+
 The plugin that is embedded in the profile menu.
 
 **Interface**: IProfileMenuPlugin.

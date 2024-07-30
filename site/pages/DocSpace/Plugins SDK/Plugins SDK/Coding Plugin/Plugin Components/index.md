@@ -1,3 +1,8 @@
+---
+order: -1
+---
+
+
 The following plugin UI components are available for DocSpace plugins:
 
 | Name                                                                            | Description                                                                                                                                                            |

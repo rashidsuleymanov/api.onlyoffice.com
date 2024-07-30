@@ -1,3 +1,8 @@
+---
+order: -8
+---
+
+
 The plugin that manages settings for the administrator or owner.
 
 **Interface**: ISettingsPlugin.

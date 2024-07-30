@@ -1,3 +1,8 @@
+---
+order: -2
+---
+
+
 The plugin that is given the access to the portal events.
 
 **Interface**: IEventListenerPlugin.

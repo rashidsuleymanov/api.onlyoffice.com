@@ -1,3 +1,8 @@
+---
+order: -4
+---
+
+
 The plugin that is embedded in the main button.
 
 **Interface**: IMainButtonPlugin.

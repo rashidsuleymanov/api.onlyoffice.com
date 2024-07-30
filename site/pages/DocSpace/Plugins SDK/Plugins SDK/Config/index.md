@@ -1,3 +1,8 @@
+---
+order: -3
+---
+
+
 Description
 
 The *config.json* file is generated based on the data from the *package.json* file.
