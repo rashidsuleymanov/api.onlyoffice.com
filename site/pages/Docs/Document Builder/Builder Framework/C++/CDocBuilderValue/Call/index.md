@@ -15,7 +15,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderValue.Call* method 
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;
@@ -28,6 +28,6 @@ CDocBuilder::Dispose();
 
 #### .docbuilder
 
-```
+```js
 var oDocument = Api.GetDocument();
 ```

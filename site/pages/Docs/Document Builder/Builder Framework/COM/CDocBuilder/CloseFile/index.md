@@ -6,7 +6,7 @@ Closes the file to stop working with it. You can use a single **ONLYOFFICE Docum
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 oBuilder->Initialize();
@@ -16,6 +16,6 @@ oBuilder->Dispose();
 
 #### .docbuilder
 
-```
+```js
 builder.CloseFile();
 ```

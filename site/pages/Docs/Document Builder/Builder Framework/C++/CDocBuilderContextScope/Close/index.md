@@ -8,7 +8,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderContextScope.Close*
 
 #### C++
 
-```
+```c++
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

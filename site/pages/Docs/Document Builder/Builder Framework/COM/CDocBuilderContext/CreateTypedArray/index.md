@@ -16,7 +16,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateTyped
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;

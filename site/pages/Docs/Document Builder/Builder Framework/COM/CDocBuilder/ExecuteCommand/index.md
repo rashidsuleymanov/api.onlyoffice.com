@@ -15,7 +15,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilder.ExecuteCommand* me
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderValue* oRun = NULL;
@@ -28,7 +28,7 @@ oBuilder->Dispose();
 
 #### .docbuilder
 
-```
+```js
 oParagraph.AddText("Hello, world!");
 oParagraph.SetSpacingAfter(1000, false);
 ```
