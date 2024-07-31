@@ -12,7 +12,7 @@ Sets the path to the folder where the program will temporarily save files needed
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 oBuilder->Initialize();
@@ -22,6 +22,6 @@ oBuilder->Dispose();
 
 #### .docbuilder
 
-```
+```js
 builder.SetTmpFolder("DocBuilderTemp");
 ```

@@ -16,7 +16,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilder.WriteData* method 
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 oBuilder->Initialize();

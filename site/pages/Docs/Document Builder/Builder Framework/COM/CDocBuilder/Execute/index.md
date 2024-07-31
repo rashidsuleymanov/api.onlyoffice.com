@@ -15,7 +15,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilder.Execute* method is
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderValue* oRun = NULL;
@@ -26,6 +26,6 @@ oBuilder->Dispose();
 
 #### .docbuilder
 
-```
+```js
 oParagraph.AddText("Hello, world!");
 ```

@@ -8,7 +8,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilder.Initialize* method
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 oBuilder->Initialize();

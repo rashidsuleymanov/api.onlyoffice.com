@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilder.IsSaveWithDoctrend
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 VARIANT_BOOL b;

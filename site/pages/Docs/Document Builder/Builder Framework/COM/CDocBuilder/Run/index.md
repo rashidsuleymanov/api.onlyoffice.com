@@ -13,7 +13,7 @@ Runs the **ONLYOFFICE Document Builder** executable. If you do not want to write
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 VARIANT_BOOL b;
@@ -24,6 +24,6 @@ oBuilder->Dispose();
 
 #### .docbuilder
 
-```
+```js
 docbuilder.exe mydocument.docbuilder
 ```
