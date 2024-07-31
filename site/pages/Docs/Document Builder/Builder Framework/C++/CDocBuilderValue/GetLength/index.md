@@ -8,7 +8,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderValue.GetLength* me
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;

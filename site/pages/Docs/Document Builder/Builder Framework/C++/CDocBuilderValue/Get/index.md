@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderValue.Get* method i
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;
@@ -29,7 +29,7 @@ CDocBuilder::Dispose();
 
 The **operator\[]** postfix expression can be also used to get an array value by its index:
 
-```
+```c++
 CDocBuilderValue operator[](const int& name);
 ```
 
@@ -37,7 +37,7 @@ CDocBuilderValue operator[](const int& name);
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;

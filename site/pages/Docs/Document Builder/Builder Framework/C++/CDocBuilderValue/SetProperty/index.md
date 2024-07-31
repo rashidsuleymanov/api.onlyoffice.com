@@ -15,7 +15,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderValue.SetProperty* 
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;
@@ -29,7 +29,7 @@ CDocBuilder::Dispose();
 
 The **Set** method can be also used to set a property to the **CDocBuilderValue** object. The object property can be specified with its name in the Unicode format:
 
-```
+```c++
 void Set(const wchar_t* name, CDocBuilderValue value);
 ```
 
@@ -37,7 +37,7 @@ void Set(const wchar_t* name, CDocBuilderValue value);
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;

@@ -6,16 +6,16 @@ For the integration of **ONLYOFFICE Document Builder** into any application, the
 
 * *CDoctrenderer* class - used by **ONLYOFFICE Document Builder** in the file conversion process.
 * *CString* class - the string class with the *wchar\_t\** property.
-* [CDocBuilder](/docbuilder/integrationapi/c/cdocbuilder) class - used by **ONLYOFFICE Document Builder** for the document file (text document, spreadsheet, presentation, form document, PDF) to be generated.
-* [CDocBuilderContext](/docbuilder/integrationapi/c/cdocbuildercontext) class - used by **ONLYOFFICE Document Builder** for getting JS context for working.
-* [CDocBuilderContextScope](/docbuilder/integrationapi/c/cdocbuildercontextscope) class - the stack-allocated class which sets the execution context for all operations executed within a local scope.
-* [CDocBuilderValue](/docbuilder/integrationapi/c/cdocbuildervalue) class - used by **ONLYOFFICE Document Builder** for getting the results of called JS commands. It represents a wrapper for a JS object.
+* [CDocBuilder](../C++/CDocBuilder/index.md) class - used by **ONLYOFFICE Document Builder** for the document file (text document, spreadsheet, presentation, form document, PDF) to be generated.
+* [CDocBuilderContext](../C++/CDocBuilderContext/index.md) class - used by **ONLYOFFICE Document Builder** for getting JS context for working.
+* [CDocBuilderContextScope](../C++/CDocBuilderContextScope/index.md) class - the stack-allocated class which sets the execution context for all operations executed within a local scope.
+* [CDocBuilderValue](../C++/CDocBuilderValue/index.md) class - used by **ONLYOFFICE Document Builder** for getting the results of called JS commands. It represents a wrapper for a JS object.
 
 ## Example
 
 #### C++
 
-```
+```c++
 #include "./../common_deploy.h"
 #include "../docbuilder.h"
 #include "./utils.cpp"
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 
 #### .docbuilder
 
-```
+```js
 builder.SetTmpFolder("DocBuilderTemp");
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
