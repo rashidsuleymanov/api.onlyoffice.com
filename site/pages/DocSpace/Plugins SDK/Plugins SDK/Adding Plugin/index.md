@@ -8,7 +8,7 @@ You can upload your own plugins to your server. For the DocSpace Saas solution, 
 
 By default, system plugins are turned off. But you can enable them by following the instructions below:
 
-1. In the lower left corner, click ![](/assets/images/docspace/more-icon.png) and open the **Settings** page.
+1. In the lower left corner, click ![More icon](/assets/images/docspace/more-icon.png) and open the **Settings** page.
 
    ![DocSpace Settings](/assets/images/docspace/docspace-settings.png)
 
@@ -20,7 +20,7 @@ By default, system plugins are turned off. But you can enable them by following 
 
 4. Enable a plugin with a switcher.
 
-   ![Plugin switcher](/assets/images/docspace/switcher.png)
+   <img alt="Plugin switcher" src="/assets/images/docspace/switcher.png" width="400px">
 
 After that, the plugin will function automatically unless additional settings need to be specified.
 
@@ -32,11 +32,11 @@ A list of the system plugins can be also found in the **Developer Tools** sectio
 
 To set up a plugin:
 
-1. Click ![](/assets/images/docspace/settings-icon.png).
+1. Click ![Settings icon](/assets/images/docspace/settings-icon.png).
 
 2. In the appeared dialog, fill out all the empty fields.
 
-   ![Plugin settings](/assets/images/docspace/plugin-settings.png)
+   <img alt="Plugin settings" src="/assets/images/docspace/plugin-settings.png" width="300px">
 
 Now the plugin is available to use.
 
@@ -44,7 +44,7 @@ Now the plugin is available to use.
 
 In the DocSpace on-premises solution, the system plugins will be available on the same **Plugins** page. But in this case, you also have the option to upload your own plugins. To do this:
 
-1. In the lower left corner, click ![](/assets/images/docspace/more-icon.png) and open the **Settings** page.
+1. In the lower left corner, click ![More icon](/assets/images/docspace/more-icon.png) and open the **Settings** page.
 
    ![DocSpace Settings](/assets/images/docspace/docspace-settings.png)
 

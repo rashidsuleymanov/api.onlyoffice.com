@@ -3,13 +3,14 @@ order: -2
 ---
 
 
-The events from the [Actions](/docspace/pluginssdk/codingplugin/pluginmessage#actions) collection are processed on the portal side. The specified actions are performed depending on the set of values:
+The events from the [Actions](../Plugin%20Message/index.md#actions) collection are processed on the portal side. The specified actions are performed depending on the set of values:
 
-## Events and their description:
 
-* **updateProps** - the function called when updating the state of the item which action was passed. It does not work if the [newProps](/docspace/pluginssdk/codingplugin/pluginmessage#newProps) parameter is not passed to the message.
+## updateProps
 
-  ```
+The function called when updating the state of the item which action was passed. It does not work if the [newProps](../Plugin%20Message/index.md#newprops) parameter is not passed to the message.
+
+  ``` javascript
   const message: IMessage = {
       "newProps": { ...acceptButton, isDisabled: true },
       "actions": [Actions.showToast, Actions.updateStatus, Actions.updateProps],
@@ -17,9 +18,11 @@ The events from the [Actions](/docspace/pluginssdk/codingplugin/pluginmessage#ac
   };
   ```
 
-* **updateContext** - the function called when updating the state of the the parent or child items which were passed. It does not work if the [contextProps](/docspace/pluginssdk/codingplugin/pluginmessage#contextProps) parameter is not passed to the message.
+## updateContext
 
-  ```
+The function called when updating the state of the the parent or child items which were passed. It does not work if the [contextProps](../Plugin%20Message/index.md#contextprops) parameter is not passed to the message.
+
+  ``` javascript
   const message: IMessage = {
       "actions": [Actions.updateProps, Actions.updateContext],
       "newProps": { ...nameInputProps, value },
@@ -35,9 +38,11 @@ The events from the [Actions](/docspace/pluginssdk/codingplugin/pluginmessage#ac
   };
   ```
 
-* **updateStatus** - the function called when updating the plugin status.
+## updateStatus
 
-  ```
+The function called when updating the plugin status.
+
+  ``` javascript
   const message: IMessage = {
       "newProps": { ...acceptButton, isDisabled: true },
       "actions": [Actions.showToast, Actions.updateProps, Actions.updateStatus],
@@ -45,57 +50,71 @@ The events from the [Actions](/docspace/pluginssdk/codingplugin/pluginmessage#ac
   };
   ```
 
-* **updateContextMenuItems** - the function called when updating all the context menu items.
+## updateContextMenuItems
 
-  ```
+The function called when updating all the context menu items.
+
+  ``` javascript
   const message: IMessage = {
       "actions": [Actions.updateContextMenuItems]
   };
   ```
 
-* **updateInfoPanelItems** - the function called when updating all the info panel items.
+## updateInfoPanelItems
 
-  ```
+The function called when updating all the info panel items.
+
+  ``` javascript
   const message: IMessage = {
       "actions": [Actions.updateInfoPanelItems]
   };
   ```
 
-* **updateMainButtonItems** - the function called when updating all the main button menu items.
+## updateMainButtonItems
 
-  ```
+The function called when updating all the main button menu items.
+
+  ``` javascript
   const message: IMessage = {
       "actions": [Actions.updateMainButtonItems]
   };
   ```
 
-* **updateProfileMenuItems** - the function called when updating all the profile menu items.
+## updateProfileMenuItems
 
-  ```
+The function called when updating all the profile menu items.
+
+  ``` javascript
   const message: IMessage = {
       "actions": [Actions.updateProfileMenuItems]
   };
   ```
 
-* **updateFileItems** - the function called when updating all the file items.
+## updateFileItems
 
-  ```
+The function called when updating all the file items.
+
+  ``` javascript
   const message: IMessage = {
       "actions": [Actions.updateFileItems]
   };
   ```
 
-* **updateEventListenerItems** - the function called when updating all the event listener items.
+## updateEventListenerItems
 
-  ```
+The function called when updating all the event listener items.
+
+  ``` javascript
   const message: IMessage = {
       "actions": [Actions.updateEventListenerItems]
   };
   ```
 
-* **showToast** - the function called when displaying a toast notification after the user actions. It does not work if the [toastProps](/docspace/pluginssdk/codingplugin/pluginmessage#toastProps) parameter is not passed to the message.
+## showToast
 
-  ```
+The function called when displaying a toast notification after the user actions. It does not work if the [toastProps](../Plugin%20Message/index.md#toastprops) parameter is not passed to the message.
+
+  ``` javascript
   const message: IMessage = {
       "newProps": { ...acceptButton, isDisabled: true },
       "actions": [Actions.showToast, Actions.updateProps, Actions.updateStatus],
@@ -103,9 +122,11 @@ The events from the [Actions](/docspace/pluginssdk/codingplugin/pluginmessage#ac
   };
   ```
 
-* **showCreateDialogModal** - the function called when opening a modal window for creating certain item (file, folder, etc.). It does not work if the [createDialogProps](/docspace/pluginssdk/codingplugin/pluginmessage#createDialogProps) parameter is not passed to the message.
+## showCreateDialogModal
 
-  ```
+The function called when opening a modal window for creating certain item (file, folder, etc.). It does not work if the [createDialogProps](../Plugin%20Message/index.md#createdialogprops) parameter is not passed to the message.
+
+  ``` javascript
   const message: IMessage = {
       "actions": [Actions.showCreateDialogModal],
       "createDialogProps": {
@@ -127,26 +148,32 @@ The events from the [Actions](/docspace/pluginssdk/codingplugin/pluginmessage#ac
   };
   ```
 
-* **showModal** - the function called when opening a modal window. It does not work if the [modalDialogProps](/docspace/pluginssdk/codingplugin/pluginmessage#modalDialogProps) parameter is not passed to the message.
+## showModal
 
-  ```
+The function called when opening a modal window. It does not work if the [modalDialogProps](../Plugin%20Message/index.md#modaldialogprops) parameter is not passed to the message.
+
+  ``` javascript
   const message: IMessage = {
       "actions": [Actions.showModal],
       "modalDialogProps": openFromUrlProps,
   };
   ```
 
-* **closeModal** - the function called when closing a modal window.
+## closeModal
 
-  ```
+The function called when closing a modal window.
+
+  ``` javascript
   const message: IMessage = {
       "actions": [Actions.closeModal],
   };
   ```
 
-* **sendPostMessage** - the function called when sending a message to a frame. It does not work if the [postMessage](/docspace/pluginssdk/codingplugin/pluginmessage#postMessage) parameter is not passed to the message or the specified frame is not found.
+## sendPostMessage
 
-  ```
+The function called when sending a message to a frame. It does not work if the [postMessage](../Plugin%20Message/index.md#postmessage) parameter is not passed to the message or the specified frame is not found.
+
+  ``` javascript
   const message: IMessage = {
       "actions": [Actions.sendPostMessage],
       "postMessage": {
@@ -161,9 +188,11 @@ The events from the [Actions](/docspace/pluginssdk/codingplugin/pluginmessage#ac
   };
   ```
 
-* **saveSettings** - the function called when saving the data that was transferred in the [settings](/docspace/pluginssdk/codingplugin/pluginmessage#settings) parameter and returning it in the [setAdminPluginSettingsValue](/docspace/pluginssdk/codingplugin/plugintypes/settingsplugin#setAdminPluginSettingsValue) method each time the plugin is requested. It functions only when the **Save** button is clicked in the **Settings** block.
+## saveSettings
 
-  ```
+The function called when saving the data that was transferred in the [settings](../Plugin%20Message/index.md#settings) parameter and returning it in the [setAdminPluginSettingsValue](../Plugin%20Types/SettingsPlugin/index.md#setadminpluginsettingsvalue) method each time the plugin is requested. It functions only when the **Save** button is clicked in the **Settings** block.
+
+  ``` javascript
   const message: IMessage = {
       "actions": [
         Actions.showToast,

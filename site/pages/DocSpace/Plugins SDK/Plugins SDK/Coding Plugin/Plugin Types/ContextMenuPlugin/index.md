@@ -7,37 +7,51 @@ The plugin that is embedded in the context menu of files, folders, rooms, images
 
 **Interface**: IContextMenuPlugin.
 
-Variables
+## Variables
 
-| Name             | Description                                                                                                                                                                                                                                                  | Type                           | Example |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------ | ------- |
-| contextMenuItems | Stores a collection of elements where the keys are the *key* parameters from the [ContextMenuItem](/docspace/pluginssdk/codingplugin/pluginitems/contextmenuitem) objects. A list for embedding into the context menu is generated based on this collection. | collection of IContextMenuItem |         |
+### contextMenuItems
+
+Stores a collection of elements where the keys are the *key* parameters from the [ContextMenuItem](../../Plugin%20Items/ContextMenuItem/index.md) objects. A list for embedding into the context menu is generated based on this collection.
+
+Type: collection of IContextMenuItem
+
 
 ## Methods and their description:
 
-* **addContextMenuItem** - add a new context menu item.
+### addContextMenuItem
 
-  Parameters
+Add a new context menu item.
+
+  **Parameters**
 
   | Name            | Description                  | Type             | Example |
   | --------------- | ---------------------------- | ---------------- | ------- |
   | contextMenuItem | Defines a context menu item. | IContextMenuItem |         |
 
-* **getContextMenuItems** - get all the context menu items.
 
-* **getContextMenuItemsKeys** - get all the keys of the context menu items.
+### getContextMenuItems
 
-* **updateContextMenuItem** - update the context menu item.
+Get all the context menu items.
 
-  Parameters
+
+### getContextMenuItemsKeys
+
+Get all the keys of the context menu items.
+
+
+### updateContextMenuItem
+
+Update the context menu item.
+
+  **Parameters**
 
   | Name            | Description                      | Type             | Example |
   | --------------- | -------------------------------- | ---------------- | ------- |
   | contextMenuItem | Defines a new context menu item. | IContextMenuItem |         |
 
-Example
+**Example**
 
-```
+``` javascript
 import {IContextMenuPlugin, IContextMenuItem} from "@onlyoffice/docspace-plugin-sdk";
 
 class Plugin implements IContextMenuPlugin {

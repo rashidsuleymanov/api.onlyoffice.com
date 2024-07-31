@@ -7,61 +7,107 @@ The plugin that is provided with the origin, proxy, and prefix to make requests 
 
 **Interface**: IApiPlugin.
 
-Variables
+## Variables
 
-| Name   | Description                                                                   | Type   | Example                  |
-| ------ | ----------------------------------------------------------------------------- | ------ | ------------------------ |
-| origin | Stores the origin parameter of the DocSpace portal.                           | string | "https\://example.com"   |
-| proxy  | Stores the proxy parameter of the DocSpace portal.                            | string | "https\://proxy-example" |
-| prefix | Stores the prefix parameter of the DocSpace portal to access the server side. | string | "prefix"                 |
+### origin
+
+Stores the origin parameter of the DocSpace portal.
+
+Type: string
+
+Example: `https://example.com`
+
+
+### proxy
+
+Stores the proxy parameter of the DocSpace portal.
+
+Type: string
+
+Example: `https://proxy-example`
+
+
+### prefix
+
+Stores the prefix parameter of the DocSpace portal to access the server side.
+
+Type: string
+
+Example: "prefix"
+
 
 ## Methods and their description:
 
-* **setOrigin** - update the origin parameter of the DocSpace portal.
+### setOrigin
 
-  Parameters
+Update the origin parameter of the DocSpace portal.
 
-  | Name   | Description                                          | Type   | Example                |
-  | ------ | ---------------------------------------------------- | ------ | ---------------------- |
-  | origin | Defines the origin parameter of the DocSpace portal. | string | "https\://example.com" |
+  **Parameters**
 
-* **getOrigin** - get the origin parameter of the DocSpace portal.
+  | Name   | Description                                          | Type   | Example               |
+  | ------ | ---------------------------------------------------- | ------ | --------------------- |
+  | origin | Defines the origin parameter of the DocSpace portal. | string | `https://example.com` |
 
-* **setProxy** - update the proxy parameter of the DocSpace portal.
 
-  Parameters
+### getOrigin
 
-  | Name  | Description                                         | Type   | Example                  |
-  | ----- | --------------------------------------------------- | ------ | ------------------------ |
-  | proxy | Defines the proxy parameter of the DocSpace portal. | string | "https\://proxy-example" |
+Get the origin parameter of the DocSpace portal.
 
-* **getProxy** - get the proxy parameter of the DocSpace portal.
 
-* **setPrefix** - update the prefix parameter of the DocSpace portal.
+### setProxy
 
-  Parameters
+Update the proxy parameter of the DocSpace portal.
+
+  **Parameters**
+
+  | Name  | Description                                         | Type   | Example                 |
+  | ----- | --------------------------------------------------- | ------ | ----------------------- |
+  | proxy | Defines the proxy parameter of the DocSpace portal. | string | `https://proxy-example` |
+
+
+### getProxy
+
+Get the proxy parameter of the DocSpace portal.
+
+
+### setPrefix
+
+Update the prefix parameter of the DocSpace portal.
+
+  **Parameters**
 
   | Name   | Description                                          | Type   | Example  |
   | ------ | ---------------------------------------------------- | ------ | -------- |
   | prefix | Defines the prefix parameter of the DocSpace portal. | string | "prefix" |
 
-* **getPrefix** - get the prefix parameter of the DocSpace portal.
 
-* **setAPI** - update all the API parameters of the DocSpace portal in one request.
 
-  Parameters
+### getPrefix
 
-  | Name   | Description                                                                   | Type   | Example                  |
-  | ------ | ----------------------------------------------------------------------------- | ------ | ------------------------ |
-  | origin | Stores the origin parameter of the DocSpace portal.                           | string | "https\://example.com"   |
-  | proxy  | Stores the proxy parameter of the DocSpace portal.                            | string | "https\://proxy-example" |
-  | prefix | Stores the prefix parameter of the DocSpace portal to access the server side. | string | "prefix"                 |
+Get the prefix parameter of the DocSpace portal.
 
-* **getAPI** - get all the API parameters of the DocSpace portal in one request. Returns an object with the origin, proxy, and prefix parameters.
 
-Example
+### setAPI
 
-```
+Update all the API parameters of the DocSpace portal in one request.
+
+  **Parameters**
+
+  | Name   | Description                                                                   | Type   | Example                 |
+  | ------ | ----------------------------------------------------------------------------- | ------ | ----------------------- |
+  | origin | Stores the origin parameter of the DocSpace portal.                           | string | `https://example.com`   |
+  | proxy  | Stores the proxy parameter of the DocSpace portal.                            | string | `https://proxy-example` |
+  | prefix | Stores the prefix parameter of the DocSpace portal to access the server side. | string | "prefix"                |
+
+
+### getAPI
+
+Get all the API parameters of the DocSpace portal in one request. Returns an object with the origin, proxy, and prefix parameters.
+
+
+**Example**
+
+``` javascript
 import {IApiPlugin} from "@onlyoffice/docspace-plugin-sdk";
 
 class Plugin implements IApiPlugin {

@@ -6,9 +6,10 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 ![Textarea](/assets/images/docspace/textarea.png)
 
-Example
 
-```
+### Example
+
+``` javascript
 import {ITextArea, IMessage, Actions} from "@onlyoffice/docspace-plugin-sdk";
 
 const onChange = (value: string) => {

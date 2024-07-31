@@ -6,9 +6,9 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 ![Label](/assets/images/docspace/label.png)
 
-Example
+### Example
 
-```
+``` javascript
 import {ILabel} from "@onlyoffice/docspace-plugin-sdk";
 
 const label: ILabel = {

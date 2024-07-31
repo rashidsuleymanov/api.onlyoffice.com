@@ -7,35 +7,47 @@ The plugin that is embedded in the profile menu.
 
 **Interface**: IProfileMenuPlugin.
 
-Variables
+## Variables
 
-| Name             | Description                                                                                                                                                                                                                                                  | Type                           | Example |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------ | ------- |
-| profileMenuItems | Stores a collection of elements where the keys are the *key* parameters from the [ProfileMenuItem](/docspace/pluginssdk/codingplugin/pluginitems/profilemenuitem) objects. A list for embedding into the profile menu is generated based on this collection. | collection of IProfileMenuItem |         |
+### profileMenuItems
+
+Stores a collection of elements where the keys are the *key* parameters from the [ProfileMenuItem](../../Plugin%20Items/ProfileMenuItem/index.md) objects. A list for embedding into the profile menu is generated based on this collection.
+
+Type: collection of IProfileMenuItem
+
 
 ## Methods and their description:
 
-* **addProfileMenuItem** - add a new profile menu item.
+### addProfileMenuItem
 
-  Parameters
+Add a new profile menu item.
+
+  **Parameters**
 
   | Name             | Description                  | Type             | Example |
   | ---------------- | ---------------------------- | ---------------- | ------- |
   | profileMenuItems | Defines a profile menu item. | IProfileMenuItem |         |
 
-* **getProfileMenuItems** - get all the profile menu items.
 
-* **updateProfileMenuItem** - update the profile menu item.
+### getProfileMenuItems
 
-  Parameters
+Get all the profile menu items.
+
+
+### updateProfileMenuItem
+
+Update the profile menu item.
+
+  **Parameters**
 
   | Name             | Description                      | Type             | Example |
   | ---------------- | -------------------------------- | ---------------- | ------- |
   | profileMenuItems | Defines a new profile menu item. | IProfileMenuItem |         |
 
-Example
 
-```
+**Example**
+
+``` javascript
 import {IProfileMenuPlugin, IProfileMenuItem} from "@onlyoffice/docspace-plugin-sdk";
 
 class Plugin implements IProfileMenuPlugin{
