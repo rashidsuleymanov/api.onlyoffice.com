@@ -27,7 +27,7 @@ home:
       }
 
 help:
-  faq: http://0.0.0.0/
-  issues: http://0.0.0.0/
-  forum: http://0.0.0.0/
+  faq: API%20Backend/More%20Information/FAQ/index.md
+  issues: https://github.com/ONLYOFFICE/CommunityServer/issues
+  forum: https://forum.onlyoffice.com/c/workspace/33
 ---

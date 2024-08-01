@@ -28,7 +28,7 @@ home:
       builder.CloseFile()
 
 help:
-  faq: http://0.0.0.0/
-  issues: http://0.0.0.0/
-  forum: http://0.0.0.0/
+  faq: Docs%20API/More%20Information/FAQ/index.md
+  issues: https://github.com/ONLYOFFICE/DocumentServer/issues
+  forum: https://forum.onlyoffice.com/c/document-api/39
 ---
