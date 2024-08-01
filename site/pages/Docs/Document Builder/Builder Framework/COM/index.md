@@ -5,16 +5,16 @@ order: -3
 For the integration of **ONLYOFFICE Document Builder** into any application, the COM **doctrenderer** library is used. The current application version contains five main classes:
 
 * *CDoctrenderer* class - used by **ONLYOFFICE Document Builder** in the file conversion process.
-* [CDocBuilder](/docbuilder/integrationapi/com/cdocbuilder) class - used by **ONLYOFFICE Document Builder** for the document file (text document, spreadsheet, presentation, form document, PDF) to be generated.
-* [CDocBuilderContext](/docbuilder/integrationapi/com/cdocbuildercontext) class - used by **ONLYOFFICE Document Builder** for getting JS context for working.
-* [CDocBuilderContextScope](/docbuilder/integrationapi/com/cdocbuildercontextscope) class - the stack-allocated class which sets the execution context for all operations executed within a local scope.
-* [CDocBuilderValue](/docbuilder/integrationapi/com/cdocbuildervalue) class - used by **ONLYOFFICE Document Builder** for getting the results of called JS commands. It represents a wrapper for a JS object.
+* [CDocBuilder](../COM/CDocBuilder/index.md) class - used by **ONLYOFFICE Document Builder** for the document file (text document, spreadsheet, presentation, form document, PDF) to be generated.
+* [CDocBuilderContext](../COM/CDocBuilderContext/index.md) class - used by **ONLYOFFICE Document Builder** for getting JS context for working.
+* [CDocBuilderContextScope](../COM/CDocBuilderContextScope/index.md) class - the stack-allocated class which sets the execution context for all operations executed within a local scope.
+* [CDocBuilderValue](../COM/CDocBuilderValue/index.md) class - used by **ONLYOFFICE Document Builder** for getting the results of called JS commands. It represents a wrapper for a JS object.
 
 ## Example
 
 #### COM
 
-```
+```c++
 #include <iostream>
 #include <comutil.h>
 #include <atlcomcli.h>
@@ -110,7 +110,7 @@ int main(int argc, char *argv[])
 
 #### .docbuilder
 
-```
+```js
 builder.SetTmpFolder("DocBuilderTemp");
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();

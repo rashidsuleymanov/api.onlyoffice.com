@@ -6,7 +6,7 @@ Closes the file to stop working with it. You can use a single **ONLYOFFICE Docum
 
 #### .Net
 
-```
+```c#
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -16,6 +16,6 @@ CDocBuilder.Destroy();
 
 #### .docbuilder
 
-```
+```js
 builder.CloseFile();
 ```

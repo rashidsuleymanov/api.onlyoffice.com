@@ -1,6 +1,6 @@
 #### CDocBuilderContextScope^ CreateScope();
 
-Creates a [context scope](/docbuilder/integrationapi/net/cdocbuildercontextscope) which sets the execution context for all operations executed within a local scope.
+Creates a [context scope](../../CDocBuilderContextScope/index.md) which sets the execution context for all operations executed within a local scope.
 
 Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateScope* method is not used.
 
@@ -8,7 +8,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateScope
 
 #### .Net
 
-```
+```c#
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

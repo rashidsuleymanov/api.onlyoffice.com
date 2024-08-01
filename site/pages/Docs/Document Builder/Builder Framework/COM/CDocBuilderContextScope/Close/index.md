@@ -8,7 +8,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderContextScope.Close*
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;

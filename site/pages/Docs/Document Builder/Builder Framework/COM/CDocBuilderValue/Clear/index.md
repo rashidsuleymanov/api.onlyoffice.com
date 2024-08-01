@@ -8,7 +8,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderValue.Clear* method
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;

@@ -1,6 +1,6 @@
 #### void SetProperty(sParam, sValue);
 
-Sets an argument to the builder class which can be trasferred to the program outside the [CDocBuilder.ExecuteCommand](/docbuilder/integrationapi/net/cdocbuilder/executecommand) method, i.e. either as an additional property when running **ONLYOFFICE Document Builder** executable file or as a part of program code, but not included into the document file script.
+Sets an argument to the builder class which can be trasferred to the program outside the [CDocBuilder.ExecuteCommand](../ExecuteCommand/index.md) method, i.e. either as an additional property when running **ONLYOFFICE Document Builder** executable file or as a part of program code, but not included into the document file script.
 
 Please note, that for the *.docbuilder* file the *CDocBuilder.SetProperty* method is not used explicitly. The argument itself is used instead as an additional property for the executable. See the example below.
 
@@ -27,7 +27,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilder.SetProperty* metho
 
 Once added, the argument will be available as the **Argument** variable with its parameter values set:
 
-```
+```c#
 Argument.name === "ONLYOFFICE" // true
 ```
 
@@ -35,7 +35,7 @@ Argument.name === "ONLYOFFICE" // true
 
 #### .Net
 
-```
+```c#
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -45,7 +45,7 @@ CDocBuilder.Destroy();
 
 #### .docbuilder
 
-```
+```js
 docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
 ```
 
@@ -57,7 +57,7 @@ It is also possible to update the font list when you either add new fonts or rem
 
 #### .Net
 
-```
+```c#
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -67,6 +67,6 @@ CDocBuilder.Destroy();
 
 #### .docbuilder
 
-```
+```js
 docbuilder.exe "--check-fonts=true" test.docbuilder
 ```
