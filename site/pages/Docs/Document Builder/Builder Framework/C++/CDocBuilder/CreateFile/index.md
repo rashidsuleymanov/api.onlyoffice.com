@@ -4,8 +4,8 @@ Creates a new file. The type of the file which will be created needs to be set.
 
 ## Parameters:
 
-| Name         | Type             | Description                                                                                                                                                                                   |
-| ------------ | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name         | Type             | Description                                                                                                                                                                                            |
+| ------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | *sExtension* | const wchar\_t\* | The file extension. The following values are possible: **docx**, **xlsx**, **pptx**, or **pdf** (see [AVS\_OFFICESTUDIO\_FILE\_XXX](../../../../Builder%20App/Overview/index.md#format-types) values). |
 
 ## Example

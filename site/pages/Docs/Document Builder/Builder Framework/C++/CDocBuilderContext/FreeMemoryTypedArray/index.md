@@ -2,7 +2,7 @@
 
 Frees the memory for a typed array.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderContext.FreeMemoryTypedArray* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderContext.FreeMemoryTypedArray* method is not used.
 
 ## Parameters:
 

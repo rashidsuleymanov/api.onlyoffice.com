@@ -2,7 +2,7 @@
 
 Returns true if the **CDocBuilderValue** object is undefined.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsUndefined* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsUndefined* method is not used.
 
 ## Example
 

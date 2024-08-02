@@ -1,8 +1,8 @@
 #### CDocBuilderContextScope CreateScope();
 
-Creates a [context scope](/docbuilder/integrationapi/c/cdocbuildercontextscope) which sets the execution context for all operations executed within a local scope.
+Creates a [context scope](../../CDocBuilderContextScope/index.md) which sets the execution context for all operations executed within a local scope.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateScope* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateScope* method is not used.
 
 ## Example
 
