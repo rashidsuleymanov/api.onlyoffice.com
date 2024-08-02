@@ -25,6 +25,14 @@ table {
   overflow: auto;
 }
 
+.page-header__logo svg {
+  height: 28px;
+
+  @media (--size-viewport-width-large) {
+    height: 38px;
+  }
+}
+
 /* todo: move to ui */
 
 .content h1,
