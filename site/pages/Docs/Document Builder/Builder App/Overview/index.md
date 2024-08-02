@@ -71,7 +71,7 @@ If you use **ONLYOFFICE Document Builder** as both an application and a script, 
    is the same as
 
    ```js
-   CDocBuilder.CreateFile(AVS_OFFICESTUDIO_FILE_DOCUMENT_DOCX);
+   CDocBuilder.CreateFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX);
    ```
 
    And
@@ -83,37 +83,49 @@ If you use **ONLYOFFICE Document Builder** as both an application and a script, 
    is the same as
 
    ```js
-   CDocBuilder.SaveFile(AVS_OFFICESTUDIO_FILE_DOCUMENT_DOCX, file_path);
+   CDocBuilder.SaveFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX, file_path);
    ```
 
    ## Format types
 
-   | String  | Format type                                            |
-   | ------- | ------------------------------------------------------ |
-   | "docx"  | AVS\_OFFICESTUDIO\_FILE\_DOCUMENT\_DOCX                |
-   | "doc"   | AVS\_OFFICESTUDIO\_FILE\_DOCUMENT\_DOC                 |
-   | "odt"   | AVS\_OFFICESTUDIO\_FILE\_DOCUMENT\_ODT                 |
-   | "rtf"   | AVS\_OFFICESTUDIO\_FILE\_DOCUMENT\_RTF                 |
-   | "txt"   | AVS\_OFFICESTUDIO\_FILE\_DOCUMENT\_TXT                 |
-   | "pptx"  | AVS\_OFFICESTUDIO\_FILE\_PRESENTATION\_PPTX            |
-   | "odp"   | AVS\_OFFICESTUDIO\_FILE\_PRESENTATION\_ODP             |
-   | "xlsx"  | AVS\_OFFICESTUDIO\_FILE\_SPREADSHEET\_XLSX             |
-   | "xls"   | AVS\_OFFICESTUDIO\_FILE\_SPREADSHEET\_XLS              |
-   | "ods"   | AVS\_OFFICESTUDIO\_FILE\_SPREADSHEET\_ODS              |
-   | "csv"   | AVS\_OFFICESTUDIO\_FILE\_SPREADSHEET\_CSV              |
-   | "pdf"   | AVS\_OFFICESTUDIO\_FILE\_CROSSPLATFORM\_PDF            |
-   | "image" | AVS\_OFFICESTUDIO\_FILE\_IMAGE                         |
-   | "jpg"   | AVS\_OFFICESTUDIO\_FILE\_IMAGE                         |
-   | "png"   | AVS\_OFFICESTUDIO\_FILE\_IMAGE                         |
-   | "html"  | AVS\_OFFICESTUDIO\_FILE\_DOCUMENT\_HTML\_IN\_CONTAINER |
+   | String | Format type                                       |
+   | ------ | ------------------------------------------------- |
+   | "docx" | OFFICESTUDIO\_FILE\_DOCUMENT\_DOCX                |
+   | "doc"  | OFFICESTUDIO\_FILE\_DOCUMENT\_DOC                 |
+   | "odt"  | OFFICESTUDIO\_FILE\_DOCUMENT\_ODT                 |
+   | "rtf"  | OFFICESTUDIO\_FILE\_DOCUMENT\_RTF                 |
+   | "txt"  | OFFICESTUDIO\_FILE\_DOCUMENT\_TXT                 |
+   | "dotx" | OFFICESTUDIO\_FILE\_DOCUMENT\_DOTX                |
+   | "ott"  | OFFICESTUDIO\_FILE\_DOCUMENT\_OTT                 |
+   | "html" | OFFICESTUDIO\_FILE\_DOCUMENT\_HTML                |
+   | "pdf"  | OFFICESTUDIO\_FILE\_DOCUMENT\_OFORM\_PDF          |
+   | "pptx" | OFFICESTUDIO\_FILE\_PRESENTATION\_PPTX            |
+   | "ppt"  | OFFICESTUDIO\_FILE\_PRESENTATION\_PPT             |
+   | "odp"  | OFFICESTUDIO\_FILE\_PRESENTATION\_ODP             |
+   | "ppsx" | OFFICESTUDIO\_FILE\_PRESENTATION\_PPSX            |
+   | "potx" | OFFICESTUDIO\_FILE\_PRESENTATION\_POTX            |
+   | "otp"  | OFFICESTUDIO\_FILE\_PRESENTATION\_OTP             |
+   | "xlsx" | OFFICESTUDIO\_FILE\_SPREADSHEET\_XLSX             |
+   | "xls"  | OFFICESTUDIO\_FILE\_SPREADSHEET\_XLS              |
+   | "ods"  | OFFICESTUDIO\_FILE\_SPREADSHEET\_ODS              |
+   | "csv"  | OFFICESTUDIO\_FILE\_SPREADSHEET\_CSV              |
+   | "xltx" | OFFICESTUDIO\_FILE\_SPREADSHEET\_XLTX             |
+   | "ots"  | OFFICESTUDIO\_FILE\_SPREADSHEET\_OTS              |
+   | "pdf"  | OFFICESTUDIO\_FILE\_CROSSPLATFORM\_PDF            |
+   | "djvu" | OFFICESTUDIO\_FILE\_CROSSPLATFORM\_DJVU           |
+   | "xps"  | OFFICESTUDIO\_FILE\_CROSSPLATFORM\_XPS            |
+   | "pdfa" | OFFICESTUDIO\_FILE\_CROSSPLATFORM\_PDFA           |
+   | "jpg"  | OFFICESTUDIO\_FILE\_IMAGE\_JPG                    |
+   | "png"  | OFFICESTUDIO\_FILE\_IMAGE\_PNG                    |
+   | "bmp"  | OFFICESTUDIO\_FILE\_IMAGE\_BMP                    |
 
 5. The entire JavaScript context is a wrapper for its native CDocBuilder **builderJS** object. You need to work with it as with an ordinary JavaScript object. In this case, the *jsValue* instruction is not needed for the JS variables:
 
    ```js
    builderJS.OpenFile("path_or_url", "x2t_additons_as_xml");
-   builderJS.CreateFile(AVS_OFFICESTUDIO_FILE_DOCUMENT_DOCX); or builderJS.CreateFile("docx");
+   builderJS.CreateFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX); or builderJS.CreateFile("docx");
    builderJS.SetTmpFolder("folder");
-   builderJS.SaveFile(AVS_OFFICESTUDIO_FILE_DOCUMENT_DOCX, "path", "x2t_additons_as_xml"); or builderJS.SaveFile("docx", "path", "x2t_additons_as_xml");
+   builderJS.SaveFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX, "path", "x2t_additons_as_xml"); or builderJS.SaveFile("docx", "path", "x2t_additons_as_xml");
    builderJS.CloseFile();
    ```
 
