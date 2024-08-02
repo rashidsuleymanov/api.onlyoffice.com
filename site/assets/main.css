@@ -41,8 +41,7 @@ table {
 .content h4,
 .content h5,
 .content h6 {
-  /* todo: use var */
-  scroll-margin-top: calc(72px + 20px);
+  scroll-margin-top: calc(var(--page-header-height) + var(--base-size-20));
 }
 
 .content h1 a[href^="#"],
