@@ -2,12 +2,19 @@ import {type PagefindSearchOptions} from "@onlyoffice/pagefind-types"
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {useSlots} from "@onlyoffice/preact-slots"
 import {CancelIcon, MagnifyingGlassIcon} from "@onlyoffice/ui-icons/poor/24.tsx"
-import {Template} from "@onlyoffice/ui-kit"
+import {
+  Template,
+  TextInput,
+  TextInputAction,
+  TextInputControl,
+  TextInputLeading,
+  TextInputPlaceholder,
+  TextInputTrailing,
+} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
 
 export interface SearchContainerProperties extends ChildrenIncludable {
   "search-options"?: PagefindSearchOptions
-  "size"?: "default" | "large"
 }
 
 export function SearchContainer(p: SearchContainerProperties): JSX.Element {
@@ -15,7 +22,7 @@ export function SearchContainer(p: SearchContainerProperties): JSX.Element {
     placeholder: SearchPlaceholder,
     field: SearchField,
     clear: SearchClear,
-    template: SearchTemplate
+    template: SearchTemplate,
   })
 
   const o: Record<string, string> = {}
@@ -23,28 +30,30 @@ export function SearchContainer(p: SearchContainerProperties): JSX.Element {
     o["search-options"] = JSON.stringify(p["search-options"])
   }
 
-  return <search-container {...o}>
-    <form class={cls()} id="search" action="https://duckduckgo.com/" method="get">
-      <MagnifyingGlassIcon class="search__glass" width={18} height={18} />
-      {slots.placeholder}
-      {slots.field}
-      <input name="sites" aria-hidden="true" hidden />
-      {slots.clear}
+  return <search-container class="search" {...o}>
+    <form id="search" action="https://duckduckgo.com/" method="get">
+      <TextInput>
+        <TextInputLeading>
+          <MagnifyingGlassIcon class="search__glass" />
+        </TextInputLeading>
+        <TextInputPlaceholder>
+          {slots.placeholder}
+        </TextInputPlaceholder>
+        <TextInputControl>
+          {slots.field}
+        </TextInputControl>
+        <TextInputTrailing>
+          <TextInputAction>
+            {slots.clear}
+          </TextInputAction>
+        </TextInputTrailing>
+      </TextInput>
     </form>
-    {slots.template}
   </search-container>
-
-  function cls(): string {
-    let s = "search"
-    if (p.size === "large") {
-      s += " search_large"
-    }
-    return s
-  }
 }
 
 export function SearchPlaceholder({children}: ChildrenIncludable): JSX.Element {
-  return <span class="search__placeholder">{children}</span>
+  return children
 }
 
 export interface SearchFieldProperties {
@@ -60,7 +69,7 @@ export interface SearchClearProperties {
 }
 
 export function SearchClear({label}: SearchClearProperties): JSX.Element {
-  return <button class="search__clear" type="button" value="clear" aria-label={label}>
+  return <button type="button" value="clear" aria-label={label}>
     <CancelIcon width={16} height={16} />
   </button>
 }
