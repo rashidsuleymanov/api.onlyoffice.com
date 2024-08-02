@@ -4,7 +4,7 @@ Class used by **ONLYOFFICE Document Builder** for getting the results of called 
 
 The **CDocBuilderValue** class can be created from the primitive data types:
 
-```
+```c#
 CDocBuilderValue(bool value);
 CDocBuilderValue(int value);
 CDocBuilderValue(unsigned int value);
@@ -14,29 +14,29 @@ CDocBuilderValue(String^ value);
 
 ## Methods
 
-| Name                                                                               | Description                                                |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| [Call](/docbuilder/integrationapi/net/cdocbuildervalue/call)                       | Calls the specified Document Builder method.               |
-| [Clear](/docbuilder/integrationapi/net/cdocbuildervalue/clear)                     | Clears the object.                                         |
-| [CreateNull](/docbuilder/integrationapi/net/cdocbuildervalue/createnull)           | Creates a null value.                                      |
-| [CreateUndefined](/docbuilder/integrationapi/net/cdocbuildervalue/createundefined) | Creates an undefined value.                                |
-| [Get](/docbuilder/integrationapi/net/cdocbuildervalue/get)                         | Returns an array value by its index.                       |
-| [GetLength](/docbuilder/integrationapi/net/cdocbuildervalue/getlength)             | Returns the length if this object is an array/typed array. |
-| [GetProperty](/docbuilder/integrationapi/net/cdocbuildervalue/getproperty)         | Returns a property of this object.                         |
-| [IsArray](/docbuilder/integrationapi/net/cdocbuildervalue/isarray)                 | Returns true if this object is an array.                   |
-| [IsBool](/docbuilder/integrationapi/net/cdocbuildervalue/isbool)                   | Returns true if this object is a boolean value.            |
-| [IsDouble](/docbuilder/integrationapi/net/cdocbuildervalue/isdouble)               | Returns true if this object is a double value.             |
-| [IsEmpty](/docbuilder/integrationapi/net/cdocbuildervalue/isempty)                 | Returns true if this object is empty.                      |
-| [IsFunction](/docbuilder/integrationapi/net/cdocbuildervalue/isfunction)           | Returns true if this object is a function.                 |
-| [IsInt](/docbuilder/integrationapi/net/cdocbuildervalue/isint)                     | Returns true if this object is an integer.                 |
-| [IsNull](/docbuilder/integrationapi/net/cdocbuildervalue/isnull)                   | Returns true if this object is null.                       |
-| [IsObject](/docbuilder/integrationapi/net/cdocbuildervalue/isobject)               | Returns true if this object is an object.                  |
-| [IsString](/docbuilder/integrationapi/net/cdocbuildervalue/isstring)               | Returns true if this object is a string.                   |
-| [IsTypedArray](/docbuilder/integrationapi/net/cdocbuildervalue/istypedarray)       | Returns true if this object is a typed array.              |
-| [IsUndefined](/docbuilder/integrationapi/net/cdocbuildervalue/isundefined)         | Returns true if this object is undefined.                  |
-| [Set](/docbuilder/integrationapi/net/cdocbuildervalue/set)                         | Sets an array value by its index.                          |
-| [SetProperty](/docbuilder/integrationapi/net/cdocbuildervalue/setproperty)         | Sets a property to this object.                            |
-| [ToBool](/docbuilder/integrationapi/net/cdocbuildervalue/tobool)                   | Converts this object to a boolean value.                   |
-| [ToDouble](/docbuilder/integrationapi/net/cdocbuildervalue/todouble)               | Converts this object to a double value.                    |
-| [ToInt](/docbuilder/integrationapi/net/cdocbuildervalue/toint)                     | Converts this object to an integer.                        |
-| [ToString](/docbuilder/integrationapi/net/cdocbuildervalue/tostring)               | Converts this object to a string.                          |
+| Name                                                            | Description                                                |
+| --------------------------------------------------------------- | ---------------------------------------------------------- |
+| [Call](../CDocBuilderValue/Call/index.md)                       | Calls the specified Document Builder method.               |
+| [Clear](../CDocBuilderValue/Clear/index.md)                     | Clears the object.                                         |
+| [CreateNull](../CDocBuilderValue/CreateNull/index.md)           | Creates a null value.                                      |
+| [CreateUndefined](../CDocBuilderValue/CreateUndefined/index.md) | Creates an undefined value.                                |
+| [Get](../CDocBuilderValue/Get/index.md)                         | Returns an array value by its index.                       |
+| [GetLength](../CDocBuilderValue/GetLength/index.md)             | Returns the length if this object is an array/typed array. |
+| [GetProperty](../CDocBuilderValue/GetProperty/index.md)         | Returns a property of this object.                         |
+| [IsArray](../CDocBuilderValue/IsArray/index.md)                 | Returns true if this object is an array.                   |
+| [IsBool](../CDocBuilderValue/IsBool/index.mdd)                  | Returns true if this object is a boolean value.            |
+| [IsDouble](../CDocBuilderValue/IsDouble/index.md)               | Returns true if this object is a double value.             |
+| [IsEmpty](../CDocBuilderValue/IsEmpty/index.md)                 | Returns true if this object is empty.                      |
+| [IsFunction](../CDocBuilderValue/IsFunction/index.md)           | Returns true if this object is a function.                 |
+| [IsInt](../CDocBuilderValue/IsInt/index.md)                     | Returns true if this object is an integer.                 |
+| [IsNull](../CDocBuilderValue/IsNull/index.md)                   | Returns true if this object is null.                       |
+| [IsObject](../CDocBuilderValue/IsObject/index.md)               | Returns true if this object is an object.                  |
+| [IsString](../CDocBuilderValue/IsString/index.md)               | Returns true if this object is a string.                   |
+| [IsTypedArray](../CDocBuilderValue/IsTypedArray/index.md)       | Returns true if this object is a typed array.              |
+| [IsUndefined](../CDocBuilderValue/IsUndefined/index.md)         | Returns true if this object is undefined.                  |
+| [Set](../CDocBuilderValue/Set/index.md)                         | Sets an array value by its index.                          |
+| [SetProperty](../CDocBuilderValue/SetProperty/index.md)         | Sets a property to this object.                            |
+| [ToBool](../CDocBuilderValue/ToBool/index.md)                   | Converts this object to a boolean value.                   |
+| [ToDouble](../CDocBuilderValue/ToDouble/index.md)               | Converts this object to a double value.                    |
+| [ToInt](../CDocBuilderValue/ToInt/index.md)                     | Converts this object to an integer.                        |
+| [ToString](../CDocBuilderValue/ToString/index.md)               | Converts this object to a string.                          |
