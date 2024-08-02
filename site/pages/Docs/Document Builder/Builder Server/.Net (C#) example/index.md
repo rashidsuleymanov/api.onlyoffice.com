@@ -4,7 +4,7 @@ order: -4
 
 ## Introduction
 
-To integrate **ONLYOFFICE Document Builder** into your own application on **.Net (C#) or .Net (C# MVC)** you need to download and install **ONLYOFFICE Document Builder** to your computer and use the [.Net (C#) or .Net (C# MVC) example](/docbuilder/integratingdocumentbuilder) for the integration. This guide will show you the sequence of actions to integrate **ONLYOFFICE Document Builder** successfully.
+To integrate **ONLYOFFICE Document Builder** into your own application on **.Net (C#) or .Net (C# MVC)** you need to download and install **ONLYOFFICE Document Builder** to your computer and use the [.Net (C#) or .Net (C# MVC) example](../Overview/index.md) for the integration. This guide will show you the sequence of actions to integrate **ONLYOFFICE Document Builder** successfully.
 
 ## Step 1. Download and install ONLYOFFICE Document Builder
 
@@ -22,7 +22,7 @@ To run your website with the **ONLYOFFICE Document Builder** successfully, check
 
 ## Step 3. Download the .Net (C#) / .Net (C# MVC) example code and build your application
 
-[Download](/docbuilder/integratingdocumentbuilder) the .Net (C#) or .Net (C# MVC) example from our site and unpack it somewhere to your computer.
+[Download](../Overview/index.md) the .Net (C#) or .Net (C# MVC) example from our site and unpack it somewhere to your computer.
 
 Open the **DocumentBuilder.sln** solution file from the unpacked project folder using the **Visual Studio** application. Wait while the project loads.
 
@@ -38,7 +38,7 @@ If you want to run the example application using the Microsoft **IIS** service, 
 
    There select **Internet Information Services** -> **World Wide Web Services** -> **Application Development Features** and enable all the options for **.NET 4.6** (these include **.NET Extensibility 4.6** and **ASP.NET 4.6** options):
 
-   ![How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)](/assets/images/docbuilder/csharp/net46.png)
+   <img alt="NET 4.6" src="/assets/images/docbuilder/csharp/net46.png" width="550px">
 
    Please make sure that the **.NET Framework 4.6 Advanced Services** -> **ASP.NET 4.6** is also enabled.
 
@@ -50,7 +50,7 @@ If you want to run the example application using the Microsoft **IIS** service, 
 
    On the **Connections** panel right-click the **Sites** node in the tree, then click **Add Website...**:
 
-   ![How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)](/assets/images/docbuilder/csharp/add.png)
+   ![Add website](/assets/images/docbuilder/csharp/add.png)
 
 4. #### Configure your website
 
@@ -60,23 +60,23 @@ If you want to run the example application using the Microsoft **IIS** service, 
 
    Specify the unique value used only for this website in the **Port** box:
 
-   ![How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)](/assets/images/docbuilder/csharp/sitename.png)
+   <img alt="Site name" src="/assets/images/docbuilder/csharp/sitename.png" width="416px">
 
 5. #### Check for the .NET platform version specified in IIS manager for you website
 
    Choose the **v4.0.** version for **.NET CLR Version** clicking the **Application Pool** then right-clicking the platform name select the **Set application pool defaults** and finally set the necessary **.NET CLR version**:
 
-   ![How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)](/assets/images/docbuilder/csharp/platform.png)
+   <img alt="Platform" src="/assets/images/docbuilder/csharp/platform.png" width="416px">
 
 6. #### Browse your website with the IIS manager
 
    Right-click the site, select the **Manage Website** contextual menu option, then use **Browse**:
 
-   ![How to integrate ONLYOFFICE Document Builder into your application on .Net (C#)](/assets/images/docbuilder/csharp/browse.png)
+   ![Browse](/assets/images/docbuilder/csharp/browse.png)
 
 If you want to experiment with the code changes, you can find the main application code in the *\DocumentBuilder\Controllers\\* control. The path to the **ONLYOFFICE Document Builder** executable can be changed in the **web.config** file in the following line:
 
-```
+``` xml
 <configuration>
     <appSettings>
         <add key="builder-path" value="C:\ONLYOFFICE\DocumentBuilder\docbuilder.exe" />
