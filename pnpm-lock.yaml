@@ -2418,6 +2418,9 @@ importers:
       '@onlyoffice/ui-template':
         specifier: workspace:^
         version: link:../ui-template
+      '@onlyoffice/ui-text-input':
+        specifier: workspace:^
+        version: link:../ui-text-input
       preact:
         specifier: ^10.22.0
         version: 10.22.0
@@ -2521,6 +2524,31 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
     devDependencies:
+      '@storybook/preact':
+        specifier: ^8.0.0
+        version: 8.0.0(preact@10.22.0)
+      vite:
+        specifier: ^5.1.6
+        version: 5.1.6(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)
+
+  packages/ui-text-input:
+    dependencies:
+      '@onlyoffice/preact-types':
+        specifier: workspace:^
+        version: link:../preact-types
+      preact:
+        specifier: ^10.22.0
+        version: 10.22.0
+      preact-render-to-string:
+        specifier: ^6.4.1
+        version: 6.4.1(preact@10.22.0)
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+    devDependencies:
+      '@onlyoffice/ui-icons':
+        specifier: workspace:^
+        version: link:../ui-icons
       '@storybook/preact':
         specifier: ^8.0.0
         version: 8.0.0(preact@10.22.0)

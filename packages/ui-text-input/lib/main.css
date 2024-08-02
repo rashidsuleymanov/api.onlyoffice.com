@@ -1,0 +1,222 @@
+.text-input {
+  --true: initial;
+  --false: ;
+
+  --text-input-size-is-xlarge: var(--false);
+  --text-input-column-gap-xlarge: var(--size-control-gap-xlarge);
+  --text-input-computed-column-gap-xlarge: var(--text-input-size-is-xlarge, var(--text-input-column-gap-xlarge));
+  --text-input-padding-block-xlarge: var(--size-control-padding-block-xlarge);
+  --text-input-computed-padding-block-xlarge: var(--text-input-size-is-xlarge, var(--text-input-padding-block-xlarge));
+  --text-input-padding-inline-xlarge: var(--size-control-padding-inline-xlarge);
+  --text-input-computed-padding-inline-xlarge: var(--text-input-size-is-xlarge, var(--text-input-padding-inline-xlarge));
+
+  --text-input-size-is-large: var(--false);
+  --text-input-column-gap-large: var(--size-control-gap-large);
+  --text-input-computed-column-gap-large: var(--text-input-size-is-large, var(--text-input-column-gap-large));
+  --text-input-padding-block-large: var(--size-control-padding-block-large);
+  --text-input-computed-padding-block-large: var(--text-input-size-is-large, var(--text-input-padding-block-large));
+  --text-input-padding-inline-large: var(--size-control-padding-inline-large);
+  --text-input-computed-padding-inline-large: var(--text-input-size-is-large, var(--text-input-padding-inline-large));
+
+  --text-input-size-is-medium: var(--false);
+  --text-input-column-gap-medium: var(--size-control-gap-medium);
+  --text-input-computed-column-gap-medium: var(--text-input-size-is-medium, var(--text-input-column-gap-medium));
+  --text-input-padding-block-medium: var(--size-control-padding-block-medium);
+  --text-input-computed-padding-block-medium: var(--text-input-size-is-medium, var(--text-input-padding-block-medium));
+  --text-input-padding-inline-medium: var(--size-control-padding-inline-medium);
+  --text-input-computed-padding-inline-medium: var(--text-input-size-is-medium, var(--text-input-padding-inline-medium));
+
+  --text-input-size-is-small: var(--false);
+  --text-input-column-gap-small: var(--size-control-gap-small);
+  --text-input-computed-column-gap-small: var(--text-input-size-is-small, var(--text-input-column-gap-small));
+  --text-input-padding-block-small: var(--size-control-padding-block-small);
+  --text-input-computed-padding-block-small: var(--text-input-size-is-small, var(--text-input-padding-block-small));
+  --text-input-padding-inline-small: var(--size-control-padding-inline-small);
+  --text-input-computed-padding-inline-small: var(--text-input-size-is-small, var(--text-input-padding-inline-small));
+
+  --text-input-size-is-default: var(--true);
+  --text-input-column-gap-default: var(--text-input-column-gap-medium);
+  --text-input-computed-column-gap-default: var(--text-input-size-is-default, var(--text-input-column-gap-default));
+  --text-input-padding-block-default: var(--text-input-padding-block-medium);
+  --text-input-computed-padding-block-default: var(--text-input-size-is-default, var(--text-input-padding-block-default));
+  --text-input-padding-inline-default: var(--text-input-padding-inline-medium);
+  --text-input-computed-padding-inline-default: var(--text-input-size-is-default, var(--text-input-padding-inline-default));
+
+  --text-input-computed-column-gap-current:
+    var(--text-input-computed-column-gap-xlarge)
+    var(--text-input-computed-column-gap-large)
+    var(--text-input-computed-column-gap-medium)
+    var(--text-input-computed-column-gap-small)
+    var(--text-input-computed-column-gap-default);
+  --text-input-computed-padding-block-current:
+    var(--text-input-computed-padding-block-xlarge)
+    var(--text-input-computed-padding-block-large)
+    var(--text-input-computed-padding-block-medium)
+    var(--text-input-computed-padding-block-small)
+    var(--text-input-computed-padding-block-default);
+  --text-input-computed-padding-inline-current:
+    var(--text-input-computed-padding-inline-xlarge)
+    var(--text-input-computed-padding-inline-large)
+    var(--text-input-computed-padding-inline-medium)
+    var(--text-input-computed-padding-inline-small)
+    var(--text-input-computed-padding-inline-default);
+
+  align-items: center;
+  background-color: var(--color-control-default-background-rest);
+  border-color: var(--color-control-default-border-rest);
+  border-radius: var(--size-border-radius-small);
+  border-style: solid;
+  border-width: var(--size-border-width-thin);
+  color: var(--color-control-default-foreground-rest);
+  display: inline-grid;
+  font-size: var(--text-body-font-size-small);
+  grid-template-columns: auto 1fr auto;
+  line-height: var(--text-body-line-height-small);
+  min-width: 264px;
+  padding-block: var(--text-input-computed-padding-block-current);
+  padding-inline: var(--text-input-computed-padding-inline-current);
+  text-align: start;
+}
+
+.text-input:hover {
+  background-color: var(--color-control-default-background-hover);
+  border-color: var(--color-control-default-border-hover);
+  color: var(--color-control-default-foreground-hover);
+}
+
+.text-input[state-focused],
+.text-input:state(focused) {
+  background-color: var(--color-control-default-background-active);
+  border-color: transparent;
+  color: var(--color-control-default-foreground-active);
+  outline-color: var(--color-focus-default-outline);
+  outline-offset: calc(var(--size-border-width-thin) * -1);
+  outline-style: solid;
+  outline-width: var(--side-outline-width-default);
+}
+
+.text-input[state-focused] .text-input__placeholder,
+.text-input:state(focused) .text-input__placeholder {
+  display: none;
+}
+
+.text-input[state-filled] .text-input__placeholder,
+.text-input:state(filled) .text-input__placeholder {
+  display: none;
+}
+
+.text-input[state-filled] .text-input__control,
+.text-input:state(filled) .text-input__control {
+  color: var(--color-control-default-foreground-active);
+}
+
+.text-input_size_default {
+  --text-input-size-is-default: var(--true);
+  --text-input-size-is-small: var(--false);
+  --text-input-size-is-medium: var(--false);
+  --text-input-size-is-large: var(--false);
+  --text-input-size-is-xlarge: var(--false);
+}
+
+.text-input_size_small {
+  --text-input-size-is-default: var(--false);
+  --text-input-size-is-small: var(--true);
+  --text-input-size-is-medium: var(--false);
+  --text-input-size-is-large: var(--false);
+  --text-input-size-is-xlarge: var(--false);
+}
+
+.text-input_size_medium {
+  --text-input-size-is-default: var(--false);
+  --text-input-size-is-small: var(--false);
+  --text-input-size-is-medium: var(--true);
+  --text-input-size-is-large: var(--false);
+  --text-input-size-is-xlarge: var(--false);
+}
+
+.text-input_size_large {
+  --text-input-size-is-default: var(--false);
+  --text-input-size-is-small: var(--false);
+  --text-input-size-is-medium: var(--false);
+  --text-input-size-is-large: var(--true);
+  --text-input-size-is-xlarge: var(--false);
+}
+
+.text-input_size_xlarge {
+  --text-input-size-is-default: var(--false);
+  --text-input-size-is-small: var(--false);
+  --text-input-size-is-medium: var(--false);
+  --text-input-size-is-large: var(--false);
+  --text-input-size-is-xlarge: var(--true);
+}
+
+.text-input__leading {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.text-input__leading ~ .text-input__placeholder,
+.text-input__leading ~ .text-input__control {
+  margin-inline-start: var(--text-input-computed-column-gap-current);
+}
+
+.text-input__leading svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+
+.text-input__placeholder {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.text-input__control {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.text-input__control input {
+  appearance: textfield;
+  background-color: transparent;
+  border: none;
+  min-width: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.text-input__control input:focus {
+  outline: none;
+}
+
+.text-input__control input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.text-input__placeholder ~ .text-input__trailing,
+.text-input__control ~ .text-input__trailing {
+  margin-inline-start: var(--text-input-computed-column-gap-current);
+}
+
+.text-input__trailing {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.text-input__trailing svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+
+.text-input__action button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  padding: 0;
+}
+
+.text-input__action svg {
+  pointer-events: none;
+}
