@@ -4,8 +4,11 @@
   "type": "module",
   "main": "lib/main.tsx",
   "exports": {
-    ".": "./lib/main.tsx",
-    "./main.css": "./lib/main.css"
+    "./client/define.ts": "./lib/client/define.ts",
+    "./client/element.ts": "./lib/client/element.ts",
+    "./client.ts": "./lib/client.ts",
+    "./main.css": "./lib/main.css",
+    ".": "./lib/main.tsx"
   },
   "scripts": {
     "test:types": "tsc",
@@ -14,6 +17,7 @@
   "dependencies": {
     "@onlyoffice/preact-slots": "workspace:^",
     "@onlyoffice/preact-types": "workspace:^",
+    "@onlyoffice/site-chapter": "workspace:^",
     "preact": "^10.22.0",
     "typescript": "^5.4.5"
   },

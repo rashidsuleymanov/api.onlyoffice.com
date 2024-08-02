@@ -1880,6 +1880,9 @@ importers:
       '@onlyoffice/preact-types':
         specifier: workspace:^
         version: link:../preact-types
+      '@onlyoffice/site-chapter':
+        specifier: workspace:^
+        version: link:../site-chapter
       preact:
         specifier: ^10.22.0
         version: 10.22.0

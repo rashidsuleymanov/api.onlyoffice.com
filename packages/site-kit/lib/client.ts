@@ -1,3 +1,4 @@
+import "@onlyoffice/site-page/client.ts"
 import "@onlyoffice/site-chapter/client.ts"
 import "@onlyoffice/site-document-editor-playground/client.ts"
 import "@onlyoffice/site-search/client.ts"
