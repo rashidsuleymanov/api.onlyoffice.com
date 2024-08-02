@@ -2,7 +2,7 @@
 
 Creates a Uint8Array value, an analogue of *Uint8Array* in JS.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateTypedArray* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateTypedArray* method is not used.
 
 ## Parameters:
 

@@ -4,6 +4,6 @@ The stack-allocated class used by **ONLYOFFICE Document Builder** which sets the
 
 ## Methods
 
-| Name                                               | Description               |
-| ---------------------------------------------------| ------------------------- |
-| [Close](../CDocBuilderContextScope/Close/index.md) | Closes the current scope. |
+| Name                    | Description               |
+| ----------------------- | ------------------------- |
+| [Close](Close/index.md) | Closes the current scope. |
