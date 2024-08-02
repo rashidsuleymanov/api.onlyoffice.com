@@ -1883,6 +1883,9 @@ importers:
       '@onlyoffice/site-chapter':
         specifier: workspace:^
         version: link:../site-chapter
+      '@onlyoffice/ui-icons':
+        specifier: workspace:^
+        version: link:../ui-icons
       preact:
         specifier: ^10.22.0
         version: 10.22.0

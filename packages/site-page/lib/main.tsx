@@ -1,5 +1,6 @@
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {useSlots} from "@onlyoffice/preact-slots"
+import {SidebarIcon} from "@onlyoffice/ui-icons/poor/24.tsx"
 import {Fragment, type JSX, h, toChildArray} from "preact"
 
 export function Page({children}: ChildrenIncludable): JSX.Element {
@@ -7,22 +8,24 @@ export function Page({children}: ChildrenIncludable): JSX.Element {
     header: PageHeader,
     footer: PageFooter
   })
-  return <div class="page">
+  return <page-container class="page">
     <div class="page__header">{slots.header}</div>
     {outer}
     <div class="page__footer">{slots.footer}</div>
-  </div>
+  </page-container>
 }
 
 export function PageHeader({children}: ChildrenIncludable): JSX.Element {
   const [slots, outer] = useSlots(children, {
     logo: PageHeaderLogo,
-    menu: PageHeaderMenu
+    menu: PageHeaderMenu,
+    nav: PageHeaderNavToggler,
   })
   return <header role="banner" class="page-header">
     {outer}
     <div class="page-header__logo">{slots.logo}</div>
     <div class="page-header__menu">{slots.menu}</div>
+    {slots.nav && <div class="page-header__nav-toggler">{slots.nav}</div>}
   </header>
 }
 
@@ -32,6 +35,16 @@ export function PageHeaderLogo({children}: ChildrenIncludable): JSX.Element {
 
 export function PageHeaderMenu({children}: ChildrenIncludable): JSX.Element {
   return <>{children}</>
+}
+
+export interface PageHeaderNavTogglerProperties {
+  label?: string
+}
+
+export function PageHeaderNavToggler(p: PageHeaderNavTogglerProperties): JSX.Element {
+  return <button class="page-header-nav-toggler" aria-label={p.label} data-page-container-chapter-navigation-toggler>
+    <SidebarIcon height={24} width={24} />
+  </button>
 }
 
 export function PageFooter({children}: ChildrenIncludable): JSX.Element {
