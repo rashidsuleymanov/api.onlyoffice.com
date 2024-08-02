@@ -15,7 +15,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderValue.GetProperty* 
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;

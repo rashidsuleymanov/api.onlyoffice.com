@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilder.Initialize* method
 
 #### .Net
 
-```
+```c#
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

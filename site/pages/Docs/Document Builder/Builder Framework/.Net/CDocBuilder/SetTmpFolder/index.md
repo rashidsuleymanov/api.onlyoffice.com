@@ -12,7 +12,7 @@ Sets the path to the folder where the program will temporarily save files needed
 
 #### .Net
 
-```
+```c#
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -22,6 +22,6 @@ CDocBuilder.Destroy();
 
 #### .docbuilder
 
-```
+```js
 builder.SetTmpFolder("DocBuilderTemp");
 ```

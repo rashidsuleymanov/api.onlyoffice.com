@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderValue.ToBool* metho
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;

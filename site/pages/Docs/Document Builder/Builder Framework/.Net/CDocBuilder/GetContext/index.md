@@ -1,6 +1,6 @@
 #### CDocBuilderContext^ GetContext();
 
-Returns the current JS [context](/docbuilder/integrationapi/net/cdocbuildercontext).
+Returns the current JS [context](../../CDocBuilderContext/index.md).
 
 Please note, that for the *.docbuilder* file the *CDocBuilder.GetContext* method is not used.
 
@@ -8,7 +8,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilder.GetContext* method
 
 #### .Net
 
-```
+```c#
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

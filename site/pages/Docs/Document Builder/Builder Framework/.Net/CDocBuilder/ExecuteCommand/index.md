@@ -15,7 +15,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilder.ExecuteCommand* me
 
 #### .Net
 
-```
+```c#
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -25,6 +25,6 @@ CDocBuilder.Destroy();
 
 #### .docbuilder
 
-```
+```js
 oParagraph.AddText("Hello from .net!");
 ```

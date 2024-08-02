@@ -15,7 +15,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderValue.Get* method i
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;
@@ -36,7 +36,7 @@ oBuilder->Dispose();
 
 #### .docbuilder
 
-```
+```js
 var oDocument = Api.GetDocument();
 var aCharts = oDocument.GetAllCharts();
 var oChart = aCharts[1];
