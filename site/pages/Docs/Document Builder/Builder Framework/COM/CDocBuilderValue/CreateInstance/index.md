@@ -2,7 +2,7 @@
 
 Creates an instance of the *CDocBuilderValue* class.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.CreateInstance* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.CreateInstance* method is not used.
 
 ## Parameters:
 

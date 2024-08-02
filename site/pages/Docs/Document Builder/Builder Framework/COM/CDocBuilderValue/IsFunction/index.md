@@ -2,7 +2,7 @@
 
 Returns true if the **CDocBuilderValue** object is a function.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsFunction* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsFunction* method is not used.
 
 ## Parameters:
 

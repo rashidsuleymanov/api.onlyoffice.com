@@ -2,7 +2,7 @@
 
 Returns true if the **CDocBuilderValue** object is null.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsNull* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsNull* method is not used.
 
 ## Parameters:
 

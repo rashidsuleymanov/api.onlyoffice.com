@@ -2,7 +2,7 @@
 
 Returns the current JS [context](../../CDocBuilderContext/index.md).
 
-Please note, that for the *.docbuilder* file the *CDocBuilder.GetContext* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilder.GetContext* method is not used.
 
 ## Parameters:
 

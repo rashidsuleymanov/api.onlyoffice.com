@@ -2,7 +2,7 @@
 
 Checks for errors in JS.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderContext.IsError* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderContext.IsError* method is not used.
 
 ## Parameters:
 

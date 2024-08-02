@@ -2,7 +2,7 @@
 
 Returns true if the **CDocBuilderValue** object is empty.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsEmpty* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsEmpty* method is not used.
 
 ## Parameters:
 

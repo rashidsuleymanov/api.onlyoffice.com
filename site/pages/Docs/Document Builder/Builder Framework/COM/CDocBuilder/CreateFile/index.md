@@ -4,10 +4,10 @@ Creates a new file. The type of the file which will be created needs to be set.
 
 ## Parameters:
 
-| Name     | Type            | Description                                                                                                                                                                                   |
-| -------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name     | Type            | Description                                                                                                                                                                                            |
+| -------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | *type*   | BSTR            | The file extension. The following values are possible: **docx**, **xlsx**, **pptx**, or **pdf** (see [AVS\_OFFICESTUDIO\_FILE\_XXX](../../../../Builder%20App/Overview/index.md#format-types) values). |
-| *result* | VARIANT\_BOOL\* | Specifies if the operation of creating a file is successful or not.                                                                                                                           |
+| *result* | VARIANT\_BOOL\* | Specifies if the operation of creating a file is successful or not.                                                                                                                                    |
 
 ## Example
 

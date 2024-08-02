@@ -2,7 +2,7 @@
 
 Returns true if the **CDocBuilderValue** object is an array.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsArray* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsArray* method is not used.
 
 ## Parameters:
 

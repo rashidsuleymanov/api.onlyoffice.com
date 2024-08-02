@@ -2,7 +2,7 @@
 
 Returns a property of the **CDocBuilderValue** object.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.GetProperty* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.GetProperty* method is not used.
 
 ## Parameters:
 

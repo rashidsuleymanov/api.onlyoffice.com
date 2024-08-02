@@ -2,7 +2,7 @@
 
 Converts the **CDocBuilderValue** object to a string.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.ToString* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.ToString* method is not used.
 
 ## Parameters:
 

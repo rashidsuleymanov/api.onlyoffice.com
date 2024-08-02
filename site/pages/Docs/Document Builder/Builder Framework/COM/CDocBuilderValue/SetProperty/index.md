@@ -2,7 +2,7 @@
 
 Sets a property to the **CDocBuilderValue** object.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.SetProperty* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.SetProperty* method is not used.
 
 ## Parameters:
 
