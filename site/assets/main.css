@@ -80,10 +80,6 @@ table {
   height: auto !important;
 }
 
-.home__preview img {
-  width: auto !important;
-}
-
 .content document-builder-container {
   display: block;
   margin-top: var(--base-size-20);
