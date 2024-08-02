@@ -34,7 +34,7 @@ async function main(): Promise<void> {
 
   await mkdir(dd)
 
-  const fd = fixturesDir(rd)
+  const fd = fixturesDir(rd).replace(" ", "\\ "); console.log(fd);
   const w = new JSDocBuffer()
   await jsdoc(w, [fd, "--debug", "--explain", "--recurse"])
 
