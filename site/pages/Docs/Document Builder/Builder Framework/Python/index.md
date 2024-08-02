@@ -1,3 +1,7 @@
+---
+order: -2
+---
+
 For the integration of **ONLYOFFICE Document Builder** into any application, the Python **doctrenderer** library is used. The current application version contains four main classes:
 
 * [CDocBuilder](CDocBuilder/index.md) class - used by **ONLYOFFICE Document Builder** for the document file (text document, spreadsheet, presentation, form document, PDF) to be generated.
