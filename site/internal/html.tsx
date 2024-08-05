@@ -43,6 +43,7 @@ export function Html(p: HtmlProperties): JSX.Element {
       {c.analytics && <GoogleTagManagerScript />}
 
       <Style href="/assets/main.css" />
+      <Script async src="/assets/prerender.js" inline />
       <Script defer src="/assets/main.ts" />
     </head>
     <body>
