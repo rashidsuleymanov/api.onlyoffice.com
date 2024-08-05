@@ -17,7 +17,6 @@ export function Link(p: HTMLAttributes<HTMLAnchorElement>): JSX.Element {
     throw new Error("The 'href' attribute must be a string.")
   }
   if (!URL.canParse(p.href) && !path.isAbsolute(p.href)) {
-    console.log(p.href)
     throw new Error("The 'href' attribute must be an absolute URL.")
   }
 
