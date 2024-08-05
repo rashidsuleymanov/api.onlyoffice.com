@@ -2,6 +2,8 @@ import path from "node:path"
 import {URL} from "node:url"
 import {Sitemap} from "@onlyoffice/eleventy-sitemap"
 import {rootDir} from "@onlyoffice/eleventy-env"
+import * as pate from "@onlyoffice/node-path"
+import {cutPrefix, cutSuffix} from "@onlyoffice/strings"
 import {type Root} from "hast"
 import {type HTMLAttributes} from "preact/compat"
 import {type JSX, h} from "preact"
@@ -55,26 +57,24 @@ export function rehypeLink(): RehypeLinkTransform {
 
 function resolve(a: string, b: string): string {
   const s = Sitemap.shared
+  const h = pate.hash(a)
 
-  const u = new URL(a, "http://e.c/")
-  let t = ""
-  if (path.isAbsolute(a)) {
-    t = `.${u.pathname}`
-  } else {
-    t = path.dirname(b)
-    t = path.resolve(t, a)
-    t = t.replace(rootDir(), ".")
-    t = t.replace(u.hash, "")
+  let p = a
+  if (!path.isAbsolute(a)) {
+    p = path.dirname(b)
+    p = pate.resolve(p, a)
+    p = cutPrefix(p, rootDir())
+    p = cutSuffix(p, h)
   }
-  t = decodeURIComponent(t)
+  p = decodeURIComponent(`.${p}`)
 
-  const e = s.find(t, "path")
+  const e = s.find(p, "path")
   if (!e) {
-    throw new Error(`Expected an entity for the path: ${t}`)
+    throw new Error(`Expected an entity for the path: ${p}`)
   }
   if (e.type !== "page") {
-    throw new Error(`Expected a page entity for the path: ${t}`)
+    throw new Error(`Expected a page entity for the path: ${p}`)
   }
 
-  return `${e.url}${u.hash}`
+  return `${e.url}${h}`
 }
