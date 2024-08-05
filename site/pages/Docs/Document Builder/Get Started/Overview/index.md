@@ -21,29 +21,8 @@ There are two ways to use ONLYOFFICE Document Builder in your own project:
 
 ONLYOFFICE Document Builder consists of four components:
 
-| Component                                                          | Description                                                                                                                                                                                                                                                                                           |
-| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Builder.Framework](../../Builder%20Framework/Overview/index.md)    | A software tool that contains a collection of libraries, classes, and functions used to develop applications. The following frameworks are available: [C++](../../Builder%20Framework/C++/index.md), [COM](../../Builder%20Framework/COM/index.md), [.Net](../../Builder%20Framework/.NET/index.md).    |
-| [Builder.App](../../Builder%20App/Overview/index.md)                | The *docbuilder.exe* executable file that can be run from your application with the *.docbuilder* script file as a parameter to it.                                                                                                                                                                   |
-| [Builder.Server](../../Builder%20Server/Overview/)                  | The code for the sample of ONLYOFFICE Document Builder integration into your application.                                                                                                                                                                                                             |
-
-This is the live examples of how **ONLYOFFICE Document Builder** works.
-
-* Generate a document from your script
-* Create a document with your data
-
-Use the script in the textarea below as is to generate the document or you edit it in the textarea window. Or, in case you have a script of your own, use the **Upload your own script** button under the textarea to upload it.
-
-Fill the data into the text areas below so that it could appear in the output document. When done use the buttons to the right of the fields to create the appropriate document type with your entered data.
-
-Name: John Smith Company: ONLYOFFICE Position/Title: Commercial director
-
-Create\
-spreadsheet Create\
-document
-
-## Get help
-
-If you have any questions or feature requests about ONLYOFFICE Document Builder, please visit [GitHub](https://github.com/ONLYOFFICE/DocumentBuilder/issues).
-
-You can also ask our developers on [ONLYOFFICE forum](https://forum.onlyoffice.com/c/document-builder/37) (registration required).
+| Component                                                        | Description                                                                                                                                                                                                                                                                                                                                               |
+| ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Builder.Framework](../../Builder%20Framework/Overview/index.md) | A software tool that contains a collection of libraries, classes, and functions used to develop applications. The following frameworks are available: [C++](../../Builder%20Framework/C++/index.md), [COM](../../Builder%20Framework/COM/index.md), [.Net](../../Builder%20Framework/.NET/index.md), [Python](../../Builder%20Framework/Python/index.md). |
+| [Builder.App](../../Builder%20App/Overview/index.md)             | The *docbuilder.exe* executable file that can be run from your application with the *.docbuilder* script file as a parameter to it.                                                                                                                                                                                                                       |
+| [Builder.Server](../../Builder%20Server/Overview/)               | The code for the sample of ONLYOFFICE Document Builder integration into your application.                                                                                                                                                                                                                                                                 |

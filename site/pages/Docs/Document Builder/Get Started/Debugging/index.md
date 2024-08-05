@@ -29,19 +29,19 @@ The **debugger** command works as a breakpoint and pauses the execution at the s
 
 ## Executing from Builder.Framework or Builder.App
 
-This instruction can also be used for any [Builder.Framework](../../Builder%20Framework/Overview/index.md) version: C++, COM, .Net.
+> This instruction can also be used for any [Builder.Framework](../../Builder%20Framework/Overview/index.md) version: C++, COM, .Net.
 
 1. Open a terminal in the *DocumentBuilder* folder.
 
 2. Set the **V8\_USE\_INSPECTOR** environment variable to 1:
 
-   Windows
+   **Windows**
 
    ```bash
    SET V8_USE_INSPECTOR=1
    ```
 
-   Linux
+   **Linux**
 
    ```bash
    export  V8_USE_INSPECTOR=1
