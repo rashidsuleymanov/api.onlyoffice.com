@@ -37,7 +37,7 @@ Please note that the **path to the DocBuilder .dll file in the project file is s
 
 ![C# Builder program file](/assets/images/docbuilder/csharp/program_file.png)
 
-* Include doctrenderer library [.Net wrapper](/docbuilder/integrationapi/net) classes.
+* Include doctrenderer library [.Net wrapper](../../.Net/index.md) classes.
 
 * Specify the paths to the Document Builder **work directory**, the **result path** (where the generated file will be saved), and the optional **file path** (if a template file will be used).
 
@@ -47,11 +47,11 @@ Please note that the **path to the DocBuilder .dll file in the project file is s
 
 ![C# Builder builder function](/assets/images/docbuilder/csharp/builder_function.png)
 
-* [Initialize](/docbuilder/integrationapi/net/cdocbuilder/initialize) the [DocBuilder](/docbuilder/integrationapi/net/cdocbuilder) from the working directory. After that Builder opens or creates a file so that [Context](/docbuilder/integrationapi/net/cdocbuildercontext), [Scope](/docbuilder/integrationapi/net/cdocbuildercontext/createscope) and [Global](/docbuilder/integrationapi/net/cdocbuildercontext/getglobal) classes can be accessed.
+* [Initialize](../../.Net/CDocBuilder/Initialize/index.md) the [DocBuilder](../../.Net/CDocBuilder/index.md) from the working directory. After that Builder opens or creates a file so that [Context](../../.Net/CDocBuilderContext/index.md), [Scope](../../.Net/CDocBuilderContext/CreateScope/index.md) and [Global](../../.Net/CDocBuilderContext/GetGlobal/index.md) classes can be accessed.
 
-* Edit file using DocBuilder API methods. Use [Call](/docbuilder/integrationapi/net/cdocbuildervalue/call) method with the name and params of the API method you call as an arguments.
+* Edit file using DocBuilder API methods. Use [Call](../../.Net/CDocBuilderValue/Call/index.md) method with the name and params of the API method you call as an arguments.
 
-* [Save](/docbuilder/integrationapi/net/cdocbuilder/savefile) and [close](/docbuilder/integrationapi/net/cdocbuilder/closefile) file after editing, then call the [Destroy](/docbuilder/integrationapi/net/cdocbuilder/destroy) method to destroy DocBuilder.
+* [Save](../../.Net/CDocBuilder/SaveFile/index.md) and [close](../../.Net/CDocBuilder/CloseFile/index.md) file after editing, then call the [Destroy](../../.Net/CDocBuilder/Destroy/index.md) method to destroy DocBuilder.
 
 ## Run the sample
 

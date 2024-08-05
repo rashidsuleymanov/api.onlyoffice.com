@@ -2,7 +2,7 @@
 order: -1
 ---
 
-Use the guides for [C++](/docbuilder/builderframeworksamples/cppbuildersamples) and [.Net](/docbuilder/builderframeworksamples/csharpbuildersamples) to run the samples.
+Use the guides for [C++](C++%20samples%20guide/index.md) and [.Net](.Net%20samples%20guide/index.md) to run the samples.
 
 * []()
 
@@ -11,7 +11,7 @@ Use the guides for [C++](/docbuilder/builderframeworksamples/cppbuildersamples) 
   Fills spreadsheet with array-based values.
 
   Download: [C++](https://api.teamlab.info:443/app_data/docbuilder/cpp-samples/FillingSpreadsheet.zip) / [.Net](https://api.teamlab.info:443/app_data/docbuilder/csharp-samples/FillingSpreadsheet.zip)\
-  [More](/officeapi/buildersamples/fillspreadsheet)
+  [More](../../../Office%20API/Office%20API/)
 
 * []()
 
