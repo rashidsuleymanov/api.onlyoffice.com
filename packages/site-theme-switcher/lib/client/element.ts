@@ -1,38 +1,20 @@
-interface State {
-  darkTheme: string
-  lightTheme: string
-  themePreference: string
-}
+import {ThemeSwitcher} from "./switcher.ts"
 
-export class ThemeSwitcher extends HTMLElement {
+export class ThemeSwitcherContainer extends HTMLElement {
   static get tagName(): string {
-    return "theme-switcher"
+    return "theme-switcher-container"
   }
 
-  get #state(): State {
-    const d = localStorage.getItem(ThemeSwitcher.tagName)
-    if (!d) {
-      return {
-        darkTheme: "regular",
-        lightTheme: "regular",
-        themePreference: "auto"
-      }
-    }
-    return JSON.parse(d)
-  }
+  #t: ThemeSwitcher
 
-  set #state(s: State | null) {
-    if (!s) {
-      localStorage.removeItem(ThemeSwitcher.tagName)
-      return
-    }
-    const d = JSON.stringify(s)
-    localStorage.setItem(ThemeSwitcher.tagName, d)
+  constructor() {
+    super()
+    this.#t = new ThemeSwitcher()
   }
 
   connectedCallback(): void {
-    const s = this.#state
-    this.#set(s)
+    const s = this.#t.state
+    this.#t.reflect(s)
 
     const rc = this.querySelector("radiogroup-container")
     if (!rc) {
@@ -55,20 +37,13 @@ export class ThemeSwitcher extends HTMLElement {
     }
 
     rc.addEventListener("radiogroupcontainerchange", (ev) => {
-      const s = this.#state
+      const s = this.#t.state
       s.themePreference = "auto"
       if (ev.radioValue) {
         s.themePreference = ev.radioValue
       }
-      this.#set(s)
-      this.#state = s
+      this.#t.state = s
+      this.#t.reflect(s)
     })
-  }
-
-  #set(s: State): void {
-    const d = document.documentElement.dataset
-    d.darkTheme = s.darkTheme
-    d.lightTheme = s.lightTheme
-    d.themePreference = s.themePreference
   }
 }

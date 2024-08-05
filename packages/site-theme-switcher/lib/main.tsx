@@ -8,13 +8,13 @@ export interface ThemeSwitcherParameters extends ChildrenIncludable {
 export function ThemeSwitcher(
   {children, label}: ThemeSwitcherParameters
 ): JSX.Element {
-  return <theme-switcher class="theme-switcher">
+  return <theme-switcher-container class="theme-switcher">
     <radiogroup-container>
       <div role="radiogroup" aria-label={label}>
         {children}
       </div>
     </radiogroup-container>
-  </theme-switcher>
+  </theme-switcher-container>
 }
 
 export interface ThemeSwitcherOptionParameters extends ChildrenIncludable {

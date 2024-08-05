@@ -4,6 +4,7 @@
   "type": "module",
   "main": "lib/main.ts",
   "exports": {
+    "./client/prerender.ts": "./lib/client/prerender.ts",
     "./client.ts": "./lib/client.ts",
     "./main.css": "./lib/main.css",
     ".": "./lib/main.ts"
