@@ -10,10 +10,9 @@
         <p class="header"><b>Try now New API </b><span class="beta-label">BETA</span></p>
         <p>Try out the new view and capabilities of the API documentation</p>
         <a id="startTryNew" class="button active" style="padding: 10px 20px;">START</a>
-        <a id="tryLater">TRY AGAIN LATER</a>
     </div>
     <script type="text/javascript">
-        $("#startTryNew").click(
+        $("#tryNew,#startTryNew").click(
             function () {
                 var d = new Date();
                 d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000));
@@ -32,9 +31,5 @@
                 $(".try-new-popup").removeClass("visible")
             }
         );
-
-        $("#tryLater").click(function () { 
-            $(".try-new-popup").hide()
-        });
     </script>
 </div>
