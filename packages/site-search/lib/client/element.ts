@@ -3,6 +3,7 @@ import {
   type PagefindModule,
   type PagefindSearchOptions,
 } from "@onlyoffice/pagefind-types"
+import {type TextInputContainer} from "@onlyoffice/ui-text-input/client.ts"
 
 // https://github.com/primer/react/blob/v36.14.0/packages/react/src/TextInput/TextInput.tsx
 // todo: separate input logic into a separate search-container.
@@ -24,30 +25,6 @@ export class SearchContainer extends HTMLElement {
       return {}
     }
     return JSON.parse(s)
-  }
-
-  get #focused(): boolean {
-    return this.getAttribute("focused") === ""
-  }
-
-  set #focused(f: boolean) {
-    if (f) {
-      this.setAttribute("focused", "")
-      return
-    }
-    this.removeAttribute("focused")
-  }
-
-  get #filled(): boolean {
-    return this.getAttribute("filled") === ""
-  }
-
-  set #filled(f: boolean) {
-    if (f) {
-      this.setAttribute("filled", "")
-      return
-    }
-    this.removeAttribute("filled")
   }
 
   #pagefind: PagefindModule | undefined
@@ -82,12 +59,24 @@ export class SearchContainer extends HTMLElement {
     window.history.replaceState({}, "", u)
   }
 
-  get #queryElement(): HTMLInputElement | null {
-    return this.querySelector('input[name="q"]')
+  get #formElement(): HTMLFormElement | null {
+    return this.querySelector("form")
   }
 
   get #sitesElement(): HTMLInputElement | null {
     return this.querySelector('input[name="sites"]')
+  }
+
+  get #queryContainer(): TextInputContainer | null {
+    return this.querySelector("text-input-container")
+  }
+
+  get #queryElement(): HTMLInputElement | null {
+    return this.querySelector('input[name="q"]')
+  }
+
+  get #clearElement(): HTMLButtonElement | null {
+    return this.querySelector('button[value="clear"]')
   }
 
   get #templateElement(): HTMLTemplateElement | null {
@@ -130,10 +119,9 @@ export class SearchContainer extends HTMLElement {
 
   async #setup(): Promise<void> {
     await this.#setupPagefind()
-    this.#setupQuery()
     this.#setupSites()
+    this.#setupQuery()
     this.#setupOutput()
-    this.#setupSelf()
   }
 
   async #setupPagefind(): Promise<void> {
@@ -146,26 +134,28 @@ export class SearchContainer extends HTMLElement {
     }
   }
 
-  #setupQuery(): void {
-    const e = this.#queryElement
-    if (!e) {
-      return
-    }
-
-    const q = this.#query
-    e.value = q
-
-    if (!q) {
-      return
-    }
-  }
-
   #setupSites(): void {
     const e = this.#sitesElement
     if (!e) {
       return
     }
     e.setAttribute("value", window.location.host)
+  }
+
+  #setupQuery(): void {
+    const c = this.#queryContainer
+    if (!c) {
+      return
+    }
+
+    const e = this.#queryElement
+    if (!e) {
+      return
+    }
+
+    const q = this.#query
+    c.filled = Boolean(q)
+    e.value = q
   }
 
   #setupOutput(): void {
@@ -184,12 +174,6 @@ export class SearchContainer extends HTMLElement {
     this.#searchCallback()
   }
 
-  #setupSelf(): void {
-    const q = this.#query
-    this.#focused = false
-    this.#filled = Boolean(q)
-  }
-
   async #desetup(): Promise<void> {
     const p = this.#pagefind
     if (p) {
@@ -200,8 +184,6 @@ export class SearchContainer extends HTMLElement {
   #listen(): void {
     window.addEventListener("keydown", this)
     this.addEventListener("click", this)
-    this.addEventListener("focusin", this)
-    this.addEventListener("focusout", this)
     this.addEventListener("input", this)
     this.addEventListener("submit", this)
   }
@@ -211,115 +193,81 @@ export class SearchContainer extends HTMLElement {
   }
 
   handleEvent(e: Event): void {
-    switch (true) {
-    case isClickEvent(e):
-      this.#handleClick(e)
-      break
-    case isFocusinEvent(e):
-      this.#handleFocusin(e)
-      break
-    case isFocusoutEvent(e):
-      this.#handleFocusout(e)
-      break
-    case isInputEvent(e):
-      this.#handleInput(e)
-      break
-    case isKeydownEvent(e):
-      this.#handleKeydown(e)
-      break
-    case isSubmitEvent(e):
-      this.#handleSubmit(e)
-      break
-    default:
-      throw new Error(`Event '${e.type}' is not supported`)
-    }
-  }
-
-  #handleClick(e: MouseEvent): void {
-    switch (true) {
-    case isClearElement(e.target):
+    if (
+      e instanceof MouseEvent &&
+      e.type === "click" &&
+      e.target &&
+      e.target === this.#clearElement
+    ) {
       e.preventDefault()
       this.#clear()
-      break
+      return
     }
-  }
 
-  #handleFocusin(e: FocusEvent): void {
-    switch (true) {
-    case isQueryElement(e.target):
-      e.preventDefault()
-      if (!this.#focused) {
-        this.#focused = true
-      }
-      break
-    }
-  }
-
-  #handleFocusout(e: FocusEvent): void {
-    switch (true) {
-    case isQueryElement(e.target):
-      e.preventDefault()
-      if (this.#focused) {
-        this.#focused = false
-      }
-      break
-    }
-  }
-
-  #handleInput(e: InputEvent): void {
-    switch (true) {
-    case isQueryElement(e.target):
+    if (
+      e instanceof InputEvent &&
+      e.type === "input" &&
+      e.target instanceof HTMLInputElement &&
+      e.target === this.#queryElement
+    ) {
       e.preventDefault()
       this.#query = e.target.value
-      this.#filled = Boolean(this.#query)
       this.#search()
-      break
-    }
-  }
-
-  #handleKeydown(e: KeyboardEvent): void {
-    switch (true) {
-    case isWindowEvent(e) && isSlashKey(e.key):
-      this.#handleSlash(e)
-      break
-    case isQueryElement(e.target) && isEnterKey(e.key):
-      this.#handleEnter(e)
-      break
-    }
-  }
-
-  #handleSlash(e: KeyboardEvent): void {
-    e.preventDefault()
-    const q = this.#queryElement
-    if (q) {
-      q.focus()
-    }
-  }
-
-  #handleEnter(e: KeyboardEvent): void {
-    e.preventDefault()
-
-    // todo: temp solution
-
-    const qs = this.#query
-    if (!qs) {
       return
     }
 
-    const te = this.#templateElement
-    if (te) {
-      return
-    }
-
-    // todo: move path to the parameters
-    window.location.href = `/search/?q=${encodeURIComponent(qs)}`
-  }
-
-  #handleSubmit(e: SubmitEvent): void {
-    switch (true) {
-    case isFormElement(e.target):
+    if (
+      e instanceof KeyboardEvent &&
+      e.type === "keydown" &&
+      e.currentTarget === window &&
+      e.key === "/"
+    ) {
       e.preventDefault()
-      break
+
+      const q = this.#queryElement
+      if (!q) {
+        return
+      }
+
+      q.focus()
+
+      return
+    }
+
+    if (
+      e instanceof KeyboardEvent &&
+      e.type === "keydown" &&
+      e.target &&
+      e.target === this.#queryElement &&
+      e.key === "Enter"
+    ) {
+      e.preventDefault()
+
+      // todo: temp solution
+
+      const qs = this.#query
+      if (!qs) {
+        return
+      }
+
+      const te = this.#templateElement
+      if (te) {
+        return
+      }
+
+      // todo: move path to the parameters
+      window.location.href = `/search/?q=${encodeURIComponent(qs)}`
+
+      return
+    }
+
+    if (
+      e instanceof SubmitEvent &&
+      e.type === "submit" &&
+      e.target === this.#formElement
+    ) {
+      e.preventDefault()
+      return
     }
   }
 
@@ -407,7 +355,6 @@ export class SearchContainer extends HTMLElement {
     }
 
     this.#query = ""
-    this.#filled = false
   }
 
   #createFragment(q: string, d: PagefindFragment): DocumentFragment | undefined {
@@ -440,54 +387,6 @@ export class SearchContainer extends HTMLElement {
 
     return f
   }
-}
-
-function isFormElement(e: unknown): e is HTMLFormElement {
-  return e instanceof HTMLFormElement
-}
-
-function isQueryElement(e: unknown): e is HTMLInputElement {
-  return e instanceof HTMLInputElement && e.name === "q"
-}
-
-function isClearElement(e: unknown): e is HTMLButtonElement {
-  return e instanceof HTMLButtonElement && e.value === "clear"
-}
-
-function isEnterKey(k: unknown): k is string {
-  return k === "Enter"
-}
-
-function isSlashKey(k: unknown): k is string {
-  return k === "/"
-}
-
-function isWindowEvent(e: unknown): e is Event {
-  return e instanceof Event && e.currentTarget === window
-}
-
-function isClickEvent(e: unknown): e is MouseEvent {
-  return e instanceof MouseEvent && e.type === "click"
-}
-
-function isFocusinEvent(e: unknown): e is FocusEvent {
-  return e instanceof FocusEvent && e.type === "focusin"
-}
-
-function isFocusoutEvent(e: unknown): e is FocusEvent {
-  return e instanceof FocusEvent && e.type === "focusout"
-}
-
-function isInputEvent(e: unknown): e is InputEvent {
-  return e instanceof InputEvent && e.type === "input"
-}
-
-function isKeydownEvent(e: unknown): e is KeyboardEvent {
-  return e instanceof KeyboardEvent && e.type === "keydown"
-}
-
-function isSubmitEvent(e: unknown): e is SubmitEvent {
-  return e instanceof SubmitEvent && e.type === "submit"
 }
 
 /**

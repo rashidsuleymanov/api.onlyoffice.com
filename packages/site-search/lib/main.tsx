@@ -32,6 +32,7 @@ export function SearchContainer(p: SearchContainerProperties): JSX.Element {
 
   return <search-container class="search" {...o}>
     <form id="search" action="https://duckduckgo.com/" method="get">
+      <input name="sites" aria-hidden="true" hidden />
       <TextInput>
         <TextInputLeading>
           <MagnifyingGlassIcon class="search__glass" />
@@ -49,6 +50,7 @@ export function SearchContainer(p: SearchContainerProperties): JSX.Element {
         </TextInputTrailing>
       </TextInput>
     </form>
+    {slots.template}
   </search-container>
 }
 

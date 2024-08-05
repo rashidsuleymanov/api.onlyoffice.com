@@ -4,9 +4,13 @@
   "type": "module",
   "main": "lib/main.tsx",
   "exports": {
-    ".": "./lib/main.tsx",
+    "./client/define.ts": "./lib/client/define.ts",
+    "./client/element.ts": "./lib/client/element.ts",
+    "./client/prerender.ts": "./lib/client/prerender.ts",
+    "./client/switcher.ts": "./lib/client/switcher.ts",
     "./client.ts": "./lib/client.ts",
-    "./main.css": "./lib/main.css"
+    "./main.css": "./lib/main.css",
+    ".": "./lib/main.tsx"
   },
   "scripts": {
     "test:types": "tsc",

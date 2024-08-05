@@ -1,27 +1,27 @@
-import {ThemeSwitcher} from "./element.ts"
+import {ThemeSwitcherContainer} from "./element.ts"
 
 declare global {
   interface Window {
-    ThemeSwitcher: typeof ThemeSwitcher
+    ThemeSwitcherContainer: typeof ThemeSwitcherContainer
   }
 
   interface HTMLElementTagNameMap {
-    "theme-switcher": ThemeSwitcher
+    "theme-switcher-container": ThemeSwitcherContainer
   }
 
   namespace preact {
     namespace JSX {
       interface IntrinsicElements {
-        "theme-switcher": HTMLAttributes<ThemeSwitcher>
+        "theme-switcher-container": HTMLAttributes<ThemeSwitcherContainer>
       }
     }
   }
 }
 
 export function define(): void {
-  if (window.customElements.get(ThemeSwitcher.tagName)) {
+  if (window.customElements.get(ThemeSwitcherContainer.tagName)) {
     return
   }
-  window.ThemeSwitcher = ThemeSwitcher
-  window.customElements.define(ThemeSwitcher.tagName, ThemeSwitcher)
+  window.ThemeSwitcherContainer = ThemeSwitcherContainer
+  window.customElements.define(ThemeSwitcherContainer.tagName, ThemeSwitcherContainer)
 }

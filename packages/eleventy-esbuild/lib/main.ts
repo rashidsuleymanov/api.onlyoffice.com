@@ -13,8 +13,8 @@ import pack from "../package.json" with {type: "json"}
 const console = new Console(pack.name, process.stdout, process.stderr)
 
 export interface EleventyEsbuildOptions {
-  urlPath: string
-  outputDir: string
+  urlPath?: string
+  outputDir?: string
   filenameFormat?(id: string, src: string): string
   buildOptions?: BuildOptions
 }
@@ -22,6 +22,7 @@ export interface EleventyEsbuildOptions {
 export class BuildResult {
   type = ""
   src = ""
+  content = ""
 }
 
 export class EleventyEsbuild {
@@ -59,20 +60,27 @@ export class EleventyEsbuild {
         return r
       }
 
-      const s = a.outputFiles[0].contents
-
-      const h = this.#hash(s)
-      let b = this.#base(f, h)
-      if (this.#opts.filenameFormat) {
-        b = this.#opts.filenameFormat(h, f)
-      }
-      const o = path.join(this.#opts.outputDir, b)
-      writeFileSync(o, s)
-
       if (this.#opts.buildOptions && this.#opts.buildOptions.format === "esm") {
         r.type = "module"
       }
-      r.src = `${this.#opts.urlPath}${b}`
+
+      const [o] = a.outputFiles
+
+      if (this.#opts.outputDir && this.#opts.urlPath) {
+        const h = this.#hash(o.contents)
+
+        let b = this.#base(f, h)
+        if (this.#opts.filenameFormat) {
+          b = this.#opts.filenameFormat(h, f)
+        }
+
+        const p = path.join(this.#opts.outputDir, b)
+        writeFileSync(p, o.contents)
+
+        r.src = `${this.#opts.urlPath}${b}`
+      }
+
+      r.content = o.text
 
       return r
     })

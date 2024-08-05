@@ -1,4 +1,5 @@
 import path from "node:path"
+import {URL} from "node:url"
 import {Sitemap} from "@onlyoffice/eleventy-sitemap"
 import {rootDir} from "@onlyoffice/eleventy-env"
 import {type Root} from "hast"
@@ -17,23 +18,11 @@ export function Link(p: HTMLAttributes<HTMLAnchorElement>): JSX.Element {
     throw new Error("The 'href' attribute must be a string.")
   }
   if (!URL.canParse(p.href) && !path.isAbsolute(p.href)) {
-    console.log(p.href)
     throw new Error("The 'href' attribute must be an absolute URL.")
   }
 
   if (path.isAbsolute(p.href)) {
-    const s = Sitemap.shared
-    const u = decodeURIComponent(`.${p.href}`)
-
-    const e = s.find(u, "path")
-    if (!e) {
-      throw new Error(`Expected an entity for the path: ${u}`)
-    }
-    if (e.type !== "page") {
-      throw new Error(`Expected a page entity for the path: ${u}`)
-    }
-
-    p.href = e.url
+    p.href = resolve(p.href, "")
   }
 
   return <a {...p}></a>
@@ -59,29 +48,33 @@ export function rehypeLink(): RehypeLinkTransform {
         return
       }
 
-      const s = Sitemap.shared
-
-      let u = ""
-      if (path.isAbsolute(p.href)) {
-        u = `.${p.href}`
-      } else {
-        u = path.dirname(f.path)
-        u = path.resolve(u, p.href)
-        u = u.replace(rootDir(), ".")
-      }
-      u = decodeURIComponent(u)
-
-      const e = s.find(u, "path")
-      if (!e) {
-        // todo: this is a temporary solution during the migration.
-        return
-        // throw new Error(`Expected an entity for the path: ${u}`)
-      }
-      if (e.type !== "page") {
-        throw new Error(`Expected a page entity for the path: ${u}`)
-      }
-
-      n.properties.href = e.url
+      n.properties.href = resolve(p.href, f.path)
     })
   }
+}
+
+function resolve(a: string, b: string): string {
+  const s = Sitemap.shared
+
+  const u = new URL(a, "http://e.c/")
+  let t = ""
+  if (path.isAbsolute(a)) {
+    t = `.${u.pathname}`
+  } else {
+    t = path.dirname(b)
+    t = path.resolve(t, a)
+    t = t.replace(rootDir(), ".")
+    t = t.replace(u.hash, "")
+  }
+  t = decodeURIComponent(t)
+
+  const e = s.find(t, "path")
+  if (!e) {
+    throw new Error(`Expected an entity for the path: ${t}`)
+  }
+  if (e.type !== "page") {
+    throw new Error(`Expected a page entity for the path: ${t}`)
+  }
+
+  return `${e.url}${u.hash}`
 }
