@@ -18,6 +18,7 @@
     "@onlyoffice/preact-types": "workspace:^",
     "@onlyoffice/ui-icons": "workspace:^",
     "@onlyoffice/ui-kit": "workspace:^",
+    "@onlyoffice/ui-text-input": "workspace:^",
     "preact": "^10.22.0",
     "typescript": "^5.4.5"
   },
