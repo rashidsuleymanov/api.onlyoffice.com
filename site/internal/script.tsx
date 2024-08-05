@@ -45,7 +45,7 @@ export function Script({...p}: HTMLAttributes<HTMLScriptElement>): JSX.Element {
       },
     })
     const b = await e.build(f)
-    r = <script defer type={b.type} src={b.src} {...p} />
+    r = <script type={b.type} src={b.src} {...p} />
   })
 
   return <Suspense>{() => r}</Suspense>

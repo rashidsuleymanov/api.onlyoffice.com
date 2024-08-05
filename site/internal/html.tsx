@@ -43,7 +43,7 @@ export function Html(p: HtmlProperties): JSX.Element {
       {c.analytics && <GoogleTagManagerScript />}
 
       <Style href="/assets/main.css" />
-      <Script src="/assets/main.ts" />
+      <Script defer src="/assets/main.ts" />
     </head>
     <body>
       {c.analytics && <GoogleTagManagerNoscript />}
