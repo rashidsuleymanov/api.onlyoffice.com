@@ -90,7 +90,7 @@ Example: `https://example.com/url-to-example-document.docx`
 
 ### Example
 
-``` json
+``` javascript
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "fileType": "xlsx",

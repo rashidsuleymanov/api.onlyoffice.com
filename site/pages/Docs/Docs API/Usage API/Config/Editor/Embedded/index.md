@@ -49,7 +49,7 @@ Example: "top"
 
 ### Example
 
-``` json
+``` javascript
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "embedded": {

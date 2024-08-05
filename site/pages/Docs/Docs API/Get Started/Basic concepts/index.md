@@ -32,7 +32,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 Where *config* is an object:
 
-``` json
+``` javascript
 config = {
     "document": {
         "fileType": "docx",

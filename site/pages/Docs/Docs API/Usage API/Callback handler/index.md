@@ -172,7 +172,7 @@ It is received when the force saving request is performed.The *callbackUrl* depe
 
 ### Sample of JSON object sent to the "callbackUrl" address by document editing service when the user changed the document and closed it for editing
 
-``` json
+``` javascript
 {
     "actions": [{"type": 0, "userid": "78e1e841"}],
     "changesurl": "https://documentserver/url-to-changes.zip",
@@ -199,7 +199,7 @@ It is received when the force saving request is performed.The *callbackUrl* depe
 
 ### Sample of JSON object sent to the "callbackUrl" address by document editing service after the [forcesave](../../Additional%20API/Command%20service/forcesave/index.md) command had been received
 
-``` json
+``` javascript
 {
     "changesurl": "https://documentserver/url-to-changes.zip",
     "forcesavetype": 0,
@@ -262,7 +262,7 @@ public class WebEditor : IHttpHandler
 
 ### Java document save example
 
-```javascript
+``` java
 public class IndexServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

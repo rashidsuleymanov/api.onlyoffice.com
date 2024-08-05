@@ -184,7 +184,7 @@ This example demonstrates how to open the ONLYOFFICE editors via WKWebView using
 
 7. Add the script initializing the **Document Editor** for the *div* element with the configuration for the document you want to open:
 
-   ``` json
+   ``` javascript
    window.docEditor = new DocsAPI.DocEditor("placeholder",
        {
            {external_config},
@@ -272,7 +272,7 @@ To work with documents (open, download, insert images, mention other users, etc.
 
    Let's consider the [onDownloadAs](../../../Usage%20API/Config/Events/index.md#ondownloadas) event as an example. Register an object as a handler for a particular message by calling *configuration.userContentController.add(self, name: messageName)* during the WKWebView configuration. Get the event parameters (file type and URL) and delegate the event handling to **EditorViewController**:
 
-   ```
+   ``` swift
    func onDownloadAs(fileType: String, url: String) {
        print("⚡ ONLYOFFICE Document Editor create file: \(url)")
    }

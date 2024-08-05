@@ -26,7 +26,7 @@ The reference figure and the steps below explain the process of saving a documen
 2. Create an *html* file to [Open the document](../Opening%20file/index.md#how-this-can-be-done-in-practice).
 3. In the configuration script for Document Editor initialization specify the URL to the file with the *Callback handler* in the [parameter line](../../../Usage%20API/Config/Editor/index.md#callbackurl). Be sure to add a [token](../Security/index.md) when using local links. Otherwise, an error will occur.
 
-   ``` json
+   ``` javascript
    new DocsAPI.DocEditor("placeholder", {
        "document": {
            "fileType": "docx",

@@ -41,7 +41,7 @@ Type: object
 
 **Example**:
 
-``` json
+``` javascript
 {
     "edit": ["Group2", ""],
     "remove": [""],
@@ -227,7 +227,7 @@ Example: ["Group1", ""]
 
 
 ### Example
-``` json
+``` javascript
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {

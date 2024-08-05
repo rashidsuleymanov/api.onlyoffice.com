@@ -39,7 +39,7 @@ Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [G
 
 [This VBA macro](https://www.teachexcel.com/excel-tutorial/find-the-next-blank-row-with-vba-macros-in-excel_1261.html) was used as a base.
 
-``` javascript
+``` vb
 Sub example()
     Range("A" & Rows.Count).End(xlUp).Offset(1).Select
 End Sub

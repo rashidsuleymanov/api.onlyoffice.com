@@ -17,7 +17,7 @@ Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [G
 
 ## Reference Microsoft VBA macro code
 
-``` javascript
+``` vb
 Sub example()
     Cells(3, 4)="Hello world"
 End Sub

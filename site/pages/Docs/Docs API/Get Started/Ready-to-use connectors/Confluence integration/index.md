@@ -62,7 +62,7 @@ If you plan to compile the Confluence ONLYOFFICE integration app yourself (e.g. 
 
 4. Compile package:
 
-   ```
+   ``` bash
    atlas-package
    ```
 

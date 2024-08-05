@@ -53,7 +53,7 @@ To start using ONLYOFFICE Docs with Alfresco, the following steps must be perfor
 
    You may need to change these lines in **alfresco-global.properties** or you can set it using [configuration page](#configuring-onlyoffice-alfresco-module-package):
 
-   ``` javascript
+   ``` ini
    alfresco.host=<hostname>
    alfresco.port=443
    alfresco.protocol=https
@@ -88,7 +88,7 @@ If you plan to compile the ONLYOFFICE Alfresco module package yourself (e.g. edi
 
 1. The latest stable **Oracle Java** version is necessary for the successful build. If you do not have it installed, use the following commands to install Oracle Java 8:
 
-   ```
+   ``` bash
    sudo apt-get update
    sudo apt-get install openjdk-8-jdk
    ```

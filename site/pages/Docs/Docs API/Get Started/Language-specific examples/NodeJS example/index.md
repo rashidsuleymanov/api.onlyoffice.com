@@ -49,13 +49,13 @@ We will run the code in Node.js runtime environment and will interact with it us
 
 1. Launch the **Command Prompt** and switch to the folder with the Node.js project code, for example:
 
-   ```
+   ``` bash
    cd /d "C:\Node.js Example"
    ```
 
 2. Node.js comes with a package manager, **node package manager (npm)**, which is automatically installed along with Node.js. To run the Node.js code, install the project modules using the following *npm* command:
 
-   ```
+   ``` bash
    npm install
    ```
 
@@ -63,7 +63,7 @@ We will run the code in Node.js runtime environment and will interact with it us
 
 3. Run the project using the **Command Prompt**:
 
-   ```
+   ``` bash
    node bin/www
    ```
 
@@ -93,39 +93,39 @@ See the detailed guide to learn how to [install ONLYOFFICE Docs for Linux](https
 
 1. Install **Node.js**:
 
-   ```
+   ``` bash
    curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
    ```
 
-   ```
+   ``` bash
    sudo apt-get install -y nodejs
    ```
 
 2. Download the archive with the Node.js example and unpack the archive:
 
-   ```
+   ``` bash
    wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Node.js.Example.zip
    ```
 
-   ```
+   ``` bash
    unzip Node.js.Example.zip
    ```
 
 3. Change the current directory for the project directory:
 
-   ```
+   ``` bash
    cd Node.js\ Example/
    ```
 
 4. Install the dependencies:
 
-   ```
+   ``` bash
    npm install
    ```
 
 5. Edit the *config/default.json* configuration file. Specify the name of your local server with the ONLYOFFICE Docs installed.
 
-   ```
+   ``` bash
    nano config/default.json
    ```
 
@@ -139,13 +139,13 @@ See the detailed guide to learn how to [install ONLYOFFICE Docs for Linux](https
 
    where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed, the **storageFolder** and **storagePath** are the paths where files will be created and stored. Please note that you must have read and write permissions to the folder. If you do not have them, please use the next command:
 
-   ```
+   ``` bash
    sudo chmod -R ugo+rw /{path}
    ```
 
 6. Run the project with Node.js:
 
-   ```
+   ``` bash
    node bin/www
    ```
 

@@ -14,7 +14,7 @@ order: -9
 
   That is why the *type* should be set to **embedded** and the configuration file will look like this:
 
-  ``` json
+  ``` javascript
   var docEditor = new DocsAPI.DocEditor("placeholder", {
       "type": "embedded",
   });
@@ -30,7 +30,7 @@ order: -9
   * *editorConfig.embedded.saveUrl* is the absolute URL to the document with the *document.permission.download* parameter set to **true**, which can be saved by other users to their own computer in the *DOCX*, *PPTX* or *XLSX* format depending on the file type.
   * *editorConfig.embedded.shareUrl* is the absolute URL to the document which can be used by other users to share it with others.
 
-  ``` json
+  ``` javascript
   var docEditor = new DocsAPI.DocEditor("placeholder", {
       "editorConfig": {
           "embedded": {

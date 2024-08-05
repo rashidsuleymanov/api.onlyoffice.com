@@ -21,7 +21,7 @@ The reference figure and the steps below explain the process of comparing docume
 
    ![onRequestCompareFile](/assets/images/editor/onRequestCompareFile.png)
 
-   ``` json
+   ``` javascript
    var onRequestCompareFile = function() {
        docEditor.setRevisedFile({
            "fileType": "docx",

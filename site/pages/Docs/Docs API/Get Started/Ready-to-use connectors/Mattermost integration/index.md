@@ -31,7 +31,7 @@ To start using ONLYOFFICE Docs with Mattermost, follow these steps:
 
 4. Run the following command:
 
-   ```
+   ``` bash
    make dist
    ```
 

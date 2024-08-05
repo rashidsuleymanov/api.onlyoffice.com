@@ -30,7 +30,7 @@ The steps below explain the process of connecting several editors to the same ht
 
    Each editor has its own initialization script:
 
-   ```json
+   ```javascript
    var documentEditor = new DocsAPI.DocEditor("placeholder1", {
        "document": {
            "fileType": "docx",

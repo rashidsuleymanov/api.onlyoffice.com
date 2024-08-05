@@ -16,7 +16,7 @@ In case the *edit* parameter is set to **true** and the *comment* parameter is a
 
 In case the *edit* parameter is set to **false** and the *comment* parameter is set to **true**, the document will be available for commenting only.
 
-```
+``` javascript
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -36,7 +36,7 @@ Please note that the document commenting will only be available for the document
 
 1. If you want to allow editing comments only by their authors, set the [editCommentAuthorOnly](/editors/config/document/permissions#editCommentAuthorOnly) parameter in the permissions section of the editor initialization to **true**.
 
-   ```
+   ``` javascript
    var docEditor = new DocsAPI.DocEditor("placeholder", {
        "document": {
            "permissions": {
@@ -51,7 +51,7 @@ Please note that the document commenting will only be available for the document
 
 2. If you want to allow deleting comments only by their authors, set the [deleteCommentAuthorOnly](/editors/config/document/permissions#deleteCommentAuthorOnly) parameter in the permissions section of the editor initialization to **true**.
 
-   ```
+   ``` javascript
    var docEditor = new DocsAPI.DocEditor("placeholder", {
        "document": {
            "permissions": {
@@ -68,7 +68,7 @@ Please note that the document commenting will only be available for the document
 
 1. Specify the group (or several groups separated with commas) the user belongs to by adding the field *group* to the [user](/editors/config/editor#user) parameter in the editorConfig section.
 
-   ```
+   ``` javascript
    var docEditor = new DocsAPI.DocEditor("placeholder", {
        "editorConfig": {
            "user": {
@@ -96,7 +96,7 @@ Please note that the document commenting will only be available for the document
 
    If the **commentGroups** parameter is specified in the editor config, the access rights to viewing, editing and/or removing all comments are disabled. Otherwise, if the current user does not belong to any of the groups, he or she can edit, remove and/or view comments of all groups.
 
-   ```
+   ``` javascript
    var docEditor = new DocsAPI.DocEditor("placeholder", {
        "document": {
            "permissions": {
@@ -123,7 +123,7 @@ To display ONLYOFFICE spreadsheet comments in other editors correctly, all the c
 
 1. The **original comment format** looks as follows:
 
-   ```
+   ``` javascript
    ${author1}:
    comment
    ${author2}:

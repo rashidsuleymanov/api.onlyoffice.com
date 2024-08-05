@@ -44,7 +44,7 @@ The webhook request body contains the original request body.
 
 The request timeout is 5 minutes:
 
-``` javascript
+``` csharp
 var lifeTime = TimeSpan.FromMinutes(5);
 
 Func<IServiceProvider, HttpRequestMessage, IAsyncPolicy<HttpResponseMessage>> policyHandler = (s, _) =>

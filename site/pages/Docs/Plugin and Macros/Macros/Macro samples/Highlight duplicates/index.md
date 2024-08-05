@@ -72,7 +72,7 @@ Methods used: [CreateColorFromRGB](/officeapi/spreadsheetapi/api/createcolorfrom
 
 [This VBA macro](https://www.extendoffice.com/documents/excel/3772-excel-highlight-duplicate-values-in-different-colors.html) was used as a base.
 
-``` javascript
+``` vb
 Sub example()
     Dim xRg As Range
     Dim xTxt As String

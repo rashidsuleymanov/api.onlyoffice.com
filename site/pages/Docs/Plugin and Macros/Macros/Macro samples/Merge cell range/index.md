@@ -17,7 +17,7 @@ Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [G
 
 ## Reference Microsoft VBA macro code
 
-``` javascript
+``` vb
 Sub example()
     Range("A1:B3").Merge
 End Sub

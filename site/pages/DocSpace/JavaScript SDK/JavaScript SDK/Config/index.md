@@ -131,7 +131,7 @@ Type: object
 
 Example:
 
-``` json
+``` javascript
 {
     "onSelectCallback": null,
     "onCloseCallback": null,
@@ -153,7 +153,7 @@ Type: object
 
 Example:
 
-``` json
+``` javascript
 {
     "count": 100,
     "page": 1,
@@ -473,7 +473,7 @@ Example: true
 
 **Example**
 
-``` json
+``` javascript
 { 
     "buttonColor": "#5299E0", 
     "destroyText": "",

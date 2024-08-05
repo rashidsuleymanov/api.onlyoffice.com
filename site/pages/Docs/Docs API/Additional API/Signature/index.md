@@ -94,7 +94,7 @@ public static class JwtManager
 
 ### Java example
 
-``` javascript
+``` java
 public static String CreateToken(Map payloadClaims)
 {
     try

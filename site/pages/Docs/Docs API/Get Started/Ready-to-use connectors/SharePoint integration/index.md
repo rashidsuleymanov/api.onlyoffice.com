@@ -34,7 +34,7 @@ To start using ONLYOFFICE Docs with SharePoint, the following steps must be perf
 
    > Alternatively to steps **3** and **4** you can type the following command:
    >
-   >   ```
+   >   ``` powershell
    >   Add-SPSolution -LiteralPath<SolutionPath>/onlyoffice.wsp
    >   ```
    >   

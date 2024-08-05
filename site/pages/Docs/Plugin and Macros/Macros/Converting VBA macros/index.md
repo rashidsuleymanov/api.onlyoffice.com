@@ -8,7 +8,7 @@ This can be the reason for some inconvenience in case you previously used Micros
 
 The process is not too complicated. Let's see the following example:
 
-``` javascript
+``` vb
 Sub Example()
     Dim myRange
     Dim result

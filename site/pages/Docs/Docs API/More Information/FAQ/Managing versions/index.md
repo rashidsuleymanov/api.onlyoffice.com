@@ -12,7 +12,7 @@ order: -4
 
   1. The callback handler receives the data in the response from the **document editing service** with *status* **2** (which means that the all the users of the document closed it and the current version has been compiled). This response will look something like this:
 
-     ``` json
+     ``` javascript
      {
          "key": "2745492410",
          "status": 2,
@@ -29,7 +29,7 @@ order: -4
 
   3. The configuration file must have the following sections present: *events.onRequestHistory* and the *onRequestHistory* function itself:
 
-     ``` json
+     ``` javascript
      var onRequestHistory = function() {
          docEditor.refreshHistory({
              "currentVersion": 2,
@@ -90,7 +90,7 @@ order: -4
 
   * Parse the *changesurl* parameter from the **document editing service** received response with *status* **2**:
 
-    ``` json
+    ``` javascript
     {
         "changesurl": "https://documentserver/url-to-changes.zip",
         "key": "2745492410",
@@ -105,7 +105,7 @@ order: -4
     ```
   * Add the *onRequestHistoryData* function to the configuration file together with the *setHistoryData* method and *events.onRequestHistoryData* event:
 
-    ``` json
+    ``` javascript
     var onRequestHistoryData = function(event) {
         var version = event.data;
         docEditor.setHistoryData({

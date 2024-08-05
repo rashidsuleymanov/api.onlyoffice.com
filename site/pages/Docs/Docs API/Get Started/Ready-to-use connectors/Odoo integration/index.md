@@ -33,7 +33,7 @@ To start using ONLYOFFICE Docs with Odoo, the following steps must be performed:
 
    Alternatively, you can add the following lines in the */path/to/odoo/config/odoo.conf* file specifying your path to the folder with *apps/addons*:
 
-   ``` javascript
+   ``` ini
    [options]
    addons_path = /mnt/extra-addons
    ```

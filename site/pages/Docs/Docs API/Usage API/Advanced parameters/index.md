@@ -21,7 +21,7 @@ The parameters, which can be changed for ONLYOFFICE Docs, can be subdivided into
 
 The complete *config* with all the additional parameters looks the following way:
 
-``` json
+``` javascript
 config = {
     "document": {
         "fileType": "docx",

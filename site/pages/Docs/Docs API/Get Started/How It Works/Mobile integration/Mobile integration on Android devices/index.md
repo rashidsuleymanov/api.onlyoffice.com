@@ -16,7 +16,7 @@ This example demonstrates how to integrate ONLYOFFICE mobile web editors with th
 
 4. To display the main page of your DMS, specify the address of the ONLYOFFICE Docs web interface in the value of the **DOCUMENT\_SERVER\_URL** property in the module-level *build.gradle* file:
 
-   ``` javascript
+   ``` groovy
    buildConfigField("String", "DOCUMENT_SERVER_URL", "https://documentserver/")
    ```
 
@@ -24,7 +24,7 @@ This example demonstrates how to integrate ONLYOFFICE mobile web editors with th
 
    If **DOCUMENT\_SERVER\_URL** is specified, the DMS main page is loaded. Otherwise, an error occurs:
 
-   ``` javascript
+   ``` kotlin
    private fun showDialog() {
        AlertDialog.Builder(requireContext())
        .setMessage("Document server url is empty.\nYou must specify the address in build.gradle")

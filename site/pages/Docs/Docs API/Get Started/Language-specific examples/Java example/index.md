@@ -29,7 +29,7 @@ Download the [Java example](../index.md) from our site.
 
 To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the *src/main/resources/settings.properties* file:
 
-``` javascript
+``` ini
 storage-folder = app_data
 files.docservice.url.site=https://documentserver/
 ```
@@ -71,19 +71,19 @@ To run the Java example code, install the Java version appropriate for your OS a
 
    Check if the variable created successfully by **echo** command in the **Command Prompt**:
 
-   ```
+   ``` bash
    echo %JAVA_HOME%
    ```
 
 2. Run the **Command Prompt**. Change the current directory for the **Apache Tomcat** installation directory:
 
-   ```
+   ``` bash
    cd /d C:\Apache Tomcat\apache-tomcat-7.0.67\bin
    ```
 
 3. Use the bin *startup.bat* script to start Apache Tomcat:
 
-   ```
+   ``` bash
    startup.bat
    ```
 
@@ -151,60 +151,60 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
 
 2. Download the archive with the Java example and unpack the archive:
 
-   ```
+   ``` bash
    wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip
    ```
 
-   ```
+   ``` bash
    unzip Java.Example.zip
    ```
 
 3. Change the current directory for the project directory:
 
-   ```
+   ``` bash
    cd Java\ Example/
    ```
 
 4. Edit the *src/main/resources/settings.properties* configuration file. Specify the name of your local server with the ONLYOFFICE Docs installed.
 
-   ```
+   ``` bash
    nano src/main/resources/settings.properties
    ```
 
    Edit the following lines:
 
-   ``` javascript
+   ``` ini
    storage-folder = app_data
    files.docservice.url.site=https://documentserver/
    ```
 
    where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed and the **storage-folder** is the path where files will be created and stored. Please note that you must have read and write permissions to the folder. If you do not have them, please use the next command:
 
-   ```
+   ``` bash
    sudo chmod -R ugo+rw /{path}
    ```
 
 5. Install **Maven**:
 
-   ```
+   ``` bash
    sudo apt-get install maven
    ```
 
 6. Build:
 
-   ```
+   ``` bash
    mvn package
    ```
 
 7. Install **Tomcat** with the administration page:
 
-   ```
+   ``` bash
    sudo apt-get install tomcat8 tomcat8-admin
    ```
 
 8. Configure the admin user on Tomcat:
 
-   ```
+   ``` bash
    sudo nano /var/lib/tomcat8/conf/tomcat-users.xml
    ```
 
@@ -219,7 +219,7 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
 
    Restart Tomcat:
 
-   ```
+   ``` bash
    systemctl restart tomcat8
    ```
 
@@ -259,29 +259,29 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
 
 2. Download the archive with the Java example and unpack the archive:
 
-   ```
+   ``` bash
    wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip
    ```
    
-   ```
+   ``` bash
    unzip Java.Example.zip
    ```
 
 3. Change the current directory for the project directory:
 
-   ```
+   ``` bash
    cd Java\ Example/
    ```
 
 4. Edit the *src/main/resources/settings.properties* configuration file. Specify the name of your local server with ONLYOFFICE Docs installed:
 
-   ```
+   ``` bash
    nano src/main/resources/settings.properties
    ```
 
    Edit the following lines:
 
-   ``` javascript
+   ``` ini
    storage-folder = app_data
    files.docservice.url.site=https://documentserver/
    ```
@@ -290,7 +290,7 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
 
 5. Run the next command in the Java example directory:
 
-   ```
+   ``` bash
    docker-compose up
    ```
 

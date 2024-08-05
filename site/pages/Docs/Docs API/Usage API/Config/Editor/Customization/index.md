@@ -68,7 +68,7 @@ Adds a request for the anonymous name.
 Type: object
 
 **Example**:
-``` json
+``` javascript
 {
     "request": true,
     "label": "Guest"
@@ -126,7 +126,7 @@ Type: object
 
 **Example**:
 
-``` json
+``` javascript
 {
     "visible": true,
     "text": "Close file"
@@ -222,7 +222,7 @@ Type: object
 
 **Example**:
 
-``` json
+``` javascript
 {
     "address": "My City, 123a-45",
     "info": "Some additional information",
@@ -317,7 +317,7 @@ Type: object
 
 **Example**:
 
-``` json
+``` javascript
 {
     "roles": true,
     "spellcheck": {
@@ -413,7 +413,7 @@ Type:  object
 
 **Example**:
 
-``` json
+``` javascript
 {
     "name": "Arial",
     "size": "11px"
@@ -457,7 +457,7 @@ Type: object
 
 **Example**:
 
-``` json
+``` javascript
 {
     "blank": true,
     "text": "Open file location",
@@ -573,7 +573,7 @@ Type:  object
 
 **Example**:
 
-``` json
+``` javascript
 {
     "header": {
         "editMode": true,
@@ -625,7 +625,7 @@ Type: object
 
 **Example**:
 
-``` json
+``` javascript
 {
     "editMode": true,
     "save": true,
@@ -669,7 +669,7 @@ Type: object or boolean
 
 **Example**:
 
-``` json
+``` javascript
 {
     "mode": true,
     "navigation": true,
@@ -713,7 +713,7 @@ Type: object or boolean
 
 **Example**:
 
-``` json
+``` javascript
 {
     "mode": true
 }
@@ -737,7 +737,7 @@ Type: object or boolean
 
 **Example**:
 
-``` json
+``` javascript
 {
     "actionStatus": true,
     "docLang": true,
@@ -781,7 +781,7 @@ Type: object or boolean
 
 **Example**:
 
-``` json
+``` javascript
 {
     "collaboration": {
         "mailmerge": true
@@ -814,7 +814,7 @@ Type: object or boolean
 
 **Example**:
 
-``` json
+``` javascript
 {
     "mailmerge": true
 }
@@ -847,7 +847,7 @@ Type: object or boolean
 
 **Example**:
 
-``` json
+``` javascript
 {
     "close": true,
     "info": true,
@@ -964,7 +964,7 @@ Type: object or boolean
 
 **Example**:
 
-``` json
+``` javascript
 {
     "navigation": true
 }
@@ -1025,7 +1025,7 @@ Type: object
 
 **Example**:
 
-```  json
+```  javascript
 {
     "image": "https://example.com/logo.png",
     "imageDark": "https://example.com/dark-logo.png",
@@ -1151,7 +1151,7 @@ Type: object
 
 **Example**:
 
-``` json
+``` javascript
 {
     "hideReviewDisplay": false,
     "showReviewChanges": false,
@@ -1400,7 +1400,7 @@ Example: 100
 
 ### Example
 
-``` json
+``` javascript
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "customization": {

@@ -65,7 +65,7 @@ Example: "100%"
 
 ### Example
 
-``` json
+``` javascript
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     {
         "documentType": "word",

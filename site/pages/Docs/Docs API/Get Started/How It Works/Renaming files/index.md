@@ -40,7 +40,7 @@ The reference figure and the steps below explain the process of renaming a docum
 
 3. In order to update the name of the document for all collaborative editors, send the request to the [document command service](../../../Additional%20API/Command%20service/index.md), using the [meta](../../../Additional%20API/Command%20service/meta/index.md) value for the *c* parameter:
 
-   ```
+   ``` json
    {
        "c": "meta",
        "key": "Khirz6zTPdfd7",

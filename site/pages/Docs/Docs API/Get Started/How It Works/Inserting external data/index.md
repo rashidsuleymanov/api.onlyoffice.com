@@ -20,7 +20,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
 2. Specify the [document.referenceData](../../../Usage%20API/Config/Document/index.md#referencedata) parameter in the initialization config of the source spreadsheet:
 
-   ``` json
+   ``` javascript
    var docEditor = new DocsAPI.DocEditor("placeholder", {
        "document": {
            "referenceData": {
@@ -42,7 +42,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
 5. Specify the [onRequestReferenceData](../../../Usage%20API/Config/Events/index.md#onrequestreferencedata) event handler in the initialization config of the destination spreadsheet for the *Paste link* and *Update values* buttons to be displayed:
 
-   ``` json
+   ``` javascript
    var docEditor = new DocsAPI.DocEditor("placeholder", {
        "events": {
            "onRequestReferenceData": onRequestReferenceData,

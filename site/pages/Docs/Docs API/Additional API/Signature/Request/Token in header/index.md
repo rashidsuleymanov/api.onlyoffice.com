@@ -23,7 +23,7 @@ The *payload* for the JSON Web Token contains the following fields:
 
   **Sample of request to receive the status of the edited document**
 
-  ``` javascript
+  ``` http
   POST coauthoring/CommandService.ashx HTTP/1.1
   Host: documentserver
   Content-Type: application/json
@@ -57,7 +57,7 @@ The *payload* for the JSON Web Token contains the following fields:
 
   **Sample of request to convert the document**
 
-  ``` javascript
+  ``` http
   POST ConvertService.ashx HTTP/1.1
   Host: documentserver
   Content-Type: application/json
@@ -93,7 +93,7 @@ The *payload* for the JSON Web Token contains the following fields:
 
   **Sample of request to document builder service**
 
-  ``` javascript
+  ``` http
   POST docbuilder HTTP/1.1
   Host: documentserver
   Content-Type: application/json
@@ -126,7 +126,7 @@ The *payload* for the JSON Web Token contains the following fields:
 
   **Sample of request to "callbackUrl" address by document editing service when the last user closed the document for editing without changes**
 
-  ``` javascript
+  ``` http
   POST url-to-callback.ashx HTTP/1.1
   Host: example.com
   Content-Type: application/json
@@ -156,7 +156,7 @@ The *payload* for the JSON Web Token contains the following fields:
 
   **Sample of request to document storage service for file download**
 
-  ``` javascript
+  ``` http
   GET url-to-example-document.docx HTTP/1.1
   Host: example.com
   Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQuZG9jeCJ9fQ.DnhdBVtn8sFo9Adfl6GuT_v53NVV5cQ0Vi9c8xRzrjs
@@ -182,7 +182,7 @@ The *payload* for the JSON Web Token contains the following fields:
 
   **Sample of request to document storage service for document changes data download**
 
-  ``` javascript
+  ``` http
   GET url-to-changes.zip HTTP/1.1
   Host: example.com
   Content-Type: application/json

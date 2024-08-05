@@ -55,7 +55,7 @@ Type: array of object
 
 **Example**:
 
-``` json
+``` javascript
 [
     { 
         "permissions": "Full Access",
@@ -106,7 +106,7 @@ Example: "2010-07-07 3:46 PM"
 
 ### Example
 
-``` json
+``` javascript
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "info": {

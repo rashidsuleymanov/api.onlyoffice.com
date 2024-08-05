@@ -20,7 +20,7 @@ order: -3
 
   * Enabling the [editorConfig.customization.forcesave](../../../Usage%20API/Config/Editor/Customization/index.md#forcesave) setting to **true** in the editor initialization configuration:
 
-    ``` json
+    ``` javascript
     var docEditor = new DocsAPI.DocEditor("placeholder", {
         "editorConfig": {
             "customization": {

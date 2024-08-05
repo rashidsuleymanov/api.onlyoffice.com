@@ -184,7 +184,7 @@ Type: array of object
     {
         "image": "https://example.com/exampletemplate1.png",
         "title": "exampletemplate1.docx",
-        "url": "https\://example.com/url-to-create-template1"
+        "url": "https://example.com/url-to-create-template1"
     }
 ]
 ```
@@ -297,7 +297,7 @@ Example: "John Smith"
 
 ### Example
 
-``` json
+``` javascript
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "actionLink": "ACTION_DATA",
@@ -322,7 +322,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             {
                 "image": "https://example.com/exampletemplate1.png",
                 "title": "exampletemplate1.docx",
-                "url": "https\://example.com/url-to-create-template1"
+                "url": "https://example.com/url-to-create-template1"
             }
         ],
         "user": {

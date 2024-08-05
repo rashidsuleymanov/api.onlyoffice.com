@@ -31,7 +31,7 @@ Download the [Java-Spring example](../index.md) from our site.
 
 To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the *src/main/resources/application.properties* file:
 
-``` javascript
+``` ini
 files.storage=
 server.port=port
 files.docservice.url.site=https://documentserver/
@@ -73,7 +73,7 @@ To run the Java-Spring example code, install the Java version 11 appropriate for
 
    Check if the variable created successfully by **echo** command in the **Command Prompt**:
 
-   ```
+   ``` bash
    echo %JAVA_HOME%
    ```
 
@@ -101,7 +101,7 @@ To run the Java-Spring example code, install the Java version 11 appropriate for
 
     Check if the variable created successfully by **echo** command in the **Command Prompt**:
 
-    ```
+    ``` bash
     echo %MAVEN_HOME%
     ```
 
@@ -109,7 +109,7 @@ To run the Java-Spring example code, install the Java version 11 appropriate for
 
 1. Open a console and go to the *java-spring* folder using the **cd** command:
 
-   ```
+   ``` bash
    cd C:\Program Files\document-server-integration\web\documentserver-example\java-spring
    ```
 
@@ -151,17 +151,17 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
 
     * download the archive with the Java-Spring example and unpack it:
 
-        ```
+        ``` bash
         wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
         ```
 
-        ```
+        ``` bash
         unzip Java.Spring.Example.zip
         ```
 
     * clone the git repository:
 
-        ```
+        ``` bash
         git clone https://github.com/ONLYOFFICE/document-server-integration.git
         ```
 
@@ -169,25 +169,25 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
 
     * in the archive:
 
-        ```
+        ``` bash
         cd Java\ Spring\ Example/
         ```
 
     * in the git repository:
 
-        ```
+        ``` bash
         cd document-server-integration/web/documentserver-example/java-spring
         ```
 
 4. Edit the *src/main/resources/application.properties* configuration file. Specify the name of your local server with the ONLYOFFICE Docs installed.
 
-    ```
+    ``` bash
     nano src/main/resources/application.properties
     ```
 
     Edit the following lines:
 
-    ``` javascript
+    ``` ini
     files.storage=
     server.port=port
     files.docservice.url.site=https://documentserver/
@@ -197,19 +197,19 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
 
 5. Install **Maven**:
 
-    ```
+    ``` bash
     sudo apt-get install maven
     ```
 
 6. Build:
 
-    ```
+    ``` bash
     mvn package
     ```
 
 7. Start Java-Spring example:
 
-    ```
+    ``` bash
     ./mvnw spring-boot:run
     ```
 
@@ -243,17 +243,17 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
 
     * download the archive with the Java-Spring example and unpack it:
 
-        ```
+        ``` bash
         wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Spring.Example.zip
         ```
 
-        ```
+        ``` bash
         unzip Java.Spring.Example.zip
         ```
 
     * clone the git repository:
 
-        ```
+        ``` bash
         git clone https://github.com/ONLYOFFICE/document-server-integration.git
         ```
 
@@ -261,25 +261,25 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
 
     * in the archive:
 
-        ```
+        ``` bash
         cd Java\ Spring\ Example/
         ```
 
     * in the git repository:
 
-        ```
+        ``` bash
         cd document-server-integration/web/documentserver-example/java-spring
         ```
 
 4. Edit the *src/main/resources/application.properties* configuration file. Specify the name of your local server with ONLYOFFICE Docs installed:
 
-   ```
+   ``` bash
    nano src/main/resources/application.properties
    ```
 
    Edit the following lines:
 
-    ``` javascript
+    ``` ini
     files.storage=
     server.port=port
     files.docservice.url.site=https://documentserver/ 
@@ -289,7 +289,7 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
 
 5. Run the next command in the Java-Spring example directory:
 
-   ```
+   ``` bash
    docker-compose up
    ```
 

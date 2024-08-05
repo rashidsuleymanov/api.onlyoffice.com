@@ -134,7 +134,7 @@ def create_auth_token(pkey, machine_key):
 
 ### Java generating token example
 
-``` javascript
+``` java
 public String createAuthToken(String pkey, String machinekey) throws Exception
 {
     java.time.OffsetDateTime date = java.time.OffsetDateTime.now(java.time.ZoneOffset.UTC);

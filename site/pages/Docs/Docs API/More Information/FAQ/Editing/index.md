@@ -6,7 +6,7 @@ order: -5
 
   The **document editing service** informs the **document storage service** about the status of the document editing and sends the response with all the necessary data via the *callbackUrl*, which is specified in the configuration file like this:
 
-  ``` json
+  ``` javascript
   var docEditor = new DocsAPI.DocEditor("placeholder", {
       "editorConfig": {
           "callbackUrl": "https://example.com/url-to-callback.ashx"
@@ -37,7 +37,7 @@ order: -5
 
   Set the mode using the *editorConfig* section of the configuration file:
 
-  ``` json
+  ``` javascript
   var docEditor = new DocsAPI.DocEditor("placeholder", {
       "editorConfig": {
           "mode": "edit",

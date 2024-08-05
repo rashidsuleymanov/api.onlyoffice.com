@@ -17,7 +17,7 @@ Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [G
 
 ## Reference Microsoft VBA macro code
 
-``` javascript
+``` vb
 Sub example()
     Range("B4").Font.Color = RGB(255, 0, 0)
 End Sub

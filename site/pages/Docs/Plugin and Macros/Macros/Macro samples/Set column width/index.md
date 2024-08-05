@@ -17,7 +17,7 @@ Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [S
 
 ## Reference Microsoft VBA macro code
 
-``` javascript
+``` vb
 Sub example()
     Columns("B").ColumnWidth = 25
 End Sub

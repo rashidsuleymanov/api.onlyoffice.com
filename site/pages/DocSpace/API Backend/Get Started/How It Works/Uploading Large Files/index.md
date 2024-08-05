@@ -8,7 +8,7 @@ In this article, you will learn how to upload large files to DocSpace using our 
 
 To upload files with size greater than 10 Mb (10 485 760 bytes), you need to create a session by sending the POST request to the following [endpoint](/docspace/method/files/post/api/2.0/files/%7bfolderid%7d/upload/create_session):
 
-```
+``` http
 POST api/2.0/files/{folderid}/upload/create_session
 ```
 
@@ -63,7 +63,7 @@ After the last chunk is uploaded, the server returns an object in the following 
 
 ``` json
 {
-    "file": {},,
+    "file": {},
     "folderId": 12345,
     "id": 123456,
     "title": "demo.docx",

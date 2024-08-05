@@ -41,7 +41,7 @@ The user needs to perform several easy steps to pass authentication:
 
    ### Sample API Request
 
-   ```
+   ``` http
    GET api/2.0/people/@self.json HTTP/1.1
    Host: yourportal.onlyoffice.com
    Accept: application/json

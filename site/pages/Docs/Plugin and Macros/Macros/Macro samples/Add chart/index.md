@@ -18,7 +18,7 @@ Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [A
 
 ## Reference Microsoft VBA macro code
 
-``` javascript
+``` vb
 Sub example()
     With ActiveSheet.ChartObjects.Add(Left:=300, Width:=300, Top:=10, Height:=300)
         .Chart.SetSourceData Source:=Sheets("Sheet1").Range("C5:D7")

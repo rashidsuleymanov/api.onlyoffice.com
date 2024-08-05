@@ -28,7 +28,7 @@ This procedure creates a [basic Vue.js application](https://cli.vuejs.org/guide/
 
 4. Open the *./src/App.vue* file in the *onlyoffice-vue-demo* project and replace its contents with the following code:
 
-   ``` xml
+   ``` vue
    <template>
        <DocumentEditor 
            id="docEditor" 

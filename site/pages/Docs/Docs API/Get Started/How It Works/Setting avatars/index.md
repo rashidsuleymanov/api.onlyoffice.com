@@ -17,7 +17,7 @@ The reference figure and the steps below explain the process of setting the avat
 
 2. To set the current user avatar, use the [editorConfig.user.image](../../../Usage%20API/Config/Editor/index.md#user) field of the initialization config:
 
-   ``` json
+   ``` javascript
    new DocsAPI.DocEditor("placeholder", {
         "editorConfig": {
             "user": {

@@ -18,9 +18,8 @@ To start using ONLYOFFICE Docs with Plone, the following steps must be performed
 
 1. Install plugin by adding it to your *buildout.cfg*:
 
-   ``` javascript
+   ``` ini
    [buildout]
-   
    eggs = onlyoffice.plone
    ```
 
@@ -74,9 +73,8 @@ If you have a working Plone instance, you can install plugin by adding the proje
 2. Put your project files received by Git into the *onlyoffice.plone* directory.
 3. Edit the *buildout.cfg* file:
 
-   ``` javascript
+   ``` ini
    [buildout]
-   
    eggs = onlyoffice.plone
    develop = src/onlyoffice.plone
    ```
@@ -95,9 +93,8 @@ If you have a working Plone instance, you can install plugin by adding the proje
 
 1. If you specified a concrete plugin version in your *buildout.cfg* file (so-called *pinning*, and a recommended practice), like *onlyoffice.plone = 1.0.0*, update this reference to point to the newer version. If the plugin version is not specified, then the latest version will be automatically loaded:
 
-   ``` javascript
+   ``` ini
    [versions]
-
    onlyoffice.plone = 1.0.1
    ```
 

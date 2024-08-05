@@ -40,7 +40,7 @@ The following endpoints return the operation status:
 
 To track the operation progress, you must periodically execute a GET request to the following [endpoint](/docspace/method/files/get/api/2.0/files/fileops):
 
-```
+``` http
 GET api/2.0/files/fileops
 ```
 

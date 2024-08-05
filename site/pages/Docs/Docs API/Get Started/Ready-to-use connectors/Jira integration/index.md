@@ -56,7 +56,7 @@ If you plan to compile the Jira ONLYOFFICE integration app yourself (e.g. edit t
 
 3. Compile package:
 
-   ```
+   ``` bash
    atlas-package
    ```
 

@@ -38,7 +38,7 @@ Let's look at the [demo example](https://github.com/ONLYOFFICE/docs-integration-
 
 1. Implement the methods of the abstract **DefaultSettingsManager** class:
 
-   ``` javascript
+   ``` java
    @Override
    public String getSetting(final String name) {
        return properties.getProperty(name);
@@ -54,7 +54,7 @@ Let's look at the [demo example](https://github.com/ONLYOFFICE/docs-integration-
 
 2. Implement the methods of the abstract **DefaultDocumentManager** class:
 
-   ``` javascript
+   ``` java
    @Override
    public String getDocumentKey(final  String fileId, final boolean embedded) {
        return String.valueOf(fileId.hashCode());
@@ -70,7 +70,7 @@ Let's look at the [demo example](https://github.com/ONLYOFFICE/docs-integration-
 
 3. Implement the **UrlManager** methods. To open the editor in the editing mode, you need to define:
 
-   ``` javascript
+   ``` java
    @Override
    public String getFileUrl(final String fileId) {
        return getServerUrl() + "/file/download";
@@ -86,7 +86,7 @@ Let's look at the [demo example](https://github.com/ONLYOFFICE/docs-integration-
 
 4. Initialize the **JwtManager** and **RequestManager** Spring beans and add them to the DI container. This allows you to call the registered beans anywhere in the application:
 
-   ``` javascript
+   ``` java
    @Bean
    public JwtManager jwtManager(final SettingsManager settingsManager) {
        return new DefaultJwtManager(settingsManager);
@@ -106,7 +106,7 @@ Let's look at the [demo example](https://github.com/ONLYOFFICE/docs-integration-
 
    * To demonstrate the [config service](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/service/ConfigServiceImpl.java) work, *@GetMapping("/editor")* is used in the [main controller](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/controllers/MainController.java). When the user opens this address, the editor page is requested. At the same time, the config service is called and generates the *Config* model to open the editor:
 
-   ``` javascript
+   ``` java
    @GetMapping("/editor")
    public String main(final Model model) throws JsonProcessingException {
 

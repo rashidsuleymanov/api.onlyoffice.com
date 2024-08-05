@@ -56,7 +56,7 @@ The complete translations in the [config.json](../../Usage%20API/Config/index.md
 
 Find all the strings you want to be localized from the [index.html](../../Usage%20API/index.html/index.md) and the [pluginCode.js](../../Usage%20API/Plugin%20object/index.md) files and create their list. Then create the *translations* folder in the plugin directory, so that the structure looked like this:
 
-``` bash
+``` ini
 [translations]
 config.json
 index.html
@@ -75,7 +75,7 @@ Create the language *.json* files for each language you want to add the translat
 
 Starting from version 7.2, you can add the *langs.json* file to the translations folder. It contains the names of files with translations into a specific language in the array format:
 
-``` bash
+``` json
 [
     "cs-CZ",
     "de-DE",
@@ -88,7 +88,7 @@ First, the *langs.json* file will be requested and a full match of the language 
 
 Once all the localization files are added, the plugin file structure will look like this:
 
-``` bash
+``` ini
 [translations]
     de-DE.json
     es-ES.json

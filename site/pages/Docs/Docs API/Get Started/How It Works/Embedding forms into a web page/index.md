@@ -62,7 +62,7 @@ To open an online form in the PDF format for editing from your website, follow t
 
 8. Add the script initializing the Document Editor with the configuration for the document you want to open and open the editor in the placeholder element:
 
-   ``` json
+   ``` javascript
    this.docEditor = new DocsAPI.DocEditor("placeholder",
    {
        "document": {
@@ -163,7 +163,7 @@ To make an online form in the PDF format available for filling in, follow the st
 
 8. Add the script initializing the Document Editor with the configuration for the document you want to open and open the editor in the placeholder element:
 
-   ``` json
+   ``` javascript
    this.docEditor = new DocsAPI.DocEditor("placeholder",
    {
        "document": {

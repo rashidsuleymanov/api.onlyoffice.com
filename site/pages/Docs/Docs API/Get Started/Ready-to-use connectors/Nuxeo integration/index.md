@@ -26,7 +26,7 @@ nuxeoctl mp-install /path/to/onlyoffice-nuxeo-package-x.x.zip
 
 Open the [nuxeo.conf](https://doc.nuxeo.com/nxdoc/configuration-parameters-index-nuxeoconf/) file and enter the name of the server with ONLYOFFICE Docs installed:
 
-``` javascript
+``` ini
 onlyoffice.docserv.url=http://documentserver/
 ```
 
