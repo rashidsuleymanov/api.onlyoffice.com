@@ -2,20 +2,9 @@
   display: block;
 }
 
-/* .search_large {
-  font-size: 16px;
-  padding: 20px 22px;
-} */
-
 .search .text-input {
   background-color: var(--color-background-default);
-  /* font-size: var(--text-body-font-size-small); */
-  /* line-height: var(--text-body-line-height-small); */
 }
-
-/* .search .text-input__leading {
-  color: var(--color-foreground-muted);
-} */
 
 .search .text-input__placeholder kbd {
   border-color: var(--color-control-default-border-rest);
