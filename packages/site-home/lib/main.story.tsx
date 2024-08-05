@@ -6,47 +6,47 @@ import {Default as SearchStory} from "../../site-search/lib/main.story.tsx"
 import {Home, HomeHero, HomeIn, HomeLink, HomeLinks, HomePart, HomePreview} from "./main.tsx"
 
 export default {
-  title: "Site/Home"
+  title: "Site/Home",
 } satisfies Meta
 
 export function Default(): JSX.Element {
   return <Home>
     <HomeHero>
       <h1>Welcome to ONLYOFFICE API</h1>
-      <SearchStory size="large" />
+      <SearchStory />
     </HomeHero>
     <HomePart>
       <HomeIn>
         <h2><a href="/">DocSpace</a></h2>
         <p>{"In this section, you will learn how to integrate ONLYOFFICE DocSpace into your own application and interact with its backend using the DocSpace API Backend. You will also find the information on how to embed DocSpace using JavaScript SDK, create your own plugins with our Plugins SDK, and host a portal on your own servers using our methods for hosting providers."}</p>
         <a href="/">More</a>
-        <HomeLinks>
-          <HomeLink>
-            <JavascriptSdkIcon height={32} width={32} />
-            <a href="/">JavaScript SDK</a>
-          </HomeLink>
-          <HomeLink>
-            <JavascriptSdkIcon height={32} width={32} />
-            <a href="/">JavaScript SDK</a>
-          </HomeLink>
-          <HomeLink>
-            <JavascriptSdkIcon height={32} width={32} />
-            <a href="/">JavaScript SDK</a>
-          </HomeLink>
-          <HomeLink>
-            <JavascriptSdkIcon height={32} width={32} />
-            <a href="/">JavaScript SDK</a>
-          </HomeLink>
-          <HomeLink>
-            <JavascriptSdkIcon height={32} width={32} />
-            <a href="/">JavaScript SDK</a>
-          </HomeLink>
-          <HomeLink>
-            <JavascriptSdkIcon height={32} width={32} />
-            <a href="/">JavaScript SDK</a>
-          </HomeLink>
-        </HomeLinks>
       </HomeIn>
+      <HomeLinks>
+        <HomeLink>
+          <JavascriptSdkIcon height={32} width={32} />
+          <a href="/">JavaScript SDK</a>
+        </HomeLink>
+        <HomeLink>
+          <JavascriptSdkIcon height={32} width={32} />
+          <a href="/">JavaScript SDK</a>
+        </HomeLink>
+        <HomeLink>
+          <JavascriptSdkIcon height={32} width={32} />
+          <a href="/">JavaScript SDK</a>
+        </HomeLink>
+        <HomeLink>
+          <JavascriptSdkIcon height={32} width={32} />
+          <a href="/">JavaScript SDK</a>
+        </HomeLink>
+        <HomeLink>
+          <JavascriptSdkIcon height={32} width={32} />
+          <a href="/">JavaScript SDK</a>
+        </HomeLink>
+        <HomeLink>
+          <JavascriptSdkIcon height={32} width={32} />
+          <a href="/">JavaScript SDK</a>
+        </HomeLink>
+      </HomeLinks>
       <HomePreview>
         <a href="/"></a>
         <picture>
@@ -62,25 +62,25 @@ export function Default(): JSX.Element {
         <h2><a href="/">Docs</a></h2>
         <p>{"In this section, you will learn how to integrate ONLYOFFICE DocSpace into your own application and interact with its backend using the DocSpace API Backend. You will also find the information on how to embed DocSpace using JavaScript SDK, create your own plugins with our Plugins SDK, and host a portal on your own servers using our methods for hosting providers."}</p>
         <a href="/">More</a>
-        <HomeLinks>
-          <HomeLink>
-            <JavascriptSdkIcon height={32} width={32} />
-            <a href="/">JavaScript SDK</a>
-          </HomeLink>
-          <HomeLink>
-            <JavascriptSdkIcon height={32} width={32} />
-            <a href="/">JavaScript SDK</a>
-          </HomeLink>
-          <HomeLink>
-            <JavascriptSdkIcon height={32} width={32} />
-            <a href="/">JavaScript SDK</a>
-          </HomeLink>
-          <HomeLink>
-            <JavascriptSdkIcon height={32} width={32} />
-            <a href="/">JavaScript SDK</a>
-          </HomeLink>
-        </HomeLinks>
       </HomeIn>
+      <HomeLinks>
+        <HomeLink>
+          <JavascriptSdkIcon height={32} width={32} />
+          <a href="/">JavaScript SDK</a>
+        </HomeLink>
+        <HomeLink>
+          <JavascriptSdkIcon height={32} width={32} />
+          <a href="/">JavaScript SDK</a>
+        </HomeLink>
+        <HomeLink>
+          <JavascriptSdkIcon height={32} width={32} />
+          <a href="/">JavaScript SDK</a>
+        </HomeLink>
+        <HomeLink>
+          <JavascriptSdkIcon height={32} width={32} />
+          <a href="/">JavaScript SDK</a>
+        </HomeLink>
+      </HomeLinks>
       <HomePreview>
         <a href="/"></a>
         <picture>
@@ -96,17 +96,17 @@ export function Default(): JSX.Element {
         <h2><a href="/">Workspace</a></h2>
         <p>{"In this section, you will learn how to integrate ONLYOFFICE DocSpace into your own application and interact with its backend using the DocSpace API Backend. You will also find the information on how to embed DocSpace using JavaScript SDK, create your own plugins with our Plugins SDK, and host a portal on your own servers using our methods for hosting providers."}</p>
         <a href="/">More</a>
-        <HomeLinks>
-          <HomeLink>
-            <JavascriptSdkIcon height={32} width={32} />
-            <a href="/">JavaScript SDK</a>
-          </HomeLink>
-          <HomeLink>
-            <JavascriptSdkIcon height={32} width={32} />
-            <a href="/">JavaScript SDK</a>
-          </HomeLink>
-        </HomeLinks>
       </HomeIn>
+      <HomeLinks>
+        <HomeLink>
+          <JavascriptSdkIcon height={32} width={32} />
+          <a href="/">JavaScript SDK</a>
+        </HomeLink>
+        <HomeLink>
+          <JavascriptSdkIcon height={32} width={32} />
+          <a href="/">JavaScript SDK</a>
+        </HomeLink>
+      </HomeLinks>
       <HomePreview>
         <a href="/"></a>
         <picture>

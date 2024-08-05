@@ -2,6 +2,7 @@
 @import "../node_modules/@onlyoffice/ui-primitives/dist/main.css";
 
 @import "../node_modules/@onlyoffice/ui-sr-only/lib/main.css";
+@import "../node_modules/@onlyoffice/ui-text-input/lib/main.css";
 @import "../node_modules/@onlyoffice/ui-form-control/lib/main.css";
 @import "../node_modules/@onlyoffice/ui-select/lib/main.css";
 @import "../node_modules/@onlyoffice/ui-button/lib/main.css";

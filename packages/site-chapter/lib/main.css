@@ -8,11 +8,19 @@
   --chapter-navigation-width: calc(var(--chapter-navigation-content-width) + var(--chapter-navigation-padding-inline) * 2 + var(--chapter-navigation-border-width));
 
   --chapter-content-padding-block: var(--base-size-32);
-  --chapter-content-padding-inline: var(--base-size-40);
+  --chapter-content-padding-inline: var(--base-size-16);
   --chapter-content-max-width: calc(var(--temp-chapter-breakpoint-xlarge) - var(--chapter-navigation-width));
 
   display: grid;
   grid-template-columns: auto var(--chapter-navigation-width) minmax(0, var(--chapter-content-max-width)) auto;
+
+  @media (--size-viewport-width-small) {
+    --chapter-content-padding-inline: var(--base-size-24);
+  }
+
+  @media (--size-viewport-width-medium) {
+    --chapter-content-padding-inline: var(--base-size-40);
+  }
 }
 
 .chapter::before {
@@ -32,7 +40,23 @@
   order: -1;
 }
 
+.chapter[state-navigation-hidden],
+.chapter:state(navigation-hidden) {
+  @media not (--size-viewport-width-medium) {
+    /* Do not remove the px unit */
+    --chapter-navigation-width: 0px;
+  }
+}
+
+.chapter[state-navigation-hidden] .chapter__navigation,
+.chapter:state(navigation-hidden) .chapter__navigation {
+  @media not (--size-viewport-width-medium) {
+    display: none;
+  }
+}
+
 .chapter__navigation {
+  background-color: var(--color-background-muted);
   border-right-color: var(--color-border-muted);
   border-right-style: solid;
   border-right-width: var(--chapter-navigation-border-width);
@@ -43,6 +67,7 @@
 }
 
 .chapter__content {
+  background-color: var(--color-background-default);
   display: flex;
   flex-direction: column;
   grid-column: 3;
@@ -53,12 +78,11 @@
 
 /* Integration with @onlyoffice/site-search */
 
-.chapter search-container {
-  display: block;
+.chapter .search {
   margin-bottom: var(--base-size-32);
 }
 
-.chapter .search {
+.chapter .search .text-input {
   min-width: 100%;
 }
 
@@ -77,7 +101,15 @@
 .chapter__content .content::after {
   content: "";
   display: block;
-  padding-top: 140px;
+  padding-top: calc(var(--base-size-48) + var(--base-size-64));
+
+  @media (--size-viewport-width-medium) {
+    padding-top: calc(var(--base-size-64) + var(--base-size-64));
+  }
+
+  @media (--size-viewport-width-large) {
+    padding-top: calc(var(--base-size-112) + var(--base-size-64));
+  }
 }
 
 /* Integration with @onlyoffice/site-help */

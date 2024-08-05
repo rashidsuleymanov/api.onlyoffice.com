@@ -16,7 +16,7 @@
   "devDependencies": {
     "c8": "^9.1.0",
     "preact-render-to-string": "^6.4.1",
-    "tsx": "^4.10.5",
+    "tsx": "^4.16.5",
     "uvu": "^0.5.6"
   }
 }

@@ -22,7 +22,9 @@ import {
   SelectListbox,
   SelectOption,
   SrOnly,
-  Template
+  Template,
+  TextInput,
+  TextInputControl,
 } from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
 
@@ -188,11 +190,15 @@ function BooleanProperty({property}: PropertyParameters): JSX.Element {
       </button>
     </FormControlAction>
     <FormControlControl>
-      <input
-        name={property.path}
-        type="checkbox"
-        checked={Boolean(property.default)}
-      />
+      <TextInput>
+        <TextInputControl>
+          <input
+            name={property.path}
+            type="checkbox"
+            checked={Boolean(property.default)}
+          />
+        </TextInputControl>
+      </TextInput>
     </FormControlControl>
   </FormControl>
 }
@@ -285,7 +291,11 @@ function NumberProperty({property}: PropertyParameters): JSX.Element {
       </button>
     </FormControlAction>
     <FormControlControl>
-      <input name={property.path} type="number" value={property.default} />
+      <TextInput>
+        <TextInputControl>
+          <input name={property.path} type="number" value={property.default} />
+        </TextInputControl>
+      </TextInput>
     </FormControlControl>
   </FormControl>
 }
@@ -304,7 +314,11 @@ function StringProperty({property}: PropertyParameters): JSX.Element {
       </button>
     </FormControlAction>
     <FormControlControl>
-      <input name={property.path} type="text" value={property.default} />
+      <TextInput>
+        <TextInputControl>
+          <input name={property.path} type="text" value={property.default} />
+        </TextInputControl>
+      </TextInput>
     </FormControlControl>
   </FormControl>
 }

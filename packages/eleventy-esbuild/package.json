@@ -11,13 +11,13 @@
   "dependencies": {
     "@onlyoffice/console": "workspace:^",
     "@types/node": "^20.12.12",
-    "esbuild": "^0.21.5",
+    "esbuild": "^0.23.0",
     "p-queue": "^6.6.2",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
     "c8": "^9.1.0",
-    "tsx": "^4.10.5",
+    "tsx": "^4.16.5",
     "uvu": "^0.5.6"
   }
 }

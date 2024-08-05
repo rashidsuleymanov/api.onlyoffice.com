@@ -134,36 +134,31 @@ export function Home(): JSX.Element {
           <h2><a href={e.url}>{d.title}</a></h2>
           <p>{d.description}</p>
           <a href={e.url}>More</a>
-          <HomeLinks>
-            {e.children.map((id) => {
-              const e = s.find(id, "id")
-              if (!e) {
-                throw new Error(`Entity not found: ${id}`)
-              }
-              if (e.type !== "page") {
-                throw new Error(`Entity is not a page: ${id}`)
-              }
-
-              const n = e.data.globalNavigation
-              if (!n) {
-                throw new Error(`Global navigation data not found: ${id}`)
-              }
-
-              return <HomeLink>
-                <Icon src="rich32" name={n.icon} height={32} width={32} />
-                <Link href={n.path}>{n.title}</Link>
-              </HomeLink>
-            })}
-          </HomeLinks>
         </HomeIn>
+        <HomeLinks>
+          {e.children.map((id) => {
+            const e = s.find(id, "id")
+            if (!e) {
+              throw new Error(`Entity not found: ${id}`)
+            }
+            if (e.type !== "page") {
+              throw new Error(`Entity is not a page: ${id}`)
+            }
+
+            const n = e.data.globalNavigation
+            if (!n) {
+              throw new Error(`Global navigation data not found: ${id}`)
+            }
+
+            return <HomeLink>
+              <Icon src="rich32" name={n.icon} height={32} width={32} />
+              <Link href={n.path}>{n.title}</Link>
+            </HomeLink>
+          })}
+        </HomeLinks>
         <HomePreview>
           <a href={e.url} title={d.title}></a>
-          <Image
-            alt={d.image.alt}
-            src={d.image.src}
-            height={d.image.height}
-            width={d.image.width}
-          />
+          <Image alt={d.image.alt} src={d.image.src} />
           <CodePreview>
             <pre><code><SyntaxHighlight syntax={d.sample.syntax}>
               {d.sample.code}

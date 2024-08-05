@@ -5,6 +5,9 @@ import {Chapter} from "../internal/chapter.tsx"
 export function data(): Data {
   return {
     layout: "page",
+    document: {
+      chapterToggler: true,
+    },
   }
 }
 

@@ -6,6 +6,7 @@ import {type ChapterData, ChapterDatum} from "../internal/chapter.tsx"
 import {type GlobalNavigationData, GlobalNavigationDatum} from "../internal/global-navigation.tsx"
 import {type HelpData, HelpDatum} from "../internal/help.tsx"
 import {type HomeData, HomeDatum} from "../internal/home.tsx"
+import {type PageData, PageDatum} from "../internal/page.tsx"
 import {type PartData, PartDatum} from "../internal/part.tsx"
 
 declare module "@onlyoffice/eleventy-types" {
@@ -26,6 +27,7 @@ declare module "@onlyoffice/eleventy-types" {
     defaultChapter?: ChapterData
     defaultPart?: PartData
     defaultHome?: HomeData
+    defaultDocument?: PageData
   }
 
   interface EleventyComputed {
@@ -42,6 +44,7 @@ declare module "@onlyoffice/eleventy-types" {
     defaultChapter?(data: Data): ChapterData | undefined
     defaultPart?(data: Data): PartData | undefined
     defaultHome?(data: Data): HomeData | undefined
+    defaultDocument?(data: Data): PageData | undefined
   }
 }
 
@@ -228,6 +231,22 @@ export function data(): Data {
           m.title = d.title
         }
         return m
+      },
+
+      document(d) {
+        const a = d.defaultDocument
+        if (!a) {
+          return
+        }
+        const b = d.document
+        if (!b) {
+          return a
+        }
+        return PageDatum.merge(a, b)
+      },
+
+      defaultDocument() {
+        return new PageDatum()
       },
     },
   }

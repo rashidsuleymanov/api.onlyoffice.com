@@ -4,7 +4,7 @@
 <rect x="12.5" y="8.5" width="8" height="4" stroke="var(--temp-color-icon-48-desktop-editors-3)"/>
 <rect x="12.5" y="12.5" width="8" height="4" stroke="var(--temp-color-icon-48-desktop-editors-3)"/>
 <rect x="12.5" y="16.5" width="8" height="4" stroke="var(--temp-color-icon-48-desktop-editors-3)"/>
-<path d="M4.5 30.5H43.5V33.5C43.5 34.2841 43.1666 35.0437 42.5605 35.6093C41.9532 36.1761 41.1227 36.5 40.25 36.5H7.75C6.87734 36.5 6.04677 36.1761 5.43951 35.6093C4.83341 35.0437 4.5 34.2841 4.5 33.5V30.5Z" fill="var(--temp-color-icon-48-desktop-editors-5)" stroke="var(--temp-color-icon-48-desktop-editors-0)" stroke-miterlimit="10"/>
+<path d="M4.5 30.5H43.5V33.5C43.5 34.2841 43.1666 35.0437 42.5605 35.6093C41.9532 36.1761 41.1227 36.5 40.25 36.5H7.75C6.87734 36.5 6.04677 36.1761 5.43951 35.6093C4.83341 35.0437 4.5 34.2841 4.5 33.5V30.5Z" fill="var(--temp-color-icon-48-desktop-editors-4)" stroke="var(--temp-color-icon-48-desktop-editors-0)" stroke-miterlimit="10"/>
 <path d="M24 34C24.5523 34 25 33.5523 25 33C25 32.4477 24.5523 32 24 32C23.4477 32 23 32.4477 23 33C23 33.5523 23.4477 34 24 34Z" fill="var(--temp-color-icon-48-desktop-editors-0)"/>
 <path d="M19.5 42.5V36.5H28.5V42.5H19.5Z" fill="var(--temp-color-icon-48-desktop-editors-5)" stroke="var(--temp-color-icon-48-desktop-editors-0)" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M34.7692 16H29.2308C28.551 16 28 16.4884 28 17.0909V20.9091C28 21.5116 28.551 22 29.2308 22H34.7692C35.449 22 36 21.5116 36 20.9091V17.0909C36 16.4884 35.449 16 34.7692 16Z" fill="var(--temp-color-icon-48-desktop-editors-6)"/>

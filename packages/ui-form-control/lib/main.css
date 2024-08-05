@@ -41,3 +41,9 @@
 .form-control__control .select {
   width: 100%;
 }
+
+/* Integration with @onlyoffice/ui-text-input */
+
+.form-control__control .text-input {
+  width: 100%;
+}

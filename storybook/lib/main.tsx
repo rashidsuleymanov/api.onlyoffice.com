@@ -1,4 +1,6 @@
 import {type StorybookConfig} from "@storybook/preact-vite"
+import browserslist from "browserslist"
+import {browserslistToTargets} from "lightningcss"
 import {Fragment, h} from "preact"
 import {renderToString} from "preact-render-to-string"
 
@@ -25,5 +27,22 @@ export default {
         "OpenSans-Bold.woff2",
       ].map((f) => <link rel="preload" href={`/${f}`} crossorigin="" as="font" type="font/woff2" />)}
     </>)
-  }
+  },
+  async viteFinal(d) {
+    const {defineConfig, mergeConfig} = await import("vite")
+    const l = browserslist("> 0.2%")
+    const t = browserslistToTargets(l)
+    const c = defineConfig({
+      css: {
+        transformer: "lightningcss",
+        lightningcss: {
+          drafts: {
+            customMedia: true,
+          },
+          targets: t,
+        },
+      },
+    })
+    return mergeConfig(d, c)
+  },
 } satisfies StorybookConfig

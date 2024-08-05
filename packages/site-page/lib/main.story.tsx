@@ -19,6 +19,7 @@ import {
   PageHeader,
   PageHeaderLogo,
   PageHeaderMenu,
+  PageHeaderNavToggler,
 } from "./main.tsx"
 
 export default {
@@ -43,6 +44,7 @@ export function Default({children}: ChildrenIncludable): JSX.Element {
           <a href="/workspace/">Workspace</a>
         </nav>
       </PageHeaderMenu>
+      <PageHeaderNavToggler label="Navigation Toggler" />
     </PageHeader>
     <main>
       {children ?? Array.from({length: 12}).map((_, i) => <p key={i}>{i}</p>)}

@@ -106,9 +106,17 @@
 /* Sizes: Functional */
 
 /* prefix: size, variant: viewport, property: width */
+@custom-media --size-viewport-width-xsmall (width >= 320px);
+@custom-media --size-viewport-width-small (width >= 544px);
+@custom-media --size-viewport-width-medium (width >= 768px);
+@custom-media --size-viewport-width-large (width >= 1012px);
+@custom-media --size-viewport-width-xlarge (width >= 1280px);
+@custom-media --size-viewport-width-xxlarge (width >= 1400px);
+
+/* prefix: size, variant: viewport, property: width */
 @custom-media --size-viewport-width-phone (width < 543px);
 @custom-media --size-viewport-width-tablet (width >= 544px);
-@custom-media --size-viewport-width-laptop (width >= 768px);
+@custom-media --size-viewport-width-laptop (width >= 1012px);
 @custom-media --size-viewport-width-desktop (width >= 1400px);
 
 :root {
@@ -135,12 +143,18 @@
   /* prefix: size, variant: control, property: padding-block */
   --size-control-padding-block-small: var(--base-size-4);
   --size-control-padding-block-medium: var(--base-size-8);
+  --size-control-padding-block-large: var(--base-size-12);
+  --size-control-padding-block-xlarge: var(--base-size-16);
 
   /* prefix: size, variant: control, property: padding-inline */
   --size-control-padding-inline-small: var(--base-size-12);
   --size-control-padding-inline-medium: var(--base-size-12);
+  --size-control-padding-inline-large: var(--base-size-16);
+  --size-control-padding-inline-xlarge: var(--base-size-20);
 
   /* prefix: size, variant: control, property: gap */
   --size-control-gap-small: var(--base-size-4);
   --size-control-gap-medium: var(--base-size-8);
+  --size-control-gap-large: var(--base-size-12);
+  --size-control-gap-xlarge: var(--base-size-16);
 }

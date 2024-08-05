@@ -78,7 +78,7 @@
     "@wooorm/starry-night": "^3.2.0",
     "browserslist": "^4.23.2",
     "clsx": "^2.1.0",
-    "esbuild": "^0.19.12",
+    "esbuild": "^0.23.0",
     "esbuild-register": "^3.5.0",
     "fontpie": "^0.3.0",
     "github-slugger": "^2.0.0",
