@@ -2,7 +2,7 @@ In this section, we will look at the integration process via [WKWebView](https:/
 
 ## Integration based on the ONLYOFFICE test sample
 
-This example demonstrates how to integrate ONLYOFFICE mobile web editors with the ONLYOFFICE [test or DMS sample](../../Language-specific%20examples/index.md).
+This example demonstrates how to integrate ONLYOFFICE mobile web editors with the ONLYOFFICE [test or DMS sample](../../../Language-specific%20examples/index.md).
 
 ![iOS integration via test sample](/assets/images/editor/ios-test-sample.png)
 
@@ -154,7 +154,7 @@ The full code for **DocumentServerEditorViewController** can be found [here](htt
 
 ## Integration based on the ONLYOFFICE Docs API
 
-This example demonstrates how to open the ONLYOFFICE editors via WKWebView using the editor configuration described in the [API documentation](../../Basic%20concepts/index.md) and the [configuration examples](../../Try%20Docs/index.tsx).
+This example demonstrates how to open the ONLYOFFICE editors via WKWebView using the editor configuration described in the [API documentation](../../../Basic%20concepts/index.md) and the [configuration examples](../../../Try%20Docs/index.tsx.
 
 ![iOS integration via api](/assets/images/editor/ios-api-config.png)
 
@@ -203,7 +203,7 @@ This example demonstrates how to open the ONLYOFFICE editors via WKWebView using
        });
    ```
 
-8. To start working with documents, display the ONLYOFFICE editor on your mobile device via the WKWebView component. To do this, specify the **EditorViewController** controller. Request the URL to the *editor.html* file, get its contents and replace the *"{external\_config}"* parameter with a config from the *samples.plist* file where all the sample configurations are categorized according to [API documentation Try page](../../Try%20Docs/index.tsx):
+8. To start working with documents, display the ONLYOFFICE editor on your mobile device via the WKWebView component. To do this, specify the **EditorViewController** controller. Request the URL to the *editor.html* file, get its contents and replace the *"{external\_config}"* parameter with a config from the *samples.plist* file where all the sample configurations are categorized according to [API documentation Try page](../../../Try%20Docs/index.tsx):
 
    ``` swift
    private func load() {
@@ -239,7 +239,7 @@ This example demonstrates how to open the ONLYOFFICE editors via WKWebView using
 
 To work with documents (open, download, insert images, mention other users, etc.), use the API documentation with its events and methods:
 
-1. To track events and call appropriate methods, handle the [events](../../../Usage%20API/Config/Events/index.md) of ONLYOFFICE editors in native code by the **EditorEventsHandler** controller and then delegate them to **EditorViewController**:
+1. To track events and call appropriate methods, handle the [events](../../../../Usage%20API/Config/Events/index.md) of ONLYOFFICE editors in native code by the **EditorEventsHandler** controller and then delegate them to **EditorViewController**:
 
    ``` swift
    var delegate: EditorEventsDelegate?
@@ -270,7 +270,7 @@ To work with documents (open, download, insert images, mention other users, etc.
    }
    ```
 
-   Let's consider the [onDownloadAs](../../../Usage%20API/Config/Events/index.md#ondownloadas) event as an example. Register an object as a handler for a particular message by calling *configuration.userContentController.add(self, name: messageName)* during the WKWebView configuration. Get the event parameters (file type and URL) and delegate the event handling to **EditorViewController**:
+   Let's consider the [onDownloadAs](../../../../Usage%20API/Config/Events/index.md#ondownloadas) event as an example. Register an object as a handler for a particular message by calling *configuration.userContentController.add(self, name: messageName)* during the WKWebView configuration. Get the event parameters (file type and URL) and delegate the event handling to **EditorViewController**:
 
    ``` swift
    func onDownloadAs(fileType: String, url: String) {
@@ -278,7 +278,7 @@ To work with documents (open, download, insert images, mention other users, etc.
    }
    ```
 
-2. Define the **callMethod** function to call [API methods](../../../Usage%20API/Methods/index.md) from native code. It can take string, boolean or object values as arguments. This function adds the method name and its arguments to the string with the JavaScript code and then evaluates JavaScript in the WKWebView component with the *evaluateJavaScript* method:
+2. Define the **callMethod** function to call [API methods](../../../../Usage%20API/Methods/index.md) from native code. It can take string, boolean or object values as arguments. This function adds the method name and its arguments to the string with the JavaScript code and then evaluates JavaScript in the WKWebView component with the *evaluateJavaScript* method:
 
    ``` swift
    private func callMethod(function: String, arg: Bool) {

@@ -92,7 +92,7 @@ The ONLYOFFICE integration follows the API documented [here](../../Basic%20conce
 
 8. When all users and client browsers are done with editing, they close the editing window.
 
-9. After [10 seconds](../../How%20It%20Works/Saving%20file/#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting Confluence know that the clients have finished editing the document and closed it.
+9. After [10 seconds](../../How%20It%20Works/Saving%20file/index.md#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting Confluence know that the clients have finished editing the document and closed it.
 
 10. Confluence downloads a new version of the document, replacing the old one.
 

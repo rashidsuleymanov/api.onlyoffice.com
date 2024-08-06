@@ -107,17 +107,17 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onExternalMouseUp](/plugin/events/onexternalmouseup)
-* [onTranslate](/plugin/events/ontranslate)
-* [callCommand](/plugin/callcommand)
-* [executeMethod ("GetVersion")](/plugin/executemethod/common/getversion)
-* [executeMethod ("GetSelectedText")](/plugin/executemethod/common/getselectedtext)
-* [executeMethod ("GetSelectionType")](/plugin/executemethod/common/getselectiontype)
-* [executeMethod ("PasteText")](/plugin/executemethod/common/pastetext)
-* [Asc.scope object](/plugin/scope)
-* [info.editorType](/plugin/info#editorType)
+* button
+* init
+* onExternalMouseUp
+* onTranslate
+* callCommand
+* executeMethod ("GetVersion")
+* executeMethod ("GetSelectedText")
+* executeMethod ("GetSelectionType")
+* executeMethod ("PasteText")
+* Asc.scope object
+* info.editorType
 
 ## Support
 

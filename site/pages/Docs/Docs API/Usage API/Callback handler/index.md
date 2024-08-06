@@ -26,7 +26,7 @@ Type: array of object
 
 ## changesurl
 
-Defines the link to the file with the document editing data used to track and display the document changes history. The link is present when the *status* value is equal to **2** or **3** only. The file must be saved and its address must be sent as *changesUrl* parameter using the [setHistoryData](../Methods/index.mds#sethistorydata) method to show the changes corresponding to the specific document version.
+Defines the link to the file with the document editing data used to track and display the document changes history. The link is present when the *status* value is equal to **2** or **3** only. The file must be saved and its address must be sent as *changesUrl* parameter using the [setHistoryData](../Methods/index.md#sethistorydata) method to show the changes corresponding to the specific document version.
 
 Type: string
 
@@ -54,7 +54,7 @@ Type: integer
 
 ## formsdataurl
 
-Defines the URL to the JSON file with the submitted form data. The array structure with the form data is described [here](/docbuilder/global#FormData). This file contains the following parameters:
+Defines the URL to the JSON file with the submitted form data. The array structure with the form data is described here. This file contains the following parameters:
 
 | Parameter | Description                                                                                                   | Type   | Example      |
 | --------- | ------------------------------------------------------------------------------------------------------------- | ------ | ------------ |

@@ -4,7 +4,7 @@ order: -2
 
 To develop a plugin for ONLYOFFICE web editors, follow the instructions below.
 
-1. Create a folder on your machine and put there the [index.html](../../Usage%20API/index.html/index.md) and [config.json](../../Usage%20API/Config/index.md) files.
+1. Create a folder on your machine and put there the [index.html](../../../Usage%20API/index.html/index.md) and [config.json](../../../Usage%20API/Config/index.md) files.
 
 2. Start distributing a folder. To do this, open the created folder and run the following commands:
 

@@ -107,16 +107,16 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/e
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onAddComment](/plugin/events/onaddcomment)
-* [onChangeCommentData](/plugin/events/onchangecommentdata)
-* [onRemoveComment](/plugin/events/onremovecomment)
-* [executeMethod ("AddComment")](/plugin/executemethod/text/addcomment)
-* [executeMethod ("ChangeComment")](/plugin/executemethod/text/changecomment)
-* [executeMethod ("GetAllComments")](/plugin/executemethod/text/getallcomments)
-* [executeMethod ("MoveToComment")](/plugin/executemethod/text/movetocomment)
-* [executeMethod ("RemoveComments")](/plugin/executemethod/text/removecomments)
+* button
+* init
+* onAddComment
+* onChangeCommentData
+* onRemoveComment
+* executeMethod ("AddComment")
+* executeMethod ("ChangeComment")
+* executeMethod ("GetAllComments")
+* executeMethod ("MoveToComment")
+* executeMethod ("RemoveComments")
 
 ## Support
 

@@ -14,7 +14,7 @@ Adds a new chart to the selected cell range.
 })();
 ```
 
-Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [AddChart](/officeapi/spreadsheetapi/apiworksheet/addchart)
+Methods used: GetActiveSheet, AddChart
 
 ## Reference Microsoft VBA macro code
 

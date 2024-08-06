@@ -187,11 +187,11 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onTranslate](/plugin/events/ontranslate)
-* [resizeWindow](/plugin/resizewindow)
-* [info.recalculate](/plugin/info#recalculate)
+* button
+* init
+* onTranslate
+* resizeWindow
+* info.recalculate
 
 ## Support
 

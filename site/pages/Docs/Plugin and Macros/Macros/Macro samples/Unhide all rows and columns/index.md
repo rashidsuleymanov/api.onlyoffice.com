@@ -21,7 +21,7 @@ Unhides all the rows and columns in the active spreadsheet.
 })();
 ```
 
-Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [GetRows](/officeapi/spreadsheetapi/apirange/getrows), [SetHidden](/officeapi/spreadsheetapi/apirange/sethidden), [GetRange](/officeapi/spreadsheetapi/api/getrange), [SetValue](/officeapi/spreadsheetapi/apirange/setvalue)
+Methods used: GetActiveSheet, GetRows, SetHidden, GetRange, SetValue
 
 ## Result
 

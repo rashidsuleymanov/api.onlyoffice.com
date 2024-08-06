@@ -122,16 +122,16 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onExternalMouseUp](/plugin/events/onexternalmouseup)
-* [onTranslate](/plugin/events/ontranslate)
-* [executeMethod ("GetSelectedText")](/plugin/executemethod/common/getselectedtext)
-* [executeMethod ("GetVersion")](/plugin/executemethod/common/getversion)
-* [executeMethod ("PasteText")](/plugin/executemethod/common/pastetext)
-* [executeMethod ("ReplaceTextSmart")](/plugin/executemethod/common/replacetextsmart)
-* [Asc.scope object](/plugin/scope)
-* [info.editorType](/plugin/info#editorType)
+* button
+* init
+* onExternalMouseUp
+* onTranslate
+* executeMethod ("GetSelectedText")
+* executeMethod ("GetVersion")
+* executeMethod ("PasteText")
+* executeMethod ("ReplaceTextSmart")
+* Asc.scope object
+* info.editorType
 
 ## Support
 

@@ -19,7 +19,7 @@ How to start writing your macro:
 1. Open the **Plugins** tab and click **Macros**.
 2. Click **New** in the appeared window.
 3. Consult the [API documentation](../../../Office%20API/Get%20Started/Overview/index.md) to write the script.
-4. [Write](/plugin/writingmacros) code for your macro.
+4. [Write](../Writing%20macros/index.md) code for your macro.
 5. **Rename** your macro by clicking the corresponding button.
 6. When ready, click **Run** to run your code in the document.
 

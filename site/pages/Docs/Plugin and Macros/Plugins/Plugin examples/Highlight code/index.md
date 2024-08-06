@@ -167,13 +167,13 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onExternalMouseUp](/plugin/events/onexternalmouseup)
-* [onTranslate](/plugin/events/ontranslate)
-* [executeMethod ("PasteHtml")](/plugin/executemethod/common/pastehtml)
-* [loadModule](/plugin/loadmodule)
-* [resizeWindow](/plugin/resizewindow)
+* button
+* init
+* onExternalMouseUp
+* onTranslate
+* executeMethod ("PasteHtml")
+* loadModule
+* resizeWindow
 
 ## Support
 

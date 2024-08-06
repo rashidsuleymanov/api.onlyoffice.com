@@ -92,7 +92,7 @@ After the config file is ready, create the plugin code file with the following c
 })(window, undefined);
 ```
 
-As we can see from the code above, all files will be encrypted with one password - *{my-super-long-password}*. The [OnEncryption](/plugin/executemethod/common/onencryption), [StartAction](/plugin/executemethod/common/startaction), [EndAction](/plugin/executemethod/common/endaction) methods can be found in the **Plugins and macros API documentation**.
+As we can see from the code above, all files will be encrypted with one password - *{my-super-long-password}*. The OnEncryption, StartAction, EndAction methods can be found in the **Plugins and macros API documentation**.
 
 > Please note that the *encryptData* and *decryptData* types of the *OnEncryption* method are not relevant for local files.
 

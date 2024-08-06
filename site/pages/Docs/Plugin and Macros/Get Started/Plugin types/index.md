@@ -13,7 +13,7 @@ The following plugin types can be distinguished:
 
      <img alt="Visual plugins" src="/assets/images/plugins/visual-plugins.png" width="416px">
 
-     Starting from version 8.1, plugins can change the toolbar: create their own tabs and fill them, add buttons to the standard tabs. To do this, use the [AddToolbarMenuItem](/plugin/executemethod/common/addtoolbarmenuitem) method.
+     Starting from version 8.1, plugins can change the toolbar: create their own tabs and fill them, add buttons to the standard tabs. To do this, use the AddToolbarMenuItem method.
 
      ![Toolbar plugins](/assets/images/plugins/toolbar-plugins.png)
 

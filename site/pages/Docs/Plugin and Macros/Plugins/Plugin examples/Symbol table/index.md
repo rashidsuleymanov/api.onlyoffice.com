@@ -99,14 +99,14 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/s
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onExternalMouseUp](/plugin/events/onexternalmouseup)
-* [onMethodReturn](/plugin/events/onmethodreturn)
-* [onTranslate](/plugin/events/ontranslate)
-* [executeMethod ("GetFontList")](/plugin/executemethod/common/getfontlist)
-* [executeMethod ("PasteHtml")](/plugin/executemethod/common/pastehtml)
-* [info.editorType](/plugin/info#editorType)
+* button
+* init
+* onExternalMouseUp
+* onMethodReturn
+* onTranslate
+* executeMethod ("GetFontList")
+* executeMethod ("PasteHtml")
+* info.editorType
 
 ## Support
 

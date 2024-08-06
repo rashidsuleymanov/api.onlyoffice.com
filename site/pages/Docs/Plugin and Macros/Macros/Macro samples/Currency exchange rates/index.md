@@ -62,7 +62,7 @@ You can [assign this macro](../../Writing%20macros/index.md#assigning-macros) to
 })();
 ```
 
-Methods used: [GetSheet](/officeapi/spreadsheetapi/api/getsheet), [GetRangeByNumber](/officeapi/spreadsheetapi/apiworksheet/getrangebynumber), [SetValue](/officeapi/spreadsheetapi/apirange/setvalue)
+Methods used: GetSheet, GetRangeByNumber, SetValue
 
 ## Result
 

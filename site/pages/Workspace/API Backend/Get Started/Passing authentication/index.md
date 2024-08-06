@@ -1,6 +1,6 @@
 The user needs to perform several easy steps to pass authentication:
 
-1. Send POST request, containing the **userName** and **password** parameters to the [api/2.0/authentication](/portals/method/authentication/post/api/2.0/authentication) address:
+1. Send POST request, containing the **userName** and **password** parameters to the api/2.0/authentication address:
 
    ### Authentication Request
 

@@ -18,7 +18,7 @@ Repeatedly recalculates worksheet cell values within one-second intervals.
 })();
 ```
 
-Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [GetRange](/officeapi/spreadsheetapi/api/getrange), [SetValue](/officeapi/spreadsheetapi/apirange/setvalue)
+Methods used: GetActiveSheet, GetRange, SetValue
 
 ## Result
 

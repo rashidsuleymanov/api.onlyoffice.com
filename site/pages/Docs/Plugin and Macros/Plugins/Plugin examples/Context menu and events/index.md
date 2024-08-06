@@ -226,12 +226,12 @@ Copy the code below and save it in the *config.json*, *index.html*, and *code.js
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onTargetPositionChanged](/plugin/events/ontargetpositionchanged)
-* [attachContextMenuClickEvent](/plugin/attachcontextmenuclickevent)
-* [executeMethod ("AddContextMenuItem")](/plugin/executemethod/common/addcontextmenuitem)
-* [executeMethod ("InputText")](/plugin/executemethod/common/inputtext)
+* button
+* init
+* onTargetPositionChanged
+* attachContextMenuClickEvent
+* executeMethod ("AddContextMenuItem")
+* executeMethod ("InputText")
 
 ## Support
 

@@ -163,10 +163,10 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onTranslate](/plugin/events/ontranslate)
-* [executeMethod ("PasteHtml")](/plugin/executemethod/common/pastehtml)
+* button
+* init
+* onTranslate
+* executeMethod ("PasteHtml")
 
 ## Support
 

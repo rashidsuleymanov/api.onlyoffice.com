@@ -66,7 +66,7 @@ Highlights duplicates in the selected area with different colors to recognize du
 })();
 ```
 
-Methods used: [CreateColorFromRGB](/officeapi/spreadsheetapi/api/createcolorfromrgb) [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [GetSelection](/officeapi/spreadsheetapi/apiworksheet/getselection), [ForEach](/officeapi/spreadsheetapi/apirange/foreach), [GetValue](/officeapi/spreadsheetapi/apirange/getvalue), [SetFillColor](/officeapi/spreadsheetapi/apirange/setfillcolor)
+Methods used: CreateColorFromRGB, GetActiveSheet, GetSelection, ForEach, GetValue, SetFillColor
 
 ## Reference Microsoft VBA macro code
 

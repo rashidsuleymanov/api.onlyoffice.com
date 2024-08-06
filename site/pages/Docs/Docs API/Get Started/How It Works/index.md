@@ -27,7 +27,7 @@ In this section you will learn how to:
 * [Embedding forms into a web page](Embedding%20forms%20into%20a%20web%20page/index.md)
 * [Protecting ranges](Protecting%20ranges/index.md)
 * [Integrating editors using Java SDK](Integrating%20editors%20using%20Java%20SDK/index.md)
-* [Setting avatars](Settings%20avatars/index.md)
+* [Setting avatars](Setting%20avatars/index.md)
 
 ## User-document interaction
 

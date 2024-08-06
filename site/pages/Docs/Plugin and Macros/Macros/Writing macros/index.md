@@ -17,9 +17,9 @@ Now that you know how macros work, try to write your own macro. We have a table 
    })();
    ```
 
-4. Let's consult the [Office API documentation](../../../Office%20API/Office%20API/Spreadsheet%20API/index.mdx) to see what we need to complete our task:
+4. Let's consult the [Office API documentation](../../../Office%20API/Office%20API/Spreadsheet%20API/index.md) to see what we need to complete our task:
 
-   * First, get the current worksheet using the [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet) method:
+   * First, get the current worksheet using the GetActiveSheet method:
 
      ``` javascript
      var oWorksheet = Api.GetActiveSheet();
@@ -38,7 +38,7 @@ Now that you know how macros work, try to write your own macro. We have a table 
      var rowOdd = i, rowEven = i + 1;
      ```
 
-   * Now that we can access both the odd and even rows, let's color them in proper colors. Set the desired colors using the [CreateColorFromRGB](/officeapi/spreadsheetapi/api/createcolorfromrgb) method. Get the cell range within the row using the [GetRange](/officeapi/spreadsheetapi/apiworksheet/getrange) method and set the color for the odd rows:
+   * Now that we can access both the odd and even rows, let's color them in proper colors. Set the desired colors using the CreateColorFromRGB method. Get the cell range within the row using the GetRange method and set the color for the odd rows:
 
      ``` javascript
      oWorksheet.GetRange("A" + rowOdd + ":S" + rowOdd).SetFillColor(Api.CreateColorFromRGB(138, 181, 155));
@@ -70,7 +70,7 @@ Paste the code above to the macros window and click **Run**. The table rows from
 
 ## Subscribing to events
 
-To subscribe to the specified event and call the callback function when the event fires, use the [attachEvent](/officeapi/textdocumentapi/api/attachevent) method.
+To subscribe to the specified event and call the callback function when the event fires, use the attachEvent method.
 
 For example, to subscribe to an event when a hyperlink in a document is clicked, use the following lines:
 

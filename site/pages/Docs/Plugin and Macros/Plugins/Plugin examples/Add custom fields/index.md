@@ -97,11 +97,11 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/e
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onMethodReturn](/plugin/events/onmethodreturn)
-* [executeMethod ("AddContentControl")](/plugin/executemethod/text/addcontentcontrol)
-* [executeMethod ("InsertAndReplaceContentControls")](/plugin/executemethod/text/insertandreplacecontentcontrols)
+* button
+* init
+* onMethodReturn
+* executeMethod ("AddContentControl")
+* executeMethod ("InsertAndReplaceContentControls")
 
 ## Support
 

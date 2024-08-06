@@ -13,7 +13,7 @@ Writes the data (the *Hello world* phrase) to the worksheet third column of the 
 })();
 ```
 
-Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [GetRange](/officeapi/spreadsheetapi/apiworksheet/getrange), [SetValue](/officeapi/spreadsheetapi/apirange/setvalue)
+Methods used: GetActiveSheet, GetRange, SetValue
 
 ## Reference Microsoft VBA macro code
 

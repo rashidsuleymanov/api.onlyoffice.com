@@ -6,7 +6,7 @@ Saves the file after all the changes are made. The type of the file which will b
 
 | Name     | Type            | Description                                                                                                                                                                                                                      |
 | -------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *type*   | BSTR            | The file extension. The following values are possible: **docx**, **odt**, **rtf**, **txt**, **pptx**, **xlsx**, **ods**, **csv**, **pdf** (see [OFFICESTUDIO\_FILE\_XXX](../../../../Builder%20App/t#format-types) values). |
+| *type*   | BSTR            | The file extension. The following values are possible: **docx**, **odt**, **rtf**, **txt**, **pptx**, **xlsx**, **ods**, **csv**, **pdf** (see [OFFICESTUDIO\_FILE\_XXX](../../../../Builder%20App/Overview/index.md#format-types) values). |
 | *path*   | BSTR            | The path to the file to be saved together with its name and extension.                                                                                                                                                           |
 | *result* | VARIANT\_BOOL\* | Specifies if the operation of saving a file is successful or not.                                                                                                                                                                |
 

@@ -13,7 +13,7 @@ Formats the range of cells **A1:D10** as a table.
 })();
 ```
 
-Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [FormatAsTable](/officeapi/spreadsheetapi/apiworksheet/formatastable)
+Methods used: GetActiveSheet, FormatAsTable
 
 ## Reference Microsoft VBA macro code
 

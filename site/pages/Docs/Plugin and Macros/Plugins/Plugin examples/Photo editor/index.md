@@ -181,16 +181,16 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onTranslate](/plugin/events/ontranslate)
-* [callCommand](/plugin/callcommand)
-* [executeMethod ("GetImageDataFromSelection")](/plugin/executemethod/common/getimagedatafromselection)
-* [executeMethod ("GerVersion")](/plugin/executemethod/common/getversion)
-* [executeMethod ("PutImageDataToSelection")](/plugin/executemethod/common/putimagedatatoselection)
-* [resizeWindow](/plugin/resizewindow)
-* [Asc.scope object](/plugin/scope)
-* [info.editorType](/plugin/info#editorType)
+* button
+* init
+* onTranslate
+* callCommand
+* executeMethod ("GetImageDataFromSelection")
+* executeMethod ("GerVersion")
+* executeMethod ("PutImageDataToSelection")
+* resizeWindow
+* Asc.scope object
+* info.editorType
 
 ## Support
 

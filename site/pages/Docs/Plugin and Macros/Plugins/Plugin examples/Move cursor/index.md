@@ -97,10 +97,10 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/e
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [executeMethod ("MoveCursorToStart")](/plugin/executemethod/text/movecursortostart)
-* [executeMethod ("MoveCursorToEnd")](/plugin/executemethod/text/movecursortoend)
+* button
+* init
+* executeMethod ("MoveCursorToStart")
+* executeMethod ("MoveCursorToEnd")
 
 ## Support
 

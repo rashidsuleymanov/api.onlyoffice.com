@@ -32,7 +32,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## createConnector
 
-Create the [connector](../Automation%20API/index.mdr) to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
+Create the [connector](../Automation%20API/index.md) to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
 
 > This parameter is available for editing only for ONLYOFFICE Developer Edition.
 

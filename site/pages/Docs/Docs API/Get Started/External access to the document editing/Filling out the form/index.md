@@ -13,7 +13,7 @@ When the document is ready, the form data can be submitted by clicking the **Com
 
 ## How it works
 
-1. When the user opens a form document, the [GetAllContentControls](/plugin/executemethod/text/getallcontentcontrols) method is executed to collect all the content controls from the document. After that, the [GetFormValue](/plugin/executemethod/form/getformvalue) method is executed to get the content controls values and display them in the custom interface:
+1. When the user opens a form document, the GetAllContentControls method is executed to collect all the content controls from the document. After that, the GetFormValue method is executed to get the content controls values and display them in the custom interface:
 
    ``` javascript
    var contentControls = [];
@@ -37,7 +37,7 @@ When the document is ready, the form data can be submitted by clicking the **Com
    };
    ```
 
-2. When the user chooses a username from the list, the [GetFormsByTag](/plugin/executemethod/form/getformsbytag) method is executed to collect all the forms by their tags and sets the corresponding values to them with the [SetFormValue](/plugin/executemethod/form/setformvalue) method:
+2. When the user chooses a username from the list, the GetFormsByTag method is executed to collect all the forms by their tags and sets the corresponding values to them with the SetFormValue method:
 
    ``` javascript
    $("#persons").change(function (e) {
@@ -71,7 +71,7 @@ When the document is ready, the form data can be submitted by clicking the **Com
    });
    ```
 
-3. When the user edits a form value, the [onChangeContentControl](/plugin/events/onchangecontentcontro) event is fired and after that, the [GetFormValue](/plugin/executemethod/form/getformvalue) method is executed to get an updated form value and display it in the custom interface:
+3. When the user edits a form value, the onChangeContentControl event is fired and after that, the GetFormValue method is executed to get an updated form value and display it in the custom interface:
 
    ``` javascript
    var onDocumentReady = function () {

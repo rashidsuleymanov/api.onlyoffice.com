@@ -56,11 +56,11 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/t
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onExternalMouseUp](/plugin/events/onexternalmouseup)
-* [callModule](/plugin/callmodule)
-* [info.recalculate](/plugin/info#recalculate)
+* button
+* init
+* onExternalMouseUp
+* callModule
+* info.recalculate
 
 ## Support
 

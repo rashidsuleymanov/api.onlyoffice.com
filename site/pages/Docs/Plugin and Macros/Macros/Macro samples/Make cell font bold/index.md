@@ -13,7 +13,7 @@ Sets the font of the cell **A2** to bold.
 })();
 ```
 
-Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [GetRange](/officeapi/spreadsheetapi/apiworksheet/getrange), [SetBold](/officeapi/spreadsheetapi/apirange/setbold)
+Methods used: GetActiveSheet, GetRange, SetBold
 
 ## Reference Microsoft VBA macro code
 

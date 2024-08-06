@@ -13,7 +13,7 @@ Sets the background color of the cell **B3** to blue.
 })();
 ```
 
-Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [GetRange](/officeapi/spreadsheetapi/apiworksheet/getrange), [SetFillColor](/officeapi/spreadsheetapi/apirange/setfillcolor), [CreateColorFromRGB](/officeapi/spreadsheetapi/api/createcolorfromrgb)
+Methods used: GetActiveSheet, GetRange, SetFillColor, CreateColorFromRGB
 
 ## Reference Microsoft VBA macro code
 

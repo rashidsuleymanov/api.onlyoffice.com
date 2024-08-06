@@ -115,7 +115,7 @@ Add the *id* attribute to it, so that it looked like this:
 <button id="button_new">New</button>
 ```
 
-After that add the [window.Asc.plugin.onTranslate](/plugin/events/ontranslate) function to the [pluginCode.js](../../Usage%20API/Plugin%20object/index.md) file:
+After that add the window.Asc.plugin.onTranslate function to the [pluginCode.js](../../Usage%20API/Plugin%20object/index.md) file:
 
 ``` javascript
 window.Asc.plugin.onTranslate = function()

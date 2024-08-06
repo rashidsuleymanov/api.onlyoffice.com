@@ -138,7 +138,7 @@ Example: "plugin name"
 
 Translations for the name field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin name translation for each language.
 
-Type: [localeTranslate](/plugin/global#localeTranslate)
+Type: localeTranslate
 
 Example: { "fr": "french plugin name" }
 
@@ -235,7 +235,7 @@ Example:
 
 The list of skinnable plugin buttons used in the plugin interface (used for visual plugins with their own window only, i.e. *isVisual == true && isInsideMode == false*).
 
-Type: array of [Button](/plugin/global#Button)
+Type: array of Button
 
 Example:
 
@@ -303,7 +303,7 @@ Example: "plugin description"
 
 Translations for the description field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin description translation for each language.
 
-Type: [localeTranslate](/plugin/global#localeTranslate)
+Type: localeTranslate
 
 Example:  { "fr": "french plugin description" }
 
@@ -312,7 +312,7 @@ Example:  { "fr": "french plugin description" }
 
 The editors which the plugin is available for (**word**, **cell**, **slide**, or **pdf**).
 
-Type: array of [editorType](/plugin/global#editorType)
+Type: array of editorType
 
 Example:  \["word"]
 
@@ -321,7 +321,7 @@ Example:  \["word"]
 
 Plugin events.
 
-Type: array of [EventType](/plugin/global#EventType)
+Type: array of EventType
 
 Example:  \["onClick"] 
 
@@ -357,7 +357,7 @@ Example:  ""
 
 The data type selected in the editor and sent to the plugin (**text**, **html**, **ole**, **desktop**, **desktop-external**, **sign**, or **none**).
 
-Type: [initDataType](/plugin/global#initDataType)
+Type: initDataType
 
 Example:  "ole"
 

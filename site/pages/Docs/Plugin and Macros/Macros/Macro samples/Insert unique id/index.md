@@ -28,7 +28,7 @@ Inserts a unique id into a form document.
 })();
 ```
 
-Methods used: [GetDocument](/officeapi/textdocumentapi/api/getdocument), [CreateParagraph](/officeapi/textdocumentapi/api/createparagraph), [AddText](/officeapi/textdocumentapi/apiparagraph/addtext), [InsertContent](/officeapi/textdocumentapi/apidocument/insertcontent)
+Methods used: GetDocument, CreateParagraph, AddText, InsertContent
 
 ## Result
 

@@ -8,7 +8,7 @@ The **Comment option** allows you to leave comments on the specific words, phras
 
 ## Comment access rights
 
-In order to enable the comment option, the [comment](/editors/config/document/permissions#comment) parameter in the permissions section of the document initialization must be set to **true**. The document **side bar** will contain the **Comment** menu option.
+In order to enable the comment option, the [comment](../../../Usage%20API/Config/Document/Permissions/index.md#comment) parameter in the permissions section of the document initialization must be set to **true**. The document **side bar** will contain the **Comment** menu option.
 
 In case the *edit* parameter is set to **true** and the *comment* parameter is also set to **true**, the user will be able to edit the document and comment.
 
@@ -30,11 +30,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 ```
 
-Please note that the document commenting will only be available for the document editor if the [mode](/editors/config/editor#mode) parameter is set to **edit**.
+Please note that the document commenting will only be available for the document editor if the [mode](../../../Usage%20API/Config/Editor/index.md#mode) parameter is set to **edit**.
 
 ## Differentiation of commenting rights by authors
 
-1. If you want to allow editing comments only by their authors, set the [editCommentAuthorOnly](/editors/config/document/permissions#editCommentAuthorOnly) parameter in the permissions section of the editor initialization to **true**.
+1. If you want to allow editing comments only by their authors, set the [editCommentAuthorOnly](../../../Usage%20API/Config/Document/Permissions/index.md#editcommentauthoronly) parameter in the permissions section of the editor initialization to **true**.
 
    ``` javascript
    var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -49,7 +49,7 @@ Please note that the document commenting will only be available for the document
    });
    ```
 
-2. If you want to allow deleting comments only by their authors, set the [deleteCommentAuthorOnly](/editors/config/document/permissions#deleteCommentAuthorOnly) parameter in the permissions section of the editor initialization to **true**.
+2. If you want to allow deleting comments only by their authors, set the [deleteCommentAuthorOnly](../../../Usage%20API/Config/Document/Permissions/index.md#deletecommentauthoronly) parameter in the permissions section of the editor initialization to **true**.
 
    ``` javascript
    var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -66,7 +66,7 @@ Please note that the document commenting will only be available for the document
 
 ## Differentiation of commenting rights by groups
 
-1. Specify the group (or several groups separated with commas) the user belongs to by adding the field *group* to the [user](/editors/config/editor#user) parameter in the editorConfig section.
+1. Specify the group (or several groups separated with commas) the user belongs to by adding the field *group* to the [user](../../../Usage%20API/Config/Editor/index.md#user) parameter in the editorConfig section.
 
    ``` javascript
    var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -92,7 +92,7 @@ Please note that the document commenting will only be available for the document
    });
    ```
 
-2. Specify the access rights using the [commentGroups](/editors/config/document/permissions#commentGroups) parameter in the permissions section of the editor initialization.
+2. Specify the access rights using the [commentGroups](../../../Usage%20API/Config/Document/Permissions/index.md#commentgroups) parameter in the permissions section of the editor initialization.
 
    If the **commentGroups** parameter is specified in the editor config, the access rights to viewing, editing and/or removing all comments are disabled. Otherwise, if the current user does not belong to any of the groups, he or she can edit, remove and/or view comments of all groups.
 

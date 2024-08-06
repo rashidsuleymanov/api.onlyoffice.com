@@ -61,7 +61,7 @@ The reference figure and the steps below explain the process of viewing the hist
 
    <img alt="Opening File" src="/assets/images/editor/history_open.png" width="300px">
 
-3. In the configuration script for Document Editor initialization, specify the event handler which will select the [version from history](/editors/config/events#onRequestHistoryData). When the [onRequestHistoryData](../../../Usage%20API/Config/Events/index.md#onrequesthistorydata) event is called, the [setHistoryData](../../../Usage%20API/Methods/index.md#sethistorydata) method must be executed. This method contains the absolute URL to the file of the corresponding version.
+3. In the configuration script for Document Editor initialization, specify the event handler which will select the [version from history](../../../Usage%20API/Config/Events/index.md#onrequesthistorydata). When the [onRequestHistoryData](../../../Usage%20API/Config/Events/index.md#onrequesthistorydata) event is called, the [setHistoryData](../../../Usage%20API/Methods/index.md#sethistorydata) method must be executed. This method contains the absolute URL to the file of the corresponding version.
 
    When calling the *setHistoryData* method to view the document history version, the token must be added to validate the parameters.
 

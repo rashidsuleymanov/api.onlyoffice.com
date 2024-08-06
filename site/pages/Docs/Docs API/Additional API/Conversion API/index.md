@@ -437,7 +437,7 @@ Defines the absolute URL to the document to be converted. Be sure to add a [toke
 
 ## watermark
 
-Defines a JSON object containing the [properties](/plugin/global#watermark_on_draw) of a watermark which is inserted into the pdf and image files during conversion.
+Defines a JSON object containing the properties of a watermark which is inserted into the pdf and image files during conversion.
 
 **Type**: object
 
@@ -455,7 +455,7 @@ Defines the watermark transparency degree.
 
 ### watermark.type
 
-Defines the [shape type](/docbuilder/global#ShapeType) which specifies the preset shape geometry for the current watermark.
+Defines the shape type which specifies the preset shape geometry for the current watermark.
 
 **Type**: string
 

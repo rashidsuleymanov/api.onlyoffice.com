@@ -58,7 +58,7 @@ The *.docbuilder* file contains the script used to generate the output document 
 
 > Please note, that *.docbuilder* script file can contain several output files as a result. The URL to them all will be returned in the response to the request once the file generation is finished.
 
-You can find more information about the *.docbuilder* file syntax [here](/docbuilder/integrationapi/usingdocbuilderfile). Please read [Office JavaScript API documentation](../../../Office%20API/Get%20Started/Overview/index.md) for the detailed information on what classes and methods are used to generate the documents with the help of *.docbuilder* files.
+You can find more information about the *.docbuilder* file syntax [here](../../../Document%20Builder/Builder%20App/Using%20.docbuilder%20file/index.md). Please read [Office JavaScript API documentation](../../../Office%20API/Get%20Started/Overview/index.md) for the detailed information on what classes and methods are used to generate the documents with the help of *.docbuilder* files.
 
 ### Sample of JSON object sent to **document builder service** for the first asynchronous request
 

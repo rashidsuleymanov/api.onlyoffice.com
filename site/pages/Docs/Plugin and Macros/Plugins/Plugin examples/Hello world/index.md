@@ -78,11 +78,11 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/h
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [callCommand](/plugin/callcommand)
-* [Asc.scope object](/plugin/scope)
-* [info.recalculate](/plugin/info#recalculate)
+* button
+* init
+* callCommand
+* Asc.scope object
+* info.recalculate
 
 ## Support
 

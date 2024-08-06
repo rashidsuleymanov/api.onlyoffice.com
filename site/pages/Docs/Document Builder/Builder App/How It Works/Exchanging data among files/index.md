@@ -20,7 +20,7 @@ Then close the document and open or create a new one where this variable can be 
 var oCommentsReport = GlobalVariable["CommentsReport"];
 ```
 
-The example below shows how *GlobalVariable* is used. For more information visit the [ApiDocument.GetCommentsReport](/officeapi/textdocumentapi/apidocument/getcommentsreport) and [ApiDocument.GetReviewReport](/officeapi/textdocumentapi/apidocument/getreviewreport) sections.
+The example below shows how *GlobalVariable* is used. For more information visit the ApiDocument.GetCommentsReport and ApiDocument.GetReviewReport sections.
 
 ## Example
 

@@ -8,7 +8,7 @@ The DocSpace administrator can create webhooks, subscribe to them, and configure
 
 The instructions on how to create and configure webhooks can be found [here](https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx).
 
-The API methods for working with webhooks can be found [in this section](/docspace/section/settings/webhooks).
+The API methods for working with webhooks can be found in this section.
 
 ## Webhook request
 

@@ -101,12 +101,12 @@ Repository on GitHub: [https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onMethodReturn](/plugin/events/onmethodreturn)
-* [executeMethod ("GetAllContentControls")](/plugin/executemethod/text/getallcontentcontrols)
-* [executeMethod ("PasteText")](/plugin/executemethod/common/pastetext)
-* [executeMethod ("SelectContentControl")](/plugin/executemethod/text/selectcontentcontrol)
+* button
+* init
+* onMethodReturn
+* executeMethod ("GetAllContentControls")
+* executeMethod ("PasteText")
+* executeMethod ("SelectContentControl")
 
 ## Support
 

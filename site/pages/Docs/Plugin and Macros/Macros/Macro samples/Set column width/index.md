@@ -13,7 +13,7 @@ Sets the width for the column **B**.
 })();
 ```
 
-Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [SetColumnWidth](/officeapi/spreadsheetapi/apiworksheet/setcolumnwidth)
+Methods used: GetActiveSheet, SetColumnWidth
 
 ## Reference Microsoft VBA macro code
 

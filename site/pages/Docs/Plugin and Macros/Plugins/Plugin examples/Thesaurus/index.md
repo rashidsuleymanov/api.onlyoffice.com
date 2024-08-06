@@ -133,12 +133,12 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onExternalMouseUp](/plugin/events/onexternalmouseup)
-* [onTranslate](/plugin/events/ontranslate)
-* [executeMethod ("GetSelectedText")](/plugin/executemethod/common/getselectedtext)
-* [executeMethod ("PasteText")](/plugin/executemethod/common/pastetext)
+* button
+* init
+* onExternalMouseUp
+* onTranslate
+* executeMethod ("GetSelectedText")
+* executeMethod ("PasteText")
 
 ## Support
 

@@ -88,8 +88,8 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/c
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
+* button
+* init
 
 ## Support
 

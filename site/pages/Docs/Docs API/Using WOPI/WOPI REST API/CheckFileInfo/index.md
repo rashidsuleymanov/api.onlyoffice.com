@@ -313,7 +313,7 @@ Example: true
 
 ## SupportsLocks
 
-Specifies if the WOPI server supports the [Lock](../Lock/index.md), [Unlock](/editors/wopi/restapi/unlock), and [RefreshLock](../RefreshLock/index.md) operations.
+Specifies if the WOPI server supports the [Lock](../Lock/index.md), [Unlock](../Unlock/index.md), and [RefreshLock](../RefreshLock/index.md) operations.
 
 Type: boolean
 

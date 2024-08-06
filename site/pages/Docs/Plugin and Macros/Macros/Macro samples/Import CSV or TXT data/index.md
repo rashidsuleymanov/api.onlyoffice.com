@@ -42,7 +42,7 @@ Imports data from remote CSV/TXT files into the spreadsheet.
 })();
 ```
 
-Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [GetCells](/officeapi/spreadsheetapi/apiworksheet/getcells), [SetValue](/officeapi/spreadsheetapi/apirange/setvalue)
+Methods used: GetActiveSheet, GetCells, SetValue
 
 ##  Result
 

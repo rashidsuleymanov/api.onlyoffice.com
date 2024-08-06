@@ -117,20 +117,20 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onTranslate](/plugin/events/ontranslate)
-* [executeMethod ("AddOleObject")](/plugin/executemethod/common/addoleobject)
-* [executeMethod ("EditOleObject")](/plugin/executemethod/common/editoleobject)
-* [resizeWindow](/plugin/resizewindow)
-* [info.data](/plugin/info#data)
-* [info.guid](/plugin/info#guid)
-* [info.height](/plugin/info#height)
-* [info.imgSrc](/plugin/info#imgSrc)
-* [info.mmToPx](/plugin/info#mmToPx)
-* [info.objectId](/plugin/info#objectId)
-* [info.resize](/plugin/info#resize)
-* [info.width](/plugin/info#width)
+* button
+* init
+* onTranslate
+* executeMethod ("AddOleObject")
+* executeMethod ("EditOleObject")
+* resizeWindow
+* info.data
+* info.guid
+* info.height
+* info.imgSrc
+* info.mmToPx
+* info.objectId
+* info.resize
+* info.width
 
 ## Supports
 

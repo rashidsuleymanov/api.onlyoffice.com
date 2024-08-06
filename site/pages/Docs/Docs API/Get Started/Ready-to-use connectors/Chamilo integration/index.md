@@ -110,7 +110,7 @@ The ONLYOFFICE integration follows the API documented [here](../../Basic%20conce
 
 10. When all the users have finished editing, they close the editor window.
 
-11. After [10 seconds](../../How%20It%20Works/Saving%20file/#save-delay), ONLYOFFICE Docs makes a POST request to *callbackUrl* with the information that editing has ended and sends a link to a new document version.
+11. After [10 seconds](../../How%20It%20Works/Saving%20file/index.md#save-delay), ONLYOFFICE Docs makes a POST request to *callbackUrl* with the information that editing has ended and sends a link to a new document version.
 
 12. Chamilo loads a new version of the document and overwrites the file.
 

@@ -20,7 +20,7 @@ order: -3
 
   You can get *json* or *xml* format adding *.json* or *.xml* to the request or pointing the request *Content-Type* in application/json or text/xml.
 
-  E.g.: [api/2.0/people.json](/portals/method/people/get/api/2.0/people)
+  E.g.: api/2.0/people.json
 
 ## Is the response data pagination supported?
 

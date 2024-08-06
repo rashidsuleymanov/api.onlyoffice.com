@@ -81,20 +81,20 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [inputHelper\_onSelectItem](/plugin/events/inputhelper_onselectitem)
-* [onInputHelperClear](/plugin/events/oninputhelperclear)
-* [onInputHelperInput](/plugin/events/oninputhelperinput)
-* [createInputHelper](/plugin/createinputhelper)
-* [executeMethod ("InputText")](/plugin/executemethod/common/inputtext)
-* [getInputHelper](/plugin/getinputhelper)
-* [InputHelper.createWindow](/plugin/inputhelper/createwindow)
-* [InputHelper.getItems](/plugin/inputhelper/getitems)
-* [InputHelper.getScrollSizes](/plugin/inputhelper/getscrollsizes)
-* [InputHelper.setItems](/plugin/inputhelper/setitems)
-* [InputHelper.show](/plugin/inputhelper/show)
-* [InputHelper.unShow](/plugin/inputhelper/unshow)
+* button
+* init
+* inputHelper\_onSelectItem
+* onInputHelperClear
+* onInputHelperInput
+* createInputHelper
+* executeMethod ("InputText")
+* getInputHelper
+* InputHelper.createWindow
+* InputHelper.getItems
+* InputHelper.getScrollSizes
+* InputHelper.setItems
+* InputHelper.show
+* InputHelper.unShow
 
 ## Support
 

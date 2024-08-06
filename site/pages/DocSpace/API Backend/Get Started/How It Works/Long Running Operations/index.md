@@ -2,7 +2,7 @@
 order: -3
 ---
 
-The user initiates a long-running operation by sending a request to the appropriate API endpoint, which returns an object containing information about the initiated operation. An [example](/docspace/method/files/put/api/2.0/files/rooms/%7bid%7d/archive) of such a request and response:
+The user initiates a long-running operation by sending a request to the appropriate API endpoint, which returns an object containing information about the initiated operation. An example of such a request and response:
 
 ### Example Request
 
@@ -32,13 +32,13 @@ Accept: application/json
 
 The following endpoints return the operation status:
 
-* [PUT api/2.0/files/rooms/{id}/archive](/docspace/method/files/put/api/2.0/files/rooms/%7bid%7d/archive)
-* [PUT api/2.0/files/fileops/delete](/docspace/method/files/put/api/2.0/files/fileops/delete)
-* [DELETE api/2.0/files/file/{fileid}](/docspace/method/files/delete/api/2.0/files/file/%7bfileid%7d)
+* PUT api/2.0/files/rooms/{id}/archive
+* PUT api/2.0/files/fileops/delete
+* DELETE api/2.0/files/file/{fileid}
 
 ## Monitoring the operation status
 
-To track the operation progress, you must periodically execute a GET request to the following [endpoint](/docspace/method/files/get/api/2.0/files/fileops):
+To track the operation progress, you must periodically execute a GET request to the following endpoint:
 
 ``` http
 GET api/2.0/files/fileops

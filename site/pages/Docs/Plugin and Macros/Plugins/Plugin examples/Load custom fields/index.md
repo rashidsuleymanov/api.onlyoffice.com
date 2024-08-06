@@ -2,7 +2,7 @@
 
 Loads custom fields from the document.
 
-> The fields should be already added to the document with the [Example add custom fields](/plugin/example/addcustomfields) plugin.
+> The fields should be already added to the document with the [Example add custom fields](../Add%20custom%20fields/index.md) plugin.
 
 **Plugin type:** visual, non-system.
 
@@ -100,11 +100,11 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/e
 
 ## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onMethodReturn](/plugin/events/onmethodreturn)
-* [executeMethod ("GetAllContentControls")](/plugin/executemethod/text/getallcontentcontrols)
-* [executeMethod ("InsertAndReplaceContentControls")](/plugin/executemethod/text/insertandreplacecontentcontrols)
+* button
+* init
+* onMethodReturn
+* executeMethod ("GetAllContentControls")
+* executeMethod ("InsertAndReplaceContentControls")
 
 ## Support
 

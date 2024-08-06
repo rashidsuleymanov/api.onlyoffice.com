@@ -4,11 +4,11 @@ order: -1
 
 To develop a plugin for ONLYOFFICE desktop editors, follow the instructions below.
 
-1. Create a folder on your machine and put there the [index.html](../../Usage%20API/index.html/index.md) and [config.json](../../Usage%20API/Config/index.md) files.
+1. Create a folder on your machine and put there the [index.html](../../../Usage%20API/index.html/index.md) and [config.json](../../../Usage%20API/Config/index.md) files.
 
 2. Pack all the plugin files within the plugin folder into a **zip** archive and change its extension to *.plugin* (all the plugin files and subfolders must be at the archive root).
 
-3. Install a plugin [through the Plugin Manager](../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md#adding-plugins-through-the-plugin-manager).
+3. Install a plugin [through the Plugin Manager](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md#adding-plugins-through-the-plugin-manager).
 
    The plugin will appear in the *sdkjs-plugins* directory. The path to the folder depends on the operating system you use:
 
@@ -24,6 +24,6 @@ To develop a plugin for ONLYOFFICE desktop editors, follow the instructions belo
 
 ## Debugging
 
-To debug ONLYOFFICE plugins in the desktop editors, use the *--ascdesktop-support-debug-info* flag. To do this, follow the instructions [here](../../../Desktop%20Editors/Usage%20API/Debugging/index.md) depending on the operating system you use.
+To debug ONLYOFFICE plugins in the desktop editors, use the *--ascdesktop-support-debug-info* flag. To do this, follow the instructions [here](../../../../Desktop%20Editors/Usage%20API/Debugging/index.md) depending on the operating system you use.
 
 ![Debug](/assets/images/desktop/debugging.png)

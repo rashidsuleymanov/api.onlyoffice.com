@@ -35,7 +35,7 @@ Here are some fundamental concepts for building plugins step by step:
 
 ![Structure](/assets/images/plugins/plugins-structure.png)
 
-Use plugin [methods](/plugin/plugin) and [events](/plugin/events) while writing the plugin code.
+Use plugin methods and events while writing the plugin code.
 
 ## Step 3. Adjusting the plugin style
 

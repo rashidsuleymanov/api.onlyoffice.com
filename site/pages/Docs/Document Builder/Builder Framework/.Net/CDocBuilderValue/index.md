@@ -24,7 +24,7 @@ CDocBuilderValue(String^ value);
 | [GetLength](GetLength/index.md)             | Returns the length if this object is an array/typed array. |
 | [GetProperty](GetProperty/index.md)         | Returns a property of this object.                         |
 | [IsArray](IsArray/index.md)                 | Returns true if this object is an array.                   |
-| [IsBool](IsBool/index.mdd)                  | Returns true if this object is a boolean value.            |
+| [IsBool](IsBool/index.md)                  | Returns true if this object is a boolean value.            |
 | [IsDouble](IsDouble/index.md)               | Returns true if this object is a double value.             |
 | [IsEmpty](IsEmpty/index.md)                 | Returns true if this object is empty.                      |
 | [IsFunction](IsFunction/index.md)           | Returns true if this object is a function.                 |
