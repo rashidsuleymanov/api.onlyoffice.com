@@ -3,266 +3,200 @@ order: -1
 ---
 
 
-- [](Add%20comment%20in%20cell/index.md)
+## Add comment in cell
 
-  [Add comment in cell](Add%20comment%20in%20cell/index.md)
+Adds comments to spreadsheets.
 
-  Adds comments to spreadsheets.
+[More](Add%20comment%20in%20cell/index.md)
 
-  [More](Add%20comment%20in%20cell/index.md)
+## Add custom fields
 
-- [](Add%20custom%20fields/index.md)
+Inserts custom fields into the document.
 
-  [Add custom fields](Add%20custom%20fields/index.md)
+[More](Add%20custom%20fields/index.md)
 
-  Inserts custom fields into the document.
+## Autocomplete
 
-  [More](Add%20custom%20fields/index.md)
+Helps the user to input text quickly.
 
-- [](Autocomplete/index.md)
+[More](Autocomplete/index.md)
 
-  [Autocomplete](Autocomplete/index.md)
+## Chess
 
-  Helps the user to input text quickly.
+Inserts a Chess Board object into the document editor.
 
-  [More](Autocomplete/index.md)
+[More](Chess/index.md)
 
-- [](Chess/index.md)
+## Clippy
 
-  [Chess](Chess/index.md)
+Adds the clippy assistant to the document editor.
 
-  Inserts a Chess Board object into the document editor.
+[More](Clippy/index.md)
 
-  [More](Chess/index.md)
+## Context menu and events
 
-- [](Clippy/index.md)
+Tracks the events of calling the context menu and clicking on its items. It also tracks the cursor position change.
 
-  [Clippy](Clippy/index.md)
+[More](Context%20menu%20and%20events/index.md)
 
-  Adds the clippy assistant to the document editor.
+## Count words and characters
 
-  [More](Clippy/index.md)
+Counts paragraphs, words and characters.
 
-- [](Context%20menu%20and%20events/index.md)
+[More](Count%20words%20and%20characters/index.md)
 
-  [Context menu and events](Context%20menu%20and%20events/index.md)
+## Extended comments
 
-  Tracks the events of calling the context menu and clicking on its items. It also tracks the cursor position change.
+Pastes, edits and removes comments and replies (with user data) in a document.
 
-  [More](Context%20menu%20and%20events/index.md)
+[More](Extended%20comments/index.md)
 
-- [](Count%20words%20and%20characters/index.md)
+## Get and paste html
 
-  [Count words and characters](Count%20words%20and%20characters/index.md)
+Gets the document content as HTML code.
 
-  Counts paragraphs, words and characters.
+[More](Get%20and%20paste%20html/index.md)
 
-  [More](Count%20words%20and%20characters/index.md)
+## Hello World
 
-- [](Extended%20comments/index.md)
+Inserts the *Hello world!* phrase into the document.
 
-  [Extended comments](Extended%20comments/index.md)
+[More](Hello%20world/index.md)
 
-  Pastes, edits and removes comments and replies (with user data) in a document.
+## Highlight code
 
-  [More](Extended%20comments/index.md)
+Connects the Highlight.js library for highlighting the code syntax.
 
-- [](Get%20and%20paste%20html/index.md)
+[More](Highlight%20code/index.md)
 
-  [Get and paste html](Get%20and%20paste%20html/index.md)
+## Invoices
 
-  Gets the document content as HTML code.
+Inserts template fields for invoice information.
 
-  [More](Get%20and%20paste%20html/index.md)
+[More](Invoices/index.md)
 
-- [](Hello%20world/index.md)
+## Language tool
 
-  [Hello World](Hello%20world/index.md)
+Connects the LanguageTool assistant to check the text for grammar, style and spell errors.
 
-  Inserts the *Hello world!* phrase into the document.
+[More](Language%20tool/index.md)
 
-  [More](Hello%20world/index.md)
+## Load custom fields
 
-- [](Highlight%20code/index.md)
+Loads custom fields from the document.
 
-  [Highlight code](Highlight%20code/index.md)
+[More](Load%20custom%20fields/index.md)
 
-  Connects the Highlight.js library for highlighting the code syntax.
+## Move cursor
 
-  [More](Highlight%20code/index.md)
+Moves the text cursor to the document start/end.
 
-- [](Invoices/index.md)
+[More](Move%20cursor/index.md)
 
-  [Invoices](Invoices/index.md)
+## OCR
 
-  Inserts template fields for invoice information.
+Connects the TesseractJS-Core library for extracting text from an image.
 
-  [More](Invoices/index.md)
+[More](OCR/index.md)
 
-- [](Language%20tool/index.md)
+## Photo Editor
 
-  [Language tool](Language%20tool/index.md)
+Connects the Toast UI Image Editor for editing images right in the document.
 
-  Connects the LanguageTool assistant to check the text for grammar, style and spell errors.
+[More](Photo%20editor/index.md)
 
-  [More](Language%20tool/index.md)
+## Search and change text background color
 
-- [](Load%20custom%20fields/index.md)
+Searches for text and changes its background color.
 
-  [Load custom fields](Load%20custom%20fields/index.md)
+[More](Search%20and%20change%20text%20background%20color/index.md)
 
-  Loads custom fields from the document.
+## Search & replace
 
-  [More](Load%20custom%20fields/index.md)
+Searches the text and replaces it with another one.
 
-- [](Move%20cursor/index.md)
+[More](Search%20and%20replace/index.md)
 
-  [Move cursor](Move%20cursor/index.md)
+## Search & replace on start
 
-  Moves the text cursor to the document start/end.
+Searches and replaces text in the document when it is reopened.
 
-  [More](Move%20cursor/index.md)
+[More](Search%20and%20replace%20on%20start/index.md)
 
-- [](OCR/index.md)
+## Settings
 
-  [OCR](OCR/index.md)
+Protects a document using a watermark.
 
-  Connects the TesseractJS-Core library for extracting text from an image.
+[More](Settings/index.md)
 
-  [More](OCR/index.md)
+## Speech
 
-- [](Photo%20editor/index.md)
+Connects the guessLanguage.js library and the ResponsiveVoice service.
 
-  [Photo Editor](Photo%20editor/index.md)
+[More](Speech/index.md)
 
-  Connects the Toast UI Image Editor for editing images right in the document.
+## Symbol Table
 
-  [More](Photo%20editor/index.md)
+Inserts special symbols into the document.
 
-- [](Search%20and%20change%20text%20background%20color/index.md)
+[More](Symbol%20table/index.md)
 
-  [Search and change text background color](Search%20and%20change%20text%20background%20color/index.md)
+## Telegram
 
-  Searches for text and changes its background color.
+Connects the Telegram within ONLYOFFICE editors.
 
-  [More](Search%20and%20change%20text%20background%20color/index.md)
+[More](Telegram/index.md)
 
-- [](Search%20and%20replace/index.md)
+## Templates
 
-  [Search & replace](Search%20and%20replace/index.md)
+Inserts templates generated by the Document Builder script.
 
-  Searches the text and replaces it with another one.
+[More](Templates/index.md)
 
-  [More](Search%20and%20replace/index.md)
+## Thesaurus
 
-- [](Search%20and%20replace%20on%20start/index.md)
+Connects Big Huge Thesaurus to search for word synonyms and antonyms.
 
-  [Search & replace on start](Search%20and%20replace%20on%20start/index.md)
+[More](Thesaurus/index.md)
 
-  Searches and replaces text in the document when it is reopened.
+## Translator
 
-  [More](Search%20and%20replace%20on%20start/index.md)
+Connects Google Translate API for translating the selected text.
 
-- [](Settings/index.md)
+[More](Translator/index.md)
 
-  [Settings](Settings/index.md)
+## Typograf
 
-  Protects a document using a watermark.
+Connects the Typograf assistant which prepares text for publishing.
 
-  [More](Settings/index.md)
+[More](Typograf/index.md)
 
-- [](Speech/index.md)
+## Work with content controls content
 
-  [Speech](Speech/index.md)
+Inserts the content of one content control into another.
 
-  Connects the guessLanguage.js library and the ResponsiveVoice service.
+[More](Work%20with%20content%20controls%20content/index.md)
 
-  [More](Speech/index.md)
+## Work with content controls navigation
 
-- [](Symbol%20table/index.md)
+Navigates content controls, selects and inserts text into them.
 
-  [Symbol Table](Symbol%20table/index.md)
+[More](Work%20with%20content%20controls%20navigation/index.md)
 
-  Inserts special symbols into the document.
+## Work with content controls tags
 
-  [More](Symbol%20table/index.md)
+Gets the list of content controls tags.
 
-- [](Telegram/index.md)
+[More](Work%20with%20content%20controls%20tags/index.md)
 
-  [Telegram](Telegram/index.md)
+## YouTube
 
-  Connects the Telegram within ONLYOFFICE editors.
+Embeds YouTube videos into the documents.
 
-  [More](Telegram/index.md)
+[More](YouTube/index.md)
 
-- [](Templates/index.md)
+## Zotero
 
-  [Templates](Templates/index.md)
+Creates bibliographies in ONLYOFFICE editors.
 
-  Inserts templates generated by the Document Builder script.
-
-  [More](Templates/index.md)
-
-- [](Thesaurus/index.md)
-
-  [Thesaurus](Thesaurus/index.md)
-
-  Connects Big Huge Thesaurus to search for word synonyms and antonyms.
-
-  [More](Thesaurus/index.md)
-
-- [](Translator/index.md)
-
-  [Translator](Translator/index.md)
-
-  Connects Google Translate API for translating the selected text.
-
-  [More](Translator/index.md)
-
-- [](Typograf/index.md)
-
-  [Typograf](Typograf/index.md)
-
-  Connects the Typograf assistant which prepares text for publishing.
-
-  [More](Typograf/index.md)
-
-- [](Work%20with%20content%20controls%20content/index.md)
-
-  [Work with content controls content](Work%20with%20content%20controls%20content/index.md)
-
-  Inserts the content of one content control into another.
-
-  [More](Work%20with%20content%20controls%20content/index.md)
-
-- [](Work%20with%20content%20controls%20navigation/index.md)
-
-  [Work with content controls navigation](Work%20with%20content%20controls%20navigation/index.md)
-
-  Navigates content controls, selects and inserts text into them.
-
-  [More](Work%20with%20content%20controls%20navigation/index.md)
-
-- [](Work%20with%20content%20controls%20tags/index.md)
-
-  [Work with content controls tags](Work%20with%20content%20controls%20tags/index.md)
-
-  Gets the list of content controls tags.
-
-  [More](Work%20with%20content%20controls%20tags/index.md)
-
-- [](YouTube/index.md)
-
-  [YouTube](YouTube/index.md)
-
-  Embeds YouTube videos into the documents.
-
-  [More](YouTube/index.md)
-
-- [](Zotero/index.md)
-
-  [Zotero](Zotero/index.md)
-
-  Creates bibliographies in ONLYOFFICE editors.
-
-  [More](Zotero/index.md)
+[More](Zotero/index.md)

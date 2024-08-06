@@ -4,157 +4,119 @@ order: -1
 
 The following examples will show you how to use ONLYOFFICE macros and compare the JavaScript code with Microsoft Visual Basic for Applications code so that you could see the difference and understand what can be done to convert the VBA code to ONLYOFFICE macros.
 
-* [](Write%20data%20to%20worksheet%20cell/index.md)
+## Write data to worksheet cell
 
-  [Write data to worksheet cell](Write%20data%20to%20worksheet%20cell/index.md)
+In this example we are writing the data (the "Hello world" phrase) to fourth column of the third row of the worksheet.
 
-  In this example we are writing the data (the "Hello world" phrase) to fourth column of the third row of the worksheet.
+[More](Write%20data%20to%20worksheet%20cell/index.md)
 
-  [More](Write%20data%20to%20worksheet%20cell/index.md)
+## Change cell background color
 
-* [](Change%20cell%20background%20color/index.md)
+In this example we are seting the background color of the cell B3 to blue.
 
-  [Change cell background color](Change%20cell%20background%20color/index.md)
+[More](Change%20cell%20background%20color/index.md)
 
-  In this example we are seting the background color of the cell B3 to blue.
+## Change cell font color
 
-  [More](Change%20cell%20background%20color/index.md)
+In this example we are seting the font color of the cell B4 to red.
 
-* [](Change%20cell%20font%20color/index.md)
+[More](Change%20cell%20font%20color/index.md)
 
-  [Change cell font color](Change%20cell%20font%20color/index.md)
+## Make cell font bold
 
-  In this example we are seting the font color of the cell B4 to red.
+In this example we are seting the font of the cell A2 to bold.
 
-  [More](Change%20cell%20font%20color/index.md)
+[More](Make%20cell%20font%20bold/index.md)
 
-* [](Make%20cell%20font%20bold/index.md)
+## Merge cell range
 
-  [Make cell font bold](Make%20cell%20font%20bold/index.md)
+In this example we are merging selected cell range.
 
-  In this example we are seting the font of the cell A2 to bold.
+[More](Merge%20cell%20range/index.md)
 
-  [More](Make%20cell%20font%20bold/index.md)
+## Unmerge cell range
 
-* [](Merge%20cell%20range/index.md)
+In this example we are unmerging selected cell range.
 
-  [Merge cell range](Merge%20cell%20range/index.md)
+[More](Unmerge%20cell%20range/index.md)
 
-  In this example we are merging selected cell range.
+## Set column width
 
-  [More](Merge%20cell%20range/index.md)
+In this example we are setting the width for the second ("B") column.
 
-* [](Unmerge%20cell%20range/index.md)
+[More](Set%20column%20width/index.md)
 
-  [Unmerge cell range](Unmerge%20cell%20range/index.md)
+## Format range as table
 
-  In this example we are unmerging selected cell range.
+In this example we are formatting the range of cells as a table.
 
-  [More](Unmerge%20cell%20range/index.md)
+[More](Format%20range%20as%20a%20table/index.md)
 
-* [](Set%20column%20width/index.md)
+## Add chart
 
-  [Set column width](Set%20column%20width/index.md)
+In this example we are creating the chart from the data in the "C5:D7" cell range.
 
-  In this example we are setting the width for the second ("B") column.
+[More](Add%20chart/index.md)
 
-  [More](Set%20column%20width/index.md)
+## Highlight duplicates
 
-* [](Format%20range%20as%20a%20table/index.md)
+In this example we are highlighting duplicates in the selected area with different colors to recognize duplicated values quickly.
 
-  [Format range as table](Format%20range%20as%20a%20table/index.md)
+[More](Highlight%20duplicates/index.md)
 
-  In this example we are formatting the range of cells as a table.
+## Next blank row
 
-  [More](Format%20range%20as%20a%20table/index.md)
+In this example we are finding the next available blank row in a worksheet.
 
-* [](Add%20chart/index.md)
+[More](Next%20blank%20row/index.md)
 
-  [Add chart](Add%20chart/index.md)
+## Insert text
 
-  In this example we are creating the chart from the data in the "C5:D7" cell range.
+In this example we are inserting text into the document at the current cursor position.
 
-  [More](Add%20chart/index.md)
+[More](Insert%20text/index.md)
 
-* [](Highlight%20duplicates/index.md)
+## Currency exchange rates
 
-  [Highlight duplicates](Highlight%20duplicates/index.md)
+In this example we are returning information about the exchange rates for the last several days and fill in the table with the received values.
 
-  In this example we are highlighting duplicates in the selected area with different colors to recognize duplicated values quickly.
+[More](Currency%20exchange%20rates/index.md)
 
-  [More](Highlight%20duplicates/index.md)
+## Import CSV/TXT data
 
-* [](Next%20blank%20row/index.md)
+In this example we are importing data from remote CSV/TXT files into the spreadsheet.
 
-  [Next blank row](Next%20blank%20row/index.md)
+[More](Import%20CSV%20or%20TXT%20data/index.md)
 
-  In this example we are finding the next available blank row in a worksheet.
+## Recalculate worksheet values
 
-  [More](Next%20blank%20row/index.md)
+This macro repeatedly recalculates worksheet cell values within one-second intervals.
 
-* [](Insert%20text/index.md)
+[More](Recalculate%20worksheet%20values/index.md)
 
-  [Insert text](Insert%20text/index.md)
+## Unhide all rows and columns
 
-  In this example we are inserting text into the document at the current cursor position.
+In this example we are unhiding all the rows and columns in a worksheet.
 
-  [More](Insert%20text/index.md)
+[More](Unhide%20all%20rows%20and%20columns/index.md)
 
-* [](Currency%20exchange%20rates/index.md)
+## Remove shapes from slides
 
-  [Currency exchange rates](Currency%20exchange%20rates/index.md)
+In this example we are removing shapes from the presentation.
 
-  In this example we are returning information about the exchange rates for the last several days and fill in the table with the received values.
+[More](Remove%20shapes%20from%20slides/index.md)
 
-  [More](Currency%20exchange%20rates/index.md)
+## Insert unique id
 
-* [](Import%20CSV%20or%20TXT%20data/index.md)
+In this example we are inserting a unique id into a form document.
 
-  [Import CSV/TXT data](Import%20CSV%20or%20TXT%20data/index.md)
+[More](Insert%20unique%20id/index.md)
 
-  In this example we are importing data from remote CSV/TXT files into the spreadsheet.
+## Complete address information
 
-  [More](Import%20CSV%20or%20TXT%20data/index.md)
+In this example we are completing address information in the spreadsheet.
 
-* [](Recalculate%20worksheet%20values/index.md)
-
-  [Recalculate worksheet values](Recalculate%20worksheet%20values/index.md)
-
-  This macro repeatedly recalculates worksheet cell values within one-second intervals.
-
-  [More](Recalculate%20worksheet%20values/index.md)
-
-* [](Unhide%20all%20rows%20and%20columns/index.md)
-
-  [Unhide all rows and columns](Unhide%20all%20rows%20and%20columns/index.md)
-
-  In this example we are unhiding all the rows and columns in a worksheet.
-
-  [More](Unhide%20all%20rows%20and%20columns/index.md)
-
-* [](Remove%20shapes%20from%20slides/index.md)
-
-  [Remove shapes from slides](Remove%20shapes%20from%20slides/index.md)
-
-  In this example we are removing shapes from the presentation.
-
-  [More](Remove%20shapes%20from%20slides/index.md)
-
-* [](Insert%20unique%20id/index.md)
-
-  [Insert unique id](Insert%20unique%20id/index.md)
-
-  In this example we are inserting a unique id into a form document.
-
-  [More](Insert%20unique%20id/index.md)
-
-* [](Complete%20address%20information/index.md)
-
-  [Complete address information](Complete%20address%20information/index.md)
-
-  In this example we are completing address information in the spreadsheet.
-
-  [More](Complete%20address%20information/index.md)
+[More](Complete%20address%20information/index.md)
 
 ## Support
 

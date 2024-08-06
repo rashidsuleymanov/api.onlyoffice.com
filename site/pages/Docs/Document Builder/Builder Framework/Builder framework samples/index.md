@@ -5,7 +5,7 @@ order: -1
 Use the guides for [C++](C++%20samples%20guide/index.md) and [.Net](.Net%20samples%20guide/index.md) to run the samples.
 
 
-Filling spreadsheet
+## Filling spreadsheet
 
 Fills spreadsheet with array-based values.
 
@@ -13,7 +13,7 @@ Download: [C++](https://api.teamlab.info:443/app_data/docbuilder/cpp-samples/Fil
 
 
 
-Commenting spreadsheet errors
+## Commenting spreadsheet errors
 
 Comments spreadsheet cells with formula errors.
 
@@ -22,7 +22,7 @@ Download: [C++](https://api.teamlab.info:443/app_data/docbuilder/cpp-samples/Com
 
 
 
-Creating presentation
+## Creating presentation
 
 Creates presentation with multiple slides, images and text.
 
@@ -30,7 +30,7 @@ Download: [C++](https://api.teamlab.info:443/app_data/docbuilder/cpp-samples/Cre
 
 
 
-Creating chart presentation
+## Creating chart presentation
 
 Creates single-slide chart presentation.
 
@@ -38,7 +38,7 @@ Download: [C++](https://api.teamlab.info:443/app_data/docbuilder/cpp-samples/Cre
 
 
 
-Creating basic form
+## Creating basic form
 
 Creates basic form with text and image inputs.
 
@@ -46,7 +46,7 @@ Download: [C++](https://api.teamlab.info:443/app_data/docbuilder/cpp-samples/Cre
 
 
 
-Creating advanced form
+## Creating advanced form
 
 Creates advanced form with table structure.
 
@@ -54,7 +54,7 @@ Download: [C++](https://api.teamlab.info:443/app_data/docbuilder/cpp-samples/Cre
 
 
 
-Filling form
+## Filling form
 
 Fills form with text values and image.
 
