@@ -23,9 +23,7 @@ export function Link(p: HTMLAttributes<HTMLAnchorElement>): JSX.Element {
     throw new Error("The 'href' attribute must be an absolute URL.")
   }
 
-  if (path.isAbsolute(p.href)) {
-    p.href = resolve(p.href, "")
-  }
+  p.href = resolve(p.href, "")
 
   return <a {...p}></a>
 }
@@ -42,12 +40,12 @@ export function rehypeLink(): RehypeLinkTransform {
       }
 
       const p = n.properties
-      if (
-        typeof p.href !== "string" ||
-        URL.canParse(p.href) ||
-        p.href.startsWith("#")
-      ) {
-        return
+
+      if (p.href === undefined) {
+        throw new Error("The 'href' attribute is required, but missing.")
+      }
+      if (typeof p.href !== "string") {
+        throw new Error("The 'href' attribute must be a string.")
       }
 
       n.properties.href = resolve(p.href, f.path)
@@ -57,15 +55,25 @@ export function rehypeLink(): RehypeLinkTransform {
 
 function resolve(a: string, b: string): string {
   const s = Sitemap.shared
+
+  if (URL.canParse(a)) {
+    return a
+  }
+
   const h = pate.hash(a)
+  if (h === a) {
+    return a
+  }
 
   let p = a
+
   if (!path.isAbsolute(a)) {
     p = path.dirname(b)
     p = pate.resolve(p, a)
     p = cutPrefix(p, rootDir())
     p = cutSuffix(p, h)
   }
+
   p = decodeURIComponent(`.${p}`)
 
   const e = s.find(p, "path")
