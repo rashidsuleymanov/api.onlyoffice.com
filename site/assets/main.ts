@@ -14,6 +14,7 @@ import "@onlyoffice/site-kit/client.ts"
 import "../components/tree/tree.client.ts"
 import "../components/document-builder-container/element.ts"
 import "../internal/global-navigation-container.ts"
+import "../internal/legacy-container.ts"
 import {Client} from "@onlyoffice/server-client"
 
 function main(): void {

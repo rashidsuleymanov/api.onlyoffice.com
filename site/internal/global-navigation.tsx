@@ -8,6 +8,7 @@ import {Sitemap} from "@onlyoffice/eleventy-sitemap"
 import {CloseIcon, MenuIcon} from "@onlyoffice/ui-icons/poor/24.tsx"
 import {type JSX, h} from "preact"
 import {Icon} from "./icon.tsx"
+import {Legacy} from "./legacy.tsx"
 import {Link} from "./link.tsx"
 
 declare module "@onlyoffice/eleventy-types" {
@@ -115,7 +116,9 @@ export function GlobalNavigation(p: GlobalNavigationProperties): JSX.Element {
           </li>
         })}
       </ul>
-      <div class="global-navigation__legacy"></div>
+      <div class="global-navigation__legacy">
+        <Legacy />
+      </div>
     </nav>
   </global-navigation-container>
 }
