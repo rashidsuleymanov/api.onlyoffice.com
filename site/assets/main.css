@@ -28,6 +28,7 @@ table {
 
 .page-header__logo svg {
   height: 28px;
+  width: auto;
 
   @media (--size-viewport-width-large) {
     height: 38px;
