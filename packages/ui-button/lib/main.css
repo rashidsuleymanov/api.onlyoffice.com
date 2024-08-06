@@ -6,10 +6,12 @@
   border-width: var(--size-border-width-thin);
   color: var(--color-button-default-foreground-rest);
   cursor: pointer;
+  display: inline-block;
   font-size: var(--text-body-font-size-small);
   font-weight: var(--base-text-font-weight-medium);
   padding-block: var(--size-control-padding-block-medium);
   padding-inline: var(--size-control-padding-inline-medium);
+  text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
 }
