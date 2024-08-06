@@ -125,7 +125,7 @@ The plugin will be removed from ONLYOFFICE Cloud after page reload.
 
 5. Launch ONLYOFFICE Cloud and open any document to check if the new plugin is available in the editors:
 
-   ![](/assets/images/plugins/helloworld_icon.png)
+   ![Hello world icon](/assets/images/plugins/helloworld_icon.png)
 
 
 **Removing plugins from Microsoft Edge**
