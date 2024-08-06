@@ -115,6 +115,7 @@ export function GlobalNavigation(p: GlobalNavigationProperties): JSX.Element {
           </li>
         })}
       </ul>
+      <div class="global-navigation__legacy"></div>
     </nav>
   </global-navigation-container>
 }
