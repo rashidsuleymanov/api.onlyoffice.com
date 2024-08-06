@@ -1,9 +1,12 @@
 import path from "node:path"
-import {rootDir} from "@onlyoffice/eleventy-env"
 import {type ImageOptions} from "@11ty/eleventy-img"
+import {isBuild, rootDir} from "@onlyoffice/eleventy-env"
+import {type UserConfig} from "@onlyoffice/eleventy-types"
 import {modify} from "@onlyoffice/hast-util-eleventy-img"
+import * as pate from "@onlyoffice/node-path"
 import {generate} from "@onlyoffice/preact-eleventy-img"
 import {useSuspense} from "@onlyoffice/preact-suspense"
+import {cutPrefix} from "@onlyoffice/strings"
 import {type Root} from "hast"
 import {type HTMLAttributes} from "preact/compat"
 import {type JSX, h} from "preact"
@@ -31,9 +34,7 @@ export function Image(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
     throw new Error("The 'src' attribute must be an absolute URL.")
   }
 
-  if (path.isAbsolute(p.src)) {
-    p.src = decodeURIComponent(`.${p.src}`)
-  }
+  p.src = resolve(p.src, "")
 
   if (p.width !== undefined) {
     if (typeof p.style === "string") {
@@ -65,8 +66,16 @@ export function Image(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
     }
   }
 
+  p.decoding = "async"
+  p.loading = "lazy"
+
+  const c = <img {...p} />
+
+  if (!isBuild()) {
+    return c
+  }
+
   const o = options(p.src)
-  const c = <img decoding="async" loading="lazy" {...p} />
 
   const Suspense = useSuspense(async () => {
     r = await generate({...o, children: c})
@@ -101,21 +110,14 @@ export function rehypeImage(): RehypeImageTransform {
         return
       }
 
+      if (p.src === undefined) {
+        throw new Error("The 'src' attribute is required, but missing.")
+      }
       if (typeof p.src !== "string") {
-        return
+        throw new Error("The 'src' attribute must be a string.")
       }
 
-      if (!URL.canParse(p.src)) {
-        let u = ""
-        if (path.isAbsolute(p.src)) {
-          u = `.${p.src}`
-        } else {
-          u = path.dirname(f.path)
-          u = path.resolve(u, p.src)
-          u = u.replace(rootDir(), ".")
-        }
-        p.src = decodeURIComponent(u)
-      }
+      p.src = resolve(p.src, f.path)
 
       if (p.width !== undefined && p.width !== null) {
         if (typeof p.style !== "string") {
@@ -149,15 +151,26 @@ export function rehypeImage(): RehypeImageTransform {
         p.style += `max-height: ${v};`
       }
 
-      const o = options(p.src)
-      n.properties = {decoding: "async", loading: "lazy", ...p}
+      n.properties.decoding = "async"
+      n.properties.loading = "lazy"
 
+      if (!isBuild()) {
+        return
+      }
+
+      const o = options(p.src)
       // @ts-ignore conflict with mdx extensions
       r = modify(o, n, i, pa)
     })
 
     await r
     return t
+  }
+}
+
+export function eleventyImage(uc: UserConfig): void {
+  if (!isBuild()) {
+    uc.addPassthroughCopy("assets/images")
   }
 }
 
@@ -188,4 +201,24 @@ function options(s: string): ImageOptions {
   }
 
   return o
+}
+
+function resolve(a: string, b: string): string {
+  if (URL.canParse(a)) {
+    return a
+  }
+
+  let p = a
+
+  if (!path.isAbsolute(a)) {
+    p = path.dirname(b)
+    p = pate.resolve(p, a)
+    p = cutPrefix(p, rootDir())
+  }
+
+  if (isBuild()) {
+    p = decodeURIComponent(`.${p}`)
+  }
+
+  return p
 }

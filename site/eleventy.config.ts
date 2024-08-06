@@ -11,10 +11,13 @@ import {configMode} from "@onlyoffice/site-env"
 import {Config} from "@onlyoffice/site-config"
 import esbuild from "esbuild"
 import requireFromString from "require-from-string"
+import {eleventyImage} from "./internal/image.tsx"
 import {eleventyMarkdown} from "./internal/markdown.tsx"
 
 function config(uc: UserConfig): unknown {
   Config.shared = Config.read(cwd(), configMode())
+
+  uc.setServerPassthroughCopyBehavior("passthrough")
 
   uc.addPlugin(eleventyClean)
 
@@ -37,6 +40,7 @@ function config(uc: UserConfig): unknown {
     },
   })
 
+  uc.addPlugin(eleventyImage)
   uc.addPlugin(eleventyMarkdown)
 
   uc.addPlugin(eleventyHtmlMinifierTerser, {
