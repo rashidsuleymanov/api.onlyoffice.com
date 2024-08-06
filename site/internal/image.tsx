@@ -174,8 +174,16 @@ function options(s: string): ImageOptions {
   }
 
   const e = path.extname(s)
-  if (e === ".svg") {
+  switch (e) {
+  case ".svg":
     o.formats = ["svg"]
+    break
+  case ".gif":
+    o.formats = ["gif", "webp"]
+    o.sharpOptions = {
+      animated: true,
+    }
+    break
   }
 
   return o
