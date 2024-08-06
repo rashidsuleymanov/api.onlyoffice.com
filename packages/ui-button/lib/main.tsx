@@ -24,3 +24,27 @@ export function Button(p: ButtonProperties): JSX.Element {
     return s
   }
 }
+
+export interface LinkButtonProperties extends HTMLAttributes<HTMLAnchorElement> {
+  variant?: "accent" | "default"
+}
+
+export function LinkButton(p: LinkButtonProperties): JSX.Element {
+  const {children, variant, ...props} = p
+  return <a class={cls()} {...props}>{children}</a>
+
+  function cls(): string {
+    let s = "button"
+    switch (variant) {
+    case "accent":
+      s += " button_accent"
+      break
+    case undefined:
+    case "default":
+      break
+    default:
+      throw new Error(`Unknown variant: ${variant}`)
+    }
+    return s
+  }
+}

@@ -6,6 +6,7 @@
 @import "../components/syntax-highlight/syntax-highlight.css";
 @import "../components/tree/tree.css";
 @import "../internal/global-navigation.css";
+@import "../internal/legacy.css";
 
 html {
   background-color: var(--color-page-header-background);
@@ -27,6 +28,7 @@ table {
 
 .page-header__logo svg {
   height: 28px;
+  width: auto;
 
   @media (--size-viewport-width-large) {
     height: 38px;
