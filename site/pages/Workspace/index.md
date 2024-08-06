@@ -4,6 +4,7 @@ description: ONLYOFFICE Workspace is a collaborative cloud platform that allows 
 
 home:
   image:
+    alt: " "
     src: /assets/images/workspace-preview.png
     height: 500
   description: In this section, you will learn how to integrate ONLYOFFICE Workspace into your own application and interact with its backend using the Workspace API Backend. This solution is provided without editors, you need to install ONLYOFFICE Docs separately. You can also host a portal and interact with it using our methods for hosting providers.
