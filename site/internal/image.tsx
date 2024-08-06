@@ -182,6 +182,7 @@ function options(s: string): ImageOptions {
     o.formats = ["gif", "webp"]
     o.sharpOptions = {
       animated: true,
+      limitInputPixels: false,
     }
     break
   }
