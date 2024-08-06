@@ -19,9 +19,8 @@ export function Image(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
   p = Object.assign({}, p)
   p.style = Object.assign({}, p.style)
 
-  // todo: this is a temporary solution during the migration.
   if (!p.alt) {
-    p.alt = ""
+    throw new Error("The 'alt' attribute is required, but missing.")
   }
 
   if (p.src === undefined) {
@@ -102,12 +101,8 @@ export function rehypeImage(): RehypeImageTransform {
         p.style = ""
       }
 
-      // todo: this is temporary solutions during the migration.
       if (!p.alt) {
-        p.alt = ""
-      }
-      if (p.src && typeof p.src === "string" && p.src.startsWith("/content")) {
-        return
+        throw new Error("The 'alt' attribute is required, but missing.")
       }
 
       if (p.src === undefined) {
