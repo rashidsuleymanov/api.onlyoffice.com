@@ -505,6 +505,7 @@ regular:
 
     code-editor:
       default:
+        foreground: foreground.default
         background: background.muted
         border: border.default
 

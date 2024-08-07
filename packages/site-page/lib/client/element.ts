@@ -31,7 +31,7 @@ export class PageContainer extends HTMLElement {
       if (!c) {
         return
       }
-      c.toggleNavigationHidden()
+      c.toggleNavigationVisible()
       return
     }
   }

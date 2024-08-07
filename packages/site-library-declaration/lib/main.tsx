@@ -454,7 +454,11 @@ function FancyTitle({id, signature}: FancyTitleParameters): JSX.Element {
   const t = referenceToken(n)
   t.id = id
   const c = signature.map((t) => <FancyTitleToken token={t} />)
-  return <a class="dr" href={onLink(t)}><code>{c}</code></a>
+  return <span class="dr">
+    <a href={onLink(t)}>
+      <code>{c}</code>
+    </a>
+  </span>
 }
 
 interface FancyTitleTokenParameters {
