@@ -1,6 +1,9 @@
-.dr {
-  color: var(--color-library-declaration-default-foreground-decoration);
+.dr a {
   text-decoration: none;
+}
+
+.dr code {
+  color: var(--color-library-declaration-default-foreground-decoration);
 }
 
 .dr:hover .dr-id {
