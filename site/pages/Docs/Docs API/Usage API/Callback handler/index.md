@@ -260,6 +260,8 @@ public class WebEditor : IHttpHandler
 
 > *PATH\_FOR\_SAVE* is the absolute path to your computer folder where the file will be saved including the file name.
 
+On the [.Net example](../../Get%20Started/Language-specific%20examples/.Net%20example/index.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on .Net (C#) or .Net (C# MVC).
+
 ### Java document save example
 
 ``` java
@@ -301,6 +303,8 @@ public class IndexServlet extends HttpServlet {
 
 > *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
 
+On the [Java example](../../Get%20Started/Language-specific%20examples/Java%20example/index.md) and [Java integration SDK](../../Get%20Started/Language-specific%20examples/Java%20integration%20SDK/index.md) pages, you will learn how to integrate ONLYOFFICE Docs into your web application written on Java.
+
 ### Node.js document save example
 
 ``` javascript
@@ -341,6 +345,8 @@ app.post("/track", function (req, res) {
 
 > *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.
 
+On the [NodeJS example](../../Get%20Started/Language-specific%20examples/NodeJS%20example/index.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Node.js.
+
 ### PHP document save example
 
 ``` php
@@ -367,6 +373,8 @@ echo "{\"error\":0}";
 ```
 
 > *$path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
+
+On the [PHP example](../../Get%20Started/Language-specific%20examples/PHP%20example/index.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on PHP.
 
 ### Ruby document save example
 
@@ -402,3 +410,5 @@ end
 ```
 
 > *path\_for\_save* is the absolute path to your computer folder where the file will be saved including the file name.
+
+On the [Ruby example](../../Get%20Started/Language-specific%20examples/Ruby%20example/index.md) page, you will learn how to integrate ONLYOFFICE Docs into your web application written on Ruby.

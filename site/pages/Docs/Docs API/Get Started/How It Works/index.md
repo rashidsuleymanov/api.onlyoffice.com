@@ -26,7 +26,6 @@ In this section you will learn how to:
 * [Inserting external data](Inserting%20external%20data/index.md)
 * [Embedding forms into a web page](Embedding%20forms%20into%20a%20web%20page/index.md)
 * [Protecting ranges](Protecting%20ranges/index.md)
-* [Integrating editors using Java SDK](Integrating%20editors%20using%20Java%20SDK/index.md)
 * [Setting avatars](Setting%20avatars/index.md)
 
 ## User-document interaction

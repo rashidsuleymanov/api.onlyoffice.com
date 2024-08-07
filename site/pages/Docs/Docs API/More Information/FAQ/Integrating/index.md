@@ -13,6 +13,7 @@ order: -6
   * [PHP](../../../Get%20Started/Language-specific%20examples/PHP%20example/index.md)
   * [Python](../../../Get%20Started/Language-specific%20examples/Python%20example/index.md)
   * [Ruby](../../../Get%20Started/Language-specific%20examples/Ruby%20example/index.md)
+  * [Java integration SDK](../../../Get%20Started/Language-specific%20examples/Java%20integration%20SDK/index.md)
 
   The examples will show where to get the source codes, how to install and set up the working examples for integrating ONLYOFFICE Docs into your website written with the help of one of these programming languages.
 

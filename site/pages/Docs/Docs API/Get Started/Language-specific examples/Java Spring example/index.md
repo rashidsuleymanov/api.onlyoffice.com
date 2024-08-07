@@ -1,3 +1,8 @@
+---
+order: -6
+---
+
+
 ## Overview
 
 This example will help you integrate ONLYOFFICE Docs into your web application written in Java with Spring Boot.
