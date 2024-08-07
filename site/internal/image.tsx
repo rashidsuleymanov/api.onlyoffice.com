@@ -171,7 +171,7 @@ export function eleventyImage(uc: UserConfig): void {
   }
 
   uc.on("eleventy.after", async () => {
-    await copy(".cache/assets", "dist/assets/images")
+    await copy(".cache/assets", "dist/assets")
   })
 }
 
