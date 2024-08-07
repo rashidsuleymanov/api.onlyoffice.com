@@ -34,7 +34,7 @@ The **action** element of the discovery XML provides the important characteristi
 ``` xml
 <action name="edit" ext="docx" requires="locks,update"
     urlsrc="https://word-edit.officeapps.live.com/we/wordeditorframe.aspx?
-ui=en-us&thm=1&"/>
+ui=en-us&amp;thm=1&amp;"/>
 ```
 
 **Discovery query parameters** are the parameters that can be exposed by file storage in the *urlsrc* attribute to customize the editor behavior. For example, change a language, theme, or chat.

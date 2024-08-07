@@ -55,7 +55,7 @@ order: -1
   ``` xml
   <action name="edit" ext="docx" requires="locks,update"
       urlsrc="https://word-edit.officeapps.live.com/we/wordeditorframe.aspx?
-  ui=en-us&thm=1&"/>
+  ui=en-us&amp;thm=1&amp;"/>
   ```
 
   The editor behavior such as language, theme or chat can be customized via the **discovery query parameters** which are the parameters that can be exposed by file storage in the *urlsrc* attribute.

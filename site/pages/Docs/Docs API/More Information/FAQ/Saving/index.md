@@ -63,7 +63,7 @@ order: -3
 
   The **Autosave** option is enabled by default. To disable it, you need to set the [editorConfig.customization.autosave](../../../Usage%20API/Config/Editor/Customization/index.md#autosave) parameter in the document configuration to **false**:
 
-  ``` json
+  ``` javascript
   var docEditor = new DocsAPI.DocEditor("placeholder", {
       "editorConfig": {
           "customization": {

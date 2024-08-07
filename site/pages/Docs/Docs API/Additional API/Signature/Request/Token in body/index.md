@@ -37,7 +37,7 @@ The *payload* for the JSON Web Token contains the request body parameters.
   **Sample of request to receive the status of the edited document**
 
   ``` http
-  POST coauthoring/CommandService.ashx HTTP/1.1
+  POST /coauthoring/CommandService.ashx HTTP/1.1
   Host: documentserver
   Content-Type: application/json
 
@@ -69,7 +69,7 @@ The *payload* for the JSON Web Token contains the request body parameters.
   **Sample of request to convert the document**
 
   ``` http
-  POST ConvertService.ashx HTTP/1.1
+  POST /ConvertService.ashx HTTP/1.1
   Host: documentserver
   Content-Type: application/json
 
@@ -98,7 +98,7 @@ The *payload* for the JSON Web Token contains the request body parameters.
   **Sample of request to document builder service**
 
   ``` http
-  POST docbuilder HTTP/1.1
+  POST /docbuilder HTTP/1.1
   Host: documentserver
   Content-Type: application/json
 
@@ -127,7 +127,7 @@ The *payload* for the JSON Web Token contains the request body parameters.
   **Sample of request to "callbackUrl" address by document editing service when the last user closed the document for editing without changes**
 
   ``` http
-  POST url-to-callback.ashx HTTP/1.1
+  POST /url-to-callback.ashx HTTP/1.1
   Host: example.com
   Content-Type: application/json
 

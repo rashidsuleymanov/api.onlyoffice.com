@@ -7,7 +7,7 @@ The user initiates a long-running operation by sending a request to the appropri
 ### Example Request
 
 ``` http
-PUT api/2.0/files/rooms/1234/archive
+PUT /api/2.0/files/rooms/1234/archive
 Host: yourportal.onlyoffice.com
 Content-Type: application/json
 Accept: application/json
@@ -41,7 +41,7 @@ The following endpoints return the operation status:
 To track the operation progress, you must periodically execute a GET request to the following endpoint:
 
 ``` http
-GET api/2.0/files/fileops
+GET /api/2.0/files/fileops
 ```
 
 This request returns an array of the current operations as objects similar to the one described above.

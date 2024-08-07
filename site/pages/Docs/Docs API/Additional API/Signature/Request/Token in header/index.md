@@ -24,7 +24,7 @@ The *payload* for the JSON Web Token contains the following fields:
   **Sample of request to receive the status of the edited document**
 
   ``` http
-  POST coauthoring/CommandService.ashx HTTP/1.1
+  POST /coauthoring/CommandService.ashx HTTP/1.1
   Host: documentserver
   Content-Type: application/json
   Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImMiOiJpbmZvIiwia2V5IjoiS2hpcno2elRQZGZkNyJ9fQ.hGQ8kquQWpg4MQYiSYaIzik0wotP1coAop6QfLruenA
@@ -58,7 +58,7 @@ The *payload* for the JSON Web Token contains the following fields:
   **Sample of request to convert the document**
 
   ``` http
-  POST ConvertService.ashx HTTP/1.1
+  POST /ConvertService.ashx HTTP/1.1
   Host: documentserver
   Content-Type: application/json
   Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImZpbGV0eXBlIjoiZG9jeCIsImtleSI6IktoaXJ6NnpUUGRmZDciLCJvdXRwdXR0eXBlIjoicGRmIiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQuZG9jeCJ9fQ.Ec50Gvafu4niR2I1LPgETn1jkvvs1wKm0YeeI1RbRQs
@@ -94,7 +94,7 @@ The *payload* for the JSON Web Token contains the following fields:
   **Sample of request to document builder service**
 
   ``` http
-  POST docbuilder HTTP/1.1
+  POST /docbuilder HTTP/1.1
   Host: documentserver
   Content-Type: application/json
   Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImFzeW5jIjp0cnVlLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXNjcmlwdC5kb2NidWlsZGVyIn19.JpHp_TB3XDacAhTTB4I0CE7SIESSE9aQUGDulbpYKTE
@@ -127,7 +127,7 @@ The *payload* for the JSON Web Token contains the following fields:
   **Sample of request to "callbackUrl" address by document editing service when the last user closed the document for editing without changes**
 
   ``` http
-  POST url-to-callback.ashx HTTP/1.1
+  POST /url-to-callback.ashx HTTP/1.1
   Host: example.com
   Content-Type: application/json
   Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImtleSI6IktoaXJ6NnpUUGRmZDciLCJzdGF0dXMiOjR9fQ.MfVoGT-aYuPJfjQAaxwBv7-CqBylDae2AF9K5TpLf-E
@@ -157,7 +157,7 @@ The *payload* for the JSON Web Token contains the following fields:
   **Sample of request to document storage service for file download**
 
   ``` http
-  GET url-to-example-document.docx HTTP/1.1
+  GET /url-to-example-document.docx HTTP/1.1
   Host: example.com
   Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQuZG9jeCJ9fQ.DnhdBVtn8sFo9Adfl6GuT_v53NVV5cQ0Vi9c8xRzrjs
   ```
@@ -183,7 +183,7 @@ The *payload* for the JSON Web Token contains the following fields:
   **Sample of request to document storage service for document changes data download**
 
   ``` http
-  GET url-to-changes.zip HTTP/1.1
+  GET /url-to-changes.zip HTTP/1.1
   Host: example.com
   Content-Type: application/json
   Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWRvY3VtZW50LWNoYW5nZXMuemlwIn19.4CJ4F8x7VDMW72ss9VnIYGIwjRpBMYBBRXZ5aX2r2Y4
