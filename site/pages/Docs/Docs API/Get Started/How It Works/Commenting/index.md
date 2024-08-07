@@ -22,15 +22,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         "permissions": {
             "edit": false,
             "comment": true
-            ...
         },
-        ...
     },
-    ...
 });
 ```
 
-Please note that the document commenting will only be available for the document editor if the [mode](../../../Usage%20API/Config/Editor/index.md#mode) parameter is set to **edit**.
+> Please note that the document commenting will only be available for the document editor if the [mode](../../../Usage%20API/Config/Editor/index.md#mode) parameter is set to **edit**.
 
 ## Differentiation of commenting rights by authors
 
@@ -41,11 +38,8 @@ Please note that the document commenting will only be available for the document
        "document": {
            "permissions": {
                "editCommentAuthorOnly": true
-               ...
            },
-           ...
        },
-       ...
    });
    ```
 
@@ -56,11 +50,8 @@ Please note that the document commenting will only be available for the document
        "document": {
            "permissions": {
                "deleteCommentAuthorOnly": true
-               ...
            },
-           ...
        },
-       ...
    });
    ```
 
@@ -94,7 +85,7 @@ Please note that the document commenting will only be available for the document
 
 2. Specify the access rights using the [commentGroups](../../../Usage%20API/Config/Document/Permissions/index.md#commentgroups) parameter in the permissions section of the editor initialization.
 
-   If the **commentGroups** parameter is specified in the editor config, the access rights to viewing, editing and/or removing all comments are disabled. Otherwise, if the current user does not belong to any of the groups, he or she can edit, remove and/or view comments of all groups.
+   > If the **commentGroups** parameter is specified in the editor config, the access rights to viewing, editing and/or removing all comments are disabled. Otherwise, if the current user does not belong to any of the groups, he or she can edit, remove and/or view comments of all groups.
 
    ``` javascript
    var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -105,11 +96,8 @@ Please note that the document commenting will only be available for the document
                    "remove": [""],
                    "view": ""
                },
-               ...
            }
-           ...
        },
-       ...
    });
    ```
 

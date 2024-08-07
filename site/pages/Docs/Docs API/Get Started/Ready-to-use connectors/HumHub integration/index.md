@@ -60,7 +60,5 @@ The ONLYOFFICE integration follows the API documented [here](../../Basic%20conce
 
 12. HumHub downloads a new version of the document, replacing the old one.
 
-\
-
 
 Download the HumHub ONLYOFFICE connector [here](https://github.com/ONLYOFFICE/onlyoffice-humhub).
