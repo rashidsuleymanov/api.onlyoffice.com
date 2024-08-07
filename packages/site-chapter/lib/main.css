@@ -5,7 +5,8 @@
   --chapter-navigation-content-width: calc(232px - var(--chapter-navigation-border-width));
   --chapter-navigation-padding-block: var(--base-size-32);
   --chapter-navigation-padding-inline: var(--base-size-32);
-  --chapter-navigation-width: calc(var(--chapter-navigation-content-width) + var(--chapter-navigation-padding-inline) * 2 + var(--chapter-navigation-border-width));
+  --chapter-navigation-width: 0px; /* Do not remove the px unit */
+  --chapter-navigation-computed-width: calc(var(--chapter-navigation-content-width) + var(--chapter-navigation-padding-inline) * 2 + var(--chapter-navigation-border-width));
 
   --chapter-content-padding-block: var(--base-size-32);
   --chapter-content-padding-inline: var(--base-size-16);
@@ -19,8 +20,19 @@
   }
 
   @media (--size-viewport-width-medium) {
+    --chapter-navigation-width: var(--chapter-navigation-computed-width);
     --chapter-content-padding-inline: var(--base-size-40);
   }
+}
+
+.chapter[state-navigation-visible],
+.chapter:state(navigation-visible) {
+  --chapter-navigation-width: var(--chapter-navigation-computed-width);
+}
+
+.chapter[state-navigation-visible] .chapter__navigation,
+.chapter:state(navigation-visible) .chapter__navigation {
+  display: block;
 }
 
 .chapter::before {
@@ -40,30 +52,20 @@
   order: -1;
 }
 
-.chapter[state-navigation-hidden],
-.chapter:state(navigation-hidden) {
-  @media not (--size-viewport-width-medium) {
-    /* Do not remove the px unit */
-    --chapter-navigation-width: 0px;
-  }
-}
-
-.chapter[state-navigation-hidden] .chapter__navigation,
-.chapter:state(navigation-hidden) .chapter__navigation {
-  @media not (--size-viewport-width-medium) {
-    display: none;
-  }
-}
-
 .chapter__navigation {
   background-color: var(--color-background-muted);
   border-right-color: var(--color-border-muted);
   border-right-style: solid;
   border-right-width: var(--chapter-navigation-border-width);
+  display: none;
   grid-column: 2;
   grid-row: 1;
   padding-block: var(--chapter-navigation-padding-block);
   padding-inline: var(--chapter-navigation-padding-inline);
+
+  @media (--size-viewport-width-medium) {
+    display: block;
+  }
 }
 
 .chapter__content {
