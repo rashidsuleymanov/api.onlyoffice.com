@@ -54,6 +54,10 @@ export function rehypeDocumentBuilderContainer(): Transform {
         },
         editorConfig: {
           customization: {
+            anonymous:{
+              request: false,
+              label: "Guest"
+            },
             compactHeader: true,
             compactToolbar: true,
             hideRightMenu: true,
