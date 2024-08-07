@@ -21,11 +21,6 @@ body {
   background-color: var(--color-background-default);
 }
 
-table {
-  display: block;
-  overflow: auto;
-}
-
 .page-header__logo svg {
   height: 28px;
   width: auto;

@@ -3,12 +3,12 @@ export class ChapterContainer extends HTMLElement {
     return "chapter-container"
   }
 
-  get navigationHidden(): boolean {
-    return this.#hasState("navigation-hidden")
+  get navigationVisible(): boolean {
+    return this.#hasState("navigation-visible")
   }
 
-  set navigationHidden(s: boolean) {
-    this.#changeState("navigation-hidden", s)
+  set navigationVisible(s: boolean) {
+    this.#changeState("navigation-visible", s)
   }
 
   connectedCallback(): void {
@@ -38,8 +38,8 @@ export class ChapterContainer extends HTMLElement {
     this.#changeState = this.#changeFallbackState
   }
 
-  toggleNavigationHidden(): void {
-    this.navigationHidden = !this.navigationHidden
+  toggleNavigationVisible(): void {
+    this.navigationVisible = !this.navigationVisible
   }
 
   #hasState: (k: string) => boolean = () => false
