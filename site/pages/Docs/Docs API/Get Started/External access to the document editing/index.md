@@ -11,7 +11,7 @@ Collects all the comments from the document and displays them in the custom inte
 
 [More](Working%20with%20comments/index.md)
 
-## Working with review changes](Working%20with%20review%20changes/index.md)
+## Working with review changes
 
 Manages review process from an external source.
 
