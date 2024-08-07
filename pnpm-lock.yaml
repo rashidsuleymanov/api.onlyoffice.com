@@ -2810,6 +2810,9 @@ importers:
       preact-render-to-string:
         specifier: ^6.4.1
         version: 6.4.1(preact@10.22.0)
+      recursive-copy:
+        specifier: ^2.0.14
+        version: 2.0.14
       rehype-autolink-headings:
         specifier: ^7.1.0
         version: 7.1.0

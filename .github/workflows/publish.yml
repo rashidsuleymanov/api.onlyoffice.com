@@ -15,6 +15,12 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
+    - name: Persist Site Cache
+      uses: actions/cache@v3
+      with:
+        path: site/.cache
+        key: site-cache
+
     - name: Setup mise
       uses: jdx/mise-action@v2
 

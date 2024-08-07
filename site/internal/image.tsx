@@ -10,6 +10,7 @@ import {cutPrefix} from "@onlyoffice/strings"
 import {type Root} from "hast"
 import {type HTMLAttributes} from "preact/compat"
 import {type JSX, h} from "preact"
+import copy from "recursive-copy"
 import {visit} from "unist-util-visit"
 import {type VFile} from "vfile"
 
@@ -166,19 +167,27 @@ export function rehypeImage(): RehypeImageTransform {
 export function eleventyImage(uc: UserConfig): void {
   if (!isBuild()) {
     uc.addPassthroughCopy("assets/images")
+    return
   }
+
+  uc.on("eleventy.after", async () => {
+    await copy(".cache/assets", "dist/assets/images")
+  })
 }
 
 function options(s: string): ImageOptions {
   const o: ImageOptions = {
     formats: ["jpg", "webp"],
     urlPath: "/assets/",
-    outputDir: "dist/assets/",
-    filenameFormat(id: string, s: string, w: number, f: string) {
-      const e = path.extname(s)
-      const n = path.basename(s, e)
-      return `${n}-${w}w-${id}.${f}`
-    },
+    outputDir: ".cache/assets/",
+
+    // Disk cache does not work with custom filename formats.
+    // https://www.11ty.dev/docs/plugins/image/#disk-cache
+    // filenameFormat(id: string, s: string, w: number, f: string) {
+    //   const e = path.extname(s)
+    //   const n = path.basename(s, e)
+    //   return `${n}-${w}w-${id}.${f}`
+    // },
   }
 
   const e = path.extname(s)
