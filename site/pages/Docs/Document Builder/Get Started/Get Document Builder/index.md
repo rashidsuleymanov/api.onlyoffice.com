@@ -1,5 +1,5 @@
 ---
-order: -3
+order: -2
 ---
 
 **ONLYOFFICE Document Builder** is available for Windows and Linux.
