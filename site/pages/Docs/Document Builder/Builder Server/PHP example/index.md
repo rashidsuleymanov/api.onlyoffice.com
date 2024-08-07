@@ -21,7 +21,9 @@ Download the [PHP Example](../Overview/index.md) from our site and unpack it som
 You need to connnect the builder to your web site. For that specify the path to the builder installation in the *config.php* file:
 
 ``` php
+<?php
 $GLOBALS['builder_path'] = "C:\\ONLYOFFICE\\DocumentBuilder\\docbuilder.exe";
+?>
 ```
 
 ## Step 3. Install the prerequisites

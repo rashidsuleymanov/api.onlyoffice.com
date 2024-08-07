@@ -124,9 +124,11 @@ The ONLYOFFICE integration follows the API documented [here](../../Basic%20conce
   2. Change the Nextcloud config file manually. Locate the Nextcloud config file (*/nextcloud/config/config.php*) and open it. Insert the following section to it:
 
   ``` php
+  <?php
   'onlyoffice' => array (
       'verify_peer_off' => true
   )
+  ?>
   ```
 
   This will disable the certificate verification and allow Nextcloud to establish connection with ONLYOFFICE Docs.
@@ -144,9 +146,11 @@ The ONLYOFFICE integration follows the API documented [here](../../Basic%20conce
   By default, this background task runs once a day. If necessary, you can change the frequency. To do so, open the Nextcloud config file (*\_/nextcloud/config/config.php\_*). Insert the following section and enter the required value in minutes:
 
   ``` php
+  <?php
   "onlyoffice" => array (
       "editors_check_interval" => 3624
   )
+  ?>
   ```
 
   To disable this check running, enter 0 value.

@@ -68,6 +68,7 @@ var createToken = function (pkey, machinekey) {
 ### PHP generating token example
 
 ``` php
+<?php
 function CreateAuthToken($pkey, $machinekey) {
     $now=gmdate('YmdHis');
 
@@ -77,6 +78,7 @@ function CreateAuthToken($pkey, $machinekey) {
 
     return 'ASC '.$pkey.':'.$now.':'.$authkey;
 }
+?>
 ```
 
 ### PowerShell generating token example

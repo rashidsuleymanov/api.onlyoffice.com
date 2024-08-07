@@ -132,9 +132,11 @@ documentService.getToken = function (data) {
 ### PHP example
 
 ``` php
+<?php
 function jwtEncode($payload) {
     return \Firebase\JWT\JWT::encode($payload, $GLOBALS["DOC_SERV_JWT_SECRET"]);
 }
+?>
 ```
 
 ### Python example
