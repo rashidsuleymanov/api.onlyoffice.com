@@ -1,8 +1,12 @@
+---
+order: -6
+---
+
 To restrict public access to your data, a secure exchange of requests between an online office and an integrator must be configured.
 
-The integrator must check that the request is received from ONLYOFFICE Docs. It uses [proof keys](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys) for this purpose. ONLYOFFICE Docs signs the request with a private key. The corresponding public key is written in the proof-key element in the [WOPI discovery XML](/editors/wopi/discovery). The integrator checks the private key with the public key. The signature is sent with every request in the **X-WOPI-Proof** and **X-WOPI-ProofOld** HTTP headers. Private and public keys are set up via the following config parameters:
+The integrator must check that the request is received from ONLYOFFICE Docs. It uses [proof keys](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys) for this purpose. ONLYOFFICE Docs signs the request with a private key. The corresponding public key is written in the proof-key element in the [WOPI discovery XML](../WOPI%20discovery/index.md). The integrator checks the private key with the public key. The signature is sent with every request in the **X-WOPI-Proof** and **X-WOPI-ProofOld** HTTP headers. Private and public keys are set up via the following config parameters:
 
-Parameters
+### Parameters
 
 | Name            | Description                                                                                    | Type   | Example               |
 | --------------- | ---------------------------------------------------------------------------------------------- | ------ | --------------------- |
@@ -13,7 +17,7 @@ Parameters
 
 Example
 
-```
+``` json
 {
     "wopi": {
         "publicKey": "public key example",
@@ -24,4 +28,4 @@ Example
 }
 ```
 
-By default, proof keys are already set. They are not generated, i.e. the same keys are used for all installations.
+> By default, proof keys are already set. They are not generated, i.e. the same keys are used for all installations.

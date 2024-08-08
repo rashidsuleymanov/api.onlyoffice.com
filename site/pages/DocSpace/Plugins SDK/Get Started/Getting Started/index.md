@@ -1,3 +1,7 @@
+---
+order: -1
+---
+
 Here are the fundamental steps for building plugins:
 
 1. Preparing
@@ -10,7 +14,7 @@ Here are the fundamental steps for building plugins:
 
 Install the *@onlyoffice/docspace-plugin-sdk* npm package globally:
 
-```
+``` bash
 npm i -g @onlyoffice/docspace-plugin-sdk
 ```
 
@@ -20,7 +24,7 @@ Now, the **npx** command is available, which will be used to create a plugin.
 
 1. To create a plugin template, run the following command:
 
-   ```
+   ``` bash
    npx create-docspace-plugin
    ```
 
@@ -28,30 +32,30 @@ Now, the **npx** command is available, which will be used to create a plugin.
 
 3. Select the plugin scopes from the list by pressing *Space* on the necessary scopes (API, Settings, Context menu, etc.).
 
-More information about plugin settings and scopes can be found [here](/docspace/pluginssdk/creatingtemplate).
+More information about plugin settings and scopes can be found [here](../../Plugins%20SDK/Creating%20Plugin%20Template/index.md).
 
-![Creating template](/content/img/docspace/creating-template.png)
+![Creating template](/assets/images/docspace/creating-template.png)
 
 ## Step 3. Coding
 
-Develop a plugin. Follow the plugin structure described [here](/docspace/pluginssdk/structure).
+Develop a plugin. Follow the plugin structure described [here](../../Plugins%20SDK/Plugin%20Structure/index.md).
 
-* Write code for each [plugin type](/docspace/pluginssdk/codingplugin/plugintypes) using the corresponding variables, methods and [items](/docspace/pluginssdk/codingplugin/pluginitems). Put the scripts into the *src* folder. Specify the required [Plugin](/docspace/pluginssdk/codingplugin/plugintypes/plugin) interface for each plugin to be embedded in the portal.
+* Write code for each [plugin type](../../Plugins%20SDK/Coding%20Plugin/Plugin%20Types/index.md) using the corresponding variables, methods and [items](../../Plugins%20SDK/Coding%20Plugin/Plugin%20Items/index.md). Put the scripts into the *src* folder. Specify the required [Plugin](../../Plugins%20SDK/Coding%20Plugin/Plugin%20Types/Plugin/index.md) interface for each plugin to be embedded in the portal.
 
-  ![Plugin structure](/content/img/docspace/plugin-structure.png)
+  ![Plugin structure](/assets/images/docspace/plugin-structure.png)
 
-* Specify [plugin messages](/docspace/pluginssdk/codingplugin/pluginmessage) that will be returned by the items. Use the appropriate [events](/docspace/pluginssdk/codingplugin/events) that will be processed on the portal side.
+* Specify [plugin messages](../../Plugins%20SDK/Coding%20Plugin/Plugin%20Message/index.md) that will be returned by the items. Use the appropriate [events](../../Plugins%20SDK/Coding%20Plugin/Events/index.md) that will be processed on the portal side.
 
-* Learn which [plugin components](/docspace/pluginssdk/codingplugin/plugincomponents) can be used for the DocSpace plugin interface and add them to your scripts.
+* Learn which [plugin components](../../Plugins%20SDK/Coding%20Plugin/Plugin%20Components/index.md) can be used for the DocSpace plugin interface and add them to your scripts.
 
 Code samples are available at <https://github.com/ONLYOFFICE/docspace-plugins>.
 
 ## Step 4. Building
 
-To build a plugin, you need the *yarn* package manager to be installed. Install all the necessary dependencies using the **yarn install** command in the plugin root folder (if this was not done previously in step 2). After that collect a plugin archive by running the **yarn build** command. The completed plugin will be located in the *dist* folder and can be uploaded to the DocSpace portal. More information can be found [here](/docspace/pluginssdk/buildingplugin).
+To build a plugin, you need the *yarn* package manager to be installed. Install all the necessary dependencies using the **yarn install** command in the plugin root folder (if this was not done previously in step 2). After that collect a plugin archive by running the **yarn build** command. The completed plugin will be located in the *dist* folder and can be uploaded to the DocSpace portal. More information can be found [here](../../Plugins%20SDK/Building%20Plugin/index.md).
 
 ## Step 5. Uploading to the portal
 
-To upload a plugin to the DocSpace portal, follow the instructions [here](/docspace/pluginssdk/addingplugin).
+To upload a plugin to the DocSpace portal, follow the instructions [here](../../Plugins%20SDK/Adding%20Plugin/index.md).
 
 The plugin will appear in the plugin list and start functioning automatically.

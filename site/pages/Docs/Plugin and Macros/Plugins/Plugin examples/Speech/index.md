@@ -1,4 +1,4 @@
-Description
+## Description
 
 Converts the selected text into speech. The plugin uses [guessLanguage](https://richtr.github.io/guessLanguage.js/) to recognize the language and the [SpeechSynthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis) interface of the [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API).
 
@@ -6,27 +6,27 @@ Converts the selected text into speech. The plugin uses [guessLanguage](https://
 
 **Supported editors:** documents.
 
-![Speech](/content/img/plugins/gifs/speech.gif)
+![Speech](/assets/images/plugins/gifs/speech.gif)
 
-Installation
+## Installation
 
 Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace), and ONLYOFFICE cloud.
 
 You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/speech).
 
-Usage
+## Usage
 
 1. Select the necessary text.
 2. Open the plugin settings to select the language for the voiceover (the default setting is auto-recognition mode).
 3. Open the **Plugins** tab and press **Speech**.
 4. The text will be read out loud.
 
-Known issues
+## Known issues
 
 1. Some browsers, e.g. Mozzila, Opera, can only use pre-installed languages on your system for speech generation. So to use new languages, you need to add them to your system.
 2. The plugin doesn't work on Safari 15.3 (17612.4.9.1.8). Problem fixed on Safari 15.4 (17614.1.7.7).
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/speech>.
 
@@ -44,9 +44,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
    * [jQuery](https://jquery.com) - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. License: [MIT License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/speech/licenses/jQuery.license).
    * [Select2](https://select2.org/) gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options. License: [MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/speech/licenses/Select2.license).
 
-Config
+## Config
 
-```
+``` json
 {
     "name": "Speech",
     "nameLocale": {
@@ -179,11 +179,11 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
+* buttons
+* init
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

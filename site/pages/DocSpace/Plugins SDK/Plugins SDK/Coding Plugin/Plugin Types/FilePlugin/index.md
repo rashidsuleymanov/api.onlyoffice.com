@@ -1,36 +1,53 @@
+---
+order: -1
+---
+
+
 The plugin that can interact with the file list.
 
 **Interface**: IFilePlugin.
 
-Variables
+## Variables
 
-| Name      | Description                                                                                                                                                                                                                                    | Type                    | Example |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------- |
-| fileItems | Stores a collection of elements where the keys are the *key* parameters from the [FileItem](/docspace/pluginssdk/codingplugin/pluginitems/fileitem) objects. A list for hooking interactions with files is generated based on this collection. | collection of IFileItem |         |
+### fileItems
+
+Stores a collection of elements where the keys are the *key* parameters from the [FileItem](../../Plugin%20Items/FileItem/index.md) objects. A list for hooking interactions with files is generated based on this collection.
+
+Type: collection of IFileItem
+
 
 ## Methods and their description:
 
-* **addFileItem** - add a new item for interactions with files.
+### addFileItem
 
-  Parameters
+Add a new item for interactions with files.
+
+  **Parameters**
 
   | Name      | Description                                  | Type      | Example |
   | --------- | -------------------------------------------- | --------- | ------- |
   | fileItems | Defines an item for interactions with files. | IFileItem |         |
 
-* **getFileItems** - get all the items for interactions with files.
 
-* **updateFileItem** - update the item for interactions with files.
+### getFileItems
 
-  Parameters
+Get all the items for interactions with files.
+
+
+### updateFileItem
+
+Update the item for interactions with files.
+
+  **Parameters**
 
   | Name      | Description                                     | Type      | Example |
   | --------- | ----------------------------------------------- | --------- | ------- |
   | fileItems | Defines a new item for interactions with files. | IFileItem |         |
 
-Example
 
-```
+**Example**
+
+``` javascript
 import {IFilePlugin, IFileItem} from "@onlyoffice/docspace-plugin-sdk";
 
 class Plugin implements IFilePlugin {

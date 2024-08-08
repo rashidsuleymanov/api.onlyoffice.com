@@ -2,13 +2,13 @@
 
 Clears the **CDocBuilderValue** object.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.Clear* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.Clear* method is not used.
 
 ## Example
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;

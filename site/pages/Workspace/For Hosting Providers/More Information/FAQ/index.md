@@ -1,8 +1,9 @@
-Expand all
+---
+order: -3
+---
 
-Collapse all
 
-* What is the date/time format used in the response to the requests?
+## What is the date/time format used in the response to the requests?
 
   The response to the requests uses the **Roundtrip** format: 2008-04-10T06:30:00.0000000-07:00\
   where *-07:00* is UTC offset which is set on the portal.
@@ -15,12 +16,12 @@ Collapse all
 
   Please note that the UTC date and time without the offset are used in this case.
 
-- How to get json or xml format?
+## How to get json or xml format?
 
   You can get *json* or *xml* format adding *.json* or *.xml* to the request or pointing the request *Content-Type* in application/json or text/xml.
 
-  E.g.: [api/2.0/people.json](/portals/method/people/get/api/2.0/people)
+  E.g.: api/2.0/people.json
 
-* Is the response data pagination supported?
+## Is the response data pagination supported?
 
-  Yes. More information you can find in the [Request filtering](/portals/apisystem/filters) section.
+  Yes. More information you can find in the [Request filtering](../Filtering/index.md) section.

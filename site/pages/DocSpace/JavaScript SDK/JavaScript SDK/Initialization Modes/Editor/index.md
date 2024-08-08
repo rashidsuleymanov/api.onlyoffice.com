@@ -1,13 +1,17 @@
-Allows you to open the SDK as a document editor for editing by specifying the [id](/docspace/jssdk/config#id) parameter for a file.
+---
+order: -3
+---
 
-![Editor mode](/content/img/docspace/editor-mode.png)
+Allows you to open the SDK as a document editor for editing by specifying the [id](../../Config/index.md#id) parameter for a file.
 
-Method
+![Editor mode](/assets/images/docspace/editor-mode.png)
 
-| Name                                             | Description                                     |
-| ------------------------------------------------ | ----------------------------------------------- |
-| [initEditor](/docspace/jssdk/methods#initEditor) | Initializes the SDK frame in the "editor" mode. |
+### Method
 
-```
+| Name                                            | Description                                     |
+| ----------------------------------------------- | ----------------------------------------------- |
+| [initEditor](../../Methods/index.md#initeditor) | Initializes the SDK frame in the "editor" mode. |
+
+``` javascript
 var docSpace = DocSpace.SDK.initEditor({config});
 ```

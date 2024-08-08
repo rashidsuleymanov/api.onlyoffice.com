@@ -1,4 +1,4 @@
-Description
+## Description
 
 Inserts special symbols into the document.
 
@@ -6,20 +6,20 @@ Inserts special symbols into the document.
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![SymbolTable](/content/img/plugins/gifs/symbol-table.gif)
+![SymbolTable](/assets/images/plugins/gifs/symbol-table.gif)
 
-Installation
+## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/symboltable) and install it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/symboltable) and install it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
-Usage
+## Usage
 
 1. Find the plugin on the **Plugins** tab.
 2. Choose any character you want to paste (you can enter its unicode Hex value by yourself). You can choose the characters range to quickly navigate through them.
 3. Choose the characters font.
 4. Press the **Insert** button.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/symboltable>.
 
@@ -36,9 +36,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/s
    * [jQuery](https://jquery.com) - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. License: [MIT License](https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/symboltable/licenses/jQuery.license).
    * [Select2](https://select2.org/) gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options. License: [MIT](https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/symboltable/licenses/Select2.license).
 
-Config
+## Config
 
-```
+``` json
 {
     "name": "Symbol Table",
     "nameLocale": {
@@ -97,17 +97,17 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onExternalMouseUp](/plugin/events/onexternalmouseup)
-* [onMethodReturn](/plugin/events/onmethodreturn)
-* [onTranslate](/plugin/events/ontranslate)
-* [executeMethod ("GetFontList")](/plugin/executemethod/common/getfontlist)
-* [executeMethod ("PasteHtml")](/plugin/executemethod/common/pastehtml)
-* [info.editorType](/plugin/info#editorType)
+* button
+* init
+* onExternalMouseUp
+* onMethodReturn
+* onTranslate
+* executeMethod ("GetFontList")
+* executeMethod ("PasteHtml")
+* info.editorType
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

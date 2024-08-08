@@ -6,9 +6,9 @@ Starting from version 7.1, these parameters are deprecated. Now the incoming req
 
 The outgoing requests use both the token in body and token in header. They can be different. For example, the information about version history can be removed from the header token because of the size limit of the token in header.
 
-Token in body is used for POST requests only. For the GET requests [token in header](/editors/signature/request) is used.
+> Token in body is used for POST requests only. For the GET requests [token in header](Token%20in%20header/index.md) is used.
 
-Parameters
+### Parameters
 
 | Parameter                                | Description                                                                                                                                                            | Type    | Example |
 | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ------- |
@@ -19,13 +19,13 @@ The *payload* for the JSON Web Token contains the request body parameters.
 
 ## Incoming request
 
-* **Request to receive the status of the edited document**
+### Request to receive the status of the edited document
 
-  Validation is performed for incoming requests with the commands from the **document storage service** to the [document command service](/editors/command).
+  Validation is performed for incoming requests with the commands from the **document storage service** to the [document command service](../../../Additional%20API/Command%20service/index.md).
 
-  Sample parameters of request to receive the status of the edited document
+  **Sample parameters of request to receive the status of the edited document**
 
-  ```
+  ``` json
   {
       "c": "info",
       "key": "Khirz6zTPdfd7"
@@ -34,10 +34,10 @@ The *payload* for the JSON Web Token contains the request body parameters.
 
   These parameters must be encoded into the token so that the request looked like this:
 
-  Sample of request to receive the status of the edited document
+  **Sample of request to receive the status of the edited document**
 
-  ```
-  POST coauthoring/CommandService.ashx HTTP/1.1
+  ``` javascript
+  POST /coauthoring/CommandService.ashx HTTP/1.1
   Host: documentserver
   Content-Type: application/json
 
@@ -48,13 +48,13 @@ The *payload* for the JSON Web Token contains the request body parameters.
 
   As you can see there is no need to include the above parameters into the request body, as all of them are already encoded into the token and sent within it.
 
-* **Request to convert the document**
+### Request to convert the document
 
-  Validation is performed for incoming requests with the commands from the **document storage service** to the [document conversion service](/editors/conversionapi).
+  Validation is performed for incoming requests with the commands from the **document storage service** to the [document conversion service](../../Conversion%20API/index.md).
 
-  Sample parameters of request to convert the document
+  **Sample parameters of request to convert the document**
 
-  ```
+  ``` json
   {
       "filetype": "docx",
       "key": "Khirz6zTPdfd7",
@@ -64,12 +64,12 @@ The *payload* for the JSON Web Token contains the request body parameters.
   }
   ```
 
-  Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](/editors/howitworks) section to find out more on ONLYOFFICE Docs service client-server interactions.
+  Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-  Sample of request to convert the document
+  **Sample of request to convert the document**
 
-  ```
-  POST ConvertService.ashx HTTP/1.1
+  ``` http
+  POST /ConvertService.ashx HTTP/1.1
   Host: documentserver
   Content-Type: application/json
 
@@ -78,27 +78,27 @@ The *payload* for the JSON Web Token contains the request body parameters.
   }
   ```
 
-  Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](/editors/howitworks) section to find out more on ONLYOFFICE Docs service client-server interactions.
+  Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-* **Request to document builder service**
+### Request to document builder service
 
-  Validation is performed for incoming requests with the commands from the **document storage service** to the [document builder service](/editors/documentbuilderapi).
+  Validation is performed for incoming requests with the commands from the **document storage service** to the [document builder service](../../Document%20Builder%20API/index.md).
 
-  Sample parameters of request to document builder service
+  **Sample parameters of request to document builder service**
 
-  ```
+  ``` json
   {
       "async": true,
       "url": "https://example.com/url-to-example-script.docbuilder"
   }
   ```
 
-  Where the **example.com** is the name of the server where **document storage service** are installed. See the [How it works](/editors/howitworks) section to find out more on ONLYOFFICE Docs service client-server interactions.
+  Where the **example.com** is the name of the server where **document storage service** are installed. See the [How it works](../../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-  Sample of request to document builder service
+  **Sample of request to document builder service**
 
-  ```
-  POST docbuilder HTTP/1.1
+  ``` http
+  POST /docbuilder HTTP/1.1
   Host: documentserver
   Content-Type: application/json
 
@@ -107,27 +107,27 @@ The *payload* for the JSON Web Token contains the request body parameters.
   }
   ```
 
-  Where the **example.com** is the name of the server where **document storage service** are installed. See the [How it works](/editors/howitworks) section to find out more on ONLYOFFICE Docs service client-server interactions.
+  Where the **example.com** is the name of the server where **document storage service** are installed. See the [How it works](../../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 ## Outgoing requests
 
-* **Request to "callbackUrl" address by document editing service when the last user closed the document for editing without changes**
+### Request to "callbackUrl" address by document editing service when the last user closed the document for editing without changes
 
-  Validation is performed for outgoing requests to "[callbackUrl](/editors/config/editor#callbackUrl)" address by **document editing service**.
+  Validation is performed for outgoing requests to "[callbackUrl](../../../Usage%20API/Config/Editor/index.md#callbackurl)" address by **document editing service**.
 
-  Sample parameters of request to "callbackUrl" address by document editing service when the last user closed the document for editing without changes
+  **Sample parameters of request to "callbackUrl" address by document editing service when the last user closed the document for editing without changes**
 
-  ```
+  ``` json
   {
       "key": "Khirz6zTPdfd7",
       "status": 4
   }
   ```
 
-  Sample of request to "callbackUrl" address by document editing service when the last user closed the document for editing without changes
+  **Sample of request to "callbackUrl" address by document editing service when the last user closed the document for editing without changes**
 
-  ```
-  POST url-to-callback.ashx HTTP/1.1
+  ``` http
+  POST /url-to-callback.ashx HTTP/1.1
   Host: example.com
   Content-Type: application/json
 
@@ -136,6 +136,6 @@ The *payload* for the JSON Web Token contains the request body parameters.
   }
   ```
 
-  Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](/editors/howitworks) section to find out more on ONLYOFFICE Docs service client-server interactions.
+  Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-  When performing the GET requests from ONLYOFFICE Docs an [authorization header](/editors/signature/request) with the token is added.
+  When performing the GET requests from ONLYOFFICE Docs an [authorization header](Token%20in%20header/index.md) with the token is added.

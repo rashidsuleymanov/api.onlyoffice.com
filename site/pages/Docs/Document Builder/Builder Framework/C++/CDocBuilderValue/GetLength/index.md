@@ -2,13 +2,13 @@
 
 Returns the length if the **CDocBuilderValue** object is an array/typed array. Otherwise, returns 0.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.GetLength* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.GetLength* method is not used.
 
 ## Example
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;

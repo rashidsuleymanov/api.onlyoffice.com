@@ -1,156 +1,122 @@
+---
+order: -1
+---
+
 The following examples will show you how to use ONLYOFFICE macros and compare the JavaScript code with Microsoft Visual Basic for Applications code so that you could see the difference and understand what can be done to convert the VBA code to ONLYOFFICE macros.
 
-* [](/plugin/macrosamples/writedatatoworksheetcell)
+## Write data to worksheet cell
 
-  [Write data to worksheet cell](/plugin/macrosamples/writedatatoworksheetcell)
+In this example we are writing the data (the "Hello world" phrase) to fourth column of the third row of the worksheet.
 
-  In this example we are writing the data (the "Hello world" phrase) to fourth column of the third row of the worksheet.
+[More](Write%20data%20to%20worksheet%20cell/index.md)
 
-  [More](/plugin/macrosamples/writedatatoworksheetcell)
+## Change cell background color
 
-* [](/plugin/macrosamples/changecellbackgroundcolor)
+In this example we are seting the background color of the cell B3 to blue.
 
-  [Change cell background color](/plugin/macrosamples/changecellbackgroundcolor)
+[More](Change%20cell%20background%20color/index.md)
 
-  In this example we are seting the background color of the cell B3 to blue.
+## Change cell font color
 
-  [More](/plugin/macrosamples/changecellbackgroundcolor)
+In this example we are seting the font color of the cell B4 to red.
 
-* [](/plugin/macrosamples/changecellfontcolor)
+[More](Change%20cell%20font%20color/index.md)
 
-  [Change cell font color](/plugin/macrosamples/changecellfontcolor)
+## Make cell font bold
 
-  In this example we are seting the font color of the cell B4 to red.
+In this example we are seting the font of the cell A2 to bold.
 
-  [More](/plugin/macrosamples/changecellfontcolor)
+[More](Make%20cell%20font%20bold/index.md)
 
-* [](/plugin/macrosamples/makecellfontbold)
+## Merge cell range
 
-  [Make cell font bold](/plugin/macrosamples/makecellfontbold)
+In this example we are merging selected cell range.
 
-  In this example we are seting the font of the cell A2 to bold.
+[More](Merge%20cell%20range/index.md)
 
-  [More](/plugin/macrosamples/makecellfontbold)
+## Unmerge cell range
 
-* [](/plugin/macrosamples/mergecellrange)
+In this example we are unmerging selected cell range.
 
-  [Merge cell range](/plugin/macrosamples/mergecellrange)
+[More](Unmerge%20cell%20range/index.md)
 
-  In this example we are merging selected cell range.
+## Set column width
 
-  [More](/plugin/macrosamples/mergecellrange)
+In this example we are setting the width for the second ("B") column.
 
-* [](/plugin/macrosamples/unmergecellrange)
+[More](Set%20column%20width/index.md)
 
-  [Unmerge cell range](/plugin/macrosamples/unmergecellrange)
+## Format range as table
 
-  In this example we are unmerging selected cell range.
+In this example we are formatting the range of cells as a table.
 
-  [More](/plugin/macrosamples/unmergecellrange)
+[More](Format%20range%20as%20a%20table/index.md)
 
-* [](/plugin/macrosamples/setcolumnwidth)
+## Add chart
 
-  [Set column width](/plugin/macrosamples/setcolumnwidth)
+In this example we are creating the chart from the data in the "C5:D7" cell range.
 
-  In this example we are setting the width for the second ("B") column.
+[More](Add%20chart/index.md)
 
-  [More](/plugin/macrosamples/setcolumnwidth)
+## Highlight duplicates
 
-* [](/plugin/macrosamples/formatrangeasatable)
+In this example we are highlighting duplicates in the selected area with different colors to recognize duplicated values quickly.
 
-  [Format range as table](/plugin/macrosamples/formatrangeasatable)
+[More](Highlight%20duplicates/index.md)
 
-  In this example we are formatting the range of cells as a table.
+## Next blank row
 
-  [More](/plugin/macrosamples/formatrangeasatable)
+In this example we are finding the next available blank row in a worksheet.
 
-* [](/plugin/macrosamples/addchart)
+[More](Next%20blank%20row/index.md)
 
-  [Add chart](/plugin/macrosamples/addchart)
+## Insert text
 
-  In this example we are creating the chart from the data in the "C5:D7" cell range.
+In this example we are inserting text into the document at the current cursor position.
 
-  [More](/plugin/macrosamples/addchart)
+[More](Insert%20text/index.md)
 
-* [](/plugin/macrosamples/highlightduplicates)
+## Currency exchange rates
 
-  [Highlight duplicates](/plugin/macrosamples/highlightduplicates)
+In this example we are returning information about the exchange rates for the last several days and fill in the table with the received values.
 
-  In this example we are highlighting duplicates in the selected area with different colors to recognize duplicated values quickly.
+[More](Currency%20exchange%20rates/index.md)
 
-  [More](/plugin/macrosamples/highlightduplicates)
+## Import CSV/TXT data
 
-* [](/plugin/macrosamples/nextblankrow)
+In this example we are importing data from remote CSV/TXT files into the spreadsheet.
 
-  [Next blank row](/plugin/macrosamples/nextblankrow)
+[More](Import%20CSV%20or%20TXT%20data/index.md)
 
-  In this example we are finding the next available blank row in a worksheet.
+## Recalculate worksheet values
 
-  [More](/plugin/macrosamples/nextblankrow)
+This macro repeatedly recalculates worksheet cell values within one-second intervals.
 
-* [](/plugin/macrosamples/inserttext)
+[More](Recalculate%20worksheet%20values/index.md)
 
-  ## [Insert text](/plugin/macrosamples/inserttext)
+## Unhide all rows and columns
 
-  In this example we are inserting text into the document at the current cursor position.
+In this example we are unhiding all the rows and columns in a worksheet.
 
-  [More](/plugin/macrosamples/inserttext)
+[More](Unhide%20all%20rows%20and%20columns/index.md)
 
-* [](/plugin/macrosamples/currencyexchangerates)
+## Remove shapes from slides
 
-  ## [Currency exchange rates](/plugin/macrosamples/currencyexchangerates)
+In this example we are removing shapes from the presentation.
 
-  In this example we are returning information about the exchange rates for the last several days and fill in the table with the received values.
+[More](Remove%20shapes%20from%20slides/index.md)
 
-  [More](/plugin/macrosamples/currencyexchangerates)
+## Insert unique id
 
-* [](/plugin/macrosamples/importcsv)
+In this example we are inserting a unique id into a form document.
 
-  ## [Import CSV/TXT data](/plugin/macrosamples/importcsv)
+[More](Insert%20unique%20id/index.md)
 
-  In this example we are importing data from remote CSV/TXT files into the spreadsheet.
+## Complete address information
 
-  [More](/plugin/macrosamples/importcsv)
+In this example we are completing address information in the spreadsheet.
 
-* [](/plugin/macrosamples/recalculatevalues)
-
-  ## [Recalculate worksheet values](/plugin/macrosamples/recalculatevalues)
-
-  This macro repeatedly recalculates worksheet cell values within one-second intervals.
-
-  [More](/plugin/macrosamples/recalculatevalues)
-
-* [](/plugin/macrosamples/unhideallrows)
-
-  ## [Unhide all rows and columns](/plugin/macrosamples/unhideallrows)
-
-  In this example we are unhiding all the rows and columns in a worksheet.
-
-  [More](/plugin/macrosamples/unhideallrows)
-
-* [](/plugin/macrosamples/removeshapes)
-
-  ## [Remove shapes from slides](/plugin/macrosamples/removeshapes)
-
-  In this example we are removing shapes from the presentation.
-
-  [More](/plugin/macrosamples/removeshapes)
-
-* [](/plugin/macrosamples/insertid)
-
-  ## [Insert unique id](/plugin/macrosamples/insertid)
-
-  In this example we are inserting a unique id into a form document.
-
-  [More](/plugin/macrosamples/insertid)
-
-* [](/plugin/macrosamples/completeaddressinformation)
-
-  ## [Complete address information](/plugin/macrosamples/completeaddressinformation)
-
-  In this example we are completing address information in the spreadsheet.
-
-  [More](/plugin/macrosamples/completeaddressinformation)
+[More](Complete%20address%20information/index.md)
 
 ## Support
 

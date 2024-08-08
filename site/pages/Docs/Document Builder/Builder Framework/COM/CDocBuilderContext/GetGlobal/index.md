@@ -2,7 +2,7 @@
 
 Returns the global object for the current context.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderContext.GetGlobal* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderContext.GetGlobal* method is not used.
 
 ## Parameters:
 
@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderContext.GetGlobal* 
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;

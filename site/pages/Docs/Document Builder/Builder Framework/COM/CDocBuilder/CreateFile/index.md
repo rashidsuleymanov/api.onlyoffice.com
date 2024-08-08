@@ -4,16 +4,16 @@ Creates a new file. The type of the file which will be created needs to be set.
 
 ## Parameters:
 
-| Name     | Type            | Description                                                                                                                                                                                   |
-| -------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *type*   | BSTR            | The file extension. The following values are possible: **docx**, **xlsx**, **pptx**, or **pdf** (see [AVS\_OFFICESTUDIO\_FILE\_XXX](/docbuilder/integrationapi/default#format-types) values). |
-| *result* | VARIANT\_BOOL\* | Specifies if the operation of creating a file is successful or not.                                                                                                                           |
+| Name     | Type            | Description                                                                                                                                                                                            |
+| -------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| *type*   | BSTR            | The file extension. The following values are possible: **docx**, **xlsx**, **pptx**, or **pdf** (see [OFFICESTUDIO\_FILE\_XXX](../../../../Builder%20App/Overview/index.md#format-types) values). |
+| *result* | VARIANT\_BOOL\* | Specifies if the operation of creating a file is successful or not.                                                                                                                                    |
 
 ## Example
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 VARIANT_BOOL b;
@@ -24,6 +24,6 @@ oBuilder->Dispose();
 
 #### .docbuilder
 
-```
+```js
 builder.CreateFile("docx");
 ```

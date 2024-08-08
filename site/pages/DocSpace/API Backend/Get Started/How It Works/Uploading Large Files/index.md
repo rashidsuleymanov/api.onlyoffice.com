@@ -1,16 +1,20 @@
+---
+order: -2
+---
+
 In this article, you will learn how to upload large files to DocSpace using our API Backend.
 
 ## Step 1. Creating a file upload session
 
-To upload files with size greater than 10 Mb (10 485 760 bytes), you need to create a session by sending the POST request to the following [endpoint](/docspace/method/files/post/api/2.0/files/%7bfolderid%7d/upload/create_session):
+To upload files with size greater than 10 Mb (10 485 760 bytes), you need to create a session by sending the POST request to the following endpoint:
 
-```
-POST api/2.0/files/{folderid}/upload/create_session
+``` http
+POST /api/2.0/files/{folderid}/upload/create_session
 ```
 
 The minimum data that the request body must contain:
 
-```
+``` json
 {
     "CreateOn": "2024-01-01T12:00:00.600Z",
     "FileName": "name.docx",
@@ -21,7 +25,7 @@ The minimum data that the request body must contain:
 
 An object with the information about the created session will be returned in the response:
 
-```
+``` json
 {
     "success": true,
     "data": {
@@ -42,14 +46,14 @@ The *location* parameter contain URL which will be used to upload the file chunk
 
 Split the file into chunks. Each chunk must be equal to or less than 10 MB (1010241024 bytes), and multiples of 512 bytes. Use the resulting URLs to upload the chunks.
 
-**Known issues**
-
-Please pay attention to the following details:
-
-* Each chunk must be submitted in the order they appear in the file.
-* Each chunk must be multiple of **512** and equal to or less than **10 Mb**.
-* After receiving each chunk, the server will respond with the current information about the upload session if no errors occurred.
-* When the number of bytes uploaded is equal to the number of bytes you sent in the initial request, the server responds with the **201 Created** status and sends you information about the uploaded file.
+> **Known issues**
+> 
+> Please pay attention to the following details:
+> 
+> * Each chunk must be submitted in the order they appear in the file.
+> * Each chunk must be multiple of **512** and equal to or less than **10 Mb**.
+> * After receiving each chunk, the server will respond with the current information about the upload session if no errors occurred.
+> * When the number of bytes uploaded is equal to the number of bytes you sent in the initial request, the server responds with the **201 Created** status and sends you information about the uploaded file.
 
 The request body must contain the **FormData** object.
 
@@ -57,9 +61,9 @@ The **"Content-type": "multipart/form-data"** header type specifies that the req
 
 After the last chunk is uploaded, the server returns an object in the following format:
 
-```
+``` json
 {
-    "file": {},,
+    "file": {},
     "folderId": 12345,
     "id": 123456,
     "title": "demo.docx",
@@ -70,7 +74,7 @@ After the last chunk is uploaded, the server returns an object in the following 
 
 Below you can see an example in Node.js:
 
-```
+``` javascript
 const fileResponse = await fetch("url_to_file")
 const data = await fileResponse.arrayBuffer()
 const size = fileResponse.headers.get("content-length")

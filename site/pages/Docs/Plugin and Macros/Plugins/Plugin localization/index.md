@@ -1,12 +1,16 @@
+---
+order: -4
+---
+
 All the plugins are created in English by default. If you want them to be available in your language, you can add translations to them.
 
 ## Translating config.json sections
 
-First you can translate the [config.json](/plugin/config) file. To do that, open it and find all the strings in English. Usually they are [name](/plugin/config#name), [variations.description](/plugin/config#description) and [variations.buttons.text](/plugin/config#buttons) nodes of the configuration object.
+First you can translate the [config.json](../../Usage%20API/Config/index.md) file. To do that, open it and find all the strings in English. Usually they are [name](../../Usage%20API/Config/index.md#name), [variations.description](../../Usage%20API/Config/index.md#description) and [variations.buttons.text](../../Usage%20API/Config/index.md#buttons) nodes of the configuration object.
 
 Add the new nodes with the key name plus *Locale*, equal to an object that will have the language locale as the key and the translation as the value. For example, for the *name* key the localization object will look like this:
 
-```
+``` json
 "name": "Highlight code",
 "nameLocale": {
     "de": "Code hervorheben",
@@ -15,9 +19,9 @@ Add the new nodes with the key name plus *Locale*, equal to an object that will 
 }
 ```
 
-The complete translations in the [config.json](/plugin/config) for the [highlighting plugin code](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/highlightcode) will look the following way:
+The complete translations in the [config.json](../../Usage%20API/Config/index.md) for the [highlighting plugin code](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/highlightcode) will look the following way:
 
-```
+``` json
 {
     "name": "Highlight code",
     "nameLocale": {
@@ -25,7 +29,6 @@ The complete translations in the [config.json](/plugin/config) for the [highligh
         "es": "Resaltar el código",
         "fr": "Code en surbrillance"
     },
-    ...,
     "variations": [
         {
             "description": "Highlight code",
@@ -34,7 +37,6 @@ The complete translations in the [config.json](/plugin/config) for the [highligh
                 "es": "Resaltar el código",
                 "fr": "Code en surbrillance"
             },
-            ...,
             "buttons": [
                 {
                     "text": "Cancel",
@@ -43,10 +45,8 @@ The complete translations in the [config.json](/plugin/config) for the [highligh
                         "es": "Cancelar",
                         "fr": "Annuler"
                     },
-                    ...
                 }
             ],
-            ...
         }
     ]
 }
@@ -54,10 +54,9 @@ The complete translations in the [config.json](/plugin/config) for the [highligh
 
 ## Localizing index.html and plugin code files
 
-Find all the strings you want to be localized from the [index.html](/plugin/indexhtml) and the [pluginCode.js](/plugin/code) files and create their list. Then create the *translations* folder in the plugin directory, so that the structure looked like this:
+Find all the strings you want to be localized from the [index.html](../../Usage%20API/index.html/index.md) and the [pluginCode.js](../../Usage%20API/Plugin%20object/index.md) files and create their list. Then create the *translations* folder in the plugin directory, so that the structure looked like this:
 
-```
-..
+``` ini
 [translations]
 config.json
 index.html
@@ -66,7 +65,7 @@ pluginCode.js
 
 Create the language *.json* files for each language you want to add the translations for with the language four-letter code for its name (e.g. *de-DE.json*). These files will contain the objects with the source (English) language words and phrases as keys and translations into the selected language as values. This is an example of the German translation:
 
-```
+``` json
 {
     "Language": "Sprache",
     "Highlight": "Hervorheben",
@@ -76,7 +75,7 @@ Create the language *.json* files for each language you want to add the translat
 
 Starting from version 7.2, you can add the *langs.json* file to the translations folder. It contains the names of files with translations into a specific language in the array format:
 
-```
+``` json
 [
     "cs-CZ",
     "de-DE",
@@ -89,8 +88,7 @@ First, the *langs.json* file will be requested and a full match of the language 
 
 Once all the localization files are added, the plugin file structure will look like this:
 
-```
-..
+``` ini
 [translations]
     de-DE.json
     es-ES.json
@@ -107,19 +105,19 @@ You can now replace the strings in the files with their translated values.
 
 To apply the translations you will need to add unique IDs to each element which has the string value you want to localize. For instance, you want to localize the **New** button in this part of code:
 
-```
+``` html
 <button>New</button>
 ```
 
 Add the *id* attribute to it, so that it looked like this:
 
-```
+``` html
 <button id="button_new">New</button>
 ```
 
-After that add the [window.Asc.plugin.onTranslate](/plugin/events/ontranslate) function to the [pluginCode.js](/plugin/code) file:
+After that add the window.Asc.plugin.onTranslate function to the [pluginCode.js](../../Usage%20API/Plugin%20object/index.md) file:
 
-```
+``` javascript
 window.Asc.plugin.onTranslate = function()
     {
         var label = document.getElementById("button_new");
@@ -132,7 +130,7 @@ The *window\.Asc.plugin.onTranslate* function will be called right after the plu
 
 If you need to localize more than one word/phrase, the *window\.Asc.plugin.onTranslate* function can have the following appearance:
 
-```
+``` javascript
 window.Asc.plugin.onTranslate = function()
     {
         document.getElementById("button_delete").innerHTML = window.Asc.plugin.tr("Delete");
@@ -144,6 +142,6 @@ window.Asc.plugin.onTranslate = function()
 
 Where every line will represent the localized element, reached using the appropriate ID.
 
-Please note, that the translation uses the *.innerHTML* method and thus can contain not only words and phrases, but also some HTML elements (tags, links, etc.) Do not forget to escape any quotes in the translations (like in any *.json* file) so that they worked correctly.
+> Please note, that the translation uses the *.innerHTML* method and thus can contain not only words and phrases, but also some HTML elements (tags, links, etc.) Do not forget to escape any quotes in the translations (like in any *.json* file) so that they worked correctly.
 
 Now, once the editors are started, the current interface language will be used to determine if the plugin has the same locale translation. If it is so, the plugin language will be changed to fit the editor interface language and the translation will be applied.

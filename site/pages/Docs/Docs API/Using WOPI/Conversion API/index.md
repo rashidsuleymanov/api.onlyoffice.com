@@ -1,3 +1,7 @@
+---
+order: -3
+---
+
 In order to convert different file formats in the online office, the POST request should be used. These requests are sent to the */cool/convert-to/\<format>&\<lang=xx-XX>* or */lool/convert-to/\<format>&\<lang=xx-XX>* endpoints.
 
 ## Request parameters and their description
@@ -10,17 +14,17 @@ In order to convert different file formats in the online office, the POST reques
 | file             | A file to convert in the payload.                                                                                                       | object  | required |
 | lang             | The default format language. It is used for the date type cells. If the language is specified, it determines the display/output format. | string  | optional |
 
-Sample of conversion request
+### Sample of conversion request
 
-```
+``` bash
 curl -F "data=sample.txt" https://documentserver/cool/convert-to/docx > result.docx
 ```
 
 where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
 
-Sample of conversion request in the HTML format
+### Sample of conversion request in the HTML format
 
-```
+``` html
 <form action="https://documentserver/cool/convert-to/docx" enctype="multipart/form-data" method="post">
     File: <input type="file" name="data"><br/>
     <input type="submit" value="Convert to DOCX">
@@ -29,17 +33,17 @@ Sample of conversion request in the HTML format
 
 where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
 
-Sample of conversion request with the *format* parameter
+### Sample of conversion request with the *format* parameter
 
-```
+``` bash
 curl -F "data=sample.odt" -F "format=pdf" "PDFVer=PDF/A-2b" https://documentserver/cool/convert-to > result.pdf
 ```
 
 where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
 
-Sample of conversion request with the *format* parameter in the HTML format
+### Sample of conversion request with the *format* parameter in the HTML format
 
-```
+``` html
 <form action="https://documentserver/cool/convert-to" enctype="multipart/form-data" method="post">
     File: <input type="file" name="data"><br/>
     Format: <input type="text" name="format"><br/>

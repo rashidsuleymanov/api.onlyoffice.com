@@ -1,19 +1,24 @@
-Description
+---
+order: -11
+---
+
+
+## Description
 
 Adds a new chart to the selected cell range.
 
-```
+``` javascript
 (function()
 {
     Api.GetActiveSheet().AddChart("'Sheet1'!$C$5:$D$7", true, "bar", 2, 105 * 36000, 105 * 36000, 0, 0, 9, 0);
 })();
 ```
 
-Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [AddChart](/officeapi/spreadsheetapi/apiworksheet/addchart)
+Methods used: GetActiveSheet, AddChart
 
-Reference Microsoft VBA macro code
+## Reference Microsoft VBA macro code
 
-```
+``` vb
 Sub example()
     With ActiveSheet.ChartObjects.Add(Left:=300, Width:=300, Top:=10, Height:=300)
         .Chart.SetSourceData Source:=Sheets("Sheet1").Range("C5:D7")
@@ -21,6 +26,6 @@ Sub example()
 End Sub
 ```
 
-Result
+## Result
 
-![Chart](/content/img/plugins/add_chart.png)
+![Chart](/assets/images/plugins/add_chart.png)

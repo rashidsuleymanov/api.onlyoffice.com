@@ -1,4 +1,4 @@
-Description
+## Description
 
 Searches for and replaces text in the document when it is reopened.
 
@@ -6,27 +6,27 @@ Searches for and replaces text in the document when it is reopened.
 
 **Supported editors:** documents.
 
-![SearchAndReplaceOnStart](/content/img/plugins/gifs/search-and-replace-on-start.gif)
+![SearchAndReplaceOnStart](/assets/images/plugins/gifs/search-and-replace-on-start.gif)
 
-Installation
+## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/searchAndReplaceOnStart) and install it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/searchAndReplaceOnStart) and install it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
-Usage
+## Usage
 
 1. Enter any text into the document (in this example, it is *ONLYOFFICE*).
 2. In the plugin code, enter the replacement text in **replaceString** parameter.
 3. Reopen the document.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/searchAndReplaceOnStart>.
 
 1. *config.json*, *index.html*, and *code.js*
 
-Config
+## Config
 
-```
+``` json
 {
     "name"       : "searchAndReplaceOnStart",
     "guid"       : "asc.{C820F3CC-1248-4CA2-8D0F-D7EFD44DE09C}",
@@ -53,13 +53,13 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onDocumentContentReady](/plugin/events/ondocumentcontentready)
-* [executeMethod ("SearchAndReplace")](/plugin/executemethod/text/searchandreplace)
+* button
+* init
+* onDocumentContentReady
+* executeMethod ("SearchAndReplace")
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

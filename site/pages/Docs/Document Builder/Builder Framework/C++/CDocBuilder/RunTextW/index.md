@@ -1,8 +1,8 @@
 #### bool RunTextW(sCommands);
 
-Runs all the commands for the document creation using a single command in the Unicode format. Compared to [CDocBuilder.ExecuteCommand](/docbuilder/integrationapi/c/cdocbuilder/executecommand) where only one command at a time is allowed, *CDocBuilder.RunTextW* makes it possible to enter all the commands for the document creation at once.
+Runs all the commands for the document creation using a single command in the Unicode format. Compared to [CDocBuilder.ExecuteCommand](../Dispose/index.md) where only one command at a time is allowed, *CDocBuilder.RunTextW* makes it possible to enter all the commands for the document creation at once.
 
-Please note, that for the *.docbuilder* file the *CDocBuilder.RunTextW* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilder.RunTextW* method is not used.
 
 ## Parameters:
 
@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilder.RunTextW* method i
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;

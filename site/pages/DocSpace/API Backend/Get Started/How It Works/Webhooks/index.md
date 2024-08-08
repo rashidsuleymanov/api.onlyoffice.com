@@ -1,10 +1,14 @@
+---
+order: -1
+---
+
 Webhooks are the HTTP/HTTPS callbacks triggered by the events of the API requests, such as POST, PUT, and DELETE. The SSL verification is set when configuring webhooks.
 
 The DocSpace administrator can create webhooks, subscribe to them, and configure webhooks so that events on the portal trigger actions on external services. This approach can be useful for synchronizing and tracking certain events.
 
 The instructions on how to create and configure webhooks can be found [here](https://helpcenter.onlyoffice.com/administration/docspace-webhooks.aspx).
 
-The API methods for working with webhooks can be found [in this section](/docspace/section/settings/webhooks).
+The API methods for working with webhooks can be found in this section.
 
 ## Webhook request
 
@@ -12,7 +16,7 @@ The **Accept** and **Content-Type** webhook headers must be used. Custom headers
 
 The API request is signed with the secret key which is generated when creating the webhook:
 
-```
+``` javascript
 private string GetSecretHash(string secretKey, string body)
 {
     var secretBytes = Encoding.UTF8.GetBytes(secretKey);
@@ -25,7 +29,7 @@ private string GetSecretHash(string secretKey, string body)
 
 The secret key is sent in the **x-docspace-signature-256** header:
 
-```
+``` json
 {
     "Accept": ["*/*"],
     "x-docspace-signature-256": [
@@ -40,7 +44,7 @@ The webhook request body contains the original request body.
 
 The request timeout is 5 minutes:
 
-```
+``` js
 var lifeTime = TimeSpan.FromMinutes(5);
 
 Func<IServiceProvider, HttpRequestMessage, IAsyncPolicy<HttpResponseMessage>> policyHandler = (s, _) =>

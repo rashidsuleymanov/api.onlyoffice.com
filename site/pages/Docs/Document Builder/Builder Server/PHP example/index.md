@@ -1,6 +1,10 @@
+---
+order: -2
+---
+
 ## Introduction
 
-To integrate **ONLYOFFICE Document Builder** into your own website on **PHP** you need to download and install **ONLYOFFICE Document Builder** on your local server and use the [PHP Example](/docbuilder/integratingdocumentbuilder) for their integration. We guide will show you how to run the PHP example on [Windows OS](#Windows).
+To integrate **ONLYOFFICE Document Builder** into your own website on **PHP** you need to download and install **ONLYOFFICE Document Builder** on your local server and use the [PHP Example](../Overview/index.md) for their integration. We guide will show you how to run the PHP example on [Windows OS](#running-the-example-on-windows-os).
 
 ## Running the example on Windows OS
 
@@ -12,12 +16,14 @@ First, download **ONLYOFFICE Document Builder** and install it to your computer:
 
 ## Step 2. Download the PHP example code for the builder integration
 
-Download the [PHP Example](/docbuilder/integratingdocumentbuilder) from our site and unpack it somewhere to your computer.
+Download the [PHP Example](../Overview/index.md) from our site and unpack it somewhere to your computer.
 
 You need to connnect the builder to your web site. For that specify the path to the builder installation in the *config.php* file:
 
-```
+``` php
+<?php
 $GLOBALS['builder_path'] = "C:\\ONLYOFFICE\\DocumentBuilder\\docbuilder.exe";
+?>
 ```
 
 ## Step 3. Install the prerequisites
@@ -38,17 +44,17 @@ You can use any web server capable of runnig PHP code to run the sample. We will
 
    and find the **PHP Manager** feature in the **Features View** in **IIS**.
 
-   ![](/content/img/php/manager.png)
+   ![PHP manager](/assets/images/php/manager.png)
 
    You need to register the installed PHP version in **IIS** using **PHP Manager**.
 
    Double-click **PHP Manager** to open it, click the **Register new PHP version** task and specify the full path to the main PHP executable file location. For example: C:\Program Files\PHP\php-cgi.exe.
 
-   ![](/content/img/php/php-version-1.jpg)
+   ![Register PHP version](/assets/images/php/php-version-1.jpg)
 
    After clicking **OK** the new **PHP version** will be registered with IIS and will become active.
 
-   ![](/content/img/php/php-version-2.jpg)
+   ![New PHP version](/assets/images/php/php-version-2.jpg)
 
 2. Configure IIS to handle PHP requests:
 
@@ -56,7 +62,7 @@ You can use any web server capable of runnig PHP code to run the sample. We will
 
    Double-click the **Handler Mappings** feature:
 
-   ![](/content/img/php/handlerclick.png)
+   ![Handler mappings](/assets/images/php/handlerclick.png)
 
    In the **Action** panel, click **Add Module Mapping**. In the **Add Module Mapping** dialog box, specify the configuration settings as follows:
 
@@ -70,7 +76,7 @@ You can use any web server capable of runnig PHP code to run the sample. We will
 
      click **OK**.
 
-   ![](/content/img/php/handler-add.png)
+   ![Add handler](/assets/images/php/handler-add.png)
 
 After IIS manager configuration is complete everything is ready for running the **PHP** example.
 
@@ -80,7 +86,7 @@ After IIS manager configuration is complete everything is ready for running the 
 
    On the **Connections** panel right-click the **Sites** node in the tree, then click **Add Website**.
 
-   ![](/content/img/csharp/add.png)
+   ![Add website](/assets/images/csharp/add.png)
 
 2. In the **Add Website** dialog box specify the name of the folder with the PHP project in the **Site name** box.
 
@@ -88,10 +94,10 @@ After IIS manager configuration is complete everything is ready for running the 
 
    Specify the unique value used only for this website in the **Port** box.
 
-   ![](/content/img/docbuilder/php-add.png)
+   ![Site name](/assets/images/docbuilder/php-add.png)
 
 3. Browse your web site with the IIS manager:
 
    Right-click the site -> **Manage Website** -> **Browse**
 
-   ![](/content/img/php/browse.png)
+   ![Browse](/assets/images/php/browse.png)

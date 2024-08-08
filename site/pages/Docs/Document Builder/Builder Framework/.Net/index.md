@@ -1,16 +1,20 @@
+---
+order: -3
+---
+
 For the integration of **ONLYOFFICE Document Builder** into any application, the .Net **doctrenderer** library is used. The current application version contains five main classes:
 
 * *CDoctrenderer* class - used by **ONLYOFFICE Document Builder** in the file conversion process.
-* [CDocBuilder](/docbuilder/integrationapi/net/cdocbuilder) class - used by **ONLYOFFICE Document Builder** for the document file (text document, spreadsheet, presentation, form document, PDF) to be generated.
-* [CDocBuilderValue](/docbuilder/integrationapi/net/cdocbuildervalue) class - used by **ONLYOFFICE Document Builder** for getting the results of called JS commands. It represents a wrapper for a JS object.
-* [CDocBuilderContextScope](/docbuilder/integrationapi/net/cdocbuildercontextscope) class - the stack-allocated class which sets the execution context for all operations executed within a local scope.
-* [CDocBuilderContext](/docbuilder/integrationapi/net/cdocbuildercontext) class - used by **ONLYOFFICE Document Builder** for getting JS context for working.
+* [CDocBuilder](CDocBuilder/index.md) class - used by **ONLYOFFICE Document Builder** for the document file (text document, spreadsheet, presentation, form document, PDF) to be generated.
+* [CDocBuilderValue](CDocBuilderValue/index.md) class - used by **ONLYOFFICE Document Builder** for getting the results of called JS commands. It represents a wrapper for a JS object.
+* [CDocBuilderContextScope](CDocBuilderContextScope/index.md) class - the stack-allocated class which sets the execution context for all operations executed within a local scope.
+* [CDocBuilderContext](CDocBuilderContext/index.md) class - used by **ONLYOFFICE Document Builder** for getting JS context for working.
 
 ## Example
 
 #### .Net
 
-```
+```c#
 using docbuilder_net;
 
 using OfficeFileTypes = docbuilder_net.FileTypes;
@@ -71,7 +75,7 @@ namespace Test
 
 #### .docbuilder
 
-```
+```js
 builder.SetTmpFolder("DocBuilderTemp");
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();

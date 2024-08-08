@@ -2,7 +2,7 @@
 
 Writes data to the log file. It is used for logs in JS code.
 
-Please note, that for the *.docbuilder* file the *CDocBuilder.WriteData* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilder.WriteData* method is not used.
 
 ## Parameters:
 
@@ -16,7 +16,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilder.WriteData* method 
 
 #### .Net
 
-```
+```c#
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

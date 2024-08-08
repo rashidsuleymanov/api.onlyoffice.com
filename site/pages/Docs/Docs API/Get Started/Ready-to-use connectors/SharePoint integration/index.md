@@ -20,13 +20,25 @@ To start using ONLYOFFICE Docs with SharePoint, the following steps must be perf
 
 2. Click **Start -> SharePoint Management Shell**, go to the directory with the *.wsp* file.
 
-3. Run the *Install.ps1* script: PS> .\Install.ps1
+3. Run the *Install.ps1* script:
+
+   ``` bash
+   PS> .\Install.ps1
+   ```
 
 4. Enter your SharePoint site address:
 
-   https\://\<yoursharepointsite>
+   ```
+   https://<yoursharepointsite>
+   ```
 
-   Alternatively to steps **3** and **4** you can type the following command: Add-SPSolution -LiteralPath\<SolutionPath>/onlyoffice.wsp On the **SharePoint Central Administration** home page, click **System Settings -> Farm Management -> Manage farm solutions**. On the **Solution Management** page, click **onlyoffice.wsp -> Deploy Solution**.
+   > Alternatively to steps **3** and **4** you can type the following command:
+   >
+   >   ``` powershell
+   >   Add-SPSolution -LiteralPath<SolutionPath>/onlyoffice.wsp
+   >   ```
+   >   
+   >   On the **SharePoint Central Administration** home page, click **System Settings -> Farm Management -> Manage farm solutions**. On the **Solution Management** page, click **onlyoffice.wsp -> Deploy Solution**.
 
 5. On the **SharePoint Central Administration** home page, under **Application Management**, click **Manage web applications**.
 
@@ -44,15 +56,17 @@ To start using ONLYOFFICE Docs with SharePoint, the following steps must be perf
 
 In SharePoint, open the */\_layouts/15/Onlyoffice/Settings.aspx* page with administrative settings. Enter the following address to connect ONLYOFFICE Docs:
 
-https\://\<documentserver>/
+```
+https://<documentserver>/
+```
 
 where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the SharePoint server. The SharePoint server address must also be accessible from **ONLYOFFICE Docs** for correct work.
 
-Please note, that if you have subsites set up with SharePoint, you will need to additionally configure ONLYOFFICE Docs connection with each of them, in order for it to work properly. Go to each subsite settings and enter the ONLYOFFICE Docs address to the proper field.
+> Please note, that if you have subsites set up with SharePoint, you will need to additionally configure ONLYOFFICE Docs connection with each of them, in order for it to work properly. Go to each subsite settings and enter the ONLYOFFICE Docs address to the proper field.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the SharePoint administrative settings. In the ONLYOFFICE Docs [config file](/editors/signature/), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the SharePoint administrative settings. In the ONLYOFFICE Docs [config file](../../../Additional%20API/Signature/index.md), specify the same secret key and enable the validation.
 
-If JWT protection is enabled, it is necessary to specify a custom header name since the SharePoint security policy blocks external **Authorization** headers. This header should be specified in the ONLYOFFICE Docs signature settings as well. Further information about signature can be found [here](/editors/signature/).
+If JWT protection is enabled, it is necessary to specify a custom header name since the SharePoint security policy blocks external **Authorization** headers. This header should be specified in the ONLYOFFICE Docs signature settings as well. Further information about signature can be found [here](../../../Additional%20API/Signature/index.md).
 
 ## Compiling ONLYOFFICE SharePoint integration solution
 
@@ -74,7 +88,7 @@ There are two ways to compile ONLYOFFICE SharePoint integration solution:
 
 ## How it works
 
-The ONLYOFFICE integration follows the API documented [here](/editors/basic).
+The ONLYOFFICE integration follows the API documented [here](../../Basic%20concepts/index.md).
 
 1. User navigates to a document within SharePoint and selects the **Edit in ONLYOFFICE** action on context menu or ribbon.
 
@@ -98,11 +112,8 @@ The ONLYOFFICE integration follows the API documented [here](/editors/basic).
 
 7. When all users and client browsers are done with editing, they close the editing window.
 
-8. After [10 seconds](/editors/save#savedelay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting SharePoint ONLYOFFICE solution know that the clients have finished editing the document and closed it.
+8. After [10 seconds](../../How%20It%20Works/Saving%20file/index.md#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting SharePoint ONLYOFFICE solution know that the clients have finished editing the document and closed it.
 
 9. SharePoint downloads a new version of the document, replacing the old one.
-
-\
-
 
 Download the ONLYOFFICE SharePoint integration solution [here](https://github.com/ONLYOFFICE/onlyoffice-sharepoint).

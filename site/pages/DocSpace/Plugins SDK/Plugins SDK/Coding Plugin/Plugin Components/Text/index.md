@@ -4,17 +4,22 @@ Plain text.
 
 See the parameters of this component in [storybook](https://storybook.onlyoffice.io/?path=/docs/components-text--docs).
 
-![Text](/content/img/docspace/text.png)
+![Text](/assets/images/docspace/text.png)
 
-Extra parameters
+## Extra parameters
 
-| Name | Description                           | Type   | Example                     |
-| ---- | ------------------------------------- | ------ | --------------------------- |
-| text | The text inserted into the component. | string | "Sample for text component" |
+### text
 
-Example
+The text inserted into the component.
 
-```
+Type: string
+
+Example: "Sample for text component"
+
+
+### Example
+
+``` javascript
 import {IText} from "@onlyoffice/docspace-plugin-sdk";
 
 const text: IText = {

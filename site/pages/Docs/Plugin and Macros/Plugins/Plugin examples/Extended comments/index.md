@@ -1,4 +1,4 @@
-Description
+## Description
 
 Pastes, edits, and removes comments and replies (with user data) in a document.
 
@@ -6,13 +6,13 @@ Pastes, edits, and removes comments and replies (with user data) in a document.
 
 **Supported editors:** documents.
 
-![ExtendedComments](/content/img/plugins/gifs/extended-comments.gif)
+![ExtendedComments](/assets/images/plugins/gifs/extended-comments.gif)
 
-Installation
+## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_extended_comments) and install it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_extended_comments) and install it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
-Usage
+## Usage
 
 1. Open the **Plugins** tab and press **Extended comments**.
 2. Select the text you want to comment on. Enter the comment text and the author name in the fields. Define the **Problem Category**, **Severity**, and **Submitted by** fields for the comment and click the **Comment** button to add the comment into the document.
@@ -21,7 +21,7 @@ Usage
 5. To reply to any comment, select it in the lower plugin window and click the **Add reply** button. Enter a reply text, check if the comment is accepted or not, and click the **Reply** button.
 6. To edit any comment, click the **Edit** button, enter new text or change the comment properties, and click the **Ok** button.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_extended_comments>.
 
@@ -34,9 +34,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/e
    * [jQuery](https://jquery.com) - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. License: [MIT License](https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/example_extended_comments/licenses/jQuery.license).
    * [Select2](https://select2.org/) gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options. License: [MIT](https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/example_extended_comments/licenses/Select2.license).
 
-Config
+## Config
 
-```
+``` json
 {
     "name" : "Extended comments",
     "guid" : "asc.{91EAC419-EF8B-440C-A960-B451C7DF3A37}",
@@ -105,19 +105,19 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onAddComment](/plugin/events/onaddcomment)
-* [onChangeCommentData](/plugin/events/onchangecommentdata)
-* [onRemoveComment](/plugin/events/onremovecomment)
-* [executeMethod ("AddComment")](/plugin/executemethod/text/addcomment)
-* [executeMethod ("ChangeComment")](/plugin/executemethod/text/changecomment)
-* [executeMethod ("GetAllComments")](/plugin/executemethod/text/getallcomments)
-* [executeMethod ("MoveToComment")](/plugin/executemethod/text/movetocomment)
-* [executeMethod ("RemoveComments")](/plugin/executemethod/text/removecomments)
+* button
+* init
+* onAddComment
+* onChangeCommentData
+* onRemoveComment
+* executeMethod ("AddComment")
+* executeMethod ("ChangeComment")
+* executeMethod ("GetAllComments")
+* executeMethod ("MoveToComment")
+* executeMethod ("RemoveComments")
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

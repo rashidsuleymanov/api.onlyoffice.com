@@ -4,11 +4,12 @@ Custom textarea.
 
 See the parameters of this component in [storybook](https://storybook.onlyoffice.io/?path=/docs/components-textarea--docs).
 
-![Textarea](/content/img/docspace/textarea.png)
+![Textarea](/assets/images/docspace/textarea.png)
 
-Example
 
-```
+### Example
+
+``` javascript
 import {ITextArea, IMessage, Actions} from "@onlyoffice/docspace-plugin-sdk";
 
 const onChange = (value: string) => {

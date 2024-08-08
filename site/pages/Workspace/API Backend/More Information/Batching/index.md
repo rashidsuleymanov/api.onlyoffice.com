@@ -1,8 +1,12 @@
+---
+order: -1
+---
+
 The standard version of the ONLYOFFICE API is designed to make it really easy to get data for an individual object and to browse connections between objects. It also includes a limited ability to retrieve data for several objects in a single request.
 
 If your application needs the ability to access significant amounts of data in a single go - or you need to make changes to several objects at once, it is often more efficient to batch your queries rather than make multiple individual HTTP requests.
 
-To enable this, the ONLYOFFICE API supports request batching which allows you to pass instructions for several operations in a single HTTP request. You can also specify dependencies between related operations (described in the [Batch requests containing multiple methods](#multiple-methods-batch) section below). ONLYOFFICE will process each of your independent operations in parallel and will process your dependent operations sequentially. Once all operations have been completed, a consolidated response will be passed back to you and the HTTP connection will be closed.
+To enable this, the ONLYOFFICE API supports request batching which allows you to pass instructions for several operations in a single HTTP request. You can also specify dependencies between related operations (described in the [Batch requests containing multiple methods](#batch-requests-containing-multiple-methods) section below). ONLYOFFICE will process each of your independent operations in parallel and will process your dependent operations sequentially. Once all operations have been completed, a consolidated response will be passed back to you and the HTTP connection will be closed.
 
 ## Making a simple batched request
 
@@ -10,7 +14,7 @@ The batch API takes an array of logical HTTP requests represented as JSON arrays
 
 To make batched requests, you build a JSON object which describes each individual operation you'd like to perform and **POST** this to the ONLYOFFICE API endpoint at **/api/2.0/batch**. The following example gets the current user's profile information and the user group in a single request:
 
-```
+``` javascript
 batch = [
     {
         "method": "GET",
@@ -27,7 +31,7 @@ Once both operations have been completed, ONLYOFFICE sends a response which enca
 
 For the above request, the expected response would be of the form:
 
-```
+``` json
 {
     "count": 1,
     "startIndex": 0,
@@ -52,7 +56,7 @@ For the above request, the expected response would be of the form:
 
 It is possible to combine operations that would normally use different HTTP methods into a single batch request. While **GET** and **DELETE** operations must only have a **relativeUrl** and a **method** field, **POST** and **PUT** operations may contain an optional **body** field. This should be formatted as a raw HTTP POST body string, similar to a URL query string. The following example gets information on the current contact and updates the contact information for the contact with the selected ID in a single operation:
 
-```
+``` javascript
 batch = [
     {
         "method": "GET",

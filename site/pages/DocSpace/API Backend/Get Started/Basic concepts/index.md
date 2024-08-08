@@ -1,4 +1,7 @@
-ONLYOFFICE DocSpace API Backendv2.5
+---
+order: -3
+---
+
 
 [ONLYOFFICE DocSpace](https://www.onlyoffice.com/docspace.aspx) is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, and forms in customizable rooms. It provides the following features:
 
@@ -10,7 +13,7 @@ The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/
 
 ## Authentication
 
-Authentication in the ONLYOFFICE DocSpace API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header. For information and examples please visit the [Authentication](/docspace/backend/howitworks/auth) section.
+Authentication in the ONLYOFFICE DocSpace API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header. For information and examples please visit the [Authentication](../How%20It%20Works/Passing%20Authentication/index.md) section.
 
 ## Making requests
 

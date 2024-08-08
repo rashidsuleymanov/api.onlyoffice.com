@@ -1,3 +1,7 @@
+---
+order: -2
+---
+
 **ONLYOFFICE Document Builder** is available for Windows and Linux.
 
 You can download it from our website or compile from source codes and deploy the solution on your local server using the specially designed **build\_tools**.
@@ -9,13 +13,13 @@ The Linux OS versions of **ONLYOFFICE Document Builder** require the following d
 
 **Debian/Ubuntu:**
 
-```
+```bash
 sudo apt-get install libstdc++6 libcurl3-gnutls libc6 libxml2 libcurl3 fonts-dejavu fonts-opensymbol
 sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-carlito
 ```
 
 **RedHat/CentOS:**
 
-```
+```bash
 sudo yum install glibc libcurl libxml2 dejavu-lgc-sans-fonts dejavu-lgc-sans-mono-fonts dejavu-lgc-serif-fonts dejavu-sans-fonts dejavu-sans-mono-fonts dejavu-serif-fonts libreoffice-opensymbol-fonts
 ```

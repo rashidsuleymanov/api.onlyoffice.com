@@ -2,7 +2,7 @@
 
 Converts the **CDocBuilderValue** object to an integer.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.ToInt* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.ToInt* method is not used.
 
 ## Parameters:
 
@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderValue.ToInt* method
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;

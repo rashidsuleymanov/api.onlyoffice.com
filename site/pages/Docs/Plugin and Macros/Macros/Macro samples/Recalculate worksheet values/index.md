@@ -1,8 +1,12 @@
-Description
+---
+order: -5
+---
+
+## Description
 
 Repeatedly recalculates worksheet cell values within one-second intervals.
 
-```
+``` javascript
 (function ()
 {
     let timerId = setInterval(function(){
@@ -14,8 +18,8 @@ Repeatedly recalculates worksheet cell values within one-second intervals.
 })();
 ```
 
-Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [GetRange](/officeapi/spreadsheetapi/api/getrange), [SetValue](/officeapi/spreadsheetapi/apirange/setvalue)
+Methods used: GetActiveSheet, GetRange, SetValue
 
-Result
+## Result
 
-![Recalculate worksheet values](/content/img/plugins/recalculate-cell-values.png)
+![Recalculate worksheet values](/assets/images/plugins/recalculate-cell-values.png)

@@ -4,11 +4,11 @@ Field name in the form.
 
 See the parameters of this component in [storybook](https://storybook.onlyoffice.io/?path=/docs/components-label--docs).
 
-![Label](/content/img/docspace/label.png)
+![Label](/assets/images/docspace/label.png)
 
-Example
+### Example
 
-```
+``` javascript
 import {ILabel} from "@onlyoffice/docspace-plugin-sdk";
 
 const label: ILabel = {

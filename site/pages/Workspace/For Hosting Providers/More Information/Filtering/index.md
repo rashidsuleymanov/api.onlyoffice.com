@@ -1,12 +1,16 @@
+---
+order: -2
+---
+
 Every request to the API supports a certain number of parameters sent in the URL.
 
-For example, the [api/2.0/people](/portals/method/people/get/api/2.0/people) request can be appended with several parameters:
+For example, the api/2.0/people request can be appended with several parameters:
 
 ```
 api/2.0/people?startIndex=10&count=25
 ```
 
-Request parameters
+### Request parameters
 
 | Parameter    | Description                                                                                                                                                         |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

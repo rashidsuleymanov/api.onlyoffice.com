@@ -2,7 +2,7 @@
 
 Allocates the memory for a typed array by creating a buffer array of the specified size.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderContext.AllocMemoryTypedArray* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderContext.AllocMemoryTypedArray* method is not used.
 
 ## Parameters:
 
@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderContext.AllocMemory
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;

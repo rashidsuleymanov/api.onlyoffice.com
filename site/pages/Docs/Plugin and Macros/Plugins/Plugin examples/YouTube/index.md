@@ -1,4 +1,4 @@
-Description
+## Description
 
 Connects [youtube iframe\_api](https://developers.google.com/youtube/iframe_api_reference) for embedding YouTube videos into documents as OLE objects and managing them by adjusting their size, rotating, and changing position.
 
@@ -6,23 +6,23 @@ Connects [youtube iframe\_api](https://developers.google.com/youtube/iframe_api_
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![Youtube](/content/img/plugins/gifs/youtube.gif)
+![Youtube](/assets/images/plugins/gifs/youtube.gif)
 
 ## Installation
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+You can remove it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
 The plugin guid: {38E022EA-AD92-45FC-B22B-49DF39746DB4}.
 
-Usage
+## Usage
 
 1. Find the plugin on the **Plugins** tab.
 2. Insert the YouTube video URL you want to embed into the form and click the **OK** button.
 3. The video preview in the form of an image will appear in your document. Click it to play the video.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/youtube>.
 
@@ -32,9 +32,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 4. Third-party service:
    * [Youtube iframe\_api](https://developers.google.com/youtube/iframe_api_reference) lets the user embed a YouTube video player on the website and control the player using JavaScript. License: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
-Config
+## Config
 
-```
+``` json
 {
     "name": "YouTube",
     "nameLocale": {
@@ -115,23 +115,23 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onTranslate](/plugin/events/ontranslate)
-* [executeMethod ("AddOleObject")](/plugin/executemethod/common/addoleobject)
-* [executeMethod ("EditOleObject")](/plugin/executemethod/common/editoleobject)
-* [resizeWindow](/plugin/resizewindow)
-* [info.data](/plugin/info#data)
-* [info.guid](/plugin/info#guid)
-* [info.height](/plugin/info#height)
-* [info.imgSrc](/plugin/info#imgSrc)
-* [info.mmToPx](/plugin/info#mmToPx)
-* [info.objectId](/plugin/info#objectId)
-* [info.resize](/plugin/info#resize)
-* [info.width](/plugin/info#width)
+* button
+* init
+* onTranslate
+* executeMethod ("AddOleObject")
+* executeMethod ("EditOleObject")
+* resizeWindow
+* info.data
+* info.guid
+* info.height
+* info.imgSrc
+* info.mmToPx
+* info.objectId
+* info.resize
+* info.width
 
-Supports
+## Supports
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

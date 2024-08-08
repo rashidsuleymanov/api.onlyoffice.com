@@ -1,24 +1,28 @@
-Description
+---
+order: -15
+---
+
+## Description
 
 Merges the selected cell range.
 
-```
+``` javascript
 (function()
 {
     Api.GetActiveSheet().GetRange("A1:B3").Merge(true);
 })();
 ```
 
-Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [GetRange](/officeapi/spreadsheetapi/apiworksheet/getrange), [Merge](/officeapi/spreadsheetapi/apirange/merge)
+Methods used: GetActiveSheet, GetRange, Merge
 
-Reference Microsoft VBA macro code
+## Reference Microsoft VBA macro code
 
-```
+``` vb
 Sub example()
     Range("A1:B3").Merge
 End Sub
 ```
 
-Result
+## Result
 
-![Merge cells](/content/img/plugins/merge_cells.png)
+![Merge cells](/assets/images/plugins/merge_cells.png)

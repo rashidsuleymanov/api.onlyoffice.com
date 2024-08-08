@@ -1,9 +1,13 @@
-Once your DMS is [added](/desktop/addingdms/) to the connection list, configure the DMS/Desktop Editors interaction:
+---
+order: -8
+---
 
-* [log in](/desktop/addingdms/loginlogout) to your DMS so that it will be displayed in the **Connected clouds** list,
-* enable [notifications](/desktop/addingdms/notifications) from the desktop application,
-* change the interface [theme](/desktop/addingdms/changingtheme),
-* enable end-to-end [encryption](/desktop/addingdms/encryption).
+Once your DMS is [added](../index.md) to the connection list, configure the DMS/Desktop Editors interaction:
+
+* [log in](../Login%20and%20logout/index.md) to your DMS so that it will be displayed in the **Connected clouds** list,
+* enable [notifications](../Sending%20notifications/index.md) from the desktop application,
+* change the interface [theme](../Changing%20a%20theme/index.md),
+* enable end-to-end [encryption](../Encryption/index.md).
 
 Before proceeding further, it’s highly recommended to adjust the DMS elements to be displayed when the document is opened in the desktop application.
 

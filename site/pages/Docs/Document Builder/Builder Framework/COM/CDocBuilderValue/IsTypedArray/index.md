@@ -2,7 +2,7 @@
 
 Returns true if the **CDocBuilderValue** object is a typed array.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsTypedArray* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsTypedArray* method is not used.
 
 ## Parameters:
 
@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsTypedArray*
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;

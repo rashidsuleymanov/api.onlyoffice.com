@@ -1,16 +1,21 @@
-A component that is used to add components into [Box](/docspace/pluginssdk/codingplugin/plugincomponents/box). Only components that are embedded into DOM can be wrapped (toast, modal dialog, etc. cannot be wrapped).
+A component that is used to add components into [Box](../Box/index.md). Only components that are embedded into DOM can be wrapped (toast, modal dialog, etc. cannot be wrapped).
 
 **Interface**: [Component](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/Component.ts).
 
-Extra parameters
+## Extra parameters
 
-| Name        | Description                                                    | Type   | Example        |
-| ----------- | -------------------------------------------------------------- | ------ | -------------- |
-| contextName | The context name that updates the component via React context. | string | "acceptButton" |
+### contextName
 
-Example
+The context name that updates the component via React context.
 
-```
+Type: string
+
+Example: "acceptButton"
+
+
+### Example
+
+``` javascript
 import {Actions, ButtonGroup, ButtonSize, Components, IButton, IMessage, ToastType} from "@onlyoffice/docspace-plugin-sdk";
 
 const onClick = () => {

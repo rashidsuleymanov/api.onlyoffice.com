@@ -2,13 +2,13 @@
 
 Returns the **ONLYOFFICE Document Builder** engine version.
 
-Please note, that for the *.docbuilder* file the *CDocBuilder.GetVersion* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilder.GetVersion* method is not used.
 
 ## Example
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;

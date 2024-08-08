@@ -2,13 +2,13 @@
 
 Returns true if the **CDocBuilderValue** object is a typed array.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsTypedArray* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsTypedArray* method is not used.
 
 ## Example
 
 #### .Net
 
-```
+```c#
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

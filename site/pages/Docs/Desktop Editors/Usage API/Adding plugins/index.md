@@ -1,4 +1,8 @@
-**ONLYOFFICE Desktop Editors** allows developers to add specific features which are not directly related to the OOXML format using plugins. You can use ready-made plugins from [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory) or create your own ones using our [Plugins and macros API documentation](/plugin/structure).
+---
+order: -2
+---
+
+**ONLYOFFICE Desktop Editors** allows developers to add specific features which are not directly related to the OOXML format using plugins. You can use ready-made plugins from [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory) or create your own ones using our [Plugins and macros API documentation](../../../Plugin%20and%20Macros/Get%20Started/Plugin%20structure/index.md).
 
 There are two ways to add plugins: through the plugin manager and through the plugin folder.
 
@@ -14,15 +18,15 @@ Follow the steps below to add the plugins to the editor using plugin manager:
 2. Click **Plugin Manager**.
 3. Find the plugin you need and click **Install**.
 
-![Plugins manager](/content/img/plugins/desktop-plugin-manager.png)
+![Plugins manager](/assets/images/plugins/desktop-plugin-manager.png)
 
 **Option 2. Uploading the plugin archive (an internet connection is not required)**
 
 If you want to add your own plugin, you can do it manually, even if you are offline:
 
-1. Pack all the [plugin files](/plugin/structure) within the plugin folder into a **zip** archive and change its extension to *.plugin* (all the plugin files and subfolders must be at the archive root).
+1. Pack all the [plugin files](../../../Plugin%20and%20Macros/Get%20Started/Plugin%20structure/index.md) within the plugin folder into a **zip** archive and change its extension to *.plugin* (all the plugin files and subfolders must be at the archive root).
 
-   If you download a plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins), unpack the plugin folder first and then archive its elements only.
+   > If you download a plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins), unpack the plugin folder first and then archive its elements only.
 
 2. Open the **Plugin Manager** on the **Plugins** tab.
 
@@ -30,7 +34,7 @@ If you want to add your own plugin, you can do it manually, even if you are offl
 
 4. Choose your created archive and click **Open**.
 
-![Install plugin manually](/content/img/plugins/install-manually.png)
+![Install plugin manually](/assets/images/plugins/install-manually.png)
 
 The plugin will be added to the opened editors and all the editors you will open afterwords and displayed within the **Plugins** tab.
 
@@ -46,11 +50,10 @@ The plugin will be added to the opened editors and all the editors you will open
 
 For example, for the **Extended comments** plugin the *guid* parameter will look the following way:
 
-```
+``` json
 {
     "name" : "Extended comments",
     "guid" : "asc.{91EAC419-EF8B-440C-A960-B451C7DF3A37}",
-    ...
 }
 ```
 
@@ -58,11 +61,11 @@ So, the folder name of this plugin will be *{91EAC419-EF8B-440C-A960-B451C7DF3A3
 
 **Step 3.** Put all the plugin files to this folder:
 
-![Plugin folder](/content/img/desktop/plugins_folder.png)
+![Plugin folder](/assets/images/desktop/plugins_folder.png)
 
 **Step 4.** Start ONLYOFFICE Desktop Editors. If everything is done correctly, the plugin will be displayed within the **Plugins** tab:
 
-![Extended comments](/content/img/desktop/extended_comments.png)
+![Extended comments](/assets/images/desktop/extended_comments.png)
 
 ## Removing plugins from ONLYOFFICE Desktop Editors
 
@@ -72,11 +75,11 @@ To uninstall the newly added plugins, proceed in the following way:
 2. Go to **Plugin Manager**.
 3. Click the **Remove** button under the corresponding plugin.
 
-This option is not available for the default plugins and the plugins added via the plugin folder.
+> This option is not available for the default plugins and the plugins added via the plugin folder.
 
 If you need to uninstall the default plugins, go to the *sdkjs-plugins* folder and remove the corresponding plugin folder from this directory.
 
-Please note that removing the default plugins from ONLYOFFICE Desktop Editors on Mac OS breaks the package integrity and may cause the application crash. Be careful and don't do this unless absolutely necessary.
+> Please note that removing the default plugins from ONLYOFFICE Desktop Editors on Mac OS breaks the package integrity and may cause the application crash. Be careful and don't do this unless absolutely necessary.
 
 The table below contains default plugins guids to make it easier for you to find them:
 
@@ -95,4 +98,4 @@ The table below contains default plugins guids to make it easier for you to find
 | Zotero         | {BFC5D5C6-89DE-4168-9565-ABD8D1E48711} |
 | Send           | {B509123E-6335-40BD-B965-91EB799346E3} |
 
-Please note that after app updating the default plugins will appear again and you will need to uninstall them.
+> Please note that after app updating the default plugins will appear again and you will need to uninstall them.

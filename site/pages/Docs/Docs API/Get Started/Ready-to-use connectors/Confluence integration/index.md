@@ -33,11 +33,13 @@ You could also install the app from Confluence administration panel:
 
 Find the uploaded **ONLYOFFICE Confluence connector** on the **Manage add-ons** page. Click **Configure** and enter the name of the server with ONLYOFFICE Docs installed:
 
-https\://documentserver/
+```
+https://documentserver/
+```
 
 where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Confluence server. The Confluence server address must also be accessible from **ONLYOFFICE Docs** for correct work.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Confluence administration page. In the ONLYOFFICE Docs [config file](/editors/signature/), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Confluence administration page. In the ONLYOFFICE Docs [config file](../../../Additional%20API/Signature/index.md), specify the same secret key and enable the validation.
 
 ## Compiling Confluence ONLYOFFICE integration app
 
@@ -45,17 +47,28 @@ If you plan to compile the Confluence ONLYOFFICE integration app yourself (e.g. 
 
 1. The stable Java version is necessary for the successful build. If you do not have it installed, use the following commands to install **Open JDK 8**:
 
-   sudo apt-get update sudo apt-get install openjdk-8-jdk
+   ``` bash
+   sudo apt-get update
+   sudo apt-get install openjdk-8-jdk
+   ```
 
 2. Install **Atlassian Plugin SDK**. Installation process is described [here](https://developer.atlassian.com/docs/getting-started/set-up-the-atlassian-plugin-sdk-and-build-a-project).
 
-3. Get a submodule: git submodule update --init --recursive
+3. Get a submodule:
 
-4. Compile package: atlas-package
+   ``` bash
+   git submodule update --init --recursive
+   ```
+
+4. Compile package:
+
+   ``` bash
+   atlas-package
+   ```
 
 ## How it works
 
-The ONLYOFFICE integration follows the API documented [here](/editors/basic).
+The ONLYOFFICE integration follows the API documented [here](../../Basic%20concepts/index.md).
 
 1. User navigates to the Confluence attachments and selects the **Edit in ONLYOFFICE** action.
 
@@ -79,11 +92,8 @@ The ONLYOFFICE integration follows the API documented [here](/editors/basic).
 
 8. When all users and client browsers are done with editing, they close the editing window.
 
-9. After [10 seconds](/editors/save#savedelay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting Confluence know that the clients have finished editing the document and closed it.
+9. After [10 seconds](../../How%20It%20Works/Saving%20file/index.md#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting Confluence know that the clients have finished editing the document and closed it.
 
 10. Confluence downloads a new version of the document, replacing the old one.
-
-\
-
 
 Download the Confluence ONLYOFFICE integration app [here](https://github.com/ONLYOFFICE/onlyoffice-confluence).

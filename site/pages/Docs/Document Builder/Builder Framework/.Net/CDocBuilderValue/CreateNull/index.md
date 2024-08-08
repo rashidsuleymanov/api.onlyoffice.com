@@ -1,14 +1,14 @@
 #### static CDocBuilderValue^ CreateNull();
 
-Creates a null value. This method returns the current [context](/docbuilder/integrationapi/net/cdocbuildercontext) and calls its [CreateNull](/docbuilder/integrationapi/net/cdocbuildercontext/createnull) method.
+Creates a null value. This method returns the current [context](../../CDocBuilderContext/index.md) and calls its [CreateNull](../../CDocBuilderContext/CreateNull/index.md) method.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.CreateNull* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.CreateNull* method is not used.
 
 ## Example
 
 #### .Net
 
-```
+```c#
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

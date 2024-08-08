@@ -1,31 +1,29 @@
-Description
-
 Requests a list of the forgotten files.
 
-Request example
+### Request example
 
-```
+``` json
 {
     "c": "getForgottenList"
 }
 ```
 
-Parameters
+### Parameters
 
 | Parameter | Description               | Type   | Presence |
 | --------- | ------------------------- | ------ | -------- |
 | c         | Defines the command type. | string | required |
 
-Response example
+### Response example
 
-```
+``` json
 {
     "error": 0,
     "keys": ["Khirz6zTPdfd7"]
 }
 ```
 
-Parameters
+### Parameters
 
 | Parameter | Description                                                                                   | Type    | Presence |
 | --------- | --------------------------------------------------------------------------------------------- | ------- | -------- |

@@ -1,8 +1,13 @@
+---
+order: -7
+---
+
+
 ## Overview
 
 This example will help you integrate ONLYOFFICE Docs into your web application written in Java.
 
-It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
+> It is intended for testing purposes and demonstrating functionality of the editors. **DO NOT** use this integration example on your own server without proper code modifications. In case you enabled the test example, disable it before going for production.
 
 ## Important security info
 
@@ -25,18 +30,18 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Windows](htt
 
 ## Step 2. Download the Java code for the editors integration
 
-Download the [Java example](/editors/demopreview) from our site.
+Download the [Java example](../index.md) from our site.
 
 To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the *src/main/resources/settings.properties* file:
 
-```
+``` ini
 storage-folder = app_data
 files.docservice.url.site=https://documentserver/
 ```
 
 where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed and the **storage-folder** is the path where files will be created and stored. You can set an absolute path. For example, *D:\\\folder*. Please note that on Windows OS the double backslash must be used as a separator.
 
-If you want to experiment with the editor configuration, modify the [parameters](/editors/advanced) in the *src/main/webapp/editor.jsp* file.
+If you want to experiment with the editor configuration, modify the [parameters](../../../Usage%20API/Advanced%20parameters/index.md) in the *src/main/webapp/editor.jsp* file.
 
 ## Step 3. Install the prerequisites
 
@@ -67,33 +72,35 @@ To run the Java example code, install the Java version appropriate for your OS a
 
    In the **Variable Value** field, enter your **JDK** or **JRE** installation path, for example *C:\Program Files\Java\jdk1.8.0\_65*.
 
-   ![](/content/img/java/make-var.png)
+   <img alt="Add new environment variable" src="/assets/images/java/make-var.png" width="832px">
 
    Check if the variable created successfully by **echo** command in the **Command Prompt**:
 
-   ```
+   ``` bash
    echo %JAVA_HOME%
    ```
 
 2. Run the **Command Prompt**. Change the current directory for the **Apache Tomcat** installation directory:
 
-   ```
+   ``` bash
    cd /d C:\Apache Tomcat\apache-tomcat-7.0.67\bin
    ```
 
 3. Use the bin *startup.bat* script to start Apache Tomcat:
 
-   ```
+   ``` bash
    startup.bat
    ```
 
    You will see the new **Tomcat** console window displayed that provides the information and messages about Tomcat startup:
 
-   ![](/content/img/java/tomcat-cmd.jpg)
+   <img alt="Tomcat console window" src="/assets/images/java/tomcat-cmd.jpg" width="832px">
 
    Test your Tomcat installation using the address in a web browser:
 
-   http\://localhost:8080
+   ```
+   http://localhost:8080
+   ```
 
    If everything is correct, you will see the Tomcat web page in the browser as shown below.
 
@@ -101,15 +108,15 @@ To run the Java example code, install the Java version appropriate for your OS a
 
 1. Open Tomcat Web Application Manager by clicking **Manager App:**
 
-   ![](/content/img/java/manager.jpg)
+   <img alt="Manager app" src="/assets/images/java/manager.jpg" width="832px">
 
 2. Tomcat Web Application Manager will request the **username** and the **password:**
 
-   ![](/content/img/java/author.jpg)
+   <img alt="Sign in to Tomcat app" src="/assets/images/java/author.jpg" width="300px">
 
    Specify user data in *tomcat-users.xml* file in the Apache Tomcat installation folder. Define the **manager-gui** user role, specify the **user name** and **password** values:
 
-   ```
+   ``` xml
    <tomcat-users>
        <role rolename="manager-gui"/>
        <user username="tomcat" password="tomcat" roles="manager-gui"/>
@@ -118,11 +125,12 @@ To run the Java example code, install the Java version appropriate for your OS a
 
 3. Upload the Java project in Tomcat Web Application Manager. For that click **Choose File** in the **WAR file to deploy** section and find the *.war* file in the Java project folder, then click **Deploy**.
 
-   ![](/content/img/java/upload-app.jpg) ![](/content/img/java/war-file.jpg)
+   <img alt="Deploy WAR file" src="/assets/images/java/upload-app.jpg" width="700px">
+   <img alt="Choose WAR file" src="/assets/images/java/war-file.jpg" width="700px">
 
 4. You will see the project in the **Application List**:
 
-   ![](/content/img/java/manager-app.jpg)
+   <img alt="Application list" src="/assets/images/java/manager-app.jpg" width="832px">
 
 5. Click the link with the application name to run it.
 
@@ -130,7 +138,7 @@ To run the Java example code, install the Java version appropriate for your OS a
 
 In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](/editors/demopreview#DemoPreview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](../index.md#demo-preview) on our site.
 
 ## For Linux
 
@@ -146,48 +154,68 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
 
 1. Install **Java** following the instructions [here](https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8).
 
-2. Download the archive with the Java example and unpack the archive: wget https\://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip unzip Java.Example.zip
+2. Download the archive with the Java example and unpack the archive:
+
+   ``` bash
+   wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip
+   ```
+
+   ``` bash
+   unzip Java.Example.zip
+   ```
 
 3. Change the current directory for the project directory:
 
+   ``` bash
    cd Java\ Example/
+   ```
 
 4. Edit the *src/main/resources/settings.properties* configuration file. Specify the name of your local server with the ONLYOFFICE Docs installed.
 
+   ``` bash
    nano src/main/resources/settings.properties
+   ```
 
    Edit the following lines:
 
-   ```
+   ``` ini
    storage-folder = app_data
    files.docservice.url.site=https://documentserver/
    ```
 
    where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed and the **storage-folder** is the path where files will be created and stored. Please note that you must have read and write permissions to the folder. If you do not have them, please use the next command:
 
-   ```
+   ``` bash
    sudo chmod -R ugo+rw /{path}
    ```
 
 5. Install **Maven**:
 
+   ``` bash
    sudo apt-get install maven
+   ```
 
 6. Build:
 
+   ``` bash
    mvn package
+   ```
 
 7. Install **Tomcat** with the administration page:
 
+   ``` bash
    sudo apt-get install tomcat8 tomcat8-admin
+   ```
 
 8. Configure the admin user on Tomcat:
 
+   ``` bash
    sudo nano /var/lib/tomcat8/conf/tomcat-users.xml
+   ```
 
    Insert the lines:
 
-   ```
+   ``` xml
    <role rolename="manager-gui"/>
    <user username="USERNAME" password="PASSWORD" roles="manager-gui"/>
    ```
@@ -196,23 +224,29 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Linux](https
 
    Restart Tomcat:
 
+   ``` bash
    systemctl restart tomcat8
+   ```
 
 9. Open the Tomcat administration page in browser with the admin user credentions:
 
-   http\://localhost:8080/manager/html
+   ```
+   http://localhost:8080/manager/html
+   ```
 
 10. Select the WAR file to upload from *target/OnlineEditorsExampleJava-1.0.war*.
 
 11. See the result in your browser using the address:
 
-    http\://localhost:8080/OnlineEditorsExampleJava-1.0/
+    ```
+    http://localhost:8080/OnlineEditorsExampleJava-1.0/
+    ```
 
 ## Step 3. Check accessibility
 
 In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](/editors/demopreview#DemoPreview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](../index.md#demo-preview) on our site.
 
 ## For Docker
 
@@ -228,19 +262,31 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
 
 1. Install **Java** following the instructions [here](https://docs.oracle.com/en/java/javase/20/install/installation-jdk-linux-platforms.html#GUID-737A84E4-2EFF-4D38-8E60-3E29D1B884B8).
 
-2. Download the archive with the Java example and unpack the archive: wget https\://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip unzip Java.Example.zip
+2. Download the archive with the Java example and unpack the archive:
+
+   ``` bash
+   wget https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Java.Example.zip
+   ```
+   
+   ``` bash
+   unzip Java.Example.zip
+   ```
 
 3. Change the current directory for the project directory:
 
+   ``` bash
    cd Java\ Example/
+   ```
 
 4. Edit the *src/main/resources/settings.properties* configuration file. Specify the name of your local server with ONLYOFFICE Docs installed:
 
+   ``` bash
    nano src/main/resources/settings.properties
+   ```
 
    Edit the following lines:
 
-   ```
+   ``` ini
    storage-folder = app_data
    files.docservice.url.site=https://documentserver/
    ```
@@ -249,7 +295,9 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
 
 5. Run the next command in the Java example directory:
 
+   ``` bash
    docker-compose up
+   ```
 
 6. After it, all the *bin* files will be passed to the *./target* folder.
 
@@ -257,4 +305,4 @@ See the detailed guide to learn how to install ONLYOFFICE Docs [for Docker](http
 
 In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. Make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](/editors/demopreview#DemoPreview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](../index.md#demo-preview) on our site.

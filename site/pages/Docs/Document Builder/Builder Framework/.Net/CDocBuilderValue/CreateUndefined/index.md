@@ -1,14 +1,14 @@
 #### static CDocBuilderValue^ CreateUndefined();
 
-Creates an undefined value. This method returns the current [context](/docbuilder/integrationapi/net/cdocbuildercontext) and calls its [CreateUndefined](/docbuilder/integrationapi/net/cdocbuildercontext/createundefined) method.
+Creates an undefined value. This method returns the current [context](../../CDocBuilderContext/index.md) and calls its [CreateUndefined](../../CDocBuilderContext/CreateUndefined/index.md) method.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.CreateUndefined* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.CreateUndefined* method is not used.
 
 ## Example
 
 #### .Net
 
-```
+```c#
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

@@ -1,4 +1,4 @@
-Description
+## Description
 
 Connects a Zotero account for adding references to the document in full accordance with the chosen style guides.
 
@@ -8,15 +8,15 @@ Connects a Zotero account for adding references to the document in full accordan
 
 **Analogues:** [Mendeley](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/mendeley), [EasyBib](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/easybib).
 
-![Zotero](/content/img/plugins/gifs/zotero.gif)
+![Zotero](/assets/images/plugins/gifs/zotero.gif)
 
-Installation
+## Installation
 
 Available by default in ONLYOFFICE Enterprise Edition, Community Edition (Docs + Workspace), and ONLYOFFICE cloud.
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/zotero) and install it following the [desktop](/plugin/installation/desktop) installation instruction.
+You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/zotero) and install it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md) installation instruction.
 
-Connect ONLYOFFICE to Zotero account
+## Connect ONLYOFFICE to Zotero account
 
 1. Find the plugin on the **Plugins** tab.
 2. Log in to your Zotero account.
@@ -25,7 +25,7 @@ Connect ONLYOFFICE to Zotero account
 5. Fill in **Key Description**, make sure the **Allow library access** box is checked and press **Save Key**.
 6. Copy the newly created key, paste to the **API Key** field in the plugin's interface, and save it.
 
-Usage
+## Usage
 
 1. Find the plugin on the **Plugins** tab.
 2. Find the necessary bibliography by author, title, or year.
@@ -33,21 +33,21 @@ Usage
 4. Choose the reference style from the **Style** pull-down menu.
 5. Click the **Insert Bibliography** button. The bibliography list will be inserted at the cursor position.
 
-Known issues
+## Known issues
 
 For CentOS users with SELinx enabled, after copying the src folder to sdkjs-plugins, plugins may not work due to the variable file security context. To restore the rights, use the following command:
 
-```
+``` bash
 sudo restorecon -Rv /var/www/onlyoffice/documentserver/sdkjs-plugins/
 ```
 
 After that restart the services:
 
-```
+``` bash
 sudo supervisorctl restart ds:docservice
 ```
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/zotero>.
 
@@ -67,9 +67,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
    * [promise-polyfill](https://github.com/taylorhakes/promise-polyfill) - lightweight ES6 Promise polyfill for the browser and node. License: [MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/zotero/licenses/promise-polyfill.license).
    * [url-polyfill](https://github.com/lifaon74/url-polyfill) - Polyfill URL and URLSearchParams to match last WHATWG specifications. License: [MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/zotero/licenses/url-polyfill.license).
 
-Config
+## Config
 
-```
+``` json
 {
     "name": "Zotero",
     "nameLocale": {
@@ -161,13 +161,13 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onTranslate](/plugin/events/ontranslate)
-* [executeMethod ("PasteHtml")](/plugin/executemethod/common/pastehtml)
+* button
+* init
+* onTranslate
+* executeMethod ("PasteHtml")
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

@@ -2,13 +2,13 @@
 
 Creates an undefined value, an analogue of *undefined* in JS.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateUndefined* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateUndefined* method is not used.
 
 ## Example
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;

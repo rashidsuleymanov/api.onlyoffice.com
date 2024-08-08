@@ -2,7 +2,7 @@
 
 Sets an array value by its index.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.Set* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.Set* method is not used.
 
 ## Parameters:
 
@@ -15,7 +15,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderValue.Set* method i
 
 #### .Net
 
-```
+```c#
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -34,7 +34,7 @@ CDocBuilder.Destroy();
 
 The **default\[]** postfix expression can be also used to set an array value by its index:
 
-```
+```c#
 property CDocBuilderValue^ default[int]
 ```
 
@@ -42,7 +42,7 @@ property CDocBuilderValue^ default[int]
 
 #### .Net
 
-```
+```c#
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

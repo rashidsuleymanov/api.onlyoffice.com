@@ -1,3 +1,7 @@
+---
+order: -2
+---
+
 To protect your local documents, spreadsheets and presentations, encrypt them with a simple symmetric encryption plugin. The steps below explain how to do it.
 
 ## Step 1. Creating the Encryption plugin for the editor
@@ -8,11 +12,11 @@ To build the **Encryption** plugin, you need to create three files:
 * JS file with code,
 * JSON file with config.
 
-More information about the plugin structure can be found [here](/plugin/structure).
+More information about the plugin structure can be found [here](../../../../Plugin%20and%20Macros/Get%20Started/Plugin%20structure/index.md).
 
 Let’s have a look at the config:
 
-```
+``` json
 {
     "name" : "crypto",
     "guid" : "asc.{22222222-2222-2222-2222-222222222222}",
@@ -41,11 +45,11 @@ Let’s have a look at the config:
 }
 ```
 
-All the config parameters are described in the [documentation](/plugin/config).
+All the config parameters are described in the [documentation](../../../../Plugin%20and%20Macros/Usage%20API/Config/index.md).
 
 After the config file is ready, create the plugin code file with the following contents:
 
-```
+``` javascript
 (function (window, undefined) {
     const global_password = "{my-super-long-password}";
     window.Asc.plugin.init = function (obj)
@@ -88,9 +92,9 @@ After the config file is ready, create the plugin code file with the following c
 })(window, undefined);
 ```
 
-As we can see from the code above, all files will be encrypted with one password - *{my-super-long-password}*. The [OnEncryption](/plugin/executemethod/common/onencryption), [StartAction](/plugin/executemethod/common/startaction), [EndAction](/plugin/executemethod/common/endaction) methods can be found in the **Plugins and macros API documentation**.
+As we can see from the code above, all files will be encrypted with one password - *{my-super-long-password}*. The OnEncryption, StartAction, EndAction methods can be found in the **Plugins and macros API documentation**.
 
-Please note that the *encryptData* and *decryptData* types of the *OnEncryption* method are not relevant for local files.
+> Please note that the *encryptData* and *decryptData* types of the *OnEncryption* method are not relevant for local files.
 
 ## Step 2. Creating the UI plugin for the app
 
@@ -98,7 +102,7 @@ The **Encryption** plugin has no interface and can’t run by default. It works 
 
 This plugin can’t access the editing features but has almost the same config:
 
-```
+``` json
 {
     "name" : "Encryption",
     "nameLocale" : { 
@@ -125,7 +129,7 @@ This plugin can’t access the editing features but has almost the same config:
 
 The *index.html* file will look as follows:
 
-```
+``` html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -142,11 +146,11 @@ The *index.html* file will look as follows:
 
 With it, we will get a new tab called **Encryption** on the main app page:
 
-![Encryption exabled](/content/img/desktop/encryption-enabled.png)
+![Encryption exabled](/assets/images/desktop/encryption-enabled.png)
 
 Enable encryption by ticking the checkbox:
 
-```
+``` javascript
 window.onload = function() {
   const ASC_DESKTOP_EDITOR_DEFAULT_MODE = 0;
   const ASC_DESKTOP_EDITOR_CRYPTO_MODE = 2;
@@ -179,7 +183,7 @@ Copy the folders with plugins to the *sdkjs-plugins* directory. The path to the 
 
 It is important that you use plugins GUID as a folder name.
 
-Detailed instructions can be found [here](/plugin/installation/desktop).
+Detailed instructions can be found [here](../../../../Plugin%20and%20Macros/Plugins/Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md).
 
 ## Step 4. Working with encryption plugins
 

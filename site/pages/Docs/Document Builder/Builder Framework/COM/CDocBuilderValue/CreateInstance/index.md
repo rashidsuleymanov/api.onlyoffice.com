@@ -2,7 +2,7 @@
 
 Creates an instance of the *CDocBuilderValue* class.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.CreateInstance* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.CreateInstance* method is not used.
 
 ## Parameters:
 
@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderValue.CreateInstanc
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;
@@ -36,7 +36,7 @@ oBuilder->Dispose();
 
 #### .docbuilder
 
-```
+```js
 var oDocument = Api.GetDocument();
 var oParagraph = Api.CreateParagraph();
 oParagraph.SetSpacingAfter(1000, false);

@@ -1,4 +1,4 @@
-Description
+## Description
 
 Connects the [TesseractJS-Core library](https://tesseract.projectnaptha.com/) for extracting text from an image (*.png* *.jpg*) and inserting it into the document. OCR supports more than 60 languages.
 
@@ -6,17 +6,17 @@ Connects the [TesseractJS-Core library](https://tesseract.projectnaptha.com/) fo
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![OCR](/content/img/plugins/gifs/ocr.gif)
+![OCR](/assets/images/plugins/gifs/ocr.gif)
 
-Installation
+## Installation
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+You can remove it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
 The plugin guid: {440EBF13-9B19-4BD8-8621-05200E58140B}.
 
-Usage
+## Usage
 
 1. Find the plugin on the **Plugins** tab.
 2. Click the **Load File** button and select an image.
@@ -24,7 +24,7 @@ Usage
 4. Click the **Recognize** button. The text will appear to the right of the picture.
 5. Click the **Insert text** button and the text will be inserted into the document at the text cursor position.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ocr>.
 
@@ -42,9 +42,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
    * [Select2](https://select2.org/) gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options. License: [MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ocr/licenses/Select2.license).
    * [TesseractJS-Core](https://tesseract.projectnaptha.com/) is a pure Javascript port of the popularTesseract OCR engine. This library supportsmore than 100 languages, automatic textorientation and script detection, a simple interface for reading paragraph, word, and characterbounding boxes. License: [Apache License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ocr/licenses/Tesseract.license), version 2.0.
 
-Config
+## Config
 
-```
+``` json
 {
     "name": "OCR",
     "nameLocale": {
@@ -185,14 +185,14 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onTranslate](/plugin/events/ontranslate)
-* [resizeWindow](/plugin/resizewindow)
-* [info.recalculate](/plugin/info#recalculate)
+* button
+* init
+* onTranslate
+* resizeWindow
+* info.recalculate
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

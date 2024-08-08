@@ -2,7 +2,7 @@
 
 Creates an array value, an analogue of *new Array (length)* in JS.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateArray* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateArray* method is not used.
 
 ## Parameters:
 
@@ -15,7 +15,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateArray
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;

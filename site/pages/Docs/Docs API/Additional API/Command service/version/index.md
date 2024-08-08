@@ -1,31 +1,29 @@
-Description
-
 Requests the current version number of ONLYOFFICE Docs.
 
-Request example
+### Request example
 
-```
+``` json
 {
     "c": "version"
 }
 ```
 
-Parameters
+### Parameters
 
 | Name | Description               | Type   | Presence |
 | ---- | ------------------------- | ------ | -------- |
 | c    | Defines the command type. | string | required |
 
-Response example
+### Response example
 
-```
+``` json
 {
     "error": 0,
     "version": "4.3.1.4"
 }
 ```
 
-Parameters
+### Parameters
 
 | Parameter | Description                          | Type    | Presence |
 | --------- | ------------------------------------ | ------- | -------- |

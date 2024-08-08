@@ -1,8 +1,12 @@
+---
+order: -7
+---
+
 Before starting plugin development, create a plugin template and configure its settings which will be displayed in the DocSpace plugin settings.
 
 1. Install the *@onlyoffice/docspace-plugin-sdk* npm package globally:
 
-   ```
+   ``` bash
    npm i -g @onlyoffice/docspace-plugin-sdk
    ```
 
@@ -10,7 +14,7 @@ Before starting plugin development, create a plugin template and configure its s
 
 2. To create a plugin template, run the following command:
 
-   ```
+   ``` bash
    npx create-docspace-plugin
    ```
 
@@ -37,7 +41,7 @@ Before starting plugin development, create a plugin template and configure its s
    * **Event listener** - the plugin will be given the access to the portal events.
    * **File** - the plugin will be able to interact with the file list, change the file type and image.
 
-![Creating template](/content/img/docspace/creating-template.png)
+![Creating template](/assets/images/docspace/creating-template.png)
 
 All the specified parameters can be changed later in the *package.json* file.
 
@@ -45,9 +49,9 @@ In the *package.json* file, you can also specify the addresses of the third-part
 
 You can create a plugin in any project by adding the *@onlyoffice/docspace-plugin-sdk* npm package as the dependency and specifying all the necessary fields in the *package.json* file.
 
-Example
+**Example**
 
-```
+``` json
 {
     "name": "PDF-converter",
     "version": "1.0.0",

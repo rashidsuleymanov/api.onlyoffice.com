@@ -1,4 +1,4 @@
-Description
+## Description
 
 Inserts custom fields into the document.
 
@@ -6,29 +6,29 @@ Inserts custom fields into the document.
 
 **Supported editors:** documents.
 
-![AddCustomFields](/content/img/plugins/gifs/add-custom-fields.gif)
+![AddCustomFields](/assets/images/plugins/gifs/add-custom-fields.gif)
 
-Installation
+## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add) and install it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add) and install it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
-Usage
+## Usage
 
 1. Open the **Plugins** tab and press **Example add custom fields**.
 2. To add a **simple field**, type your question and its label in the necessary fields and press the **Add simple field** button.
 3. To add a **drop down field**, type your question and its label in the necessary fields and add answer options. To add an answer option, type it in the **Type your item** field and press the **Add** button. Repeat it if you need more options. To remove any answer option, select it in the combo box and press the **Remove** button. When the field is ready, press the **Add drop down field** button.
 4. The field will be added in the current text cursor position.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add>.
 
 1. *config.json*, *index.html*, and *code.js*
 2. Icons
 
-Config
+## Config
 
-```
+``` json
 {
     "name" : "Example add custom fields",
     "guid" : "asc.{4E2B5030-E1BE-41FA-BEE3-7E9BE7B5BFCF}",
@@ -95,14 +95,14 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onMethodReturn](/plugin/events/onmethodreturn)
-* [executeMethod ("AddContentControl")](/plugin/executemethod/text/addcontentcontrol)
-* [executeMethod ("InsertAndReplaceContentControls")](/plugin/executemethod/text/insertandreplacecontentcontrols)
+* button
+* init
+* onMethodReturn
+* executeMethod ("AddContentControl")
+* executeMethod ("InsertAndReplaceContentControls")
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/issues).

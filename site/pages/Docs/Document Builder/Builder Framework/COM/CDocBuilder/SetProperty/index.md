@@ -1,8 +1,8 @@
 #### HRESULT SetProperty(\[in] BSTR key, \[in] BSTR value);
 
-Sets an argument to the builder class which can be trasferred to the program outside the [CDocBuilder.ExecuteCommand](/docbuilder/integrationapi/com/cdocbuilder/executecommand) method, i.e. either as an additional property when running **ONLYOFFICE Document Builder** executable file or as a part of program code, but not included into the document file script.
+Sets an argument to the builder class which can be trasferred to the program outside the [CDocBuilder.ExecuteCommand](../ExecuteCommand/index.md) method, i.e. either as an additional property when running **ONLYOFFICE Document Builder** executable file or as a part of program code, but not included into the document file script.
 
-Please note, that for the *.docbuilder* file the *CDocBuilder.SetProperty* method is not used explicitly. The argument itself is used instead as an additional property for the executable. See the example below.
+> Please note, that for the *.docbuilder* file the *CDocBuilder.SetProperty* method is not used explicitly. The argument itself is used instead as an additional property for the executable. See the example below.
 
 ## Parameters:
 
@@ -35,7 +35,7 @@ Argument.name === "ONLYOFFICE" // true
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 oBuilder->Initialize();
@@ -45,7 +45,7 @@ oBuilder->Dispose();
 
 #### .docbuilder
 
-```
+```js
 docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
 ```
 
@@ -57,7 +57,7 @@ It is also possible to update the font list when you either add new fonts or rem
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 oBuilder->Initialize();
@@ -67,6 +67,6 @@ oBuilder->Dispose();
 
 #### .docbuilder
 
-```
+```js
 docbuilder.exe "--check-fonts=true" test.docbuilder
 ```

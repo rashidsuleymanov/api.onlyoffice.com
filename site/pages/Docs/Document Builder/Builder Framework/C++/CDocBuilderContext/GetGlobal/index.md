@@ -2,13 +2,13 @@
 
 Returns the global object for the current context.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderContext.GetGlobal* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderContext.GetGlobal* method is not used.
 
 ## Example
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;

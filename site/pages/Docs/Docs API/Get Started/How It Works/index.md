@@ -1,31 +1,32 @@
+---
+order: -2
+---
+
+
 The work with document files in ONLYOFFICE Docs is quite a simple process but it requires some understanding of what is going on when you click your document link to open it in the browser, save the document or upload it from your computer to the document server.
 
 In this section you will learn how to:
 
-* [Open a file](/editors/open)
-* [Save a file](/editors/save)
-* [Co-edit a file](/editors/coedit)
-* [View the document history](/editors/history)
-* [Work with action links](/editors/actionlink)
-* [Mention users](/editors/mentions)
-* [Rename a file](/editors/rename)
-* [Review a file](/editors/review)
-* [Work with inline editors](/editors/inlineeditors)
-* [Convert and download a file](/editors/conversion)
-* [Protect a document](/editors/security)
-* [Set a name to an anonymous user](/editors/anonymoususers)
-* [Comment on a document](/editors/commenting)
-* [Compare documents](/editors/comparing)
-* [Viewing](/editors/viewing)
-* [Mobile integration](/editors/mobileintegration)
-* [Inserting external data](/editors/insertingexternaldata)
-* [Embedding forms into a web page](/editors/embeddingforms)
-* [Protecting ranges](/editors/protectingranges)
-* [Integrating editors using Java SDK](/editors/javasdk)
-* [Setting avatars](/editors/settingavatars)
-
-\
-
+* [Open a file](Opening%20file/index.md)
+* [Save a file](Saving%20file/index.md)
+* [Co-edit a file](Co-editing/index.md)
+* [View the document history](Document%20history/index.md)
+* [Work with action links](Action%20link/index.md)
+* [Mention users](Mentions/index.md)
+* [Rename a file](Renaming%20files/index.md)
+* [Review a file](Reviewing/index.md)
+* [Work with inline editors](Inline%20editors/index.md)
+* [Convert and download a file](Converting%20and%20downloading%20file/index.md)
+* [Protect a document](Security/index.md)
+* [Set a name to an anonymous user](Anonymous%20users/index.md)
+* [Comment on a document](Commenting/index.md)
+* [Compare documents](Comparing%20documents/index.md)
+* [Viewing](Viewing/index.md)
+* [Mobile integration](Mobile%20integration/index.md)
+* [Inserting external data](Inserting%20external%20data/index.md)
+* [Embedding forms into a web page](Embedding%20forms%20into%20a%20web%20page/index.md)
+* [Protecting ranges](Protecting%20ranges/index.md)
+* [Setting avatars](Setting%20avatars/index.md)
 
 ## User-document interaction
 
@@ -50,8 +51,8 @@ Please note, that ONLYOFFICE Docs includes the **document editor**, **document e
 
 ## Shard key
 
-Starting from version 8.1, the *shardkey* parameter is added to the URL *QueryString* when sending requests to the **document command service**, **document conversion service**, or **document builder service**. It is also added to the browser-server interaction during the collaborative editing as the [WOPISrc](/editors/wopi/#wopisrc) query parameter.
+Starting from version 8.1, the *shardkey* parameter is added to the URL *QueryString* when sending requests to the **document command service**, **document conversion service**, or **document builder service**. It is also added to the browser-server interaction during the collaborative editing as the [WOPISrc](../../Using%20WOPI/Overview/index.md#wopisrc) query parameter.
 
-The *key* field is used as a value. For example, *?shardkey=Khirz6zTPdfd7*. If there is no key in the body, you do not have to send it (for example, in the [getForgottenList](/editors/command/getforgottenlist) command).
+The *key* field is used as a value. For example, *?shardkey=Khirz6zTPdfd7*. If there is no key in the body, you do not have to send it (for example, in the [getForgottenList](../../Additional%20API/Command%20service/getForgottenList/index.md) command).
 
 This is a recommendation when working with an editor server cluster to load balance requests during the collaborative editing: all users editing the same document are served by the same server.

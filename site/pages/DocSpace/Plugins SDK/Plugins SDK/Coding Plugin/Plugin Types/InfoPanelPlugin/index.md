@@ -1,36 +1,53 @@
+---
+order: -5
+---
+
+
 The plugin that is embedded as a separate tab in the file info panel.
 
 **Interface**: IInfoPanelPlugin.
 
-Variables
+## Variables
 
-| Name           | Description                                                                                                                                                                                                                                          | Type                         | Example |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| infoPanelItems | Stores a collection of elements where the keys are the key parameters from the [InfoPanelItem](/docspace/pluginssdk/codingplugin/pluginitems/infopanelitem) objects. A list for embedding into the info panel is generated based on this collection. | collection of IInfoPanelItem |         |
+### infoPanelItems
+
+Stores a collection of elements where the keys are the key parameters from the [InfoPanelItem](../../Plugin%20Items/InfoPanelItem/index.md) objects. A list for embedding into the info panel is generated based on this collection.
+
+Type: collection of IInfoPanelItem
+
 
 ## Methods and their description:
 
-* **addInfoPanelItem** - add a new info panel item.
+### addInfoPanelItem
 
-  Parameters
+Add a new info panel item.
+
+  **Parameters**
 
   | Name          | Description                 | Type           | Example |
   | ------------- | --------------------------- | -------------- | ------- |
   | infoPanelItem | Defines an info panel item. | IInfoPanelItem |         |
 
-* **getInfoPanelItems** - get all the info panel items.
 
-* **updateInfoPanelItem** - update the info panel item.
+### getInfoPanelItems
 
-  Parameters
+Get all the info panel items.
+
+
+### updateInfoPanelItem
+
+Update the info panel item.
+
+  **Parameters**
 
   | Name          | Description                    | Type           | Example |
   | ------------- | ------------------------------ | -------------- | ------- |
   | infoPanelItem | Defines a new info panel item. | IInfoPanelItem |         |
 
-Example
 
-```
+**Example**
+
+``` javascript
 import {IInfoPanelPlugin, IInfoPanelItem} from "@onlyoffice/docspace-plugin-sdk";
 
 class Plugin implements IInfoPanelPlugin {

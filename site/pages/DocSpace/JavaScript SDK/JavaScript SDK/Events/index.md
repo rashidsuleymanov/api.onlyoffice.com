@@ -1,20 +1,26 @@
+---
+order: -1
+---
+
 When initializing the SDK frame, a number of events can be passed to the configuration, which will be executed at the appropriate moment:
 
-* [onAppError](#onAppError)
-* [onAppReady](#onAppReady)
-* [onAuthSuccess](#onAuthSuccess)
-* [onCloseCallback](#onCloseCallback)
-* [onDownload](#onDownload)
-* [onEditorCloseCallback](#onEditorCloseCallback)
-* [onSelectCallback](#onSelectCallback)
+- [onAppError](#onapperror)
+- [onAppReady](#onappready)
+- [onAuthSuccess](#onauthsuccess)
+- [onCloseCallback](#onclosecallback)
+- [onDownload](#ondownload)
+- [onEditorCloseCallback](#oneditorclosecallback)
+- [onSelectCallback](#onselectcallback)
+- [onSignOut](#onsignout)
 
-## Events and their description:
 
-* **onAppError** - the function called when SDK is initialized with an error. This error is returned during the initialization.
+## onAppError
 
-  Example
+The function called when SDK is initialized with an error. This error is returned during the initialization.
 
-  ```
+  **Example**
+
+  ``` javascript
   var onAppError = function () {
       console.log("ONLYOFFICE DocSpace reports an error");
   };
@@ -22,17 +28,18 @@ When initializing the SDK frame, a number of events can be passed to the configu
   var docSpace = DocSpace.SDK.initManager({
       "events": {
           "onAppError": onAppError,
-          ...
       },
-      ...
   });
   ```
 
-* **onAppReady** - the function called when SDK is initialized successfully.
 
-  Example
+## onAppReady
 
-  ```
+The function called when SDK is initialized successfully.
+
+  **Example**
+
+  ``` javascript
   var onAppReady = function () {
       console.log("ONLYOFFICE DocSpace is ready");
   };
@@ -40,17 +47,18 @@ When initializing the SDK frame, a number of events can be passed to the configu
   var docSpace = DocSpace.SDK.initManager({
       "events": {
           "onAppReady": onAppReady,
-          ...
       },
-      ...
   });
   ```
 
-* **onAuthSuccess** - the function called upon successful authorization.
 
-  Example
+## onAuthSuccess
 
-  ```
+The function called upon successful authorization.
+
+  **Example**
+
+  ``` javascript
   var onAuthSuccess = function () {
       console.log("The authorization is successful.");
   };
@@ -58,17 +66,18 @@ When initializing the SDK frame, a number of events can be passed to the configu
   var docSpace = DocSpace.SDK.initManager({
       "events": {
           "onAuthSuccess ": onAuthSuccess,
-          ...
       },
-      ...
   });
   ```
 
-* **onCloseCallback** - the function called only in the [room-selector](/docspace/jssdk/initmodes/roomselector) and [file-selector](/docspace/jssdk/initmodes/fileselector) modes when the room or file selector is closed or the selection is canceled.
 
-  Example
+## onCloseCallback
 
-  ```
+The function called only in the [room-selector](../Initialization%20Modes/Room%20Selector/index.md) and [file-selector](../Initialization%20Modes/File%20Selector/index.md) modes when the room or file selector is closed or the selection is canceled.
+
+  **Example**
+
+  ``` javascript
   var onCloseCallback = function () {
       console.log("The room selector is closed.");
   };
@@ -76,17 +85,18 @@ When initializing the SDK frame, a number of events can be passed to the configu
   var docSpace = DocSpace.SDK.initRoomSelector({
       "events": {
           "onCloseCallback": onCloseCallback,
-          ...
       },
-      ...
   });
   ```
 
-* **onDownload** - the function called when firing events to download items from the manager. It returns a link to the download object. This event is called only when the [downloadToEvent](/docspace/jssdk/config#downloadToEvent) parameter is specified in the config.
 
-  Example
+## onDownload
 
-  ```
+The function called when firing events to download items from the manager. It returns a link to the download object. This event is called only when the [downloadToEvent](../Config/index.md#downloadtoevent) parameter is specified in the config.
+
+  **Example**
+
+  ``` javascript
   var onDownload = function () {
       console.log("The 'New document' file has been downloaded.");
   };
@@ -94,17 +104,18 @@ When initializing the SDK frame, a number of events can be passed to the configu
   var docSpace = DocSpace.SDK.initManager({
       "events": {
           "onDownload": onDownload,
-          ...
       },
-      ...
   });
   ```
 
-* **onEditorCloseCallback** - the function called when the document editor is closed.
 
-  Example
+## onEditorCloseCallback
 
-  ```
+The function called when the document editor is closed.
+
+  **Example**
+
+  ``` javascript
   var onEditorCloseCallback = function () {
       console.log("The document editor is closed.");
   };
@@ -112,17 +123,18 @@ When initializing the SDK frame, a number of events can be passed to the configu
   var docSpace = DocSpace.SDK.initEditor({
       "events": {
           "onEditorCloseCallback": onEditorCloseCallback,
-          ...
       },
-      ...
   });
   ```
 
-* **onSelectCallback** - the function called only in the [room-selector](/docspace/jssdk/initmodes/roomselector) and [file-selector](/docspace/jssdk/initmodes/fileselector) modes when a room or file is selected.
 
-  Example
+## onSelectCallback
 
-  ```
+The function called only in the [room-selector](../Initialization%20Modes/Room%20Selector/index.md) and [file-selector](../Initialization%20Modes/File%20Selector/index.md) modes when a room or file is selected.
+
+  **Example**
+
+  ``` javascript
   var onSelectCallback = function () {
       console.log("The 'New room' room was selected.");
   };
@@ -130,15 +142,13 @@ When initializing the SDK frame, a number of events can be passed to the configu
   var docSpace = DocSpace.SDK.initRoomSelector({
       "events": {
           "onSelectCallback": onSelectCallback,
-          ...
       },
-      ...
   });
   ```
 
   The information about the selected item is returned:
 
-  ```
+  ``` json
   {
       "icon": "https://example.com/url-to-example-image.svg",
       "id": 34,
@@ -156,11 +166,14 @@ When initializing the SDK frame, a number of events can be passed to the configu
   | isSelected | Specifies whether the current room/file is selected. | boolean | required |
   | label      | Defines the room/file label.                         | string  | required |
 
-* **onSignOut** - the function called when logging out of the user account.
 
-  Example
+## onSignOut
 
-  ```
+The function called when logging out of the user account.
+
+  **Example**
+
+  ``` javascript
   var onSignOut = function () {
       console.log("The user is logging out of the DocSpace account.");
   };
@@ -168,8 +181,6 @@ When initializing the SDK frame, a number of events can be passed to the configu
   var docSpace = DocSpace.SDK.initManager({
       "events": {
           "onSignOut ": onSignOut,
-          ...
       },
-      ...
   });
   ```

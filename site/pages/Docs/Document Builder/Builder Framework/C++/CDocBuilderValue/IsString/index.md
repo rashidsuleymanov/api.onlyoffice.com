@@ -2,13 +2,13 @@
 
 Returns true if the **CDocBuilderValue** object is a string.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsString* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsString* method is not used.
 
 ## Example
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;

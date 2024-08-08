@@ -10,31 +10,31 @@ This procedure creates a [basic React application](https://github.com/facebook/c
 
 1. Create a new React project named *onlyoffice-react-demo* using the *Create React App* package:
 
-   ```
+   ``` bash
    npx create-react-app onlyoffice-react-demo
    ```
 
 2. Go to the newly created directory:
 
-   ```
+   ``` bash
    cd onlyoffice-react-demo
    ```
 
 3. Install ONLYOFFICE Docs React component from **npm** and save it to the *package.json* file with *--save*:
 
-   ```
+   ``` bash
    npm install --save @onlyoffice/document-editor-react
    ```
 
    You can also use the following **yarn** command:
 
-   ```
+   ``` bash
    yarn add @onlyoffice/document-editor-react
    ```
 
 4. Open the *./src/App.js* file in the *onlyoffice-react-demo* project and replace its contents with the following code:
 
-   ```
+   ``` javascript
    import React, { useRef } from 'react';
    import { DocumentEditor } from "@onlyoffice/document-editor-react";
 
@@ -86,9 +86,9 @@ This procedure creates a [basic React application](https://github.com/facebook/c
 
    Replace the following lines with your own data:
 
-   * **"http\://documentserver/"** - replace with the URL of your server;
-   * **"https\://example.com/url-to-example-document.docx"** - replace with the URL to your file;
-   * **"https\://example.com/url-to-callback.ashx"** - replace with your callback URL (this is required for the saving functionality to work).
+   * `http://documentserver/` - replace with the URL of your server;
+   * `https://example.com/url-to-example-document.docx` - replace with the URL to your file;
+   * `https://example.com/url-to-callback.ashx` - replace with your callback URL (this is required for the saving functionality to work).
 
    This JavaScript file will create the *App* component containing the ONLYOFFICE Docs editor configured with basic features.
 
@@ -96,7 +96,7 @@ This procedure creates a [basic React application](https://github.com/facebook/c
 
    * To start the development server, navigate to the *onlyoffice-react-demo* directory and run:
 
-     ```
+     ``` bash
      npm run start
      ```
 
@@ -108,25 +108,25 @@ The easiest way to deploy the application to a production environment is to inst
 
 1. Install the *serve* package globally:
 
-   ```
+   ``` bash
    npm install -g serve
    ```
 
 2. Serve your static site on the 3000 port:
 
-   ```
+   ``` bash
    serve -s build
    ```
 
    Another port can be adjusted using the *-l* or *--listen* flags:
 
-   ```
+   ``` bash
    serve -s build -l 4000
    ```
 
 3. To serve the project folder, go to it and run the *serve* command:
 
-   ```
+   ``` bash
    cd onlyoffice-react-demo
    serve
    ```
@@ -135,7 +135,7 @@ Now you can deploy the application to the created server:
 
 1. Navigate to the *onlyoffice-react-demo* directory and run:
 
-   ```
+   ``` bash
    npm run build
    ```
 
@@ -143,17 +143,17 @@ Now you can deploy the application to the created server:
 
 2. Copy the contents of the *onlyoffice-react-demo/build* directory to the root directory of the web server (to the *onlyoffice-react-demo* folder).
 
-The application will be deployed on the web server (*http\://localhost:3000* by default).
+The application will be deployed on the web server (`http://localhost:3000` by default).
 
 ## ONLYOFFICE Docs React component API
 
-Properties
+### Properties
 
 | Name                                 | Type                                                  | Default | Description                                                                                                                                                |
 | ------------------------------------ | ----------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id\*                                 | string                                                | null    | Component unique identifier.                                                                                                                               |
 | documentServerUrl\*                  | string                                                | null    | Address of ONLYOFFICE Docs.                                                                                                                                |
-| config\*                             | object                                                | null    | Generic [configuration object](/editors/config) for opening a file with token.                                                                             |
+| config\*                             | object                                                | null    | Generic [configuration object](../../../Usage%20API/Config/index.md) for opening a file with token.                                                        |
 | onLoadComponentError                 | (errorCode: number, errorDescription: string) => void | null    | The function called when an error occurs while loading a component.                                                                                        |
 | document\_fileType                   | string                                                | null    | The type of the file.                                                                                                                                      |
 | document\_title                      | string                                                | null    | The file name.                                                                                                                                             |
@@ -181,7 +181,7 @@ Properties
 | events\_onRequestHistoryData         | (event: object) => void                               | null    | The function called when the user is trying to click the specific document version in the document version history.                                        |
 | events\_onRequestRestore             | (event: object) => void                               | null    | The function called when the user is trying to restore the file version by clicking the **Restore** button in the version history.                         |
 
-\** - required field*
+\* *- required field*
 
 ## Installing Storybook
 
@@ -189,7 +189,7 @@ Install [Storybook](https://storybook.js.org/) to develop UI components in isola
 
 1. Change the address of the document server in the *config/default.json* file:
 
-   ```
+   ``` json
    "documentServerUrl": "http://documentserver/"
    ```
 
@@ -197,13 +197,13 @@ Install [Storybook](https://storybook.js.org/) to develop UI components in isola
 
 2. Build Storybook with the following command:
 
-   ```
+   ``` bash
    yarn build-storybook
    ```
 
 3. Start Storybook:
 
-   ```
+   ``` bash
    yarn storybook
    ```
 
@@ -211,31 +211,31 @@ Install [Storybook](https://storybook.js.org/) to develop UI components in isola
 
 1. Clone project from the GitHub repository:
 
-   ```
+   ``` bash
    git clone https://github.com/ONLYOFFICE/document-editor-react
    ```
 
 2. Install the project dependencies:
 
-   ```
+   ``` bash
    yarn install
    ```
 
 3. Test the component:
 
-   ```
+   ``` bash
    yarn test
    ```
 
 4. Build the project:
 
-   ```
+   ``` bash
    yarn rollup
    ```
 
 5. Create the package:
 
-   ```
+   ``` bash
    npm pack
    ```
 

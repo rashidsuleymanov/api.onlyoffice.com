@@ -2,7 +2,7 @@
 
 Returns true if the **CDocBuilderValue** object is a string.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsString* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsString* method is not used.
 
 ## Parameters:
 
@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsString* met
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;

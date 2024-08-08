@@ -4,11 +4,11 @@ Custom checkbox input.
 
 See the parameters of this component in [storybook](https://storybook.onlyoffice.io/?path=/docs/components-checkbox--docs).
 
-![Checkbox](/content/img/docspace/checkbox.png)
+![Checkbox](/assets/images/docspace/checkbox.png)
 
-Example
+### Example
 
-```
+``` javascript
 import {ICheckbox, IMessage, Actions} from "@onlyoffice/docspace-plugin-sdk";
 
 const onChange = () => {

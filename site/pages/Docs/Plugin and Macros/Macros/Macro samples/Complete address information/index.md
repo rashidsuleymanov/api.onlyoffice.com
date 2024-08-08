@@ -1,8 +1,12 @@
-Description
+---
+order: -1
+---
+
+## Description
 
 Completes the basic address data with detailed address information and inserts it into a spreadsheet.
 
-```
+``` javascript
 // Macros structure:
 // Read Address (Cell A2) ->
 // REQUEST Data -> 
@@ -90,10 +94,10 @@ Completes the basic address data with detailed address information and inserts i
 })();
 ```
 
-Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [GetRange](/officeapi/spreadsheetapi/apiworksheet/getrange), [SetValue](/officeapi/spreadsheetapi/apirange/setvalue), [GetText](/officeapi/spreadsheetapi/apirange/gettext)
+Methods used: GetActiveSheet, GetRange, SetValue, GetText
 
-For the macros to function, replace *yourAPIkey* with the API key obtained from [Geoapify](https://www.geoapify.com/).
+> For the macros to function, replace *yourAPIkey* with the API key obtained from [Geoapify](https://www.geoapify.com/).
 
-Result
+## Result
 
-![Write data](/content/img/plugins/complete_address_information.png)
+![Write data](/assets/images/plugins/complete_address_information.png)

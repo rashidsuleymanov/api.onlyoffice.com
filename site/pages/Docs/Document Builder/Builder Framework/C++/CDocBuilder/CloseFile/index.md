@@ -6,7 +6,7 @@ Closes the file to stop working with it. You can use a single **ONLYOFFICE Docum
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;

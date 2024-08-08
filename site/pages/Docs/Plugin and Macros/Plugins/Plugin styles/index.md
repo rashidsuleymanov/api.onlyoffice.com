@@ -1,25 +1,29 @@
-ONLYOFFICE provides a style sheet for different interface elements. To adjust your plugin interface to the ONLYOFFICE style, connect the [plugin.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css) to the [index.html](/plugin/indexhtml) file with the following link:
+---
+order: -3
+---
 
-```
+ONLYOFFICE provides a style sheet for different interface elements. To adjust your plugin interface to the ONLYOFFICE style, connect the [plugin.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css) to the [index.html](../../Usage%20API/index.html/index.md) file with the following link:
+
+``` html
 <link rel="stylesheet" href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css">
 ```
 
 All the available controls are displayed within the **Controls example** plugin:
 
-![Controls example](/content/img/plugins/controls.png)\
+![Controls example](/assets/images/plugins/controls.png)
 
 
-**Buttons**
+### Buttons
 
 1. Use the *btn-text-default* class to add **Button 1** to your plugin:
 
-   ```
+   ``` html
    <button class="btn-text-default" style="width:75px;">Button 1</button>
    ```
 
    This class has the following parameters:
 
-   ```
+   ``` css
    .btn-text-default {
        background: #fff;
        border: 1px solid #cfcfcf;
@@ -32,34 +36,34 @@ All the available controls are displayed within the **Controls example** plugin:
    }
    ```
 
-   ![Button 1](/content/img/plugins/button-1.png)
+   ![Button 1](/assets/images/plugins/button-1.png)
 
 2. Use the *btn-text-default.submit.primary* class to add **Button 2** to your plugin:
 
-   ```
+   ``` html
    <button class="btn-text-default submit primary" style="width:75px;">Button 2</button>
    ```
 
    This class has the following parameters:
 
-   ```
+   ``` css
    .btn-text-default.submit.primary {
        color: #fff;
        background-color: #7d858c;
    }
    ```
 
-   ![Button 2](/content/img/plugins/button-2.png)
+   ![Button 2](/assets/images/plugins/button-2.png)
 
 3. Use the *btn-text-default.submit* class to add **Button 3** to your plugin:
 
-   ```
+   ``` html
    <button class="btn-text-default submit" style="width:75px;">Button 3</button>
    ```
 
    This class has the following parameters:
 
-   ```
+   ``` css
    .btn-text-default.submit {
        font-weight: bold;
        background-color: #d8dadc;
@@ -67,17 +71,19 @@ All the available controls are displayed within the **Controls example** plugin:
    }               
    ```
 
-   ![Button 3](/content/img/plugins/button-3.png) The button color is chosen by the developer. The darker the button, the more important it is. As a rule, the button of the *btn-text-default.submit.primary* class is used to confirm the action and send the result (for example, the **Ok** button).
+   ![Button 3](/assets/images/plugins/button-3.png)
 
-4. Use the *btn-edit* class to add ![Edit button](/content/img/plugins/edit_button.png) **Edit button** to your plugin:
+   > The button color is chosen by the developer. The darker the button, the more important it is. As a rule, the button of the *btn-text-default.submit.primary* class is used to confirm the action and send the result (for example, the **Ok** button).
 
-   ```
+4. Use the *btn-edit* class to add ![Edit button](/assets/images/plugins/edit_button.png) **Edit button** to your plugin:
+
+   ``` html
    <label class="for-combo">Edit button</label><div class="btn-edit" style="display: inline-block; margin-left: 10px;"></div>
    ```
 
    This class has the following parameters:
 
-   ```
+   ``` css
    .btn-edit {
        width: 13px;
        height: 13px;
@@ -86,36 +92,34 @@ All the available controls are displayed within the **Controls example** plugin:
    }                              
    ```
 
-\
 
-
-**Input controls**
+### Input controls
 
 1. Use the *textarea* form element to add a **text area** to your plugin:
 
-   ```
+   ``` html
    <textarea style="height:45px;width: 100%;" class="form-control" placeholder="textarea control"></textarea>
    ```
 
    This class has the following parameters:
 
-   ```
+   ``` css
    textarea.form-control {
        resize: none;
    }               
    ```
 
-   ![Textarea](/content/img/plugins/text_area.png)
+   ![Textarea](/assets/images/plugins/text_area.png)
 
-2. Use the *input *form element with the *text* type to add a **text field** to your plugin:
+2. Use the *input* form element with the *text* type to add a **text field** to your plugin:
 
-   ```
+   ``` html
    <input type="text" class="form-control" placeholder="text field" style="width: 100%;margin-bottom: 2px;">
    ```
 
    This class has the following parameters:
 
-   ```
+   ``` css
    .form-control {
        border: 1px solid #cfcfcf;
        border-radius: 2px;
@@ -133,37 +137,35 @@ All the available controls are displayed within the **Controls example** plugin:
    }        
    ```
 
-   ![Text field](/content/img/plugins/text_field.png)
+   ![Text field](/assets/images/plugins/text_field.png)
 
-3. Use the *input *form element with the *checkbox* type to add a ![Checkbox](/content/img/plugins/checkbox_example.png) **checkbox** to your plugin:
+3. Use the *input* form element with the *checkbox* type to add a ![Checkbox](/assets/images/plugins/checkbox_example.png) **checkbox** to your plugin:
 
-   ```
+   ``` html
    <input type="checkbox" class="form-control" style="vertical-align: middle;"><label style="margin-left: 5px;vertical-align: middle;">Checkbox</label>
    ```
 
    This class has the following parameters:
 
-   ```
+   ``` css
    input[type='checkbox '].form-control {
        height: auto;
        margin: 0;
    }                          
    ```
 
-\
 
-
-**Label controls**
+### Label controls
 
 1. Use the *label.header* class to add a **bold header** to your plugin:
 
-   ```
+   ``` html
    <label class="header">Header label</label>
    ```
 
    This class has the following parameters:
 
-   ```
+   ``` css
    label.header {
        font-weight: bold;
    }                            
@@ -171,27 +173,25 @@ All the available controls are displayed within the **Controls example** plugin:
 
 2. Use the *label.link* class to add a link to your plugin:
 
-   ```
+   ``` html
    <label class="link">Link label</label>
    ```
 
    This class has the following parameters:
 
-   ```
+   ``` css
    label.link {
        border-bottom: 1px dotted #aaa;
        cursor: pointer;
    }                            
    ```
 
-\
 
-
-**ComboBox**
+### ComboBox
 
 Use the [select2](https://select2.org/) function to add a **combo box** to your plugin:
 
-```
+``` html
 <select id="select_example" class="" ></select>
 $('#select_example').select2({
     data : [{id:0, text:'Item 1'}, {id:1, text:'Item 2'}, {id:2, text:'Item 3'}],
@@ -200,51 +200,54 @@ $('#select_example').select2({
 });
 ```
 
-![Combobox](/content/img/plugins/combobox_example.png)\
+![Combobox](/assets/images/plugins/combobox_example.png)
 
 
-**Loader**
+### Loader
 
 Use the *asc-loader-container* class to add a **loader container** to your plugin:
 
-```
+``` html
 <div id="loader-container" class="asc-loader-container" style="margin: 10px; height: 40px; border: 1px solid #cfcfcf;"></div>
 ```
 
 This class has the following parameters:
 
-```
+``` css
 .asc-loader-container {
     position: relative;
 }        
 ```
 
-![Loader](/content/img/plugins/loader_example.png)
+![Loader](/assets/images/plugins/loader_example.png)
+
+
+## Example
 
 Let’s have a look at how to add interface elements in the ONLYOFFICE style to the YouTube plugin.
 
-![YouTube plugin](/content/img/plugins/youtube_interface.png)
+![YouTube plugin](/assets/images/plugins/youtube_interface.png)
 
 1. To add the simple white **OK** button, use the *btn-text-default* class (button width - 30 pixels):
 
-   ```
+   ``` html
    <button class="btn-text-default" style="width:30px;">OK</button>
    ```
 
 2. To add a field, use the *form-control* class (form width - 100%, i.e. it is adjusted to the width of the parent element):
 
-   ```
+   ``` html
    <input type="text" class="form-control" style="width:100%;">
    ```
 
 3. To add the dark grey **Ok** button, use the *btn-text-default.submit.primary* class (button width - 90 pixels):
 
-   ```
+   ``` html
    <button class="btn-text-default submit primary" style="width:90px;">Ok</button>
    ```
 
 4. To add the light grey **Cancel** button, use the *btn-text-default.submit* class (button width - 90 pixels):
 
-   ```
+   ``` html
    <button class="btn-text-default submit" style="margin-left:5px; width:90px;">Cancel</button>
    ```

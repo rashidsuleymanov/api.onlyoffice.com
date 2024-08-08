@@ -1,8 +1,13 @@
-Description
+---
+order: -8
+---
+
+
+## Description
 
 Inserts text into the document at the current cursor position.
 
-```
+``` javascript
 (function()
 {
     var oDocument = Api.GetDocument();
@@ -12,9 +17,8 @@ Inserts text into the document at the current cursor position.
 })();
 ```
 
-Methods used: [GetDocument](/officeapi/textdocumentapi/api/getdocument), [CreateParagraph](/officeapi/textdocumentapi/api/createparagraph), [AddText](/officeapi/textdocumentapi/apiparagraph/addtext), [InsertContent](/officeapi/textdocumentapi/apidocument/insertcontent)
+Methods used: GetDocument, CreateParagraph, AddText, InsertContent
 
-Result
+## Result
 
-\
-![Chart](/content/img/plugins/insert-text.png)
+![Chart](/assets/images/plugins/insert-text.png)

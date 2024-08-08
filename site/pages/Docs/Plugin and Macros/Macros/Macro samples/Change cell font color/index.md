@@ -1,24 +1,28 @@
-Description
+---
+order: -17
+---
+
+## Description
 
 Sets the font color of the cell **B4** to red.
 
-```
+``` javascript
 (function()
 {
     Api.GetActiveSheet().GetRange("B4").SetFontColor(Api.CreateColorFromRGB(255, 0, 0));
 })();
 ```
 
-Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [GetRange](/officeapi/spreadsheetapi/apiworksheet/getrange), [SetFontColor](/officeapi/spreadsheetapi/apirange/setfontcolor)
+Methods used: GetActiveSheet, GetRange, SetFontColor
 
-Reference Microsoft VBA macro code
+## Reference Microsoft VBA macro code
 
-```
+``` vb
 Sub example()
     Range("B4").Font.Color = RGB(255, 0, 0)
 End Sub
 ```
 
-Result
+## Result
 
-![Font color](/content/img/plugins/font_color.png)
+![Font color](/assets/images/plugins/font_color.png)

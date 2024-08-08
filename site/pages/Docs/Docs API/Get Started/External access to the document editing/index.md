@@ -1,25 +1,24 @@
-The following examples will show you how to edit text documents, spreadsheets, presentations, and fillable forms from an external source. To achieve this, use our [Automation API](/editors/connector).
+---
+order: -1
+---
 
-* [](/editors/interactingoutside/comments)
 
-  [Working with comments](/editors/interactingoutside/comments)
+The following examples will show you how to edit text documents, spreadsheets, presentations, and fillable forms from an external source. To achieve this, use our [Automation API](../../Usage%20API/Automation%20API/index.md).
 
-  Collects all the comments from the document and displays them in the custom interface.
+## Working with comments
 
-  [More](/editors/interactingoutside/comments)
+Collects all the comments from the document and displays them in the custom interface.
 
-* [](/editors/interactingoutside/reviewwork)
+[More](Working%20with%20comments/index.md)
 
-  [Working with review changes](/editors/interactingoutside/reviewwork)
+## Working with review changes
 
-  Manages review process from an external source.
+Manages review process from an external source.
 
-  [More](/editors/interactingoutside/reviewwork)
+[More](Working%20with%20review%20changes/index.md)
 
-* [](/editors/interactingoutside/fillingform)
+## Filling out the form
 
-  [Filling out the form](/editors/interactingoutside/fillingform)
+Fills in the empty cells in the form.
 
-  Fills in the empty cells in the form.
-
-  [More](/editors/interactingoutside/fillingform)
+[More](Filling%20out%20the%20form/index.md)

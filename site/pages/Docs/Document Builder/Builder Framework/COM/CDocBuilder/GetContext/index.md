@@ -1,8 +1,8 @@
 #### HRESULT GetContext(\[out, retval] I\_DOCBUILDER\_CONTEXT\*\* result);
 
-Returns the current JS [context](/docbuilder/integrationapi/com/cdocbuildercontext).
+Returns the current JS [context](../../CDocBuilderContext/index.md).
 
-Please note, that for the *.docbuilder* file the *CDocBuilder.GetContext* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilder.GetContext* method is not used.
 
 ## Parameters:
 
@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilder.GetContext* method
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;

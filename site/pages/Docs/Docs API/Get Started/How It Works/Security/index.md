@@ -1,3 +1,7 @@
+---
+order: -11
+---
+
 To prevent the substitution of important parameters in ONLYOFFICE Docs requests an encrypted signature is added to it in the form of **token**.
 
 The **token** is added in the configuration when initializing **Document Editor** and during the exchange of commands between **document storage service** and **document editing service**, **document command service**, **document conversion service** and **document builder service**.
@@ -8,8 +12,8 @@ The **token** is generated using the *JWT* ([JSON Web Tokens](https://jwt.io/)) 
 
 **ONLYOFFICE Docs** validates the **token**. The data from the *payload* is considered valid and is used instead of the corresponding data from the main parameters. If the **token** is invalid, the command is not executed.
 
-See the [Signature](/editors/signature/) configuration section to find more.
+See the [Signature](../../../Additional%20API/Signature/index.md) configuration section to find more.
 
-Please note that using the **local links** by the integrator requires the *JWT* in the config. Otherwise, an error will occur.
-
-Be sure to add a token when using local links in the following methods: [insertImage](/editors/methods#insertImage), [setHistoryData](/editors/methods#setHistoryData), [setMailMergeRecipients](/editors/methods#setMailMergeRecipients), [setReferenceData](/editors/methods#setReferenceData), [setReferenceSource](/editors/methods#setReferenceSource), [setRequestedDocument](/editors/methods#setRequestedDocument), [setRequestedSpreadsheet](/editors/methods#setRequestedSpreadsheet), [setRevisedFile](/editors/methods#setRevisedFile). Moreover, it is necessary when defining the local url for [opening](/editors/config/document#url) or [conversion](/editors/conversionapi#url).
+> Please note that using the **local links** by the integrator requires the *JWT* in the config. Otherwise, an error will occur.
+> 
+> Be sure to add a token when using local links in the following methods: [insertImage](../../../Usage%20API/Methods/index.md#insertimage), [setHistoryData](../../../Usage%20API/Methods/index.md#sethistorydata), [setMailMergeRecipients](../../../Usage%20API/Methods/index.md#setmailmergerecipients), [setReferenceData](../../../Usage%20API/Methods/index.md#setreferencedata), [setReferenceSource](../../../Usage%20API/Methods/index.md#setreferencesource), [setRequestedDocument](../../../Usage%20API/Methods/index.md#setrequesteddocument), [setRequestedSpreadsheet](../../../Usage%20API/Methods/index.md#setrequestedspreadsheet), [setRevisedFile](../../../Usage%20API/Methods/index.md#setrevisedfile). Moreover, it is necessary when defining the local url for [opening](../../../Usage%20API/Config/Document/index.md#url) or [conversion](../../../Additional%20API/Conversion%20API/index.md#url).

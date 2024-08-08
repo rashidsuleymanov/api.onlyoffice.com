@@ -1,8 +1,13 @@
-Description
+---
+order: -10
+---
+
+
+## Description
 
 Highlights duplicates in the selected area with different colors to recognize duplicated values quickly.
 
-```
+``` javascript
 (function () 
 {
     // Background color of cells with non-repeating values
@@ -61,13 +66,13 @@ Highlights duplicates in the selected area with different colors to recognize du
 })();
 ```
 
-Methods used: [CreateColorFromRGB](/officeapi/spreadsheetapi/api/createcolorfromrgb) [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [GetSelection](/officeapi/spreadsheetapi/apiworksheet/getselection), [ForEach](/officeapi/spreadsheetapi/apirange/foreach), [GetValue](/officeapi/spreadsheetapi/apirange/getvalue), [SetFillColor](/officeapi/spreadsheetapi/apirange/setfillcolor)
+Methods used: CreateColorFromRGB, GetActiveSheet, GetSelection, ForEach, GetValue, SetFillColor
 
-Reference Microsoft VBA macro code
+## Reference Microsoft VBA macro code
 
 [This VBA macro](https://www.extendoffice.com/documents/excel/3772-excel-highlight-duplicate-values-in-different-colors.html) was used as a base.
 
-```
+``` vb
 Sub example()
     Dim xRg As Range
     Dim xTxt As String
@@ -104,6 +109,6 @@ Sub example()
 End Sub
 ```
 
-Result
+## Result
 
-![Highlight duplicates](/content/img/plugins/highlight_duplicates.png)
+![Highlight duplicates](/assets/images/plugins/highlight_duplicates.png)

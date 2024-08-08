@@ -1,24 +1,28 @@
-Description
+---
+order: -16
+---
+
+## Description
 
 Sets the font of the cell **A2** to bold.
 
-```
+``` javascript
 (function()
 {
     Api.GetActiveSheet().GetRange("A2").SetBold(true);
 })();
 ```
 
-Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [GetRange](/officeapi/spreadsheetapi/apiworksheet/getrange), [SetBold](/officeapi/spreadsheetapi/apirange/setbold)
+Methods used: GetActiveSheet, GetRange, SetBold
 
-Reference Microsoft VBA macro code
+## Reference Microsoft VBA macro code
 
-```
+``` vb
 Sub example()
     Range("A2").Font.Bold = True
 End Sub
 ```
 
-Result
+## Result
 
-![Font bold](/content/img/plugins/font_bold.png)
+![Font bold](/assets/images/plugins/font_bold.png)

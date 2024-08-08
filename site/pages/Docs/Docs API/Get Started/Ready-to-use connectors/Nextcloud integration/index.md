@@ -1,10 +1,4 @@
-![Show video](/content/img/video/nextcloud_integration.png)
-
-How to integrate ONLYOFFICE Docs with Nextcloud
-
-[Close]()
-
-×
+<iframe src="https://www.youtube.com/embed/vN9v9sJ0HVw?wmode=transparent" class="video-frame" width="700px" height="400px" frameborder="0" allowfullscreen></iframe>
 
 This [app](https://github.com/ONLYOFFICE/onlyoffice-nextcloud) enables users to edit office documents from [Nextcloud](https://nextcloud.com) using ONLYOFFICE Docs.
 
@@ -39,9 +33,19 @@ If the server with the Nextcloud installed does not have the Internet access, or
 
    1. Download the latest signed version from the official store for [Nextcloud](https://apps.nextcloud.com/apps/onlyoffice).
    2. Download the latest signed version from the application [release page](https://github.com/ONLYOFFICE/onlyoffice-nextcloud/releases) on GitHub.
-   3. Clone the application source code and compile it yourself: git clone https\://github.com/ONLYOFFICE/onlyoffice-nextcloud.git onlyoffice cd onlyoffice git submodule update --init --recursive
+   3. Clone the application source code and compile it yourself:
+   
+    ``` bash
+    git clone https://github.com/ONLYOFFICE/onlyoffice-nextcloud.git onlyoffice
+    cd onlyoffice
+    git submodule update --init --recursive
+    ```
 
-3. Change the owner to update the application right from Nextcloud web interface: chown -R www-data:www-data onlyoffice
+3. Change the owner to update the application right from Nextcloud web interface:
+
+  ``` bash
+  chown -R www-data:www-data onlyoffice
+  ```
 
 4. In Nextcloud, open the *\~/settings/apps/disabled* page with **Not enabled** apps by administrator and click **Enable** for the **ONLYOFFICE** application.
 
@@ -49,17 +53,19 @@ If the server with the Nextcloud installed does not have the Internet access, or
 
 In Nextcloud, open the *\~/settings/admin/onlyoffice* page with administrative settings for **ONLYOFFICE** section. Enter the following address to connect ONLYOFFICE Docs:
 
-https\://\<documentserver>/
+```
+https://<documentserver>/
+```
 
 where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the Nextcloud server. The Nextcloud server address must also be accessible from **ONLYOFFICE Docs** for correct work.
 
-![Local](/content/img/editor/nextcloud-local.jpg)
+![Local](/assets/images/editor/nextcloud-local.jpg)
 
 Sometimes your network configuration might not allow the requests between installed Nextcloud and ONLYOFFICE Docs using the public addresses. The **Advanced server settings** allows to set the ONLYOFFICE Docs address for internal requests from Nextcloud server and the returning Nextcloud address for the internal requests from ONLYOFFICE Docs. You need to enter them in the appropriate fields.
 
-![Public](/content/img/editor/nextcloud-public.jpg)
+![Public](/assets/images/editor/nextcloud-public.jpg)
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the Nextcloud administrative configuration. In the ONLYOFFICE Docs [config file](/editors/signature/), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the Nextcloud administrative configuration. In the ONLYOFFICE Docs [config file](../../../Additional%20API/Signature/index.md), specify the same secret key and enable the validation.
 
 Enable or disable the **Open file in the same tab** setting.
 
@@ -69,13 +75,15 @@ The **Open in ONLYOFFICE** action will be added to the file context menu. You ca
 
 You can check the connection to ONLYOFFICE Docs by using the following occ command:
 
+``` bash
 occ onlyoffice:documentserver --check
+```
 
 You will see a text either with information about the successful connection or the cause of the error.
 
 ## How it works
 
-The ONLYOFFICE integration follows the API documented [here](/editors/basic).
+The ONLYOFFICE integration follows the API documented [here](../../Basic%20concepts/index.md).
 
 1. When creating a new file, the user navigates to a document folder within Nextcloud and clicks the **Document**, **Spreadsheet** or **Presentation** item in the **new (+)** menu.
 
@@ -102,7 +110,7 @@ The ONLYOFFICE integration follows the API documented [here](/editors/basic).
 
 10. When all users and client browsers are done with editing, they close the editing window.
 
-11. After [10 seconds](/editors/save#savedelay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting Nextcloud know that the clients have finished editing the document and closed it.
+11. After [10 seconds](../../How%20It%20Works/Saving%20file/index.md#save-delay) of inactivity, ONLYOFFICE Docs sends a POST to *callbackUrl* letting Nextcloud know that the clients have finished editing the document and closed it.
 
 12. Nextcloud downloads a new version of the document, replacing the old one.
 
@@ -115,15 +123,17 @@ The ONLYOFFICE integration follows the API documented [here](/editors/basic).
   1. Check the **Disable certificate verification (insecure)** box on the ONLYOFFICE administration page, Server settings section, within your Nextcloud.
   2. Change the Nextcloud config file manually. Locate the Nextcloud config file (*/nextcloud/config/config.php*) and open it. Insert the following section to it:
 
-  ```
+  ``` php
+  <?php
   'onlyoffice' => array (
       'verify_peer_off' => true
   )
+  ?>
   ```
 
   This will disable the certificate verification and allow Nextcloud to establish connection with ONLYOFFICE Docs.
 
-  Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the Nextcloud config file.
+  > Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the Nextcloud config file.
 
 * **Background task**. If the editors don't open or save documents after a period of proper functioning, the reason can be a problem in changing network settings or disabling any relevant services, or issues with the SSL certificate.
 
@@ -135,10 +145,12 @@ The ONLYOFFICE integration follows the API documented [here](/editors/basic).
 
   By default, this background task runs once a day. If necessary, you can change the frequency. To do so, open the Nextcloud config file (*\_/nextcloud/config/config.php\_*). Insert the following section and enter the required value in minutes:
 
-  ```
+  ``` php
+  <?php
   "onlyoffice" => array (
       "editors_check_interval" => 3624
   )
+  ?>
   ```
 
   To disable this check running, enter 0 value.
@@ -150,8 +162,5 @@ The ONLYOFFICE integration follows the API documented [here](/editors/basic).
   In case the source Nextcloud file format was different from the base one, and you still want to save it to the original format, the file will be converted to this format from OOXML. As the formats are fundamentally different, some data (such as charts, tables, autoshapes or images) and formatting can be lost due to the simple reason that some formats (*csv*, *txt*, etc.) do not support them or treat them differently than OOXML standard does. That is why all the non-OOXML files by default are opened for viewing only, although there is an option to convert the file in the context menu. If you realise the data/formatting loss risks after the conversion, but still want to open non-OOXML files for editing, you can check them in the list in the settings. Editing for *csv* and *txt* files is available by default.
 
 * When accessing a document without download permission, file printing and using the system clipboard are not available. Copying and pasting within the editor is available via buttons in the editor toolbar and in the context menu.
-
-\
-
 
 Download the Nextcloud ONLYOFFICE integration app [here](https://github.com/ONLYOFFICE/onlyoffice-nextcloud).

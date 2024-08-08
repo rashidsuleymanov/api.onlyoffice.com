@@ -1,8 +1,8 @@
-#### HRESULT IsNull(\[out, retval] VARIANT\_BOOL\* result));
+#### HRESULT IsNull(\[out, retval] VARIANT\_BOOL\* result);
 
 Returns true if the **CDocBuilderValue** object is null.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsNull* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsNull* method is not used.
 
 ## Parameters:
 
@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderValue.IsNull* metho
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;

@@ -1,4 +1,4 @@
-Description
+## Description
 
 Connects the [Google Translate API](https://cloud.google.com/translate?hl=ru) for translating the selected text into other languages.
 
@@ -8,23 +8,23 @@ Connects the [Google Translate API](https://cloud.google.com/translate?hl=ru) fo
 
 **Analogues:** [Apertium](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/apertium), [DeepL](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/deepl).
 
-![Translator](/content/img/plugins/gifs/translator.gif)
+![Translator](/assets/images/plugins/gifs/translator.gif)
 
-Installation
+## Installation
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+You can remove it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
 The plugin guid: {7327FC95-16DA-41D9-9AF2-0E7F449F6800}.
 
-Usage
+## Usage
 
 1. Select the text you want to translate.
 2. Open the **Plugins** tab and press **Translator**.
 3. Select the necessary language. The translation will be displayed in the plugin window immediately.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/translator>.
 
@@ -42,9 +42,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
    * [Select2](https://select2.org/) gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options. License: [MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/translator/licenses/Select2.license).
    * [Google Translate API](https://cloud.google.com/translate?hl=ru) enables translation between languages. License: [MIT License](https://github.com/matheuss/google-translate-api/blob/master/LICENSE).
 
-Config
+## Config
 
-```
+``` json
 {
     "name": "Translator",
     "nameLocale": {
@@ -105,20 +105,20 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onExternalMouseUp](/plugin/events/onexternalmouseup)
-* [onTranslate](/plugin/events/ontranslate)
-* [callCommand](/plugin/callcommand)
-* [executeMethod ("GetVersion")](/plugin/executemethod/common/getversion)
-* [executeMethod ("GetSelectedText")](/plugin/executemethod/common/getselectedtext)
-* [executeMethod ("GetSelectionType")](/plugin/executemethod/common/getselectiontype)
-* [executeMethod ("PasteText")](/plugin/executemethod/common/pastetext)
-* [Asc.scope object](/plugin/scope)
-* [info.editorType](/plugin/info#editorType)
+* button
+* init
+* onExternalMouseUp
+* onTranslate
+* callCommand
+* executeMethod ("GetVersion")
+* executeMethod ("GetSelectedText")
+* executeMethod ("GetSelectionType")
+* executeMethod ("PasteText")
+* Asc.scope object
+* info.editorType
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

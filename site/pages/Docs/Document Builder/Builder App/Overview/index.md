@@ -1,27 +1,30 @@
+---
+order: -4
+---
+
 **Builder.App** is the *docbuilder.exe* executable file which can be run from your application with the *.docbuilder* script file as a parameter to it.
 
 If you are going to use **ONLYOFFICE Document Builder** with an application written in any programming language, run Document Builder executable from your application and use the **.docbuilder** script file for the document to be created as a parameter to it. It is much more flexible and allows to change the document script files (especially if there are more than one of them) independently of your application in future. You will only need to recompile your application if you need to add more document script files to it.
 
 To launch **ONLYOFFICE Document Builder** executable file run the following command:
 
-```
+```bash
 docbuilder.exe mydocument.docbuilder
 ```
 
 Here **docbuilder** is the name of **ONLYOFFICE Document Builder** executive file. It must be used together with the path if the command is run from the folder different from the one where the executive is placed. The command will look like **docbuilder.exe** for Windows version and **documentbuilder** for Linux. The **mydocument.docbuilder** parameter is the name of the script file that will form the document contents (use it with the path if needed).
 
-Visit the [.docbuilder](/docbuilder/integrationapi/usingdocbuilderfile) file section for more information about the file structure and rules used when creating it.
+Visit the [.docbuilder](../Using%20.docbuilder%20file/index.md) file section for more information about the file structure and rules used when creating it.
 
-See the examples in some of the most popular programming languages at [this page](/docbuilder/integratingdocumentbuilder).
+See the examples in some of the most popular programming languages at [this page](../../Builder%20Server/Overview/index.md).
 
-\
-
+# Known issues
 
 If you use **ONLYOFFICE Document Builder** as both an application and a script, then you need to know some rules and limitations:
 
-1. To run ONLYOFFICE Document Builder executable in the C++ application, use the [CDocBuilder.Run](/docbuilder/integrationapi/c/cdocbuilder/run) method in the following way:
+1. To run ONLYOFFICE Document Builder executable in the C++ application, use the [CDocBuilder.Run](../../Builder%20Framework/C++/CDocBuilder/Run/index.md) method in the following way:
 
-   ```
+   ```c++
    CDocBuilder::Initialize(sWorkDirectory.c_str());
    CDocBuilder oBuilder;
    oBuilder.Run("path-to-script.docbuilder");
@@ -30,28 +33,28 @@ If you use **ONLYOFFICE Document Builder** as both an application and a script, 
 
    Another way to do this is to use the **docbuilder.exe** executable file and run it with the **.docbuilder** file as an argument, where all the code for the document file creation will be written:
 
-   ```
+   ```bash
    docbuilder.exe "path-to-script.docbuilder"
    ```
 
-2. To set an argument to the builder class which can be trasferred to the program outside the [CDocBuilder.ExecuteCommand](/docbuilder/integrationapi/c/cdocbuilder/executecommand) method, add it as an additional property when running **ONLYOFFICE Document Builder** executable file or as a part of program JavaScript code, but not included into the document file script:
+2. To set an argument to the builder class which can be trasferred to the program outside the [CDocBuilder.ExecuteCommand](../../Builder%20Framework/C++/CDocBuilder/ExecuteCommand/index.md) method, add it as an additional property when running **ONLYOFFICE Document Builder** executable file or as a part of program JavaScript code, but not included into the document file script:
 
    #### Sets the --argument property to CDocBuilder.Run
 
-   ```
+   ```bash
    docbuilder.exe "--argument={\"company\":\"ONLYOFFICE\",\"product\":\"ONLYOFFICE Document Builder\"}" "path-to-script.docbuilder"
    ```
 
    #### Sets the --argument property using JavaScript code
 
-   ```
+   ```js
    var sCompany = Argument["company"];
    var sProduct = Argument["product"];
    ```
 
 3. The **builder** object methods cannot be called with the JS variables. Wrap them with the *jsValue* instruction if necessary:
 
-   ```
+   ```js
    var jsVar = "123.docx";
    builder.SaveFile("docx", jsVar); // Incorrect
    builder.SaveFile("docx", jsValue(jsVar)); // Correct
@@ -61,62 +64,74 @@ If you use **ONLYOFFICE Document Builder** as both an application and a script, 
 
    For example,
 
-   ```
+   ```js
    builder.CreateFile("docx");
    ```
 
    is the same as
 
-   ```
-   CDocBuilder.CreateFile(AVS_OFFICESTUDIO_FILE_DOCUMENT_DOCX);
+   ```js
+   CDocBuilder.CreateFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX);
    ```
 
    And
 
-   ```
+   ```js
    builder.SaveFile("docx", file_path);
    ```
 
    is the same as
 
-   ```
-   CDocBuilder.SaveFile(AVS_OFFICESTUDIO_FILE_DOCUMENT_DOCX, file_path);
+   ```js
+   CDocBuilder.SaveFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX, file_path);
    ```
 
    ## Format types
 
-   | String  | Format type                                            |
-   | ------- | ------------------------------------------------------ |
-   | "docx"  | AVS\_OFFICESTUDIO\_FILE\_DOCUMENT\_DOCX                |
-   | "doc"   | AVS\_OFFICESTUDIO\_FILE\_DOCUMENT\_DOC                 |
-   | "odt"   | AVS\_OFFICESTUDIO\_FILE\_DOCUMENT\_ODT                 |
-   | "rtf"   | AVS\_OFFICESTUDIO\_FILE\_DOCUMENT\_RTF                 |
-   | "txt"   | AVS\_OFFICESTUDIO\_FILE\_DOCUMENT\_TXT                 |
-   | "pptx"  | AVS\_OFFICESTUDIO\_FILE\_PRESENTATION\_PPTX            |
-   | "odp"   | AVS\_OFFICESTUDIO\_FILE\_PRESENTATION\_ODP             |
-   | "xlsx"  | AVS\_OFFICESTUDIO\_FILE\_SPREADSHEET\_XLSX             |
-   | "xls"   | AVS\_OFFICESTUDIO\_FILE\_SPREADSHEET\_XLS              |
-   | "ods"   | AVS\_OFFICESTUDIO\_FILE\_SPREADSHEET\_ODS              |
-   | "csv"   | AVS\_OFFICESTUDIO\_FILE\_SPREADSHEET\_CSV              |
-   | "pdf"   | AVS\_OFFICESTUDIO\_FILE\_CROSSPLATFORM\_PDF            |
-   | "image" | AVS\_OFFICESTUDIO\_FILE\_IMAGE                         |
-   | "jpg"   | AVS\_OFFICESTUDIO\_FILE\_IMAGE                         |
-   | "png"   | AVS\_OFFICESTUDIO\_FILE\_IMAGE                         |
-   | "html"  | AVS\_OFFICESTUDIO\_FILE\_DOCUMENT\_HTML\_IN\_CONTAINER |
+   | String | Format type                                       |
+   | ------ | ------------------------------------------------- |
+   | "docx" | OFFICESTUDIO\_FILE\_DOCUMENT\_DOCX                |
+   | "doc"  | OFFICESTUDIO\_FILE\_DOCUMENT\_DOC                 |
+   | "odt"  | OFFICESTUDIO\_FILE\_DOCUMENT\_ODT                 |
+   | "rtf"  | OFFICESTUDIO\_FILE\_DOCUMENT\_RTF                 |
+   | "txt"  | OFFICESTUDIO\_FILE\_DOCUMENT\_TXT                 |
+   | "dotx" | OFFICESTUDIO\_FILE\_DOCUMENT\_DOTX                |
+   | "ott"  | OFFICESTUDIO\_FILE\_DOCUMENT\_OTT                 |
+   | "html" | OFFICESTUDIO\_FILE\_DOCUMENT\_HTML                |
+   | "pdf"  | OFFICESTUDIO\_FILE\_DOCUMENT\_OFORM\_PDF          |
+   | "pptx" | OFFICESTUDIO\_FILE\_PRESENTATION\_PPTX            |
+   | "ppt"  | OFFICESTUDIO\_FILE\_PRESENTATION\_PPT             |
+   | "odp"  | OFFICESTUDIO\_FILE\_PRESENTATION\_ODP             |
+   | "ppsx" | OFFICESTUDIO\_FILE\_PRESENTATION\_PPSX            |
+   | "potx" | OFFICESTUDIO\_FILE\_PRESENTATION\_POTX            |
+   | "otp"  | OFFICESTUDIO\_FILE\_PRESENTATION\_OTP             |
+   | "xlsx" | OFFICESTUDIO\_FILE\_SPREADSHEET\_XLSX             |
+   | "xls"  | OFFICESTUDIO\_FILE\_SPREADSHEET\_XLS              |
+   | "ods"  | OFFICESTUDIO\_FILE\_SPREADSHEET\_ODS              |
+   | "csv"  | OFFICESTUDIO\_FILE\_SPREADSHEET\_CSV              |
+   | "xltx" | OFFICESTUDIO\_FILE\_SPREADSHEET\_XLTX             |
+   | "ots"  | OFFICESTUDIO\_FILE\_SPREADSHEET\_OTS              |
+   | "pdf"  | OFFICESTUDIO\_FILE\_CROSSPLATFORM\_PDF            |
+   | "djvu" | OFFICESTUDIO\_FILE\_CROSSPLATFORM\_DJVU           |
+   | "xps"  | OFFICESTUDIO\_FILE\_CROSSPLATFORM\_XPS            |
+   | "pdfa" | OFFICESTUDIO\_FILE\_CROSSPLATFORM\_PDFA           |
+   | "jpg"  | OFFICESTUDIO\_FILE\_IMAGE\_JPG                    |
+   | "png"  | OFFICESTUDIO\_FILE\_IMAGE\_PNG                    |
+   | "bmp"  | OFFICESTUDIO\_FILE\_IMAGE\_BMP                    |
 
 5. The entire JavaScript context is a wrapper for its native CDocBuilder **builderJS** object. You need to work with it as with an ordinary JavaScript object. In this case, the *jsValue* instruction is not needed for the JS variables:
 
-   ```
+   ```js
    builderJS.OpenFile("path_or_url", "x2t_additons_as_xml");
-   builderJS.CreateFile(AVS_OFFICESTUDIO_FILE_DOCUMENT_DOCX); or builderJS.CreateFile("docx");
+   builderJS.CreateFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX); or builderJS.CreateFile("docx");
    builderJS.SetTmpFolder("folder");
-   builderJS.SaveFile(AVS_OFFICESTUDIO_FILE_DOCUMENT_DOCX, "path", "x2t_additons_as_xml"); or builderJS.SaveFile("docx", "path", "x2t_additons_as_xml");
+   builderJS.SaveFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX, "path", "x2t_additons_as_xml"); or builderJS.SaveFile("docx", "path", "x2t_additons_as_xml");
    builderJS.CloseFile();
    ```
 
 6. The Document Builder always works with one file. But there are cases when you need to be able to open another file not for adding its data to the content, but for some kind of manipulation (document comparison, mailmerge, etc). For such cases, the Document Builder provides the **OpenTmpFile** method:
 
-   ```
+   ```js
    var tmpFile = builderJS.OpenTmpFile("path_or_url");
    ```
 
@@ -132,7 +147,7 @@ If you use **ONLYOFFICE Document Builder** as both an application and a script, 
 
 7. To make the code shorter, use the following type definitions:
 
-   ```
+   ```c++
    typedef CDocBuilderValue CValue;
    typedef CDocBuilderContext CContext;
    typedef CDocBuilderContextScope CContextScope;

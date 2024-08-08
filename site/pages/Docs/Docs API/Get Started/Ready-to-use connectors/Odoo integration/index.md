@@ -29,18 +29,18 @@ To start using ONLYOFFICE Docs with Odoo, the following steps must be performed:
 
 2. Search for ONLYOFFICE and download it. You can also download the latest app version from the official [GitHub repository](https://github.com/ONLYOFFICE/onlyoffice-odoo/releases).
 
-3. Put ONLYOFFICE connector into */path/to/odoo/addons*. Make sure the ONLYOFFICE folder is named as *onlyoffice\_odoo*.
+3. Put ONLYOFFICE connector into */path/to/odoo/addons*. Make sure the ONLYOFFICE folder is named as *onlyoffice_odoo*.
 
    Alternatively, you can add the following lines in the */path/to/odoo/config/odoo.conf* file specifying your path to the folder with *apps/addons*:
 
-   ```
+   ``` ini
    [options]
    addons_path = /mnt/extra-addons
    ```
 
 4. Install the *pyjwt* package:
 
-   ```
+   ``` bash
    pip install pyjwt
    ```
 
@@ -50,17 +50,16 @@ To start using ONLYOFFICE Docs with Odoo, the following steps must be performed:
 
 To configure the app, go to **Settings**. Find **ONLYOFFICE** on the left sidebar and press it. Specify the URL of the installed ONLYOFFICE Docs:
 
-https\://\<documentserver>/
+```
+https://<documentserver>/
+```
 
 where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Odoo server. The Odoo server address must also be accessible from **ONLYOFFICE Docs** for correct work.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Odoo configuration page. In the ONLYOFFICE Docs [config file](/editors/signature/), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Odoo configuration page. In the ONLYOFFICE Docs [config file](../../../Additional%20API/Signature/index.md), specify the same secret key and enable the validation.
 
 ## How it works
 
-The ONLYOFFICE integration follows the API documented [here](https://api.onlyoffice.com/editors/basic).
-
-\
-
+The ONLYOFFICE integration follows the API documented [here](../../Basic%20concepts/index.md).
 
 Download the Odoo ONLYOFFICE integration app [here](https://github.com/ONLYOFFICE/onlyoffice-odoo/tree/develop).

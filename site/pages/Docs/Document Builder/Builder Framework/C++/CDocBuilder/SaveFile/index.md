@@ -4,22 +4,17 @@ Saves the file after all the changes are made. The type of the file which will b
 
 ## Parameters:
 
-| Name         | Type             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| *sExtension* | const wchar\_t\* | The file extension. The following values are possible: **docx**, **odt**, **rtf**, **txt**, **pptx**, **xlsx**, **ods**, **csv**, **pdf** (see [AVS\_OFFICESTUDIO\_FILE\_XXX](/docbuilder/integrationapi/default#format-types) values).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| *sPath*      | const wchar\_t\* | The path to the file to be saved together with its name and extension.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| *sParams*    | const wchar\_t\* | The parameters needed for the correct file saving (most commonly, the encoding is used for the *txt* and *csv* file types or the delimiter for the *csv* files, for other file types this is just an empty string). The parameters are added in the form of XML tags, where **m\_nCsvTxtEncoding** is used for the text encoding and **m\_nCsvDelimiter** is used for the *csv* delimiter. You can find all the supported values for the encoding [in this file](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js). The supported values for the *csv* delimiters include:- **0** - no delimiter
-- **1** - tab
-- **2** - semicolon
-- **3** - colon
-- **4** - comma
-- **5** - spaceWhen saving into an image file (*png* or *jpg*) for creating thumbnails, the additional parameters are used. [See below](#SaveImage) to find them out. |
+| Name         | Type             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------ | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *sExtension* | const wchar\_t\* | The file extension. The following values are possible: **docx**, **odt**, **rtf**, **txt**, **pptx**, **xlsx**, **ods**, **csv**, **pdf** (see [OFFICESTUDIO\_FILE\_XXX](../../../../Builder%20App/index.md#format-types) values).                                                                                                                                                                                                                                                                                                                                                                                          |
+| *sPath*      | const wchar\_t\* | The path to the file to be saved together with its name and extension.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| *sParams*    | const wchar\_t\* | The parameters needed for the correct file saving (most commonly, the encoding is used for the *txt* and *csv* file types or the delimiter for the *csv* files, for other file types this is just an empty string). The parameters are added in the form of XML tags, where **m\_nCsvTxtEncoding** is used for the text encoding and **m\_nCsvDelimiter** is used for the *csv* delimiter. You can find all the supported values for the encoding [in this file](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js). The supported values for the *csv* delimiters include:<br/><br/>**0** - no delimiter;<br/><br/>**1** - tab;<br/><br/>**2** - semicolon;<br/><br/>**3** - colon;<br/><br/>**4** - comma;<br/><br/>**5** - space.<br/><br/>When saving into an image file (*png* or *jpg*) for creating thumbnails, the additional parameters are used. [See below](#saving-into-images) to find them out. |
 
 ## Example
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;
@@ -30,7 +25,7 @@ CDocBuilder::Dispose();
 
 #### .docbuilder
 
-```
+```js
 builder.SaveFile("docx", "result.docx");
 ```
 
@@ -49,12 +44,12 @@ builder.SaveFile("docx", "result.docx");
 
 #### C++
 
-```
+```c++
 oBuilder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>");
 ```
 
 #### .docbuilder
 
-```
+```js
 builder.SaveFile("image", "./thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>");
 ```

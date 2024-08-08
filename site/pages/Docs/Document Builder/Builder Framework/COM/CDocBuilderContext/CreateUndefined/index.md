@@ -2,7 +2,7 @@
 
 Creates an undefined value, an analogue of *undefined* in JS.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateUndefined* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateUndefined* method is not used.
 
 ## Parameters:
 
@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateUndef
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;

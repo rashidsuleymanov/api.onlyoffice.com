@@ -1,12 +1,16 @@
-Description
+---
+order: -7
+---
+
+## Description
 
 Returns information about the exchange rates for the last several days and fills in the table with the received values. A macro for the USD-EUR currency pair is presented here but you can get information about other exchange rates by modifying the *sCurPair* variable value ("EUR\_USD", "BTC\_USD", etc).
 
-In this macro, the third-party service *CurrencyConverterApi.com* is used to get information about the exchange rates. There is a limit on the number of requests per hour. If this limit is exceeded, the macro will not work. If you want to use this macro, it is better to register on the service website and use your own key in the macro code.
+> In this macro, the third-party service *CurrencyConverterApi.com* is used to get information about the exchange rates. There is a limit on the number of requests per hour. If this limit is exceeded, the macro will not work. If you want to use this macro, it is better to register on the service website and use your own key in the macro code.
 
-You can [assign this macro](/plugin/writingmacros#assign-macro) to the autoshape. When you click on it, a macro is executed, the table is filled in with the relevant data and the corresponding chart is rebuilt.
+You can [assign this macro](../../Writing%20macros/index.md#assigning-macros) to the autoshape. When you click on it, a macro is executed, the table is filled in with the relevant data and the corresponding chart is rebuilt.
 
-```
+``` javascript
 (function()
 {
     var sCurPair = "USD_EUR";
@@ -58,8 +62,8 @@ You can [assign this macro](/plugin/writingmacros#assign-macro) to the autoshape
 })();
 ```
 
-Methods used: [GetSheet](/officeapi/spreadsheetapi/api/getsheet), [GetRangeByNumber](/officeapi/spreadsheetapi/apiworksheet/getrangebynumber), [SetValue](/officeapi/spreadsheetapi/apirange/setvalue)
+Methods used: GetSheet, GetRangeByNumber, SetValue
 
-Result
+## Result
 
-![Currency pair USD - EUR](/content/img/plugins/currencies-usd-eur.png)
+![Currency pair USD - EUR](/assets/images/plugins/currencies-usd-eur.png)

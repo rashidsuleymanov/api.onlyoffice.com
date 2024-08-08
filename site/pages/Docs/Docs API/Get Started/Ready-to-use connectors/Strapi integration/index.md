@@ -20,7 +20,7 @@ To start using ONLYOFFICE Docs with Strapi, follow these steps:
 
    To allow inserting a frame with the editor and loading *api.js*, replace the *strapi::security* line in this file with the following:
 
-   ```
+   ``` js
    {
        name: "strapi::security",
        config: {
@@ -39,18 +39,28 @@ To start using ONLYOFFICE Docs with Strapi, follow these steps:
 
 2. Install the plugin in your Strapi project:
 
+   ``` bash
    npm install onlyoffice-stapi --save
+   ```
 
 3. After successful installation, you have to rebuild the admin UI so it'll include this plugin. To rebuild and restart Strapi, run:
 
-   \# using yarn yarn build yarn develop # using npm npm run build npm run develop
+   ``` bash
+   # using yarn
+   yarn build
+   yarn develop
+   
+   # using npm
+   npm run build
+   npm run develop
+   ```
 
 ## Configuring Strapi ONLYOFFICE integration plugin
 
 You can configure ONLYOFFICE app via Strapi **Dashboard -> Settings -> Global settings -> ONLYOFFICE**. On the settings page, enter:
 
 * **Document server address**. The URL of the installed ONLYOFFICE Docs.
-* **Document server JWT secret key**. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own secret key on the Strapi settings page. In the ONLYOFFICE Docs [config file](/editors/signature/), specify the same secret key and enable the validation.
+* **Document server JWT secret key**. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own secret key on the Strapi settings page. In the ONLYOFFICE Docs [config file](../../../Additional%20API/Signature/index.md), specify the same secret key and enable the validation.
 
 ## Using Strapi ONLYOFFICE integration plugin
 
@@ -63,9 +73,6 @@ Users are able to view, edit, and co-author documents added to the Strapi Media 
 
 ## How it works
 
-The ONLYOFFICE integration follows the API documented [here](/editors/basic).
-
-\
-
+The ONLYOFFICE integration follows the API documented [here](../../Basic%20concepts/index.md).
 
 Download the Strapi ONLYOFFICE integration plugin [here](https://github.com/ONLYOFFICE/onlyoffice-strapi).

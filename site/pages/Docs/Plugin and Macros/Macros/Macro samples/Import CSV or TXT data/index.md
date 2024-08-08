@@ -1,10 +1,14 @@
-Description
+---
+order: -6
+---
+
+## Description
 
 Imports data from remote CSV/TXT files into the spreadsheet.
 
-This macro is operational only with the desktop versions of the ONLYOFFICE editors.
+> This macro is operational only with the desktop versions of the ONLYOFFICE editors.
 
-```
+``` javascript
 (function() 
 {
     function LoadFile() {
@@ -38,8 +42,8 @@ This macro is operational only with the desktop versions of the ONLYOFFICE edito
 })();
 ```
 
-Methods used: [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet), [GetCells](/officeapi/spreadsheetapi/apiworksheet/getcells), [SetValue](/officeapi/spreadsheetapi/apirange/setvalue)
+Methods used: GetActiveSheet, GetCells, SetValue
 
-Result
+##  Result
 
-![Import CSV/text data](/content/img/plugins/import-csv-macro.png)
+![Import CSV/text data](/assets/images/plugins/import-csv-macro.png)

@@ -1,3 +1,7 @@
+---
+order: -4
+---
+
 Now that you know how macros work, try to write your own macro. We have a table and need to color the alternate table rows (odd will be colored green, even will become red). The table contains 200 rows and columns from **A** to **S**. It would take a lot of time to do that manually. So, using macros will be the best solution for this problem.
 
 1. Open ONLYOFFICE editors and create a new spreadsheet.
@@ -5,46 +9,50 @@ Now that you know how macros work, try to write your own macro. We have a table 
 2. Now open the **Plugins** tab and select **Macros**. The macros window will pop up.
 
 3. Click **New**. You will be presented with the basic function wrapper which will allow you to enter the necessary code:
-   ```
+
+   ``` javascript
    (function()
    {
        // ... your code goes here ...
    })();
    ```
 
-4. Let's consult the [Office API documentation](/officeapi/spreadsheetapi) to see what we need to complete our task:
+4. Let's consult the [Office API documentation](../../../Office%20API/Office%20API/Spreadsheet%20API/index.md) to see what we need to complete our task:
 
-   * First, get the current worksheet using the [GetActiveSheet](/officeapi/spreadsheetapi/api/getactivesheet) method:
-     ```
+   * First, get the current worksheet using the GetActiveSheet method:
+
+     ``` javascript
      var oWorksheet = Api.GetActiveSheet();
      ```
 
    * Then create a loop to run from the first to the last row:
-     ```
+
+     ``` javascript
      for (var i = 1; i < 200; i += 2) {
      }
      ```
 
    * Set two variables: one for odd rows, the second for even rows:
-     ```
+
+     ``` javascript
      var rowOdd = i, rowEven = i + 1;
      ```
 
-   * Now that we can access both the odd and even rows, let's color them in proper colors. Set the desired colors using the [CreateColorFromRGB](/officeapi/spreadsheetapi/api/createcolorfromrgb) method. Get the cell range within the row using the [GetRange](/officeapi/spreadsheetapi/apiworksheet/getrange) method and set the color for the odd rows:
+   * Now that we can access both the odd and even rows, let's color them in proper colors. Set the desired colors using the CreateColorFromRGB method. Get the cell range within the row using the GetRange method and set the color for the odd rows:
 
-     ```
+     ``` javascript
      oWorksheet.GetRange("A" + rowOdd + ":S" + rowOdd).SetFillColor(Api.CreateColorFromRGB(138, 181, 155));
      ```
 
      The same is for the even rows, but with a different color:
 
-     ```
+     ``` javascript
      oWorksheet.GetRange("A" + rowEven + ":S" + rowEven).SetFillColor(Api.CreateColorFromRGB(216, 227, 220));
      ```
 
 Now let's sum it up with the complete script code:
 
-```
+``` javascript
 (function()
 {
     var oWorksheet = Api.GetActiveSheet();
@@ -58,15 +66,15 @@ Now let's sum it up with the complete script code:
 
 Paste the code above to the macros window and click **Run**. The table rows from 1 to 200 will be colored alternately in less than a second.
 
-![Alternate raws](/content/img/plugins/alternate-raws.png)
+![Alternate raws](/assets/images/plugins/alternate-raws.png)
 
 ## Subscribing to events
 
-To subscribe to the specified event and call the callback function when the event fires, use the [attachEvent](/officeapi/textdocumentapi/api/attachevent) method.
+To subscribe to the specified event and call the callback function when the event fires, use the attachEvent method.
 
 For example, to subscribe to an event when a hyperlink in a document is clicked, use the following lines:
 
-```
+``` javascript
 Api.attachEvent("asc_onHyperlinkClick", function(){
     console.log("HYPERLINK!!!");
 });
@@ -74,7 +82,7 @@ Api.attachEvent("asc_onHyperlinkClick", function(){
 
 When you click any hyperlink in a document, the **asc\_onHyperlinkClick** event will be executed and the *"HYPERLINK!!!"* message will appear in the console.
 
-![Click hyperlink](/content/img/plugins/click-hyperlink.png)
+![Click hyperlink](/assets/images/plugins/click-hyperlink.png)
 
 ## Assigning macros
 
@@ -85,6 +93,6 @@ In the spreadsheet editor, you can assign a macro to the graphic object:
 3. Choose a macro in the appeared window. You can type the macro name in the corresponding field.
 4. Click the **OK** button.
 
-![Assign macro](/content/img/plugins/assign-macro.png)
+![Assign macro](/assets/images/plugins/assign-macro.png)
 
 To run the macro, just click the graphic object and the script will be executed.

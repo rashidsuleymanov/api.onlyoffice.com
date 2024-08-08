@@ -1,286 +1,202 @@
-Filter
+---
+order: -1
+---
 
-* Editor types
 
-* * Text editor
-  * Spreadsheet editor
-  * Presentation editor
+## Add comment in cell
 
-* Visual & non-visual
+Adds comments to spreadsheets.
 
-* * Visual
-  * Non-visual
-  * Input helper
+[More](Add%20comment%20in%20cell/index.md)
 
-* System & non-system
+## Add custom fields
 
-* * Non-system
-  * System
+Inserts custom fields into the document.
 
-* OLE-objects
+[More](Add%20custom%20fields/index.md)
 
-* Others
+## Autocomplete
 
-- [](/plugin/example/addcommentincell)
+Helps the user to input text quickly.
 
-  [Add comment in cell](/plugin/example/addcommentincell)
+[More](Autocomplete/index.md)
 
-  Adds comments to spreadsheets.
+## Chess
 
-  [More](/plugin/example/addcommentincell)
+Inserts a Chess Board object into the document editor.
 
-- [](/plugin/example/addcustomfields)
+[More](Chess/index.md)
 
-  [Add custom fields](/plugin/example/addcustomfields)
+## Clippy
 
-  Inserts custom fields into the document.
+Adds the clippy assistant to the document editor.
 
-  [More](/plugin/example/addcustomfields)
+[More](Clippy/index.md)
 
-- [](/plugin/example/autocomplete)
+## Context menu and events
 
-  [Autocomplete](/plugin/example/autocomplete)
+Tracks the events of calling the context menu and clicking on its items. It also tracks the cursor position change.
 
-  Helps the user to input text quickly.
+[More](Context%20menu%20and%20events/index.md)
 
-  [More](/plugin/example/autocomplete)
+## Count words and characters
 
-- [](/plugin/example/chess)
+Counts paragraphs, words and characters.
 
-  [Chess](/plugin/example/chess)
+[More](Count%20words%20and%20characters/index.md)
 
-  Inserts a Chess Board object into the document editor.
+## Extended comments
 
-  [More](/plugin/example/chess)
+Pastes, edits and removes comments and replies (with user data) in a document.
 
-- [](/plugin/example/clippy)
+[More](Extended%20comments/index.md)
 
-  [Clippy](/plugin/example/clippy)
+## Get and paste html
 
-  Adds the clippy assistant to the document editor.
+Gets the document content as HTML code.
 
-  [More](/plugin/example/clippy)
+[More](Get%20and%20paste%20html/index.md)
 
-- [](/plugin/example/contextmenuandevents)
+## Hello World
 
-  [Context menu and events](/plugin/example/contextmenuandevents)
+Inserts the *Hello world!* phrase into the document.
 
-  Tracks the events of calling the context menu and clicking on its items. It also tracks the cursor position change.
+[More](Hello%20world/index.md)
 
-  [More](/plugin/example/contextmenuandevents)
+## Highlight code
 
-- [](/plugin/example/countwordsandcharacters)
+Connects the Highlight.js library for highlighting the code syntax.
 
-  [Count words and characters](/plugin/example/countwordsandcharacters)
+[More](Highlight%20code/index.md)
 
-  Counts paragraphs, words and characters.
+## Invoices
 
-  [More](/plugin/example/countwordsandcharacters)
+Inserts template fields for invoice information.
 
-- [](/plugin/example/extendedcomments)
+[More](Invoices/index.md)
 
-  [Extended comments](/plugin/example/extendedcomments)
+## Language tool
 
-  Pastes, edits and removes comments and replies (with user data) in a document.
+Connects the LanguageTool assistant to check the text for grammar, style and spell errors.
 
-  [More](/plugin/example/extendedcomments)
+[More](Language%20tool/index.md)
 
-- [](/plugin/example/getandpastehtml)
+## Load custom fields
 
-  [Get and paste html](/plugin/example/getandpastehtml)
+Loads custom fields from the document.
 
-  Gets the document content as HTML code.
+[More](Load%20custom%20fields/index.md)
 
-  [More](/plugin/example/getandpastehtml)
+## Move cursor
 
-- [](/plugin/example/helloworld)
+Moves the text cursor to the document start/end.
 
-  [Hello World](/plugin/example/helloworld)
+[More](Move%20cursor/index.md)
 
-  Inserts the *Hello world!* phrase into the document.
+## OCR
 
-  [More](/plugin/example/helloworld)
+Connects the TesseractJS-Core library for extracting text from an image.
 
-- [](/plugin/example/highlightcode)
+[More](OCR/index.md)
 
-  [Highlight code](/plugin/example/highlightcode)
+## Photo Editor
 
-  Connects the Highlight.js library for highlighting the code syntax.
+Connects the Toast UI Image Editor for editing images right in the document.
 
-  [More](/plugin/example/highlightcode)
+[More](Photo%20editor/index.md)
 
-- [](/plugin/example/invoices)
+## Search and change text background color
 
-  [Invoices](/plugin/example/invoices)
+Searches for text and changes its background color.
 
-  Inserts template fields for invoice information.
+[More](Search%20and%20change%20text%20background%20color/index.md)
 
-  [More](/plugin/example/invoices)
+## Search & replace
 
-- [](/plugin/example/languagetool)
+Searches the text and replaces it with another one.
 
-  [Language tool](/plugin/example/languagetool)
+[More](Search%20and%20replace/index.md)
 
-  Connects the LanguageTool assistant to check the text for grammar, style and spell errors.
+## Search & replace on start
 
-  [More](/plugin/example/languagetool)
+Searches and replaces text in the document when it is reopened.
 
-- [](/plugin/example/loadcustomfields)
+[More](Search%20and%20replace%20on%20start/index.md)
 
-  [Load custom fields](/plugin/example/loadcustomfields)
+## Settings
 
-  Loads custom fields from the document.
+Protects a document using a watermark.
 
-  [More](/plugin/example/loadcustomfields)
+[More](Settings/index.md)
 
-- [](/plugin/example/movecursor)
+## Speech
 
-  [Move cursor](/plugin/example/movecursor)
+Connects the guessLanguage.js library and the ResponsiveVoice service.
 
-  Moves the text cursor to the document start/end.
+[More](Speech/index.md)
 
-  [More](/plugin/example/movecursor)
+## Symbol Table
 
-- [](/plugin/example/ocr)
+Inserts special symbols into the document.
 
-  [OCR](/plugin/example/ocr)
+[More](Symbol%20table/index.md)
 
-  Connects the TesseractJS-Core library for extracting text from an image.
+## Telegram
 
-  [More](/plugin/example/ocr)
+Connects the Telegram within ONLYOFFICE editors.
 
-- [](/plugin/example/photoeditor)
+[More](Telegram/index.md)
 
-  [Photo Editor](/plugin/example/photoeditor)
+## Templates
 
-  Connects the Toast UI Image Editor for editing images right in the document.
+Inserts templates generated by the Document Builder script.
 
-  [More](/plugin/example/photoeditor)
+[More](Templates/index.md)
 
-- [](/plugin/example/searchandchangetextbackgroundcolor)
+## Thesaurus
 
-  [Search and change text background color](/plugin/example/searchandchangetextbackgroundcolor)
+Connects Big Huge Thesaurus to search for word synonyms and antonyms.
 
-  Searches for text and changes its background color.
+[More](Thesaurus/index.md)
 
-  [More](/plugin/example/searchandchangetextbackgroundcolor)
+## Translator
 
-- [](/plugin/example/searchandreplace)
+Connects Google Translate API for translating the selected text.
 
-  [Search & replace](/plugin/example/searchandreplace)
+[More](Translator/index.md)
 
-  Searches the text and replaces it with another one.
+## Typograf
 
-  [More](/plugin/example/searchandreplace)
+Connects the Typograf assistant which prepares text for publishing.
 
-- [](/plugin/example/searchandreplaceonstart)
+[More](Typograf/index.md)
 
-  [Search & replace on start](/plugin/example/searchandreplaceonstart)
+## Work with content controls content
 
-  Searches and replaces text in the document when it is reopened.
+Inserts the content of one content control into another.
 
-  [More](/plugin/example/searchandreplaceonstart)
+[More](Work%20with%20content%20controls%20content/index.md)
 
-- [](/plugin/example/settings)
+## Work with content controls navigation
 
-  [Settings](/plugin/example/settings)
+Navigates content controls, selects and inserts text into them.
 
-  Protects a document using a watermark.
+[More](Work%20with%20content%20controls%20navigation/index.md)
 
-  [More](/plugin/example/settings)
+## Work with content controls tags
 
-- [](/plugin/example/speech)
+Gets the list of content controls tags.
 
-  [Speech](/plugin/example/speech)
+[More](Work%20with%20content%20controls%20tags/index.md)
 
-  Connects the guessLanguage.js library and the ResponsiveVoice service.
+## YouTube
 
-  [More](/plugin/example/speech)
+Embeds YouTube videos into the documents.
 
-- [](/plugin/example/symboltable)
+[More](YouTube/index.md)
 
-  [Symbol Table](/plugin/example/symboltable)
+## Zotero
 
-  Inserts special symbols into the document.
+Creates bibliographies in ONLYOFFICE editors.
 
-  [More](/plugin/example/symboltable)
-
-- [](/plugin/example/telegram)
-
-  [Telegram](/plugin/example/telegram)
-
-  Connects the Telegram within ONLYOFFICE editors.
-
-  [More](/plugin/example/telegram)
-
-- [](/plugin/example/templates)
-
-  [Templates](/plugin/example/templates)
-
-  Inserts templates generated by the Document Builder script.
-
-  [More](/plugin/example/templates)
-
-- [](/plugin/example/thesaurus)
-
-  [Thesaurus](/plugin/example/thesaurus)
-
-  Connects Big Huge Thesaurus to search for word synonyms and antonyms.
-
-  [More](/plugin/example/thesaurus)
-
-- [](/plugin/example/translator)
-
-  [Translator](/plugin/example/translator)
-
-  Connects Google Translate API for translating the selected text.
-
-  [More](/plugin/example/translator)
-
-- [](/plugin/example/typograf)
-
-  [Typograf](/plugin/example/typograf)
-
-  Connects the Typograf assistant which prepares text for publishing.
-
-  [More](/plugin/example/typograf)
-
-- [](/plugin/example/workwithcontentcontrolscontent)
-
-  [Work with content controls content](/plugin/example/workwithcontentcontrolscontent)
-
-  Inserts the content of one content control into another.
-
-  [More](/plugin/example/workwithcontentcontrolscontent)
-
-- [](/plugin/example/workwithcontentcontrolsnavigation)
-
-  [Work with content controls navigation](/plugin/example/workwithcontentcontrolsnavigation)
-
-  Navigates content controls, selects and inserts text into them.
-
-  [More](/plugin/example/workwithcontentcontrolsnavigation)
-
-- [](/plugin/example/workwithcontentcontrolstags)
-
-  [Work with content controls tags](/plugin/example/workwithcontentcontrolstags)
-
-  Gets the list of content controls tags.
-
-  [More](/plugin/example/workwithcontentcontrolstags)
-
-- [](/plugin/example/youtube)
-
-  [YouTube](/plugin/example/youtube)
-
-  Embeds YouTube videos into the documents.
-
-  [More](/plugin/example/youtube)
-
-- [](/plugin/example/zotero)
-
-  [Zotero](/plugin/example/zotero)
-
-  Creates bibliographies in ONLYOFFICE editors.
-
-  [More](/plugin/example/zotero)
+[More](Zotero/index.md)

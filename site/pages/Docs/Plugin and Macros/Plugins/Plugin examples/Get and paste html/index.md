@@ -1,4 +1,4 @@
-Description
+## Description
 
 Gets the document content as HTML code, modifies it, and pastes back to the document.
 
@@ -8,22 +8,22 @@ Gets the document content as HTML code, modifies it, and pastes back to the docu
 
 **Analogue:** [Doc2md](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/doc2md).
 
-![GetAndPasteHTML](/content/img/plugins/gifs/get-and-paste-html.gif)
+![GetAndPasteHTML](/assets/images/plugins/gifs/get-and-paste-html.gif)
 
-Installation
+## Installation
 
 Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace).
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/html) and install it following the [desktop](/plugin/installation/desktop) or [cloud](/plugin/installation/cloud) installation instructions.
+You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/html) and install it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md) or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
-Usage
+## Usage
 
 1. Select the necessary content.
 2. Open the **Plugins** tab and press **Get and past html**.
 3. The *HTML* code of the selected content will be automatically displayed in the plugin window. You can modify this code or write your own one.
 4. To paste the modified or your own HTML code into the document, press the **Paste into document** button.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/html>.
 
@@ -38,9 +38,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
    * [CodeMirror](https://codemirror.net/)- versatile text editor implemented in JavaScript for the browser. License: [MIT License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/html/licenses/codemirror.license).
    * [prettier.js](https://github.com/prettier/prettier) - an opinionated code formatter. License: [MIT License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/html/licenses/prettier.license).
 
-Config
+## Config
 
-```
+``` json
 {
     "name": "HTML",
     "nameLocale": {
@@ -131,13 +131,13 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onTranslate](/plugin/events/ontranslate)
-* [executeMethod ("PasteHtml")](/plugin/executemethod/common/pastehtml)
+* button
+* init
+* onTranslate
+* executeMethod ("PasteHtml")
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

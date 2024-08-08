@@ -1,13 +1,17 @@
+---
+order: -4
+---
+
 Opens the file selector and allows you to select a file from a list of available files.
 
-![File-selector mode](/content/img/docspace/file-selector-mode.png)
+![File-selector mode](/assets/images/docspace/file-selector-mode.png)
 
-Method
+### Method
 
-| Name                                                         | Description                                            |
-| ------------------------------------------------------------ | ------------------------------------------------------ |
-| [initFileSelector](/docspace/jssdk/methods#initFileSelector) | Initializes the SDK frame in the "file-selector" mode. |
+| Name                                                        | Description                                            |
+| ----------------------------------------------------------- | ------------------------------------------------------ |
+| [initFileSelector](../../Methods/index.md#initfileselector) | Initializes the SDK frame in the "file-selector" mode. |
 
-```
+``` javascript
 var docSpace = DocSpace.SDK.initFileSelector({config});
 ```

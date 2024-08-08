@@ -18,19 +18,33 @@ The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https
 
 1. Get the latest version of the [repository](https://github.com/ONLYOFFICE/onlyoffice-chamilo) running the command:
 
-   git clone https\://github.com/ONLYOFFICE/onlyoffice-chamilo cd onlyoffice-chamilo
+   ``` bash
+   git clone https://github.com/ONLYOFFICE/onlyoffice-chamilo cd onlyoffice-chamilo
+   ```
 
 2. Get a submodule:
 
+   ``` bash
    git submodule update --init --recursive
+   ```
 
 3. Collect all files:
 
-   mkdir /tmp/onlyoffice-deploy mkdir /tmp/onlyoffice-deploy/onlyoffice cp -r ./ /tmp/onlyoffice-deploy/onlyoffice cd /tmp/onlyoffice-deploy/onlyoffice rm -rf ./.git\* rm -rf \*/.git\*
+   ``` bash
+   mkdir /tmp/onlyoffice-deploy
+   mkdir /tmp/onlyoffice-deploy/onlyoffice
+   cp -r ./ /tmp/onlyoffice-deploy/onlyoffice
+   cd /tmp/onlyoffice-deploy/onlyoffice
+   rm -rf ./.git*
+   rm -rf */.git*
+   ```
 
 4. Archive the files obtained in the previous step:
 
-   cd ../ zip onlyoffice.zip -r onlyoffice
+   ``` bash
+   cd ../
+   zip onlyoffice.zip -r onlyoffice
+   ```
 
 ## Installing Chamilo ONLYOFFICE integration plugin
 
@@ -42,7 +56,9 @@ To start using ONLYOFFICE Docs with Chamilo, the following steps must be perform
 
    If you want more up-to-date versions of the plugin, you need to replace the pre-installed default plugin folder with the newly collected plugin:
 
+   ```
    /var/www/html/chamilo-1.11.16/plugin/onlyoffice
+   ```
 
    where **chamilo-1.11.16** is your current Chamilo version.
 
@@ -57,15 +73,17 @@ If your Chamilo version is lower than 1.11.16:
 
 On the **Plugins** page, find ONLYOFFICE and click **Configure**. You'll see the **Settings** page. Enable the plugin and specify ONLYOFFICE Docs address:
 
-https\://\<documentserver>/
+```
+https://<documentserver>/
+```
 
 where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed. The address must be accessible from the user browser and from the Chamilo server. The Chamilo server address must also be accessible from **ONLYOFFICE Docs** for correct work.
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Chamilo **Settings** page. In the ONLYOFFICE Docs [config file](/editors/signature/), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** on the Chamilo **Settings** page. In the ONLYOFFICE Docs [config file](../../../Additional%20API/Signature/index.md), specify the same secret key and enable the validation.
 
 ## How it works
 
-The ONLYOFFICE integration follows the API documented [here](/editors/basic).
+The ONLYOFFICE integration follows the API documented [here](../../Basic%20concepts/index.md).
 
 1. To create a new file, the teacher opens the necessary folder and clicks the **Create new** ONLYOFFICE icon.
 
@@ -92,11 +110,8 @@ The ONLYOFFICE integration follows the API documented [here](/editors/basic).
 
 10. When all the users have finished editing, they close the editor window.
 
-11. After [10 seconds](/editors/save#savedelay), ONLYOFFICE Docs makes a POST request to *callbackUrl* with the information that editing has ended and sends a link to a new document version.
+11. After [10 seconds](../../How%20It%20Works/Saving%20file/index.md#save-delay), ONLYOFFICE Docs makes a POST request to *callbackUrl* with the information that editing has ended and sends a link to a new document version.
 
 12. Chamilo loads a new version of the document and overwrites the file.
-
-\
-
 
 Download the Chamilo ONLYOFFICE integration plugin [here](https://github.com/ONLYOFFICE/onlyoffice-chamilo/tree/master).

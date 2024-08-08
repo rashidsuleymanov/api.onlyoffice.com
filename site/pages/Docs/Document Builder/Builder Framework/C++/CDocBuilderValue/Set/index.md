@@ -2,7 +2,7 @@
 
 Sets an array value by its index.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.Set* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.Set* method is not used.
 
 ## Parameters:
 
@@ -15,7 +15,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderValue.Set* method i
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;

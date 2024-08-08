@@ -1,4 +1,4 @@
-Description
+## Description
 
 Connects the [highlight.js library](https://highlightjs.org/) for highlighting code syntax with the necessary language, style, and background color.
 
@@ -6,29 +6,29 @@ Connects the [highlight.js library](https://highlightjs.org/) for highlighting c
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![HighlightCode](/content/img/plugins/gifs/highlight-code.gif)
+![HighlightCode](/assets/images/plugins/gifs/highlight-code.gif)
 
-Installation
+## Installation
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+You can remove it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
 The plugin guid: {BE5CBF95-C0AD-4842-B157-AC40FEDD9841}.
 
-Usage
+## Usage
 
 1. Find the plugin in the **Plugins** tab.
 2. Paste the code into the plugin window.
 3. The language is detected automatically, but you can change it. You can also customize the code display style, tabs, and background color.
 4. Click the **Ok** button to paste the code into the document.
 
-Known issues
+## Known issues
 
 * **Supported languages**: Apache, Access Log, Bash, Shell, MATLAB, Erlang, JavaScript, Ruby, Prolog, Swift, SQL, Java, HTTP, Fortran, Perl, XML, CPP, JSON, C Sharp, NGINX, BASIC, Markdown, CSS, Python, Objective-C, PHP, Delphi, Go, Kotlin, Rust, Shell, TypeScript.
 * **Supported styles**: Googlecode, GitHub, GitHub Gist, Android Studio, Visual Studio, Visual Studio 2015, Idea, Qtcreator Dark, Qtcreator Light, XCode, Fortran, Foundation, XML 1, XML 2.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/highlightcode>.
 
@@ -51,9 +51,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
    * [prettier-plugin-php.js](https://github.com/prettier/plugin-php) - a plugin that adds the PHP language support to Prettier. License: [MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/prettier%40plugin-php.license).
    * [xml-formatter.js](https://github.com/chrisbottin/xml-formatter) converts XML into a human readable format (pretty print) while respecting the *xml:space* attribute. License: [MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/highlightcode/licenses/xml-formatter.license).
 
-Config
+## Config
 
-```
+``` json
 {
     "guid": "asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}",
     "name": "Highlight code",
@@ -165,16 +165,16 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onExternalMouseUp](/plugin/events/onexternalmouseup)
-* [onTranslate](/plugin/events/ontranslate)
-* [executeMethod ("PasteHtml")](/plugin/executemethod/common/pastehtml)
-* [loadModule](/plugin/loadmodule)
-* [resizeWindow](/plugin/resizewindow)
+* button
+* init
+* onExternalMouseUp
+* onTranslate
+* executeMethod ("PasteHtml")
+* loadModule
+* resizeWindow
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

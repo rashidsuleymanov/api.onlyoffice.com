@@ -1,4 +1,4 @@
-Description
+## Description
 
 Connects the [Toast UI Image Editor](https://ui.toast.com/tui-image-editor) for editing images right in the document: cropping, resizing, applying effects, etc.
 
@@ -6,24 +6,24 @@ Connects the [Toast UI Image Editor](https://ui.toast.com/tui-image-editor) for 
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![PhotoEditor](/content/img/plugins/gifs/photo-editor.gif)
+![PhotoEditor](/assets/images/plugins/gifs/photo-editor.gif)
 
-Installation
+## Installation
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+You can remove it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
 The plugin guid: {07FD8DFA-DFE0-4089-AL24-0730933CC80A}.
 
-Usage
+## Usage
 
 1. Select an image in your document.
 2. Find the plugin on the **Plugins** tab.
 3. Below the image, you will find different settings for editing.
 4. After setting all the parameters up, press the **OK** button.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/photoeditor>.
 
@@ -42,9 +42,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
    * [jQuery](https://jquery.com) - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. License: [MIT License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/photoeditor/licenses/jQuery.license).
    * [Toast UI Image Editor](https://ui.toast.com/tui-image-editor) is a full featured image editor that uses HTML5 Canvas. It's easy to use and provides powerful filters. License: [MIT License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/photoeditor/licenses/Tui.license).
 
-Config
+## Config
 
-```
+``` json
 {
     "name": "Photo Editor",
     "nameLocale": {
@@ -179,19 +179,19 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onTranslate](/plugin/events/ontranslate)
-* [callCommand](/plugin/callcommand)
-* [executeMethod ("GetImageDataFromSelection")](/plugin/executemethod/common/getimagedatafromselection)
-* [executeMethod ("GerVersion")](/plugin/executemethod/common/getversion)
-* [executeMethod ("PutImageDataToSelection")](/plugin/executemethod/common/putimagedatatoselection)
-* [resizeWindow](/plugin/resizewindow)
-* [Asc.scope object](/plugin/scope)
-* [info.editorType](/plugin/info#editorType)
+* button
+* init
+* onTranslate
+* callCommand
+* executeMethod ("GetImageDataFromSelection")
+* executeMethod ("GerVersion")
+* executeMethod ("PutImageDataToSelection")
+* resizeWindow
+* Asc.scope object
+* info.editorType
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

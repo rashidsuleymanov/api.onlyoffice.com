@@ -1,8 +1,13 @@
-Each plugin acts in its own iframe. The editor will connect the *index.html* file, specified in the [config.json](/plugin/config) plugin configuration file. The *index.html* file is the plugin entry point, connecting the [plugin.js](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js) file - the base file needed for work with plugins in the editors.
+---
+order: -7
+---
 
-Example
 
-```
+Each plugin acts in its own iframe. The editor will connect the *index.html* file, specified in the [config.json](../Config/index.md) plugin configuration file. The *index.html* file is the plugin entry point, connecting the [plugin.js](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js) file - the base file needed for work with plugins in the editors.
+
+### Example
+
+``` html
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,6 +26,6 @@ Example
 
 The *\<head>...\</head>* section contains the links to all the scripts and stylesheets necessary for the plugin correct work (both local and remote, if the plugin uses some). It also includes the link to the *plugins.js* base file needed for correct work with the editors and containing the base plugin method work.
 
-If the plugin is visual and you want its buttons and elements to look like those in the editor, then you can connect the [plugins-ui.js](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins-ui.js) and [plugins.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css) files. More information about ONLYOFFICE styles and elements can be found [here](/plugin/styles).
+If the plugin is visual and you want its buttons and elements to look like those in the editor, then you can connect the [plugins-ui.js](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins-ui.js) and [plugins.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css) files. More information about ONLYOFFICE styles and elements can be found [here](../../Plugins/Plugin%20styles/index.md).
 
-The body can contains the *\<div>...\</div>* tags with the placeholders where the plugin components will be inserted. The behavior of these plugin components is described in the [file with plugin code](/plugin/code) itself.
+The body can contains the *\<div>...\</div>* tags with the placeholders where the plugin components will be inserted. The behavior of these plugin components is described in the [file with plugin code](../Plugin%20object/index.md) itself.

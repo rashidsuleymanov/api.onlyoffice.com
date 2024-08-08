@@ -1,4 +1,4 @@
-Description
+## Description
 
 Connects the [Typograf](https://github.com/typograf/typograf) assistant to prepare text for publishing by correcting typographical errors. It helps automatically place non-breaking spaces, remove extra spaces, correct minor typos, insert correct quotes, replace hyphens with dashes, and much more.
 
@@ -8,22 +8,22 @@ Supported languages are listed [here](https://github.com/typograf/typograf/blob/
 
 **Supported editors:** documents.
 
-![Typograf](/content/img/plugins/gifs/typograf.gif)
+![Typograf](/assets/images/plugins/gifs/typograf.gif)
 
-Installation
+## Installation
 
 Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Docs + Workspace).
 
-You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/typograph) and install it following the [desktop](/plugin/installation/desktop) or [cloud](/plugin/installation/cloud) installation instructions.
+You can also download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/typograph) and install it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md) or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
-Usage
+## Usage
 
 1. Open the **Plugins** tab and press **Typograf**.
 2. Click on **Show Advanced Settings**. Choose the locale and the rules you want to apply to your text.
 3. Select the text you want to correct.
 4. Run the plugin with the **Correct text** button.
 
-Known issues
+## Known issues
 
 * When using the plugin in a document abstract with graphic objects, these objects (images, shapes, Text Arts, Text Boxes, tables, charts) are lost along with the text they contained.
 * If you select the text inside a graphic object, the text will be removed from the object and inserted into the document in a corrected form.
@@ -39,7 +39,7 @@ Known issues
 * Line numbering is saved if it is applied to the entire document. If it is applied to a section, then it will be lost along with the section.
 * When two or more paragraphs have been selected, an empty paragraph will be added after the corrected text.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/typograf>.
 
@@ -55,9 +55,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
    * [Select2](https://select2.org/) gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options. License: [MIT](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/typograf/licenses/Select2.license).
    * [Typograf](https://github.com/typograf/typograf) - screen typography for typesetting text. License: [MIT License](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/typograf/licenses/Typograf.license).
 
-Config
+## Config
 
-```
+``` json
 {
     "name": "Typograf",
     "nameLocale": {
@@ -120,19 +120,19 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [onExternalMouseUp](/plugin/events/onexternalmouseup)
-* [onTranslate](/plugin/events/ontranslate)
-* [executeMethod ("GetSelectedText")](/plugin/executemethod/common/getselectedtext)
-* [executeMethod ("GetVersion")](/plugin/executemethod/common/getversion)
-* [executeMethod ("PasteText")](/plugin/executemethod/common/pastetext)
-* [executeMethod ("ReplaceTextSmart")](/plugin/executemethod/common/replacetextsmart)
-* [Asc.scope object](/plugin/scope)
-* [info.editorType](/plugin/info#editorType)
+* button
+* init
+* onExternalMouseUp
+* onTranslate
+* executeMethod ("GetSelectedText")
+* executeMethod ("GetVersion")
+* executeMethod ("PasteText")
+* executeMethod ("ReplaceTextSmart")
+* Asc.scope object
+* info.editorType
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

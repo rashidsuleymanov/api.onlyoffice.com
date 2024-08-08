@@ -1,10 +1,14 @@
+---
+order: -2
+---
+
 ONLYOFFICE macros are different from Microsoft macros due to the reason the latter use the Visual Basic for Applications (VBA) scripting language. JavaScript is more flexible and can be used with any platform (which is important as ONLYOFFICE editors are supported on Windows, Linux and Mac OS platforms).
 
 This can be the reason for some inconvenience in case you previously used Microsoft Office with macros, as they will become incompatible with ONLYOFFICE macros. You can convert your previously used macros to use them with the new editors.
 
 The process is not too complicated. Let's see the following example:
 
-```
+``` vb
 Sub Example()
     Dim myRange
     Dim result
@@ -28,7 +32,7 @@ The macro counts the sum of the values from the three cell ranges of the **A** c
 
 The exact same thing can be achieved using ONLYOFFICE macros, the code will be almost identical and easy to understand if you know both Visual Basic for Applications and JavaScript:
 
-```
+``` javascript
 (function()
 {
     for (let run = 1; run <= 3; run++)

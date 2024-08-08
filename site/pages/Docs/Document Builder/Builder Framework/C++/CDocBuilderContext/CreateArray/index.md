@@ -2,7 +2,7 @@
 
 Creates an array value, an analogue of *new Array (length)* in JS.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateArray* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateArray* method is not used.
 
 ## Parameters:
 
@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateArray
 
 #### C++
 
-```
+```c++
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;

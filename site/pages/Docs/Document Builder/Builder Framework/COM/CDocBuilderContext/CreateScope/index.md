@@ -1,8 +1,8 @@
 #### HRESULT CreateScope(\[out, retval] I\_DOCBUILDER\_CONTEXT\_SCOPE\*\* result);
 
-Creates a [context scope](/docbuilder/integrationapi/com/cdocbuildercontextscope) which sets the execution context for all operations executed within a local scope.
+Creates a [context scope](../../CDocBuilderContextScope/index.md) which sets the execution context for all operations executed within a local scope.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateScope* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateScope* method is not used.
 
 ## Parameters:
 
@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateScope
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;

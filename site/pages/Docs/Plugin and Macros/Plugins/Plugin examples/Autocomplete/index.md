@@ -1,4 +1,4 @@
-Description
+## Description
 
 Helps the user to input text quickly.
 
@@ -6,18 +6,18 @@ Helps the user to input text quickly.
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-![Autocomplete](/content/img/plugins/gifs/autocomplete.gif)
+![Autocomplete](/assets/images/plugins/gifs/autocomplete.gif)
 
-Installation
+## Installation
 
-Download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/autocomplete) and install it following the [desktop](/plugin/installation/desktop), [on-premises](/plugin/installation/onpremises), or [cloud](/plugin/installation/cloud) installation instructions.
+Download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/en/app-directory/autocomplete) and install it following the [desktop](../../Adding%20plugins/ONLYOFFICE%20Desktop%20Editors/index.md), [on-premises](../../Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md), or [cloud](../../Adding%20plugins/ONLYOFFICE%20Cloud/index.md) installation instructions.
 
-Usage
+## Usage
 
 1. Start typing a word. If the plugin finds some words in the dictionary, an input helper window with the found words will appear.
 2. Select the required option using the **Down/Up arrow** button and press the **Enter** button to complete the word.
 
-Plugin structure
+## Plugin structure
 
 Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/autocomplete>.
 
@@ -26,9 +26,9 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 3. The *translations* folder which contains translations into Russian, German, Spanish, Czech and French.
 4. The *dictionary.js* file contains words for autocompletion.
 
-Config
+## Config
 
-```
+``` json
 {
     "name": "Autocomplete",
     "nameLocale": {
@@ -79,23 +79,23 @@ Config
 }
 ```
 
-Methods and events
+## Methods and events
 
-* [button](/plugin/events/button)
-* [init](/plugin/events/init)
-* [inputHelper\_onSelectItem](/plugin/events/inputhelper_onselectitem)
-* [onInputHelperClear](/plugin/events/oninputhelperclear)
-* [onInputHelperInput](/plugin/events/oninputhelperinput)
-* [createInputHelper](/plugin/createinputhelper)
-* [executeMethod ("InputText")](/plugin/executemethod/common/inputtext)
-* [getInputHelper](/plugin/getinputhelper)
-* [InputHelper.createWindow](/plugin/inputhelper/createwindow)
-* [InputHelper.getItems](/plugin/inputhelper/getitems)
-* [InputHelper.getScrollSizes](/plugin/inputhelper/getscrollsizes)
-* [InputHelper.setItems](/plugin/inputhelper/setitems)
-* [InputHelper.show](/plugin/inputhelper/show)
-* [InputHelper.unShow](/plugin/inputhelper/unshow)
+* button
+* init
+* inputHelper\_onSelectItem
+* onInputHelperClear
+* onInputHelperInput
+* createInputHelper
+* executeMethod ("InputText")
+* getInputHelper
+* InputHelper.createWindow
+* InputHelper.getItems
+* InputHelper.getScrollSizes
+* InputHelper.setItems
+* InputHelper.show
+* InputHelper.unShow
 
-Support
+## Support
 
 If you want to request a feature or report a bug regarding this plugin, use the issues section on [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues).

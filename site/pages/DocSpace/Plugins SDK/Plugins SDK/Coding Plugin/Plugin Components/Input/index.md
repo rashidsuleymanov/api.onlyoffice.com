@@ -4,13 +4,13 @@ Input field for single-line strings.
 
 See the parameters of this component in [storybook](https://storybook.onlyoffice.io/?path=/docs/components-textinput--docs).
 
-![Input](/content/img/docspace/input.png)
+![Input](/assets/images/docspace/input.png)
 
 To change the input size, use **InputSize** (*base, middle, big, huge, large*), for the input types, use **InputType** (*text* or *password*), and for the autocomplete feature, use **InputAutocomplete** (*on* or *off*). More information can be found [here](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IInput.ts).
 
-Example
+### Example
 
-```
+``` javascript
 import {IInput, InputSize, InputType, IMessage, Actions, InputAutocomplete} from "@onlyoffice/docspace-plugin-sdk";
 
 const onChange = (value: string) => {

@@ -2,7 +2,7 @@
 
 Returns the length if the **CDocBuilderValue** object is an array/typed array. Otherwise, returns 0.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderValue.GetLength* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderValue.GetLength* method is not used.
 
 ## Parameters:
 
@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderValue.GetLength* me
 
 #### COM
 
-```
+```c++
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;

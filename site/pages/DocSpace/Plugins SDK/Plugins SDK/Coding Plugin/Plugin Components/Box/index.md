@@ -4,19 +4,24 @@ A container that lays out its contents in one direction. Box provides general CS
 
 See the parameters of this component in [storybook](https://storybook.onlyoffice.io/?path=/docs/components-box--docs).
 
-![Box](/content/img/docspace/box.png)
+![Box](/assets/images/docspace/box.png)
 
-Extra parameters
+## Extra parameters
 
-| Name     | Description         | Type                                                                                | Example           |
-| -------- | ------------------- | ----------------------------------------------------------------------------------- | ----------------- |
-| children | The box components. | array of [Components](/docspace/pluginssdk/codingplugin/plugincomponents/component) | \[inputComponent] |
+### children
+
+The box components.
+
+Type: array of [Components](../Component/index.md)
+
+Example: \[inputComponent]
+
 
 To set borders to the Box component, use a stroke or the [IBorderProp](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IBox.ts) interface.
 
-Example
+### Example
 
-```
+``` javascript
 import {IBox, IInput, Components, InputGroup} from "@onlyoffice/docspace-plugin-sdk";
 
 const nameInputProps: IInput = {

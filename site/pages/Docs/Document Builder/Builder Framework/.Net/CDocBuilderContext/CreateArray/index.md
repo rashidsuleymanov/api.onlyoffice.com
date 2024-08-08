@@ -2,7 +2,7 @@
 
 Creates an array value, an analogue of *new Array (length)* in JS.
 
-Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateArray* method is not used.
+> Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateArray* method is not used.
 
 ## Parameters:
 
@@ -14,7 +14,7 @@ Please note, that for the *.docbuilder* file the *CDocBuilderContext.CreateArray
 
 #### .Net
 
-```
+```c#
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

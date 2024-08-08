@@ -4,19 +4,24 @@ Modal dialog.
 
 See the parameters of this component in [storybook](https://storybook.onlyoffice.io/?path=/docs/components-modaldialog--docs).
 
-![Modal dialog](/content/img/docspace/modal-dialog.png)
+![Modal dialog](/assets/images/docspace/modal-dialog.png)
 
 To change the modal dialog type, use [ModalDisplayType](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/interfaces/components/IModalDialog.ts) (*modal* or *aside*).
 
-Extra parameters
+## Extra parameters
 
-| Name       | Description                                                                                  | Type    | Example |
-| ---------- | -------------------------------------------------------------------------------------------- | ------- | ------- |
-| fullScreen | Specifies whether to display the modal dialog body in the full screen mode without paddings. | boolean | true    |
+### fullScreen
 
-Example
+Specifies whether to display the modal dialog body in the full screen mode without paddings.
 
-```
+Type: boolean
+
+Example: true
+
+
+### Example
+
+``` javascript
 import {Actions, Components, IBox, IFrame, IMessage, IModalDialog, ISkeleton, ModalDisplayType} from "@onlyoffice/docspace-plugin-sdk";
 
 export const frameProps: IFrame = {

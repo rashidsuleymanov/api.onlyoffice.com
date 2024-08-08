@@ -1,12 +1,12 @@
-Expand all
+---
+order: -7
+---
 
-Collapse all
-
-* How to whitelabel ONLYOFFICE Docs?
+## How to whitelabel ONLYOFFICE Docs?
 
   The below options can be edited for whitelabeling your version of ONLYOFFICE Docs, changing the information which will be displayed at the **About** page and visible to all editor users.
 
-  Please note that changing these options is only available to the [ONLYOFFICE Developer Edition](https://www.onlyoffice.com/developer-edition-prices.aspx) users.
+  > Please note that changing these options is only available to the [ONLYOFFICE Developer Edition](https://www.onlyoffice.com/developer-edition-prices.aspx) users.
 
   * *editorConfig.customization.customer* options:
 
@@ -26,7 +26,7 @@ Collapse all
 
   With all the above fields filled, the *customization* configuration will look like this:
 
-  ```
+  ``` javascript
   var docEditor = new DocsAPI.DocEditor("placeholder", {
       "editorConfig": {
           "customization": {
@@ -44,127 +44,116 @@ Collapse all
                   "imageDark": "https://example.com/dark-logo.png",
                   "url": "https://example.com"
               },
-              ...
           },
-          ...
       },
-      ...
   });
   ```
 
-  Further information about the customization can be found [at this page](/editors/config/editor/customization).
+  Further information about the customization can be found [at this page](../../../Usage%20API/Config/Editor/Customization/index.md).
 
-- How to change the default language of the ONLYOFFICE Docs interface?
+## How to change the default language of the ONLYOFFICE Docs interface?
 
   If the interface language is present in the [list of available ONLYOFFICE Docs languages](https://helpcenter.onlyoffice.com/server/document/available-languages.aspx), you can simply use the *editorConfig.lang* property in the configuration file to set it to the necessary locale, like this:
 
-  ```
+  ``` javascript
   var docEditor = new DocsAPI.DocEditor("placeholder", {
       "editorConfig": {
           "lang": "de",
-          ...
       },
-      ...
   });
   ```
 
   If the language is not available and you want to translate it or have already translated it to your own language, please see [this article](https://helpcenter.onlyoffice.com/server/docker/document/add-interface-language.aspx) to find out how to install it to your ONLYOFFICE Docs.
 
-  Further information about the language settings can be found [at this page](/editors/config/editor).
+  Further information about the language settings can be found [at this page](../../../Usage%20API/Config/Editor/index.md).
 
-* How to enable or disable the chat and/or the comments panel in the editors?
+## How to enable or disable the chat and/or the comments panel in the editors?
 
   The chat and comments are enabled by default. To disable them use the *document.permissions.comment* and *document.permissions.chat* parameters with the values set to **false** in the configuration file respectively:
 
-  ```
+  ``` javascript
   var docEditor = new DocsAPI.DocEditor("placeholder", {
       "document": {
           "permissions": {
               "chat": false,
               "comment": false,
-              ...
           },
-          ...
       },
-      ...
   });
   ```
 
   This will disable both the **Chat** and **Comments** buttons and their functionality.
 
-  Further information about the customization can be found [at this page](/editors/config/editor/customization).
+  Further information about the customization can be found [at this page](../../../Usage%20API/Config/Editor/Customization/index.md).
 
-- How to customize the editors interface, e.g. adjust the top toolbar view?
+## How to customize the editors interface, e.g. adjust the top toolbar view?
 
   You can either display the full top toolbar or its compact version. To control this the *editorConfig.customization.compactToolbar* parameter is used. With the default **false** value the top toolbar will have its usual view. If you want to display its compact variant, the configuration will have to look like this:
 
-  ```
+  ``` javascript
   var docEditor = new DocsAPI.DocEditor("placeholder", {
       "editorConfig": {
           "customization": {
               "compactToolbar": true,
-              ...
           },
-          ...
       },
-      ...
   });
   ```
 
-  Further information about the customization can be found [at this page](/editors/config/editor/customization).
+  Further information about the customization can be found [at this page](../../../Usage%20API/Config/Editor/Customization/index.md).
 
-* How to view and change the document additional parameters, e.g. its owner or uploading date?
+## How to view and change the document additional parameters, e.g. its owner or uploading date?
 
   The document owner and uploading date is affected by the *document.info.owner* and *document.info.uploaded* parameter respectively. You can pass these settings from some database of yours to the document configuration file the following way:
 
-  ```
+  ``` javascript
   var docEditor = new DocsAPI.DocEditor("placeholder", {
       "document": {
           "info": {
               "owner": "John Smith",
               "uploaded": "2010-07-07 3:46 PM",
           },
-          ...
       },
-      ...
   });
   ```
 
   This values will be displayed in the **File** > **Document Info...** menu option.
 
-  Further information about these settings can be found [at this page](/editors/config/document/info).
+  Further information about these settings can be found [at this page](../../../Usage%20API/Config/Document/Info/index.md).
 
-- How to optimize the appearance of editors for a desktop computer, or for a mobile device, or for embedding into a web page?
+## How to optimize the appearance of editors for a desktop computer, or for a mobile device, or for embedding into a web page?
 
   There are three main appearances of the editors, optimized for different use:
 
   * **desktop**, which is optimized for the display in desktop computer browsers:
-    ```
+
+    ``` javascript
     var docEditor = new DocsAPI.DocEditor("placeholder", {
         "type": "desktop",
-        ...
     });
     ```
+
   * **mobile**, which is optimized for the display in mobile device browsers:
-    ```
+
+    ``` javascript
     var docEditor = new DocsAPI.DocEditor("placeholder", {
         "type": "mobile",
-        ...
     });
     ```
+
   * **embedded**, which is optimized for the embedding the documents into a website page:
-    ```
+
+    ``` javascript
     var docEditor = new DocsAPI.DocEditor("placeholder", {
         "type": "embedded",
-        ...
     });
     ```
 
   You can use any appearance for mobile devices or to embed the document to your webpage, but it is more logical to use the specific display type.
 
-  Further information about the display type can be found [at this page](/editors/config#type).
+  Further information about the display type can be found [at this page](../../../Usage%20API/Config/index.md#type).
 
-* How to connect plugins to ONLYOFFICE Docs so that they become visible for all editor users?
+## How to connect plugins to ONLYOFFICE Docs so that they become visible for all editor users?
 
   To enable plugins for all ONLYOFFICE Docs users, you need the following:
 
@@ -172,27 +161,23 @@ Collapse all
   * Put the plugins to the folder accessible by Document Editor.
   * Change the configuration file the following way:
 
-  ```
+  ``` javascript
   var docEditor = new DocsAPI.DocEditor("placeholder", {
       "editorConfig": {
           "plugins": {
                "autostart": [
                    "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
                    "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
-                   ...
                ],
                "pluginsData": [
                    "https://example.com/plugin1/config.json",
                    "https://example.com/plugin2/config.json",
-                   ...
                ]
           },
-          ...
       },
-      ...
   });
   ```
 
-  Where *editorConfig.plugins.autostart* is the array of the GUIDs for the plugins that you want to start automatically when ONLYOFFICE Docs is started (as defined in the plugin [config.json](/plugin/config#guid) file), and *editorConfig.plugins.pluginsData* is the array of the **config.json** configuration files for all the plugins that you want to be available to ONLYOFFICE Docs users.
+  Where *editorConfig.plugins.autostart* is the array of the GUIDs for the plugins that you want to start automatically when ONLYOFFICE Docs is started (as defined in the plugin [config.json](../../../../Plugin%20and%20Macros/Usage%20API/Config/index.md#guid) file), and *editorConfig.plugins.pluginsData* is the array of the **config.json** configuration files for all the plugins that you want to be available to ONLYOFFICE Docs users.
 
-  Further information about enabling the plugins for ONLYOFFICE Docs can be found [at this page](/editors/config/editor/plugins).
+  Further information about enabling the plugins for ONLYOFFICE Docs can be found [at this page](../../../Usage%20API/Config/Editor/Plugins/index.md).

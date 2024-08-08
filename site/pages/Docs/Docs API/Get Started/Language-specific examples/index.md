@@ -1,10 +1,15 @@
+---
+order: -5
+---
+
+
 With ONLYOFFICE Docs, any of collaborative solutions can be enhanced with document editing and co-editing. In this section, you will learn how to integrate ONLYOFFICE Docs into your own website.
 
 Each ONLYOFFICE Docs instance includes online editors for text documents, spreadsheets, presentations, and fillable forms, plus a test example.
 
 Test example is simple document management system that can be built into your application for testing. The test example included by default is written on Node.js. It is disabled by default. To enable it, follow the instructions on your start screen.
 
-The integration examples are used to demonstrate document editors functions and the ways to connect **ONLYOFFICE Docs** to your own application. **DO NOT USE** these examples on your own server without **PROPER CODE MODIFICATIONS**! If you enabled any of the test examples, disable it before going for production.
+> The integration examples are used to demonstrate document editors functions and the ways to connect **ONLYOFFICE Docs** to your own application. **DO NOT USE** these examples on your own server without **PROPER CODE MODIFICATIONS**! If you enabled any of the test examples, disable it before going for production.
 
 ## Important security info
 
@@ -48,13 +53,3 @@ Please keep in mind the following security aspects when you are using test examp
    * **Ruby** - *web/documentserver-example/ruby/config/application.rb*
 
 4. In case the example and ONLYOFFICE Docs are installed on different computers, make sure that your server with the example installed has access to the ONLYOFFICE Docs with the address which you specify instead of **documentserver** in the configuration files. And you must also make sure that the ONLYOFFICE Docs in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
-
-The result should look like the demo preview below.
-
-## Demo Preview
-
-|                                                                    |                                                                              |                                                                                |                                                              |
-| ------------------------------------------------------------------ | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Demo Document editor](/editors/demopreview?type=text#DemoPreview) | [Demo Spreadsheet editor](/editors/demopreview?type=spreadsheet#DemoPreview) | [Demo Presentation editor](/editors/demopreview?type=presentation#DemoPreview) | [Demo Pdf editor](/editors/demopreview?type=pdf#DemoPreview) |
-
-If you have any further questions, please contact us at <integration@onlyoffice.com>.
