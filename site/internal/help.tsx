@@ -2,6 +2,7 @@ import {Sitemap} from "@onlyoffice/eleventy-sitemap"
 import {Help as SHelp} from "@onlyoffice/site-kit"
 import {GithubIcon} from "@onlyoffice/ui-icons/rich/24.tsx"
 import {type JSX, h} from "preact"
+import {Link} from "./link.tsx"
 
 declare module "@onlyoffice/eleventy-types" {
   interface Data {
@@ -72,6 +73,7 @@ export function Help(p: HelpProperties): JSX.Element {
     throw new Error(`Entity is not a page: ${p.current}`)
   }
 
+  let f = e.path
   let d = e.data.help
   if (!d) {
     const t = s.trace(e)
@@ -80,6 +82,7 @@ export function Help(p: HelpProperties): JSX.Element {
       if (!e || e.type !== "page" || !e.data.help) {
         continue
       }
+      f = e.path
       d = e.data.help
       break
     }
@@ -92,9 +95,9 @@ export function Help(p: HelpProperties): JSX.Element {
     <GithubIcon height={24} width={24} />
     <h2>Get Help</h2>
     <ul>
-      <li>If you have any questions about ONLYOFFICE {d.title}, try the <a href={d.faq}>FAQ</a> section first.</li>
-      <li>You can request a feature or report a bug by posting an issue on <a href={d.issues}>GitHub</a>.</li>
-      <li>You can also ask our developers on <a href={d.forum}>ONLYOFFICE forum</a> (registration required).</li>
+      <li>If you have any questions about ONLYOFFICE {d.title}, try the <Link file={f} href={d.faq}>FAQ</Link> section first.</li>
+      <li>You can request a feature or report a bug by posting an issue on <Link file={f} href={d.issues}>GitHub</Link> .</li>
+      <li>You can also ask our developers on <Link file={f} href={d.forum}>ONLYOFFICE forum</Link> (registration required).</li>
     </ul>
   </SHelp>
 }
