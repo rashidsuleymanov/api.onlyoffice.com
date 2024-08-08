@@ -1,62 +1,54 @@
-import image, {type ImageOptions} from "@11ty/eleventy-img"
-import {type Element, type Root} from "hast"
+import {type Metadata, generateObject} from "@11ty/eleventy-img"
+import {type Element} from "hast"
 
-type Index = number | undefined
-type Parent = Root | Element | undefined
+export interface ImageAttributes {
+  alt: string
+}
 
-export async function modify(o: ImageOptions, n: Element, i: Index, p: Parent): Promise<void> {
-  if (!p || typeof i !== "number" || n.tagName !== "img") {
-    return
-  }
+export function toHast(m: Metadata, a: ImageAttributes): Element {
+  const o = generateObject(m, a)
 
-  const s = n.properties.src
-  if (!s) {
-    throw new Error("The 'src' attribute is required, but missing.")
-  }
-  if (typeof s !== "string") {
-    throw new Error(`The 'src' attribute must be a string, but got ${typeof s}.`)
-  }
-
-  let c = p.children[i]
-
-  const m = await image(s, o)
-  const r = image.generateObject(m, n.properties)
-
-  if ("picture" in r) {
-    c = {
+  if ("picture" in o) {
+    const r: Element = {
       type: "element",
       tagName: "picture",
       properties: {},
-      children: []
+      children: [],
     }
-    for (const e of r.picture) {
+
+    for (const e of o.picture) {
       if ("source" in e) {
-        c.children.push({
+        r.children.push({
           type: "element",
           tagName: "source",
           properties: e.source,
-          children: []
+          children: [],
         })
         continue
       }
+
       if ("img" in e) {
-        c.children.push({
+        r.children.push({
           type: "element",
           tagName: "img",
-          properties: {...n.properties, ...e.img},
-          children: []
+          properties: {...a, ...e.img},
+          children: [],
         })
         continue
       }
     }
-  } else if ("img" in r) {
-    c = {
+
+    return r
+  }
+
+  if ("img" in o) {
+    return {
       type: "element",
       tagName: "img",
-      properties: {...n.properties, ...r.img},
-      children: []
+      properties: {...a, ...o.img},
+      children: [],
     }
   }
 
-  p.children[i] = c
+  throw new Error("Unexpected return value.")
 }
