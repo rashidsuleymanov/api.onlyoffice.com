@@ -5678,6 +5678,7 @@
     <Content Include="Views\Portals\Help.ascx" />
     <Content Include="Views\Portals\Method.aspx" />
     <Content Include="Views\Portals\Navigation.ascx" />
+    <Content Include="Views\Shared\TryNew.ascx" />
     <Content Include="Views\Shared\AnalyticNoScript.ascx" />
     <Content Include="Views\Shared\Analytic.ascx" />
     <Content Include="Views\Shared\BreadCrumbs.ascx" />
