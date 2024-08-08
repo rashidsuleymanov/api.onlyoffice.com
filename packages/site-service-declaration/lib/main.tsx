@@ -206,6 +206,10 @@ function Response({response: r}: ResponseProperties): JSX.Element {
 
     switch (true) {
     case "status" in d:
+      // see @onlyoffice/openapi-declaration#createResponseComponent
+      if (d.status === 0) {
+        d.status = r.status
+      }
       return <>
         <Response response={d} />
         <Callback>{() => ctx.stack.pop()}</Callback>
