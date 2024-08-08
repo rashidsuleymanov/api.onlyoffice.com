@@ -10,8 +10,15 @@ import {type JSX, h} from "preact"
 import {visit} from "unist-util-visit"
 import {type VFile} from "vfile"
 
-export function Link(p: HTMLAttributes<HTMLAnchorElement>): JSX.Element {
+export interface LinkProperties extends HTMLAttributes<HTMLAnchorElement> {
+  file?: string
+}
+
+export function Link(p: LinkProperties): JSX.Element {
   p = {...p}
+  if (!p.file) {
+    p.file = ""
+  }
 
   if (p.href === undefined) {
     throw new Error("The 'href' attribute is required, but missing.")
@@ -19,11 +26,8 @@ export function Link(p: HTMLAttributes<HTMLAnchorElement>): JSX.Element {
   if (typeof p.href !== "string") {
     throw new Error("The 'href' attribute must be a string.")
   }
-  if (!URL.canParse(p.href) && !path.isAbsolute(p.href)) {
-    throw new Error("The 'href' attribute must be an absolute URL.")
-  }
 
-  p.href = resolve(p.href, "")
+  p.href = resolve(p.file, p.href)
 
   return <a {...p}></a>
 }
@@ -48,7 +52,7 @@ export function rehypeLink(): RehypeLinkTransform {
         throw new Error("The 'href' attribute must be a string.")
       }
 
-      n.properties.href = resolve(p.href, f.path)
+      n.properties.href = resolve(f.path, p.href)
     })
   }
 }
@@ -56,20 +60,23 @@ export function rehypeLink(): RehypeLinkTransform {
 function resolve(a: string, b: string): string {
   const s = Sitemap.shared
 
-  if (URL.canParse(a)) {
-    return a
+  if (URL.canParse(b)) {
+    return b
   }
 
-  const h = pate.hash(a)
-  if (h === a) {
-    return a
+  const h = pate.hash(b)
+  if (h === b) {
+    return b
   }
 
-  let p = a
+  let p = b
 
-  if (!path.isAbsolute(a)) {
-    p = path.dirname(b)
-    p = pate.resolve(p, a)
+  if (!path.isAbsolute(b)) {
+    if (!a) {
+      throw new Error("The 'a' is required when the 'b' is relative.")
+    }
+    p = path.dirname(a)
+    p = pate.resolve(p, b)
     p = cutPrefix(p, rootDir())
     p = cutSuffix(p, h)
   }
