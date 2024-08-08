@@ -70,12 +70,14 @@
 }
 
 .tree__leaf {
-  pointer-events: auto;
   color: inherit;
   font-size: var(--text-body-font-size-medium);
   line-height: var(--text-body-line-height-medium);
+  overflow: hidden;
   padding-inline-start: 23px;
+  pointer-events: auto;
   text-decoration: none;
+  word-wrap: break-word;
 }
 
 .tree__leaf:hover,
