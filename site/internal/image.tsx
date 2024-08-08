@@ -89,7 +89,7 @@ export interface RehypeImageTransform {
 }
 
 export function rehypeImage(): RehypeImageTransform {
-  return async function (t, f) {
+  return async function transform(t, f) {
     const a: Promise<void>[] = []
 
     visit(t, "element", (n, i, pa) => {
