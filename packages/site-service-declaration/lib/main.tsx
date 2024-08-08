@@ -191,8 +191,10 @@ interface ResponseProperties {
 }
 
 function Response({response: r}: ResponseProperties): JSX.Element {
+  const ctx = useContext(Context)
+  const {onRenderDescription: Description} = ctx
+
   if ("id" in r) {
-    const ctx = useContext(Context)
     if (ctx.stack.includes(r.id)) {
       return <></>
     }
@@ -221,7 +223,7 @@ function Response({response: r}: ResponseProperties): JSX.Element {
 
   return <>
     <h3>{r.status}</h3>
-    {r.description && <p>{r.description}</p>}
+    {r.description && <Description>{r.description}</Description>}
     {r.body && <Value value={r.body} />}
   </>
 }
@@ -415,10 +417,11 @@ interface ValueDescriptionProperties {
 }
 
 function ValueDescription({value: v}: ValueDescriptionProperties): JSX.Element {
+  const {onRenderDescription: Description} = useContext(Context)
   if (!v.description) {
     return <></>
   }
-  return <p>{v.description}</p>
+  return <Description>{v.description}</Description>
 }
 
 interface TypeBadgeProperties {
