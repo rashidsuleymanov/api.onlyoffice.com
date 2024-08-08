@@ -90,7 +90,7 @@ export interface RehypeImageTransform {
 
 export function rehypeImage(): RehypeImageTransform {
   return async function (t, f) {
-    let r = Promise.resolve()
+    const a: Promise<void>[] = []
 
     visit(t, "element", (n, i, pa) => {
       if (n.tagName !== "img") {
@@ -156,10 +156,11 @@ export function rehypeImage(): RehypeImageTransform {
 
       const o = options(p.src)
       // @ts-ignore conflict with mdx extensions
-      r = modify(o, n, i, pa)
+      const d = modify(o, n, i, pa)
+      a.push(d)
     })
 
-    await r
+    await Promise.all(a)
     return t
   }
 }
