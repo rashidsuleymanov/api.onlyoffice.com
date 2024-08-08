@@ -1,28 +1,25 @@
-import image, {type ImageOptions} from "@11ty/eleventy-img"
-import {type ChildrenIncludable} from "@onlyoffice/preact-types"
-import {Fragment, type JSX, h, cloneElement} from "preact"
+import {type Metadata, generateObject} from "@11ty/eleventy-img"
+import {Fragment, type JSX, h} from "preact"
 
-export async function generate(p: ImageOptions & ChildrenIncludable): Promise<JSX.Element> {
-  const img = cloneElement<HTMLImageElement>(p.children)
-  if (!img.props.src) {
-    throw new Error("The 'src' attribute is required, but missing.")
-  }
+export interface ImageAttributes {
+  alt: string
+}
 
-  const m = await image(img.props.src, p)
-  const r = image.generateObject(m, img.props)
+export function toJsx(m: Metadata, a: ImageAttributes): JSX.Element {
+  const o = generateObject(m, a)
 
-  if ("picture" in r) {
+  if ("picture" in o) {
     return <picture>
-      {r.picture.map((e) => <>
+      {o.picture.map((e) => <>
         {"source" in e && <source {...e.source} />}
-        {"img" in e && cloneElement(p.children, {...e.img})}
+        {"img" in e && <img {...a} {...e.img} />}
       </>)}
     </picture>
   }
 
-  if ("img" in r) {
-    return cloneElement(p.children, {...r.img})
+  if ("img" in o) {
+    return <img {...a} {...o.img} />
   }
 
-  return <></>
+  throw new Error("Unexpected return value.")
 }
