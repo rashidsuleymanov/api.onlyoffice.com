@@ -1,8 +1,8 @@
 import path from "node:path"
-import {type ImageOptions} from "@11ty/eleventy-img"
+import image, {type ImageOptions} from "@11ty/eleventy-img"
 import {isBuild, rootDir} from "@onlyoffice/eleventy-env"
 import {type UserConfig} from "@onlyoffice/eleventy-types"
-import {modify} from "@onlyoffice/hast-util-eleventy-img"
+import {toHast} from "@onlyoffice/hast-util-eleventy-img"
 import * as pate from "@onlyoffice/node-path"
 import {generate} from "@onlyoffice/preact-eleventy-img"
 import {useSuspense} from "@onlyoffice/preact-suspense"
@@ -92,8 +92,12 @@ export function rehypeImage(): RehypeImageTransform {
   return async function transform(t, f) {
     const a: Promise<void>[] = []
 
-    visit(t, "element", (n, i, pa) => {
-      if (n.tagName !== "img") {
+    visit(t, "element", (n, i, r) => {
+      if (
+        !r ||
+        typeof i !== "number" ||
+        n.tagName !== "img"
+      ) {
         return
       }
 
@@ -102,8 +106,11 @@ export function rehypeImage(): RehypeImageTransform {
         p.style = ""
       }
 
-      if (!p.alt) {
+      if (p.alt === undefined) {
         throw new Error("The 'alt' attribute is required, but missing.")
+      }
+      if (typeof p.alt !== "string") {
+        throw new Error("The 'alt' attribute must be a string.")
       }
 
       if (p.src === undefined) {
@@ -154,9 +161,13 @@ export function rehypeImage(): RehypeImageTransform {
         return
       }
 
+      const b = {...p, alt: p.alt}
       const o = options(p.src)
-      // @ts-ignore conflict with mdx extensions
-      const d = modify(o, n, i, pa)
+      const d = image(p.src, o).then((m) => {
+        r.children[i] = toHast(m, b)
+        return
+      })
+
       a.push(d)
     })
 
