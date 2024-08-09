@@ -1,5 +1,7 @@
 name: Publish
 
+run-name: "Publish (site_mode: ${{github.event.inputs.site_mode}})"
+
 on:
   workflow_dispatch:
     inputs:
@@ -32,13 +34,6 @@ jobs:
     - name: Install Dependencies
       run: pnpm install --frozen-lockfile
 
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v4
-      with:
-        aws-access-key-id: ${{ secrets.ACCESS_KEY }}
-        aws-secret-access-key: ${{ secrets.SECRET_KEY }}
-        aws-region: us-east-1
-
     - name: Build Packages
       run: pnpm build
 
@@ -58,10 +53,39 @@ jobs:
           exit 1
         fi
 
-    - name: Sync bucket
+    - name: Setup AWS Environment
       run: |
-        cd ./site/dist
-        aws s3 sync . s3://api2static.teamlab.info --delete
+        m="${{github.event.inputs.site_mode}}"
+        if [ "$m" = "production" ]; then
+          echo "AWS_BUCKET_URL=s3://api2static.onlyoffice.com" >> "$GITHUB_ENV"
+          echo "AWS_ACCESS_KEY_ID=${{secrets.ACCESS_KEY_PROD}}" >> "$GITHUB_ENV"
+          echo "AWS_SECRET_ACCESS_KEY=${{secrets.SECRET_KEY_PROD}}" >> "$GITHUB_ENV"
+          echo "AWS_REGION=us-west-2" >> "$GITHUB_ENV"
+          echo "AWS_DISTRIBUTION_ID=${{secrets.AWS_DISTRIBUTION_ID_PROD}}" >> "$GITHUB_ENV"
+        elif [ "$m" = "testing" ]; then
+          echo "AWS_BUCKET_URL=s3://api2static.teamlab.info" >> "$GITHUB_ENV"
+          echo "AWS_ACCESS_KEY_ID=${{secrets.ACCESS_KEY}}" >> "$GITHUB_ENV"
+          echo "AWS_SECRET_ACCESS_KEY=${{secrets.SECRET_KEY}}" >> "$GITHUB_ENV"
+          echo "AWS_DISTRIBUTION_ID=${{secrets.AWS_DISTRIBUTION_ID}}" >> "$GITHUB_ENV"
+          echo "AWS_REGION=us-east-1" >> "$GITHUB_ENV"
+        elif [ "$m" = "development" ]; then
+          echo "Development bucket dose not exist"
+          exit 1
+        else
+          echo "Invalid site mode: $m"
+          exit 1
+        fi
 
-    - name: Invalidate CLOUDFRONT cache
-      run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths '/*'
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{env.AWS_ACCESS_KEY_ID}}
+        aws-secret-access-key: ${{env.AWS_SECRET_ACCESS_KEY}}
+        aws-region: ${{env.AWS_REGION}}
+
+    - name: Sync AWS Bucket
+      working-directory: site/dist
+      run: aws s3 sync . ${{env.AWS_BUCKET_URL}} --delete
+
+    - name: Invalidate AWS CloudFront Cache
+      run: aws cloudfront create-invalidation --distribution-id ${{env.AWS_DISTRIBUTION_ID}} --paths '/*'
