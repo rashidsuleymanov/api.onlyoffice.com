@@ -81,7 +81,8 @@ export function declarationNode(): DeclarationNode {
   }
 }
 
-export type Component = Response | Type
+// todo: each component should have a kind property
+export type Component = Response | Security | Type
 
 export type Response = InlineResponse | ResponseReference
 
@@ -105,6 +106,8 @@ export interface ResponseNode {
 //   body?: Value
 //   examples?: Example[]
 // }
+
+export interface Security {}
 
 export type Property = PropertyMap[keyof PropertyMap] | PropertyReference
 

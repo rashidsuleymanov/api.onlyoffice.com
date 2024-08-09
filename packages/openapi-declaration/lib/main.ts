@@ -495,6 +495,8 @@ function createComponent<T extends OpenAPIComponentsKey>(
   case "responses":
     const r = as("responses")
     return createResponseComponent(cache, r)
+  // case "securitySchemes":
+  //   const e = as("securitySchemes")
   default:
     console.warn(`"${t}" not supported`)
     break

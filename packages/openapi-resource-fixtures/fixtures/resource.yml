@@ -244,6 +244,7 @@ components:
 
     pack:
       type: object
+      description: A pack of animals.
       properties:
         id:
           type: string
