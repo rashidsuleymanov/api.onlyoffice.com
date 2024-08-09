@@ -65,6 +65,8 @@ export class TextInputContainer extends HTMLElement {
       return
     }
 
+    // It is irrelevant since the context of the set method is bound later.
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     const s = v.set
     if (!s) {
       return
@@ -89,12 +91,12 @@ export class TextInputContainer extends HTMLElement {
 
   #setupState(): void {
     if (this.#internals && CSS.supports("selector(:state(_))")) {
-      this.#hasState = this.#hasModernState
-      this.#changeState = this.#changeModernState
+      this.#hasState = this.#hasModernState.bind(this)
+      this.#changeState = this.#changeModernState.bind(this)
       return
     }
-    this.#hasState = this.#hasFallbackState
-    this.#changeState = this.#changeFallbackState
+    this.#hasState = this.#hasFallbackState.bind(this)
+    this.#changeState = this.#changeFallbackState.bind(this)
   }
 
   #listen(): void {
@@ -146,11 +148,12 @@ export class TextInputContainer extends HTMLElement {
       } else {
         this.filled = true
       }
-      return
     }
   }
 
-  #hasState: (k: string) => boolean = () => false
+  #hasState: (k: string) => boolean = () => {
+    return false
+  }
 
   #hasFallbackState(k: string): boolean {
     const s = this.getAttribute(`state-${k}`)
@@ -168,7 +171,7 @@ export class TextInputContainer extends HTMLElement {
     return t.states.has(k)
   }
 
-  #changeState: (k: string, v: boolean) => void = () => void 0
+  #changeState: (k: string, v: boolean) => void = () => {}
 
   #changeFallbackState(k: string, v: boolean): void {
     if (!v) {

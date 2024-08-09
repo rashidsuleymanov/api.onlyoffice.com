@@ -11,7 +11,7 @@ export default [
   ...jsonc.configs["flat/recommended-with-jsonc"],
   {
     plugins: {
-      "@stylistic": stylistic
+      "@stylistic": stylistic,
     },
     rules: {
       // core
@@ -33,7 +33,7 @@ export default [
       "jsonc/key-spacing": w,
       "jsonc/object-curly-newline": w,
       "jsonc/object-curly-spacing": w,
-      "jsonc/object-property-newline": w
-    }
-  }
+      "jsonc/object-property-newline": w,
+    },
+  },
 ]

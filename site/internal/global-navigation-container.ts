@@ -49,6 +49,10 @@ class GlobalNavigationContainer extends HTMLElement {
     this.addEventListener("click", this)
   }
 
+  disconnectedCallback(): void {
+    this.removeEventListener("click", this)
+  }
+
   handleEvent(e: Event): void {
     if (e.type === "click" && e.target === this.#button) {
       this.#expanded = !this.#expanded

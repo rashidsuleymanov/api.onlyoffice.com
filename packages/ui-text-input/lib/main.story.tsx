@@ -19,16 +19,20 @@ export function Default(): JSX.Element {
   const sizes: TextInputProperties["size"][] =
     ["small", "medium", "large", "xlarge", "default", undefined]
 
-  return <div style={{
-    display: "inline-flex",
-    flexDirection: "column",
-    rowGap: "var(--base-size-12)",
-  }}>
-    {sizes.map((size) => <div style={{
-      alignItems: "center",
-      columnGap: "var(--base-size-12)",
+  return <div
+    style={{
       display: "inline-flex",
-    }}>
+      flexDirection: "column",
+      rowGap: "var(--base-size-12)",
+    }}
+  >
+    {sizes.map((size) => <div
+      style={{
+        alignItems: "center",
+        columnGap: "var(--base-size-12)",
+        display: "inline-flex",
+      }}
+    >
       <TextInput size={size}>
         <TextInputLeading>
           <MagnifyingGlassIcon />

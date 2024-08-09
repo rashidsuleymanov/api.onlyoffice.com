@@ -1,6 +1,10 @@
 // import type {DocumentBuilderCommand} from "@onlyoffice/document-builder-html-element"
-import type {DocumentEditor, DocumentEditorData, DocumentEditorProperties} from "@onlyoffice/document-editor-hast-element"
-import {documentEditor} from "@onlyoffice/document-editor-hast-element"
+import {
+  type DocumentEditor,
+  type DocumentEditorData,
+  type DocumentEditorProperties,
+  documentEditor,
+} from "@onlyoffice/document-editor-hast-element"
 
 interface DocumentBuilder extends Omit<DocumentEditor, "tagName"> {
   tagName: "document-builder"
@@ -33,7 +37,7 @@ export function documentBuilder(): DocumentBuilder {
         return
       }
       e.properties.command = c
-    }
+    },
   })
   return e
 }

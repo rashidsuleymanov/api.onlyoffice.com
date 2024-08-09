@@ -1,5 +1,5 @@
-import {is} from "uvu/assert"
 import {test} from "uvu"
+import {is} from "uvu/assert"
 import {ESLint} from "./main.ts"
 
 test("lints JavaScript source", async () => {

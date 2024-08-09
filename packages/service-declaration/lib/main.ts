@@ -61,7 +61,7 @@ export function requestDeclaration(d: DeclarationNode): RequestDeclaration {
     queryParameters: undefined,
     bodyParameters: undefined,
     examples: undefined,
-    responses: undefined
+    responses: undefined,
   }
 }
 
@@ -77,7 +77,7 @@ export function declarationNode(): DeclarationNode {
     kind: "",
     slug: "",
     title: "",
-    description: undefined
+    description: undefined,
   }
 }
 

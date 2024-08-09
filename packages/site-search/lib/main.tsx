@@ -1,6 +1,6 @@
 import {type PagefindSearchOptions} from "@onlyoffice/pagefind-types"
-import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {useSlots} from "@onlyoffice/preact-slots"
+import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {CancelIcon, MagnifyingGlassIcon} from "@onlyoffice/ui-icons/poor/24.tsx"
 import {
   Template,

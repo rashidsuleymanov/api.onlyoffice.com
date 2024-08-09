@@ -45,13 +45,12 @@ export function rehypeStarryNight(sn: StarryNight): Transform {
         }
       } catch (e) {
         if (e instanceof Error && e.message.startsWith("Unknown syntax")) {
-          // @ts-ignore something is wrong with the overload
           file.message(`Cannot highlight '${sy}' syntax, grammar not available`, {
             ancestors: [parent, node],
             cause: e,
             place: node.position,
             ruleId: "missing-grammar",
-            source: pack.name
+            source: pack.name,
           })
           return
         }
@@ -77,7 +76,7 @@ function options(node: Element): [string, boolean] {
 
   for (const cl of cls) {
     const v = String(cl)
-    if (!sy && v.slice(0, 9) === "language-") {
+    if (!sy && v.startsWith("language-")) {
       sy = v.slice(9)
     }
     if (!no && v === "no-highlight") {

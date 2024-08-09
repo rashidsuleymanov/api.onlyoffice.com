@@ -1,16 +1,16 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": ".",
-    "outDir": "dist",
     "jsx": "react",
     "jsxFactory": "h",
-    "jsxFragmentFactory": "Fragment"
+    "jsxFragmentFactory": "Fragment",
+    "rootDir": ".",
+    "outDir": "dist"
   },
   "include": [
     "eslint.config.js",
-    "stylelint.config",
-    "index.d.ts",
-    "makefile.ts"
+    "makefile.ts",
+    "remark.config.ts",
+    "stylelint.config.js"
   ]
 }

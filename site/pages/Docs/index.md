@@ -5,7 +5,7 @@ description: ONLYOFFICE Docs is a collaborative office suite that includes edito
 
 home:
   image:
-    alt: "Docs preview"
+    alt: Docs preview
     src: /assets/images/docs-preview.png
     height: 540
   description: In this section, you will learn how to bring document editing and co-authoring to your web app users, set up, configure and integrate ONLYOFFICE Docs, extend its functionality using your own plugins/macros, and integrate document editors into the desktop applications. You will also find the information on how to use Document Builder to generate documents easily without running document editors.

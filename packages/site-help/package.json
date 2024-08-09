@@ -1,12 +1,12 @@
 {
   "name": "@onlyoffice/site-help",
-  "private": true,
   "type": "module",
-  "main": "lib/main.tsx",
+  "private": true,
   "exports": {
     ".": "./lib/main.tsx",
     "./main.css": "./lib/main.css"
   },
+  "main": "lib/main.tsx",
   "scripts": {
     "test:types": "tsc",
     "test": "pnpm test:types"

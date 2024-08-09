@@ -2,8 +2,8 @@ import {Readable, pipeline} from "node:stream"
 import {setTimeout} from "node:timers/promises"
 import {promisify} from "node:util"
 import {StringWritable} from "@onlyoffice/stream-string"
-import {is, unreachable} from "uvu/assert"
 import {test} from "uvu"
+import {is, unreachable} from "uvu/assert"
 import {AsyncTransform} from "./main.ts"
 
 test("throws an error if _atransform is not implemented", async () => {

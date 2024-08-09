@@ -32,7 +32,6 @@ export class PageContainer extends HTMLElement {
         return
       }
       c.toggleNavigationVisible()
-      return
     }
   }
 }

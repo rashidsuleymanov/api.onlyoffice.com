@@ -1,9 +1,9 @@
 import {body} from "@onlyoffice/node-http"
-import {equal as eq, is, unreachable as un} from "uvu/assert"
 import {suite} from "uvu"
-import {type Teardown, setup} from "./shared.ts"
+import {equal as eq, is, unreachable as un} from "uvu/assert"
+import {Client, ResponseError} from "./client.ts"
 import {DocumentEditorService} from "./document-editor.ts"
-import {Client, ErrorResponse} from "./client.ts"
+import {type Teardown, setup} from "./shared.ts"
 
 interface Context {
   t: Teardown
@@ -25,18 +25,20 @@ test("signs a document editor config", async (ctx) => {
   const [c, s, t] = setup()
   ctx.t = t
 
-  s.on("request", async (req, res) => {
+  s.on("request", (req, res) => {
     is(req.method, "POST")
     is(req.url, "/editors/configcreate")
+    body(req)
+      .then((b) => {
+        const j = JSON.parse(b)
+        j.token = "xxx"
+        const c = JSON.stringify(j)
 
-    const b = await body(req)
-    const j = JSON.parse(b)
-    j.token = "xxx"
-    const c = JSON.stringify(j)
-
-    res.setHeader("Content-Type", "application/json")
-    res.write(c)
-    res.end()
+        res.setHeader("Content-Type", "application/json")
+        res.write(c)
+        res.end()
+      })
+      .catch(un)
   })
 
   const [r, req, res] = await c.documentEditor.sign({documentType: "word"})
@@ -50,7 +52,7 @@ test("throws an error if the response is not ok", async (ctx) => {
   const [c, s, t] = setup()
   ctx.t = t
 
-  s.on("request", async (_, res) => {
+  s.on("request", (_, res) => {
     res.statusCode = 500
     res.end()
   })
@@ -59,7 +61,7 @@ test("throws an error if the response is not ok", async (ctx) => {
     const [_, __, res] = await c.documentEditor.sign({documentType: "word"})
     un(`Expected an error, but got '${res.status}'`)
   } catch (e) {
-    is(e instanceof ErrorResponse, true)
+    is(e instanceof ResponseError, true)
   }
 })
 

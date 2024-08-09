@@ -1,16 +1,15 @@
-import {type Token} from "@onlyoffice/declaration-tokenizer"
-import {referenceToken, tokenNode} from "@onlyoffice/declaration-tokenizer"
+import {type Token, referenceToken, tokenNode} from "@onlyoffice/declaration-tokenizer"
 import type * as Library from "@onlyoffice/library-declaration"
 import {type Resource} from "@onlyoffice/library-resource"
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {Badge} from "@onlyoffice/ui-kit"
-import {useContext} from "preact/hooks"
 import {Fragment, type JSX, createContext, h} from "preact"
+import {useContext} from "preact/hooks"
 
 interface ContextProperties {
-  onHighlightSyntax(p: ChildrenIncludable & {syntax: string}): any
-  onLink(t: Token): string | undefined
-  onProcessMarkdown(p: ChildrenIncludable): any
+  onHighlightSyntax(this: void, p: ChildrenIncludable & {syntax: string}): JSX.Element
+  onLink(this: void, t: Token): string | undefined
+  onProcessMarkdown(this: void, p: ChildrenIncludable): JSX.Element
   onRetrieve: Resource["retrieve"]
 }
 
@@ -26,7 +25,7 @@ const Context = createContext<ContextProperties>({
   },
   onRetrieve() {
     throw new Error("Not implemented")
-  }
+  },
 })
 
 export interface LibraryDeclarationProperties {
@@ -38,7 +37,7 @@ export interface LibraryDeclarationProperties {
 }
 
 export function LibraryDeclaration(
-  {declaration, ...props}: LibraryDeclarationProperties
+  {declaration, ...props}: LibraryDeclarationProperties,
 ): JSX.Element {
   return <Context.Provider value={props}>
     <Declaration declaration={declaration} />
@@ -75,12 +74,15 @@ function ClassDeclaration({declaration: d}: ClassDeclarationParameters): JSX.Ele
     {d.signature && <DeclarationSignature signature={d.signature} />}
     {d.description && <DeclarationDescriptionSection description={d.description} />}
     {d.examples && <DeclarationExamplesSection examples={d.examples} />}
-    {(d.constructors || d.instanceMethods || d.instanceProperties || d.events) && <DeclarationTopicsSection />}
+    {(d.constructors || d.instanceMethods || d.instanceProperties || d.events) &&
+      <DeclarationTopicsSection />}
     {d.constructors && <DeclarationConstructorsSection references={d.constructors} />}
     {d.instanceMethods && <DeclarationInstanceMethodsSection references={d.instanceMethods} />}
-    {d.instanceProperties && <DeclarationInstancePropertiesSection references={d.instanceProperties} />}
+    {d.instanceProperties &&
+      <DeclarationInstancePropertiesSection references={d.instanceProperties} />}
     {d.events && <DeclarationEventsSection references={d.events} />}
-    {(d.extends || d.extendsBy || d.overloads || d.overloadsBy) && <DeclarationRelationshipsSection />}
+    {(d.extends || d.extendsBy || d.overloads || d.overloadsBy) &&
+      <DeclarationRelationshipsSection />}
     {d.extends && <DeclarationExtendsSection references={d.extends} />}
     {d.extendsBy && <DeclarationExtendsBySection references={d.extendsBy} />}
     {d.overloads && <DeclarationOverloadsSection references={d.overloads} />}
@@ -144,10 +146,6 @@ function TypeDeclaration({declaration: d}: TypeDeclarationParameters): JSX.Eleme
     return <AnyTypeDeclaration declaration={d} />
   case "object":
     return <ObjectTypeDeclaration declaration={d} type={d.type} />
-  case "passthrough":
-  case "union":
-  case "unknown":
-  case "void":
   default:
     return <AnyTypeDeclaration declaration={d} />
   }
@@ -277,7 +275,7 @@ function DeclarationReturnsSection({returns}: DeclarationReturnsSectionParameter
 
   return <>
     <h2>Returns</h2>
-    {returns.signature && <code>{<Signature signature={returns.signature} />}</code>}
+    {returns.signature && <code><Signature signature={returns.signature} /></code>}
     {returns.description && <Markdown>{returns.description}</Markdown>}
   </>
 }
@@ -352,7 +350,7 @@ interface DeclarationTopicSectionParameters {
 function DeclarationTopicSection({title, references}: DeclarationTopicSectionParameters): JSX.Element {
   const {
     onProcessMarkdown: Markdown,
-    onRetrieve: retrieve
+    onRetrieve: retrieve,
   } = useContext(Context)
 
   return <>
@@ -427,8 +425,7 @@ function SignatureKeywordToken({children}: JSX.ElementChildrenAttribute): JSX.El
   return <span class="dt-ke">{children}</span>
 }
 
-interface SignatureReferenceTokenParameters {
-  children: any
+interface SignatureReferenceTokenParameters extends ChildrenIncludable {
   href?: string
 }
 

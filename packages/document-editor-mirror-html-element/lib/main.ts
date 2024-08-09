@@ -1,10 +1,10 @@
+/* eslint-disable @typescript-eslint/no-implied-eval, no-new-func */
 /* eslint @stylistic/max-len: ["error", {code: 140}] */
 
 import {callerPosition} from "@onlyoffice/caller-position"
-import type {DocumentEditorEventHandlerName} from "@onlyoffice/document-editor-html-element"
-import {DocumentEditor} from "@onlyoffice/document-editor-html-element"
+import {DocumentEditor, type DocumentEditorEventHandlerName} from "@onlyoffice/document-editor-html-element"
 import {substringPosition} from "@onlyoffice/strings"
-import type {Stringify} from "@onlyoffice/utility-types"
+import {type Stringify} from "@onlyoffice/utility-types"
 
 declare global {
   interface Window {
@@ -155,7 +155,7 @@ export class DocumentEditorMirror extends HTMLElement {
       "ondocumenteditormirrorconsoleerror",
       "ondocumenteditormirrorconsolelog",
       "ondocumenteditormirrorerror",
-      "ondocumenteditormirrorthrow"
+      "ondocumenteditormirrorthrow",
     ]
   }
 
@@ -267,7 +267,7 @@ export class DocumentEditorMirror extends HTMLElement {
           source: s,
           lineno: ln,
           colno: cn,
-          args
+          args,
         })
         dm.dispatchEvent(ev)
 
@@ -289,12 +289,12 @@ export class DocumentEditorMirror extends HTMLElement {
           source: s,
           lineno: ln,
           colno: cn,
-          args
+          args,
         })
         dm.dispatchEvent(ev)
 
         log.apply(co, args)
-      }
+      },
     }
   }
 
@@ -316,7 +316,7 @@ export class DocumentEditorMirror extends HTMLElement {
         source: s,
         lineno: ln,
         colno: cn,
-        error: err
+        error: err,
       })
       dm.dispatchEvent(ev)
     }
@@ -342,9 +342,9 @@ export class DocumentEditorMirrorConsoleEvent extends Event {
     return this.#colno
   }
 
-  #args: any[] = []
+  #args: unknown[] = []
 
-  get args(): any[] {
+  get args(): unknown[] {
     return this.#args
   }
 
@@ -361,7 +361,7 @@ export interface DocumentEditorMirrorConsoleEventInit extends EventInit {
   source: DocumentEditorEventHandlerName
   lineno: number
   colno: number
-  args: any[]
+  args: unknown[]
 }
 
 export class DocumentEditorMirrorConsoleErrorEvent extends DocumentEditorMirrorConsoleEvent {

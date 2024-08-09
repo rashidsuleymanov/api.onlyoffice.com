@@ -1,13 +1,13 @@
 {
   "name": "@onlyoffice/server-client",
-  "private": true,
   "type": "module",
-  "main": "lib/main.ts",
+  "private": true,
   "exports": {
     ".": "./lib/main.ts",
     "./client.ts": "./lib/client.ts",
     "./document-editor.ts": "./lib/document-editor.ts"
   },
+  "main": "lib/main.ts",
   "scripts": {
     "demo:server": "store-demo",
     "playwright": "cd node_modules/@web/test-runner-playwright/node_modules/.bin && ./playwright",

@@ -25,7 +25,7 @@ export class Client {
 
   request(m: string, u: string, b?: unknown): Request {
     const h = new Headers({
-      Accept: "application/json"
+      Accept: "application/json",
     })
     const o: RequestInit = {method: m, headers: h}
     if (b) {
@@ -45,27 +45,27 @@ export class Client {
   static check(req: Request, res: Response): void {
     const ct = res.headers.get("Content-Type")
     if (!(ct && ct.includes("application/json"))) {
-      throw new ErrorResponse(req, res, `Expected JSON response, but got '${ct}'`)
+      throw new ResponseError(req, res, `Expected JSON response, but got '${ct}'`)
     }
     if (!(res.status >= 200 && res.status <= 299)) {
-      throw new ErrorResponse(req, res, "Unknown server error")
+      throw new ResponseError(req, res, "Unknown server error")
     }
   }
 }
 
-export class ErrorResponse extends Error {
+export class ResponseError extends Error {
   request: Request
   response: Response
   name: string
 
   constructor(req: Request, res: Response, m: string) {
+    m = `${req.method} ${req.url}: ${res.status} ${m}`
     super(m)
     this.request = req
     this.response = res
-    this.name = this.constructor.name
-    this.message = `${req.method} ${req.url}: ${res.status} ${m}`
+    this.name = "ResponseError"
     if ("captureStackTrace" in Error) {
-      Error.captureStackTrace(this, ErrorResponse)
+      Error.captureStackTrace(this, ResponseError)
     }
   }
 }

@@ -24,7 +24,7 @@ export function Default(): JSX.Element {
 
   // const c = new ConfigFixture()
   // return <DocumentEditorPlayground config={c.playground} />
-  return <div></div>
+  return <div />
 }
 
 // async function setup(): Promise<void> {

@@ -4,10 +4,10 @@ import {type Paragraph} from "mdast"
 import {fromMarkdown} from "mdast-util-from-markdown"
 import {toMarkdown} from "mdast-util-to-markdown"
 import {toString} from "mdast-util-to-string"
-import {English} from "sentence-splitter/lang"
 import {split} from "sentence-splitter"
-import {select} from "unist-util-select"
+import {English} from "sentence-splitter/lang"
 import {remove} from "unist-util-remove"
+import {select} from "unist-util-select"
 
 export function firstParagraph(s: string): string {
   const t = fromMarkdown(s)

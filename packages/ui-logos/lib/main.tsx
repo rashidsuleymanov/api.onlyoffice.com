@@ -1,3 +1,6 @@
+// todo: these components should be generated from svg as well as icons.
+/* eslint-disable */
+
 import {type JSX, h} from "preact"
 
 export function OnlyofficeLogo({

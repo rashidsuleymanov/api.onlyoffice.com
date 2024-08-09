@@ -14,19 +14,19 @@ function config() {
   return {
     nodeResolve: true,
     plugins: [
-      esbuildPlugin({ts: true})
+      esbuildPlugin({ts: true}),
     ],
     files: ["lib/*.e2e.ts"],
     browsers: [
       playwrightLauncher({product: "chromium"}),
       playwrightLauncher({product: "firefox"}),
-      playwrightLauncher({product: "webkit"})
+      playwrightLauncher({product: "webkit"}),
     ],
     coverage: true,
     coverageConfig: {
       include: ["lib/*.ts"],
       report: true,
-      threshold: 80
-    }
+      threshold: 80,
+    },
   }
 }

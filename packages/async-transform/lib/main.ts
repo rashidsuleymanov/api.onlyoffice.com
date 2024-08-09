@@ -7,13 +7,17 @@ export interface AsyncTransformOptions extends TransformOptions {
 export class AsyncTransform extends Transform {
   constructor(opts?: AsyncTransformOptions) {
     super(opts)
-    if (opts) {
-      this.#atransform = opts.atransform
+    if (opts && opts.atransform) {
+      this.#atransform = opts.atransform.bind(this)
     }
   }
 
   _transform(ch: unknown, _: BufferEncoding, cb: TransformCallback): void {
-    this._atransform(ch).then(() => cb()).catch(cb)
+    this._atransform(ch)
+      .then(() => {
+        cb()
+      })
+      .catch(cb)
   }
 
   #atransform: AsyncTransformOptions["atransform"] = undefined
@@ -22,6 +26,6 @@ export class AsyncTransform extends Transform {
     if (!this.#atransform) {
       throw new Error("Not implemented")
     }
-    this.#atransform(ch)
+    await this.#atransform(ch)
   }
 }

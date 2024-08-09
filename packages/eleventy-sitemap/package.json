@@ -1,7 +1,7 @@
 {
   "name": "@onlyoffice/eleventy-sitemap",
-  "private": true,
   "type": "module",
+  "private": true,
   "main": "lib/main.ts",
   "scripts": {
     "test:types": "tsc",

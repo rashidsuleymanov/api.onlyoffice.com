@@ -1,16 +1,14 @@
-import {stat} from "node:fs/promises"
 import {createReadStream} from "node:fs"
-import {type IncomingMessage, type ServerResponse} from "node:http"
-import {createServer} from "node:http"
-import {join} from "node:path"
+import {stat} from "node:fs/promises"
+import {type IncomingMessage, type ServerResponse, createServer} from "node:http"
+import path from "node:path"
 import {argv, stderr, stdout} from "node:process"
 import {URL, fileURLToPath} from "node:url"
 import {Console} from "@onlyoffice/console"
 import {type DocEditorConfigurableOptions} from "@onlyoffice/document-server-types"
 import {body} from "@onlyoffice/node-http"
 import {uniqueString} from "@onlyoffice/strings"
-import {type Algorithm} from "jsonwebtoken"
-import jwt from "jsonwebtoken"
+import jwt, {type Algorithm} from "jsonwebtoken"
 import sade from "sade"
 import pack from "../package.json"
 
@@ -46,13 +44,13 @@ function main(): void {
         port: opts.port,
         internal: {
           hostname: opts["internal-hostname"],
-          port: opts["internal-port"]
+          port: opts["internal-port"],
         },
         jwt: {
           algorithm: opts["jwt-algorithm"],
           header: opts["jwt-header"],
-          secret: opts["jwt-secret"]
-        }
+          secret: opts["jwt-secret"],
+        },
       })
     })
     .parse(argv)
@@ -61,20 +59,19 @@ function main(): void {
 function serve(opts: Options): void {
   const s = createServer()
 
-  s.on("request", async (req, res) => {
+  s.on("request", (req, res) => {
     console.log(`${req.method} ${req.url}`)
-    try {
-      await route(opts, req, res)
-    } catch (e) {
-      let m = "Internal Server Error"
-      if (e instanceof Error) {
-        m = e.message
-      }
-      console.error(e)
-      res.statusCode = 500
-      res.write(m)
-      res.end()
-    }
+    route(opts, req, res)
+      .catch((e) => {
+        let m = "Internal Server Error"
+        if (e instanceof Error) {
+          m = e.message
+        }
+        console.error(e)
+        res.statusCode = 500
+        res.write(m)
+        res.end()
+      })
   })
 
   s.listen(opts.port, opts.hostname, () => {
@@ -131,7 +128,7 @@ async function route(opts: Options, req: IncomingMessage, res: ServerResponse): 
     const rd = rootDir()
     const fd = fixturesDir(rd)
     const sb = sampleBasename(t)
-    const sf = join(fd, sb)
+    const sf = path.join(fd, sb)
     const st = contentType(t)
     const ss = await stat(sf)
 
@@ -182,7 +179,7 @@ function rootDir(): string {
 }
 
 function fixturesDir(d: string): string {
-  return join(d, "fixtures")
+  return path.join(d, "fixtures")
 }
 
 function sampleBasename(t: string): string {

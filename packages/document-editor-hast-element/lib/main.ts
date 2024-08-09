@@ -48,8 +48,8 @@ export function documentEditor(): DocumentEditor {
           return
         }
         e.properties.config = JSON.stringify(c)
-      }
-    }
+      },
+    },
   }
   return e
 }

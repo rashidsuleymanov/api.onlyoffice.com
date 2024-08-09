@@ -1,14 +1,14 @@
 {
   "name": "@onlyoffice/site-kit",
-  "private": true,
   "type": "module",
-  "main": "lib/main.ts",
+  "private": true,
   "exports": {
     "./client/prerender.ts": "./lib/client/prerender.ts",
     "./client.ts": "./lib/client.ts",
     "./main.css": "./lib/main.css",
     ".": "./lib/main.ts"
   },
+  "main": "lib/main.ts",
   "scripts": {
     "test:types": "tsc",
     "test": "pnpm test:types"

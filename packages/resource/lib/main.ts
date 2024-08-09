@@ -6,8 +6,8 @@ export function rawURL(o: string, rp: string, rf: string, p: string): string {
   return u.toString()
 }
 
-export function readURL(w: Writable, u: string): Promise<void> {
-  return new Promise((res, rej) => {
+export async function readURL(w: Writable, u: string): Promise<void> {
+  await new Promise((res, rej) => {
     get(u, (r) => {
       if (r.statusCode !== 200) {
         r.destroy()

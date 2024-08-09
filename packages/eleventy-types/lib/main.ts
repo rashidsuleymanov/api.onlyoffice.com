@@ -3,7 +3,7 @@ import type copy from "recursive-copy"
 // todo: https://github.com/timkendrick/recursive-copy/pull/45/
 export type RecursiveCopyOptions = Exclude<Parameters<typeof copy.default extends {
   (s: string, d: string, o?: infer O): unknown
-  (s: string, d: string, c: (e: Error | null, r?: Array<unknown>) => void): unknown
+  (s: string, d: string, c: (e: Error | null, r?: unknown[]) => void): unknown
 } ? (s: string, d: string, o?: O) => unknown : never>[2], undefined>
 
 /**
@@ -92,7 +92,22 @@ export interface UserConfig {
   /**
    * {@link https://www.11ty.dev/docs/events/ Eleventy Reference}
    */
-  on(type: string, cb: unknown): void
+  on(type: string, cb: (context: EventContext) => unknown): void
+}
+
+/**
+ * {@link https://www.11ty.dev/docs/events/ Eleventy Reference}
+ */
+export interface EventContext {
+  dir: {
+    input: string
+    output: string
+    includes: string
+    data: string
+    layouts?: string
+  }
+  outputMode: "fs" | "json" | "ndjson"
+  runMode: "build" | "watch" | "serve"
 }
 
 /**
@@ -101,7 +116,7 @@ export interface UserConfig {
 export interface ExtensionOptions {
   key?: string
   outputFileExtension?: string
-  compile?(content: string, file: string): () => unknown | Promise<unknown>
+  compile?(content: string, file: string): () => unknown
 }
 
 /**
@@ -111,14 +126,14 @@ export interface ConsoleLogger {
   /**
    * {@link https://github.com/11ty/eleventy/blob/v2.0.1/src/Util/ConsoleLogger.js#L83 Eleventy Reference}
    */
-  message(message: string, type?: "log" | "warn" | "error", chalkColor?: boolean, forceToConsole?: boolean): void
+  message(message: string, type?: "log" | "warn" | "error", chalkColor?: string, forceToConsole?: boolean, prefix?: string): void
 }
 
 /**
  * {@link https://www.11ty.dev/docs/data-custom/ Eleventy Reference}
  */
 export interface DataExtensionOptions {
-  parser?(content: string, file: string): unknown | Promise<unknown>
+  parser?(content: string, file: string): Promise<unknown>
 }
 
 /**

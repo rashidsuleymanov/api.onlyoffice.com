@@ -1,8 +1,8 @@
 // todo: explain what this file does.
 
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
-import {Suspense, useContext} from "preact/compat"
 import {Fragment, type JSX, createContext, h, toChildArray} from "preact"
+import {Suspense, useContext} from "preact/compat"
 
 interface Contextual {
   register(_: Deferred): void
@@ -11,7 +11,7 @@ interface Contextual {
 const Context = createContext<Contextual>({
   register(_: Deferred): void {
     throw new Error("Not implemented")
-  }
+  },
 })
 
 export interface SuspenseResolver {
@@ -60,10 +60,10 @@ export function useSuspense(cb: SuspenseCallback): SuspenseConsumer {
   c.register(d)
 
   let r = false
+  // eslint-disable-next-line @typescript-eslint/no-floating-promises
   d.promise
     .then(() => {
       r = true
-      return
     })
     .catch(null)
 
@@ -77,11 +77,12 @@ export function useSuspense(cb: SuspenseCallback): SuspenseConsumer {
 
   function Suspender(p: ChildrenIncludable): JSX.Element {
     if (!r) {
+      // eslint-disable-next-line @typescript-eslint/only-throw-error
       throw d.promise
     }
     return <>{toChildArray(p.children).map((ch) => {
       if (typeof ch === "function") {
-        // @ts-ignore
+        // @ts-ignore ChildrenIncludable is not quite appropriate in this case.
         return ch()
       }
       return ch
@@ -96,26 +97,32 @@ interface DeferredCallback {
 // In the future, the Deferred class can be replaced with Promise.withResolvers.
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/withResolvers/
 class Deferred {
-  promise: Promise<void>
-  _resolve?: () => void
-  _reject?: () => void
-
   constructor(cb: DeferredCallback) {
-    this.promise = new Promise((res, rej) => {
-      this._resolve = res.bind(this, cb())
-      this._reject = rej
+    this.#promise = new Promise((res, rej) => {
+      this.#resolve = res.bind(this, cb())
+      this.#reject = rej
     })
   }
 
+  #promise: Promise<void>
+
+  get promise(): Promise<void> {
+    return this.#promise
+  }
+
+  #resolve?: () => void
+
   resolve(): void {
-    if (this._resolve) {
-      this._resolve()
+    if (this.#resolve) {
+      this.#resolve()
     }
   }
 
+  #reject?: () => void
+
   reject(): void {
-    if (this._reject) {
-      this._reject()
+    if (this.#reject) {
+      this.#reject()
     }
   }
 }

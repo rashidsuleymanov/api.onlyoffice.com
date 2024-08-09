@@ -1,5 +1,5 @@
-import {equal as eq, is} from "uvu/assert"
 import {test} from "uvu"
+import {equal as eq, is} from "uvu/assert"
 import {template} from "./main.ts"
 
 test("initializes a template with correct order of properties", () => {

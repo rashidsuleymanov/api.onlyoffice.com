@@ -1,7 +1,7 @@
 {
   "name": "@onlyoffice/openapi-resource",
-  "private": true,
   "type": "module",
+  "private": true,
   "main": "lib/main.ts",
   "scripts": {
     "test:types": "tsc",
@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "@onlyoffice/jq": "workspace:^",
-    "@onlyoffice/openapi-declaration": "workspace:^",
     "@onlyoffice/node-path": "workspace:^",
+    "@onlyoffice/openapi-declaration": "workspace:^",
     "@onlyoffice/service-resource": "workspace:^",
     "@onlyoffice/stream-json": "workspace:^",
     "@onlyoffice/stream-string": "workspace:^",

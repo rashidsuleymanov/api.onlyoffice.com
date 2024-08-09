@@ -61,7 +61,6 @@ class LegacyContainer extends HTMLElement {
         e.preventDefault()
         Cookie.remove("X-OO-API")
         window.location.href = a.href
-        return
       }
     }
   }

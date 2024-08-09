@@ -3,7 +3,7 @@ import {Fragment, type JSX, h} from "preact"
 import {Badge} from "./main.tsx"
 
 export default {
-  title: "UI/Badge"
+  title: "UI/Badge",
 } satisfies Meta
 
 export function Default(): JSX.Element {

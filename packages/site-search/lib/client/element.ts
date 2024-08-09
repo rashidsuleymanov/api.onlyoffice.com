@@ -121,7 +121,7 @@ export class SearchContainer extends HTMLElement {
     await this.#setupPagefind()
     this.#setupSites()
     this.#setupQuery()
-    this.#setupOutput()
+    await this.#setupOutput()
   }
 
   async #setupPagefind(): Promise<void> {
@@ -158,7 +158,7 @@ export class SearchContainer extends HTMLElement {
     e.value = q
   }
 
-  #setupOutput(): void {
+  async #setupOutput(): Promise<void> {
     const q = this.#query
     if (!q) {
       return
@@ -171,7 +171,7 @@ export class SearchContainer extends HTMLElement {
       return
     }
 
-    this.#searchCallback()
+    await this.#searchCallback()
   }
 
   async #desetup(): Promise<void> {
@@ -267,7 +267,6 @@ export class SearchContainer extends HTMLElement {
       e.target === this.#formElement
     ) {
       e.preventDefault()
-      return
     }
   }
 
@@ -275,7 +274,10 @@ export class SearchContainer extends HTMLElement {
 
   #search(): void {
     window.clearTimeout(this.#searchId)
-    this.#searchId = window.setTimeout(this.#searchCallback.bind(this), 180)
+    this.#searchId = window.setTimeout(() => {
+      // todo: replace the console with a custom error event
+      this.#searchCallback().catch(console.error)
+    }, 180)
   }
 
   async #searchCallback(): Promise<void> {
@@ -301,12 +303,16 @@ export class SearchContainer extends HTMLElement {
     // todo: rewrite with for loop
     const ae = await Promise.all(sr.results.slice(0, 100).map(async (r) => {
       const d = await r.data()
-      return this.#createFragment(qs, d)
+      const f = this.#createFragment(qs, d)
+      if (!f) {
+        return []
+      }
+      return f
     }))
 
     const re = this.#resultsElement
     if (re) {
-      re.replaceChildren(...ae)
+      re.replaceChildren(...ae.flat())
     }
 
     const oe = this.#outputElement

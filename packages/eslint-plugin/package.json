@@ -1,0 +1,10 @@
+{
+  "name": "@onlyoffice/eslint-plugin",
+  "type": "module",
+  "private": true,
+  "main": "lib/main.js",
+  "scripts": {
+    "test:types": "tsc",
+    "test": "pnpm test:types"
+  }
+}

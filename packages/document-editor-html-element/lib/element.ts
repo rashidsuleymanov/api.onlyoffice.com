@@ -1,82 +1,81 @@
+/* eslint-disable @typescript-eslint/no-implied-eval, no-new-func */
 /* eslint @stylistic/max-len: ["error", {code: 140}] */
 
-import type {
-  DocEditor,
-  DocEditorConfig,
-  DocEditorConfigurableOptions
+import {
+  type DocEditor,
+  type DocEditorConfig,
+  type DocEditorConfigurableOptions,
 } from "@onlyoffice/document-server-types"
 import {
-  uniqueString
+  uniqueString,
 } from "@onlyoffice/strings"
-import type {
-  DocumentEditorAppReadyListener,
-  DocumentEditorCollaborativeChangesListener,
-  DocumentEditorDocumentReadyListener,
-  DocumentEditorDocumentStateChangeListener,
-  DocumentEditorDownloadAsListener,
-  DocumentEditorErrorListener,
-  DocumentEditorInfoListener,
-  DocumentEditorMakeActionLinkListener,
-  DocumentEditorMetaChangeListener,
-  DocumentEditorOutdatedVersionListener,
-  DocumentEditorPluginsReadyListener,
-  DocumentEditorReadyListener,
-  DocumentEditorRequestCloseListener,
-  DocumentEditorRequestCompareFileListener,
-  DocumentEditorRequestCreateNewListener,
-  DocumentEditorRequestEditRightsListener,
-  DocumentEditorRequestHistoryListener,
-  DocumentEditorRequestHistoryCloseListener,
-  DocumentEditorRequestHistoryDataListener,
-  DocumentEditorRequestInsertImageListener,
-  DocumentEditorRequestMailMergeRecipientsListener,
-  DocumentEditorRequestOpenListener,
-  DocumentEditorRequestReferenceDataListener,
-  DocumentEditorRequestReferenceSourceListener,
-  DocumentEditorRequestRenameListener,
-  DocumentEditorRequestRestoreListener,
-  DocumentEditorRequestSaveAsListener,
-  DocumentEditorRequestSelectDocumentListener,
-  DocumentEditorRequestSelectSpreadsheetListener,
-  DocumentEditorRequestSendNotifyListener,
-  DocumentEditorRequestSharingSettingsListener,
-  DocumentEditorRequestUsersListener,
-  DocumentEditorWarningListener
-} from "./events.ts"
 import {
   DocumentEditorAppReadyEvent,
+  type DocumentEditorAppReadyListener,
   DocumentEditorCollaborativeChangesEvent,
+  type DocumentEditorCollaborativeChangesListener,
   DocumentEditorDocumentReadyEvent,
+  type DocumentEditorDocumentReadyListener,
   DocumentEditorDocumentStateChangeEvent,
+  type DocumentEditorDocumentStateChangeListener,
   DocumentEditorDownloadAsEvent,
+  type DocumentEditorDownloadAsListener,
   DocumentEditorErrorEvent,
+  type DocumentEditorErrorListener,
   DocumentEditorInfoEvent,
+  type DocumentEditorInfoListener,
   DocumentEditorMakeActionLinkEvent,
+  type DocumentEditorMakeActionLinkListener,
   DocumentEditorMetaChangeEvent,
+  type DocumentEditorMetaChangeListener,
   DocumentEditorOutdatedVersionEvent,
+  type DocumentEditorOutdatedVersionListener,
   DocumentEditorPluginsReadyEvent,
+  type DocumentEditorPluginsReadyListener,
   DocumentEditorReadyEvent,
+  type DocumentEditorReadyListener,
   DocumentEditorRequestCloseEvent,
+  type DocumentEditorRequestCloseListener,
   DocumentEditorRequestCompareFileEvent,
+  type DocumentEditorRequestCompareFileListener,
   DocumentEditorRequestCreateNewEvent,
+  type DocumentEditorRequestCreateNewListener,
   DocumentEditorRequestEditRightsEvent,
-  DocumentEditorRequestHistoryEvent,
+  type DocumentEditorRequestEditRightsListener,
   DocumentEditorRequestHistoryCloseEvent,
+  type DocumentEditorRequestHistoryCloseListener,
   DocumentEditorRequestHistoryDataEvent,
+  type DocumentEditorRequestHistoryDataListener,
+  DocumentEditorRequestHistoryEvent,
+  type DocumentEditorRequestHistoryListener,
   DocumentEditorRequestInsertImageEvent,
+  type DocumentEditorRequestInsertImageListener,
   DocumentEditorRequestMailMergeRecipientsEvent,
+  type DocumentEditorRequestMailMergeRecipientsListener,
   DocumentEditorRequestOpenEvent,
+  type DocumentEditorRequestOpenListener,
   DocumentEditorRequestReferenceDataEvent,
+  type DocumentEditorRequestReferenceDataListener,
   DocumentEditorRequestReferenceSourceEvent,
+  type DocumentEditorRequestReferenceSourceListener,
   DocumentEditorRequestRenameEvent,
+  type DocumentEditorRequestRenameListener,
   DocumentEditorRequestRestoreEvent,
+  type DocumentEditorRequestRestoreListener,
   DocumentEditorRequestSaveAsEvent,
+  type DocumentEditorRequestSaveAsListener,
   DocumentEditorRequestSelectDocumentEvent,
+  type DocumentEditorRequestSelectDocumentListener,
   DocumentEditorRequestSelectSpreadsheetEvent,
+  type DocumentEditorRequestSelectSpreadsheetListener,
   DocumentEditorRequestSendNotifyEvent,
+  type DocumentEditorRequestSendNotifyListener,
   DocumentEditorRequestSharingSettingsEvent,
+  type DocumentEditorRequestSharingSettingsListener,
   DocumentEditorRequestUsersEvent,
-  DocumentEditorWarningEvent
+  type DocumentEditorRequestUsersListener,
+  DocumentEditorWarningEvent,
+  type DocumentEditorWarningListener,
 } from "./events.ts"
 
 export type DocumentEditorAttribute = Exclude<keyof DocumentEditorAttributes, undefined>
@@ -172,7 +171,7 @@ export class DocumentEditor extends HTMLElement {
       "documenteditorrequestsendnotify",
       "documenteditorrequestsharingsettings",
       "documenteditorrequestusers",
-      "documenteditorwarning"
+      "documenteditorwarning",
     ]
   }
 
@@ -214,11 +213,11 @@ export class DocumentEditor extends HTMLElement {
       "ondocumenteditorrequestsendnotify",
       "ondocumenteditorrequestsharingsettings",
       "ondocumenteditorrequestusers",
-      "ondocumenteditorwarning"
+      "ondocumenteditorwarning",
     ]
   }
 
-  #documentServerUrl: string = ""
+  #documentServerUrl = ""
 
   get documentServerUrl(): string {
     return this.#documentServerUrl
@@ -832,7 +831,7 @@ export class DocumentEditor extends HTMLElement {
       "ondocumenteditorrequestsendnotify",
       "ondocumenteditorrequestsharingsettings",
       "ondocumenteditorrequestusers",
-      "ondocumenteditorwarning"
+      "ondocumenteditorwarning",
     ]
   }
 
@@ -1216,8 +1215,8 @@ export class DocumentEditor extends HTMLElement {
           const er = new Error(`${ev.data.warningDescription} (${ev.data.warningCode})`)
           const e = new DocumentEditorWarningEvent({...ev, bubbles: true, error: er, message: er.message})
           this.dispatchEvent(e)
-        }
-      }
+        },
+      },
     }
   }
 
@@ -1229,6 +1228,7 @@ export class DocumentEditor extends HTMLElement {
     if (!window.DocsAPI) {
       throw new Error("The Document Editor API is not defined")
     }
+    // eslint-disable-next-line new-cap
     this.#editor = window.DocsAPI.DocEditor(p.id, c)
   }
 }

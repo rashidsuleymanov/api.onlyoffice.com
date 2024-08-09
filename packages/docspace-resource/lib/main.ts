@@ -1,6 +1,6 @@
-import {mkdir, rm} from "node:fs/promises"
 import {createWriteStream, existsSync} from "node:fs"
-import {join} from "node:path"
+import {mkdir, rm} from "node:fs/promises"
+import path from "node:path"
 import {Transform, type TransformCallback} from "node:stream"
 import {URL, fileURLToPath} from "node:url"
 import {Console} from "@onlyoffice/console"
@@ -22,10 +22,10 @@ const config = [
         {name: "data", path: "asc.data.backup.swagger.json"},
         {name: "files", path: "asc.files.swagger.json"},
         {name: "people", path: "asc.people.swagger.json"},
-        {name: "web", path: "asc.web.api.swagger.json"}
-      ]
-    }
-  }
+        {name: "web", path: "asc.web.api.swagger.json"},
+      ],
+    },
+  },
 ]
 
 const console = new Console(pack.name, process.stdout, process.stderr)
@@ -56,19 +56,19 @@ async function main(): Promise<void> {
       const ch = new Cache()
 
       const dn = declarationBasename(p.name)
-      const df = join(dd, dn)
+      const df = path.join(dd, dn)
       const dw = createWriteStream(df)
       await writeDeclaration(ch, rw, dw, [new PatchPath()])
       dw.close()
 
       const cn = componentBasename(p.name)
-      const cf = join(dd, cn)
+      const cf = path.join(dd, cn)
       const cw = createWriteStream(cf)
       await writeComponent(ch, rw, cw)
       cw.close()
 
       const en = resourceBasename(p.name)
-      const ef = join(dd, en)
+      const ef = path.join(dd, en)
       const ew = createWriteStream(ef)
       await writeEntrypoint(ew, df, cf)
       ew.close()
@@ -88,7 +88,7 @@ function rootDir(): string {
 }
 
 function distDir(d: string): string {
-  return join(d, "dist")
+  return path.join(d, "dist")
 }
 
 // It is not good that we patch the path on our side.

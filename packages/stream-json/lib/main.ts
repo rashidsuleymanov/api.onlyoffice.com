@@ -12,21 +12,21 @@ export function makeObject(): Transform {
     transform(ch, enc, cb) {
       this.push({name: "startObject"})
       this._transform = transformPassThrough
-      return this._transform(ch, enc, cb)
+      this._transform(ch, enc, cb)
     },
     flush(cb) {
       if (this._transform === transformPassThrough) {
         this.push({name: "endObject"})
       }
       cb(null)
-    }
+    },
   })
 
   function transformPassThrough(
     this: Transform,
     ch: unknown,
     enc: BufferEncoding,
-    cb: TransformCallback
+    cb: TransformCallback,
   ): void {
     this.push(ch, enc)
     cb(null)

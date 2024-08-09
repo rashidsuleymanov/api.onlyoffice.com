@@ -1,5 +1,5 @@
-import {equal as eq, is, unreachable as un} from "uvu/assert"
 import {test} from "uvu"
+import {equal as eq, is, unreachable as un} from "uvu/assert"
 import {
   BooleanType,
   Config,
@@ -12,7 +12,7 @@ import {
   PropertyConfig,
   ServerConfig,
   StringType,
-  UndefinedType
+  UndefinedType,
 } from "./main.ts"
 
 test("UndefinedType(): initializes a undefined type", () => {
@@ -225,7 +225,7 @@ test("PropertyConfig.fromJson(): throws an error when initializing a property fr
   const j = '{"type":"unknown"}'
   try {
     const p = PropertyConfig.fromJson(j)
-    un(`Expected an error, got ${p}`)
+    un(`Expected an error, got ${JSON.stringify(p)}`)
   } catch (e) {
     is(e instanceof Error && e.message, "Unknown type: unknown")
   }
@@ -376,7 +376,7 @@ test("DocumentEditorConfig.merge(): throws an error when merging two document ed
   b.config = [q]
   try {
     const c = DocumentEditorConfig.merge(a, b)
-    un(`Expected an error, got ${c}`)
+    un(`Expected an error, got ${JSON.stringify(c)}`)
   } catch (e) {
     is(e instanceof Error && e.message, "Merging of config is not supported")
   }

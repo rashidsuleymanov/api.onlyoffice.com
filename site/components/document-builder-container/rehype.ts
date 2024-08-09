@@ -2,8 +2,8 @@ import {documentBuilder} from "@onlyoffice/document-builder-hast-element"
 import {fileType} from "@onlyoffice/document-builder-utils"
 import {Config} from "@onlyoffice/site-config"
 import {template} from "@onlyoffice/template-hast-element"
-import {toText} from "hast-util-to-text"
 import {type Root} from "hast"
+import {toText} from "hast-util-to-text"
 import {visit} from "unist-util-visit"
 import {documentBuilderContainer} from "./hast.ts"
 
@@ -54,9 +54,9 @@ export function rehypeDocumentBuilderContainer(): Transform {
         },
         editorConfig: {
           customization: {
-            anonymous:{
+            anonymous: {
               request: false,
-              label: "Guest"
+              label: "Guest",
             },
             compactHeader: true,
             compactToolbar: true,

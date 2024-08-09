@@ -1,7 +1,6 @@
 import {Sitemap} from "@onlyoffice/eleventy-sitemap"
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {
-  Page as SPage,
   PageFooter,
   PageFooterCopyright,
   PageFooterLinkContainer,
@@ -11,6 +10,7 @@ import {
   PageHeaderLogo,
   PageHeaderMenu,
   PageHeaderNavToggler,
+  Page as SPage,
   ThemeSwitcher,
   ThemeSwitcherOption,
 } from "@onlyoffice/site-kit"

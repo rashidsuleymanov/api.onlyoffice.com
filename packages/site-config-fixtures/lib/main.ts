@@ -1,17 +1,17 @@
 import {
+  BooleanType,
   type Configurable,
   type DocumentEditorConfigurable,
-  type PlaygroundConfigurable,
-  type PropertyConfigurable,
-  type ServerConfigurable,
-  type TabConfigurable,
   EnumType,
   FunctionType,
   LiteralType,
+  type PlaygroundConfigurable,
   PropertyConfig,
+  type PropertyConfigurable,
+  type ServerConfigurable,
   StringType,
   TabConfig,
-  BooleanType
+  type TabConfigurable,
 } from "@onlyoffice/site-config"
 
 export class ConfigFixture implements Configurable {

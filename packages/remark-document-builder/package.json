@@ -1,7 +1,7 @@
 {
   "name": "@onlyoffice/remark-document-builder",
-  "private": true,
   "type": "module",
+  "private": true,
   "main": "lib/main.ts",
   "scripts": {
     "test:types": "tsc",
@@ -20,7 +20,7 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.0",
     "tsx": "^4.16.5",
-    "unified": "^11.0.4",
+    "unified": "^11.0.5",
     "uvu": "^0.5.6"
   }
 }

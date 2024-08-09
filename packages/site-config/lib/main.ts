@@ -1,5 +1,5 @@
 import {existsSync, readFileSync} from "node:fs"
-import {join} from "node:path"
+import path from "node:path"
 import {type DocEditorConfigEvents, type DocEditorConfigurableOptions} from "@onlyoffice/document-server-types"
 import yaml from "yaml"
 
@@ -32,7 +32,7 @@ export class Config implements Configurable {
     const n = "config"
     const a: Config[] = []
 
-    const f = join(d, `${n}.yml`)
+    const f = path.join(d, `${n}.yml`)
     if (existsSync(f)) {
       const c = readFileSync(f, "utf8")
       const r = Config.fromYaml(c)
@@ -40,7 +40,7 @@ export class Config implements Configurable {
     }
 
     if (m) {
-      const f = join(d, `${n}.${m}.yml`)
+      const f = path.join(d, `${n}.${m}.yml`)
       if (existsSync(f)) {
         const c = readFileSync(f, "utf8")
         const r = Config.fromYaml(c)
@@ -156,7 +156,7 @@ export class ServerConfig implements ServerConfigurable {
 
   static merge(
     a: ServerConfigurable,
-    b: ServerConfigurable
+    b: ServerConfigurable,
   ): ServerConfigurable {
     const s = new ServerConfig()
 
@@ -206,13 +206,13 @@ export class PlaygroundConfig implements PlaygroundConfigurable {
 
   static merge(
     a: PlaygroundConfigurable,
-    b: PlaygroundConfigurable
+    b: PlaygroundConfigurable,
   ): PlaygroundConfigurable {
     const pl = new PlaygroundConfig()
 
     pl.documentEditor = DocumentEditorConfig.merge(
       a.documentEditor,
-      b.documentEditor
+      b.documentEditor,
     )
 
     return pl
@@ -272,7 +272,7 @@ export class DocumentEditorConfig implements DocumentEditorConfigurable {
 
   static merge(
     a: DocumentEditorConfigurable,
-    b: DocumentEditorConfigurable
+    b: DocumentEditorConfigurable,
   ): DocumentEditorConfigurable {
     const de = new DocumentEditorConfig()
 

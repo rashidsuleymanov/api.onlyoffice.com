@@ -1,13 +1,13 @@
 import {type Context, type Data} from "@onlyoffice/eleventy-types"
 import {ServiceDeclaration} from "@onlyoffice/site-kit"
 import {Fragment, type JSX, h} from "preact"
-import {SyntaxHighlight} from "../components/syntax-highlight/syntax-highlight.ts"
 import {Markdown} from "@/internal/markdown.tsx"
 import {TableOfContents} from "@/internal/table-of-contents.tsx"
+import {SyntaxHighlight} from "../components/syntax-highlight/syntax-highlight.ts"
 
 export function data(): Data {
   return {
-    layout: "chapter"
+    layout: "chapter",
   }
 }
 

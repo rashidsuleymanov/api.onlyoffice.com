@@ -1,7 +1,7 @@
-import {mkdir, mkdtemp, rm, rmdir, writeFile} from "node:fs/promises"
 import {createWriteStream, existsSync} from "node:fs"
+import {mkdir, mkdtemp, rm, rmdir, writeFile} from "node:fs/promises"
 import {tmpdir} from "node:os"
-import {join} from "node:path"
+import path from "node:path"
 import process from "node:process"
 import {Readable} from "node:stream"
 import {URL, fileURLToPath} from "node:url"
@@ -12,10 +12,10 @@ import {resource} from "@onlyoffice/library-resource"
 import {declarationBasename, indexBasename, rawURL, readURL, resourceBasename} from "@onlyoffice/resource"
 import {StringWritable} from "@onlyoffice/stream-string"
 import Chain from "stream-chain"
-import StreamArray from "stream-json/streamers/StreamArray.js"
 import Disassembler from "stream-json/Disassembler.js"
 import Parser from "stream-json/Parser.js"
 import Stringer from "stream-json/Stringer.js"
+import StreamArray from "stream-json/streamers/StreamArray.js"
 import pack from "../package.json" with {type: "json"}
 
 const config = [
@@ -26,8 +26,8 @@ const config = [
       owner: "onlyoffice",
       repo: "document-builder-declarations",
       branch: "dist",
-      path: "document-builder/master/document.json"
-    }
+      path: "document-builder/master/document.json",
+    },
   },
   {
     name: "form",
@@ -36,8 +36,8 @@ const config = [
       owner: "onlyoffice",
       repo: "document-builder-declarations",
       branch: "dist",
-      path: "document-builder/master/form.json"
-    }
+      path: "document-builder/master/form.json",
+    },
   },
   {
     name: "presentation",
@@ -46,8 +46,8 @@ const config = [
       owner: "onlyoffice",
       repo: "document-builder-declarations",
       branch: "dist",
-      path: "document-builder/master/presentation.json"
-    }
+      path: "document-builder/master/presentation.json",
+    },
   },
   {
     name: "spreadsheet",
@@ -56,8 +56,8 @@ const config = [
       owner: "onlyoffice",
       repo: "document-builder-declarations",
       branch: "dist",
-      path: "document-builder/master/spreadsheet.json"
-    }
+      path: "document-builder/master/spreadsheet.json",
+    },
   },
 
   {
@@ -67,8 +67,8 @@ const config = [
       owner: "onlyoffice",
       repo: "document-builder-declarations",
       branch: "dist",
-      path: "document-builder-plugin/master/common.json"
-    }
+      path: "document-builder-plugin/master/common.json",
+    },
   },
   {
     name: "plugin-document",
@@ -77,8 +77,8 @@ const config = [
       owner: "onlyoffice",
       repo: "document-builder-declarations",
       branch: "dist",
-      path: "document-builder-plugin/master/document.json"
-    }
+      path: "document-builder-plugin/master/document.json",
+    },
   },
   {
     name: "plugin-form",
@@ -87,8 +87,8 @@ const config = [
       owner: "onlyoffice",
       repo: "document-builder-declarations",
       branch: "dist",
-      path: "document-builder-plugin/master/form.json"
-    }
+      path: "document-builder-plugin/master/form.json",
+    },
   },
   {
     name: "plugin-presentation",
@@ -97,8 +97,8 @@ const config = [
       owner: "onlyoffice",
       repo: "document-builder-declarations",
       branch: "dist",
-      path: "document-builder-plugin/master/presentation.json"
-    }
+      path: "document-builder-plugin/master/presentation.json",
+    },
   },
   {
     name: "plugin-spreadsheet",
@@ -107,9 +107,9 @@ const config = [
       owner: "onlyoffice",
       repo: "document-builder-declarations",
       branch: "dist",
-      path: "document-builder-plugin/master/spreadsheet.json"
-    }
-  }
+      path: "document-builder-plugin/master/spreadsheet.json",
+    },
+  },
 ]
 
 const console = new Console(pack.name, process.stdout, process.stderr)
@@ -145,7 +145,7 @@ async function main(): Promise<void> {
         new Parser(),
         new StreamArray(),
         new FirstIteration(cache),
-        cache.toWritable()
+        cache.toWritable(),
       ])
       c.on("close", res)
       c.on("error", rej)
@@ -157,7 +157,7 @@ async function main(): Promise<void> {
       const c = new Chain([
         cache.toReadable(),
         new SecondIteration(cache),
-        cache.toWritable()
+        cache.toWritable(),
       ])
       c.on("close", res)
       c.on("error", rej)
@@ -169,7 +169,7 @@ async function main(): Promise<void> {
       const c = new Chain([
         cache.toReadable(),
         new ThirdIteration(cache),
-        cache.toWritable()
+        cache.toWritable(),
       ])
       c.on("close", res)
       c.on("error", rej)
@@ -177,27 +177,27 @@ async function main(): Promise<void> {
 
     cache.step()
 
-    const f = join(td, `${cfg.name}.json`)
+    const f = path.join(td, `${cfg.name}.json`)
 
     await new Promise((res, rej) => {
       const c = new Chain([
         Readable.from(cache.current.declarations),
         new Disassembler(),
         new Stringer({makeArray: true}),
-        createWriteStream(f)
+        createWriteStream(f),
       ])
       c.on("close", res)
       c.on("error", rej)
     })
 
     const dn = declarationBasename(cfg.name)
-    const df = join(dd, dn)
+    const df = path.join(dd, dn)
 
     const mn = indexBasename(cfg.name)
-    const mf = join(dd, mn)
+    const mf = path.join(dd, mn)
 
     const rn = resourceBasename(cfg.name)
-    const rf = join(dd, rn)
+    const rf = path.join(dd, rn)
 
     await Promise.all([
       (async () => {
@@ -207,13 +207,13 @@ async function main(): Promise<void> {
       })(),
 
       (async () => {
-        const f = join(td, mn)
+        const f = path.join(td, mn)
         await new Promise((res, rej) => {
           const c = new Chain([
             Readable.from([cache.current.indexes]),
             new Disassembler(),
             new Stringer(),
-            createWriteStream(f)
+            createWriteStream(f),
           ])
           c.on("close", res)
           c.on("error", rej)
@@ -229,7 +229,7 @@ async function main(): Promise<void> {
       (async () => {
         const r = await resource(df, mf)
         await writeFile(rf, r)
-      })()
+      })(),
     ])
 
     await rm(f)
@@ -244,7 +244,7 @@ async function main(): Promise<void> {
 
 function tempDir(): string {
   const n = pack.name.replace("/", "+")
-  return join(tmpdir(), n)
+  return path.join(tmpdir(), n)
 }
 
 function rootDir(): string {
@@ -253,5 +253,5 @@ function rootDir(): string {
 }
 
 function distDir(d: string): string {
-  return join(d, "dist")
+  return path.join(d, "dist")
 }

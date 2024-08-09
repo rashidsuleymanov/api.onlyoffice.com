@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-implied-eval, no-new-func */
+
 // todo: Support for all HTMLSelectElement methods and properties.
 // https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/
 
@@ -17,9 +19,9 @@
 // todo: Support for the disabled state.
 
 import {
-  ComboboxContainerChangedEvent,
   ComboboxContainerChangeEvent,
   type ComboboxContainerChangeEventListener,
+  ComboboxContainerChangedEvent,
   type ComboboxContainerChangedEventListener,
 } from "./events.ts"
 
@@ -110,8 +112,6 @@ export class ComboboxContainer extends HTMLElement {
     case "oncomboboxcontainerchanged":
       this.#changeOncomboboxcontainerchanged(v)
       break
-    default:
-      throw new Error(`Attribute '${n}' is not supported`)
     }
   }
 
@@ -533,7 +533,13 @@ export class ComboboxContainer extends HTMLElement {
     if (!r) {
       return null
     }
-    return r.querySelector('slot[name="after-listbox"]')!
+
+    const e = r.querySelector('slot[name="after-listbox"]')
+    if (!(e instanceof HTMLSlotElement)) {
+      return null
+    }
+
+    return e
   }
 
   #queryLabels(el: HTMLElement | null): NodeList {
@@ -756,12 +762,12 @@ export class ComboboxContainer extends HTMLElement {
 
   #setupState(): void {
     if (this.#internals && isStateSyntaxSupported()) {
-      this.#hasState = this.#hasModernState
-      this.#changeState = this.#changeModernState
+      this.#hasState = this.#hasModernState.bind(this)
+      this.#changeState = this.#changeModernState.bind(this)
       return
     }
-    this.#hasState = this.#hasFallbackState
-    this.#changeState = this.#changeFallbackState
+    this.#hasState = this.#hasFallbackState.bind(this)
+    this.#changeState = this.#changeFallbackState.bind(this)
   }
 
   #listen(): void {
@@ -899,8 +905,6 @@ export class ComboboxContainer extends HTMLElement {
       break
     case "unknown":
       break
-    default:
-      throw new Error(`Action '${ac}' is not supported`)
     }
   }
 
@@ -1225,7 +1229,9 @@ export class ComboboxContainer extends HTMLElement {
       this.#labels.has(ev.target)
   }
 
-  #hasState: (k: string) => boolean = () => false
+  #hasState: (k: string) => boolean = () => {
+    return false
+  }
 
   #hasFallbackState(k: string): boolean {
     const s = this.getAttribute(`state-${k}`)
@@ -1243,7 +1249,7 @@ export class ComboboxContainer extends HTMLElement {
     return t.states.has(k)
   }
 
-  #changeState: (k: string, v: boolean) => void = () => void 0
+  #changeState: (k: string, v: boolean) => void = () => {}
 
   #changeFallbackState(k: string, v: boolean): void {
     if (!v) {
@@ -1276,7 +1282,6 @@ type Action =
   "previous" |
   "previouspage" |
   "shrink" |
-  "shrink" |
   "type" |
   "unknown"
 
@@ -1294,7 +1299,6 @@ function maintainScroll(pe: HTMLElement, te: HTMLElement): void {
   const isBellow = te.offsetTop + te.offsetHeight > pe.scrollTop + pe.offsetHeight
   if (isBellow) {
     pe.scrollTo(0, te.offsetTop - pe.offsetHeight + te.offsetHeight)
-    return
   }
 }
 

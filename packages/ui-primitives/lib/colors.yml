@@ -194,11 +194,11 @@ regular:
       - "#FFC671"
 
     temp-icon:
-      24:
+      "24":
         any:
         - foreground.default
         - temp-base-icon.orange[0]
-      32:
+      "32":
         docs-api:
         - temp-base-icon.gray[4]
         - temp-base-icon.black
@@ -263,7 +263,7 @@ regular:
         - temp-base-icon.orange[3]  # "#FFC671"
         - temp-base-icon.orange[1]  # "#FF7541"
         - temp-base-icon.orange[0]  # "#FF6F3D"
-      48:
+      "48":
         desktop-editors:
         - temp-base-icon.black      # "#333333"
         - temp-base-icon.gray[2]    # "#AAAAAA"
@@ -332,7 +332,7 @@ regular:
         - temp-base-icon.orange[3]  # "#FFC671"
         - temp-base-icon.orange[1]  # "#FF7541"
         - temp-base-icon.orange[0]  # "#FF6F3D"
-      64:
+      "64":
         desktop-editors:
         - temp-base-icon.black      # "#333333"
         - temp-base-icon.gray[2]    # "#AAAAAA"
@@ -597,11 +597,11 @@ regular:
       - "#FFC671"
 
     temp-icon:
-      24:
+      "24":
         any:
         - foreground.default
         - temp-base-icon.orange[0]
-      32:
+      "32":
         docs-api:
         - temp-base-icon.white        # "white"
         - temp-base-icon.black        # "black"
@@ -666,9 +666,7 @@ regular:
         - temp-base-icon.orange[3]    # "#FFC671"
         - temp-base-icon.orange[1]    # "#FF7541"
         - temp-base-icon.orange[0]    # "#FF6F3D"
-        
-        
-      48:
+      "48":
         desktop-editors:
         - temp-base-icon.gray[6]      # "#333333"
         - temp-base-icon.white        # "white"
@@ -737,7 +735,7 @@ regular:
         - temp-base-icon.orange[3]    # "#FFC671"
         - temp-base-icon.orange[1]    # "#FF7541"
         - temp-base-icon.orange[0]    # "#FF6F3D"
-      64:
+      "64":
         desktop-editors:
         - temp-base-icon.gray[6]      # "#333333"
         - temp-base-icon.white        # "white"

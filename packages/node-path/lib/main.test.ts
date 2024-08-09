@@ -1,8 +1,8 @@
 // todo: rename test cases
 
 import path from "node:path"
-import {is} from "uvu/assert"
 import {test} from "uvu"
+import {is} from "uvu/assert"
 import {relative} from "./main.ts"
 
 test("relative() includes a leading dot", () => {

@@ -8,11 +8,11 @@ import {
   CodeListingTab,
   CodeListingTabList,
   CodeListingTabListWrapper,
-  CodeListingTabPanel
+  CodeListingTabPanel,
 } from "./main.tsx"
 
 export default {
-  title: "UI/Code Listing"
+  title: "UI/Code Listing",
 } satisfies Meta
 
 export function Default(): JSX.Element {

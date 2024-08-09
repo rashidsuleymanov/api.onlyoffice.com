@@ -1,9 +1,9 @@
 import {RadiogroupContainer} from "./element.ts"
 import {
-  type GlobalRadiogroupContainerChangedHandler,
   type GlobalRadiogroupContainerChangeHandler,
+  type GlobalRadiogroupContainerChangedHandler,
+  RadiogroupContainerChangeEvent,
   RadiogroupContainerChangedEvent,
-  RadiogroupContainerChangeEvent
 } from "./events.ts"
 
 declare global {

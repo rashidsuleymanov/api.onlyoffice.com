@@ -1,9 +1,9 @@
-import {mkdir, readFile, readdir, rm, writeFile} from "node:fs/promises"
 import {existsSync} from "node:fs"
-import {basename, extname, join} from "node:path"
+import {mkdir, readFile, readdir, rm, writeFile} from "node:fs/promises"
+import path from "node:path"
 import {argv} from "node:process"
 import {URL, fileURLToPath} from "node:url"
-import {default as babel} from "@babel/core"
+import babel from "@babel/core"
 import sade from "sade"
 import {optimize as svgo} from "svgo"
 
@@ -26,35 +26,35 @@ async function build(): Promise<void> {
   const sd = staticDir(rd)
 
   for (const vn of ["poor", "rich"]) {
-    const dv = join(dd, vn)
+    const dv = path.join(dd, vn)
     if (!existsSync(dv)) {
       await mkdir(dv)
     }
 
-    const vd = join(sd, vn)
+    const vd = path.join(sd, vn)
     const ls = await readdir(vd)
 
     for (const sn of ls) {
-      const ds = join(dv, sn)
+      const ds = path.join(dv, sn)
       if (!existsSync(ds)) {
         await mkdir(ds)
       }
 
       const se: string[] = []
 
-      const sd = join(vd, sn)
+      const sd = path.join(vd, sn)
       const lh = await readdir(sd)
 
       for (const hn of lh) {
-        const he = extname(hn)
-        let n = basename(hn, he)
+        const he = path.extname(hn)
+        let n = path.basename(hn, he)
         n = rename(n)
 
-        let f = join(sd, hn)
+        let f = path.join(sd, hn)
         let c = await readFile(f, "utf8")
         c = await transform(n, c)
 
-        f = join(ds, `${n}.tsx`)
+        f = path.join(ds, `${n}.tsx`)
         await writeFile(f, c)
 
         se.push(n)
@@ -65,7 +65,7 @@ async function build(): Promise<void> {
         c += `export {${n}} from "./${sn}/${n}.tsx";\n`
       }
 
-      const f = join(dv, `${sn}.tsx`)
+      const f = path.join(dv, `${sn}.tsx`)
       await writeFile(f, c)
     }
   }
@@ -97,11 +97,11 @@ async function transform(n: string, c: string): Promise<string> {
         params: {
           attributes: [{
             // "fill": "currentColor",
-            "aria-hidden": "true"
-          }]
-        }
-      }
-    ]
+            "aria-hidden": "true",
+          }],
+        },
+      },
+    ],
   })
 
   c = `export function ${n}({title, titleId, desc, descId, ...props}) {
@@ -112,8 +112,8 @@ return ${s.data.replace(">", "aria-labelledby={titleId} aria-describedby={descId
     plugins: [["@babel/plugin-transform-react-jsx", {
       pragma: "h",
       pragmaFrag: "Fragment",
-      useBuiltIns: true
-    }]]
+      useBuiltIns: true,
+    }]],
   })
   if (!b || !b.code) {
     throw new Error("Failed to transform")
@@ -133,11 +133,11 @@ function rootDir(): string {
 }
 
 function distDir(d: string): string {
-  return join(d, "dist")
+  return path.join(d, "dist")
 }
 
 function staticDir(d: string): string {
-  return join(d, "static")
+  return path.join(d, "static")
 }
 
 main()

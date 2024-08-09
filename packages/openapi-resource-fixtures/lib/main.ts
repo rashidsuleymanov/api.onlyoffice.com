@@ -1,6 +1,6 @@
-import {mkdir, readFile, rm} from "node:fs/promises"
 import {createWriteStream, existsSync} from "node:fs"
-import {join} from "node:path"
+import {mkdir, readFile, rm} from "node:fs/promises"
+import path from "node:path"
 import {URL, fileURLToPath} from "node:url"
 import {Console} from "@onlyoffice/console"
 import {Cache} from "@onlyoffice/openapi-declaration"
@@ -33,19 +33,19 @@ async function main(): Promise<void> {
   const ch = new Cache()
 
   const dn = declarationBasename("resource")
-  const df = join(dd, dn)
+  const df = path.join(dd, dn)
   const dw = createWriteStream(df)
   await writeDeclaration(ch, rw, dw)
   dw.close()
 
   const cn = componentBasename("resource")
-  const cf = join(dd, cn)
+  const cf = path.join(dd, cn)
   const cw = createWriteStream(cf)
   await writeComponent(ch, rw, cw)
   cw.close()
 
   const en = resourceBasename("resource")
-  const ef = join(dd, en)
+  const ef = path.join(dd, en)
   const ew = createWriteStream(ef)
   await writeEntrypoint(ew, df, cf)
   ew.close()
@@ -59,15 +59,15 @@ function rootDir(): string {
 }
 
 function distDir(d: string): string {
-  return join(d, "dist")
+  return path.join(d, "dist")
 }
 
 function fixturesDir(d: string): string {
-  return join(d, "fixtures")
+  return path.join(d, "fixtures")
 }
 
 function resourceFile(d: string): string {
-  return join(d, "resource.yml")
+  return path.join(d, "resource.yml")
 }
 
 await main()

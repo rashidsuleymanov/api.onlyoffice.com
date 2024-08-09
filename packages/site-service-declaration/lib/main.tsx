@@ -1,5 +1,5 @@
-import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {Callback} from "@onlyoffice/preact-callback"
+import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import type * as Service from "@onlyoffice/service-declaration"
 import {type Resource} from "@onlyoffice/service-resource"
 import {
@@ -10,15 +10,15 @@ import {
   CodeListingTab,
   CodeListingTabList,
   CodeListingTabListWrapper,
-  CodeListingTabPanel
+  CodeListingTabPanel,
 } from "@onlyoffice/ui-kit"
-import {useContext} from "preact/hooks"
 import {Fragment, type JSX, createContext, h} from "preact"
+import {useContext} from "preact/hooks"
 
 interface ContextProperties {
   stack: string[]
-  onHighlightSyntax(p: ChildrenIncludable & {syntax: string}): any
-  onRenderDescription(p: ChildrenIncludable): any
+  onHighlightSyntax(this: void, p: ChildrenIncludable & {syntax: string}): JSX.Element
+  onRenderDescription(this: void, p: ChildrenIncludable): JSX.Element
   onRetrieve: Resource["resolve"]
 }
 
@@ -32,7 +32,7 @@ const Context = createContext<ContextProperties>({
   },
   onRetrieve() {
     throw new Error("not implemented")
-  }
+  },
 })
 
 export interface ServiceDeclarationProperties {
@@ -43,7 +43,7 @@ export interface ServiceDeclarationProperties {
 }
 
 export function ServiceDeclaration(
-  {declaration, ...props}: ServiceDeclarationProperties
+  {declaration, ...props}: ServiceDeclarationProperties,
 ): JSX.Element {
   return <Context.Provider value={{stack: [], ...props}}>
     <Declaration declaration={declaration} />

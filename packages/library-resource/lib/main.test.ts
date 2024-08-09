@@ -1,11 +1,11 @@
 import {mkdtemp, rm, writeFile} from "node:fs/promises"
 import {createRequire} from "node:module"
 import {tmpdir} from "node:os"
-import {join} from "node:path"
-import {equal as eq, is} from "uvu/assert"
+import path from "node:path"
 import {suite} from "uvu"
-import {type Resource, resource} from "./main.ts"
+import {equal as eq, is} from "uvu/assert"
 import pack from "../package.json" with {type: "json"}
+import {type Resource, resource} from "./main.ts"
 
 const require = createRequire(import.meta.url)
 
@@ -24,14 +24,14 @@ test.after(async (ctx) => {
 })
 
 test("generates resource with empty data", async (ctx) => {
-  const df = join(ctx.td, "d0.json")
+  const df = path.join(ctx.td, "d0.json")
   await writeFile(df, "[]")
 
-  const mf = join(ctx.td, "m0.json")
+  const mf = path.join(ctx.td, "m0.json")
   await writeFile(mf, "{}")
 
   const rc = await resource(df, mf)
-  const rf = join(ctx.td, "r0.ts")
+  const rf = path.join(ctx.td, "r0.ts")
   await writeFile(rf, rc)
 
   const r: Resource = require(rf)
@@ -44,14 +44,14 @@ test("generates resource with empty data", async (ctx) => {
 })
 
 test("generates resource with data", async (ctx) => {
-  const df = join(ctx.td, "d1.json")
+  const df = path.join(ctx.td, "d1.json")
   await writeFile(df, '[{"id": "1", "name": "a"}]')
 
-  const mf = join(ctx.td, "m1.json")
+  const mf = path.join(ctx.td, "m1.json")
   await writeFile(mf, '{"1": 0}')
 
   const rc = await resource(df, mf)
-  const rf = join(ctx.td, "r1.ts")
+  const rf = path.join(ctx.td, "r1.ts")
   await writeFile(rf, rc)
 
   const r: Resource = require(rf)
@@ -67,5 +67,5 @@ test.run()
 
 function tempDir(): string {
   const n = pack.name.replace("/", "+")
-  return join(tmpdir(), n)
+  return path.join(tmpdir(), n)
 }

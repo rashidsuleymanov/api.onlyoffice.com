@@ -1,7 +1,7 @@
 {
   "name": "@onlyoffice/document-builder-resource",
-  "private": true,
   "type": "module",
+  "private": true,
   "exports": {
     "./*": "./dist/*"
   },

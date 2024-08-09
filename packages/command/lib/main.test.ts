@@ -1,5 +1,5 @@
-import {is} from "uvu/assert"
 import {test} from "uvu"
+import {is} from "uvu/assert"
 import {command, hasCommand} from "./main.ts"
 
 test("returns empty stdout and stderr if options are empty", async () => {

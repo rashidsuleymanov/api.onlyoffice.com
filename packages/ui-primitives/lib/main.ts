@@ -1,6 +1,6 @@
-import {mkdir, readFile, rm, writeFile} from "node:fs/promises"
 import {existsSync} from "node:fs"
-import {join} from "node:path"
+import {mkdir, readFile, rm, writeFile} from "node:fs/promises"
+import path from "node:path"
 import {argv} from "node:process"
 import {URL, fileURLToPath} from "node:url"
 import sade from "sade"
@@ -57,23 +57,23 @@ function rootDir(): string {
 }
 
 function libDir(d: string): string {
-  return join(d, "lib")
+  return path.join(d, "lib")
 }
 
 function colorsFile(d: string): string {
-  return join(d, "colors.yml")
+  return path.join(d, "colors.yml")
 }
 
 function stylesFile(d: string): string {
-  return join(d, "main.css")
+  return path.join(d, "main.css")
 }
 
 function distDir(d: string): string {
-  return join(d, "dist")
+  return path.join(d, "dist")
 }
 
 function outputFile(d: string): string {
-  return join(d, "main.css")
+  return path.join(d, "main.css")
 }
 
 main()

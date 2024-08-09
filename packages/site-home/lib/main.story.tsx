@@ -18,7 +18,14 @@ export function Default(): JSX.Element {
     <HomePart>
       <HomeIn>
         <h2><a href="/">DocSpace</a></h2>
-        <p>{"In this section, you will learn how to integrate ONLYOFFICE DocSpace into your own application and interact with its backend using the DocSpace API Backend. You will also find the information on how to embed DocSpace using JavaScript SDK, create your own plugins with our Plugins SDK, and host a portal on your own servers using our methods for hosting providers."}</p>
+        <p>
+          In this section, you will learn how to integrate ONLYOFFICE{" "}
+          DocSpace into your own application and interact with its backend{" "}
+          using the DocSpace API Backend. You will also find the{" "}
+          information on how to embed DocSpace using JavaScript SDK, create{" "}
+          your own plugins with our Plugins SDK, and host a portal on your{" "}
+          own servers using our methods for hosting providers.
+        </p>
         <a href="/">More</a>
       </HomeIn>
       <HomeLinks>
@@ -48,7 +55,7 @@ export function Default(): JSX.Element {
         </HomeLink>
       </HomeLinks>
       <HomePreview>
-        <a href="/"></a>
+        <a href="/" />
         <picture>
           <img src="/docspace-preview.svg" alt="" loading="lazy" decoding="async" height="430px" />
         </picture>
@@ -60,7 +67,14 @@ export function Default(): JSX.Element {
     <HomePart variant="reverse">
       <HomeIn>
         <h2><a href="/">Docs</a></h2>
-        <p>{"In this section, you will learn how to integrate ONLYOFFICE DocSpace into your own application and interact with its backend using the DocSpace API Backend. You will also find the information on how to embed DocSpace using JavaScript SDK, create your own plugins with our Plugins SDK, and host a portal on your own servers using our methods for hosting providers."}</p>
+        <p>
+          In this section, you will learn how to integrate ONLYOFFICE{" "}
+          DocSpace into your own application and interact with its backend{" "}
+          using the DocSpace API Backend. You will also find the{" "}
+          information on how to embed DocSpace using JavaScript SDK, create{" "}
+          your own plugins with our Plugins SDK, and host a portal on your{" "}
+          own servers using our methods for hosting providers.
+        </p>
         <a href="/">More</a>
       </HomeIn>
       <HomeLinks>
@@ -82,7 +96,7 @@ export function Default(): JSX.Element {
         </HomeLink>
       </HomeLinks>
       <HomePreview>
-        <a href="/"></a>
+        <a href="/" />
         <picture>
           <img src="/docs-preview.png" alt="" loading="lazy" decoding="async" height="540px" />
         </picture>
@@ -94,7 +108,14 @@ export function Default(): JSX.Element {
     <HomePart>
       <HomeIn>
         <h2><a href="/">Workspace</a></h2>
-        <p>{"In this section, you will learn how to integrate ONLYOFFICE DocSpace into your own application and interact with its backend using the DocSpace API Backend. You will also find the information on how to embed DocSpace using JavaScript SDK, create your own plugins with our Plugins SDK, and host a portal on your own servers using our methods for hosting providers."}</p>
+        <p>
+          In this section, you will learn how to integrate ONLYOFFICE{" "}
+          DocSpace into your own application and interact with its backend{" "}
+          using the DocSpace API Backend. You will also find the{" "}
+          information on how to embed DocSpace using JavaScript SDK, create{" "}
+          your own plugins with our Plugins SDK, and host a portal on your{" "}
+          own servers using our methods for hosting providers.
+        </p>
         <a href="/">More</a>
       </HomeIn>
       <HomeLinks>
@@ -108,7 +129,7 @@ export function Default(): JSX.Element {
         </HomeLink>
       </HomeLinks>
       <HomePreview>
-        <a href="/"></a>
+        <a href="/" />
         <picture>
           <img src="/workspace-preview.png" alt="" loading="lazy" decoding="async" height="500px" />
         </picture>

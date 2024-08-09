@@ -1,10 +1,10 @@
 import path from "node:path"
 import {isBuild} from "@onlyoffice/eleventy-env"
 import {EleventyEsbuild, type EleventyEsbuildOptions} from "@onlyoffice/eleventy-esbuild"
-import {Config} from "@onlyoffice/site-config"
 import {useSuspense} from "@onlyoffice/preact-suspense"
-import {type HTMLAttributes} from "preact/compat"
+import {Config} from "@onlyoffice/site-config"
 import {type JSX, h} from "preact"
+import {type HTMLAttributes} from "preact/compat"
 
 export interface ScriptProperties extends HTMLAttributes<HTMLScriptElement> {
   inline?: boolean
@@ -20,7 +20,7 @@ export function Script({...p}: ScriptProperties): JSX.Element {
     throw new Error("The 'src' attribute is required, but missing.")
   }
   if (typeof f !== "string") {
-    throw new Error("The 'src' attribute must be a string.")
+    throw new TypeError("The 'src' attribute must be a string.")
   }
   if (path.isAbsolute(f)) {
     f = decodeURIComponent(`.${f}`)

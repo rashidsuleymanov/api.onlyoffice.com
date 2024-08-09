@@ -1,12 +1,12 @@
-import {equal as eq, is} from "uvu/assert"
 import {test} from "uvu"
+import {equal as eq, is} from "uvu/assert"
 import {
   decoratorToken,
   identifierToken,
   keywordToken,
   referenceToken,
   textToken,
-  tokenNode
+  tokenNode,
 } from "./main.ts"
 
 test("creates a token node with correct order of keys", () => {

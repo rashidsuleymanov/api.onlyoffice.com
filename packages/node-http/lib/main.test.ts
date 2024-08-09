@@ -1,6 +1,6 @@
 import {createServer} from "node:http"
-import {is} from "uvu/assert"
 import {suite} from "uvu"
+import {is, unreachable as un} from "uvu/assert"
 import {body} from "./main.ts"
 
 interface Context {
@@ -17,10 +17,16 @@ test("reads the full body of a request", async (ctx) => {
   const [u, s, t] = setup()
   ctx.t = t
 
-  s.on("request", async (req, res) => {
-    const b = await body(req)
-    is(b, "hi")
-    res.end()
+  s.on("request", (req, res) => {
+    body(req)
+      .then((b) => {
+        is(b, "hi")
+        res.end()
+      })
+      .catch((e) => {
+        un(e)
+        res.end()
+      })
   })
 
   const r = await fetch(u, {method: "POST", body: "hi"})

@@ -1,10 +1,10 @@
 import {Sitemap} from "@onlyoffice/eleventy-sitemap"
 import {
-  Part as SPart,
   PartChapter,
   PartChapters,
   PartHelp,
   PartHero,
+  Part as SPart,
 } from "@onlyoffice/site-kit"
 import {SrOnly} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"

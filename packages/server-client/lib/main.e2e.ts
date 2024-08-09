@@ -10,8 +10,8 @@ it("signs a document editor config", async () => {
       fileType: "docx",
       key: "",
       title: "",
-      url: ""
-    }
+      url: "",
+    },
   })
   is(r.documentType, "word")
   is(typeof r.token, "string")

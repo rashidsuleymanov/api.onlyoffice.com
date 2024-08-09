@@ -3,8 +3,8 @@
 import {setTimeout} from "node:timers/promises"
 import {type JSX, h} from "preact"
 import {renderToStringAsync as render} from "preact-render-to-string"
-import {is} from "uvu/assert"
 import {test} from "uvu"
+import {is} from "uvu/assert"
 import {createSuspense, useSuspense} from "./main.tsx"
 
 test("", async () => {

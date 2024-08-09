@@ -1,8 +1,8 @@
 import {body} from "@onlyoffice/node-http"
-import {equal as eq, is, unreachable as un} from "uvu/assert"
 import {suite} from "uvu"
+import {equal as eq, is, unreachable as un} from "uvu/assert"
+import {Client, ResponseError} from "./client.ts"
 import {DocumentEditorService} from "./document-editor.ts"
-import {ErrorResponse, Client} from "./client.ts"
 import {type Teardown, setup} from "./shared.ts"
 
 interface Context {
@@ -18,17 +18,17 @@ test.after.each((ctx) => {
 test("creates an empty error response", () => {
   const req = new Request("http://localhost/")
   const res = new Response()
-  const e = new ErrorResponse(req, res, "")
+  const e = new ResponseError(req, res, "")
   eq(e.request, req)
   eq(e.response, res)
-  eq(e.name, "ErrorResponse")
+  eq(e.name, "ResponseError")
   eq(e.message, "GET http://localhost/: 200 ")
 })
 
 test("creates an error response with a message", () => {
   const req = new Request("http://localhost/")
   const res = new Response()
-  const e = new ErrorResponse(req, res, "hi")
+  const e = new ResponseError(req, res, "hi")
   eq(e.message, "GET http://localhost/: 200 hi")
 })
 
@@ -36,9 +36,9 @@ test("allows to throw an error response", () => {
   const req = new Request("http://localhost/")
   const res = new Response()
   try {
-    throw new ErrorResponse(req, res, "hi")
+    throw new ResponseError(req, res, "hi")
   } catch (e) {
-    eq(e instanceof ErrorResponse && e.message, "GET http://localhost/: 200 hi")
+    eq(e instanceof ResponseError && e.message, "GET http://localhost/: 200 hi")
   }
 })
 
@@ -128,7 +128,7 @@ test("does not throw an error when the response is JSON", () => {
     try {
       res = new Response('{"a":1}', {
         headers: {"Content-Type": "application/json"},
-        status: i
+        status: i,
       })
     } catch (e) {
       if (
@@ -158,7 +158,7 @@ test("throws an error when the response is not 2xx", () => {
   const req = new Request("http://localhost/")
   const res = new Response("", {
     headers: {"Content-Type": "application/json"},
-    status: 400
+    status: 400,
   })
   try {
     Client.check(req, res)
@@ -173,8 +173,7 @@ test("makes a fetch request", async (ctx) => {
   ctx.t = t
 
   s.on("request", (req, res) => {
-    // eslint-disable-next-line dot-notation
-    is(req.headers["accept"], "application/json")
+    is(req.headers.accept, "application/json")
     is(req.headers["content-type"], undefined)
     is(req.method, "GET")
     is(req.url, "/")
@@ -238,16 +237,17 @@ test("makes a fetch request with a body", async (ctx) => {
   const [c, s, t] = setup()
   ctx.t = t
 
-  s.on("request", async (req, res) => {
+  s.on("request", (req, res) => {
     is(req.headers["content-type"], "application/json")
-
-    const b = await body(req)
-    is(b, '{"a":1}')
-
-    res.statusCode = 200
-    res.setHeader("Content-Type", "application/json")
-    res.write("{}")
-    res.end()
+    body(req)
+      .then((b) => {
+        is(b, '{"a":1}')
+        res.statusCode = 200
+        res.setHeader("Content-Type", "application/json")
+        res.write("{}")
+        res.end()
+      })
+      .catch(un)
   })
 
   const u = c.url("")
@@ -317,7 +317,7 @@ test("throws an error when the response is not json", async (ctx) => {
   const req = c.request("GET", u)
   try {
     const [_, res] = await c.fetch(req)
-    un(`Expected an error, but got '${res}'`)
+    un(`Expected an error, but got '${res.status}'`)
   } catch (e) {
     is(e instanceof Error && e.message, `GET ${u}: 200 Expected JSON response, but got 'text/plain'`)
   }
@@ -338,7 +338,7 @@ test("throws an error when the response is not 2xx", async (ctx) => {
   const req = c.request("GET", u)
   try {
     const [_, res] = await c.fetch(req)
-    un(`Expected an error, but got '${res}'`)
+    un(`Expected an error, but got '${res.status}'`)
   } catch (e) {
     is(e instanceof Error && e.message, `GET ${u}: 400 Unknown server error`)
   }

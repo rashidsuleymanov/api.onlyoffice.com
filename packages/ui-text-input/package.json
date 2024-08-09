@@ -1,8 +1,7 @@
 {
   "name": "@onlyoffice/ui-text-input",
-  "private": true,
   "type": "module",
-  "main": "lib/main.tsx",
+  "private": true,
   "exports": {
     "./client/define.ts": "./lib/client/define.ts",
     "./client/element.ts": "./lib/client/element.ts",
@@ -10,6 +9,7 @@
     "./main.css": "./lib/main.css",
     ".": "./lib/main.tsx"
   },
+  "main": "lib/main.tsx",
   "scripts": {
     "test:types": "tsc",
     "test": "pnpm test:types"

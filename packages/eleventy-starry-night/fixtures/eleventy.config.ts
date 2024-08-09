@@ -1,3 +1,4 @@
+/* eslint-disable import/no-import-module-exports */
 import {type UserConfig} from "@onlyoffice/eleventy-types"
 import {eleventyStarryNight} from "../lib/main.ts"
 

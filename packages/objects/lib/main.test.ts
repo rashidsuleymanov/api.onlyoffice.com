@@ -1,5 +1,5 @@
-import {is} from "uvu/assert"
 import {test} from "uvu"
+import {is} from "uvu/assert"
 import {isEmpty} from "./main.ts"
 
 test("isEmpty(): returns false for a string", () => {
@@ -19,7 +19,7 @@ test("isEmpty(): returns false for an arrow function", () => {
 
 test("isEmpty(): returns false for a function", () => {
   // eslint-disable-next-line prefer-arrow-callback
-  const a = isEmpty(function () {})
+  const a = isEmpty(function _() {})
   is(a, false)
 })
 

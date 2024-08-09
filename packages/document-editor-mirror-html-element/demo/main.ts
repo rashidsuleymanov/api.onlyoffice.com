@@ -1,9 +1,9 @@
 import {Buffer} from "node:buffer"
 import {createHmac} from "node:crypto"
-import {stat} from "node:fs/promises"
 import {createReadStream} from "node:fs"
+import {stat} from "node:fs/promises"
 import {type IncomingMessage, type ServerResponse, createServer} from "node:http"
-import {join} from "node:path"
+import path from "node:path"
 import {URL, fileURLToPath} from "node:url"
 import {type DocumentEditorConfig} from "@onlyoffice/document-editor-html-element"
 import {uniqueString} from "@onlyoffice/strings"
@@ -13,13 +13,13 @@ const config = {
   port: 4000,
   internal: {
     hostname: "host.docker.internal",
-    port: 4000
+    port: 4000,
   },
   jwt: {
     algorithm: "HS256",
     header: "Authorization",
-    secret: "your-256-bit-secret"
-  }
+    secret: "your-256-bit-secret",
+  },
 }
 
 main()
@@ -27,11 +27,9 @@ main()
 function main(): void {
   const s = createServer()
 
-  s.on("request", async (req, res) => {
+  s.on("request", (req, res) => {
     console.log(`${req.method} ${req.url}`)
-    try {
-      await route(req, res)
-    } catch (e) {
+    route(req, res).catch((e) => {
       let m = "Internal Server Error"
       if (e instanceof Error) {
         m = e.message
@@ -40,7 +38,7 @@ function main(): void {
       res.statusCode = 500
       res.write(m)
       res.end()
-    }
+    })
   })
 
   s.listen(config.port, config.hostname, () => {
@@ -105,8 +103,8 @@ async function route(req: IncomingMessage, res: ServerResponse): Promise<void> {
     }
 
     const cd = currentDir()
-    const sd = join(cd, "samples")
-    const sf = join(sd, `sample.${fileType}`)
+    const sd = path.join(cd, "samples")
+    const sf = path.join(sd, `sample.${fileType}`)
     const st = contentType(fileType)
     const ss = await stat(sf)
     res.statusCode = 200

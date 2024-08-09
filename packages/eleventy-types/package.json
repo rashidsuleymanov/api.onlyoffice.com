@@ -1,14 +1,14 @@
 {
   "name": "@onlyoffice/eleventy-types",
-  "private": true,
   "type": "module",
-  "main": "lib/main.ts",
+  "private": true,
   "exports": {
     ".": "./lib/main.ts",
     "./reference": {
       "types": "./lib/reference.d.ts"
     }
   },
+  "main": "lib/main.ts",
   "scripts": {
     "test:types": "tsc",
     "test": "pnpm test:types"
