@@ -1,6 +1,6 @@
 import {StringWritable} from "@onlyoffice/stream-string"
-import {is, match} from "uvu/assert"
 import {test} from "uvu"
+import {is, match} from "uvu/assert"
 import {Console} from "./main.ts"
 
 test("logs to stdout", () => {

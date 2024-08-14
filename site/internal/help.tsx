@@ -95,9 +95,18 @@ export function Help(p: HelpProperties): JSX.Element {
     <GithubIcon height={24} width={24} />
     <h2>Get Help</h2>
     <ul>
-      <li>If you have any questions about ONLYOFFICE {d.title}, try the <Link file={f} href={d.faq}>FAQ</Link> section first.</li>
-      <li>You can request a feature or report a bug by posting an issue on <Link file={f} href={d.issues}>GitHub</Link> .</li>
-      <li>You can also ask our developers on <Link file={f} href={d.forum}>ONLYOFFICE forum</Link> (registration required).</li>
+      <li>
+        If you have any questions about ONLYOFFICE {d.title}, try the{" "}
+        <Link file={f} href={d.faq}>FAQ</Link> section first.
+      </li>
+      <li>
+        You can request a feature or report a bug by posting an issue on{" "}
+        <Link file={f} href={d.issues}>GitHub</Link>.
+      </li>
+      <li>
+        You can also ask our developers on{" "}
+        <Link file={f} href={d.forum}>ONLYOFFICE forum</Link> (registration required).
+      </li>
     </ul>
   </SHelp>
 }

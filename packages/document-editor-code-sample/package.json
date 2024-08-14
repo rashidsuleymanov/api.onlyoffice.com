@@ -1,7 +1,7 @@
 {
   "name": "@onlyoffice/document-editor-code-sample",
-  "private": true,
   "type": "module",
+  "private": true,
   "main": "lib/main.ts",
   "scripts": {
     "playwright": "cd node_modules/@web/test-runner-playwright/node_modules/.bin && ./playwright",

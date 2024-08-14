@@ -8,16 +8,16 @@ import {
   SearchField,
   SearchOutput,
   SearchPlaceholder,
-  SearchTemplate
+  SearchTemplate,
 } from "@onlyoffice/site-kit"
 import {Content} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
-import {ChapterNavigation, Breadcrumb} from "../../internal/chapter.tsx"
+import {Breadcrumb, ChapterNavigation} from "../../internal/chapter.tsx"
 
 export function data(): Data {
   return {
     layout: "page",
-    eleventyExcludeFromCollections: true
+    eleventyExcludeFromCollections: true,
   }
 }
 
@@ -30,8 +30,8 @@ export function render({content, ...ctx}: Context): JSX.Element {
         <SearchClear label="Clear" />
         <SearchTemplate>
           <li>
-            <p><a data-search-container-link></a></p>
-            <p data-search-container-matches></p>
+            <p><a data-search-container-link /></p>
+            <p data-search-container-matches />
           </li>
         </SearchTemplate>
       </SearchContainer>
@@ -41,8 +41,8 @@ export function render({content, ...ctx}: Context): JSX.Element {
       <Breadcrumb url={ctx.page.url} />
       <SearchOutput hidden={false}>
         <Content>
-          <h1 aria-live="polite"><span data-search-container-counter></span> Results</h1>
-          <ol data-search-container-results></ol>
+          <h1 aria-live="polite"><span data-search-container-counter /> Results</h1>
+          <ol data-search-container-results />
         </Content>
       </SearchOutput>
     </ChapterContent>

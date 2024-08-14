@@ -2,9 +2,7 @@ import Color from "color"
 import {getProperty} from "dot-prop"
 import yaml from "yaml"
 
-export interface InputColors {
-  [k: string]: InputTheme
-}
+export type InputColors = Record<string, InputTheme>
 
 export class Colors {
   [k: string]: Theme
@@ -41,9 +39,7 @@ export class Colors {
   }
 }
 
-export interface InputTheme {
-  [k: string]: InputVariant
-}
+export type InputTheme = Record<string, InputVariant>
 
 export class Theme {
   [k: string]: Variant
@@ -87,9 +83,7 @@ export class Theme {
   }
 }
 
-export interface InputVariant {
-  [k: string]: InputComponent
-}
+export type InputVariant = Record<string, InputComponent>
 
 export class Variant {
   [k: string]: Component
@@ -187,7 +181,7 @@ export class Component {
         if (s.includes(" ")) {
           return s
         }
-        const h = Color(s)
+        const h = new Color(s)
         return h.hexa().toString()
       } catch {
         const p = getProperty(v, s)

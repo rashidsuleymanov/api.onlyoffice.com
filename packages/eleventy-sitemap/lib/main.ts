@@ -1,5 +1,5 @@
 import {randomUUID} from "node:crypto"
-import {extname} from "node:path"
+import path from "node:path"
 import {type Data, type UserConfig} from "@onlyoffice/eleventy-types"
 import {isEmpty} from "@onlyoffice/objects"
 
@@ -159,7 +159,7 @@ export function eleventySitemap(uc: UserConfig): void {
     const s = new Sitemap()
 
     for (const te of ts) {
-      const n = extname(te.outputPath)
+      const n = path.extname(te.outputPath)
       if (n !== ".html") {
         continue
       }

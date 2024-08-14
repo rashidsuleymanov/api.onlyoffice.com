@@ -53,7 +53,7 @@ export function classDeclaration(d: DeclarationNode): ClassDeclaration {
     instanceMethods: undefined,
     instanceProperties: undefined,
     typeMethods: undefined,
-    typeProperties: undefined
+    typeProperties: undefined,
   }
 }
 
@@ -66,7 +66,7 @@ export function constructDeclaration(f: FunctionType, d: DeclarationNode): Const
   return {
     ...d,
     kind: "constructor",
-    type: f
+    type: f,
   }
 }
 
@@ -79,7 +79,7 @@ export function eventDeclaration(f: FunctionType, d: DeclarationNode): EventDecl
   return {
     ...d,
     kind: "event",
-    type: f
+    type: f,
   }
 }
 
@@ -94,7 +94,7 @@ export function methodDeclaration(f: FunctionType, d: DeclarationNode): MethodDe
     ...d,
     kind: "method",
     scope: "instance",
-    type: f
+    type: f,
   }
 }
 
@@ -109,7 +109,7 @@ export function propertyDeclaration(v: Value, d: DeclarationNode): PropertyDecla
     ...d,
     kind: "property",
     scope: "instance",
-    ...v
+    ...v,
   }
 }
 
@@ -122,7 +122,7 @@ export function typeDeclaration(t: Type, d: DeclarationNode): TypeDeclaration {
   return {
     ...d,
     kind: "type",
-    type: t
+    type: t,
   }
 }
 
@@ -156,7 +156,7 @@ export function declarationNode(): DeclarationNode {
     examples: undefined,
     overloads: undefined,
     overloadsBy: undefined,
-    tryIt: undefined
+    tryIt: undefined,
   }
 }
 
@@ -174,7 +174,7 @@ export function value(t: Type): Value {
     signature: undefined,
     description: undefined,
     default: undefined,
-    type: t
+    type: t,
   }
 }
 
@@ -234,7 +234,7 @@ export interface LiteralType extends TypeNode {
   value: unknown
 }
 
-export function literalType(t: TypeNode, value: unknown): LiteralType {
+export function literalType(t: TypeNode, value?: unknown): LiteralType {
   return {...t, type: "literal", value}
 }
 

@@ -1,7 +1,7 @@
 {
   "name": "@onlyoffice/store-demo",
-  "private": true,
   "type": "module",
+  "private": true,
   "main": "lib/main.ts",
   "bin": "bin/store-demo.sh",
   "scripts": {

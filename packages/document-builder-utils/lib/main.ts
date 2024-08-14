@@ -10,6 +10,7 @@ export function fileType(c: string): string {
   }
 
   try {
+    // eslint-disable-next-line @typescript-eslint/no-implied-eval, no-new-func
     const f = new Function("builder", c)
     f(b)
   } catch {
@@ -23,6 +24,6 @@ export function builder(): DocumentBuilder {
   return {
     CloseFile: () => {},
     CreateFile: () => {},
-    SaveFile: () => {}
+    SaveFile: () => {},
   }
 }

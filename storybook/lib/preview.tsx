@@ -1,9 +1,11 @@
-import "@onlyoffice/ui-kit/client.ts"
+/* eslint-disable import/no-unassigned-import */
+
 import "@onlyoffice/site-kit/client.ts"
-import "./preview.css"
+import "@onlyoffice/ui-kit/client.ts"
 import {type Preview} from "@storybook/preact"
-import {useEffect} from "preact/hooks"
 import {h} from "preact"
+import {useEffect} from "preact/hooks"
+import "./preview.css"
 
 export default {
   globalTypes: {
@@ -18,9 +20,9 @@ export default {
         items: [
           {title: "Regular Auto", value: "regular-auto"},
           {title: "Regular Light", value: "regular-light"},
-          {title: "Regular Dark", value: "regular-dark"}
-        ]
-      }
+          {title: "Regular Dark", value: "regular-dark"},
+        ],
+      },
     },
     paddings: {
       name: "Paddings",
@@ -34,10 +36,10 @@ export default {
           {title: "None", value: "0px"},
           {title: "Small", value: "1rem"},
           {title: "Medium", value: "2rem"},
-          {title: "Large", value: "4rem"}
-        ]
-      }
-    }
+          {title: "Large", value: "4rem"},
+        ],
+      },
+    },
   },
   decorators: [
     (Story, ctx) => {
@@ -52,6 +54,6 @@ export default {
       }, [theme])
 
       return <Story />
-    }
-  ]
+    },
+  ],
 } satisfies Preview

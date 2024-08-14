@@ -3,8 +3,8 @@ declare global {
     namespace JSX {
       interface IntrinsicElements {}
 
-      type JSXBase = JSX.IntrinsicElements extends {span: unknown}
-        ? JSX.IntrinsicElements
+      type JSXBase = IntrinsicElements extends {span: unknown}
+        ? IntrinsicElements
         : Record<string, Record<string, unknown>>
     }
   }

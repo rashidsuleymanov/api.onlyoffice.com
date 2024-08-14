@@ -10,8 +10,8 @@ export default {
   tags: ["!dev"],
 } satisfies Meta
 
-export function Default(p: ChildrenIncludable): JSX.Element {
-  return <div></div>
+export function Default(_: ChildrenIncludable): JSX.Element {
+  return <div />
   // return <Playground>
   //   <PlaygroundBefore>
   //     <Content>
@@ -25,6 +25,6 @@ export function Default(p: ChildrenIncludable): JSX.Element {
 }
 
 export function WithDocumentEditor(): JSX.Element {
-  return <div></div>
+  return <div />
   // return <Default><DocumentEditorPlaygroundStory /></Default>
 }

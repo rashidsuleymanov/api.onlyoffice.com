@@ -1,8 +1,10 @@
 import type * as Tokenizer from "@onlyoffice/declaration-tokenizer"
+// eslint-disable-next-line no-duplicate-imports
 import * as tokenizer from "@onlyoffice/declaration-tokenizer"
-import {equal as eq} from "uvu/assert"
 import {test} from "uvu"
+import {equal as eq} from "uvu/assert"
 import type * as Library from "./main.ts"
+// eslint-disable-next-line no-duplicate-imports
 import * as library from "./main.ts"
 import * as lt from "./tokenizer.ts"
 
@@ -88,7 +90,7 @@ test("unionType(): creates tokens for the union type with the function subtype a
     anyText(),
     rightCurlyText(),
     unionText(),
-    anyText()
+    anyText(),
   ]
   eq(a, e)
 })
@@ -106,7 +108,7 @@ test("unionType(): creates tokens for the union type with the function subtype b
     leftCurlyText(),
     rightCurlyText(),
     colonText(),
-    anyText()
+    anyText(),
   ]
   eq(a, e)
 })
@@ -162,7 +164,7 @@ test("functionType(): creates tokens for the function type with a parameter with
     textToken(""),
     colonText(),
     anyText(),
-    rightCurlyText()
+    rightCurlyText(),
   ]
   eq(a, e)
 })
@@ -176,7 +178,7 @@ test("functionType(): creates tokens for the function type with one parameter", 
     textToken("v"),
     colonText(),
     anyText(),
-    rightCurlyText()
+    rightCurlyText(),
   ]
   eq(a, e)
 })
@@ -194,7 +196,7 @@ test("functionType(): creates tokens for the function type with multiple paramet
     textToken("b"),
     colonText(),
     anyText(),
-    rightCurlyText()
+    rightCurlyText(),
   ]
   eq(a, e)
 })
@@ -207,7 +209,7 @@ test("functionType(): creates tokens for the function type with a return type", 
     leftCurlyText(),
     rightCurlyText(),
     colonText(),
-    anyText()
+    anyText(),
   ]
   eq(a, e)
 })
@@ -270,7 +272,7 @@ test("arrayType(): creates tokens for the array type with a union item with mult
     unionText(),
     anyText(),
     rightCurlyText(),
-    arrayText()
+    arrayText(),
   ]
   eq(a, e)
 })
@@ -284,7 +286,7 @@ test("arrayType(): creates tokens for the array type with a function item", () =
     leftCurlyText(),
     rightCurlyText(),
     rightCurlyText(),
-    arrayText()
+    arrayText(),
   ]
   eq(a, e)
 })
@@ -381,7 +383,7 @@ test("type(): creates tokens for the void type", () => {
 })
 
 test("type(): creates an empty array for an unsupported type", () => {
-  // @ts-expect-error
+  // @ts-expect-error checking the behavior when the type is not supported.
   const a = lt.type({})
   eq(a, [])
 })
@@ -409,7 +411,7 @@ test("value(): creates tokens for the value with a default value", () => {
     colonText(),
     anyText(),
     equalsText(),
-    textToken("v")
+    textToken("v"),
   ]
   eq(a, e)
 })
@@ -423,7 +425,7 @@ test("typeDeclaration(): creates tokens for the type declaration with no identif
     spaceText(),
     identifierToken(""),
     colonText(),
-    anyText()
+    anyText(),
   ]
   eq(a, e)
 })
@@ -438,7 +440,7 @@ test("typeDeclaration(): creates tokens for the type declaration with an identif
     spaceText(),
     identifierToken("d"),
     colonText(),
-    anyText()
+    anyText(),
   ]
   eq(a, e)
 })
@@ -470,7 +472,7 @@ test("propertyDeclaration(): creates tokens for the property declaration with no
     dotText(),
     identifierToken("v"),
     colonText(),
-    anyText()
+    anyText(),
   ]
   eq(a, e)
 })
@@ -487,7 +489,7 @@ test("propertyDeclaration(): creates tokens for the property declaration with an
     dotText(),
     identifierToken("d"),
     colonText(),
-    anyText()
+    anyText(),
   ]
   eq(a, e)
 })
@@ -504,7 +506,7 @@ test("propertyDeclaration(): creates tokens for the property declaration with a 
     dotText(),
     identifierToken("v"),
     colonText(),
-    anyText()
+    anyText(),
   ]
   eq(a, e)
 })
@@ -520,7 +522,7 @@ test("methodDeclaration(): creates tokens for the method declaration with no ide
     textToken("."),
     identifierToken(""),
     leftCurlyText(),
-    rightCurlyText()
+    rightCurlyText(),
   ]
   eq(a, e)
 })
@@ -537,7 +539,7 @@ test("methodDeclaration(): creates tokens for the method declaration with an ide
     textToken("."),
     identifierToken("d"),
     leftCurlyText(),
-    rightCurlyText()
+    rightCurlyText(),
   ]
   eq(a, e)
 })
@@ -554,7 +556,7 @@ test("methodDeclaration(): creates tokens for the method declaration with a pare
     textToken("."),
     identifierToken(""),
     leftCurlyText(),
-    rightCurlyText()
+    rightCurlyText(),
   ]
   eq(a, e)
 })
@@ -570,7 +572,7 @@ test("eventDeclaration(): creates tokens for the event declaration with no ident
     textToken("."),
     identifierToken(""),
     leftCurlyText(),
-    rightCurlyText()
+    rightCurlyText(),
   ]
   eq(a, e)
 })
@@ -587,7 +589,7 @@ test("eventDeclaration(): creates tokens for the event declaration with an ident
     textToken("."),
     identifierToken("d"),
     leftCurlyText(),
-    rightCurlyText()
+    rightCurlyText(),
   ]
   eq(a, e)
 })
@@ -604,7 +606,7 @@ test("eventDeclaration(): creates tokens for the event declaration with a parent
     textToken("."),
     identifierToken(""),
     leftCurlyText(),
-    rightCurlyText()
+    rightCurlyText(),
   ]
   eq(a, e)
 })
@@ -618,7 +620,7 @@ test("constructorDeclaration(): creates tokens for the constructor declaration w
     spaceText(),
     identifierToken(""),
     leftCurlyText(),
-    rightCurlyText()
+    rightCurlyText(),
   ]
   eq(a, e)
 })
@@ -633,7 +635,7 @@ test("constructorDeclaration(): creates tokens for the constructor declaration w
     spaceText(),
     identifierToken("d"),
     leftCurlyText(),
-    rightCurlyText()
+    rightCurlyText(),
   ]
   eq(a, e)
 })
@@ -664,7 +666,7 @@ test("classDeclaration(): creates tokens for the class declaration with one exte
     spaceText(),
     keywordToken("extends"),
     spaceText(),
-    referenceToken("v")
+    referenceToken("v"),
   ]
   eq(a, e)
 })
@@ -682,7 +684,7 @@ test("classDeclaration(): creates tokens for the class declaration with multiple
     spaceText(),
     referenceToken("a"),
     commaText(),
-    referenceToken("b")
+    referenceToken("b"),
   ]
   eq(a, e)
 })
@@ -735,7 +737,7 @@ test("declaration(): creates tokens for the type declaration", () => {
 })
 
 test("declaration(): creates an empty array for an unsupported declaration", () => {
-  // @ts-expect-error
+  // @ts-expect-error checking the behavior when the declaration is not supported.
   const a = lt.declaration({})
   eq(a, [])
 })

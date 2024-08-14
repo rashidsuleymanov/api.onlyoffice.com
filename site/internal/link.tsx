@@ -1,12 +1,12 @@
 import path from "node:path"
 import {URL} from "node:url"
-import {Sitemap} from "@onlyoffice/eleventy-sitemap"
 import {rootDir} from "@onlyoffice/eleventy-env"
+import {Sitemap} from "@onlyoffice/eleventy-sitemap"
 import * as pate from "@onlyoffice/node-path"
 import {cutPrefix, cutSuffix} from "@onlyoffice/strings"
 import {type Root} from "hast"
-import {type HTMLAttributes} from "preact/compat"
 import {type JSX, h} from "preact"
+import {type HTMLAttributes} from "preact/compat"
 import {visit} from "unist-util-visit"
 import {type VFile} from "vfile"
 
@@ -24,12 +24,12 @@ export function Link(p: LinkProperties): JSX.Element {
     throw new Error("The 'href' attribute is required, but missing.")
   }
   if (typeof p.href !== "string") {
-    throw new Error("The 'href' attribute must be a string.")
+    throw new TypeError("The 'href' attribute must be a string.")
   }
 
   p.href = resolve(p.file, p.href)
 
-  return <a {...p}></a>
+  return <a {...p} />
 }
 
 export interface RehypeLinkTransform {
@@ -37,7 +37,7 @@ export interface RehypeLinkTransform {
 }
 
 export function rehypeLink(): RehypeLinkTransform {
-  return function (t, f) {
+  return function transform(t, f) {
     visit(t, "element", (n) => {
       if (n.tagName !== "a") {
         return
@@ -49,7 +49,7 @@ export function rehypeLink(): RehypeLinkTransform {
         throw new Error("The 'href' attribute is required, but missing.")
       }
       if (typeof p.href !== "string") {
-        throw new Error("The 'href' attribute must be a string.")
+        throw new TypeError("The 'href' attribute must be a string.")
       }
 
       n.properties.href = resolve(f.path, p.href)

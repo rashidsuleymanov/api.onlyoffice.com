@@ -1,12 +1,13 @@
+/* eslint-disable @typescript-eslint/no-implied-eval, no-new-func */
 /* eslint @stylistic/max-len: ["error", {code: 140}] */
 
 // todo: See the demo/index.html for unsupported use cases.
 
 import {
-  type RadiogroupContainerChangeEventListener,
-  type RadiogroupContainerChangedEventListener,
   RadiogroupContainerChangeEvent,
-  RadiogroupContainerChangedEvent
+  type RadiogroupContainerChangeEventListener,
+  RadiogroupContainerChangedEvent,
+  type RadiogroupContainerChangedEventListener,
 } from "./events.ts"
 
 export type RadiogroupContainerAttributeName =
@@ -58,7 +59,7 @@ export class RadiogroupContainer extends HTMLElement {
       "disabled",
       "name",
       "onradiogroupcontainerchange",
-      "onradiogroupcontainerchanged"
+      "onradiogroupcontainerchanged",
     ]
   }
 
@@ -687,7 +688,7 @@ export class RadiogroupContainer extends HTMLElement {
         cancelable: true,
         radio: ch,
         radioIndex: i,
-        radioValue: ch.dataset.value
+        radioValue: ch.dataset.value,
       })
       const co = this.dispatchEvent(ce)
       if (!co) {
@@ -708,7 +709,7 @@ export class RadiogroupContainer extends HTMLElement {
         bubbles: true,
         radio: ch,
         radioIndex: i,
-        radioValue: ch.dataset.value
+        radioValue: ch.dataset.value,
       })
       this.dispatchEvent(de)
     }

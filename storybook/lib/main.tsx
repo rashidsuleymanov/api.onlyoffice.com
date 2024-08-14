@@ -7,11 +7,11 @@ import {renderToString} from "preact-render-to-string"
 export default {
   framework: "@storybook/preact-vite",
   addons: [
-    "@storybook/addon-essentials"
+    "@storybook/addon-essentials",
   ],
   stories: [
     "../../packages/site-*/lib/*.story.tsx",
-    "../../packages/ui-*/lib/*.story.tsx"
+    "../../packages/ui-*/lib/*.story.tsx",
   ],
   staticDirs: [
     {from: "../../packages/pagefind-fixtures/dist/pagefind", to: "pagefind"},

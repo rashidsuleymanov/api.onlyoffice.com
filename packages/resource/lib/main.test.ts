@@ -1,13 +1,13 @@
 import {StringWritable} from "@onlyoffice/stream-string"
-import {is, match, unreachable} from "uvu/assert"
 import {test} from "uvu"
+import {is, match, unreachable} from "uvu/assert"
 import {
   componentBasename,
   declarationBasename,
   indexBasename,
   rawURL,
   readURL,
-  resourceBasename
+  resourceBasename,
 } from "./main.ts"
 
 test("creates a raw github url", () => {

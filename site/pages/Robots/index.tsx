@@ -7,7 +7,7 @@ export function data(): Data {
   return {
     layout: null,
     permalink: "/robots.txt",
-    eleventyExcludeFromCollections: true
+    eleventyExcludeFromCollections: true,
   }
 }
 

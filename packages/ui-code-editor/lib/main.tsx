@@ -1,5 +1,5 @@
-import {type HTMLAttributes} from "preact/compat"
 import {type JSX, h} from "preact"
+import {type HTMLAttributes} from "preact/compat"
 
 export function CodeEditor(p: HTMLAttributes<HTMLTextAreaElement>): JSX.Element {
   const {children, ...props} = p

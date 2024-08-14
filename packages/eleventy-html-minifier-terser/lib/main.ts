@@ -8,7 +8,7 @@ export interface EleventyHtmlMinifierTerserOptions extends Options {
 
 export function eleventyHtmlMinifierTerser(
   u: UserConfig,
-  o: EleventyHtmlMinifierTerserOptions
+  o: EleventyHtmlMinifierTerserOptions,
 ): void {
   if (!o.minify) {
     return

@@ -10,7 +10,7 @@ export function data({list, resolve}: Resource): Data {
     pagination: {
       data: "items",
       size: 1,
-      addAllPagesToCollections: true
+      addAllPagesToCollections: true,
     },
 
     slug(data) {
@@ -30,7 +30,7 @@ export function data({list, resolve}: Resource): Data {
         }
         const [d]: Declaration[] = data.pagination.items
         return d.title
-      }
-    }
+      },
+    },
   }
 }

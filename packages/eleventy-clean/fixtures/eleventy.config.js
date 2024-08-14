@@ -1,3 +1,5 @@
+/* eslint-disable import/no-import-module-exports */
+
 /**
  * @typedef {import("@onlyoffice/eleventy-types").UserConfig} UserConfig
  */

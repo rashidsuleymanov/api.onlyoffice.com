@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 // Provides a declaration of the interfaces that the Document Editor exports.
 // Looking ahead, the team in charge of the Document Editor should ideally take
 // over the support for this file.
@@ -40,6 +42,7 @@ declare const DocEditor: {
 /**
  * {@link https://api.onlyoffice.com/editors/methods ONLYOFFICE Reference}
  */
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export interface DocEditor {
   /**
    * {@link https://github.com/ONLYOFFICE/web-apps/blob/v8.0.0.15/apps/api/documents/api.js/#L810 ONLYOFFICE Reference}

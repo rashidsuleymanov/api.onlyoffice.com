@@ -1,7 +1,7 @@
 import {
   type EnumRepresentable,
   type PlaygroundConfigurable,
-  type PropertyConfigurable
+  type PropertyConfigurable,
 } from "@onlyoffice/site-config"
 import {CloseIcon} from "@onlyoffice/ui-icons/poor/24.tsx"
 import {
@@ -26,12 +26,12 @@ import {
   TextInput,
   TextInputControl,
 } from "@onlyoffice/ui-kit"
-import {type JSX, h} from "preact"
+import {Fragment, type JSX, h} from "preact"
 
 const samples = [
   {id: "html", label: "HTML"},
   {id: "js", label: "JavaScript"},
-  {id: "json", label: "JSON"}
+  {id: "json", label: "JSON"},
 ]
 
 export interface DocumentEditorPlaygroundParameters {
@@ -63,7 +63,11 @@ export function DocumentEditorPlayground(p: DocumentEditorPlaygroundParameters):
     ct.push(t)
 
     const p = <CodeListingTabPanel by={s.id}>
-      <pre><code data-de-playground-config-sample={s.id}>{"Sample of code in the process of generation..."}</code></pre>
+      <pre>
+        <code data-de-playground-config-sample={s.id}>
+          Sample of code in the process of generation...
+        </code>
+      </pre>
     </CodeListingTabPanel>
     cp.push(p)
   }
@@ -107,7 +111,7 @@ export function DocumentEditorPlayground(p: DocumentEditorPlaygroundParameters):
                 </Select>
               </FormControlControl>
             </FormControl>
-            <div class="de-playground__container" data-de-playground-properties-container></div>
+            <div class="de-playground__container" data-de-playground-properties-container />
           </div>
           <div class="de-playground__island de-playground__events">
             <SrOnly><h2>Config Events</h2></SrOnly>
@@ -123,7 +127,7 @@ export function DocumentEditorPlayground(p: DocumentEditorPlaygroundParameters):
                 </Select>
               </FormControlControl>
             </FormControl>
-            <div class="de-playground__container" data-de-playground-events-container></div>
+            <div class="de-playground__container" data-de-playground-events-container />
           </div>
           <div class="de-playground__actions">
             <Button variant="accent" type="submit" name="action" value="play">Play</Button>
@@ -134,8 +138,7 @@ export function DocumentEditorPlayground(p: DocumentEditorPlaygroundParameters):
               <document-editor
                 document-server-url={p.config.documentEditor.documentServerUrl}
                 config="{}"
-              >
-              </document-editor>
+              />
             </document-editor-mirror>
           </div>
           <div class="de-playground__island de-playground__samples">
@@ -174,6 +177,8 @@ function Property({property}: PropertyParameters): JSX.Element {
     return <NumberProperty property={property} />
   case "string":
     return <StringProperty property={property} />
+  case "undefined":
+    return <></>
   default:
     throw new Error(`Unknown property type: ${property.type}`)
   }
@@ -218,7 +223,7 @@ function EnumProperty({property, type}: EnumPropertyParameters): JSX.Element {
     }
 
     if (typeof t.const !== "string" && typeof t.const !== "number") {
-      throw new Error(`Non-string/number enum case unsupported: ${t.const}`)
+      throw new TypeError(`Non-string/number enum case unsupported: ${t.const}`)
     }
 
     const s = t.const === property.default
@@ -266,12 +271,16 @@ function FunctionProperty({property}: PropertyParameters): JSX.Element {
         </button>
       </FormControlAction>
       <FormControlControl>
-        <CodeEditor id={property.path} name={property.path}></CodeEditor>
+        <CodeEditor id={property.path} name={property.path} />
       </FormControlControl>
     </FormControl>
     <Content>
       <output for={property.path}>
-        <pre><code data-de-playground-output-for={property.path}>Console of {property.path}()...</code></pre>
+        <pre>
+          <code data-de-playground-output-for={property.path}>
+            Console of {property.path}()...
+          </code>
+        </pre>
       </output>
     </Content>
   </div>

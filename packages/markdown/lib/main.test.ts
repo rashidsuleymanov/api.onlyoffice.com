@@ -1,5 +1,5 @@
-import {is} from "uvu/assert"
 import {test} from "uvu"
+import {is} from "uvu/assert"
 import {firstParagraph, firstSentence, selectSection} from "./main.ts"
 
 test("firstParagraph() returns an empty string for an empty content", () => {

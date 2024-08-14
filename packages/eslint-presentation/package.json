@@ -1,7 +1,7 @@
 {
   "name": "@onlyoffice/eslint-presentation",
-  "private": true,
   "type": "module",
+  "private": true,
   "main": "lib/main.ts",
   "scripts": {
     "test:types": "tsc",
@@ -9,12 +9,12 @@
     "test": "pnpm test:types && pnpm test:unit"
   },
   "dependencies": {
-    "@eslint/js": "^9.3.0",
+    "@eslint/js": "^9.8.0",
     "@stylistic/eslint-plugin-js": "^2.1.0",
     "@types/eslint": "^8.56.10",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.12.12",
-    "eslint": "^9.3.0",
+    "eslint": "^9.8.0",
     "eslint-plugin-jsonc": "^2.15.1",
     "typescript": "^5.4.5"
   },

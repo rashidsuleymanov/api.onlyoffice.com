@@ -15,7 +15,7 @@ export function cutSuffix(s: string, p: string): string {
 export function isStringLiteral(u: unknown): u is string {
   return typeof u === "string" &&
     (u.startsWith('"') && u.endsWith('"') ||
-    u.startsWith("'") && u.endsWith("'"))
+      u.startsWith("'") && u.endsWith("'"))
 }
 
 export function substringPosition(a: string, b: string): [number, number] {

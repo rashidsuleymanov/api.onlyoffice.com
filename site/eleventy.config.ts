@@ -1,3 +1,5 @@
+/* eslint-disable import/no-import-module-exports */
+
 import {tmpdir} from "node:os"
 import {cwd} from "node:process"
 import {eleventyClean} from "@onlyoffice/eleventy-clean"
@@ -7,8 +9,8 @@ import {eleventyPagefind} from "@onlyoffice/eleventy-pagefind"
 import {eleventySitemap} from "@onlyoffice/eleventy-sitemap"
 import {eleventyStarryNight} from "@onlyoffice/eleventy-starry-night"
 import {type UserConfig} from "@onlyoffice/eleventy-types"
-import {configMode} from "@onlyoffice/site-env"
 import {Config} from "@onlyoffice/site-config"
+import {configMode} from "@onlyoffice/site-env"
 import esbuild from "esbuild"
 import requireFromString from "require-from-string"
 import {eleventyImage} from "./internal/image.tsx"

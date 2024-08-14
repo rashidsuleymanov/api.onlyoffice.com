@@ -1,6 +1,6 @@
 import {type DocEditorConfig} from "@onlyoffice/document-server-types"
-import {equal as eq, is} from "uvu/assert"
 import {test} from "uvu"
+import {equal as eq, is} from "uvu/assert"
 import {cloneConfig} from "./main.ts"
 
 test("clones an empty config", () => {
@@ -17,8 +17,8 @@ test("clones a config, not maintaining references to properties", () => {
       fileType: "docx",
       key: "xxx",
       title: "Untitled document",
-      url: "http://localhost/document.docx"
-    }
+      url: "http://localhost/document.docx",
+    },
   }
   const b = cloneConfig(a)
   is(a.document === b.document, false)
@@ -30,8 +30,8 @@ test("clones a config, maintaining references to events", () => {
     events: {
       onAppReady() {
         console.log("Document Editor is ready")
-      }
-    }
+      },
+    },
   }
   const b = cloneConfig(a)
   is(a.events === b.events, false)

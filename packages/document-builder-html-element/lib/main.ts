@@ -1,8 +1,13 @@
-import {DocumentEditor} from "@onlyoffice/document-editor-html-element"
+/* eslint-disable @typescript-eslint/no-implied-eval, no-new-func */
+
+// todo: resolve ignores
+/* eslint-disable @typescript-eslint/no-redundant-type-constituents, wc/require-listener-teardown */
+
 import {builder, fileType} from "@onlyoffice/document-builder-utils"
-import type {DocEditorConnector} from "@onlyoffice/document-server-types"
+import {DocumentEditor} from "@onlyoffice/document-editor-html-element"
+import {type DocEditorConnector} from "@onlyoffice/document-server-types"
 import {uniqueString} from "@onlyoffice/strings"
-import type {Stringify} from "@onlyoffice/utility-types"
+import {type Stringify} from "@onlyoffice/utility-types"
 
 declare global {
   interface Window {
@@ -173,7 +178,7 @@ export class DocumentBuilder extends DocumentEditor {
       ...DocumentEditor.observedAttributes,
       "command",
       "ondocumentbuilderready",
-      "ondocumentbuildererror"
+      "ondocumentbuildererror",
     ]
   }
 

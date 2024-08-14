@@ -13,6 +13,6 @@ function config() {
   return {
     nodeResolve: true,
     plugins: [esbuildPlugin({ts: true})],
-    watch: true
+    watch: true,
   }
 }

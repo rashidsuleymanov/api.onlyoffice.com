@@ -1,11 +1,11 @@
-import {equal as eq, is, unreachable as un} from "uvu/assert"
 import {test} from "uvu"
+import {equal as eq, is, unreachable as un} from "uvu/assert"
 import {
   cutPrefix,
   cutSuffix,
   isStringLiteral,
   substringPosition,
-  uniqueString
+  uniqueString,
 } from "./main.ts"
 
 test("cutPrefix(): returns an empty string when both strings are empty", () => {

@@ -1,10 +1,13 @@
+// todo: refactor it, resolve eslint ignores.
+
 import {createHash} from "node:crypto"
 import process from "node:process"
 import {Transform, type TransformCallback} from "node:stream"
 import {Console} from "@onlyoffice/console"
-import * as example from "@onlyoffice/service-declaration/example.ts"
 import type * as REST from "@onlyoffice/service-declaration"
+// eslint-disable-next-line no-duplicate-imports
 import * as service from "@onlyoffice/service-declaration"
+import * as example from "@onlyoffice/service-declaration/example.ts"
 import {slug} from "github-slugger"
 import {type OpenAPIV3_1 as OpenAPI} from "openapi-types"
 import pack from "../package.json" with {type: "json"}
@@ -35,11 +38,11 @@ export interface PathChunk {
 }
 
 export class ProcessPath extends Transform {
-  _cache: Cache
+  cache: Cache
 
   constructor(cache: Cache) {
     super({objectMode: true})
-    this._cache = cache
+    this.cache = cache
   }
 
   _transform(ch: PathChunk, _: BufferEncoding, cb: TransformCallback): void {
@@ -47,7 +50,7 @@ export class ProcessPath extends Transform {
     const o = ch.value
     console.log(`start processing ${p}`)
 
-    httpMethods().forEach((m) => {
+    for (const m of httpMethods()) {
       const e = `${m} ${p}`
       const s = o[m]
       if (s !== undefined) {
@@ -57,27 +60,33 @@ export class ProcessPath extends Transform {
           console.info(`skipped processing "${e}"`)
         } else {
           const u = m.toUpperCase()
-          s.tags.forEach((t) => {
-            const a = t.split("/").map((s) => s.trim())
-            a.forEach((t, i) => {
+          for (const t of s.tags) {
+            const a = t.split("/").map((s) => {
+              return s.trim()
+            })
+            for (const [i, t] of a.entries()) {
               // todo: support overloading, ex portal and Portal.
               // temp solution
               const g = a.slice(0, i + 1).join("/")
-              const s = g.split("/").map((v) => slug(v)).join("/")
-              let ct = this._cache.groups[s]
+              const s = g.split("/")
+                .map((v) => {
+                  return slug(v)
+                })
+                .join("/")
+              let ct = this.cache.groups[s]
               if (ct === undefined) {
                 ct = {
                   kind: "group",
                   slug: s,
-                  title: t
+                  title: t,
                   // description: null,
                   // requests: []
                 }
-                this._cache.groups[s] = ct
+                this.cache.groups[s] = ct
               }
-            })
+            }
 
-            // let ct = this._cache.groups[t]
+            // let ct = this.cache.groups[t]
             // if (ct === undefined) {
             //   ct = {
             //     kind: "group",
@@ -86,28 +95,28 @@ export class ProcessPath extends Transform {
             //     // description: null,
             //     // requests: []
             //   }
-            //   this._cache.groups[t] = ct
+            //   this.cache.groups[t] = ct
             // }
-            const r = createRequest(this._cache, u, p, {
+            const r = createRequest(this.cache, u, p, {
               ...s,
-              tags: [t]
+              tags: [t],
             })
             r.id = hash(r.endpoint)
 
-            let cdr = this._cache.declarations.requests[r.slug]
+            let cdr = this.cache.declarations.requests[r.slug]
             if (cdr === undefined) {
               cdr = []
-              this._cache.declarations.requests[r.slug] = cdr
+              this.cache.declarations.requests[r.slug] = cdr
             }
             cdr.push({id: r.id, method: u, path: p})
 
             // ct.requests.push(r.slug)
             this.push(r)
-          })
+          }
           console.info(`finished processing "${e}"`)
         }
       }
-    })
+    }
 
     console.log(`finished processing ${p}`)
     cb(null)
@@ -120,20 +129,24 @@ export interface RequestChunk {
 }
 
 export class ProcessRequest extends Transform {
-  _cache: Cache
+  cache: Cache
 
   constructor(cache: Cache) {
     super({objectMode: true})
-    this._cache = cache
+    this.cache = cache
   }
 
   _transform(ch: RequestChunk, _: BufferEncoding, cb: TransformCallback): void {
-    const cr = this._cache.declarations.requests[ch.value.slug]
+    const cr = this.cache.declarations.requests[ch.value.slug]
     if (cr !== undefined && cr.length > 1) {
-      const i = cr.findIndex((r) => r.id === ch.value.id)
+      const i = cr.findIndex((r) => {
+        return r.id === ch.value.id
+      })
       if (i !== -1) {
         const c = cr[i]
-        const mi = cr.findIndex((r) => r.id !== c.id && r.method !== c.method)
+        const mi = cr.findIndex((r) => {
+          return r.id !== c.id && r.method !== c.method
+        })
         if (mi !== -1) {
           ch.value.slug = `${ch.value.slug}-${c.method.toLocaleLowerCase()}`
           ch.value.title = `${ch.value.title} (${c.method})`
@@ -152,8 +165,14 @@ export class ProcessRequest extends Transform {
 export function httpMethods(): OpenAPI.HttpMethods[] {
   // I have no idea how to convert enum values to array.
   return [
-    "delete", "get",  "head", "options",
-    "patch",  "post", "put",  "trace"
+    "delete",
+    "get",
+    "head",
+    "options",
+    "patch",
+    "post",
+    "put",
+    "trace",
   ] as OpenAPI.HttpMethods[]
 }
 
@@ -163,22 +182,22 @@ interface OpenAPIComponentChunk<K extends OpenAPIComponentsKey> {
 }
 
 export class ProcessComponent<K extends OpenAPIComponentsKey> extends Transform {
-  _cache: Cache
-  _key: K
+  cache: Cache
+  key: K
 
   constructor(cache: Cache, key: K) {
     super({objectMode: true})
-    this._cache = cache
-    this._key = key
+    this.cache = cache
+    this.key = key
   }
 
-  _transform(ch: OpenAPIComponentChunk<K>, _: BufferEncoding, cb: TransformCallback) {
-    const key = `#/components/${this._key}/${ch.key}`
+  _transform(ch: OpenAPIComponentChunk<K>, _: BufferEncoding, cb: TransformCallback): void {
+    const key = `#/components/${this.key}/${ch.key}`
     console.log(`start processing "${key}"`)
 
     const c = {headers: {}}
 
-    const value = createComponent(c, this._key, ch.value)
+    const value = createComponent(c, this.key, ch.value)
     if (value !== undefined) {
       this.push({key, value})
       console.info(`finished processing "${key}"`)
@@ -186,9 +205,9 @@ export class ProcessComponent<K extends OpenAPIComponentsKey> extends Transform 
       console.warn(`failed to process "${key}"`)
     }
 
-    switch (this._key) {
+    switch (this.key) {
     case "responses":
-      this._cache.requests[key] = c
+      this.cache.requests[key] = c
       break
     }
 
@@ -199,13 +218,14 @@ export class ProcessComponent<K extends OpenAPIComponentsKey> extends Transform 
 export class Cache {
   declarations: {
     groups: Partial<Record<string, REST.GroupDeclaration>>
-    requests: Partial<Record<string, {id: string, method: string, path: string}[]>>
+    requests: Partial<Record<string, {id: string; method: string; path: string}[]>>
   } = {
-    groups: {},
-    requests: {}
-  }
+      groups: {},
+      requests: {},
+    }
   // todo: components: {} = {}
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   requests: Partial<Record<string, {headers: any}>> = {}
   groups: Partial<Record<string, REST.GroupDeclaration>> = {}
 }
@@ -230,7 +250,9 @@ function populateRequestHero(req: REST.RequestDeclaration, m: string, p: string,
     if (s.tags !== undefined) {
       const [t] = s.tags
       if (t !== undefined) {
-        a = t.split("/").map((s) => s.trim())
+        a = t.split("/").map((s) => {
+          return s.trim()
+        })
       } else {
         console.warn("first tag is missing")
       }
@@ -262,10 +284,10 @@ function populateRequestParameters(req: REST.RequestDeclaration, s: OpenAPI.Oper
   const query: REST.Property[] = []
 
   if (s.parameters !== undefined) {
-    s.parameters.forEach((p) => {
+    for (const p of s.parameters) {
       if ("$ref" in p) {
         console.warn("parameter reference not supported")
-        return
+        continue
       }
       switch (p.in) {
       case "path":
@@ -284,11 +306,11 @@ function populateRequestParameters(req: REST.RequestDeclaration, s: OpenAPI.Oper
         console.warn(`parameter location "${p.in}" not supported`)
         break
       }
-    })
+    }
   }
 
   const header: REST.Property[] = []
-  let body: REST.Value | undefined = undefined
+  let body: REST.Value | undefined
 
   if (s.requestBody !== undefined) {
     if ("$ref" in s.requestBody) {
@@ -296,21 +318,19 @@ function populateRequestParameters(req: REST.RequestDeclaration, s: OpenAPI.Oper
     } else {
       const e = Object.entries(s.requestBody.content)
       if (e.length !== 0) {
-        const [k, v] = e[0]
+        const [[k, v]] = e
         if (v.schema !== undefined) {
-          let o = v.schema
-          if (s.requestBody !== undefined) {
-            if (s.requestBody.description !== undefined) {
-              o.description = s.requestBody.description
-            }
+          const o = v.schema
+          if (s.requestBody !== undefined && s.requestBody.description !== undefined) {
+            o.description = s.requestBody.description
           }
           body = createValue(o)
-          if (body !== undefined) {
-            if (s.requestBody !== undefined) {
-              if (s.requestBody.required === true) {
-                body.required = true
-              }
-            }
+          if (
+            body !== undefined &&
+            s.requestBody !== undefined &&
+            s.requestBody.required === true
+          ) {
+            body.required = true
           }
         } else {
           console.warn("schema for request body is missing")
@@ -330,13 +350,13 @@ function populateRequestParameters(req: REST.RequestDeclaration, s: OpenAPI.Oper
     }
   }
 
-  if (header.length > 0) {
+  if (header.length !== 0) {
     req.headerParameters = header
   }
-  if (path.length > 0) {
+  if (path.length !== 0) {
     req.pathParameters = path
   }
-  if (query.length > 0) {
+  if (query.length !== 0) {
     req.queryParameters = query
   }
   if (body !== undefined) {
@@ -347,7 +367,7 @@ function populateRequestParameters(req: REST.RequestDeclaration, s: OpenAPI.Oper
 export function populateRequestExamples(req: REST.RequestDeclaration): void {
   req.examples = [
     example.curlExample(req),
-    example.httpExample(req)
+    example.httpExample(req),
   ]
 }
 
@@ -357,12 +377,12 @@ function populateRequestResponses(cache: Cache, req: REST.RequestDeclaration, s:
   const responses: REST.Response[] = []
 
   if (s.responses !== undefined) {
-    Object.entries(s.responses).forEach(([k, v]) => {
+    for (const [k, v] of Object.entries(s.responses)) {
       // const r = createResponse({headers: {}}, v)
       // r.status = Number(k)
 
       let r: REST.Response = {
-        status: Number(k)
+        status: Number(k),
       }
 
       if ("$ref" in v) {
@@ -370,19 +390,17 @@ function populateRequestResponses(cache: Cache, req: REST.RequestDeclaration, s:
         r = {...r, ...o}
         const c = cache.requests[o.id]
         if (c !== undefined) {
-          Object.entries(c.headers).forEach(([k, p]) => {
+          for (const [k, p] of Object.entries(c.headers)) {
             switch (k) {
             case "Accept":
               if (headers.Accept !== undefined) {
                 if ("id" in headers.Accept) {
                   console.warn("header reference not supported")
+                } else if (headers.Accept.cases !== undefined) {
+                  const s = new Set([...headers.Accept.cases, ...p.cases])
+                  headers.Accept.cases = [...s]
                 } else {
-                  if (headers.Accept.cases !== undefined) {
-                    const s = new Set(headers.Accept.cases.concat(p.cases))
-                    headers.Accept.cases = [...s]
-                  } else {
-                    headers.Accept.cases = p.cases
-                  }
+                  headers.Accept.cases = p.cases
                 }
               } else {
                 headers.Accept = p
@@ -391,7 +409,7 @@ function populateRequestResponses(cache: Cache, req: REST.RequestDeclaration, s:
             default:
               console.warn(`header "${k}" not supported`)
             }
-          })
+          }
         }
       } else {
         if (v.description !== undefined) {
@@ -403,7 +421,7 @@ function populateRequestResponses(cache: Cache, req: REST.RequestDeclaration, s:
 
           const e = Object.entries(v.content)
           if (e.length !== 0) {
-            const [c, o] = e[0]
+            const [[c, o]] = e
             cases.push(c)
 
             if (o.schema !== undefined) {
@@ -425,13 +443,11 @@ function populateRequestResponses(cache: Cache, req: REST.RequestDeclaration, s:
             const h = headers[a.identifier]
             if ("id" in h) {
               console.warn("header reference not supported")
+            } else if (h.cases !== undefined) {
+              const s = new Set([...h.cases, ...a.cases])
+              h.cases = [...s]
             } else {
-              if (h.cases !== undefined) {
-                const s = new Set(h.cases.concat(a.cases))
-                h.cases = [...s]
-              } else {
-                h.cases = a.cases
-              }
+              h.cases = a.cases
             }
           } else {
             headers[a.identifier] = a
@@ -440,20 +456,20 @@ function populateRequestResponses(cache: Cache, req: REST.RequestDeclaration, s:
       }
 
       responses.push(r)
-    })
+    }
   } else {
     console.warn("responses for request is missing")
   }
 
-  if (responses.length > 0) {
+  if (responses.length !== 0) {
     req.responses = responses
   }
   const h = Object.values(headers)
-  if (h.length > 0) {
+  if (h.length !== 0) {
     if (req.headerParameters === undefined) {
       req.headerParameters = h
     } else {
-      req.headerParameters = req.headerParameters.concat(h)
+      req.headerParameters = [...req.headerParameters, ...h]
     }
   }
 }
@@ -466,7 +482,12 @@ function normalizeRequest(req: REST.RequestDeclaration): void {
   }
 }
 
-function createComponent<T extends OpenAPIComponentsKey>(cache: Cache, t: T, s: NonNullable<OpenAPI.ComponentsObject[T]>) {
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+function createComponent<T extends OpenAPIComponentsKey>(
+  cache: Cache,
+  t: T,
+  s: NonNullable<OpenAPI.ComponentsObject[T]>,
+) {
   switch (t) {
   case "schemas":
     const s = as("schemas")
@@ -484,6 +505,7 @@ function createComponent<T extends OpenAPIComponentsKey>(cache: Cache, t: T, s: 
    * @param {T} _
    * @returns {NonNullable<OpenAPIComponentsObject[T]>[""]}
    */
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   function as(_) {
     return s
   }
@@ -492,7 +514,7 @@ function createComponent<T extends OpenAPIComponentsKey>(cache: Cache, t: T, s: 
 function createResponseComponent(cache: REST.ComponentCache, s: OpenAPI.ReferenceObject | OpenAPI.ResponseObject): REST.Response {
   let r: REST.Response = {
     // todo: resolve it.
-    status: 0
+    status: 0,
   }
 
   if ("$ref" in s) {
@@ -508,7 +530,7 @@ function createResponseComponent(cache: REST.ComponentCache, s: OpenAPI.Referenc
 
       const e = Object.entries(s.content)
       if (e.length !== 0) {
-        const [c, o] = e[0]
+        const [[c, o]] = e
         cases.push(c)
 
         if (o.schema !== undefined) {
@@ -574,56 +596,56 @@ function createProperty(s: OpenAPI.ReferenceObject | OpenAPI.SchemaObject): REST
 }
 
 function createPropertyReference(s: OpenAPI.ReferenceObject): REST.PropertyReference {
-  const n = createPropertyNode(s)
+  const n = createPropertyNode()
   const v = createValueReference(s)
   return {...n, ...v}
 }
 
 function createArrayProperty(s: OpenAPI.ArraySchemaObject): REST.ArrayProperty {
-  const n = createPropertyNode(s)
+  const n = createPropertyNode()
   const v = createArrayValue(s)
   return {...n, ...v}
 }
 
 function createBooleanProperty(s: OpenAPI.NonArraySchemaObject): REST.BooleanProperty {
-  const n = createPropertyNode(s)
+  const n = createPropertyNode()
   const v = createBooleanValue(s)
   return {...n, ...v}
 }
 
 function createIntegerProperty(s: OpenAPI.NonArraySchemaObject): REST.IntegerProperty {
-  const n = createPropertyNode(s)
+  const n = createPropertyNode()
   const v = createIntegerValue(s)
   return {...n, ...v}
 }
 
 function createNumberProperty(s: OpenAPI.NonArraySchemaObject): REST.NumberProperty {
-  const n = createPropertyNode(s)
+  const n = createPropertyNode()
   const v = createNumberValue(s)
   return {...n, ...v}
 }
 
 function createObjectProperty(s: OpenAPI.NonArraySchemaObject): REST.ObjectProperty {
-  const n = createPropertyNode(s)
+  const n = createPropertyNode()
   const v = createObjectValue(s)
   return {...n, ...v}
 }
 
 function createStringProperty(s: OpenAPI.NonArraySchemaObject): REST.StringProperty {
-  const n = createPropertyNode(s)
+  const n = createPropertyNode()
   const v = createStringValue(s)
   return {...n, ...v}
 }
 
 function createUnknownProperty(s: OpenAPI.SchemaObject): REST.UnknownProperty {
-  const n = createPropertyNode(s)
+  const n = createPropertyNode()
   const v = createUnknownValue(s)
   return {...n, ...v}
 }
 
-function createPropertyNode(s: OpenAPI.SchemaObject): REST.PropertyNode {
+function createPropertyNode(): REST.PropertyNode {
   return {
-    identifier: ""
+    identifier: "",
   }
 }
 

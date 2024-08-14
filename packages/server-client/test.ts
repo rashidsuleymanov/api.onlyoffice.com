@@ -13,11 +13,11 @@ async function main(): Promise<void> {
 
   const t = spawnTest()
 
-  return new Promise((res, rej) => {
+  await new Promise((res, rej) => {
     t.on("close", (code) => {
       s.kill()
       if (code === 0) {
-        res()
+        res(null)
         return
       }
       const err = new Error("Test process failed")

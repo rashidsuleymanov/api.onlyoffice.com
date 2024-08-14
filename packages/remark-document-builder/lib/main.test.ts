@@ -4,8 +4,8 @@ import remarkParse from "remark-parse"
 import remarkRehype from "remark-rehype"
 import {unified} from "unified"
 import {visit} from "unist-util-visit"
-import {is, unreachable} from "uvu/assert"
 import {test} from "uvu"
+import {is, unreachable} from "uvu/assert"
 import {remarkDocumentBuilder} from "./main.ts"
 
 test("does nothing if no option is specified", async () => {

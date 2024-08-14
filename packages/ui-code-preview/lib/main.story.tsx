@@ -3,7 +3,7 @@ import {type JSX, h} from "preact"
 import {CodePreview} from "./main.tsx"
 
 export default {
-  title: "UI/Code Preview"
+  title: "UI/Code Preview",
 } satisfies Meta
 
 export function Default(): JSX.Element {

@@ -38,7 +38,7 @@ const icons: Record<IconProperties["src"], Record<string, InternalIcon>> = {
     "javascript-sdk": rich24.JavascriptSdkIcon,
     "office-api": rich24.OfficeApiIcon,
     "plugins": rich24.PluginsIcon,
-    "self-hosted": rich24.SelfHostedIcon
+    "self-hosted": rich24.SelfHostedIcon,
   },
   rich32: {
     "desktop-editors": rich32.DesktopEditorsIcon,
@@ -49,7 +49,7 @@ const icons: Record<IconProperties["src"], Record<string, InternalIcon>> = {
     "office-api": rich32.OfficeApiIcon,
     "plugins": rich32.PluginsIcon,
     "self-hosted": rich32.SelfHostedIcon,
-    "workspace-api": rich32.WorkspaceApiIcon
+    "workspace-api": rich32.WorkspaceApiIcon,
   },
   rich64: {
     "desktop-editors": rich64.DesktopEditorsIcon,
@@ -60,6 +60,6 @@ const icons: Record<IconProperties["src"], Record<string, InternalIcon>> = {
     "office-api": rich64.OfficeApiIcon,
     "plugins": rich64.PluginsIcon,
     "self-hosted": rich64.SelfHostedIcon,
-    "workspace-api": rich64.WorkspaceApiIcon
-  }
+    "workspace-api": rich64.WorkspaceApiIcon,
+  },
 }

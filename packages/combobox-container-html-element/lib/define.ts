@@ -1,11 +1,11 @@
 import {ComboboxContainer} from "./element.ts"
 import {
-  ComboboxContainerChangedEvent,
-  type ComboboxContainerChangedEventListener,
   ComboboxContainerChangeEvent,
   type ComboboxContainerChangeEventListener,
-  type GlobalComboboxContainerChangedHandler,
+  ComboboxContainerChangedEvent,
+  type ComboboxContainerChangedEventListener,
   type GlobalComboboxContainerChangeHandler,
+  type GlobalComboboxContainerChangedHandler,
 } from "./events.ts"
 
 declare global {

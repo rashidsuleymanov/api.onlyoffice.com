@@ -45,7 +45,7 @@ export function doclet(): Doclet {
     returns: undefined,
     scope: undefined,
     summary: undefined,
-    type: undefined
+    type: undefined,
   }
 }
 
@@ -134,8 +134,8 @@ export type CatharsisType =
   "UndefinedLiteral" |
   "UnknownLiteral"
 
-export function jsdoc(w: Writable, opts: string[]): Promise<void> {
-  return new Promise((res, rej) => {
+export async function jsdoc(w: Writable, opts: string[]): Promise<void> {
+  await new Promise((res, rej) => {
     const s = spawn("pnpm", ["exec", "--", "jsdoc", ...opts], {shell: true})
     s.stdout.on("data", (ch) => {
       w.write(ch)

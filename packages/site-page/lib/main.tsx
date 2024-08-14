@@ -1,12 +1,12 @@
-import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {useSlots} from "@onlyoffice/preact-slots"
+import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {SidebarIcon} from "@onlyoffice/ui-icons/poor/24.tsx"
 import {Fragment, type JSX, h, toChildArray} from "preact"
 
 export function Page({children}: ChildrenIncludable): JSX.Element {
   const [slots, outer] = useSlots(children, {
     header: PageHeader,
-    footer: PageFooter
+    footer: PageFooter,
   })
   return <page-container class="page">
     <div class="page__header">{slots.header}</div>
@@ -57,7 +57,7 @@ export function PageFooter({children}: ChildrenIncludable): JSX.Element {
   const [slots, outer] = useSlots(children, {
     links: [PageFooterLinkContainer],
     theme: PageFooterThemeSwitcher,
-    copyright: PageFooterCopyright
+    copyright: PageFooterCopyright,
   })
   return <footer class="page-footer">
     {outer}
@@ -72,10 +72,10 @@ export interface PageFooterLinkContainerParameters extends ChildrenIncludable {
 }
 
 export function PageFooterLinkContainer(
-  {children, label}: PageFooterLinkContainerParameters
+  {children, label}: PageFooterLinkContainerParameters,
 ): JSX.Element {
   const [slots, outer] = useSlots(children, {
-    links: [<a />]
+    links: [<a />],
   })
   return <nav aria-label={label}>
     {outer}

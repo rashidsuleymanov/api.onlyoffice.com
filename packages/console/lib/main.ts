@@ -7,7 +7,7 @@ export class Console extends NodeConsole {
   constructor(
     name: string,
     stdout: NodeJS.WritableStream,
-    stderr: NodeJS.WritableStream
+    stderr: NodeJS.WritableStream,
   ) {
     super(stdout, stderr)
     this.#name = name

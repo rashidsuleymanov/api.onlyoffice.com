@@ -4,7 +4,7 @@ import path from "node:path"
 import process from "node:process"
 import {Console} from "@onlyoffice/console"
 import {type BundleAsyncOptions, type CustomAtRules, bundle} from "lightningcss"
-import {default as PQueue} from "p-queue"
+import PQueue from "p-queue"
 import pack from "../package.json" with {type: "json"}
 
 // In the future, we should replace our custom logger with the eleventy one
@@ -35,7 +35,7 @@ export class EleventyLightningcss {
   async build(f: string): Promise<BuildResult> {
     const c = EleventyLightningcss.#cache.get(f)
     if (c !== undefined) {
-      return c
+      return await c
     }
 
     const p = EleventyLightningcss.#queue.add(() => {

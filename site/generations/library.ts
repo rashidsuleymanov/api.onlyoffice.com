@@ -11,7 +11,7 @@ export function data({list, retrieve}: Resource): Data {
     pagination: {
       data: "items",
       size: 1,
-      addAllPagesToCollections: true
+      addAllPagesToCollections: true,
     },
 
     slug(data): string {
@@ -88,7 +88,7 @@ export function data({list, retrieve}: Resource): Data {
           const s = d.id.split("#").join("/")
           return data.crosslink(data, `${s}/`)
         }
-      }
-    }
+      },
+    },
   }
 }

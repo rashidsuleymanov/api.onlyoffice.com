@@ -1,30 +1,30 @@
-import {mkdtemp, rm, rmdir, writeFile} from "node:fs/promises"
 import {type WriteStream} from "node:fs"
+import {mkdtemp, rm, rmdir, writeFile} from "node:fs/promises"
 import {tmpdir} from "node:os"
-import {dirname, join} from "node:path"
+import path from "node:path"
 import {type Transform, type Writable} from "node:stream"
 import {hasJQ, jq} from "@onlyoffice/jq"
-import {type Cache, ProcessComponent, ProcessPath, ProcessRequest} from "@onlyoffice/openapi-declaration"
 import {relative} from "@onlyoffice/node-path"
+import {type Cache, ProcessComponent, ProcessPath, ProcessRequest} from "@onlyoffice/openapi-declaration"
 import {resource} from "@onlyoffice/service-resource"
 import {UnstreamObject, makeObject} from "@onlyoffice/stream-json"
 import {StringReadable, StringWritable} from "@onlyoffice/stream-string"
 import MultiStream from "multistream"
 import {type OpenAPIV3_1 as OpenAPI} from "openapi-types"
 import Chain from "stream-chain"
-import Pick from "stream-json/filters/Pick.js"
-import StreamArray from "stream-json/streamers/StreamArray.js"
-import StreamObject from "stream-json/streamers/StreamObject.js"
 import Disassembler from "stream-json/Disassembler.js"
 import Parser from "stream-json/Parser.js"
 import Stringer from "stream-json/Stringer.js"
+import Pick from "stream-json/filters/Pick.js"
+import StreamArray from "stream-json/streamers/StreamArray.js"
+import StreamObject from "stream-json/streamers/StreamObject.js"
 import pack from "../package.json" with {type: "json"}
 
 export async function writeDeclaration(
   ch: Cache,
   rw: StringWritable,
   dw: Writable,
-  ts: Transform[] = []
+  ts: Transform[] = [],
 ): Promise<void> {
   let from: StringWritable
   let to = new StringWritable()
@@ -38,7 +38,7 @@ export async function writeDeclaration(
       new ProcessPath(ch),
       new Disassembler(),
       new Stringer({makeArray: true}),
-      to
+      to,
     ])
     c.on("close", res)
     c.on("error", rej)
@@ -54,7 +54,7 @@ export async function writeDeclaration(
       new ProcessRequest(ch),
       new Disassembler(),
       new Stringer({makeArray: true}),
-      to
+      to,
     ])
     c.on("close", res)
     c.on("error", rej)
@@ -67,7 +67,7 @@ export async function writeDeclaration(
       new MultiStream([
         // todo: see how it handles in the jsdoc
         new StringReadable(JSON.stringify(Object.values(ch.groups))),
-        from.toReadable()
+        from.toReadable(),
       ]),
       new Parser({jsonStreaming: true}),
       new StreamArray(),
@@ -76,7 +76,7 @@ export async function writeDeclaration(
       },
       new Disassembler(),
       new Stringer({makeArray: true}),
-      to
+      to,
     ])
     c.on("close", res)
     c.on("error", rej)
@@ -86,7 +86,7 @@ export async function writeDeclaration(
     dw.write(to.buf)
   } else {
     const td = await mkdtemp(`${tempDir()}-`)
-    const tf = join(td, "d")
+    const tf = path.join(td, "d")
     await writeFile(tf, to.buf)
     await jq(dw, [".", tf])
     await rm(tf)
@@ -100,7 +100,8 @@ export async function writeComponent(ch: Cache, rw: StringWritable, cw: Writable
 
   const ks: (keyof OpenAPI.ComponentsObject)[] = ["schemas", "responses"]
   for (const k of ks) {
-    // eslint-disable-next-line no-loop-func
+    // Is not relevant because the loop is synchronous.
+    // eslint-disable-next-line @typescript-eslint/no-loop-func
     await new Promise((res, rej) => {
       const c = new Chain([
         rw.toReadable(),
@@ -111,7 +112,7 @@ export async function writeComponent(ch: Cache, rw: StringWritable, cw: Writable
         new UnstreamObject(),
         makeObject(),
         new Stringer(),
-        to
+        to,
       ])
       c.on("close", res)
       c.on("error", rej)
@@ -130,7 +131,7 @@ export async function writeComponent(ch: Cache, rw: StringWritable, cw: Writable
       new UnstreamObject(),
       makeObject(),
       new Stringer(),
-      to
+      to,
     ])
     c.on("close", res)
     c.on("error", rej)
@@ -144,7 +145,7 @@ export async function writeComponent(ch: Cache, rw: StringWritable, cw: Writable
     cw.write(to.buf)
   } else {
     const td = await mkdtemp(`${tempDir()}-`)
-    const tf = join(td, "c")
+    const tf = path.join(td, "c")
     await writeFile(tf, to.buf)
     await jq(cw, [".", tf])
     await rm(tf)
@@ -154,7 +155,7 @@ export async function writeComponent(ch: Cache, rw: StringWritable, cw: Writable
 
 export async function writeEntrypoint(ew: WriteStream, df: string, cf: string): Promise<void> {
   const ef = String(ew.path)
-  const ed = dirname(ef)
+  const ed = path.dirname(ef)
   df = relative(ed, df)
   cf = relative(ed, cf)
   const c = await resource(df, cf)
@@ -163,5 +164,5 @@ export async function writeEntrypoint(ew: WriteStream, df: string, cf: string): 
 
 function tempDir(): string {
   const n = pack.name.replace("/", "+")
-  return join(tmpdir(), n)
+  return path.join(tmpdir(), n)
 }

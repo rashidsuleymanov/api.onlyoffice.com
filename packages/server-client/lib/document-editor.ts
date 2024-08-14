@@ -35,7 +35,7 @@ export class DocumentEditorService {
     if (c.document && c.document.info && c.document.info.sharingSettings) {
       for (const s of c.document.info.sharingSettings) {
         if (!s.permissions) {
-          // @ts-ignore
+          // @ts-ignore I hope this will be resolved somehow on the server.
           s.permissions = ""
         }
         if (!s.user) {
@@ -44,7 +44,7 @@ export class DocumentEditorService {
       }
     }
     if (!c.documentType) {
-      // @ts-ignore
+      // @ts-ignore I hope this will be resolved somehow on the server.
       c.documentType = ""
     }
     if (c.editorConfig && c.editorConfig.recent) {

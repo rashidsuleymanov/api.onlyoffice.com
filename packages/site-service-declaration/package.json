@@ -1,7 +1,7 @@
 {
   "name": "@onlyoffice/site-service-declaration",
-  "private": true,
   "type": "module",
+  "private": true,
   "main": "lib/main.tsx",
   "scripts": {
     "test:types": "tsc",

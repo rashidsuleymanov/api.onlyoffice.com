@@ -1,13 +1,13 @@
 {
   "name": "@onlyoffice/site-search",
-  "private": true,
   "type": "module",
-  "main": "lib/main.tsx",
+  "private": true,
   "exports": {
     ".": "./lib/main.tsx",
     "./main.css": "./lib/main.css",
     "./client.ts": "./lib/client.ts"
   },
+  "main": "lib/main.tsx",
   "scripts": {
     "test:types": "tsc",
     "test": "pnpm test:types"

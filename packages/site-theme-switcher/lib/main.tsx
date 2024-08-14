@@ -6,7 +6,7 @@ export interface ThemeSwitcherParameters extends ChildrenIncludable {
 }
 
 export function ThemeSwitcher(
-  {children, label}: ThemeSwitcherParameters
+  {children, label}: ThemeSwitcherParameters,
 ): JSX.Element {
   return <theme-switcher-container class="theme-switcher">
     <radiogroup-container>
@@ -22,7 +22,7 @@ export interface ThemeSwitcherOptionParameters extends ChildrenIncludable {
 }
 
 export function ThemeSwitcherOption(
-  {children, value}: ThemeSwitcherOptionParameters
+  {children, value}: ThemeSwitcherOptionParameters,
 ): JSX.Element {
   return <div role="radio" data-value={value}>{children}</div>
 }

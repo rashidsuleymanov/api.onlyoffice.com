@@ -1,6 +1,7 @@
 import {spawn} from "node:child_process"
+import {existsSync} from "node:fs"
 import {readFile, readdir} from "node:fs/promises"
-import {join} from "node:path"
+import path from "node:path"
 import {argv} from "node:process"
 import {URL, fileURLToPath} from "node:url"
 import sade from "sade"
@@ -25,8 +26,11 @@ async function run(cmd: string): Promise<void> {
   const pd = packagesDir(cd)
   const pc = await readdir(pd)
   for (const p of pc) {
-    const d = join(pd, p)
+    const d = path.join(pd, p)
     const f = packageJSON(d)
+    if (!existsSync(f)) {
+      continue
+    }
     const c = await readFile(f, "utf8")
     const j = JSON.parse(c)
     if (!(j.scripts && j.scripts[cmd])) {
@@ -46,9 +50,9 @@ function currentDir(): string {
 }
 
 function packagesDir(d: string): string {
-  return join(d, "packages")
+  return path.join(d, "packages")
 }
 
 function packageJSON(d: string): string {
-  return join(d, "package.json")
+  return path.join(d, "package.json")
 }

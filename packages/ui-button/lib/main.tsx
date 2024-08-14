@@ -1,5 +1,5 @@
-import {type HTMLAttributes} from "preact/compat"
 import {type JSX, h} from "preact"
+import {type HTMLAttributes} from "preact/compat"
 
 export interface ButtonProperties extends HTMLAttributes<HTMLButtonElement> {
   variant?: "accent" | "default"

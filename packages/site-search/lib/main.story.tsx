@@ -3,17 +3,17 @@ import {type Meta} from "@storybook/preact"
 import {Fragment, type JSX, h} from "preact"
 import {
   SearchClear,
-  type SearchContainerProperties,
   SearchContainer,
+  type SearchContainerProperties,
   SearchField,
   SearchHidable,
   SearchOutput,
   SearchPlaceholder,
-  SearchTemplate
+  SearchTemplate,
 } from "./main.tsx"
 
 export default {
-  title: "Site/Search"
+  title: "Site/Search",
 } satisfies Meta
 
 export function Default({...props}: SearchContainerProperties): JSX.Element {
@@ -23,8 +23,8 @@ export function Default({...props}: SearchContainerProperties): JSX.Element {
     <SearchClear label="Clear" />
     <SearchTemplate>
       <li>
-        <a data-search-container-link></a>
-        <p data-search-container-matches></p>
+        <a data-search-container-link />
+        <p data-search-container-matches />
       </li>
     </SearchTemplate>
   </SearchContainer>
@@ -41,8 +41,8 @@ export function WithContent(): JSX.Element {
     </SearchHidable>
     <SearchOutput>
       <Content>
-        <h1 aria-live="polite"><span data-search-container-counter></span> Results</h1>
-        <ol data-search-container-results></ol>
+        <h1 aria-live="polite"><span data-search-container-counter /> Results</h1>
+        <ol data-search-container-results />
       </Content>
     </SearchOutput>
   </>

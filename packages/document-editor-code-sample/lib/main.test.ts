@@ -2,7 +2,8 @@ import {type DocEditorConfig} from "@onlyoffice/document-server-types"
 import {assert} from "@open-wc/testing"
 import {html, js, json} from "./main.ts"
 
-const {fail: un, strictEqual: is} = assert
+const un = assert.fail.bind(assert)
+const is = assert.strictEqual.bind(assert)
 
 it("html(): includes the url parameter", () => {
   const s = html("http://localhost/", {})
@@ -160,8 +161,8 @@ function properties(): DocEditorConfig {
       fileType: "docx",
       key: "xxx",
       title: "Untitled document",
-      url: "http://localhost/document.docx"
-    }
+      url: "http://localhost/document.docx",
+    },
   }
 }
 
@@ -173,7 +174,7 @@ function events(): DocEditorConfig {
       },
       onError(...args) {
         console.error("Document Editor error:", ...args)
-      }
-    }
+      },
+    },
   }
 }

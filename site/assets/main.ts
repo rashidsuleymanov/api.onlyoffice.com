@@ -1,21 +1,22 @@
+/* eslint-disable import/no-unassigned-import */
+
 document.addEventListener("documentbuildererror", onError)
 document.addEventListener("documenteditorerror", onError)
 document.addEventListener("documenteditorplaygrounderror", onError)
 document.addEventListener("DOMContentLoaded", main)
 
 import "@onlyoffice/combobox-container-html-element"
-import "@onlyoffice/radiogroup-container-html-element"
 import "@onlyoffice/document-builder-html-element"
-import "@onlyoffice/document-editor-config-html-element"
 import "@onlyoffice/document-editor-html-element"
 import "@onlyoffice/document-editor-mirror-html-element"
-import "@onlyoffice/ui-kit/client.ts"
+import "@onlyoffice/radiogroup-container-html-element"
+import {Client} from "@onlyoffice/server-client"
 import "@onlyoffice/site-kit/client.ts"
-import "../components/tree/tree.client.ts"
+import "@onlyoffice/ui-kit/client.ts"
 import "../components/document-builder-container/element.ts"
+import "../components/tree/tree.client.ts"
 import "../internal/global-navigation-container.ts"
 import "../internal/legacy-container.ts"
-import {Client} from "@onlyoffice/server-client"
 
 function main(): void {
   const c = new Client()
@@ -23,19 +24,25 @@ function main(): void {
     c.baseURL = import.meta.env.CONFIG_SERVER_BASE_URL
   }
 
+  const a: Promise<void>[] = []
+
   const sp = document.querySelector("document-editor-playground")
   if (sp) {
     sp.client = c
-    sp.play()
+    const p = sp.play()
+    a.push(p)
   }
 
   const bc = document.querySelector("document-builder-container")
   if (bc) {
     bc.client = c
-    bc.play()
+    const p = bc.play()
+    a.push(p)
   }
+
+  Promise.all(a).catch(onError)
 }
 
 function onError(...args: unknown[]): void {
-  console.error(`Site error:`, ...args)
+  console.error("Site error:", ...args)
 }

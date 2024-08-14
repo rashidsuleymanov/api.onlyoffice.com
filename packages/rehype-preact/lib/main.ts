@@ -2,16 +2,20 @@
 // https://github.com/rehypejs/rehype-react/blob/main/lib/index.js#L18
 
 import {type Root} from "hast"
-import {type Options} from "hast-util-to-jsx-runtime"
-import {toJsxRuntime} from "hast-util-to-jsx-runtime"
+import {type Options, toJsxRuntime} from "hast-util-to-jsx-runtime"
 import {type JSX} from "preact"
-import {type VFile} from "vfile"
+import {type Processor} from "unified"
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function rehypePreact(this: any, options: Options): void {
-  this.compiler = compiler
+declare module "unified" {
+  interface CompileResultMap {
+    "JSX.Element": JSX.Element
+  }
+}
 
-  function compiler(t: Root, f: VFile): JSX.Element {
-    return toJsxRuntime(t, {filePath: f.path, ...options})
+export function rehypePreact(this: void, options: unknown): void {
+  const c = this as unknown as Processor<undefined, undefined, undefined, Root, JSX.Element>
+  const o = options as Options
+  c.compiler = function compiler(t, f): JSX.Element {
+    return toJsxRuntime(t, {filePath: f.path, ...o})
   }
 }

@@ -3,7 +3,7 @@ import {URL} from "node:url"
 
 export function relative(a: string, b: string): string {
   let r = path.relative(a, b)
-  if (r.slice(0, 3) !== "../") {
+  if (!r.startsWith("../")) {
     r = `./${r}`
   }
   return r

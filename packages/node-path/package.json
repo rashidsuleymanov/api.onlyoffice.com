@@ -1,12 +1,12 @@
 {
   "name": "@onlyoffice/node-path",
-  "private": true,
   "type": "module",
-  "main": "lib/main.ts",
+  "private": true,
   "exports": {
     ".": "./lib/main.ts",
     "./win32.ts": "./lib/win32.ts"
   },
+  "main": "lib/main.ts",
   "scripts": {
     "test:types": "tsc",
     "test:unit": "c8 --config ../../c8.config.json tsx node_modules/uvu/bin.js lib ^.*\\.test\\.ts$",

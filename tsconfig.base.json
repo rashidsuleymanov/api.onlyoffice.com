@@ -1,18 +1,18 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "allowImportingTsExtensions": true,
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "resolveJsonModule": true,
-    "noEmit": true,
-    "allowJs": true,
-    "checkJs": true,
-    "allowSyntheticDefaultImports": true,
+    "target": "ESNext",
     "jsx": "react",
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment",
-    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
     "skipLibCheck": true
   }
 }

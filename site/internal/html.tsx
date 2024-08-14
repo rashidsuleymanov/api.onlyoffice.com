@@ -23,25 +23,20 @@ export function Html(p: HtmlProperties): JSX.Element {
     <head>
       <meta charset="utf-8" />
       <title>{p.title}</title>
-
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <meta name="view-transition" content="same-origin" />
       <meta name="description" content={p.description} />
       <meta name="generator" content={p.generator} />
-
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       <link rel="apple-touch-icon" href="/favicon.png" />
-
       {[
         "OpenSans-Regular.woff2",
         "OpenSans-Medium.woff2",
         "OpenSans-SemiBold.woff2",
         "OpenSans-Bold.woff2",
       ].map((f) => <link rel="preload" href={`/${f}`} crossorigin="" as="font" type="font/woff2" />)}
-
       {c.analytics && <GoogleTagManagerScript />}
-
       <Style href="/assets/main.css" />
       <Script async src="/assets/prerender.js" inline />
       <Script defer src="/assets/main.ts" />

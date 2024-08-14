@@ -1,5 +1,5 @@
-import {is} from "uvu/assert"
 import {test} from "uvu"
+import {is} from "uvu/assert"
 import {toString} from "./main.ts"
 
 test("stringifies an empty string", () => {
@@ -145,7 +145,9 @@ test("stringifies a function", () => {
 
 test("respects the function toString", () => {
   function fn(): void {}
-  fn.toString = () => "function fn() {}"
+  fn.toString = () => {
+    return "function fn() {}"
+  }
   const s = toString(fn)
   is(s, "function fn() {}")
 })
@@ -158,7 +160,9 @@ test("stringifies an arrow function", () => {
 
 test("respects the arrow function toString", () => {
   const fn = (): void => {}
-  fn.toString = () => "() => {}"
+  fn.toString = () => {
+    return "() => {}"
+  }
   const s = toString(fn)
   is(s, "() => {}")
 })

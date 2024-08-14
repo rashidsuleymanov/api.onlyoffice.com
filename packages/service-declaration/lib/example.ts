@@ -27,7 +27,7 @@ export function httpExample(req: RequestDeclaration): Example {
       if (h.cases) {
         s += h.cases.join(", ")
       } else {
-        s += `${h.identifier}`
+        s += h.identifier
       }
       s += "\n"
     }

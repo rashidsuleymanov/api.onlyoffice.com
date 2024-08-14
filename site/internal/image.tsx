@@ -8,8 +8,8 @@ import {toJsx} from "@onlyoffice/preact-eleventy-img"
 import {useSuspense} from "@onlyoffice/preact-suspense"
 import {cutPrefix} from "@onlyoffice/strings"
 import {type Root} from "hast"
-import {type HTMLAttributes} from "preact/compat"
 import {type JSX, h} from "preact"
+import {type HTMLAttributes} from "preact/compat"
 import copy from "recursive-copy"
 import {visit} from "unist-util-visit"
 import {type VFile} from "vfile"
@@ -17,21 +17,21 @@ import {type VFile} from "vfile"
 export function Image(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
   let r: JSX.Element | null = null
 
-  p = Object.assign({}, p)
-  p.style = Object.assign({}, p.style)
+  p = {...p}
+  p.style = {...p.style}
 
   if (p.alt === undefined) {
     throw new Error("The 'alt' attribute is required, but missing.")
   }
   if (typeof p.alt !== "string") {
-    throw new Error("The 'alt' attribute must be a string.")
+    throw new TypeError("The 'alt' attribute must be a string.")
   }
 
   if (p.src === undefined) {
     throw new Error("The 'src' attribute is required, but missing.")
   }
   if (typeof p.src !== "string") {
-    throw new Error("The 'src' attribute must be a string.")
+    throw new TypeError("The 'src' attribute must be a string.")
   }
   if (!URL.canParse(p.src) && !path.isAbsolute(p.src)) {
     throw new Error("The 'src' attribute must be an absolute URL.")
@@ -41,7 +41,7 @@ export function Image(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
 
   if (p.width !== undefined) {
     if (typeof p.style === "string") {
-      throw new Error("The 'style' attribute must not be a string.")
+      throw new TypeError("The 'style' attribute must not be a string.")
     }
     if (typeof p.style === "object" && "peek" in p.style) {
       throw new Error("The 'style' attribute must not be a signal.")
@@ -56,7 +56,7 @@ export function Image(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
 
   if (p.height !== undefined) {
     if (typeof p.style === "string") {
-      throw new Error("The 'style' attribute must not be a string.")
+      throw new TypeError("The 'style' attribute must not be a string.")
     }
     if (typeof p.style === "object" && "peek" in p.style) {
       throw new Error("The 'style' attribute must not be a signal.")
@@ -89,7 +89,7 @@ export function Image(p: HTMLAttributes<HTMLImageElement>): JSX.Element {
 }
 
 export interface RehypeImageTransform {
-  (tree: Root, file: VFile): Promise<unknown>
+  (tree: Root, file: VFile): Promise<undefined>
 }
 
 export function rehypeImage(): RehypeImageTransform {
@@ -114,24 +114,24 @@ export function rehypeImage(): RehypeImageTransform {
         throw new Error("The 'alt' attribute is required, but missing.")
       }
       if (typeof p.alt !== "string") {
-        throw new Error("The 'alt' attribute must be a string.")
+        throw new TypeError("The 'alt' attribute must be a string.")
       }
 
       if (p.src === undefined) {
         throw new Error("The 'src' attribute is required, but missing.")
       }
       if (typeof p.src !== "string") {
-        throw new Error("The 'src' attribute must be a string.")
+        throw new TypeError("The 'src' attribute must be a string.")
       }
 
       p.src = resolve(p.src, f.path)
 
       if (p.width !== undefined && p.width !== null) {
         if (typeof p.style !== "string") {
-          throw new Error("The 'style' attribute must be a string.")
+          throw new TypeError("The 'style' attribute must be a string.")
         }
         if (typeof p.width !== "string" && typeof p.width !== "number") {
-          throw new Error("The 'width' attribute must be a string or a number.")
+          throw new TypeError("The 'width' attribute must be a string or a number.")
         }
         let v = ""
         if (typeof p.width === "number") {
@@ -144,10 +144,10 @@ export function rehypeImage(): RehypeImageTransform {
 
       if (p.height !== undefined && p.height !== null) {
         if (typeof p.style !== "string") {
-          throw new Error("The 'style' attribute must be a string.")
+          throw new TypeError("The 'style' attribute must be a string.")
         }
         if (typeof p.height !== "string" && typeof p.height !== "number") {
-          throw new Error("The 'height' attribute must be a string or a number.")
+          throw new TypeError("The 'height' attribute must be a string or a number.")
         }
         let v = ""
         if (typeof p.height === "number") {
@@ -169,14 +169,12 @@ export function rehypeImage(): RehypeImageTransform {
       const o = options(p.src)
       const d = image(p.src, o).then((m) => {
         r.children[i] = toHast(m, b)
-        return
       })
 
       a.push(d)
     })
 
     await Promise.all(a)
-    return t
   }
 }
 

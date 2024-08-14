@@ -1,0 +1,41 @@
+{
+  "name": "@onlyoffice/eslint-config",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./lib/main.js"
+  },
+  "main": "lib/main.js",
+  "scripts": {
+    "test:types": "tsc",
+    "test:unit": "c8 --config ../../c8.config.json tsx node_modules/uvu/bin.js lib ^.*\\.test\\.ts$",
+    "test": "pnpm test:types && pnpm test:unit"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.8.0",
+    "@onlyoffice/eslint-plugin": "workspace:^",
+    "@stylistic/eslint-plugin": "^2.6.2",
+    "@types/eslint-plugin-markdown": "^2.0.2",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^20.12.12",
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
+    "eslint": "^9.8.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsonc": "^2.15.1",
+    "eslint-plugin-markdown": "^5.1.0",
+    "eslint-plugin-promise": "^7.1.0",
+    "eslint-plugin-unicorn": "^55.0.0",
+    "eslint-plugin-wc": "^2.1.0",
+    "eslint-plugin-yml": "^1.14.0",
+    "globals": "^15.9.0",
+    "jsonc-eslint-parser": "^2.4.0",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^8.0.1",
+    "yaml-eslint-parser": "^1.2.3"
+  },
+  "devDependencies": {
+    "c8": "^9.1.0",
+    "tsx": "^4.16.5",
+    "uvu": "^0.5.6"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "@onlyoffice/preact-callback",
-  "private": true,
   "type": "module",
+  "private": true,
   "main": "lib/main.tsx",
   "scripts": {
     "test:types": "tsc",

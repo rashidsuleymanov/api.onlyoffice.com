@@ -1,7 +1,7 @@
 {
   "name": "@onlyoffice/document-editor-mirror-html-element",
-  "private": true,
   "type": "module",
+  "private": true,
   "main": "lib/main.ts",
   "scripts": {
     "demo:editor": "docker run --env JWT_HEADER=Authorization --env JWT_SECRET=your-256-bit-secret --publish 3000:80 onlyoffice/documentserver:8.0",

@@ -4,8 +4,8 @@ import {EleventyLightningcss} from "@onlyoffice/eleventy-lightningcss"
 import {useSuspense} from "@onlyoffice/preact-suspense"
 import browserslist from "browserslist"
 import {browserslistToTargets} from "lightningcss"
-import {type HTMLAttributes} from "preact/compat"
 import {type JSX, h} from "preact"
+import {type HTMLAttributes} from "preact/compat"
 
 export function Style({...p}: HTMLAttributes<HTMLLinkElement>): JSX.Element {
   let r: JSX.Element | null = null
@@ -15,7 +15,7 @@ export function Style({...p}: HTMLAttributes<HTMLLinkElement>): JSX.Element {
     throw new Error("The 'href' attribute is required, but missing.")
   }
   if (typeof f !== "string") {
-    throw new Error("The 'href' attribute must be a string.")
+    throw new TypeError("The 'href' attribute must be a string.")
   }
   if (path.isAbsolute(f)) {
     f = decodeURIComponent(`.${f}`)

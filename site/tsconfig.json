@@ -1,14 +1,14 @@
 {
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
+    "jsx": "react",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "rootDir": ".",
     "paths": {
       "@/*": ["./*"]
     },
-    "rootDir": ".",
-    "outDir": "dist",
-    "jsx": "react",
-    "jsxFactory": "h",
-    "jsxFragmentFactory": "Fragment"
+    "outDir": "dist"
   },
   "include": [
     "assets",
@@ -20,7 +20,7 @@
     "pages",
     "resources",
     "eleventy.config.ts",
-    "index.d.ts",
+    "index.d.ts"
   ],
   "exclude": [
     "./dist",

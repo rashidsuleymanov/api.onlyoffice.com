@@ -12,9 +12,10 @@ import * as code from "@onlyoffice/declaration-code-example"
 import type * as Tokenizer from "@onlyoffice/declaration-tokenizer"
 import {ESLint} from "@onlyoffice/eslint-presentation"
 import {type Catharsis, type Doclet, type DocletParam} from "@onlyoffice/jsdoc"
-import * as tokenizer from "@onlyoffice/library-declaration/tokenizer.ts"
 import type * as Library from "@onlyoffice/library-declaration"
+// eslint-disable-next-line no-duplicate-imports
 import * as library from "@onlyoffice/library-declaration"
+import * as tokenizer from "@onlyoffice/library-declaration/tokenizer.ts"
 import {firstParagraph, firstSentence, selectSection} from "@onlyoffice/markdown"
 import {isStringLiteral} from "@onlyoffice/strings"
 import languagedetection from "@vscode/vscode-languagedetection"
@@ -35,13 +36,13 @@ export interface FirstIterationChunk {
 }
 
 export class FirstIteration extends AsyncTransform {
-  _c: Cache
-  _i: number
+  c: Cache
+  i: number
 
   constructor(c: Cache) {
     super({objectMode: true})
-    this._c = c
-    this._i = -1
+    this.c = c
+    this.i = -1
   }
 
   async _atransform(ch: FirstIterationChunk): Promise<undefined> {
@@ -55,17 +56,17 @@ export class FirstIteration extends AsyncTransform {
     }
 
     for (const d of a) {
-      this._record(d)
-      this._overload(d)
-      this._index(d)
+      this.record(d)
+      this.overload(d)
+      this.index(d)
       this.push(d)
     }
 
     console.log(`Finish processing '${m}' at first iteration`)
   }
 
-  _record(d: Library.Declaration): void {
-    const b = this._c.next
+  record(d: Library.Declaration): void {
+    const b = this.c.next
 
     if (d.kind === "class") {
       if (d.extends) {
@@ -114,8 +115,8 @@ export class FirstIteration extends AsyncTransform {
     }
   }
 
-  _overload(d: Library.Declaration): void {
-    const b = this._c.next
+  overload(d: Library.Declaration): void {
+    const b = this.c.next
 
     const u0 = d.id
     const d1 = d
@@ -185,35 +186,37 @@ export class FirstIteration extends AsyncTransform {
     }
   }
 
-  _index(d: Library.Declaration): void {
-    this._i += 1
-    this._c.next.indexes[d.id] = this._i
+  index(d: Library.Declaration): void {
+    this.i += 1
+    this.c.next.indexes[d.id] = this.i
   }
 }
 
 export class SecondIteration extends AsyncTransform {
-  _c: Cache
-  _i: number
+  c: Cache
+  i: number
 
   constructor(c: Cache) {
     super({objectMode: true})
-    this._c = c
-    this._i = -1
+    this.c = c
+    this.i = -1
   }
 
+  // todo: replace AsyncTransform with Transform
+  // eslint-disable-next-line @typescript-eslint/require-await
   async _atransform(d: Library.Declaration): Promise<undefined> {
     const m = JSON.stringify({id: d.id})
     console.log(`Start processing '${m}' at second iteration`)
 
-    this._populate(d)
-    this._index(d)
+    this.populate(d)
+    this.index(d)
     this.push(d)
 
     console.log(`Finish processing '${m}' at second iteration`)
   }
 
-  _populate(d: Library.Declaration): void {
-    const b = this._c.current
+  populate(d: Library.Declaration): void {
+    const b = this.c.current
 
     const r = b.records[d.id]
     if (!r) {
@@ -262,22 +265,24 @@ export class SecondIteration extends AsyncTransform {
     }
   }
 
-  _index(d: Library.Declaration): void {
-    this._i += 1
-    this._c.next.indexes[d.id] = this._i
+  index(d: Library.Declaration): void {
+    this.i += 1
+    this.c.next.indexes[d.id] = this.i
   }
 }
 
 export class ThirdIteration extends AsyncTransform {
-  _c: Cache
-  _i: number
+  c: Cache
+  i: number
 
   constructor(c: Cache) {
     super({objectMode: true})
-    this._c = c
-    this._i = -1
+    this.c = c
+    this.i = -1
   }
 
+  // todo: replace AsyncTransform with Transform
+  // eslint-disable-next-line @typescript-eslint/require-await
   async _atransform(d: Library.Declaration): Promise<undefined> {
     const m = JSON.stringify({id: d.id})
     console.log(`Start processing '${m}' at third iteration`)
@@ -288,7 +293,7 @@ export class ThirdIteration extends AsyncTransform {
     }
 
     if (d.signature) {
-      this._sig(d.signature)
+      this.sig(d.signature)
     }
 
     // Cannot merge statements, TS does not understand well the in keyword.
@@ -298,7 +303,7 @@ export class ThirdIteration extends AsyncTransform {
       d.kind === "event" ||
       d.kind === "method"
     ) {
-      this._func(d.type)
+      this.func(d.type)
     }
 
     if (
@@ -306,32 +311,32 @@ export class ThirdIteration extends AsyncTransform {
       !("id" in d.type) &&
       d.type.type === "function"
     ) {
-      this._func(d.type)
+      this.func(d.type)
     }
 
-    this._index(d)
+    this.index(d)
     this.push(d)
 
     console.log(`Finish processing '${m}' at third iteration`)
   }
 
-  _func(t: Library.FunctionType): void {
+  func(t: Library.FunctionType): void {
     if (t.parameters) {
       for (const p of t.parameters) {
         // Conceptually there should be toValueTokens.
         p.signature = tokenizer.type(p.type)
-        this._sig(p.signature)
+        this.sig(p.signature)
       }
     }
 
     if (t.returns) {
       t.returns.signature = tokenizer.type(t.returns.type)
-      this._sig(t.returns.signature)
+      this.sig(t.returns.signature)
     }
   }
 
-  _sig(s: Tokenizer.Token[]): void {
-    const b = this._c.current
+  sig(s: Tokenizer.Token[]): void {
+    const b = this.c.current
     for (const t of s) {
       if (t.type === "reference" && t.text === "") {
         const i = b.indexes[t.id]
@@ -351,9 +356,9 @@ export class ThirdIteration extends AsyncTransform {
     }
   }
 
-  _index(d: Library.Declaration): void {
-    this._i += 1
-    this._c.next.indexes[d.id] = this._i
+  index(d: Library.Declaration): void {
+    this.i += 1
+    this.c.next.indexes[d.id] = this.i
   }
 }
 
@@ -388,7 +393,7 @@ export class Cache {
       write(ch, _, cb) {
         b.declarations.push(ch)
         cb()
-      }
+      },
     })
   }
 
@@ -408,7 +413,7 @@ function cacheBuffer(): CacheBuffer {
   return {
     declarations: [],
     indexes: {},
-    records: {}
+    records: {},
   }
 }
 
@@ -422,24 +427,24 @@ function cacheRecord(): CacheRecord {
   return {
     events: new Set(),
     extendsBy: new Set(),
-    methods: new Set()
+    methods: new Set(),
   }
 }
 
 async function declaration(dc: Doclet): Promise<[Library.Declaration[], ...Error[]]> {
   switch (dc.kind) {
   case "class":
-    return classDeclaration(dc)
+    return await classDeclaration(dc)
   case "constant":
     return [[], new Error("Constant is not supported")]
   case "event":
-    return eventDeclaration(dc)
+    return await eventDeclaration(dc)
   case "external":
     return [[], new Error("External is not supported")]
   case "file":
     return [[], new Error("File is not supported")]
   case "function":
-    return functionDeclaration(dc)
+    return await functionDeclaration(dc)
   case "interface":
     return [[], new Error("Interface is not supported")]
   case "member":
@@ -455,7 +460,7 @@ async function declaration(dc: Doclet): Promise<[Library.Declaration[], ...Error
   case "param":
     return [[], new Error("Param is not supported")]
   case "typedef":
-    return typeDeclaration(dc)
+    return await typeDeclaration(dc)
   case undefined:
     return [[], new Error("Doclet has no kind")]
   default:
@@ -839,7 +844,7 @@ function type(ca: Catharsis): [Library.Type, ...Error[]] {
 
   if (ca.type === "UndefinedLiteral") {
     const t = library.typeNode()
-    return [library.literalType(t, undefined)]
+    return [library.literalType(t)]
   }
 
   if (ca.type === "UnknownLiteral") {

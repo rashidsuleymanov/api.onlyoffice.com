@@ -1,7 +1,7 @@
-import {mkdir, mkdtemp, rm, rmdir, writeFile} from "node:fs/promises"
 import {createWriteStream, existsSync} from "node:fs"
+import {mkdir, mkdtemp, rm, rmdir, writeFile} from "node:fs/promises"
 import {tmpdir} from "node:os"
-import {join} from "node:path"
+import path from "node:path"
 import process from "node:process"
 import {Readable, Transform, type TransformCallback} from "node:stream"
 import {URL, fileURLToPath} from "node:url"
@@ -13,10 +13,10 @@ import {resource} from "@onlyoffice/library-resource"
 import {declarationBasename, indexBasename, resourceBasename} from "@onlyoffice/resource"
 import {StringWritable} from "@onlyoffice/stream-string"
 import Chain from "stream-chain"
-import StreamArray from "stream-json/streamers/StreamArray.js"
 import Disassembler from "stream-json/Disassembler.js"
 import Parser from "stream-json/Parser.js"
 import Stringer from "stream-json/Stringer.js"
+import StreamArray from "stream-json/streamers/StreamArray.js"
 import pack from "../package.json" with {type: "json"}
 
 const console = new Console(pack.name, process.stdout, process.stderr)
@@ -48,7 +48,7 @@ async function main(): Promise<void> {
       new StreamArray(),
       new Preprocess(),
       new FirstIteration(cache),
-      cache.toWritable()
+      cache.toWritable(),
     ])
     c.on("close", res)
     c.on("error", rej)
@@ -60,7 +60,7 @@ async function main(): Promise<void> {
     const c = new Chain([
       cache.toReadable(),
       new SecondIteration(cache),
-      cache.toWritable()
+      cache.toWritable(),
     ])
     c.on("close", res)
     c.on("error", rej)
@@ -72,7 +72,7 @@ async function main(): Promise<void> {
     const c = new Chain([
       cache.toReadable(),
       new ThirdIteration(cache),
-      cache.toWritable()
+      cache.toWritable(),
     ])
     c.on("close", res)
     c.on("error", rej)
@@ -80,27 +80,27 @@ async function main(): Promise<void> {
 
   cache.step()
 
-  const f = join(td, "resource.json")
+  const f = path.join(td, "resource.json")
 
   await new Promise((res, rej) => {
     const c = new Chain([
       Readable.from(cache.current.declarations),
       new Disassembler(),
       new Stringer({makeArray: true}),
-      createWriteStream(f)
+      createWriteStream(f),
     ])
     c.on("close", res)
     c.on("error", rej)
   })
 
   const dn = declarationBasename("resource")
-  const df = join(dd, dn)
+  const df = path.join(dd, dn)
 
   const mn = indexBasename("resource")
-  const mf = join(dd, mn)
+  const mf = path.join(dd, mn)
 
   const rn = resourceBasename("resource")
-  const rf = join(dd, rn)
+  const rf = path.join(dd, rn)
 
   await Promise.all([
     (async () => {
@@ -110,13 +110,13 @@ async function main(): Promise<void> {
     })(),
 
     (async () => {
-      const f = join(td, mn)
+      const f = path.join(td, mn)
       await new Promise((res, rej) => {
         const c = new Chain([
           Readable.from([cache.current.indexes]),
           new Disassembler(),
           new Stringer(),
-          createWriteStream(f)
+          createWriteStream(f),
         ])
         c.on("close", res)
         c.on("error", rej)
@@ -132,7 +132,7 @@ async function main(): Promise<void> {
     (async () => {
       const r = await resource(df, mf)
       await writeFile(rf, r)
-    })()
+    })(),
   ])
 
   await rm(f)
@@ -178,7 +178,7 @@ class Preprocess extends Transform {
 
 function tempDir(): string {
   const n = pack.name.replace("/", "+")
-  return join(tmpdir(), n)
+  return path.join(tmpdir(), n)
 }
 
 function rootDir(): string {
@@ -187,11 +187,11 @@ function rootDir(): string {
 }
 
 function distDir(d: string): string {
-  return join(d, "dist")
+  return path.join(d, "dist")
 }
 
 function fixturesDir(d: string): string {
-  return join(d, "fixtures")
+  return path.join(d, "fixtures")
 }
 
 await main()

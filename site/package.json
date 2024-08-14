@@ -1,7 +1,7 @@
 {
   "name": "@onlyoffice/site",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "demo:editor": "docker run --env JWT_HEADER=Authorization --env JWT_SECRET=your-256-bit-secret --publish 3000:80 onlyoffice/documentserver-de:8.0",
     "demo:server": "store-demo",
@@ -30,7 +30,6 @@
     "@onlyoffice/document-builder-html-element": "workspace:^",
     "@onlyoffice/document-builder-resource": "workspace:^",
     "@onlyoffice/document-builder-utils": "workspace:^",
-    "@onlyoffice/document-editor-config-html-element": "workspace:^",
     "@onlyoffice/document-editor-html-element": "workspace:^",
     "@onlyoffice/document-editor-mirror-html-element": "workspace:^",
     "@onlyoffice/eleventy-clean": "workspace:^",
@@ -56,6 +55,7 @@
     "@onlyoffice/radiogroup-container-html-element": "workspace:^",
     "@onlyoffice/rehype-preact": "workspace:^",
     "@onlyoffice/rehype-starry-night": "workspace:^",
+    "@onlyoffice/remark-config": "workspace:^",
     "@onlyoffice/remark-document-builder": "workspace:^",
     "@onlyoffice/server-client": "workspace:^",
     "@onlyoffice/service-declaration": "workspace:^",
@@ -69,7 +69,6 @@
     "@onlyoffice/ui-icons": "workspace:^",
     "@onlyoffice/ui-kit": "workspace:^",
     "@onlyoffice/ui-logos": "workspace:^",
-    "@onlyoffice/xml-types": "workspace:^",
     "@types/11ty__eleventy-img": "^4.0.0",
     "@types/hast": "^3.0.4",
     "@types/js-cookie": "^3.0.6",
@@ -103,8 +102,9 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.0",
     "require-from-string": "^2.0.2",
-    "unified": "^11.0.4",
+    "unified": "^11.0.5",
     "unist-util-visit": "^5.0.0",
-    "vfile": "^6.0.1"
+    "vfile": "^6.0.1",
+    "vfile-reporter-pretty": "^7.0.0"
   }
 }

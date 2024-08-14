@@ -1,3 +1,5 @@
+import type * as _ from "preact"
+
 declare global {
   namespace preact {
     namespace JSX {
@@ -10,5 +12,3 @@ declare global {
     }
   }
 }
-
-export {}

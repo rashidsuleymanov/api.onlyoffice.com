@@ -1,3 +1,10 @@
+/* eslint-disable @typescript-eslint/no-implied-eval, no-new-func */
+
+// todo: resolve ignores
+/* eslint-disable @typescript-eslint/no-confusing-void-expression */
+/* eslint-disable @typescript-eslint/no-floating-promises */
+/* eslint-disable @typescript-eslint/no-misused-promises */
+
 import {ComboboxContainer, ComboboxContainerChangeEvent, ComboboxContainerChangedEvent} from "@onlyoffice/combobox-container-html-element"
 import * as configSample from "@onlyoffice/document-editor-code-sample"
 import {DocumentEditor, type DocumentEditorEventHandlerName} from "@onlyoffice/document-editor-html-element"
@@ -329,7 +336,6 @@ export class DocumentEditorPlayground extends HTMLElement {
       e.submitter === this.#playButton
     ) {
       this.#handlePlayAction(e)
-      return
     }
   }
 

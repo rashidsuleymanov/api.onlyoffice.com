@@ -1,10 +1,10 @@
-export function callerPosition(err: Error, off: number = 0): [number, number] {
+export function callerPosition(err: Error, off = 0): [number, number] {
   if (!err.stack) {
     return [-1, -1]
   }
 
   const ls = err.stack.split("\n")
-  if (ls[0].indexOf("Error") === 0) {
+  if (ls[0].startsWith("Error")) {
     ls.shift()
   }
 
@@ -13,7 +13,7 @@ export function callerPosition(err: Error, off: number = 0): [number, number] {
     return [-1, -1]
   }
 
-  const pm = cl.match(/(\d*:\d*)\)?$/)
+  const pm = /(\d*:\d*)\)?$/.exec(cl)
   if (!(pm && pm[1])) {
     return [-1, -1]
   }

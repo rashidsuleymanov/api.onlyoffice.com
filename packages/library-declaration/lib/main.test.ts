@@ -1,5 +1,5 @@
-import {equal as eq, is} from "uvu/assert"
 import {test} from "uvu"
+import {equal as eq, is} from "uvu/assert"
 import {
   anyType,
   arrayType,
@@ -19,7 +19,7 @@ import {
   unionType,
   unknownType,
   value,
-  voidType
+  voidType,
 } from "./main.ts"
 
 test("creates a type node with correct order of keys", () => {
@@ -322,7 +322,7 @@ test("creates a class declaration with correct order of keys", () => {
     "instanceMethods",
     "instanceProperties",
     "typeMethods",
-    "typeProperties"
+    "typeProperties",
   ])
 })
 
@@ -348,7 +348,7 @@ function valueKeys(): string[] {
     "signature",
     "description",
     "default",
-    "type"
+    "type",
   ]
 }
 
@@ -365,6 +365,6 @@ function declarationNodeKeys(): string[] {
     "examples",
     "overloads",
     "overloadsBy",
-    "tryIt"
+    "tryIt",
   ]
 }

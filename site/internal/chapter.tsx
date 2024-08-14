@@ -1,8 +1,8 @@
 import {Sitemap, type SitemapEntity} from "@onlyoffice/eleventy-sitemap"
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {
-  Chapter as SChapter,
   ChapterContent,
+  Chapter as SChapter,
   ChapterNavigation as SChapterNavigation,
   SearchClear,
   SearchContainer,
@@ -13,14 +13,14 @@ import {
   SearchTemplate,
 } from "@onlyoffice/site-kit"
 import {
-  Breadcrumb as UBreadcrumb,
   BreadcrumbCrumb,
   Content,
+  Breadcrumb as UBreadcrumb,
 } from "@onlyoffice/ui-kit"
 import {Fragment, type JSX, h} from "preact"
-import {Tree} from "../components/tree/tree.ts"
-import {TableOfContents} from "./table-of-contents.tsx"
+import {Tree, TreeGroup, TreeItem, TreeLink} from "../components/tree/tree.tsx"
 import {Help} from "./help.tsx"
+import {TableOfContents} from "./table-of-contents.tsx"
 
 declare module "@onlyoffice/eleventy-types" {
   interface Data {
@@ -135,8 +135,8 @@ export function Chapter(p: ChapterProperties): JSX.Element {
         <SearchClear label="Clear" />
         <SearchTemplate>
           <li>
-            <p><a data-search-container-link></a></p>
-            <p data-search-container-matches></p>
+            <p><a data-search-container-link /></p>
+            <p data-search-container-matches />
           </li>
         </SearchTemplate>
       </SearchContainer>
@@ -153,8 +153,8 @@ export function Chapter(p: ChapterProperties): JSX.Element {
       </SearchHidable>
       <SearchOutput>
         <Content>
-          <h1 aria-live="polite"><span data-search-container-counter></span> Results</h1>
-          <ol data-search-container-results></ol>
+          <h1 aria-live="polite"><span data-search-container-counter /> Results</h1>
+          <ol data-search-container-results />
         </Content>
       </SearchOutput>
       {ud.help && <Help current={p.url} />}
@@ -212,10 +212,10 @@ export function ChapterNavigation(p: ChapterNavigationProperties): JSX.Element |
       if (!e || e.type !== "page") {
         return null
       }
-      return <Tree.Group>
-        <Tree.Link href={e.url} active={p.url === e.url}>{e.title}</Tree.Link>
+      return <TreeGroup>
+        <TreeLink href={e.url} active={p.url === e.url}>{e.title}</TreeLink>
         <Sub e={e} />
-      </Tree.Group>
+      </TreeGroup>
     })}
   </Tree>
 
@@ -240,16 +240,16 @@ export function ChapterNavigation(p: ChapterNavigationProperties): JSX.Element |
         if (!b) {
           return null
         }
-        return <Tree.Item expanded={e.children.includes(b.id)}>
-          <Tree.Link href="" active={false}>{e.title}</Tree.Link>
+        return <TreeItem expanded={e.children.includes(b.id)}>
+          <TreeLink href="" active={false}>{e.title}</TreeLink>
           <Sub e={e} />
-        </Tree.Item>
+        </TreeItem>
       }
       if (e.type === "page") {
-        return <Tree.Item expanded={p.url.startsWith(e.url)}>
-          <Tree.Link href={e.url} active={p.url === e.url}>{e.title}</Tree.Link>
+        return <TreeItem expanded={p.url.startsWith(e.url)}>
+          <TreeLink href={e.url} active={p.url === e.url}>{e.title}</TreeLink>
           {e.children.length !== 0 && <Sub e={e} />}
-        </Tree.Item>
+        </TreeItem>
       }
       // @ts-expect-error
       throw new Error(`Unexpected entity type: ${e.type}`)

@@ -59,7 +59,11 @@ export function data(): Data {
         p = cutSuffix(p, d.page.fileSlug)
         p += d.slug(d)
       }
-      p = p.split("/").map((s) => slug(s)).join("/")
+      p = p.split("/")
+        .map((s) => {
+          return slug(s)
+        })
+        .join("/")
       p += `.${d.page.outputFileExtension}`
       return p
     },
@@ -71,7 +75,11 @@ export function data(): Data {
       let p = d.page.filePathStem
       p = cutSuffix(p, d.page.fileSlug)
       p += s
-      p = p.split("/").map((s) => slug(s)).join("/")
+      p = p.split("/")
+        .map((s) => {
+          return slug(s)
+        })
+        .join("/")
       return p
     },
 

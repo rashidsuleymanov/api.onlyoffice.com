@@ -1,8 +1,8 @@
 import {DocumentEditorPlayground} from "./element.ts"
 import {
-  type GlobalDocumentEditorPlaygroundErrorHandler,
   DocumentEditorPlaygroundErrorEvent,
-  type DocumentEditorPlaygroundErrorListener
+  type DocumentEditorPlaygroundErrorListener,
+  type GlobalDocumentEditorPlaygroundErrorHandler,
 } from "./events.ts"
 
 declare global {

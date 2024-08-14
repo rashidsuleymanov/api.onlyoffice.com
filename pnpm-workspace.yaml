@@ -1,6 +1,4 @@
 packages:
-  - "migration"
-  - "packages/*"
-  - "site"
-  - "storybook"
-  - "ui/*"
+- "packages/*"
+- "site"
+- "storybook"

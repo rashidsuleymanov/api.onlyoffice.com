@@ -1,12 +1,12 @@
 import {readFile} from "node:fs/promises"
-import {join} from "node:path"
+import path from "node:path"
 import {URL, fileURLToPath} from "node:url"
 import {escape} from "@onlyoffice/node-path/win32.ts"
 import {type Component, type Declaration} from "@onlyoffice/service-declaration"
 
 export interface Resource {
-  list(): Declaration[]
-  resolve(id: string): Component | undefined
+  list(this: void): Declaration[]
+  resolve(this: void, id: string): Component | undefined
 }
 
 export function nop(): Resource {
@@ -16,7 +16,7 @@ export function nop(): Resource {
     },
     resolve(): undefined {
       return undefined
-    }
+    },
   }
 }
 
@@ -41,9 +41,9 @@ function rootDir(): string {
 }
 
 function fixturesDir(d: string): string {
-  return join(d, "fixtures")
+  return path.join(d, "fixtures")
 }
 
 function resourceFile(d: string): string {
-  return join(d, "resource.ts")
+  return path.join(d, "resource.ts")
 }

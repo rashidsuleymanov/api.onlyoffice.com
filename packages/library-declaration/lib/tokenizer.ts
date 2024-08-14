@@ -3,6 +3,7 @@
 // todo: add new lines for the long types.
 
 import type * as Tokenizer from "@onlyoffice/declaration-tokenizer"
+// eslint-disable-next-line no-duplicate-imports
 import * as tokenizer from "@onlyoffice/declaration-tokenizer"
 import type * as Library from "./main.ts"
 

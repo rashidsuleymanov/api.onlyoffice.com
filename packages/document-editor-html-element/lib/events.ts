@@ -1,27 +1,27 @@
 /* eslint @stylistic/max-len: ["error", {code: 140}] */
 
-import type {
-  DocEditorDocumentDownloadAsEvent,
-  DocEditorDocumentStateChangeEvent,
-  DocEditorErrorEvent,
-  DocEditorInfoEvent,
-  DocEditorMakeActionLinkEvent,
-  DocEditorMetaChangeEvent,
-  DocEditorRequestHistoryDataEvent,
-  DocEditorRequestInsertImageEvent,
-  DocEditorRequestOpenEvent,
-  DocEditorRequestReferenceDataEvent,
-  DocEditorRequestReferenceSourceEvent,
-  DocEditorRequestRenameEvent,
-  DocEditorRequestRestoreEvent,
-  DocEditorRequestSaveAsEvent,
-  DocEditorRequestSelectDocumentEvent,
-  DocEditorRequestSelectSpreadsheetEvent,
-  DocEditorRequestSendNotifyEvent,
-  DocEditorRequestUsersEvent,
-  DocEditorWarningEvent
+import {
+  type DocEditorDocumentDownloadAsEvent,
+  type DocEditorDocumentStateChangeEvent,
+  type DocEditorErrorEvent,
+  type DocEditorInfoEvent,
+  type DocEditorMakeActionLinkEvent,
+  type DocEditorMetaChangeEvent,
+  type DocEditorRequestHistoryDataEvent,
+  type DocEditorRequestInsertImageEvent,
+  type DocEditorRequestOpenEvent,
+  type DocEditorRequestReferenceDataEvent,
+  type DocEditorRequestReferenceSourceEvent,
+  type DocEditorRequestRenameEvent,
+  type DocEditorRequestRestoreEvent,
+  type DocEditorRequestSaveAsEvent,
+  type DocEditorRequestSelectDocumentEvent,
+  type DocEditorRequestSelectSpreadsheetEvent,
+  type DocEditorRequestSendNotifyEvent,
+  type DocEditorRequestUsersEvent,
+  type DocEditorWarningEvent,
 } from "@onlyoffice/document-server-types"
-import type {DocumentEditor} from "./element.ts"
+import {type DocumentEditor} from "./element.ts"
 
 /**
  * {@link https://api.onlyoffice.com/editors/config/events#onAppReady ONLYOFFICE Reference}

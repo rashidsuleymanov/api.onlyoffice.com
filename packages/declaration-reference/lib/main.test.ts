@@ -1,5 +1,5 @@
-import {equal as eq, is} from "uvu/assert"
 import {test} from "uvu"
+import {equal as eq, is} from "uvu/assert"
 import {reference} from "./main.ts"
 
 test("creates a reference with correct order of keys", () => {

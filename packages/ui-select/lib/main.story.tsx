@@ -3,7 +3,7 @@ import {type JSX, h} from "preact"
 import {Select, SelectCombobox, SelectListbox, SelectOption} from "./main.tsx"
 
 export default {
-  title: "UI/Select"
+  title: "UI/Select",
 } satisfies Meta
 
 export function Default(): JSX.Element {

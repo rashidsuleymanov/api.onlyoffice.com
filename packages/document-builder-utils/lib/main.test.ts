@@ -1,5 +1,7 @@
-import {is} from "uvu/assert"
+/* eslint-disable @typescript-eslint/no-confusing-void-expression, new-cap */
+
 import {test} from "uvu"
+import {is} from "uvu/assert"
 import {builder, fileType} from "./main.ts"
 
 declare global {
@@ -20,9 +22,15 @@ test("builder methods do nothing by default", () => {
 
 test("allows to mock builder methods", () => {
   const b = builder()
-  b.CloseFile = () => "a"
-  b.CreateFile = () => "b"
-  b.SaveFile = () => "c"
+  b.CloseFile = () => {
+    return "a"
+  }
+  b.CreateFile = () => {
+    return "b"
+  }
+  b.SaveFile = () => {
+    return "c"
+  }
   is(b.CloseFile(), "a")
   is(b.CreateFile(""), "b")
   is(b.SaveFile("", ""), "c")

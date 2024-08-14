@@ -1,5 +1,5 @@
-import {equal as eq, is} from "uvu/assert"
 import {test} from "uvu"
+import {equal as eq, is} from "uvu/assert"
 import {
   arrayType,
   booleanType,
@@ -8,7 +8,7 @@ import {
   objectType,
   stringType,
   typeNode,
-  unknownType
+  unknownType,
 } from "./main.ts"
 
 test("creates a type node with correct order of keys", () => {

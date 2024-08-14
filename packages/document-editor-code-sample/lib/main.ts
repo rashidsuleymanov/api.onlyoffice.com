@@ -20,7 +20,7 @@ export function html(url: string, config: DocEditorConfig): string {
     <title>ONLYOFFICE Document Editor Code Sample</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <style>body {height: 100vh; margin: 0}</style>
-    <script src="${u}"></script>
+    <script src="${u.toString()}"></script>
   </head>
   <body>
     <div id="placeholder"></div>

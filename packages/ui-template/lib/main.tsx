@@ -1,10 +1,10 @@
-import {type HTMLAttributes} from "preact/compat"
 import {type JSX, h} from "preact"
+import {type HTMLAttributes} from "preact/compat"
 import {renderToString} from "preact-render-to-string"
 
 export function Template(p: HTMLAttributes<HTMLTemplateElement>): JSX.Element {
-  const {children, ...props} = p
-  // @ts-ignore
-  const s = renderToString(p.children)
-  return <template dangerouslySetInnerHTML={{__html: s}} {...props} />
+  const {children, ...o} = p
+  // @ts-ignore children will be resolved inside renderToString
+  const s = renderToString(children)
+  return <template dangerouslySetInnerHTML={{__html: s}} {...o} />
 }

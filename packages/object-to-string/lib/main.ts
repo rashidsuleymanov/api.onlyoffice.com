@@ -1,4 +1,4 @@
-export function toString(o: unknown, d: number = 2): string {
+export function toString(o: unknown, d = 2): string {
   return un(o, 1)
 
   function un(o: unknown, l: number): string {

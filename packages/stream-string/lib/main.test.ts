@@ -1,6 +1,6 @@
 import {Readable} from "node:stream"
-import {is} from "uvu/assert"
 import {test} from "uvu"
+import {is} from "uvu/assert"
 import {StringReadable, StringWritable} from "./main.ts"
 
 test("allows to write to writable", async () => {

@@ -1,18 +1,18 @@
+import {Sitemap} from "@onlyoffice/eleventy-sitemap"
 import {
-  Home as SHome,
   HomeHero,
   HomeIn,
   HomeLink,
   HomeLinks,
-  type HomePartParameters,
   HomePart,
+  type HomePartParameters,
   HomePreview,
+  Home as SHome,
   SearchClear,
   SearchContainer,
   SearchField,
   SearchPlaceholder,
 } from "@onlyoffice/site-kit"
-import {Sitemap} from "@onlyoffice/eleventy-sitemap"
 import {CodePreview} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
 import {SyntaxHighlight} from "../components/syntax-highlight/syntax-highlight.ts"
@@ -157,7 +157,7 @@ export function Home(): JSX.Element {
           })}
         </HomeLinks>
         <HomePreview>
-          <a href={e.url} title={d.title}></a>
+          <a href={e.url} title={d.title} />
           <Image alt={d.image.alt} src={d.image.src} />
           <CodePreview>
             <pre><code><SyntaxHighlight syntax={d.sample.syntax}>

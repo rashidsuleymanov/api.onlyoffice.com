@@ -1,7 +1,7 @@
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {ChevronRightIcon} from "@onlyoffice/ui-icons/poor/12.tsx"
-import {type HTMLAttributes} from "preact/compat"
 import {Fragment, type JSX, cloneElement, h, toChildArray} from "preact"
+import {type HTMLAttributes} from "preact/compat"
 
 /**
  * {@link https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/ W3C Reference}

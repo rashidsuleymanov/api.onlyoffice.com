@@ -9,6 +9,6 @@ export function template(): Template {
     type: "element",
     tagName: "template",
     properties: {},
-    children: []
+    children: [],
   }
 }
