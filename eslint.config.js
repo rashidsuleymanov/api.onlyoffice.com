@@ -21,6 +21,7 @@ export default [
       "!site",
       "!storybook",
       "!c8.config.json",
+      "!CONTRIBUTING.md",
       "!eslint.config.js",
       "!lefthook.yml",
       "!makefile.ts",
