@@ -1,47 +1,73 @@
 import {spawn} from "node:child_process"
 import {existsSync} from "node:fs"
-import {readFile, readdir} from "node:fs/promises"
+import {readFile} from "node:fs/promises"
 import path from "node:path"
 import {argv} from "node:process"
 import {URL, fileURLToPath} from "node:url"
 import sade from "sade"
 
-main()
+const config: Record<string, string[]> = {
+  build: [
+    "eslint-config",
+    "remark-lint-eslint",
+    "remark-config",
+
+    "jsdoc-resource-fixtures",
+    "openapi-resource-fixtures",
+    "pagefind-fixtures",
+
+    "community-server-resource",
+    "docspace-hosted-solutions-resource",
+    "docspace-resource",
+    "document-builder-resource",
+
+    "ui-primitives",
+    "ui-icons",
+  ],
+}
 
 function main(): void {
-  sade("./makefile.ts")
+  sade("makefile.ts")
     .command("build")
-    .action(async () => {
-      await run("build")
-    })
-    .command("test")
-    .action(async () => {
-      await run("test")
+    .action(async ({_: t}: {_: string[]}) => {
+      if (t.length === 0) {
+        t = config.build
+      }
+      await run(t, "build")
     })
     .parse(argv)
 }
 
-async function run(cmd: string): Promise<void> {
-  const cd = currentDir()
-  const pd = packagesDir(cd)
-  const pc = await readdir(pd)
-  for (const p of pc) {
-    const d = path.join(pd, p)
-    const f = packageJSON(d)
+async function run(t: string[], cmd: string): Promise<void> {
+  for (const [i, n] of t.entries()) {
+    const d = packageDir(n)
+    const f = packageJson(d)
     if (!existsSync(f)) {
       continue
     }
+
     const c = await readFile(f, "utf8")
-    const j = JSON.parse(c)
-    if (!(j.scripts && j.scripts[cmd])) {
+    const o = JSON.parse(c)
+    if (!o.scripts || !o.scripts[cmd]) {
       continue
     }
+
+    console.log(`Executing '${cmd}' of '${o.name}'`)
     await new Promise((res, rej) => {
       const s = spawn("pnpm", [cmd], {cwd: d, shell: true, stdio: "inherit"})
       s.on("close", res)
       s.on("error", rej)
     })
+
+    if (i < t.length - 1) {
+      console.log("\n\n\n")
+    }
   }
+}
+
+function packageDir(n: string): string {
+  const d = currentDir()
+  return path.join(d, "packages", n)
 }
 
 function currentDir(): string {
@@ -49,10 +75,8 @@ function currentDir(): string {
   return fileURLToPath(u)
 }
 
-function packagesDir(d: string): string {
-  return path.join(d, "packages")
-}
-
-function packageJSON(d: string): string {
+function packageJson(d: string): string {
   return path.join(d, "package.json")
 }
+
+main()

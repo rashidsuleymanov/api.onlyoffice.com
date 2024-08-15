@@ -6,12 +6,10 @@
     "node": "^21"
   },
   "scripts": {
-    "build": "pnpm make build",
+    "build": "tsx makefile.ts build",
     "lint:code": "eslint .",
     "lint:pages": "remark --frail --quiet site/pages",
-    "lint": "pnpm lint:code && pnpm lint:pages",
-    "make": "tsx makefile.ts",
-    "test": "pnpm make test"
+    "lint": "pnpm lint:code && pnpm lint:pages"
   },
   "devDependencies": {
     "@onlyoffice/eslint-config": "workspace:^",
