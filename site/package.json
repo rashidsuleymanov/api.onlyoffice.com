@@ -55,7 +55,6 @@
     "@onlyoffice/radiogroup-container-html-element": "workspace:^",
     "@onlyoffice/rehype-preact": "workspace:^",
     "@onlyoffice/rehype-starry-night": "workspace:^",
-    "@onlyoffice/remark-config": "workspace:^",
     "@onlyoffice/remark-document-builder": "workspace:^",
     "@onlyoffice/server-client": "workspace:^",
     "@onlyoffice/service-declaration": "workspace:^",

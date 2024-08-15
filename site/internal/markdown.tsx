@@ -4,7 +4,6 @@ import {useSuspense} from "@onlyoffice/preact-suspense"
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
 import {rehypePreact} from "@onlyoffice/rehype-preact"
 import {rehypeStarryNight} from "@onlyoffice/rehype-starry-night"
-// import {remarkConfig} from "@onlyoffice/remark-config"
 import {remarkDocumentBuilder} from "@onlyoffice/remark-document-builder"
 import type * as Hast from "hast"
 import type * as Mdast from "mdast"
@@ -76,8 +75,6 @@ function markdown(): MarkdownProcessor {
     .use(remarkParse)
     .use(remarkDocumentBuilder)
     .use(remarkGfm)
-    // todo: enable remark config only for build action.
-    // .use(remarkConfig())
     .use(remarkRehype, {allowDangerousHtml: true})
     .use(rehypeRaw)
     .use(rehypeSlug, {enableCustomId: true})

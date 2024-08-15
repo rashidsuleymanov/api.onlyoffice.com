@@ -2931,9 +2931,6 @@ importers:
       '@onlyoffice/rehype-starry-night':
         specifier: workspace:^
         version: link:../packages/rehype-starry-night
-      '@onlyoffice/remark-config':
-        specifier: workspace:^
-        version: link:../packages/remark-config
       '@onlyoffice/remark-document-builder':
         specifier: workspace:^
         version: link:../packages/remark-document-builder
