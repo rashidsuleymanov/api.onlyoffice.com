@@ -20,18 +20,20 @@ export default [
       "!packages",
       "!site",
       "!storybook",
+      "!.remarkrc.js",
       "!c8.config.json",
-      "!CONTRIBUTING.md",
       "!eslint.config.js",
       "!lefthook.yml",
       "!makefile.ts",
       "!package.json",
-      "!remark.config.ts",
       "!stylelint.config.js",
       "!tsconfig.base.json",
+      "!tsconfig.emit.json",
       "!tsconfig.json",
     ],
   },
 
+  // @ts-ignore i am sure of it
+  // eslint-disable-next-line @typescript-eslint/no-misused-promises
   ...config,
 ]

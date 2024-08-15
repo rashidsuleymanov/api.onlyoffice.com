@@ -7,30 +7,25 @@
   },
   "scripts": {
     "build": "pnpm make build",
-    "lint:es": "eslint .",
-    "lint:md": "tsx remark.config.ts",
-    "lint": "pnpm lint:es && pnpm lint:md",
+    "lint:code": "eslint .",
+    "lint:pages": "remark --frail --quiet site/pages",
+    "lint": "pnpm lint:code && pnpm lint:pages",
     "make": "tsx makefile.ts",
     "test": "pnpm make test"
   },
   "devDependencies": {
     "@onlyoffice/eslint-config": "workspace:^",
     "@onlyoffice/remark-config": "workspace:^",
-    "@onlyoffice/remark-document-builder": "workspace:^",
     "@types/node": "^20.12.12",
     "eslint": "^9.8.0",
     "eslint-config-flat-gitignore": "^0.1.8",
-    "fast-glob": "^3.3.2",
     "lefthook": "^1.7.12",
+    "remark": "^15.0.1",
+    "remark-cli": "^12.0.1",
     "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.0",
-    "remark-parse": "^11.0.0",
-    "remark-stringify": "^11.0.0",
     "sade": "^1.8.1",
     "tsx": "^4.16.5",
-    "typescript": "^5.4.5",
-    "unified": "^11.0.5",
-    "vfile": "^6.0.1",
-    "vfile-reporter-pretty": "^7.0.0"
+    "typescript": "^5.4.5"
   }
 }

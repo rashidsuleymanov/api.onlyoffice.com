@@ -5,5 +5,5 @@ pre-commit:
       glob: "*.{cjs,cts,js,json,jsx,md,mjs,mts,ts,tsx,yaml,yml}"
       run: pnpm exec eslint {staged_files}
     remark:
-      glob: "*.md"
-      run: pnpm exec tsx remark.config.ts {staged_files}
+      glob: "site/pages/**/*.md"
+      run: pnpm exec remark --frail --quiet {staged_files}

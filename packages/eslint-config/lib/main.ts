@@ -15,12 +15,12 @@ import eslintWc from "eslint-plugin-wc"
 import eslintYaml from "eslint-plugin-yml"
 import globals from "globals"
 import jsoncParser from "jsonc-eslint-parser"
-import eslintTypescript from "typescript-eslint"
+import eslintTypescript, {type Config} from "typescript-eslint"
 import yamlParser from "yaml-eslint-parser"
 
 const e = "error"
 
-export default [
+const c: Config = [
   {
     // Based on https://github.com/typescript-eslint/typescript-eslint/blob/v8.0.1/packages/eslint-plugin/src/configs/base.ts
     name: "typescript",
@@ -58,6 +58,7 @@ export default [
 
     plugins: {
       "@onlyoffice": eslintOnlyoffice,
+      // @ts-ignore probably typescript-eslint types are wrong
       "@stylistic": eslintStylistic,
       "@typescript-eslint": eslintTypescript.plugin,
       "import": eslintImport,
@@ -268,7 +269,7 @@ export default [
       "@stylistic/no-extra-semi": e,
       "@stylistic/no-floating-decimal": e,
       "@stylistic/no-mixed-spaces-and-tabs": e,
-      "@stylistic/no-multi-spaces": e,
+      "@stylistic/no-multi-spaces": [e, {ignoreEOLComments: true}],
       "@stylistic/no-multiple-empty-lines": [e, {max: 1}],
       "@stylistic/no-tabs": e,
       "@stylistic/no-trailing-spaces": e,
@@ -628,7 +629,9 @@ export default [
     },
   },
 
+  // @ts-ignore the source configs are not typed
   eslintOnlyoffice.configs["sort-package-json"],
+  // @ts-ignore the source configs are not typed
   eslintOnlyoffice.configs["sort-tsconfig-json"],
 
   {
@@ -840,10 +843,7 @@ export default [
 ]
 
 export class ESLint extends ES {
-  /**
-   * @param {ES.Options} o
-   */
-  constructor(o = {}) {
+  constructor(o: ES.Options = {}) {
     let f = import.meta.filename
     if (!f) {
       // Eleventy does not support esm, so we have to fall back to cjs.
@@ -856,3 +856,5 @@ export class ESLint extends ES {
     super({overrideConfigFile: import.meta.filename, ...o})
   }
 }
+
+export default c
