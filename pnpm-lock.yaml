@@ -867,43 +867,6 @@ importers:
 
   packages/eslint-plugin: {}
 
-  packages/eslint-presentation:
-    dependencies:
-      '@eslint/js':
-        specifier: ^9.8.0
-        version: 9.8.0
-      '@stylistic/eslint-plugin-js':
-        specifier: ^2.1.0
-        version: 2.1.0(eslint@9.8.0)
-      '@types/eslint':
-        specifier: ^8.56.10
-        version: 8.56.10
-      '@types/eslint__js':
-        specifier: ^8.42.3
-        version: 8.42.3
-      '@types/node':
-        specifier: ^20.12.12
-        version: 20.12.12
-      eslint:
-        specifier: ^9.8.0
-        version: 9.8.0
-      eslint-plugin-jsonc:
-        specifier: ^2.15.1
-        version: 2.15.1(eslint@9.8.0)
-      typescript:
-        specifier: ^5.4.5
-        version: 5.4.5
-    devDependencies:
-      c8:
-        specifier: ^9.1.0
-        version: 9.1.0
-      tsx:
-        specifier: ^4.16.5
-        version: 4.16.5
-      uvu:
-        specifier: ^0.5.6
-        version: 0.5.6
-
   packages/hast-util-eleventy-img:
     dependencies:
       '@11ty/eleventy-img':
@@ -967,9 +930,9 @@ importers:
       '@onlyoffice/declaration-tokenizer':
         specifier: workspace:^
         version: link:../declaration-tokenizer
-      '@onlyoffice/eslint-presentation':
+      '@onlyoffice/eslint-config':
         specifier: workspace:^
-        version: link:../eslint-presentation
+        version: link:../eslint-config
       '@onlyoffice/jsdoc':
         specifier: workspace:^
         version: link:../jsdoc
@@ -5064,12 +5027,6 @@ packages:
   '@storybook/types@8.0.0':
     resolution: {integrity: sha512-6nJipdgoAkVFk2JpRPCm9vb/Yuak2lmdZRv9qzl8cNRttlbOESVlzbmhgxCmWV0OYUaMeYge9L8NWhJ14LKbzw==}
 
-  '@stylistic/eslint-plugin-js@2.1.0':
-    resolution: {integrity: sha512-gdXUjGNSsnY6nPyqxu6lmDTtVrwCOjun4x8PUn0x04d5ucLI74N3MT1Q0UhdcOR9No3bo5PGDyBgXK+KmD787A==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      eslint: '>=8.40.0'
-
   '@stylistic/eslint-plugin-js@2.6.2':
     resolution: {integrity: sha512-wCr/kVctAPayMU3pcOI1MKR7MoKIh6VKZU89lPklAqtJoxT+Em6RueiiARbpznUYG5eg3LymiU+aMD+aIZXdqA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -6655,10 +6612,6 @@ packages:
     resolution: {integrity: sha512-K8qnZ/QJzT2dLKdZJVX6W4XOwBzutMYmt0lqUS+JdXgd+HTYFlonFgkJ8s44d/zMPPCnOOk0kMWCApCPhiOy9A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     hasBin: true
-
-  espree@10.0.1:
-    resolution: {integrity: sha512-MWkrWZbJsL2UwnjxTX3gG8FneachS/Mwg7tdGXce011sJd5b0JG54vat5KHnfSBODZ3Wvzd2WnjxyzsRoVv+ww==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   espree@10.1.0:
     resolution: {integrity: sha512-M1M6CpiE6ffoigIOWYO9UDP8TMUw9kqb21tf+08IgDYjCsOvCuDt4jQcZmoYxx+w7zlKw9/N0KXfto+I8/FrXA==}
@@ -12345,14 +12298,6 @@ snapshots:
       '@types/express': 4.17.21
       file-system-cache: 2.3.0
 
-  '@stylistic/eslint-plugin-js@2.1.0(eslint@9.8.0)':
-    dependencies:
-      '@types/eslint': 8.56.10
-      acorn: 8.11.3
-      eslint: 9.8.0
-      eslint-visitor-keys: 4.0.0
-      espree: 10.0.1
-
   '@stylistic/eslint-plugin-js@2.6.2(eslint@9.8.0)':
     dependencies:
       '@types/eslint': 9.6.0
@@ -14358,12 +14303,6 @@ snapshots:
       text-table: 0.2.0
     transitivePeerDependencies:
       - supports-color
-
-  espree@10.0.1:
-    dependencies:
-      acorn: 8.11.3
-      acorn-jsx: 5.3.2(acorn@8.11.3)
-      eslint-visitor-keys: 4.0.0
 
   espree@10.1.0:
     dependencies:

@@ -12,7 +12,7 @@
     "@onlyoffice/console": "workspace:^",
     "@onlyoffice/declaration-code-example": "workspace:^",
     "@onlyoffice/declaration-tokenizer": "workspace:^",
-    "@onlyoffice/eslint-presentation": "workspace:^",
+    "@onlyoffice/eslint-config": "workspace:^",
     "@onlyoffice/jsdoc": "workspace:^",
     "@onlyoffice/library-declaration": "workspace:^",
     "@onlyoffice/markdown": "workspace:^",

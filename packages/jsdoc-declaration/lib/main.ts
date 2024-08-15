@@ -10,7 +10,7 @@ import {AsyncTransform} from "@onlyoffice/async-transform"
 import {Console} from "@onlyoffice/console"
 import * as code from "@onlyoffice/declaration-code-example"
 import type * as Tokenizer from "@onlyoffice/declaration-tokenizer"
-import {ESLint} from "@onlyoffice/eslint-presentation"
+import {ESLint} from "@onlyoffice/eslint-config"
 import {type Catharsis, type Doclet, type DocletParam} from "@onlyoffice/jsdoc"
 import type * as Library from "@onlyoffice/library-declaration"
 // eslint-disable-next-line no-duplicate-imports
@@ -28,7 +28,7 @@ import pack from "../package.json" with {type: "json"}
 
 const console = new Console(pack.name, process.stdout, process.stderr)
 const model = new languagedetection.ModelOperations()
-const eslint = new ESLint()
+const eslint = new ESLint({fix: true})
 
 export interface FirstIterationChunk {
   key: number
@@ -870,8 +870,9 @@ async function example(c: string): Promise<Library.Example> {
   return e
 
   async function js(x: string): Promise<void> {
+    const f = `embed.md/embed.${x}`
+    const [r] = await eslint.lintText(c, {filePath: f})
     e.syntax = x
-    const [r] = await eslint.lintText(c, {filePath: `example.${x}`})
     if (r.output) {
       e.code = r.output
     }
