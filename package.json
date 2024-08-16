@@ -9,11 +9,13 @@
     "build": "tsx makefile.ts build",
     "lint:code": "eslint .",
     "lint:pages": "remark --frail --quiet site/pages",
-    "lint": "pnpm lint:code && pnpm lint:pages"
+    "lint:styles": "stylelint --ignore-path .gitignore \"+(packages|site|storybook)/**/*.css\"",
+    "lint": "pnpm lint:code && pnpm lint:styles && pnpm lint:pages"
   },
   "devDependencies": {
     "@onlyoffice/eslint-config": "workspace:^",
     "@onlyoffice/remark-config": "workspace:^",
+    "@onlyoffice/stylelint-config": "workspace:^",
     "@types/node": "^20.12.12",
     "eslint": "^9.8.0",
     "eslint-config-flat-gitignore": "^0.1.8",
@@ -23,6 +25,7 @@
     "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.0",
     "sade": "^1.8.1",
+    "stylelint": "^16.8.2",
     "tsx": "^4.16.5",
     "typescript": "^5.4.5"
   }

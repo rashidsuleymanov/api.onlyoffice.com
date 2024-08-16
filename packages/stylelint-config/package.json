@@ -1,0 +1,32 @@
+{
+  "name": "@onlyoffice/stylelint-config",
+  "type": "module",
+  "private": true,
+  "main": "dist/main.js",
+  "scripts": {
+    "build:code": "esbuild lib/*[!test].ts --outdir=dist",
+    "build:types": "tsc --project tsconfig.emit.json",
+    "build": "pnpm build:types && pnpm build:code",
+    "test:types": "tsc",
+    "test:unit": "c8 --config ../../c8.config.json tsx node_modules/uvu/bin.js lib ^.*\\.test\\.ts$",
+    "test": "pnpm test:types && pnpm test:unit"
+  },
+  "dependencies": {
+    "@double-great/stylelint-a11y": "^3.0.2",
+    "@stylistic/stylelint-plugin": "^3.0.0",
+    "stylelint": "^16.8.2",
+    "stylelint-at-rule-no-children": "^0.3.1",
+    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
+    "stylelint-high-performance-animation": "^1.10.0",
+    "stylelint-media-use-custom-media": "^4.0.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-plugin-logical-css": "^1.2.1"
+  },
+  "devDependencies": {
+    "c8": "^9.1.0",
+    "esbuild": "^0.23.0",
+    "tsx": "^4.16.5",
+    "typescript": "^5.4.5",
+    "uvu": "^0.5.6"
+  }
+}
