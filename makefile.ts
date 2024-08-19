@@ -9,6 +9,7 @@ import sade from "sade"
 const config: Record<string, string[]> = {
   build: [
     "eslint-config",
+    "stylelint-config",
     "remark-lint-eslint",
     "remark-config",
 
