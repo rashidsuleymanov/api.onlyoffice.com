@@ -13,7 +13,16 @@
   --chapter-content-max-width: calc(var(--temp-chapter-breakpoint-xlarge) - var(--chapter-navigation-width));
 
   display: grid;
-  grid-template-columns: auto var(--chapter-navigation-width) minmax(0, var(--chapter-content-max-width)) auto;
+  grid-template-columns:
+    auto
+    var(--chapter-navigation-width)
+    minmax(0, var(--chapter-content-max-width))
+    auto;
+
+  &[state-navigation-visible],
+  &:state(navigation-visible) {
+    --chapter-navigation-width: var(--chapter-navigation-computed-width);
+  }
 
   @media (--size-viewport-width-small) {
     --chapter-content-padding-inline: var(--base-size-24);
@@ -23,11 +32,6 @@
     --chapter-navigation-width: var(--chapter-navigation-computed-width);
     --chapter-content-padding-inline: var(--base-size-40);
   }
-}
-
-.chapter[state-navigation-visible],
-.chapter:state(navigation-visible) {
-  --chapter-navigation-width: var(--chapter-navigation-computed-width);
 }
 
 .chapter[state-navigation-visible] .chapter__navigation,
@@ -54,9 +58,9 @@
 
 .chapter__navigation {
   background-color: var(--color-background-muted);
-  border-right-color: var(--color-border-muted);
-  border-right-style: solid;
-  border-right-width: var(--chapter-navigation-border-width);
+  border-inline-end-color: var(--color-border-muted);
+  border-inline-end-style: solid;
+  border-inline-end-width: var(--chapter-navigation-border-width);
   display: none;
   grid-column: 2;
   grid-row: 1;
@@ -81,11 +85,11 @@
 /* Integration with @onlyoffice/site-search */
 
 .chapter .search {
-  margin-bottom: var(--base-size-32);
+  margin-block-end: var(--base-size-32);
 }
 
 .chapter .search .text-input {
-  min-width: 100%;
+  min-inline-size: 100%;
 }
 
 /* Integration with @onlyoffice/ui-breadcrumb */
@@ -97,29 +101,29 @@
 /* Integration with @onlyoffice/ui-content */
 
 .chapter__content .content {
-  margin-top: var(--base-size-28);
+  margin-block-start: var(--base-size-28);
 }
 
 .chapter__content .content::after {
   content: "";
   display: block;
-  padding-top: calc(var(--base-size-48) + var(--base-size-64));
+  padding-block-start: calc(var(--base-size-48) + var(--base-size-64));
 
   @media (--size-viewport-width-medium) {
-    padding-top: calc(var(--base-size-64) + var(--base-size-64));
+    padding-block-start: calc(var(--base-size-64) + var(--base-size-64));
   }
 
   @media (--size-viewport-width-large) {
-    padding-top: calc(var(--base-size-112) + var(--base-size-64));
+    padding-block-start: calc(var(--base-size-112) + var(--base-size-64));
   }
 }
 
 /* Integration with @onlyoffice/site-help */
 
 .chapter__content .help {
-  border-top-color: var(--color-border-muted);
-  border-top-style: solid;
-  border-top-width: var(--size-border-width-thin);
-  margin-top: auto;
-  padding-top: var(--base-size-32);
+  border-block-start-color: var(--color-border-muted);
+  border-block-start-style: solid;
+  border-block-start-width: var(--size-border-width-thin);
+  margin-block-start: auto;
+  padding-block-start: var(--base-size-32);
 }

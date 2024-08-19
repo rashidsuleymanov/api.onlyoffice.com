@@ -147,7 +147,9 @@ const c: Config = {
     "@stylistic/indentation": [2, {baseIndentLevel: 0}],
     "@stylistic/linebreaks": "unix",
     "@stylistic/max-empty-lines": 1,
-    "@stylistic/max-line-length": 100,
+    "@stylistic/max-line-length": [100, {
+      ignorePattern: /(?:^@import.*;$)|(?:^\s*--.*;$)/,
+    }],
     "@stylistic/media-feature-colon-space-after": "always",
     "@stylistic/media-feature-colon-space-before": "never",
     "@stylistic/media-feature-name-case": "lower",

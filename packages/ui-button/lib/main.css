@@ -14,24 +14,24 @@
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
-}
 
-.button:focus-visible,
-.button:hover {
-  background-color: var(--color-button-default-background-hover);
-  border-color: var(--color-button-default-border-hover);
-  color: var(--color-button-default-foreground-hover);
+  &:focus-visible,
+  &:hover {
+    background-color: var(--color-button-default-background-hover);
+    border-color: var(--color-button-default-border-hover);
+    color: var(--color-button-default-foreground-hover);
+  }
 }
 
 .button_accent {
   background-color: var(--color-button-accent-background-rest);
   border-color: var(--color-button-accent-border-rest);
   color: var(--color-button-accent-foreground-rest);
-}
 
-.button_accent:focus-visible,
-.button_accent:hover {
-  background-color: var(--color-button-accent-background-hover);
-  border-color: var(--color-button-accent-border-hover);
-  color: var(--color-button-accent-foreground-hover);
+  &:focus-visible,
+  &:hover {
+    background-color: var(--color-button-accent-background-hover);
+    border-color: var(--color-button-accent-border-hover);
+    color: var(--color-button-accent-foreground-hover);
+  }
 }

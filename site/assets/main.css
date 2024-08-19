@@ -1,8 +1,6 @@
 @import "./font.css";
-
 @import "../node_modules/@onlyoffice/ui-kit/lib/main.css";
 @import "../node_modules/@onlyoffice/site-kit/lib/main.css";
-
 @import "../components/syntax-highlight/syntax-highlight.css";
 @import "../components/tree/tree.css";
 @import "../internal/global-navigation.css";
@@ -22,11 +20,11 @@ body {
 }
 
 .page-header__logo svg {
-  height: 28px;
-  width: auto;
+  block-size: 28px;
+  inline-size: auto;
 
   @media (--size-viewport-width-large) {
-    height: 38px;
+    block-size: 38px;
   }
 }
 
@@ -38,7 +36,7 @@ body {
 .content h4,
 .content h5,
 .content h6 {
-  scroll-margin-top: calc(var(--page-header-height) + var(--base-size-20));
+  scroll-margin-block-start: calc(var(--page-header-height) + var(--base-size-20));
 }
 
 .content h1 a[href^="#"],
@@ -51,12 +49,13 @@ body {
   text-decoration: none;
 }
 
-.content h1 a[href^="#"]:before,
-.content h2 a[href^="#"]:before,
-.content h3 a[href^="#"]:before,
-.content h4 a[href^="#"]:before,
-.content h5 a[href^="#"]:before,
-.content h6 a[href^="#"]:before {
+/* stylelint-disable-next-line a11y/content-property-no-static-value */
+.content h1 a[href^="#"]::before,
+.content h2 a[href^="#"]::before,
+.content h3 a[href^="#"]::before,
+.content h4 a[href^="#"]::before,
+.content h5 a[href^="#"]::before,
+.content h6 a[href^="#"]::before {
   /* todo: do not use opacity */
   /* todo: use own colors */
   /* todo: replace with svg icon */
@@ -64,32 +63,33 @@ body {
   content: "#";
   display: inline-block;
   font-size: 1em;
-  margin-left: -1.05em;
-  opacity: 0.3;
+  inline-size: 1.05em;
+  margin-inline-start: -1.05em;
+  opacity: 30%;
   text-decoration: none;
   visibility: hidden;
-  width: 1.05em;
 }
 
-.content h1 a[href^="#"]:hover:before,
-.content h2 a[href^="#"]:hover:before,
-.content h3 a[href^="#"]:hover:before,
-.content h4 a[href^="#"]:hover:before,
-.content h5 a[href^="#"]:hover:before,
-.content h6 a[href^="#"]:hover:before {
+.content h1 a[href^="#"]:hover::before,
+.content h2 a[href^="#"]:hover::before,
+.content h3 a[href^="#"]:hover::before,
+.content h4 a[href^="#"]:hover::before,
+.content h5 a[href^="#"]:hover::before,
+.content h6 a[href^="#"]:hover::before {
   visibility: visible;
 }
 
 .content img {
-  height: auto !important;
+  /* stylelint-disable-next-line declaration-no-important */
+  block-size: auto !important;
 }
 
 .content document-builder-container {
   display: block;
-  margin-top: var(--base-size-20);
+  margin-block-start: var(--base-size-20);
 }
 
 .content document-builder {
+  block-size: 550px;
   display: block;
-  height: 550px;
 }

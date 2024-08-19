@@ -13,15 +13,15 @@
 }
 
 .tree__branch {
-  margin-top: var(--base-size-12);
-}
+  margin-block-start: var(--base-size-12);
 
-.tree__branch:first-of-type {
-  margin-top: 0;
+  &:first-of-type {
+    margin-block-start: 0;
+  }
 }
 
 .tree__branch_bole {
-  margin-top: var(--base-size-32);
+  margin-block-start: var(--base-size-32);
 }
 
 .tree__branch_bole > .tree__limb {
@@ -34,7 +34,7 @@
 }
 
 .tree__twig ~ .tree__limb {
-  margin-top: var(--base-size-16);
+  margin-block-start: var(--base-size-16);
 }
 
 .tree__twig_closed ~ .tree__limb {
@@ -42,7 +42,7 @@
 }
 
 .tree__twig_closed > .tree__fruit {
-  margin-top: -1px;
+  margin-block-start: -1px;
 }
 
 .tree__twig_closed > .tree__fruit svg {
@@ -54,9 +54,9 @@
   border: 0;
   cursor: pointer;
   display: flex;
-  margin-bottom: -4px;
-  margin-left: -5px;
-  margin-top: 0;
+  margin-block-end: -4px;
+  margin-block-start: 0;
+  margin-inline-start: -5px;
   padding: 0;
   pointer-events: auto;
 }
@@ -78,11 +78,11 @@
   pointer-events: auto;
   text-decoration: none;
   word-wrap: break-word;
-}
 
-.tree__leaf:hover,
-.tree__leaf:focus {
-  color: var(--color-foreground-link);
+  &:hover,
+  &:focus {
+    color: var(--color-foreground-link);
+  }
 }
 
 .tree__leaf_current {
@@ -91,11 +91,11 @@
 
 .tree__leaf_bole {
   font-weight: 700;
-  text-transform: uppercase;
   padding-inline-start: 0;
+  text-transform: uppercase;
 }
 
 .tree__fruit ~ .tree__leaf {
-  margin-left: 4px;
+  margin-inline-start: 4px;
   padding-inline-start: 0;
 }

@@ -1,6 +1,12 @@
 .text-input {
+  /* stylelint-disable @stylistic/declaration-block-semicolon-newline-before */
+  /* stylelint-disable @stylistic/declaration-block-semicolon-space-before */
+  /* stylelint-disable @stylistic/declaration-colon-space-after */
   --true: initial;
   --false: ;
+  /* stylelint-enable @stylistic/declaration-block-semicolon-newline-before */
+  /* stylelint-enable @stylistic/declaration-block-semicolon-space-before */
+  /* stylelint-enable @stylistic/declaration-colon-space-after */
 
   --text-input-size-is-xlarge: var(--false);
   --text-input-column-gap-xlarge: var(--size-control-gap-xlarge);
@@ -72,34 +78,31 @@
   font-size: var(--text-body-font-size-small);
   grid-template-columns: auto 1fr auto;
   line-height: var(--text-body-line-height-small);
-  min-width: 264px;
+  min-inline-size: 264px;
   padding-block: var(--text-input-computed-padding-block-current);
   padding-inline: var(--text-input-computed-padding-inline-current);
   text-align: start;
-}
 
-.text-input:hover {
-  background-color: var(--color-control-default-background-hover);
-  border-color: var(--color-control-default-border-hover);
-  color: var(--color-control-default-foreground-hover);
-}
+  &:hover {
+    background-color: var(--color-control-default-background-hover);
+    border-color: var(--color-control-default-border-hover);
+    color: var(--color-control-default-foreground-hover);
+  }
 
-.text-input[state-focused],
-.text-input:state(focused) {
-  background-color: var(--color-control-default-background-active);
-  border-color: transparent;
-  color: var(--color-control-default-foreground-active);
-  outline-color: var(--color-focus-default-outline);
-  outline-offset: calc(var(--size-border-width-thin) * -1);
-  outline-style: solid;
-  outline-width: var(--side-outline-width-default);
+  &[state-focused],
+  &:state(focused) {
+    background-color: var(--color-control-default-background-active);
+    border-color: transparent;
+    color: var(--color-control-default-foreground-active);
+    outline-color: var(--color-focus-default-outline);
+    outline-offset: calc(var(--size-border-width-thin) * -1);
+    outline-style: solid;
+    outline-width: var(--side-outline-width-default);
+  }
 }
 
 .text-input[state-focused] .text-input__placeholder,
-.text-input:state(focused) .text-input__placeholder {
-  display: none;
-}
-
+.text-input:state(focused) .text-input__placeholder,
 .text-input[state-filled] .text-input__placeholder,
 .text-input:state(filled) .text-input__placeholder {
   display: none;
@@ -161,9 +164,9 @@
 }
 
 .text-input__leading svg {
+  block-size: 1em;
   display: block;
-  width: 1em;
-  height: 1em;
+  inline-size: 1em;
 }
 
 .text-input__placeholder {
@@ -180,17 +183,19 @@
   appearance: textfield;
   background-color: transparent;
   border: none;
-  min-width: 0;
+  inline-size: 100%;
+  min-inline-size: 0;
   padding: 0;
-  width: 100%;
-}
 
-.text-input__control input:focus {
-  outline: none;
+  /* This is normal since the outline is controlled by the parent element. */
+  /* stylelint-disable-next-line a11y/no-outline-none */
+  &:focus {
+    outline: none;
+  }
 }
 
 .text-input__control input::-webkit-search-cancel-button {
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 .text-input__placeholder ~ .text-input__trailing,
@@ -204,9 +209,9 @@
 }
 
 .text-input__trailing svg {
+  block-size: 1em;
   display: block;
-  width: 1em;
-  height: 1em;
+  inline-size: 1em;
 }
 
 .text-input__action button {

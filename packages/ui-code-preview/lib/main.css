@@ -10,6 +10,6 @@
 }
 
 .code-preview pre {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
 }

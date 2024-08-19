@@ -12,7 +12,7 @@
   font-family: "Open Sans Fallback";
   font-style: normal;
   font-weight: 400;
-  line-gap-override: 0.00%;
+  line-gap-override: 0%;
   size-adjust: 105.22%;
   src: local("Arial");
 }
@@ -31,7 +31,7 @@
   font-family: "Open Sans Fallback";
   font-style: italic;
   font-weight: 400;
-  line-gap-override: 0.00%;
+  line-gap-override: 0%;
   size-adjust: 99.46%;
   src: local("Arial Italic");
 }
@@ -50,7 +50,7 @@
   font-family: "Open Sans Fallback";
   font-style: normal;
   font-weight: 500;
-  line-gap-override: 0.00%;
+  line-gap-override: 0%;
   size-adjust: 107.28%;
   src: local("Arial");
 }
@@ -65,11 +65,11 @@
 
 @font-face {
   ascent-override: 105.45%;
-  descent-override: 28.90%;
+  descent-override: 28.9%;
   font-family: "Open Sans Fallback";
   font-style: italic;
   font-weight: 500;
-  line-gap-override: 0.00%;
+  line-gap-override: 0%;
   size-adjust: 101.36%;
   src: local("Arial Italic");
 }
@@ -88,7 +88,7 @@
   font-family: "Open Sans Fallback";
   font-style: normal;
   font-weight: 600;
-  line-gap-override: 0.00%;
+  line-gap-override: 0%;
   size-adjust: 101.06%;
   src: local("Arial Bold");
 }
@@ -107,7 +107,7 @@
   font-family: "Open Sans Fallback";
   font-style: italic;
   font-weight: 600;
-  line-gap-override: 0.00%;
+  line-gap-override: 0%;
   size-adjust: 95.47%;
   src: local("Arial Bold Italic");
 }
@@ -126,7 +126,7 @@
   font-family: "Open Sans Fallback";
   font-style: normal;
   font-weight: 700;
-  line-gap-override: 0.00%;
+  line-gap-override: 0%;
   size-adjust: 104.82%;
   src: local("Arial Bold");
 }
@@ -145,7 +145,7 @@
   font-family: "Open Sans Fallback";
   font-style: italic;
   font-weight: 700;
-  line-gap-override: 0.00%;
+  line-gap-override: 0%;
   size-adjust: 98.95%;
   src: local("Arial Bold Italic");
 }

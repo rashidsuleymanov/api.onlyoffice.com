@@ -7,24 +7,29 @@ inspiration from the good old normalize.css.
 https://github.com/necolas/normalize.css/tree/8.0.1/
 */
 
-*, :before, :after {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
 html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
   font-family: sans-serif;
   font-size: 16px;
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
 }
 
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
@@ -32,11 +37,12 @@ button, input, optgroup, select, textarea {
 }
 
 hr {
+  block-size: 0;
   box-sizing: content-box;
-  height: 0;
   overflow: visible;
 }
 
 [hidden] {
+  /* stylelint-disable-next-line declaration-no-important */
   display: none !important;
 }

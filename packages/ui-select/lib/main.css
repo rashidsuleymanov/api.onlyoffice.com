@@ -7,18 +7,17 @@
   display: inline-block;
   font-size: var(--text-body-font-size-small);
   line-height: var(--text-body-line-height-small);
-  min-width: 264px;
+  min-inline-size: 264px;
   position: relative;
 }
 
 .select[state-selected] [role="combobox"],
 .select:state(selected) [role="combobox"] {
   color: var(--color-control-default-foreground-active);
-}
 
-.select[state-selected] [role="combobox"]:hover,
-.select:state(selected) [role="combobox"]:hover {
-  color: var(--color-control-default-foreground-active);
+  &:hover {
+    color: var(--color-control-default-foreground-active);
+  }
 }
 
 .select [role="combobox"] {
@@ -31,18 +30,18 @@
   cursor: pointer;
   padding-block: var(--size-control-padding-block-medium);
   padding-inline: var(--size-control-padding-inline-medium);
-}
 
-.select [role="combobox"]:focus-visible {
-  outline-color: var(--color-focus-default-outline);
-  outline-style: solid;
-  outline-width: var(--side-outline-width-default);
-}
+  &:focus-visible {
+    outline-color: var(--color-focus-default-outline);
+    outline-style: solid;
+    outline-width: var(--side-outline-width-default);
+  }
 
-.select [role="combobox"]:hover {
-  background-color: var(--color-control-default-background-hover);
-  border-color: var(--color-control-default-border-hover);
-  color: var(--color-control-default-foreground-hover);
+  &:hover {
+    background-color: var(--color-control-default-background-hover);
+    border-color: var(--color-control-default-border-hover);
+    color: var(--color-control-default-foreground-hover);
+  }
 }
 
 .select [role="combobox"][aria-expanded="true"] {
@@ -58,13 +57,13 @@
   border-style: solid;
   border-width: var(--size-border-width-thin);
   color: var(--color-control-default-foreground-active);
-  max-height: var(--select-listbox-max-height);
-  overflow-y: auto;
-  padding-bottom: var(--base-size-8);
-  padding-top: var(--base-size-8);
+  inline-size: 100%;
+  inset-block-start: calc(100% + var(--base-size-6));
+  max-block-size: var(--select-listbox-max-height);
+  overflow-block: auto;
+  padding-block-end: var(--base-size-8);
+  padding-block-start: var(--base-size-8);
   position: absolute;
-  top: calc(100% + var(--base-size-6));
-  width: 100%;
   z-index: 1;
 }
 
@@ -75,22 +74,22 @@
 }
 
 .select__option-container {
-  padding-left: var(--base-size-6);
-  padding-right: var(--base-size-6);
-}
+  padding-inline-end: var(--base-size-6);
+  padding-inline-start: var(--base-size-6);
 
-.select__option-container:hover {
-  background-color: var(--color-control-default-background-hover);
+  &:hover {
+    background-color: var(--color-control-default-background-hover);
+  }
 }
 
 .select [role="option"] {
   border-radius: var(--size-border-radius-small);
   cursor: pointer;
   padding: var(--base-size-8) var(--base-size-6);
-}
 
-.select [role="option"][aria-current="true"] {
-  outline-color: var(--color-focus-default-outline);
-  outline-style: solid;
-  outline-width: var(--side-outline-width-default);
+  &[aria-current="true"] {
+    outline-color: var(--color-focus-default-outline);
+    outline-style: solid;
+    outline-width: var(--side-outline-width-default);
+  }
 }

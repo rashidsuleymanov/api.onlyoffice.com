@@ -11,10 +11,10 @@
   font-family: var(--base-text-font-family-monospace);
   font-size: var(--text-code-block-font-size-default);
   line-height: var(--text-code-block-line-height-default);
-  margin-bottom: 0;
-  margin-top: 0;
-  min-height: var(--code-editor-min-height);
-  min-width: 100%;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  min-block-size: var(--code-editor-min-height);
+  min-inline-size: 100%;
   overflow: auto;
   padding: var(--base-size-12) var(--base-size-16);
   tab-size: 2;

@@ -47,18 +47,18 @@
 }
 
 .pl-ii {
-  color: var(--temp-color-sh-invalid-illegal-text);
   background-color: var(--temp-color-sh-invalid-illegal-bg);
+  color: var(--temp-color-sh-invalid-illegal-text);
 }
 
 .pl-c2 {
-  color: var(--temp-color-sh-carriage-return-text);
   background-color: var(--temp-color-sh-carriage-return-bg);
+  color: var(--temp-color-sh-carriage-return-text);
 }
 
 .pl-sr .pl-cce {
-  font-weight: bold;
   color: var(--temp-color-sh-string-regexp);
+  font-weight: 700;
 }
 
 .pl-ml {
@@ -68,43 +68,43 @@
 .pl-mh,
 .pl-mh .pl-en,
 .pl-ms {
-  font-weight: bold;
   color: var(--temp-color-sh-markup-heading);
+  font-weight: 700;
 }
 
 .pl-mi {
-  font-style: italic;
   color: var(--temp-color-sh-markup-italic);
+  font-style: italic;
 }
 
 .pl-mb {
-  font-weight: bold;
   color: var(--temp-color-sh-markup-bold);
+  font-weight: 700;
 }
 
 .pl-md {
-  color: var(--temp-color-sh-markup-deleted-text);
   background-color: var(--temp-color-sh-markup-deleted-bg);
+  color: var(--temp-color-sh-markup-deleted-text);
 }
 
 .pl-mi1 {
-  color: var(--temp-color-sh-markup-inserted-text);
   background-color: var(--temp-color-sh-markup-inserted-bg);
+  color: var(--temp-color-sh-markup-inserted-text);
 }
 
 .pl-mc {
-  color: var(--temp-color-sh-markup-changed-text);
   background-color: var(--temp-color-sh-markup-changed-bg);
+  color: var(--temp-color-sh-markup-changed-text);
 }
 
 .pl-mi2 {
-  color: var(--temp-color-sh-markup-ignored-text);
   background-color: var(--temp-color-sh-markup-ignored-bg);
+  color: var(--temp-color-sh-markup-ignored-text);
 }
 
 .pl-mdr {
-  font-weight: bold;
   color: var(--temp-color-sh-meta-diff-range);
+  font-weight: 700;
 }
 
 .pl-ba {
@@ -116,6 +116,6 @@
 }
 
 .pl-corl {
-  text-decoration: underline;
   color: var(--temp-color-sh-constant-other-reference-link);
+  text-decoration: underline;
 }

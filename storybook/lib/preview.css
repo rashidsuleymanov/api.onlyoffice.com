@@ -1,3 +1,6 @@
+/* todo: resolve the ignore */
+/* stylelint-disable plugin/no-low-performance-animation-properties */
+
 @import "../../site/assets/font.css";
 @import "../node_modules/@onlyoffice/ui-kit/lib/main.css";
 @import "../node_modules/@onlyoffice/site-kit/lib/main.css";
@@ -10,6 +13,10 @@ html {
   font-weight: var(--base-text-font-weight-normal);
   line-height: var(--text-body-line-height-medium);
   transition: padding 0.3s;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
 
 .sb-show-main.sb-main-padded {

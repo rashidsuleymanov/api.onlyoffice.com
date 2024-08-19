@@ -12,13 +12,13 @@
 
 .code-listing [slot="tablist-wrapper"] {
   background-color: var(--color-code-editor-tab-default-background);
-  border-bottom-color: var(--color-code-editor-default-border);
-  border-bottom-style: solid;
-  border-bottom-width: var(--size-border-width-thin);
+  border-block-end-color: var(--color-code-editor-default-border);
+  border-block-end-style: solid;
+  border-block-end-width: var(--size-border-width-thin);
   display: flex;
   font-size: var(--text-body-font-size-small);
+  inline-size: 100%;
   justify-content: space-between;
-  width: 100%;
 }
 
 .code-listing [role="tablist"] {
@@ -35,15 +35,15 @@
   display: block;
   margin: calc(var(--size-border-width-thin) * -1);
   padding: var(--base-size-8) var(--base-size-12);
-}
 
-.code-listing [role="tab"]:first-of-type {
-  border-top-left-radius: var(--size-border-radius-small);
-}
+  &:first-of-type {
+    border-start-start-radius: var(--size-border-radius-small);
+  }
 
-.code-listing [role="tab"][aria-selected="true"] {
-  background-color: var(--color-code-editor-tab-active-background);
-  z-index: 1;
+  &[aria-selected="true"] {
+    background-color: var(--color-code-editor-tab-active-background);
+    z-index: 1;
+  }
 }
 
 .code-listing__action-list {
@@ -58,18 +58,18 @@
 
 .code-listing [role="tabpanel"] {
   display: flex;
-}
 
-.code-listing [role="tabpanel"]:focus-visible {
-  z-index: 1;
+  &:focus-visible {
+    z-index: 1;
+  }
 }
 
 /* Integration with @onlyoffice/code-editor */
 
 .code-listing .code-editor {
   border: none;
-}
 
-.code-listing .code-editor:focus-visible {
-  z-index: 1;
+  &:focus-visible {
+    z-index: 1;
+  }
 }

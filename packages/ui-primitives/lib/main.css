@@ -1,3 +1,5 @@
+/* stylelint-disable no-duplicate-selectors */
+
 /* [prefix]-[pattern*]-[variant]-[property*]-[scale] */
 /* https://primer.style/primitives/storybook/ */
 /* https://github.com/system-fonts/modern-font-stacks/ */
@@ -7,7 +9,7 @@
 :root {
   /* prefix: base, variant: text, property: font-family */
   --base-text-font-family-sans-serif: "Open Sans", "Open Sans Fallback", system-ui, sans-serif;
-  --base-text-font-family-monospace: Monaco, "Andale Mono", "Courier New", ui-monospace, monospace;
+  --base-text-font-family-monospace: monaco, "Andale Mono", "Courier New", ui-monospace, monospace;
 
   /* prefix: base, variant: text, property: font-size */
   --base-text-font-size-12: 12px;

@@ -5,7 +5,7 @@
 }
 
 .content > :first-child {
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 .content h1 {
@@ -14,8 +14,8 @@
   font-weight: var(--text-title-font-weight-large);
   hyphens: none;
   line-height: var(--text-title-line-height-large);
-  margin-bottom: var(--base-size-28);
-  margin-top: var(--base-size-36);
+  margin-block-end: var(--base-size-28);
+  margin-block-start: var(--base-size-36);
   word-break: break-word;
 }
 
@@ -24,8 +24,8 @@
   font-weight: var(--text-title-font-weight-medium);
   hyphens: none;
   line-height: var(--text-title-line-height-medium);
-  margin-bottom: var(--base-size-24);
-  margin-top: var(--base-size-32);
+  margin-block-end: var(--base-size-24);
+  margin-block-start: var(--base-size-32);
   word-break: break-word;
 }
 
@@ -34,14 +34,14 @@
   font-weight: var(--text-title-font-weight-small);
   hyphens: none;
   line-height: var(--text-title-line-height-small);
-  margin-bottom: var(--base-size-20);
-  margin-top: var(--base-size-28);
+  margin-block-end: var(--base-size-20);
+  margin-block-start: var(--base-size-28);
   word-break: break-word;
 }
 
 .content p {
-  margin-top: var(--base-size-20);
-  margin-bottom: 0;
+  margin-block-end: 0;
+  margin-block-start: var(--base-size-20);
 }
 
 .content a {
@@ -50,39 +50,39 @@
 
 .content ol,
 .content ul {
-  margin-bottom: 0;
-  margin-top: var(--base-size-20);
+  margin-block-end: 0;
+  margin-block-start: var(--base-size-20);
   padding-inline-start: var(--base-size-32);
 }
 
 .content ol li:first-child,
 .content ul li:first-child {
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 .content ol ol,
 .content ul ul {
-  margin-top: var(--base-size-2);
+  margin-block-start: var(--base-size-2);
 }
 
 .content li {
-  margin-top: var(--base-size-2);
+  margin-block-start: var(--base-size-2);
 }
 
 .content blockquote {
-  border-bottom-left-radius: var(--base-size-2);
+  border-end-start-radius: var(--base-size-2);
   border-inline-start: var(--base-size-4) solid var(--color-border-default);
-  border-top-left-radius: var(--base-size-2);
-  margin-bottom: 0;
+  border-start-start-radius: var(--base-size-2);
+  margin-block-end: 0;
+  margin-block-start: var(--base-size-20);
+  margin-inline-end: 0;
   margin-inline-start: var(--base-size-16);
-  margin-right: 0;
-  margin-top: var(--base-size-20);
   padding-inline-start: calc(var(--base-size-4) + var(--base-size-8));
 }
 
 .content picture {
   display: block;
-  margin-top: var(--base-size-20);
+  margin-block-start: var(--base-size-20);
 }
 
 .content figure {
@@ -95,8 +95,8 @@
   border-style: solid;
   border-width: var(--size-border-width-thin);
   display: block;
-  margin-top: var(--base-size-20);
-  max-width: 100%;
+  margin-block-start: var(--base-size-20);
+  max-inline-size: 100%;
 }
 
 .content pre {
@@ -107,11 +107,11 @@
   border-width: var(--size-border-width-thin);
   display: grid;
   grid-template-columns: var(--base-size-16) 1fr var(--base-size-16);
-  margin-bottom: 0;
-  margin-top: var(--base-size-20);
+  margin-block-end: 0;
+  margin-block-start: var(--base-size-20);
   overflow: auto;
-  padding-bottom: var(--base-size-12);
-  padding-top: var(--base-size-12);
+  padding-block-end: var(--base-size-12);
+  padding-block-start: var(--base-size-12);
   tab-size: 2;
 }
 
@@ -127,8 +127,8 @@
 
 .content pre code {
   background-color: var(--color-transparent);
-  border-radius: 0;
   border: none;
+  border-radius: 0;
   font-family: var(--base-text-font-family-monospace);
   font-size: var(--text-code-block-font-size-default);
   line-height: var(--text-code-block-line-height-default);
@@ -151,25 +151,25 @@
 
 .content table {
   border-collapse: collapse;
-  margin-top: var(--base-size-20);
-  width: 100%;
+  inline-size: 100%;
+  margin-block-start: var(--base-size-20);
 }
 
 .content tbody tr {
-  border-top-color: var(--color-border-default);
-  border-top-style: solid;
-  border-top-width: var(--size-border-width-thin);
-}
+  border-block-start-color: var(--color-border-default);
+  border-block-start-style: solid;
+  border-block-start-width: var(--size-border-width-thin);
 
-.content tbody tr:last-child {
-  border-bottom-color: var(--color-border-default);
-  border-bottom-style: solid;
-  border-bottom-width: var(--size-border-width-thin);
+  &:last-child {
+    border-block-end-color: var(--color-border-default);
+    border-block-end-style: solid;
+    border-block-end-width: var(--size-border-width-thin);
+  }
 }
 
 .content th {
   padding: var(--base-size-8) var(--base-size-16);
-  text-align: left;
+  text-align: start;
 }
 
 .content td {
@@ -177,43 +177,43 @@
 }
 
 .content dl {
-  margin-bottom: 0;
-  margin-top: var(--base-size-20);
+  margin-block-end: 0;
+  margin-block-start: var(--base-size-20);
 }
 
 .content dl dt:first-of-type {
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 .content dt {
-  margin-top: var(--base-size-8);
+  margin-block-start: var(--base-size-8);
 }
 
 .content dd {
-  margin-left: 0;
-  margin-top: var(--base-size-2);
+  margin-block-start: var(--base-size-2);
+  margin-inline-start: 0;
   padding-inline-start: var(--base-size-16);
 }
 
 .content hr {
   background-color: var(--color-border-default);
+  block-size: var(--size-border-width-thin);
   border: 0;
-  height: var(--size-border-width-thin);
-  margin-bottom: var(--base-size-24);
-  margin-top: var(--base-size-24);
+  margin-block-end: var(--base-size-24);
+  margin-block-start: var(--base-size-24);
 }
 
 .content-tab-container {
   display: block;
-  margin-top: var(--base-size-20);
+  margin-block-start: var(--base-size-20);
 }
 
 .content-tab-container div[slot="tablist-wrapper"] {
-  border-bottom-color: var(--color-border-default);
-  border-bottom-style: solid;
-  border-bottom-width: var(--size-border-width-thin);
+  border-block-end-color: var(--color-border-default);
+  border-block-end-style: solid;
+  border-block-end-width: var(--size-border-width-thin);
   display: flex;
-  width: 100%;
+  inline-size: 100%;
 }
 
 .content-tab-container div[role="tablist"] {
@@ -229,24 +229,24 @@
   font-size: inherit;
   padding: var(--base-size-8) var(--base-size-16);
   position: relative;
-}
 
-.content-tab-container button[role="tab"]:first-of-type {
-  margin-left: 0;
+  &:first-of-type {
+    margin-inline-start: 0;
+  }
+
+  &[aria-selected="true"] {
+    color: var(--color-foreground-accent);
+  }
 }
 
 .content-tab-container button[role="tab"]::before {
   background-color: var(--color-transparent);
-  bottom: calc(var(--size-border-width-thin) * -1);
+  block-size: var(--size-border-width-thick);
   content: "";
-  height: var(--size-border-width-thick);
-  left: var(--base-size-16);
+  inline-size: calc(100% - var(--base-size-16) * 2);
+  inset-block-end: calc(var(--size-border-width-thin) * -1);
+  inset-inline-start: var(--base-size-16);
   position: absolute;
-  width: calc(100% - var(--base-size-16) * 2);
-}
-
-.content-tab-container button[role="tab"][aria-selected="true"] {
-  color: var(--color-foreground-accent);
 }
 
 .content-tab-container button[role="tab"][aria-selected="true"]::before {
@@ -256,16 +256,16 @@
 /* Integration with @onlyoffice/code-editor */
 
 .content .code-editor {
-  margin-top: var(--base-size-20);
+  margin-block-start: var(--base-size-20);
 }
 
 /* Integration with @onlyoffice/code-listing */
 
 .content .code-listing {
-  margin-top: var(--base-size-20);
+  margin-block-start: var(--base-size-20);
 }
 
 .content .code-listing div[role="tabpanel"] pre {
   border: none;
-  margin-top: 0;
+  margin-block-start: 0;
 }
