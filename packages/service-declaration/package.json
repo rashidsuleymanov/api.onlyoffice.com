@@ -15,6 +15,7 @@
   "dependencies": {
     "@onlyoffice/declaration-code-example": "workspace:^",
     "@onlyoffice/declaration-reference": "workspace:^",
+    "httpsnippet": "^3.0.1",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
