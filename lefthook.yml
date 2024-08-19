@@ -3,10 +3,10 @@ pre-commit:
   commands:
     eslint:
       glob: "*.{cjs,cts,js,json,jsx,md,mjs,mts,ts,tsx,yaml,yml}"
-      run: pnpm exec eslint {staged_files}
+      run: pnpm exec eslint "{staged_files}"
     remark:
       glob: "site/pages/**/*.md"
-      run: pnpm exec remark --frail --quiet {staged_files}
+      run: pnpm exec remark --frail --quiet "{staged_files}"
     stylelint:
       glob: "*.css"
-      run: pnpm exec stylelint --ignore-path .gitignore {staged_files}
+      run: pnpm exec stylelint --ignore-path .gitignore "{staged_files}"
