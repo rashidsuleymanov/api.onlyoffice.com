@@ -12,26 +12,22 @@ declare global {
   namespace preact {
     namespace JSX {
       interface IntrinsicElements {
-        "document-builder-container": Partial<Omit<DocumentBuilderContainer, keyof HTMLElement>> & JSXBase["span"]
+        "document-builder-container": HTMLAttributes<DocumentBuilderContainer>
       }
     }
-
-    type JSXBase = JSX.IntrinsicElements extends {span: unknown}
-      ? JSX.IntrinsicElements
-      : Record<string, Record<string, unknown>>
   }
 }
 
-function main(): void {
-  if (window.customElements.get(DocumentBuilderContainer.tag)) {
+function define(): void {
+  if (window.customElements.get(DocumentBuilderContainer.tagName)) {
     return
   }
   window.DocumentBuilderContainer = DocumentBuilderContainer
-  window.customElements.define(DocumentBuilderContainer.tag, DocumentBuilderContainer)
+  window.customElements.define(DocumentBuilderContainer.tagName, DocumentBuilderContainer)
 }
 
 export class DocumentBuilderContainer extends HTMLElement {
-  static get tag(): string {
+  static get tagName(): string {
     return "document-builder-container"
   }
 
@@ -63,4 +59,4 @@ export class DocumentBuilderContainer extends HTMLElement {
   }
 }
 
-main()
+define()

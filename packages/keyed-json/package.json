@@ -1,5 +1,5 @@
 {
-  "name": "@onlyoffice/remark-document-builder",
+  "name": "@onlyoffice/keyed-json",
   "type": "module",
   "private": true,
   "main": "lib/main.ts",
@@ -9,18 +9,11 @@
     "test": "pnpm test:types && pnpm test:unit"
   },
   "dependencies": {
-    "@types/hast": "^3.0.4",
-    "@types/mdast": "^4.0.3",
-    "typescript": "^5.4.5",
-    "unist-util-visit": "^5.0.0"
+    "typescript": "^5.4.5"
   },
   "devDependencies": {
     "c8": "^9.1.0",
-    "rehype-stringify": "^10.0.0",
-    "remark-parse": "^11.0.0",
-    "remark-rehype": "^11.1.0",
     "tsx": "^4.16.5",
-    "unified": "^11.0.5",
     "uvu": "^0.5.6"
   }
 }

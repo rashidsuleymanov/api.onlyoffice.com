@@ -2,9 +2,9 @@ import {starryNight} from "@onlyoffice/eleventy-starry-night"
 import {type UserConfig} from "@onlyoffice/eleventy-types"
 import {useSuspense} from "@onlyoffice/preact-suspense"
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
+import {rehypeMetastring} from "@onlyoffice/rehype-metastring"
 import {rehypePreact} from "@onlyoffice/rehype-preact"
 import {rehypeStarryNight} from "@onlyoffice/rehype-starry-night"
-import {remarkDocumentBuilder} from "@onlyoffice/remark-document-builder"
 import type * as Hast from "hast"
 import type * as Mdast from "mdast"
 import {Fragment, type JSX, h} from "preact"
@@ -18,8 +18,8 @@ import remarkRehype from "remark-rehype"
 import {type Processor, unified} from "unified"
 import {VFile} from "vfile"
 import {reporterPretty} from "vfile-reporter-pretty"
-import {rehypeDocumentBuilderContainer} from "../components/document-builder-container/rehype.ts"
 import pack from "../package.json" with {type: "json"}
+import {rehypeDocumentBuilderContainer} from "./document-builder-container.tsx"
 import {rehypeImage} from "./image.tsx"
 import {rehypeLink} from "./link.tsx"
 
@@ -73,9 +73,9 @@ type MarkdownProcessor = Processor<Mdast.Root, Mdast.Root, Hast.Root, undefined,
 function markdown(): MarkdownProcessor {
   return unified()
     .use(remarkParse)
-    .use(remarkDocumentBuilder)
     .use(remarkGfm)
     .use(remarkRehype, {allowDangerousHtml: true})
+    .use(rehypeMetastring)
     .use(rehypeRaw)
     .use(rehypeSlug, {enableCustomId: true})
     .use(rehypeAutolink, {behavior: "wrap"})
