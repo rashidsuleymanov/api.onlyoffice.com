@@ -30,7 +30,7 @@ export default {
   },
   async viteFinal(d) {
     const {defineConfig, mergeConfig} = await import("vite")
-    const l = browserslist("> 0.2%")
+    const l = browserslist("> 0.2% and not dead")
     const t = browserslistToTargets(l)
     const c = defineConfig({
       css: {

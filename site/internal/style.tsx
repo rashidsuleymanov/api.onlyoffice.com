@@ -23,7 +23,7 @@ export function Style({...p}: HTMLAttributes<HTMLLinkElement>): JSX.Element {
   delete p.href
 
   const Suspense = useSuspense(async () => {
-    const l = browserslist("> 0.2%")
+    const l = browserslist("> 0.2% and not dead")
     const t = browserslistToTargets(l)
     const e = new EleventyLightningcss({
       urlPath: "/assets/",
