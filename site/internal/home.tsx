@@ -15,10 +15,10 @@ import {
 } from "@onlyoffice/site-kit"
 import {CodePreview} from "@onlyoffice/ui-kit"
 import {type JSX, h} from "preact"
-import {SyntaxHighlight} from "../components/syntax-highlight/syntax-highlight.ts"
 import {Icon} from "./icon.tsx"
 import {Image} from "./image.tsx"
 import {Link} from "./link.tsx"
+import {SyntaxHighlight} from "./syntax-highlight.tsx"
 
 declare module "@onlyoffice/eleventy-types" {
   interface Data {
