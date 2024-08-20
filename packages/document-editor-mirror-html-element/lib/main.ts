@@ -4,7 +4,6 @@
 import {callerPosition} from "@onlyoffice/caller-position"
 import {DocumentEditor, type DocumentEditorEventHandlerName} from "@onlyoffice/document-editor-html-element"
 import {substringPosition} from "@onlyoffice/strings"
-import {type Stringify} from "@onlyoffice/utility-types"
 
 declare global {
   interface Window {
@@ -23,7 +22,7 @@ declare global {
   namespace preact {
     namespace JSX {
       interface IntrinsicElements {
-        "document-editor-mirror": Partial<Stringify<Omit<DocumentEditorMirror, keyof HTMLElement>>> & JSXBase["span"]
+        "document-editor-mirror": HTMLAttributes<DocumentEditorMirror>
       }
     }
   }

@@ -499,15 +499,9 @@ importers:
       '@onlyoffice/document-server-types':
         specifier: workspace:^
         version: link:../document-server-types
-      '@onlyoffice/preact-jsx-base':
-        specifier: workspace:^
-        version: link:../preact-jsx-base
       '@onlyoffice/strings':
         specifier: workspace:^
         version: link:../strings
-      '@onlyoffice/utility-types':
-        specifier: workspace:^
-        version: link:../utility-types
       typescript:
         specifier: ^5.4.5
         version: 5.5.4
@@ -524,6 +518,9 @@ importers:
       esbuild:
         specifier: ^0.23.0
         version: 0.23.1
+      preact:
+        specifier: ^10.22.0
+        version: 10.23.2
       tsx:
         specifier: ^4.16.5
         version: 4.17.0
@@ -1320,12 +1317,6 @@ importers:
       preact:
         specifier: ^10.22.0
         version: 10.23.2
-      typescript:
-        specifier: ^5.4.5
-        version: 5.5.4
-
-  packages/preact-jsx-base:
-    dependencies:
       typescript:
         specifier: ^5.4.5
         version: 5.5.4
@@ -2781,12 +2772,6 @@ importers:
       vite:
         specifier: ^5.1.6
         version: 5.4.1(@types/node@22.4.1)(lightningcss@1.26.0)(sugarss@4.0.1(postcss@8.4.41))(terser@5.31.6)
-
-  packages/utility-types:
-    dependencies:
-      typescript:
-        specifier: ^5.4.5
-        version: 5.5.4
 
   site:
     devDependencies:

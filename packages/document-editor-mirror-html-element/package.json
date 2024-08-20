@@ -14,9 +14,7 @@
     "@onlyoffice/caller-position": "workspace:^",
     "@onlyoffice/document-editor-html-element": "workspace:^",
     "@onlyoffice/document-server-types": "workspace:^",
-    "@onlyoffice/preact-jsx-base": "workspace:^",
     "@onlyoffice/strings": "workspace:^",
-    "@onlyoffice/utility-types": "workspace:^",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
@@ -24,6 +22,7 @@
     "@web/dev-server": "^0.4.4",
     "@web/dev-server-esbuild": "^1.0.2",
     "esbuild": "^0.23.0",
+    "preact": "^10.22.0",
     "tsx": "^4.16.5"
   }
 }
