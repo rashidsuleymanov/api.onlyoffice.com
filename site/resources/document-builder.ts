@@ -4,15 +4,15 @@ import {type Resource} from "@onlyoffice/library-resource"
 
 const require = createRequire(import.meta.url)
 
-export const document = resource("document")
+export const word = resource("word")
 export const form = resource("form")
-export const presentation = resource("presentation")
-export const spreadsheet = resource("spreadsheet")
+export const slide = resource("slide")
+export const cell = resource("cell")
 export const pluginCommon = resource("plugin-common")
-export const pluginDocument = resource("plugin-document")
+export const pluginWord = resource("plugin-word")
 export const pluginForm = resource("plugin-form")
-export const pluginPresentation = resource("plugin-presentation")
-export const pluginSpreadsheet = resource("plugin-spreadsheet")
+export const pluginSlide = resource("plugin-slide")
+export const pluginCell = resource("plugin-cell")
 
 function resource(n: string): Resource {
   const f = file(n)

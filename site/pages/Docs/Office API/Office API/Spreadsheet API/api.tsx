@@ -1,7 +1,7 @@
 import {type Data} from "@onlyoffice/eleventy-types"
 import * as g from "@/generations/library.ts"
-import {spreadsheet} from "@/resources/document-builder.ts"
+import {cell} from "@/resources/document-builder.ts"
 
 export function data(): Data {
-  return g.data(spreadsheet)
+  return g.data(cell)
 }

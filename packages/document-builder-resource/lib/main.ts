@@ -20,13 +20,13 @@ import pack from "../package.json" with {type: "json"}
 
 const config = [
   {
-    name: "document",
+    name: "word",
     variant: "master",
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "dist",
-      path: "document-builder/master/document.json",
+      branch: "release/v8.2.0",
+      path: "document-builder/v8.2.0/word.json",
     },
   },
   {
@@ -35,28 +35,28 @@ const config = [
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "dist",
-      path: "document-builder/master/form.json",
+      branch: "release/v8.2.0",
+      path: "document-builder/v8.2.0/forms.json",
     },
   },
   {
-    name: "presentation",
+    name: "slide",
     variant: "master",
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "dist",
-      path: "document-builder/master/presentation.json",
+      branch: "release/v8.2.0",
+      path: "document-builder/v8.2.0/slide.json",
     },
   },
   {
-    name: "spreadsheet",
+    name: "cell",
     variant: "master",
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "dist",
-      path: "document-builder/master/spreadsheet.json",
+      branch: "release/v8.2.0",
+      path: "document-builder/v8.2.0/cell.json",
     },
   },
 
@@ -66,18 +66,18 @@ const config = [
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "dist",
-      path: "document-builder-plugin/master/common.json",
+      branch: "release/v8.2.0",
+      path: "document-builder-plugin/v8.2.0/common.json",
     },
   },
   {
-    name: "plugin-document",
+    name: "plugin-word",
     variant: "master",
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "dist",
-      path: "document-builder-plugin/master/document.json",
+      branch: "release/v8.2.0",
+      path: "document-builder-plugin/v8.2.0/word.json",
     },
   },
   {
@@ -86,28 +86,28 @@ const config = [
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "dist",
-      path: "document-builder-plugin/master/form.json",
+      branch: "release/v8.2.0",
+      path: "document-builder-plugin/v8.2.0/forms.json",
     },
   },
   {
-    name: "plugin-presentation",
+    name: "plugin-slide",
     variant: "master",
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "dist",
-      path: "document-builder-plugin/master/presentation.json",
+      branch: "release/v8.2.0",
+      path: "document-builder-plugin/v8.2.0/slide.json",
     },
   },
   {
-    name: "plugin-spreadsheet",
+    name: "plugin-cell",
     variant: "master",
     source: {
       owner: "onlyoffice",
       repo: "document-builder-declarations",
-      branch: "dist",
-      path: "document-builder-plugin/master/spreadsheet.json",
+      branch: "release/v8.2.0",
+      path: "document-builder-plugin/v8.2.0/cell.json",
     },
   },
 ]
