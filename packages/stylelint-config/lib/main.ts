@@ -74,7 +74,7 @@ const c: Config = {
     "keyframe-selector-notation": "percentage",
     "length-zero-no-unit": [true, {ignore: ["custom-properties"]}],
     "lightness-notation": "percentage",
-    "max-nesting-depth": 1,
+    "max-nesting-depth": 2,
     "media-feature-name-no-unknown": true,
     "media-feature-name-no-vendor-prefix": true,
     "media-feature-name-value-no-unknown": true,
@@ -199,7 +199,7 @@ const c: Config = {
     // todo: configure the importFrom option.
     // "csstools/media-use-custom-media": ["known", {importFrom: []}],
 
-    "order/order": ["custom-properties", "declarations", "rules", "at-rules"],
+    "order/order": ["custom-properties", "declarations", "at-rules", "rules"],
     "order/properties-alphabetical-order": true,
 
     "plugin/use-logical-properties-and-values": true,
