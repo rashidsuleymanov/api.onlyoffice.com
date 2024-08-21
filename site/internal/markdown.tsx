@@ -2,6 +2,7 @@ import {starryNight} from "@onlyoffice/eleventy-starry-night"
 import {type UserConfig} from "@onlyoffice/eleventy-types"
 import {useSuspense} from "@onlyoffice/preact-suspense"
 import {type ChildrenIncludable} from "@onlyoffice/preact-types"
+import {rehypeClean} from "@onlyoffice/rehype-clean"
 import {rehypeMetastring} from "@onlyoffice/rehype-metastring"
 import {rehypePreact} from "@onlyoffice/rehype-preact"
 import {rehypeStarryNight} from "@onlyoffice/rehype-starry-night"
@@ -83,6 +84,7 @@ function markdown(): MarkdownProcessor {
     .use(rehypeImage)
     .use(rehypeStarryNight, starryNight)
     .use(rehypeDocumentBuilderContainer)
+    .use(rehypeClean)
     .use(rehypePreact, {Fragment, jsx, jsxs})
     .freeze() as unknown as MarkdownProcessor
 }

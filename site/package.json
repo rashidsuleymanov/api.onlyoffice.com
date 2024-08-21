@@ -54,6 +54,7 @@
     "@onlyoffice/preact-suspense": "workspace:^",
     "@onlyoffice/preact-types": "workspace:^",
     "@onlyoffice/radiogroup-container-html-element": "workspace:^",
+    "@onlyoffice/rehype-clean": "workspace:^",
     "@onlyoffice/rehype-metastring": "workspace:^",
     "@onlyoffice/rehype-preact": "workspace:^",
     "@onlyoffice/rehype-starry-night": "workspace:^",

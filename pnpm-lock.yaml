@@ -1383,6 +1383,22 @@ importers:
         specifier: ^10.22.0
         version: 10.23.2
 
+  packages/rehype-clean:
+    dependencies:
+      '@types/hast':
+        specifier: ^3.0.4
+        version: 3.0.4
+      typescript:
+        specifier: ^5.4.5
+        version: 5.5.4
+      unist-util-visit:
+        specifier: ^5.0.0
+        version: 5.0.0
+    devDependencies:
+      '@onlyoffice/rehype-metastring':
+        specifier: workspace:^
+        version: link:../rehype-metastring
+
   packages/rehype-metastring:
     dependencies:
       '@types/hast':
@@ -2883,6 +2899,9 @@ importers:
       '@onlyoffice/radiogroup-container-html-element':
         specifier: workspace:^
         version: link:../packages/radiogroup-container-html-element
+      '@onlyoffice/rehype-clean':
+        specifier: workspace:^
+        version: link:../packages/rehype-clean
       '@onlyoffice/rehype-metastring':
         specifier: workspace:^
         version: link:../packages/rehype-metastring
