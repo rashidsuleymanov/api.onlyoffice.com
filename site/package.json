@@ -65,6 +65,7 @@
     "@onlyoffice/site-env": "workspace:^",
     "@onlyoffice/site-kit": "workspace:^",
     "@onlyoffice/store-demo": "workspace:^",
+    "@onlyoffice/stream-string": "workspace:^",
     "@onlyoffice/strings": "workspace:^",
     "@onlyoffice/template-hast-element": "workspace:^",
     "@onlyoffice/ui-icons": "workspace:^",

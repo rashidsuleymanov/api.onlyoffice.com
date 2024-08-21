@@ -2932,6 +2932,9 @@ importers:
       '@onlyoffice/store-demo':
         specifier: workspace:^
         version: link:../packages/store-demo
+      '@onlyoffice/stream-string':
+        specifier: workspace:^
+        version: link:../packages/stream-string
       '@onlyoffice/strings':
         specifier: workspace:^
         version: link:../packages/strings

@@ -1,6 +1,7 @@
 import {type Data} from "@onlyoffice/eleventy-types"
 import {Config} from "@onlyoffice/site-config"
 import {h} from "preact"
+import {data as postscript} from "../Postscript/index.tsx"
 import {data as sitemap} from "../Sitemap/xml.tsx"
 
 export function data(): Data {
@@ -13,6 +14,7 @@ export function data(): Data {
 
 export function render(): string {
   const c = Config.shared
+  const p = postscript()
   const s = sitemap()
-  return `Sitemap: ${c.baseUrl}${s.permalink}\nUser-agent: *`
+  return `Sitemap: ${c.baseUrl}${s.permalink}\nUser-agent: *\nDisallow: ${p.permalink}\n`
 }
