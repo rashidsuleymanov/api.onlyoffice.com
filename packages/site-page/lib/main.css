@@ -177,11 +177,6 @@
   inline-size: 160px;
   margin-block-start: var(--base-size-36);
 
-  &:first-of-type {
-    margin-block-start: 0;
-    margin-inline-start: 0;
-  }
-
   @media (--size-viewport-width-small) {
     margin-block-start: 0;
     margin-inline-start: var(--base-size-32);
@@ -189,6 +184,11 @@
 
   @media (--size-viewport-width-medium) {
     margin-inline-start: var(--base-size-64);
+  }
+
+  &:first-of-type {
+    margin-block-start: 0;
+    margin-inline-start: 0;
   }
 }
 
