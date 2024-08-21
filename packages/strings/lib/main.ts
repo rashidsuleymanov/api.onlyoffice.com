@@ -1,15 +1,15 @@
-export function cutPrefix(s: string, p: string): string {
+export function cutPrefix(s: string, p: string): [string, boolean] {
   if (p !== "" && s.startsWith(p)) {
-    return s.slice(p.length)
+    return [s.slice(p.length), true]
   }
-  return s
+  return [s, false]
 }
 
-export function cutSuffix(s: string, p: string): string {
+export function cutSuffix(s: string, p: string): [string, boolean] {
   if (p !== "" && s.endsWith(p)) {
-    return s.slice(0, -p.length)
+    return [s.slice(0, -p.length), true]
   }
-  return s
+  return [s, false]
 }
 
 export function isStringLiteral(u: unknown): u is string {

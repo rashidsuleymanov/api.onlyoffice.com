@@ -77,8 +77,8 @@ function resolve(a: string, b: string): string {
     }
     p = path.dirname(a)
     p = pate.resolve(p, b)
-    p = cutPrefix(p, rootDir())
-    p = cutSuffix(p, h)
+    ;[p] = cutPrefix(p, rootDir())
+    ;[p] = cutSuffix(p, h)
   }
 
   p = decodeURIComponent(`.${p}`)

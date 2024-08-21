@@ -56,7 +56,7 @@ export function data(): Data {
       }
       let p = d.page.filePathStem
       if (d.slug) {
-        p = cutSuffix(p, d.page.fileSlug)
+        [p] = cutSuffix(p, d.page.fileSlug)
         p += d.slug(d)
       }
       p = p.split("/")
@@ -73,7 +73,7 @@ export function data(): Data {
         return
       }
       let p = d.page.filePathStem
-      p = cutSuffix(p, d.page.fileSlug)
+      ;[p] = cutSuffix(p, d.page.fileSlug)
       p += s
       p = p.split("/")
         .map((s) => {

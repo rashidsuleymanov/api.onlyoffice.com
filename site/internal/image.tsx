@@ -231,7 +231,7 @@ function resolve(a: string, b: string): string {
   if (!path.isAbsolute(a)) {
     p = path.dirname(b)
     p = pate.resolve(p, a)
-    p = cutPrefix(p, rootDir())
+    ;[p] = cutPrefix(p, rootDir())
   }
 
   if (isBuild()) {
