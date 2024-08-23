@@ -49,9 +49,15 @@ function toHttpsnippet(req: RequestDeclaration): HTTPSnippet {
     }
   }
 
+  let b
+  if (req.bodyParameters){
+    b = req.bodyParameters
+  }
+
   return new HTTPSnippet({
     method: m,
     url: u.toString(),
     headers: h,
+    postData: b
   })
 }
