@@ -15,79 +15,82 @@ When the document is ready, the form data can be submitted by clicking the **Com
 
 1. When the user opens a form document, the GetAllContentControls method is executed to collect all the content controls from the document. After that, the GetFormValue method is executed to get the content controls values and display them in the custom interface:
 
-   ``` javascript
-   var contentControls = [];
+  ``` javascript
+  let contentControls = []
 
-   var onDocumentReady = function () {
-       window.connector = docEditor.createConnector();
-
-       connector.executeMethod("GetAllContentControls", null, function (data) {
-           setTimeout(function () {
-               for (let i = 0; i < data.length; i++) {
-
-                   connector.executeMethod("GetFormValue", [data[i]["InternalId"]], function (value) {
-                       data[i].Value = value ? value : "";
-                       if (data.length - 1 == i) {
-                           contentControls = data;
-                       }
-                   });
-               }
-           }, 0);
-       });
-   };
-   ```
+  function onDocumentReady() {
+    window.connector = docEditor.createConnector()
+    function handleGetAllContentControls(data) {
+      setTimeout(function processContentControls(index) {
+        if (index >= data.length) {
+          contentControls = data
+          return
+        }
+        handleGetFormValue(data, index, (value) => {
+          if (data[index].Value === value) {
+            data[index].Value = value
+          } else {
+            data[index].Value = ""
+          }
+          if (index === data.length - 1) {
+            contentControls = data
+          } else {
+            processContentControls(index + 1)
+          }
+        })
+      }, 0)
+    }
+    function handleGetFormValue(data, index, callback) {
+      connector.executeMethod("GetFormValue", [data[index]["InternalId"]], callback)
+    }
+    connector.executeMethod("GetAllContentControls", null, handleGetAllContentControls)
+  }
+  ```
 
 2. When the user chooses a username from the list, the GetFormsByTag method is executed to collect all the forms by their tags and sets the corresponding values to them with the SetFormValue method:
 
-   ``` javascript
-   $("#persons").change(function (e) {
-       const postalCode = $(this).val();
+``` javascript
+$("#persons").change(function personChange(e) {
+  const postalCode = $(this).val()
+  $.getJSON("/app_data/editor/wildcarddata/persons.json", (persons) => {
+    for (const person of persons) {
+      if (person["PostalCode"] === postalCode) {
+        for (key in person) {
+          const value = person[key]
+          setFormValue(key, value)
+        }
+      }
+    }
+  })
 
-       $.getJSON("/app_data/editor/wildcarddata/persons.json", function (persons) {
-           for (const person of persons) {
-               if (person["PostalCode"] == postalCode) {
-                   for (key in person) {
-                       var value = person[key];
-
-                       setFormValue(key, value);
-                   }
-               }
-           }
-       })
-
-       var setFormValue = function (tag, value) {
-           connector.executeMethod(
-               "GetFormsByTag",
-               [tag],
-               function (forms) {
-                   connector.executeMethod(
-                       "SetFormValue",
-                       [forms[0]["InternalId"], value],
-                       null
-                   );
-               }
-           );
-       }
-   });
-   ```
+  function setFormValue(tag, value) {
+    connector.executeMethod(
+      "GetFormsByTag",
+      [tag],
+      (forms) => {
+        connector.executeMethod(
+          "SetFormValue",
+          [forms[0]["InternalId"], value],
+          null,
+        )
+      },
+    )
+  }
+})
+```
 
 3. When the user edits a form value, the onChangeContentControl event is fired and after that, the GetFormValue method is executed to get an updated form value and display it in the custom interface:
 
-   ``` javascript
-   var onDocumentReady = function () {
-
-       connector.attachEvent("onChangeContentControl", onChangeContentControl);
-
-   };
-
-   function onChangeContentControl(e) {
-       connector.executeMethod("GetFormValue", [e["InternalId"]], function (value) {
-
-           $("#" + e["InternalId"]).val(value || "");
-
-       });
-   }
-   ```
+``` javascript
+function onDocumentReady() {
+  connector.attachEvent("onChangeContentControl", onChangeContentControl)
+}
+function onChangeContentControl(e) {
+  connector.executeMethod("GetFormValue", [e["InternalId"]], (value) => {
+    $(`#${e["InternalId"]}`).val(value || "")
+  })
+}
+```
 
 > Please note that the connector is available only for **ONLYOFFICE Developer Edition**.
 >

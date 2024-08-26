@@ -57,10 +57,10 @@ Type: array of object
 
 ``` javascript
 [
-    { 
-        "permissions": "Full Access",
-        "user": "John Smith"
-    }
+  {
+    permissions: "Full Access",
+    user: "John Smith",
+  },
 ]
 ```
 
@@ -107,21 +107,21 @@ Example: "2010-07-07 3:46 PM"
 ### Example
 
 ``` javascript
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "document": {
-        "info": {
-            "favorite": false,
-            "folder": "Example Files",
-            "owner": "John Smith",
-            "sharingSettings": [
-                {
-                    "permissions": "Full Access",
-                    "user": "John Smith"
-                }
-            ],
-            "uploaded": "2010-07-07 3:46 PM"     
-        }
-        ,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  document: {
+    info: {
+      favorite: false,
+      folder: "Example Files",
+      owner: "John Smith",
+      sharingSettings: [
+        {
+          permissions: "Full Access",
+          user: "John Smith",
+        },
+      ],
+      uploaded: "2010-07-07 3:46 PM",
+    }
+    ,
+  },
+})
 ```

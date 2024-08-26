@@ -22,29 +22,29 @@ The reference figure and the steps below explain the process of comparing docume
    ![onRequestCompareFile](/assets/images/editor/onRequestCompareFile.png)
 
    ``` javascript
-   var onRequestCompareFile = function() {
-       docEditor.setRevisedFile({
-           "fileType": "docx",
-           "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
-           "url": "https://example.com/url-to-example-document.docx"
-       });
-   };
-
-   var docEditor = new DocsAPI.DocEditor("placeholder", {
-       "events": {
-           "onRequestCompareFile": onRequestCompareFile,
-       },
-   });
+   function onRequestCompareFile() {
+     docEditor.setRevisedFile({
+       fileType: "docx",
+       token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
+       url: "https://example.com/url-to-example-document.docx",
+     })
+   }
+   
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
+     events: {
+       onRequestCompareFile,
+     },
+   })
    ```
 
 3. In order to select a document for comparing, the [setRevisedFile](../../../Usage%20API/Methods/index.md#setrevisedfile) method must be called. When calling this method, the token must be added to validate the parameters.
 
    ``` javascript
    docEditor.setRevisedFile({
-       "fileType": "docx",
-       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
-       "url": "https://example.com/url-to-example-document.docx"
-   });
+     fileType: "docx",
+     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
+     url: "https://example.com/url-to-example-document.docx",
+   })
    ```
 
 4. After that the user can accept or reject the changes using the corresponding buttons on the top toolbar.

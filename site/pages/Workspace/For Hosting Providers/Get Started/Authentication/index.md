@@ -49,20 +49,20 @@ CreateAuthToken() {
 ### Node.js generating token example
 
 ``` javascript
-var moment = require("moment");
-var crypto = require("crypto");
+import crypto from "node:crypto"
+import moment from "moment"
 
-var createToken = function (pkey, machinekey) {
-    var now = moment.utc().format("YYYYMMDDHHmmss");
+function createToken(pkey, machinekey) {
+  const now = moment.utc().format("YYYYMMDDHHmmss")
 
-    var authkey = crypto.createHmac("sha1", machinekey).update(now + "\n" + pkey).digest("base64");
+  let authkey = crypto.createHmac("sha1", machinekey).update(`${now}\n${pkey}`).digest("base64")
 
-    authkey = authkey.replace(/\+/g, "-").replace(/\//g, "_");
-    authkey = authkey.substr(0, authkey.length - 1);
-    var hash = "ASC " + pkey + ":" + now + ":" + authkey;
+  authkey = authkey.replaceAll("+", "-").replaceAll("/", "_")
+  authkey = authkey.slice(0, Math.max(0, authkey.length - 1))
+  const hash = `ASC ${pkey}:${now}:${authkey}`
 
-    return hash;
-};
+  return hash
+}
 ```
 
 ### PHP generating token example

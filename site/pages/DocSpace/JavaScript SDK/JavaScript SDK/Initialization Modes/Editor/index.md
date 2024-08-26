@@ -13,5 +13,5 @@ Allows you to open the SDK as a document editor for editing by specifying the [i
 | [initEditor](../../Methods/index.md#initeditor) | Initializes the SDK frame in the "editor" mode. |
 
 ``` javascript
-var docSpace = DocSpace.SDK.initEditor({config});
+const docSpace = DocSpace.SDK.initEditor({config})
 ```

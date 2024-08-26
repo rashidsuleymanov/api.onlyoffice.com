@@ -23,49 +23,49 @@ The reference figure and the steps below explain the process of protecting range
    <img alt="Grant access" src="/assets/images/editor/protect-range.png" width="292px">
 
    ``` javascript
-   var onRequestUsers = function(event) {
-       docEditor.setUsers({
-           "c": event.data.c,
-           "users": [
-               {
-                   "email": "john@example.com",
-                   "id": "78e1e841",
-                   "name": "John Smith"
-               },
-               {
-                   "email": "kate@example.com",
-                   "id": "F89d8069ba2b",
-                   "name": "Kate Cage"
-               },
-           ]
-       });
-   };
-
-   var docEditor = new DocsAPI.DocEditor("placeholder", {
-       "events": {
-           "onRequestUsers": onRequestUsers,
-       },
-   });
+   function onRequestUsers(event) {
+     docEditor.setUsers({
+       c: event.data.c,
+       users: [
+         {
+           email: "john@example.com",
+           id: "78e1e841",
+           name: "John Smith",
+         },
+         {
+           email: "kate@example.com",
+           id: "F89d8069ba2b",
+           name: "Kate Cage",
+         },
+       ],
+     })
+   }
+   
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
+     events: {
+       onRequestUsers,
+     },
+   })
    ```
 
 3. In order to set the users list under the *Who can edit* field, the [setUsers](../../../Usage%20API/Methods/index.md#setusers) method must be called:
 
    ``` javascript
    docEditor.setUsers({
-       "c": "protect",
-       "users": [
-           {
-               "email": "john@example.com",
-               "id": "78e1e841",
-               "name": "John Smith"
-           },
-           {
-               "email": "kate@example.com",
-               "id": "F89d8069ba2b",
-               "name": "Kate Cage"
-           },
-       ]
-   });
+     c: "protect",
+     users: [
+       {
+         email: "john@example.com",
+         id: "78e1e841",
+         name: "John Smith",
+       },
+       {
+         email: "kate@example.com",
+         id: "F89d8069ba2b",
+         name: "Kate Cage",
+       },
+     ],
+   })
    ```
 
    Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

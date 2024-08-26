@@ -32,19 +32,19 @@ Example: `https://example.com/plugins/`
 ### Example
 
 ``` javascript
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-  "editorConfig": {
-    "plugins": {
-      "autostart": [
-        "asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  editorConfig: {
+    plugins: {
+      autostart: [
+        "asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}",
       ],
-      "pluginsData": [
-        "https://example.com/plugins/chess-plugin/config.json"
+      pluginsData: [
+        "https://example.com/plugins/chess-plugin/config.json",
       ],
-      "url": "https://example.com/plugins/"
+      url: "https://example.com/plugins/",
     },
   },
-});
+})
 ```
 
 The **example.com** is the name of the server where **document manager** and **document storage service** are installed and the plugins are placed. See the [How it works](../../../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

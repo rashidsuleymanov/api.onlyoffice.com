@@ -35,9 +35,12 @@ Download the [Node.js example](../index.md) from our site.
 To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the *config/default.json* file:
 
 ``` json
-"storageFolder": "./files"
-"storagePath": "/files"
-"siteUrl": "https://documentserver/"
+{
+  "storageFolder": "./files",
+  "storagePath": "/files",
+  "siteUrl": "https://documentserver/"
+}
+
 ```
 
 where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed, the **storageFolder** and **storagePath** are the paths where files will be created and stored. You can set an absolute path. For example, *D:\\\folder*. Please note that on Windows OS the double backslash must be used as a separator.
@@ -137,9 +140,12 @@ See the detailed guide to learn how to [install ONLYOFFICE Docs for Linux](https
    Edit the following lines:
 
    ``` json
-   "storageFolder": "./files"
-   "storagePath": "/files"
-   "siteUrl": "https://documentserver/"
+   {
+     "storageFolder": "./files",
+     "storagePath": "/files",
+     "siteUrl": "https://documentserver/"
+   }
+   
    ```
 
    where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed, the **storageFolder** and **storagePath** are the paths where files will be created and stored. Please note that you must have read and write permissions to the folder. If you do not have them, please use the next command:

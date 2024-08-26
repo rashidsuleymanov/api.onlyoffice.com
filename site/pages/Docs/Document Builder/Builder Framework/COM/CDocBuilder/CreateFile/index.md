@@ -25,5 +25,5 @@ oBuilder->Dispose();
 #### .docbuilder
 
 ```js
-builder.CreateFile("docx");
+builder.CreateFile("docx")
 ```

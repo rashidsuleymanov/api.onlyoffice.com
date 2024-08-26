@@ -5,7 +5,7 @@ order: -3
 After initializing **document editor** you will get the object that can be used to call the methods.
 
 ``` javascript
-var docEditor = new DocsAPI.DocEditor("placeholder", config);
+const docEditor = new DocsAPI.DocEditor("placeholder", config)
 ```
 
 * [createConnector](#createconnector) - create the connector to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
@@ -37,7 +37,7 @@ Create the [connector](../Automation%20API/index.md) to interact with text docum
 > This parameter is available for editing only for ONLYOFFICE Developer Edition.
 
   ``` javascript
-  docEditor.createConnector();
+  docEditor.createConnector()
   ```
 
 ## denyEditingRights
@@ -45,7 +45,7 @@ Create the [connector](../Automation%20API/index.md) to interact with text docum
 Deny editing. This method can be called when you want to make the document editing unavailable.
 
   ``` javascript
-  docEditor.denyEditingRights(message);
+  docEditor.denyEditingRights(message)
   ```
 
   | Parameter | Description                           | Type   | Presence |
@@ -57,7 +57,7 @@ Deny editing. This method can be called when you want to make the document editi
 Destroy *docEditor* object. This method can be called when you want to reinit document editor with another configurations. Used since version 4.3.
 
   ``` javascript
-  docEditor.destroyEditor();
+  docEditor.destroyEditor()
   ```
 
 ## downloadAs
@@ -65,7 +65,7 @@ Destroy *docEditor* object. This method can be called when you want to reinit do
 Download the edited file. This method can be called only when the existence of the [onDownloadAs](../Config/Events/index.md#ondownloadas) events. **Document editing service** asynchronously creates a document and triggers the **onDownloadAs** event with a link in parameter.
 
   ``` javascript
-  docEditor.downloadAs(format);
+  docEditor.downloadAs(format)
   ```
 
   | Parameter | Description                                                                                                                                                                                                                                                                                                                                                                                | Type   | Presence |
@@ -80,19 +80,19 @@ Insert an image into the file. Starting from version 7.0, this method allows a u
 
   ``` javascript
   docEditor.insertImage({
-      "c": "add",
-      "images": [
-          {
-              "fileType": "png",
-              "url": "https://example.com/url-to-example-image1.png"
-          },
-          {
-              "fileType": "png",
-              "url": "https://example.com/url-to-example-image2.png"
-          },
-      ],
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiYWRkIiwiaW1hZ2VzIjpbeyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UxLnBuZyJ9LHsiZmlsZVR5cGUiOiJwbmciLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWltYWdlMi5wbmcifV19.JfSa__qPeY3MjUgdkJDjdfJWBgvCmEdLfFzjd3WgeUA"
-  });
+    c: "add",
+    images: [
+      {
+        fileType: "png",
+        url: "https://example.com/url-to-example-image1.png",
+      },
+      {
+        fileType: "png",
+        url: "https://example.com/url-to-example-image2.png",
+      },
+    ],
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiYWRkIiwiaW1hZ2VzIjpbeyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UxLnBuZyJ9LHsiZmlsZVR5cGUiOiJwbmciLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWltYWdlMi5wbmcifV19.JfSa__qPeY3MjUgdkJDjdfJWBgvCmEdLfFzjd3WgeUA",
+  })
   ```
 
   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -111,10 +111,10 @@ Insert an image into the file. Starting from version 7.0, this method allows a u
   >
   > ``` javascript
   > docEditor.insertImage({
-  >    "c": "add",
-  >    "fileType": "png",
-  >    "url": "https://example.com/url-to-example-image.png"
-  >});
+  >   c: "add",
+  >   fileType: "png",
+  >   url: "https://example.com/url-to-example-image.png",
+  > })
   >```
   >
   > Please note that this structure is deprecated and will not be supported by the next editors versions. Please use a new one.
@@ -125,58 +125,58 @@ Show the document version history. This method must be called after the [onReque
 
   ``` javascript
   docEditor.refreshHistory({
-      "currentVersion": 2,
-      "history": [
-          {
-              "created": "2010-07-06 10:13 AM",
-              "key": "af86C7e71Ca8",
-              "user": {
-                  "id": "F89d8069ba2b",
-                  "name": "Kate Cage"
-              },
-              "version": 1
-          },
-          {
-              "created": "2010-07-07 3:46 PM",
-              "key": "Khirz6zTPdfd7",
-              "user": {
-                  "id": "78e1e841",
-                  "name": "John Smith"
-              },
-              "version": 2
-          },
-      ],
-  });
+    currentVersion: 2,
+    history: [
+      {
+        created: "2010-07-06 10:13 AM",
+        key: "af86C7e71Ca8",
+        user: {
+          id: "F89d8069ba2b",
+          name: "Kate Cage",
+        },
+        version: 1,
+      },
+      {
+        created: "2010-07-07 3:46 PM",
+        key: "Khirz6zTPdfd7",
+        user: {
+          id: "78e1e841",
+          name: "John Smith",
+        },
+        version: 2,
+      },
+    ],
+  })
   ```
 
   If after editing and saving the document the *history* with the object changes and server version is returned, send the object changes in the *changes* parameter and the server version in the *serverVersion* parameter.
 
   ``` javascript
   docEditor.refreshHistory({
-      "currentVersion": 2,
-      "history": [
-          {
-              "created": "2010-07-06 10:13 AM",
-              "key": "af86C7e71Ca8",
-              "user": {
-                  "id": "F89d8069ba2b",
-                  "name": "Kate Cage"
-              },
-              "version": 1
-          },
-          {
-              "changes": changes,
-              "created": "2010-07-07 3:46 PM",
-              "key": "Khirz6zTPdfd7",
-              "serverVersion": serverVersion,
-              "user": {
-                  "id": "78e1e841",
-                  "name": "John Smith"
-              },
-              "version": 2
-          },
-      ],
-  });
+    currentVersion: 2,
+    history: [
+      {
+        created: "2010-07-06 10:13 AM",
+        key: "af86C7e71Ca8",
+        user: {
+          id: "F89d8069ba2b",
+          name: "Kate Cage",
+        },
+        version: 1,
+      },
+      {
+        changes,
+        created: "2010-07-07 3:46 PM",
+        key: "Khirz6zTPdfd7",
+        serverVersion,
+        user: {
+          id: "78e1e841",
+          name: "John Smith",
+        },
+        version: 2,
+      },
+    ],
+  })
   ```
 
   Where **changes** is the *changes* from [the history object](../Callback%20handler/index.md#history) returned after saving the document.
@@ -187,8 +187,8 @@ Show the document version history. This method must be called after the [onReque
 
   ``` javascript
   docEditor.refreshHistory({
-      "error": "Exception",
-  });
+    error: "Exception",
+  })
   ```
 
   | Parameter             | Description                                                                                                                                       | Type    | Presence |
@@ -210,7 +210,7 @@ Show the document version history. This method must be called after the [onReque
 Request to close the editor. It is recommended to call this method before the [destroyEditor](#destroyeditor) method to check if there is some unsaved data in the editor or not. If the unsaved data exists, then the dialog box will be displayed to ask the user whether they want to continue editing or close the editor losing all the unsaved data. If the *Close* option will be chosen, then the [onRequestClose](../Config/Events/index.md#onrequestclose) event will be called.
 
   ``` javascript
-  docEditor.requestClose();
+  docEditor.requestClose()
   ```
 
 ## setActionLink
@@ -218,7 +218,7 @@ Request to close the editor. It is recommended to call this method before the [d
 Set the link to the document which contains a bookmark. This method must be called after the [onMakeActionLink](../Config/Events/index.md#onmakeactionlink) event. The software integrator must process the *ACTION\_DATA* received from the **document editing service** to set the link. The link is created by the software integrators who use ONLYOFFICE Docs in their **document manager**.
 
   ``` javascript
-  docEditor.setActionLink(link);
+  docEditor.setActionLink(link)
   ```
 
   | Parameter | Description                                                                       | Type   | Presence |
@@ -230,7 +230,7 @@ Set the link to the document which contains a bookmark. This method must be call
 Change the *Favorite* icon state. This method must be called after the [onMetaChange](../Config/Events/index.md#onmetachange) event.
 
   ``` javascript
-  docEditor.setFavorite(favorite);
+  docEditor.setFavorite(favorite)
   ```
 
   | Parameter | Description                                                                  | Type    | Presence |
@@ -243,12 +243,12 @@ Send the link to the document for viewing the version history. This method must 
 
   ``` javascript
   docEditor.setHistoryData({
-      "fileType": "docx",
-      "key": "Khirz6zTPdfd7",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.iRcdHve235L5K1e29SmUBkuHcxb63WHRko51WMJlmS0",
-      "url": "https://example.com/url-to-example-document.docx",
-      "version": 2
-  });
+    fileType: "docx",
+    key: "Khirz6zTPdfd7",
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.iRcdHve235L5K1e29SmUBkuHcxb63WHRko51WMJlmS0",
+    url: "https://example.com/url-to-example-document.docx",
+    version: 2,
+  })
   ```
 
   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -257,18 +257,18 @@ Send the link to the document for viewing the version history. This method must 
 
   ``` javascript
   docEditor.setHistoryData({
-      "changesUrl": "https://example.com/url-to-changes.zip",
-      "fileType": "docx",
-      "key": "Khirz6zTPdfd7",
-      "previous": {
-          "fileType": "docx",
-          "key": "af86C7e71Ca8",
-          "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
-      },
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsiZmlsZVR5cGUiOiJkb2N4Iiwia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.ril3Ol3rvYne3g0dG8TdKCiwJ7-7kkYGc6-XWMvp8FU",
-      "url": "https://example.com/url-to-example-document.docx",
-      "version": 2
-  });
+    changesUrl: "https://example.com/url-to-changes.zip",
+    fileType: "docx",
+    key: "Khirz6zTPdfd7",
+    previous: {
+      fileType: "docx",
+      key: "af86C7e71Ca8",
+      url: "https://example.com/url-to-the-previous-version-of-the-document.docx",
+    },
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsiZmlsZVR5cGUiOiJkb2N4Iiwia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.ril3Ol3rvYne3g0dG8TdKCiwJ7-7kkYGc6-XWMvp8FU",
+    url: "https://example.com/url-to-example-document.docx",
+    version: 2,
+  })
   ```
 
   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -277,9 +277,9 @@ Send the link to the document for viewing the version history. This method must 
 
   ``` javascript
   docEditor.setHistoryData({
-      "error": "Exception",
-      "version": 2
-  });
+    error: "Exception",
+    version: 2,
+  })
   ```
 
   | Parameter         | Description                                                                                                                                                                                                                                                                                                                 | Type    | Presence |
@@ -302,10 +302,10 @@ Insert recipient data for mail merge into the file. This method must be called a
 
   ``` javascript
   docEditor.setMailMergeRecipients({
-      "fileType": "xlsx",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
-      "url": "https://example.com/url-to-example-recipients.xlsx"
-  });
+    fileType: "xlsx",
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
+    url: "https://example.com/url-to-example-recipients.xlsx",
+  })
   ```
 
   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -326,16 +326,16 @@ Refresh data by a link to a file which is specified with the *referenceData*, *p
 
   ``` javascript
   docEditor.setReferenceData({
-      "fileType": "xlsx",
-      "path": "sample.xlsx",
-      "referenceData": {
-          "fileKey": "BCFA2CED",
-          "instanceId": "https://example.com",
-          "key": "Khirz6zTPdfd7"
-      },
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
-      "url": "https://example.com/url-to-example-document.xlsx"
-  });
+    fileType: "xlsx",
+    path: "sample.xlsx",
+    referenceData: {
+      fileKey: "BCFA2CED",
+      instanceId: "https://example.com",
+      key: "Khirz6zTPdfd7",
+    },
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
+    url: "https://example.com/url-to-example-document.xlsx",
+  })
   ```
 
   Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -344,8 +344,8 @@ Refresh data by a link to a file which is specified with the *referenceData*, *p
 
   ``` javascript
   docEditor.setReferenceData({
-      "error": "Exception",
-  });
+    error: "Exception",
+  })
   ```
 
   | Parameter     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Type   | Presence |
@@ -365,16 +365,16 @@ Change a source of the external data. This method can be called after the [onReq
 
   ``` javascript
   docEditor.setReferenceSource({
-      "fileType": "xlsx",
-      "path": "sample.xlsx",
-      "referenceData": {
-          "fileKey": "BCFA2CED",
-          "instanceId": "https://example.com",
-          "key": "Khirz6zTPdfd7"
-      },
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
-      "url": "https://example.com/url-to-example-document.xlsx"
-  });
+    fileType: "xlsx",
+    path: "sample.xlsx",
+    referenceData: {
+      fileKey: "BCFA2CED",
+      instanceId: "https://example.com",
+      key: "Khirz6zTPdfd7",
+    },
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
+    url: "https://example.com/url-to-example-document.xlsx",
+  })
   ```
 
   Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -383,8 +383,8 @@ Change a source of the external data. This method can be called after the [onReq
 
   ``` javascript
   docEditor.setReferenceSource({
-      "error": "Exception",
-  });
+    error: "Exception",
+  })
   ```
 
   | Parameter     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Type   | Presence |
@@ -404,11 +404,11 @@ Select a document for comparing or combining. This method must be called after t
 
   ``` javascript
   docEditor.setRequestedDocument({
-      "c": "compare",
-      "fileType": "docx",
-      "url": "https://example.com/url-to-example-document.docx",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8"
-  });
+    c: "compare",
+    fileType: "docx",
+    url: "https://example.com/url-to-example-document.docx",
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
+  })
   ```
 
   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -426,11 +426,11 @@ Insert recipient data for mail merge into the file. This method must be called a
 
   ``` javascript
   docEditor.setRequestedSpreadsheet({
-      "c": "mailmerge";
-      "fileType": "xlsx",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
-      "url": "https://example.com/url-to-example-recipients.xlsx"
-  });
+    c: "mailmerge",
+    fileType: "xlsx",
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
+    url: "https://example.com/url-to-example-recipients.xlsx",
+  })
   ```
 
   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -450,10 +450,10 @@ Select a document for comparing. This method must be called after the [onRequest
 
   ``` javascript
   docEditor.setRevisedFile({
-      "fileType": "docx",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
-      "url": "https://example.com/url-to-example-document.docx"
-  });
+    fileType: "docx",
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
+    url: "https://example.com/url-to-example-document.docx",
+  })
   ```
 
   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -470,18 +470,18 @@ Update the [information](../Config/Document/Info/index.md#sharingsettings) about
 
   ``` javascript
   docEditor.setSharingSettings({
-      "sharingSettings": [
-          {
-              "permissions": "Full Access",
-              "user": "John Smith"
-          },
-          {
-              "isLink": true,
-              "permissions": "Read Only",
-              "user": "External link"
-          }
-      ]
-  });
+    sharingSettings: [
+      {
+        permissions: "Full Access",
+        user: "John Smith",
+      },
+      {
+        isLink: true,
+        permissions: "Read Only",
+        user: "External link",
+      },
+    ],
+  })
   ```
 
   | Parameter                   | Description                                                             | Type            | Presence |
@@ -496,22 +496,22 @@ Set a list of users to mention in the comments, grant the access rights to edit 
 
   ``` javascript
   docEditor.setUsers({
-      "c": "protect",
-      "users": [
-          {
-              "email": "john@example.com",
-              "id": "78e1e841",
-              "image": "https://example.com/url-to-user-avatar1.png",
-              "name": "John Smith"
-          },
-          {
-              "email": "kate@example.com",
-              "id": "F89d8069ba2b",
-              "image": "https://example.com/url-to-user-avatar2.png",
-              "name": "Kate Cage"
-          },
-      ]
-  });
+    c: "protect",
+    users: [
+      {
+        email: "john@example.com",
+        id: "78e1e841",
+        image: "https://example.com/url-to-user-avatar1.png",
+        name: "John Smith",
+      },
+      {
+        email: "kate@example.com",
+        id: "F89d8069ba2b",
+        image: "https://example.com/url-to-user-avatar2.png",
+        name: "Kate Cage",
+      },
+    ],
+  })
   ```
 
   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -534,7 +534,7 @@ Set a list of users to mention in the comments, grant the access rights to edit 
 Display a tooltip with a message. This method can be called only after the [onAppReady](../Config/Events/index.md#onappready) events.
 
   ``` javascript
-  docEditor.showMessage(message);
+  docEditor.showMessage(message)
   ```
 
   | Parameter | Description               | Type   | Presence |
@@ -548,5 +548,5 @@ Display a tooltip with a message. This method can be called only after the [onAp
 Start filling out the ready forms and lock the pdf editing (only pdf viewing becomes available). This method can be called only after the [onRequestStartFilling](../Config/Events/index.md#onrequeststartfilling) event.
 
   ``` javascript
-  docEditor.startFilling();
+  docEditor.startFilling()
   ```

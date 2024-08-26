@@ -11,25 +11,24 @@ To change the input size, use **InputSize** (*base, middle, big, huge, large*), 
 ### Example
 
 ``` javascript
-import {IInput, InputSize, InputType, IMessage, Actions, InputAutocomplete} from "@onlyoffice/docspace-plugin-sdk";
+import {Actions, type IInput, type IMessage, InputAutocomplete, InputSize, InputType} from "@onlyoffice/docspace-plugin-sdk"
 
 const onChange = (value: string) => {
-    input.value = value;
+  input.value = value
 
-    const message: IMessage = {
-        "actions": [Actions.updateProps],
-        "newProps": input,
-    };
-
-        return message;
-};
+  const message: IMessage = {
+    actions: [Actions.updateProps],
+    newProps: input,
+  }
+  return message
+}
 
 const input: IInput = {
-    "value": "",
-    onChange,
-    "scale": true,
-    "size": InputSize.base,
-    "type": InputType.text,
-    "autoComplete": InputAutocomplete.off,
-};
+  value: "",
+  onChange,
+  scale: true,
+  size: InputSize.base,
+  type: InputType.text,
+  autoComplete: InputAutocomplete.off,
+}
 ```

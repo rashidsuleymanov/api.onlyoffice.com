@@ -22,22 +22,22 @@ To set borders to the Box component, use a stroke or the [IBorderProp](https://g
 ### Example
 
 ``` javascript
-import {IBox, IInput, Components, InputGroup} from "@onlyoffice/docspace-plugin-sdk";
+import {Components, type IBox, type IInput, type InputGroup} from "@onlyoffice/docspace-plugin-sdk"
 
 const nameInputProps: IInput = {
-    "value": "",
-    "onChange": () => {},
-    "scale": true,
-    "placeholder": "",
-};
+  value: "",
+  onChange: () => {},
+  scale: true,
+  placeholder: "",
+}
 
 const inputComponent: InputGroup = {
-    "component": Components.input,
-    "props": nameInputProps,
-};
+  component: Components.input,
+  props: nameInputProps,
+}
 
 const inputBox: IBox = {
-    "marginProp": "0 0 24px",
-    "children": [inputComponent],
-};
+  marginProp: "0 0 24px",
+  children: [inputComponent],
+}
 ```

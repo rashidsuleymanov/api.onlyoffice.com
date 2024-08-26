@@ -5,12 +5,12 @@ A component that is used to embed a third-party website into a modal window or t
 ### Example
 
 ``` javascript
-import {IFrame} from "@onlyoffice/docspace-plugin-sdk";
+import {type IFrame} from "@onlyoffice/docspace-plugin-sdk"
 
 const frameProps: IFrame = {
-    "width": "100%",
-    "height": "100%",
-    "name": "test",
-    "src": "",
-};    
+  width: "100%",
+  height: "100%",
+  name: "test",
+  src: "",
+}
 ```

@@ -40,16 +40,16 @@ After the editing is finished, the [document saving](../Saving%20file/index.md) 
 4. Add the script initializing the **Document Editor** for the *div* element with the configuration for the document you want to open. Be sure to add a [token](../Security/index.md) when using local links. Otherwise, an error will occur.
 
    ``` javascript
-   new DocsAPI.DocEditor("placeholder", {
-       "document": {
-           "fileType": "docx",
-           "key": "Khirz6zTPdfd7",
-           "title": "Example Document Title.docx",
-           "url": "https://example.com/url-to-example-document.docx"
-       },
-       "documentType": "word",
-       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCJ9.7IpEJxdOvBQ0kJ8l6ZegIV4tX5vsPbZZCDDVmcFROXc"
-   });
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
+     document: {
+       fileType: "docx",
+       key: "Khirz6zTPdfd7",
+       title: "Example Document Title.docx",
+       url: "https://example.com/url-to-example-document.docx",
+     },
+     documentType: "word",
+     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCJ9.7IpEJxdOvBQ0kJ8l6ZegIV4tX5vsPbZZCDDVmcFROXc",
+   })
    ```
    Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed.
 5. Open your *html* file in the browser.

@@ -14,5 +14,5 @@ builder.CloseFile()
 #### .docbuilder
 
 ``` js
-builder.CloseFile();
+builder.CloseFile()
 ```

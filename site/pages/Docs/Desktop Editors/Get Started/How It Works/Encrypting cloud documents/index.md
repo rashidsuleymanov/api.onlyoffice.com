@@ -21,18 +21,18 @@ With current model of encryption, it is possible to achieve the following:
 
 2. If there are no keys in the DMS, they are generated with the *NSOpenSSL::RSA\_GenerateKeys* method:
 
-   ``` javascript
+   ``` cpp
    if (!bIsServerPrivateKeyExist)
    {
-       unsigned char* publicKey = NULL;
-       unsigned char* privateKey = NULL;
-       NSOpenSSL::RSA_GenerateKeys(publicKey, privateKey);
+        unsigned char* publicKey = NULL;
+        unsigned char* privateKey = NULL;
+        NSOpenSSL::RSA_GenerateKeys(publicKey, privateKey);
    }
    ```
 
 3. To encrypt the private key before saving it to the database, ONLYOFFICE uses the *NSOpenSSL::AES\_Encrypt\_desktop* algorithm based on AES-256 Cipher Block Chaining:
 
-   ``` javascript
+   ``` cpp
    std::string privateEnc;
    NSOpenSSL::AES_Encrypt_desktop(U_TO_UTF8(tmpInfo->m_sPassword), sPrivate, privateEnc, CAscRendererProcessParams::getInstance().GetProperty("user"));
    info.PrivateKeyEnc = NSFile::CUtf8Converter::GetUnicodeFromCharPtr(privateEnc);
@@ -40,7 +40,7 @@ With current model of encryption, it is possible to achieve the following:
 
 4. The private key decryption is performed when a synchronised temporary file copy needs to be decrypted when editing it. To decrypt the key, the *NSOpenSSL::AES\_Decrypt\_desktop* algorithm is used:
 
-   ``` javascript
+   ``` cpp
    std::string privateKey;
    if (nServerPrivateKeyVersion == 2)
        NSOpenSSL::AES_Decrypt_desktop_GCM(U_TO_UTF8(tmpInfo->m_sPassword), privateKeyEnc, privateKey, CAscRendererProcessParams::getInstance().GetProperty("user"), nServerPrivateKeyVersionOffset);
@@ -57,7 +57,7 @@ The encrypted files, besides the ciphertext itself, contain the arrays of public
 
 To encrypt the file password with each authorized user's public key, the *NSOpenSSL::RSA\_EncryptPublic\_desktop* algorithm is used:
 
-``` javascript
+``` cpp
 std::string sKey = arguments[0]->GetStringValue().ToString();
 NSStringUtils::string_replaceA(sKey, "
 ", "\n");
@@ -70,7 +70,7 @@ return true;
 
 The reverse *NSOpenSSL::RSA\_DecryptPrivate\_desktop* algorithm is used to decrypt the file using the user's private key:
 
-``` javascript
+``` cpp
 std::string sKey = arguments[0]->GetStringValue().ToString();
 std::string sMessage = arguments[1]->GetStringValue().ToString();
 std::string sOut;

@@ -64,8 +64,8 @@ You can find more information about the *.docbuilder* file syntax [here](../../.
 
 ``` json
 {
-    "async": true,
-    "url": "https://example.com/url-to-example-script.docbuilder"
+  "async": true,
+  "url": "https://example.com/url-to-example-script.docbuilder"
 }
 ```
 
@@ -75,8 +75,8 @@ Where **example.com** is the name of the server where **document storage service
 
 ``` json
 {
-   "key": "af86C7e71Ca8",
-   "end": false
+  "key": "af86C7e71Ca8",
+  "end": false
 }
 ```
 
@@ -84,8 +84,8 @@ Where **example.com** is the name of the server where **document storage service
 
 ``` json
 {
-    "async": true,
-    "key": "Khirz6zTPdfd7"
+  "async": true,
+  "key": "Khirz6zTPdfd7"
 }
 ```
 
@@ -93,12 +93,12 @@ Where **example.com** is the name of the server where **document storage service
 
 ``` json
 {
-   "key": "Khirz6zTPdfd7",
-   "urls": {
-      "SampleText.docx": "https://documentserver/SampleText.docx",
-      "SampleText2.docx": "https://documentserver/SampleText2.docx"
-   },
-   "end": true
+  "key": "Khirz6zTPdfd7",
+  "urls": {
+    "SampleText.docx": "https://documentserver/SampleText.docx",
+    "SampleText2.docx": "https://documentserver/SampleText2.docx"
+  },
+  "end": true
 }
 ```
 
@@ -106,8 +106,8 @@ Where **example.com** is the name of the server where **document storage service
 
 ``` json
 {
-    "async": false,
-    "url": "https://example.com/url-to-example-script.docbuilder"
+  "async": false,
+  "url": "https://example.com/url-to-example-script.docbuilder"
 }
 ```
 
@@ -117,12 +117,12 @@ Where **example.com** is the name of the server where **document storage service
 
 ``` json
 {
-   "key": "af86C7e71Ca8",
-   "urls": {
-      "SampleText.docx": "https://documentserver/SampleText.docx",
-      "SampleText2.docx": "https://documentserver/SampleText2.docx"
-   },
-   "end": true
+  "key": "af86C7e71Ca8",
+  "urls": {
+    "SampleText.docx": "https://documentserver/SampleText.docx",
+    "SampleText2.docx": "https://documentserver/SampleText2.docx"
+  },
+  "end": true
 }
 ```
 
@@ -130,7 +130,7 @@ Where **example.com** is the name of the server where **document storage service
 
 ``` json
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhc3luYyI6dHJ1ZSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1zY3JpcHQuZG9jYnVpbGRlciJ9.dzoTbRzSMa95Fpg34CjnF3ZUPdGA2CnBedFL_qOOxAs"
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhc3luYyI6dHJ1ZSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1zY3JpcHQuZG9jYnVpbGRlciJ9.dzoTbRzSMa95Fpg34CjnF3ZUPdGA2CnBedFL_qOOxAs"
 }
 ```
 
@@ -138,7 +138,7 @@ Where **example.com** is the name of the server where **document storage service
 
 ``` json
 {
-    "error": -8
+  "error": -8
 }
 ```
 
@@ -146,9 +146,10 @@ Where **example.com** is the name of the server where **document storage service
 
 ``` json
 {
-    "async": false,
-    "url": "https://example.com/url-to-example-script.docbuilder",
-    "argument": { "key": "string", "key2": "string2" }
+  "async": false,
+  "url": "https://example.com/url-to-example-script.docbuilder",
+  "argument": {"key": "string",
+    "key2": "string2"}
 }
 ```
 
@@ -158,12 +159,12 @@ Where **example.com** is the name of the server where **document storage service
 
 ``` json
 {
-    "key": "af86C7e71Ca8",
-    "urls": {
-        "SampleText.docx": "https://documentserver/SampleText.docx",
-        "SampleText2.docx": "https://documentserver/SampleText2.docx"
-    },
-    "end": true
+  "key": "af86C7e71Ca8",
+  "urls": {
+    "SampleText.docx": "https://documentserver/SampleText.docx",
+    "SampleText2.docx": "https://documentserver/SampleText2.docx"
+  },
+  "end": true
 }
 ```
 

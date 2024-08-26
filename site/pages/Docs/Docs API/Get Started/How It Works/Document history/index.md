@@ -26,37 +26,37 @@ The reference figure and the steps below explain the process of viewing the hist
 2. Specify the event handler for opening the [version history](../../../Usage%20API/Config/Events/index.md#onrequesthistory) list in the configuration script for Document Editor initialization. When the [onRequestHistory](../../../Usage%20API/Config/Events/index.md#onrequesthistory) event is called, the [refreshHistory](../../../Usage%20API/Methods/index.md#refreshhistory) method must be executed. This method contains document history for each document version, if the history parameter has been present for each version.
 
    ``` javascript
-   var onRequestHistory = function () {
-       docEditor.refreshHistory({
-           "currentVersion": 2,
-           "history": [
-               {
-                   "created": "2010-07-06 10:13 AM",
-                   "key": "af86C7e71Ca8",
-                   "user": {
-                       "id": "F89d8069ba2b",
-                       "name": "Kate Cage"
-                   },
-                   "version": 1
-               },
-               {
-                   "created": "2010-07-07 3:46 PM",
-                   "key": "Khirz6zTPdfd7",
-                   "user": {
-                       "id": "78e1e841",
-                       "name": "John Smith"
-                   },
-                   "version": 2
-               },
-           ],
-       });
-   };
-
-   var docEditor = new DocsAPI.DocEditor("placeholder", {
-       "events": {
-           "onRequestHistory": onRequestHistory,
-       },
-   });
+   function onRequestHistory() {
+     docEditor.refreshHistory({
+       currentVersion: 2,
+       history: [
+         {
+           created: "2010-07-06 10:13 AM",
+           key: "af86C7e71Ca8",
+           user: {
+             id: "F89d8069ba2b",
+             name: "Kate Cage",
+           },
+           version: 1,
+         },
+         {
+           created: "2010-07-07 3:46 PM",
+           key: "Khirz6zTPdfd7",
+           user: {
+             id: "78e1e841",
+             name: "John Smith",
+           },
+           version: 2,
+         },
+       ],
+     })
+   }
+   
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
+     events: {
+       onRequestHistory,
+     },
+   })
    ```
 
    <img alt="Opening File" src="/assets/images/editor/history_open.png" width="300px">
@@ -66,22 +66,22 @@ The reference figure and the steps below explain the process of viewing the hist
    When calling the *setHistoryData* method to view the document history version, the token must be added to validate the parameters.
 
    ``` javascript
-   var onRequestHistoryData = function (event) {
-       var version = event.data;
-       docEditor.setHistoryData({
-           "fileType": "docx",
-           "key": "Khirz6zTPdfd7",
-           "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.iRcdHve235L5K1e29SmUBkuHcxb63WHRko51WMJlmS0",
-           "url": "https://example.com/url-to-example-document.docx",
-           "version": 2
-       });
-   };
-
-   var docEditor = new DocsAPI.DocEditor("placeholder", {
-       "events": {
-           "onRequestHistoryData": onRequestHistoryData,
-       },
-   });
+   function onRequestHistoryData(event) {
+     const version = event.data
+     docEditor.setHistoryData({
+       fileType: "docx",
+       key: "Khirz6zTPdfd7",
+       token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.iRcdHve235L5K1e29SmUBkuHcxb63WHRko51WMJlmS0",
+       url: "https://example.com/url-to-example-document.docx",
+       version: 2,
+     })
+   }
+   
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
+     events: {
+       onRequestHistoryData,
+     },
+   })
    ```
 
    ![History](/assets/images/editor/history.png)
@@ -89,43 +89,43 @@ The reference figure and the steps below explain the process of viewing the hist
 4. In the configuration script for Document Editor initialization, specify the event handler which will [restore](../../../Usage%20API/Config/Events/index.md#onrequestrestore) the file version when the user clicks the *Restore* button in the version history. When the [onRequestRestore](../../../Usage%20API/Config/Events/index.md#onrequestrestore) event is called, the [refreshHistory](../../../Usage%20API/Methods/index.md#refreshhistory) method must be executed to initialize version history again. This method contains document history for each document version, if the history parameter has been present for each version.
 
    ``` javascript
-   var onRequestRestore = function (event) {
-       var fileType = event.data.fileType;
-       var url = event.data.url;
-       var version = event.data.version;
-
-       docEditor.refreshHistory({
-           "currentVersion": 2,
-           "history": [
-               {
-                   "created": "2010-07-06 10:13 AM",
-                   "key": "af86C7e71Ca8",
-                   "user": {
-                       "id": "F89d8069ba2b",
-                       "name": "Kate Cage"
-                   },
-                   "version": 1
-               },
-               {
-                   "changes": changes,
-                   "created": "2010-07-07 3:46 PM",
-                   "key": "Khirz6zTPdfd7",
-                   "serverVersion": serverVersion,
-                   "user": {
-                       "id": "78e1e841",
-                       "name": "John Smith"
-                   },
-                   "version": 2
-               },
-           ]
-       });
-   };
-
-   var docEditor = new DocsAPI.DocEditor("placeholder", {
-       "events": {
-           "onRequestRestore": onRequestRestore,
-       },
-   });
+   function onRequestRestore(event) {
+     const fileType = event.data.fileType
+     const url = event.data.url
+     const version = event.data.version
+   
+     docEditor.refreshHistory({
+       currentVersion: 2,
+       history: [
+         {
+           created: "2010-07-06 10:13 AM",
+           key: "af86C7e71Ca8",
+           user: {
+             id: "F89d8069ba2b",
+             name: "Kate Cage",
+           },
+           version: 1,
+         },
+         {
+           changes,
+           created: "2010-07-07 3:46 PM",
+           key: "Khirz6zTPdfd7",
+           serverVersion,
+           user: {
+             id: "78e1e841",
+             name: "John Smith",
+           },
+           version: 2,
+         },
+       ],
+     })
+   }
+   
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
+     events: {
+       onRequestRestore,
+     },
+   })
    ```
 
    ![onRequestRestore](/assets/images/editor/onRequestRestore.png)
@@ -137,15 +137,15 @@ The reference figure and the steps below explain the process of viewing the hist
 7. Specify the event handler for the *Close History* button to be displayed in the configuration script for Document Editor initialization. When the user is trying to go back to the document from viewing the document version history by clicking the *Close History* button, the [onRequestHistoryClose](../../../Usage%20API/Config/Events/index.md#onrequesthistoryclose) event is called and the version history list is hidden. When the function is called, the editor must be initialized again, in the editing mode.
 
    ``` javascript
-   var onRequestHistoryClose = function () {
-       document.location.reload();
-   };
-
-   var docEditor = new DocsAPI.DocEditor("placeholder", {
-       "events": {
-           "onRequestHistoryClose": onRequestHistoryClose,
-       },
-   });
+   function onRequestHistoryClose() {
+     document.location.reload()
+   }
+   
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
+     events: {
+       onRequestHistoryClose,
+     },
+   })
    ```
 
    ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png)
@@ -160,30 +160,30 @@ If the document version was created with the **document editor**, then the docum
 
   ``` javascript
   docEditor.refreshHistory({
-      "currentVersion": 2,
-      "history": [
-          {
-              "created": "2010-07-06 10:13 AM",
-              "key": "af86C7e71Ca8",
-              "user": {
-                  "id": "F89d8069ba2b",
-                  "name": "Kate Cage"
-              },
-              "version": 1
-          },
-          {
-              "changes": changes,
-              "created": "2010-07-07 3:46 PM",
-              "key": "Khirz6zTPdfd7",
-              "serverVersion": serverVersion,
-              "user": {
-                  "id": "78e1e841",
-                  "name": "John Smith"
-              },
-              "version": 2
-          },
-      ],
-  });
+    currentVersion: 2,
+    history: [
+      {
+        created: "2010-07-06 10:13 AM",
+        key: "af86C7e71Ca8",
+        user: {
+          id: "F89d8069ba2b",
+          name: "Kate Cage",
+        },
+        version: 1,
+      },
+      {
+        changes,
+        created: "2010-07-07 3:46 PM",
+        key: "Khirz6zTPdfd7",
+        serverVersion,
+        user: {
+          id: "78e1e841",
+          name: "John Smith",
+        },
+        version: 2,
+      },
+    ],
+  })
   ```
 
   Where the **changes** is the *changes* from [the history object](../../../Usage%20API/Callback%20handler/index.md#history) returned after saving the document.
@@ -198,18 +198,18 @@ If the document version was created with the **document editor**, then the docum
 
   ``` javascript
   docEditor.setHistoryData({
-      "changesUrl": "https://example.com/url-to-changes.zip",
-      "fileType": "docx",
-      "key": "Khirz6zTPdfd7",
-      "previous": {
-          "fileType": "docx",
-          "key": "af86C7e71Ca8",
-          "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
-      },
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsiZmlsZVR5cGUiOiJkb2N4Iiwia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.ril3Ol3rvYne3g0dG8TdKCiwJ7-7kkYGc6-XWMvp8FU",
-      "url": "https://example.com/url-to-example-document.docx",
-      "version": 2
-  });
+    changesUrl: "https://example.com/url-to-changes.zip",
+    fileType: "docx",
+    key: "Khirz6zTPdfd7",
+    previous: {
+      fileType: "docx",
+      key: "af86C7e71Ca8",
+      url: "https://example.com/url-to-the-previous-version-of-the-document.docx",
+    },
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsiZmlsZVR5cGUiOiJkb2N4Iiwia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.ril3Ol3rvYne3g0dG8TdKCiwJ7-7kkYGc6-XWMvp8FU",
+    url: "https://example.com/url-to-example-document.docx",
+    version: 2,
+  })
   ```
 
   > The *changesurl* request is made in the browser from the added iframe with the **documentserver** domain, where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. For its correct work the cross-origin HTTP requests must be allowed (CORS). This can be achieved using the *Access-Control-Allow-Origin* header.

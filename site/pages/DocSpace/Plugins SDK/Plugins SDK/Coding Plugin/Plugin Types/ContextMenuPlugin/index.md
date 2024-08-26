@@ -51,28 +51,29 @@ Update the context menu item.
 
 **Example**
 
-``` javascript
-import {IContextMenuPlugin, IContextMenuItem} from "@onlyoffice/docspace-plugin-sdk";
+``` typescript
+import {type IContextMenuItem, type IContextMenuPlugin} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements IContextMenuPlugin {
-    contextMenuItems: Map<string, IContextMenuItem> = new Map();
+  contextMenuItems = new Map<string, IContextMenuItem>()
 
-    addContextMenuItem = (item: IContextMenuItem): void => {
-        this.contextMenuItems.set(item.key, item);
-    };
+  addContextMenuItem = (item: IContextMenuItem): void => {
+    this.contextMenuItems.set(item.key, item)
+  }
 
-    getContextMenuItems = (): Map<string, IContextMenuItem> => {
-        return this.contextMenuItems;
-    };
+  getContextMenuItems = (): Map<string, IContextMenuItem> => {
+    return this.contextMenuItems
+  }
 
-    getContextMenuItemsKeys = (): string[] => {
-        const keys = Array.from(this.contextMenuItems).map(([key, item]) => key);
+  getContextMenuItemsKeys = (): string[] => {
+    const keys = [...this.contextMenuItems].map(([key, item]) => {
+      return key
+    })
+    return keys
+  }
 
-        return keys;
-    };
-
-    updateContextMenuItem = (item: IContextMenuItem): void => {
-        this.contextMenuItems.set(item.key, item);
-    };
+  updateContextMenuItem = (item: IContextMenuItem): void => {
+    this.contextMenuItems.set(item.key, item)
+  }
 }
 ```

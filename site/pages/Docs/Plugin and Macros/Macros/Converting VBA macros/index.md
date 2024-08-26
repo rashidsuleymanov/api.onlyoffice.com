@@ -32,28 +32,28 @@ The macro counts the sum of the values from the three cell ranges of the **A** c
 
 The exact same thing can be achieved using ONLYOFFICE macros, the code will be almost identical and easy to understand if you know both Visual Basic for Applications and JavaScript:
 
+<!-- This code is related to macros. -->
+<!-- eslint-skip -->
 ``` javascript
 (function()
 {
-    for (let run = 1; run <= 3; run++)
-    {
-        var result = "";
-        switch (run)
-        {
-            case 1:
-                result = "=SUM(A1:A100)";
-                break;
-            case 2:
-                result = "=SUM(A1:A300)";
-                break;
-            case 3:
-                result = "=SUM(A1:A25)";
-                break;
-            default:
-                break;
-        }
-        Api.GetActiveSheet().GetRange("B" + run).Value = result;
+  for (let run = 1; run <= 3; run += 1) {
+    let result = ""
+    switch (run) {
+    case 1:
+      result = "=SUM(A1:A100)"
+      break
+    case 2:
+      result = "=SUM(A1:A300)"
+      break
+    case 3:
+      result = "=SUM(A1:A25)"
+      break
+    default:
+      break
     }
+    Api.GetActiveSheet().GetRange(`B${run}`).Value = result
+  }
 })();
 ```
 

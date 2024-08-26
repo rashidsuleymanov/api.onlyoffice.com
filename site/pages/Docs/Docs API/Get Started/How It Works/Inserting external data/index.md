@@ -21,15 +21,15 @@ The steps below explain the process of inserting data into the spreadsheet by an
 2. Specify the [document.referenceData](../../../Usage%20API/Config/Document/index.md#referencedata) parameter in the initialization config of the source spreadsheet:
 
    ``` javascript
-   var docEditor = new DocsAPI.DocEditor("placeholder", {
-       "document": {
-           "referenceData": {
-               "fileKey": "BCFA2CED",
-               "instanceId": "https://example.com",
-               "key": "Khirz6zTPdfd7"
-           },
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
+     document: {
+       referenceData: {
+         fileKey: "BCFA2CED",
+         instanceId: "https://example.com",
+         key: "Khirz6zTPdfd7",
        },
-   });
+     },
+   })
    ```
 
 3. When the user copies the data from the source spreadsheet, the clipboard receives a list of the following values:
@@ -43,11 +43,11 @@ The steps below explain the process of inserting data into the spreadsheet by an
 5. Specify the [onRequestReferenceData](../../../Usage%20API/Config/Events/index.md#onrequestreferencedata) event handler in the initialization config of the destination spreadsheet for the *Paste link* and *Update values* buttons to be displayed:
 
    ``` javascript
-   var docEditor = new DocsAPI.DocEditor("placeholder", {
-       "events": {
-           "onRequestReferenceData": onRequestReferenceData,
-       },
-   });
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
+     events: {
+       onRequestReferenceData,
+     },
+   })
    ```
 
 6. If the clipboard has the source spreadsheet data specified in step 3, and the destination spreadsheet has the *onRequestReferenceData* event handler in the initialization config, then the *Paste link* button is displayed in the dialog box.
@@ -75,11 +75,11 @@ The steps below explain the process of inserting data into the spreadsheet by an
    > To send the data to the *setReferenceData* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* or *link* parameters are used.
 
    ``` javascript
-   var onRequestReferenceData = function (event) {
-       var link = event.data.link;
-       var referenceData = event.data.referenceData;
-       var path = event.data.path;
-   };
+   function onRequestReferenceData(event) {
+     const link = event.data.link
+     const referenceData = event.data.referenceData
+     const path = event.data.path
+   }
    ```
 
 <img alt="Update values" src="/assets/images/editor/update-values.png" width="700px">
@@ -90,16 +90,16 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
    ``` javascript
    docEditor.setReferenceData({
-       "fileType": "xlsx",
-       "path": "sample.xlsx",
-       "referenceData": {
-           "fileKey": "BCFA2CED",
-           "instanceId": "https://example.com",
-           "key": "Khirz6zTPdfd7"
-       },
-       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
-       "url": "https://example.com/url-to-example-document.xlsx"
-   });
+     fileType: "xlsx",
+     path: "sample.xlsx",
+     referenceData: {
+       fileKey: "BCFA2CED",
+       instanceId: "https://example.com",
+       key: "Khirz6zTPdfd7",
+     },
+     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
+     url: "https://example.com/url-to-example-document.xlsx",
+   })
    ```
 
    Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -117,21 +117,21 @@ The steps below explain the process of inserting data into the spreadsheet by an
    ### Example
 
    ``` javascript
-   var onRequestOpen = function (event) {
-       var path  = event.data.path;
-       var referenceData = event.data.referenceData;
-       var windowName  = event.data.windowName;
-       window.open({
-           "path": "https://example.com/external-url.docx",
-           "windowName": event.data.windowName
-       });
-   };
-
-   var docEditor = new DocsAPI.DocEditor("placeholder", {
-       "events": {
-           "onRequestOpen": onRequestOpen,
-       },
-   });
+   function onRequestOpen(event) {
+     const path = event.data.path
+     const referenceData = event.data.referenceData
+     const windowName = event.data.windowName
+     window.open({
+       path: "https://example.com/external-url.docx",
+       windowName: event.data.windowName,
+     })
+   }
+   
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
+     events: {
+       onRequestOpen,
+     },
+   })
    ```
 
    Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -149,26 +149,26 @@ The steps below explain the process of inserting data into the spreadsheet by an
    ### Example
 
    ``` javascript
-   var onRequestReferenceSource = function () {
-       var referenceData =  event.data.referenceData;
-       var path = event.data.path;
-
-       docEditor.setReferenceSource({
-           "fileType": "xlsx",
-           "path": "sample.xlsx",
-           "referenceData": {
-               "fileKey": "BCFA2CED",
-               "instanceId": "https://example.com",
-               "key": "Khirz6zTPdfd7"
-           },
-           "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
-           "url": "https://example.com/url-to-example-document.xlsx"
-       });
-   };
-
-   var docEditor = new DocsAPI.DocEditor("placeholder", {
-       "events": {
-           "onRequestReferenceSource": onRequestReferenceSource,
+   function onRequestReferenceSource() {
+     const referenceData = event.data.referenceData
+     const path = event.data.path
+   
+     docEditor.setReferenceSource({
+       fileType: "xlsx",
+       path: "sample.xlsx",
+       referenceData: {
+         fileKey: "BCFA2CED",
+         instanceId: "https://example.com",
+         key: "Khirz6zTPdfd7",
        },
-   });
+       token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
+       url: "https://example.com/url-to-example-document.xlsx",
+     })
+   }
+   
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
+     events: {
+       onRequestReferenceSource,
+     },
+   })
    ```

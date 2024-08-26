@@ -29,28 +29,28 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/t
 
 ``` json
 {
-    "name" : "Document Templates",
-    "guid" : "asc.{94DF0B57-299D-4F68-AF6F-9A6BB53F3031}",
+  "name": "Document Templates",
+  "guid": "asc.{94DF0B57-299D-4F68-AF6F-9A6BB53F3031}",
 
-    "variations" : [
-        {
-            "description" : "templates",
-            "url"         : "index.html",
+  "variations": [
+    {
+      "description": "templates",
+      "url": "index.html",
 
-            "icons"           : ["resources/img/icon.png", "resources/img/icon@2x.png"],
-            "isViewer"        : false,
-            "EditorsSupport"  : ["word"],
+      "icons": ["resources/img/icon.png", "resources/img/icon@2x.png"],
+      "isViewer": false,
+      "EditorsSupport": ["word"],
 
-            "isVisual"        : true,
-            "isModal"         : false,
-            "isInsideMode"    : true,
+      "isVisual": true,
+      "isModal": false,
+      "isInsideMode": true,
 
-            "initDataType"    : "none",
-            "initData"        : "",
+      "initDataType": "none",
+      "initData": "",
 
-            "buttons"        : [ ]
-        }
-    ]
+      "buttons": []
+    }
+  ]
 }
 ```
 

@@ -45,8 +45,8 @@ oBuilder->Dispose();
 
 #### .docbuilder
 
-```js
-docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
+```shell
+docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder;
 ```
 
 ## Adding or removing fonts
@@ -67,6 +67,6 @@ oBuilder->Dispose();
 
 #### .docbuilder
 
-```js
+```shell
 docbuilder.exe "--check-fonts=true" test.docbuilder
 ```

@@ -8,7 +8,7 @@ Returns the current JS [context](../../CDocBuilderContext/index.md).
 
 #### .Net
 
-```c#
+```csharp
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

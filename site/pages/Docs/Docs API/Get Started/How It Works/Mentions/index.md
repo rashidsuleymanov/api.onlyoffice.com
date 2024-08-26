@@ -21,45 +21,45 @@ The reference figure and the steps below explain the process of mentioning users
    <img alt="onRequestUsers" src="/assets/images/editor/onRequestUsers.png" width="309px">
 
    ``` javascript
-   var onRequestUsers = function(event) {
-       docEditor.setUsers({
-           "c": event.data.c,
-           "users": [
-               {
-                   "email": "john@example.com",
-                   "name": "John Smith"
-               },
-               {
-                   "email": "kate@example.com",
-                   "name": "Kate Cage"
-               },
-           ]
-       });
-   };
-
-   var docEditor = new DocsAPI.DocEditor("placeholder", {
-       "events": {
-           "onRequestUsers": onRequestUsers,
-       },
-   });
+   function onRequestUsers(event) {
+     docEditor.setUsers({
+       c: event.data.c,
+       users: [
+         {
+           email: "john@example.com",
+           name: "John Smith",
+         },
+         {
+           email: "kate@example.com",
+           name: "Kate Cage",
+         },
+       ],
+     })
+   }
+   
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
+     events: {
+       onRequestUsers,
+     },
+   })
    ```
 
 3. In order to set the users list under the comment field, the [setUsers](../../../Usage%20API/Methods/index.md#setusers) method must be called:
 
    ``` javascript
    docEditor.setUsers({
-       "c": "mention",
-       "users": [
-           {
-               "email": "john@example.com",
-               "name": "John Smith"
-           },
-           {
-               "email": "kate@example.com",
-               "name": "Kate Cage"
-           },
-       ]
-   });
+     c: "mention",
+     users: [
+       {
+         email: "john@example.com",
+         name: "John Smith",
+       },
+       {
+         email: "kate@example.com",
+         name: "Kate Cage",
+       },
+     ],
+   })
    ```
 
    Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -77,17 +77,17 @@ Specify the event handler for the comment message and the list of emails to be s
 > In version 5.4, **onRequestSendNotify** event can only be used if [onRequestUsers](../../../Usage%20API/Config/Events/index.md#onrequestusers) event is set. Starting from version 5.5, there is no such dependency between **onRequestSendNotify** and **onRequestUsers** - both can be set independently.
 
 ``` javascript
-var onRequestSendNotify = function(event) {
-    var ACTION_DATA = event.data.actionLink;
-    var comment = event.data.message;
-    var emails = event.data.emails;
-};
+function onRequestSendNotify(event) {
+  const ACTION_DATA = event.data.actionLink
+  const comment = event.data.message
+  const emails = event.data.emails
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestSendNotify": onRequestSendNotify,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestSendNotify,
+  },
+})
 ```
 
 ## Sharing settings
@@ -100,18 +100,18 @@ In the case when the [document.info.sharingSettings](../../../Usage%20API/Config
 
 ``` javascript
 docEditor.setSharingSettings({
-    "sharingSettings": [
-        {
-            "permissions": "Full Access",
-            "user": "John Smith"
-        },
-        {
-            "isLink": true,
-            "permissions": "Read Only",
-            "user": "External link"
-        }
-    ]
-});
+  sharingSettings: [
+    {
+      permissions: "Full Access",
+      user: "John Smith",
+    },
+    {
+      isLink: true,
+      permissions: "Read Only",
+      user: "External link",
+    },
+  ],
+})
 ```
 
 In the case when the [onRequestSendNotify](../../../Usage%20API/Config/Events/index.md#onrequestsendnotify) event does not provide access to the file, the [mentionShare](../../../Usage%20API/Config/Editor/Customization/index.md#mentionshare) parameter in the customization section of the editor configuration must be set to **false**.

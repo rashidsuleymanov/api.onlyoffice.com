@@ -11,10 +11,10 @@ To change the toast type, use [ToastType](https://github.com/ONLYOFFICE/docspace
 ### Example
 
 ``` javascript
-import {IToast, ToastType} from "@onlyoffice/docspace-plugin-sdk";
+import {type IToast, ToastType} from "@onlyoffice/docspace-plugin-sdk"
 
 const toast: IToast = {
-    "type": ToastType.error,
-    "title": "Wrong file format",
-};
+  type: ToastType.error,
+  title: "Wrong file format",
+}
 ```

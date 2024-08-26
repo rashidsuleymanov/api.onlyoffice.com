@@ -21,12 +21,12 @@ Accept: application/json
 
 ``` json
 {
-    "error": "",
-    "finished": false,
-    "id": "00000000-0000-0000-0000-000000000000",
-    "operation": 0,
-    "processed": "0",
-    "progress": 0
+  "error": "",
+  "finished": false,
+  "id": "00000000-0000-0000-0000-000000000000",
+  "operation": 0,
+  "processed": "0",
+  "progress": 0
 }
 ```
 

@@ -191,7 +191,9 @@ Install [Storybook](https://storybook.js.org/) to develop UI components in isola
 1. Change the address of the document server in the *config/default.json* file:
 
    ``` json
-   "documentServerUrl": "http://documentserver/"
+   {
+     "documentServerUrl": "http://documentserver/"
+   }
    ```
 
    where the **documentserver** is the name of the server with **ONLYOFFICE Docs** installed.

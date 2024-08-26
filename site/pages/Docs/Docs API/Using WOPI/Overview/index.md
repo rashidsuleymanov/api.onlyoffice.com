@@ -46,9 +46,9 @@ To enable WOPI, set the [wopi.enable](https://helpcenter.onlyoffice.com/installa
 
 ``` json
 {
-    "wopi": {
-        "enable": true
-    }
+  "wopi": {
+    "enable": true
+  }
 }
 ```
 
@@ -63,20 +63,23 @@ Follow the steps below to configure the ONLYOFFICE Docs [IP filter](https://help
 1. Open the */etc/onlyoffice/documentserver/local.json* file using any available text editor:
 
    ``` json
-   "ipfilter": {
+   {
+     "ipfilter": {
        "rules": [
-           {
-               "address": "ip_address",
-               "allowed": true
-           },
-           {
-               "address": "*",
-               "allowed": false
-           }
+         {
+           "address": "ip_address",
+           "allowed": true
+         },
+         {
+           "address": "*",
+           "allowed": false
+         }
        ],
        "useforrequest": false,
        "errorcode": 403
+     }
    }
+  
    ```
 
 2. Change the following default settings. Enter your *"ip\_address"* that can contain:

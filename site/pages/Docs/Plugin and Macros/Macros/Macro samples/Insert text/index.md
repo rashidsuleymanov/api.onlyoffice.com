@@ -7,6 +7,8 @@ order: -8
 
 Inserts text into the document at the current cursor position.
 
+<!-- This code snippet is shown in the screenshot. -->
+<!-- eslint-skip -->
 ``` javascript
 (function()
 {

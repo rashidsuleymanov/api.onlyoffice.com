@@ -6,6 +6,8 @@ order: -13
 
 Sets the width for the column **B**.
 
+<!-- This code snippet is shown in the screenshot. -->
+<!-- eslint-skip -->
 ``` javascript
 (function()
 {

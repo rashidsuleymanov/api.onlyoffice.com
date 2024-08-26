@@ -4,9 +4,9 @@ Requests a document status and the list of the identifiers of the users who open
 
 ``` json
 {
-    "c": "info",
-    "key": "Khirz6zTPdfd7",
-    "userdata": "sample userdata"
+  "c": "info",
+  "key": "Khirz6zTPdfd7",
+  "userdata": "sample userdata"
 }
 ```
 
@@ -22,8 +22,8 @@ Requests a document status and the list of the identifiers of the users who open
 
 ``` json
 {
-    "error": 0,
-    "key": "Khirz6zTPdfd7"
+  "error": 0,
+  "key": "Khirz6zTPdfd7"
 }
 ```
 

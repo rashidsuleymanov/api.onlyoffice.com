@@ -20,5 +20,5 @@ builder.CreateFile("docx")
 #### .docbuilder
 
 ``` js
-builder.CreateFile("docx");
+builder.CreateFile("docx")
 ```

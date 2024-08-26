@@ -38,90 +38,90 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ``` json
 {
-    "name": "Word counter",
-    "nameLocale": {
-        "fr": "Compteur de mots",
-        "es": "Recuento de palabras",
-        "pt-BR": "Word counter",
-        "de": "Wortanzahl"
-    },
-    "guid" : "asc.{584EEEE8-DBF5-45C3-A4CA-F52177C82754}",
-    "version": "1.0.1",
+  "name": "Word counter",
+  "nameLocale": {
+    "fr": "Compteur de mots",
+    "es": "Recuento de palabras",
+    "pt-BR": "Word counter",
+    "de": "Wortanzahl"
+  },
+  "guid": "asc.{584EEEE8-DBF5-45C3-A4CA-F52177C82754}",
+  "version": "1.0.1",
 
-    "variations" : [
+  "variations": [
+    {
+      "description": "Count words, characters (with/without spaces), and paragraphs in the selected part of your document.",
+      "descriptionLocale": {
+        "fr": "Comptez les mots, les caractères (avec/sans espaces) et les paragraphes dans la partie sélectionnée de votre document.",
+        "es": "Cuente las palabras, los caracteres (con/sin espacios) y los párrafos en la parte seleccionada de su documento.",
+        "pt-BR": "Conte palavras, caracteres (com/sem espaços) e parágrafos na parte selecionada do seu documento.",
+        "de": "Zählen Sie Wörter, Zeichen (mit/ohne Leerzeichen) und Absätze im ausgewählten Teil Ihres Dokuments."
+      },
+      "url": "index.html",
+
+      "icons": ["resources/light/icon.png", "resources/light/icon@2x.png"],
+      "icons2": [
         {
-            "description": "Count words, characters (with/without spaces), and paragraphs in the selected part of your document.",
-            "descriptionLocale": {
-                "fr": "Comptez les mots, les caractères (avec/sans espaces) et les paragraphes dans la partie sélectionnée de votre document.",
-                "es": "Cuente las palabras, los caracteres (con/sin espacios) y los párrafos en la parte seleccionada de su documento.",
-                "pt-BR": "Conte palavras, caracteres (com/sem espaços) e parágrafos na parte selecionada do seu documento.",
-                "de": "Zählen Sie Wörter, Zeichen (mit/ohne Leerzeichen) und Absätze im ausgewählten Teil Ihres Dokuments."
-            },
-            "url" : "index.html",
-
-            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
-            "icons2": [
-                {
-                    "style" : "light",
+          "style": "light",
                     
-                    "100%": {
-                        "normal": "resources/light/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/light/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/light/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/light/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/light/icon@2x.png"
-                    }
-                },
-                {
-                    "style" : "dark",
+          "100%": {
+            "normal": "resources/light/icon.png"
+          },
+          "125%": {
+            "normal": "resources/light/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/light/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/light/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/light/icon@2x.png"
+          }
+        },
+        {
+          "style": "dark",
                     
-                    "100%": {
-                        "normal": "resources/dark/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/dark/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/dark/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/dark/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/dark/icon@2x.png"
-                    }
-                }
-            ],
-            "isViewer"        : true,
-            "EditorsSupport"  : ["word", "pdf"],
-            "isVisual"        : true,
-            "isModal"         : false,
-            "isInsideMode"    : true,
-            "initDataType"    : "text",
-            "initOnSelectionChanged": true,
-            "events" : ["onTargetPositionChanged"],
-            "store": {
-                "background": {
-                    "light" : "linear-gradient(180deg, #FF8E3D 0%, #FF6F3D 100%)",
-                    "dark" : "linear-gradient(180deg, #FF8E3D 0%, #FF6F3D 100%)"
-                },
-                "screenshots" : ["resources/store/screenshots/screen_1.png"],
-                "icons"       : {
-                    "light" : "resources/store/icons",
-                    "dark"  : "resources/store/icons"
-                },
-                "categories": ["specAbilities"]
-            }
+          "100%": {
+            "normal": "resources/dark/icon.png"
+          },
+          "125%": {
+            "normal": "resources/dark/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/dark/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/dark/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/dark/icon@2x.png"
+          }
         }
-    ]
+      ],
+      "isViewer": true,
+      "EditorsSupport": ["word", "pdf"],
+      "isVisual": true,
+      "isModal": false,
+      "isInsideMode": true,
+      "initDataType": "text",
+      "initOnSelectionChanged": true,
+      "events": ["onTargetPositionChanged"],
+      "store": {
+        "background": {
+          "light": "linear-gradient(180deg, #FF8E3D 0%, #FF6F3D 100%)",
+          "dark": "linear-gradient(180deg, #FF8E3D 0%, #FF6F3D 100%)"
+        },
+        "screenshots": ["resources/store/screenshots/screen_1.png"],
+        "icons": {
+          "light": "resources/store/icons",
+          "dark": "resources/store/icons"
+        },
+        "categories": ["specAbilities"]
+      }
+    }
+  ]
 }
 ```
 

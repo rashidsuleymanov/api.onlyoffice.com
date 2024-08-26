@@ -38,57 +38,57 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ``` json
 {
-    "name" : "Telegram",
-    "nameLocale": {
-        "fr": "Telegram",
-        "es": "Telegram",
-        "pt-BR": "Telegram",
-        "de": "Telegram"
-    },
-    "guid" : "asc.{E5773A43-F9B3-4E81-81D9-CE0A132470E7}",
-    "version" : "1.0.2",
+  "name": "Telegram",
+  "nameLocale": {
+    "fr": "Telegram",
+    "es": "Telegram",
+    "pt-BR": "Telegram",
+    "de": "Telegram"
+  },
+  "guid": "asc.{E5773A43-F9B3-4E81-81D9-CE0A132470E7}",
+  "version": "1.0.2",
 
-    "variations" : [
+  "variations": [
+    {
+      "description": "Chat with co-authors in real time using integrated Telegram client.",
+      "descriptionLocale": {
+        "fr": "Chattez avec vos co-auteurs en temps réel grâce au client Telegram intégré.",
+        "es": "Chatee con los coautores en tiempo real utilizando el cliente integrado de Telegram.",
+        "pt-BR": "Converse com coautores em tempo real usando o cliente Telegram integrado.",
+        "de": "Unterhalten Sie sich mit Mitautoren in Echtzeit über den integrierten Telegram-Client."
+      },
+      "url": "index.html",
+
+      "icons": ["resources/img/icon.png", "resources/img/icon@2x.png"],
+      "icons2": [
         {
-            "description" : "Chat with co-authors in real time using integrated Telegram client.",
-            "descriptionLocale": {
-                "fr": "Chattez avec vos co-auteurs en temps réel grâce au client Telegram intégré.",
-                "es": "Chatee con los coautores en tiempo real utilizando el cliente integrado de Telegram.",
-                "pt-BR": "Converse com coautores em tempo real usando o cliente Telegram integrado.",
-                "de": "Unterhalten Sie sich mit Mitautoren in Echtzeit über den integrierten Telegram-Client."
-            },
-            "url"         : "index.html",
-
-            "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png" ],
-            "icons2": [
-                {
-                    "100%": { "normal": "resources/img/icon.png" },
-                    "125%": { "normal": "resources/img/icon@1.25x.png" },
-                    "150%": { "normal": "resources/img/icon@1.5x.png" },
-                    "175%": { "normal": "resources/img/icon@1.75x.png" },
-                    "200%": { "normal": "resources/img/icon@2x.png" }
-                }
-            ],
-            "isViewer"        : true,
-            "EditorsSupport"  : ["word", "cell", "slide", "pdf"],
-            "isVisual"        : true,
-            "isModal"         : false,
-            "isInsideMode"    : true,
-            "initDataType"    : "none",
-            "store" : {
-                "background" : {
-                    "light" : "#26A8DE",
-                    "dark"  : "#26A8DE"
-                },
-                "screenshots" : ["resources/store/screenshots/screen_1.png"],
-                "icons"       : {
-                    "light" : "resources/store/icons",
-                    "dark"  : "resources/store/icons"
-                },
-                "categories": ["specAbilities", "communication", "entertainment"]
-            }
+          "100%": {"normal": "resources/img/icon.png"},
+          "125%": {"normal": "resources/img/icon@1.25x.png"},
+          "150%": {"normal": "resources/img/icon@1.5x.png"},
+          "175%": {"normal": "resources/img/icon@1.75x.png"},
+          "200%": {"normal": "resources/img/icon@2x.png"}
         }
-    ]
+      ],
+      "isViewer": true,
+      "EditorsSupport": ["word", "cell", "slide", "pdf"],
+      "isVisual": true,
+      "isModal": false,
+      "isInsideMode": true,
+      "initDataType": "none",
+      "store": {
+        "background": {
+          "light": "#26A8DE",
+          "dark": "#26A8DE"
+        },
+        "screenshots": ["resources/store/screenshots/screen_1.png"],
+        "icons": {
+          "light": "resources/store/icons",
+          "dark": "resources/store/icons"
+        },
+        "categories": ["specAbilities", "communication", "entertainment"]
+      }
+    }
+  ]
 }
 ```
 

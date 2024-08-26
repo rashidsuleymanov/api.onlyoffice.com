@@ -26,5 +26,5 @@ oBuilder->Dispose();
 #### .docbuilder
 
 ```js
-builder.SaveFile("docx", "result.docx");
+builder.SaveFile("docx", "result.docx")
 ```

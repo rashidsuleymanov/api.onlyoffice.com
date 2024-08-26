@@ -729,12 +729,12 @@ Defines if the current text is displayed underlined or not.
 
 ``` json
 {
-    "async": false,
-    "filetype": "docx",
-    "key": "Khirz6zTPdfd7",
-    "outputtype": "pdf",
-    "title": "Example Document Title.docx",
-    "url": "https://example.com/url-to-example-document.docx"
+  "async": false,
+  "filetype": "docx",
+  "key": "Khirz6zTPdfd7",
+  "outputtype": "pdf",
+  "title": "Example Document Title.docx",
+  "url": "https://example.com/url-to-example-document.docx"
 }
 ```
 
@@ -744,13 +744,13 @@ Where **example.com** is the name of the server where **document manager** and *
 
 ``` json
 {
-    "async": false,
-    "filetype": "docx",
-    "key": "Khirz6zTPdfd7",
-    "outputtype": "pdf",
-    "password": "123456",
-    "title": "Example Document Title.docx",
-    "url": "https://example.com/url-to-example-document.docx"
+  "async": false,
+  "filetype": "docx",
+  "key": "Khirz6zTPdfd7",
+  "outputtype": "pdf",
+  "password": "123456",
+  "title": "Example Document Title.docx",
+  "url": "https://example.com/url-to-example-document.docx"
 }
 ```
 
@@ -760,15 +760,15 @@ Where **example.com** is the name of the server where **document manager** and *
 
 ``` json
 {
-    "async": false,
-    "filetype": "docx",
-    "key": "Khirz6zTPdfd7",
-    "outputtype": "pdf",
-    "pdf": {
-        "form": true
-    },
-    "title": "Example Document Title.docx",
-    "url": "https://example.com/url-to-example-document.docx"
+  "async": false,
+  "filetype": "docx",
+  "key": "Khirz6zTPdfd7",
+  "outputtype": "pdf",
+  "pdf": {
+    "form": true
+  },
+  "title": "Example Document Title.docx",
+  "url": "https://example.com/url-to-example-document.docx"
 }
 ```
 
@@ -778,46 +778,46 @@ Where **example.com** is the name of the server where **document manager** and *
 
 ``` json
 {
-    "async": false,
-    "filetype": "docx",
-    "key": "Khirz6zTPdfd7",
-    "outputtype": "pdf",
-    "title": "Example Document Title.docx",
-    "url": "https://example.com/url-to-example-document.docx",
-    "watermark": {
-        "align": 1,
+  "async": false,
+  "filetype": "docx",
+  "key": "Khirz6zTPdfd7",
+  "outputtype": "pdf",
+  "title": "Example Document Title.docx",
+  "url": "https://example.com/url-to-example-document.docx",
+  "watermark": {
+    "align": 1,
+    "fill": [255, 0, 0],
+    "height": 100,
+    "margins": [10, 10, 10, 10],
+    "paragraphs": [
+      {
+        "align": 2,
         "fill": [255, 0, 0],
-        "height": 100,
-        "margins": [ 10, 10, 10, 10 ],
-        "paragraphs": [
-            {
-                "align": 2,
-                "fill": [255, 0, 0],
-                "linespacing": 1,
-                "runs": [
-                    {
-                        "bold": true,
-                        "italic": false,
-                        "fill": [0, 0, 0],
-                        "font-family": "Arial",
-                        "font-size": 40,
-                        "strikeout": false,
-                        "text": "Watermark",
-                        "underline": false
-                    },
-                    {
-                        "text": "<%br%>"
-                    }
-                ]
-            }
-        ],
-        "rotate": -45,
-        "transparent": 0.3,
-        "type": "rect",
-        "stroke-width": 1,
-        "stroke": [0, 0, 255],
-        "width": 100
-    }
+        "linespacing": 1,
+        "runs": [
+          {
+            "bold": true,
+            "italic": false,
+            "fill": [0, 0, 0],
+            "font-family": "Arial",
+            "font-size": 40,
+            "strikeout": false,
+            "text": "Watermark",
+            "underline": false
+          },
+          {
+            "text": "<%br%>"
+          }
+        ]
+      }
+    ],
+    "rotate": -45,
+    "transparent": 0.3,
+    "type": "rect",
+    "stroke-width": 1,
+    "stroke": [0, 0, 255],
+    "width": 100
+  }
 }
 ```
 
@@ -827,17 +827,17 @@ Where **example.com** is the name of the server where **document manager** and *
 
 ``` json
 {
-    "filetype": "docx",
-    "key": "Khirz6zTPdfd7",
-    "outputtype": "png",
-    "thumbnail": {
-        "aspect": 0,
-        "first": true,
-        "height": 150,
-        "width": 100
-    },
-    "title": "Example Document Title.docx",
-    "url": "https://example.com/url-to-example-document.docx"
+  "filetype": "docx",
+  "key": "Khirz6zTPdfd7",
+  "outputtype": "png",
+  "thumbnail": {
+    "aspect": 0,
+    "first": true,
+    "height": 150,
+    "width": 100
+  },
+  "title": "Example Document Title.docx",
+  "url": "https://example.com/url-to-example-document.docx"
 }
 ```
 
@@ -847,31 +847,31 @@ Where **example.com** is the name of the server where **document manager** and *
 
 ``` json
 {
-    "filetype": "xlsx",
-    "key": "Khirz6zTPdfd7",
-    "outputtype": "pdf",
-    "region": "en-US",
-    "spreadsheetLayout": {
-        "ignorePrintArea": true,
-        "orientation": "portrait",
-        "fitToWidth": 0,
-        "fitToHeight": 0,
-        "scale": 100,
-        "headings": false,
-        "gridLines": false,
-        "pageSize": {
-            "width": "210mm",
-            "height": "297mm"
-        },
-        "margins": {
-            "left": "17.8mm",
-            "right": "17.8mm",
-            "top": "19.1mm",
-            "bottom": "19.1mm"
-        }
+  "filetype": "xlsx",
+  "key": "Khirz6zTPdfd7",
+  "outputtype": "pdf",
+  "region": "en-US",
+  "spreadsheetLayout": {
+    "ignorePrintArea": true,
+    "orientation": "portrait",
+    "fitToWidth": 0,
+    "fitToHeight": 0,
+    "scale": 100,
+    "headings": false,
+    "gridLines": false,
+    "pageSize": {
+      "width": "210mm",
+      "height": "297mm"
     },
-    "title": "Example Document Title.docx",
-    "url": "https://example.com/url-to-example-spreadsheet.xlsx"
+    "margins": {
+      "left": "17.8mm",
+      "right": "17.8mm",
+      "top": "19.1mm",
+      "bottom": "19.1mm"
+    }
+  },
+  "title": "Example Document Title.docx",
+  "url": "https://example.com/url-to-example-spreadsheet.xlsx"
 }
 ```
 
@@ -881,7 +881,7 @@ Where **example.com** is the name of the server where **document manager** and *
 
 ``` json
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.U-YAfuuy7clWjn-xOncfJ-sxVG5DlcYn0AOzJYkoR0M"
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.U-YAfuuy7clWjn-xOncfJ-sxVG5DlcYn0AOzJYkoR0M"
 }
 ```
 
@@ -919,10 +919,10 @@ When forming the link to the resulting file, the same server name is used which 
 
 ``` json
 {
-    "endConvert": true,
-    "fileType": "docm",
-    "fileUrl": "https://documentserver/url-to-converted-document.pdf",
-    "percent": 100
+  "endConvert": true,
+  "fileType": "docm",
+  "fileUrl": "https://documentserver/url-to-converted-document.pdf",
+  "percent": 100
 }
 ```
 
@@ -942,8 +942,8 @@ When forming the link to the resulting file, the same server name is used which 
 
 ```json
 {
-    "endConvert": false,
-    "percent": 95
+  "endConvert": false,
+  "percent": 95
 }
 ```
 
@@ -960,7 +960,7 @@ When forming the link to the resulting file, the same server name is used which 
 
 ``` json
 {
-    "error": -3
+  "error": -3
 }
 ```
 

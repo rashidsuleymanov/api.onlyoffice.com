@@ -27,39 +27,39 @@ The reference figure and the steps below explain the process of renaming a docum
    <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png" width="282px">
 
    ``` javascript
-   var onRequestRename = function(event) {
-       var title = event.data;
-   };
-
-   var docEditor = new DocsAPI.DocEditor("placeholder", {
-       "events": {
-           "onRequestRename": onRequestRename,
-       },
-   });
+   function onRequestRename(event) {
+     const title = event.data
+   }
+   
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
+     events: {
+       onRequestRename,
+     },
+   })
    ```
 
 3. In order to update the name of the document for all collaborative editors, send the request to the [document command service](../../../Additional%20API/Command%20service/index.md), using the [meta](../../../Additional%20API/Command%20service/meta/index.md) value for the *c* parameter:
 
    ``` json
    {
-       "c": "meta",
-       "key": "Khirz6zTPdfd7",
-       "meta": {
-           "title": "Example Document Title.docx"
-       }
+     "c": "meta",
+     "key": "Khirz6zTPdfd7",
+     "meta": {
+       "title": "Example Document Title.docx"
+     }
    }
    ```
 
 4. When the name of the document is changed via the [meta](../../../Additional%20API/Command%20service/meta/index.md) command, the [onMetaChange](../../../Usage%20API/Config/Events/index.md#onmetachange) event must be called in the document editor of each user. This event sends the name of the document in the *data.title* parameter.
 
    ``` javascript
-   var onMetaChange = function (event) {
-       var title = event.data.title;
-   };
-
-   var docEditor = new DocsAPI.DocEditor("placeholder", {
-       "events": {
-           "onMetaChange": onMetaChange,
-       },
-   });          
+   function onMetaChange(event) {
+     const title = event.data.title
+   }
+   
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
+     events: {
+       onMetaChange,
+     },
+   })
    ```

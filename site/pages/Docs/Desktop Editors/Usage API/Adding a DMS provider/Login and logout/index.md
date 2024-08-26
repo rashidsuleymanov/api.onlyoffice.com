@@ -10,12 +10,12 @@ Use the [execCommand](../execCommand/index.md) method to display a cloud in the 
 
 ``` json
 {
-    "displayName": "user name", 
-    "email": "user@email.addr",
-    "domain": "domain name",
-    "provider": "provider",
-    "uiTheme": "theme",
-    "userId": "user id"
+  "displayName": "user name", 
+  "email": "user@email.addr",
+  "domain": "domain name",
+  "provider": "provider",
+  "uiTheme": "theme",
+  "userId": "user id"
 }
 ```
 
@@ -92,14 +92,14 @@ Example: "78e1e841"
 
 ``` javascript
 const params = {
-    "displayName": "John Smith", 
-    "email": "john@example.com",
-    "domain": "https://exampledomain.com",
-    "provider": "onlyoffice",
-    "uiTheme": "theme-dark",
-    "userId": "78e1e841"
+  displayName: "John Smith",
+  email: "john@example.com",
+  domain: "https://exampledomain.com",
+  provider: "onlyoffice",
+  uiTheme: "theme-dark",
+  userId: "78e1e841",
 }
-window.AscDesktopEditor.execCommand ("portal:login", JSON.stringify(params))
+window.AscDesktopEditor.execCommand("portal:login", JSON.stringify(params))
 ```
 
 ## Logout
@@ -108,7 +108,7 @@ Use the [execCommand](../execCommand/index.md) method to remove a cloud from the
 
 ``` json
 {
-    "domain": "domain name"
+  "domain": "domain name"
 }
 ```
 
@@ -124,7 +124,7 @@ Example: `https://exampledomain.com`
 ### Example
 
 ``` javascript
-window.AscDesktopEditor.execCommand ("portal:logout", JSON.stringify ({
-    "domain": "https://exampledomain.com"
-}));
+window.AscDesktopEditor.execCommand("portal:logout", JSON.stringify({
+  domain: "https://exampledomain.com",
+}))
 ```

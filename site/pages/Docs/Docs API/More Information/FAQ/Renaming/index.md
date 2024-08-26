@@ -12,10 +12,10 @@ order: -2
 
   ``` json
   {
-      "c": "meta",
-      "key": "Khirz6zTPdfd7",
-      "meta": {
-          "title": "Example Document Title.docx"
-      }
+    "c": "meta",
+    "key": "Khirz6zTPdfd7",
+    "meta": {
+      "title": "Example Document Title.docx"
+    }
   }
   ```

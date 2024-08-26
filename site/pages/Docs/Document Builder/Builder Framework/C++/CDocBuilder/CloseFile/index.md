@@ -16,6 +16,6 @@ CDocBuilder::Dispose();
 
 #### .docbuilder
 
-```
-builder.CloseFile();
+```js
+builder.CloseFile()
 ```

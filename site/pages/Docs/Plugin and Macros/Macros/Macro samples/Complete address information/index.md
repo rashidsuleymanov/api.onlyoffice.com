@@ -6,6 +6,8 @@ order: -1
 
 Completes the basic address data with detailed address information and inserts it into a spreadsheet.
 
+<!-- This code snippet is shown in the screenshot. -->
+<!-- eslint-skip -->
 ``` javascript
 // Macros structure:
 // Read Address (Cell A2) ->

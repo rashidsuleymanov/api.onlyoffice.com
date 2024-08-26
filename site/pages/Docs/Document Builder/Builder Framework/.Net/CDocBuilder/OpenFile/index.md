@@ -13,7 +13,7 @@ Opens the document file which will be edited and saved afterwards.
 
 #### .Net
 
-```c#
+```csharp
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -24,5 +24,5 @@ CDocBuilder.Destroy();
 #### .docbuilder
 
 ```js
-builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
+builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>")
 ```

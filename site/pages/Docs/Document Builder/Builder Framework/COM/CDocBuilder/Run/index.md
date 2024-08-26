@@ -24,6 +24,6 @@ oBuilder->Dispose();
 
 #### .docbuilder
 
-```js
+```shell
 docbuilder.exe mydocument.docbuilder
 ```

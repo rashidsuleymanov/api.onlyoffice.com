@@ -4,8 +4,8 @@ Deletes a forgotten file.
 
 ``` json
 {
-    "c": "deleteForgotten",
-    "key": "Khirz6zTPdfd7"
+  "c": "deleteForgotten",
+  "key": "Khirz6zTPdfd7"
 }
 ```
 
@@ -20,8 +20,8 @@ Deletes a forgotten file.
 
 ``` json
 {
-    "error": 0,
-    "key": "Khirz6zTPdfd7"
+  "error": 0,
+  "key": "Khirz6zTPdfd7"
 }
 ```
 

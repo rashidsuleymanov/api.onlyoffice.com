@@ -6,13 +6,13 @@ Modal dialog for creating certain item (file, folder, etc.). The user gets the f
 
 ``` javascript
 const createDialogProps = {
-    "title": "Create diagram",
-    "startValue": "New diagram",
-    "visible": true,
-    "isCreateDialog": true,
-    "extension": ".drawio",
-    "onSave": async (e: any, value: string) => {},
-    "onCancel": (e: any) => {},
-    "onClose": (e: any) => {},
-};
+  title: "Create diagram",
+  startValue: "New diagram",
+  visible: true,
+  isCreateDialog: true,
+  extension: ".drawio",
+  onSave: async (e: any, value: string) => {},
+  onCancel: (e: any) => {},
+  onClose: (e: any) => {},
+}
 ```

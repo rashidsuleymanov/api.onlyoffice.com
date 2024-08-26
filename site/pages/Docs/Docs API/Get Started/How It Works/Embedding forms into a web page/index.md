@@ -44,38 +44,37 @@ To open an online form in the PDF format for editing from your website, follow t
 
    ``` javascript
    if (this.docEditor) {
-       this.docEditor.destroyEditor()
+     this.docEditor.destroyEditor()
    }
    ```
 
 6. Create the full URL address to the PDF form you need to open:
 
    ``` javascript
-   const url = "https://example.com/url-to-example-form.pdf";
+   const url = "https://example.com/url-to-example-form.pdf"
    ```
 
 7. Create the key to identify the file for co-editing:
 
    ``` javascript
-   const key = filename + ".pdf";
+   const key = `${filename}.pdf`
    ```
 
 8. Add the script initializing the Document Editor with the configuration for the document you want to open and open the editor in the placeholder element:
 
    ``` javascript
-   this.docEditor = new DocsAPI.DocEditor("placeholder",
-   {
-       "document": {
-           "fileType": "pdf",
-           "key": key,
-           "permissions": {
-               "edit": true
-           },
-           "title": "Form Template",
-           "url": url
+   this.docEditor = new DocsAPI.DocEditor("placeholder", {
+     document: {
+       fileType: "pdf",
+       key,
+       permissions: {
+         edit: true,
        },
-       "documentType": "pdf"
-   });
+       title: "Form Template",
+       url,
+     },
+     documentType: "pdf",
+   })
    ```
 
 The full code fragment looks like this:
@@ -143,20 +142,20 @@ To make an online form in the PDF format available for filling in, follow the st
 
    ``` javascript
    if (this.docEditor) {
-       this.docEditor.destroyEditor()
+     this.docEditor.destroyEditor()
    }
    ```
 
 6. Create the full URL address to the PDF form you need to open:
 
    ``` javascript
-   const url = "https://example.com/url-to-example-form.pdf";
+   const url = "https://example.com/url-to-example-form.pdf"
    ```
 
 7. Create the key to identify the file:
 
    ``` javascript
-   const key = filename + ".pdf";
+   const key = `${filename}.pdf`
    ```
 
    > Please note that the *key* field is not passed to the configuration of the editors. This field will be automatically generated as a random number. This allows making all sessions of opening the form independent. So, collaboration on the PDF form is disabled. That's why anyone can open the form and fill it out without disturbing others.
@@ -165,18 +164,18 @@ To make an online form in the PDF format available for filling in, follow the st
 
    ``` javascript
    this.docEditor = new DocsAPI.DocEditor("placeholder",
-   {
-       "document": {
-           "fileType": "pdf",
-           "permissions": {
-               "edit": false,
-               "fillForms": true
-           },
-           "title": "Form",
-           "url": url
+     {
+       document: {
+         fileType: "pdf",
+         permissions: {
+           edit: false,
+           fillForms: true,
+         },
+         title: "Form",
+         url,
        },
-       "documentType": "pdf"
-   });
+       documentType: "pdf",
+     })
    ```
 
 The full code fragment looks like this:

@@ -29,5 +29,5 @@ CDocBuilder::Dispose();
 #### .docbuilder
 
 ```js
-var oDocument = Api.GetDocument();
+const oDocument = Api.GetDocument()
 ```

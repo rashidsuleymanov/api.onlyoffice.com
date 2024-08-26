@@ -34,53 +34,51 @@ This procedure creates a [basic React application](https://github.com/facebook/c
 
 4. Open the *./src/App.js* file in the *onlyoffice-react-demo* project and replace its contents with the following code:
 
-   ``` javascript
-   import React, { useRef } from 'react';
-   import { DocumentEditor } from "@onlyoffice/document-editor-react";
-
-   var onDocumentReady = function (event) {
-       console.log("Document is loaded");
-   };
-
-   var onLoadComponentError = function (errorCode, errorDescription) {
-       switch(errorCode) {
-           case -1: // Unknown error loading component
-               console.log(errorDescription);
-               break;
-
-           case -2: // Error load DocsAPI from http://documentserver/
-               console.log(errorDescription);
-               break;
-
-           case -3: // DocsAPI is not defined
-               console.log(errorDescription);
-               break;
-       }
-   };
-
+   ```jsx
+   import {DocumentEditor} from "@onlyoffice/document-editor-react"
+   import React, {useRef} from "react"
+   
+   function onDocumentReady(event) {
+     console.log("Document is loaded")
+   }
+   
+   function onLoadComponentError(errorCode, errorDescription) {
+     switch (errorCode) {
+     case -1: // Unknown error loading component
+       console.log(errorDescription)
+       break
+   
+     case -2: // Error load DocsAPI from http://documentserver/
+       console.log(errorDescription)
+       break
+   
+     case -3: // DocsAPI is not defined
+       console.log(errorDescription)
+       break
+     }
+   }
+   
    export default function App() {
-       return (
-           <>
-               <DocumentEditor
-                   id="docxEditor"
-                   documentServerUrl="http://documentserver/"
-                   config={{
-                       "document": {
-                           "fileType": "docx",
-                           "key": "Khirz6zTPdfd7",
-                           "title": "Example Document Title.docx",
-                           "url": "https://example.com/url-to-example-document.docx"
-                       },
-                       "documentType": "word",
-                       "editorConfig": {
-                           "callbackUrl": "https://example.com/url-to-callback.ashx"
-                       }
-                   }}
-                   events_onDocumentReady={onDocumentReady}
-                   onLoadComponentError={onLoadComponentError}
-               />
-           </>
-       );
+     return (
+       <DocumentEditor
+         id="docxEditor"
+         documentServerUrl="http://documentserver/"
+         config={{
+           document: {
+             fileType: "docx",
+             key: "Khirz6zTPdfd7",
+             title: "Example Document Title.docx",
+             url: "https://example.com/url-to-example-document.docx",
+           },
+           documentType: "word",
+           editorConfig: {
+             callbackUrl: "https://example.com/url-to-callback.ashx",
+           },
+         }}
+         events_onDocumentReady={onDocumentReady}
+         onLoadComponentError={onLoadComponentError}
+       />
+     )
    }
    ```
 
@@ -190,7 +188,9 @@ Install [Storybook](https://storybook.js.org/) to develop UI components in isola
 1. Change the address of the document server in the *config/default.json* file:
 
    ``` json
-   "documentServerUrl": "http://documentserver/"
+   {
+     "documentServerUrl": "http://documentserver/"
+   }
    ```
 
    where **documentserver** is the name of the server with **ONLYOFFICE Docs** installed.

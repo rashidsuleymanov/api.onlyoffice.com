@@ -47,22 +47,22 @@ Update the item for interactions with files.
 
 **Example**
 
-``` javascript
-import {IFilePlugin, IFileItem} from "@onlyoffice/docspace-plugin-sdk";
+``` typescript
+import {type IFileItem, type IFilePlugin} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements IFilePlugin {
-    fileItems: Map<string, IFileItem> = new Map();
+  fileItems = new Map<string, IFileItem>()
 
-    addFileItem = (item: IFileItem): void => {
-        this.fileItems.set(item.extension, item);
-    };
+  addFileItem = (item: IFileItem): void => {
+    this.fileItems.set(item.extension, item)
+  }
 
-    getFileItems = (): Map<string, IFileItem> => {
-        return this.fileItems;
-    };
+  getFileItems = (): Map<string, IFileItem> => {
+    return this.fileItems
+  }
 
-    updateFileItem = (item: IFileItem): void => {
-        this.fileItems.set(item.extension, item);
-    };
+  updateFileItem = (item: IFileItem): void => {
+    this.fileItems.set(item.extension, item)
+  }
 }
 ```

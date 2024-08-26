@@ -10,38 +10,38 @@ The *payload* for the JWT token in the JSON format must have the same structure 
 
 ``` json
 {
-    "document": {
-        "key": "Khirz6zTPdfd7",
-        "permissions": {
-            "comment": true,
-            "commentGroups": {
-                "edit": ["Group2", ""],
-                "remove": [""],
-                "view": ""
-            },
-            "copy": true,
-            "deleteCommentAuthorOnly": false,
-            "download": true,
-            "edit": true,
-            "editCommentAuthorOnly": false,
-            "fillForms": true,
-            "modifyContentControl": true,
-            "modifyFilter": true,
-            "print": true,
-            "review": true,
-            "reviewGroups": ["Group1", "Group2", ""]
-        },
-        "url": "https://example.com/url-to-example-document.docx"
+  "document": {
+    "key": "Khirz6zTPdfd7",
+    "permissions": {
+      "comment": true,
+      "commentGroups": {
+        "edit": ["Group2", ""],
+        "remove": [""],
+        "view": ""
+      },
+      "copy": true,
+      "deleteCommentAuthorOnly": false,
+      "download": true,
+      "edit": true,
+      "editCommentAuthorOnly": false,
+      "fillForms": true,
+      "modifyContentControl": true,
+      "modifyFilter": true,
+      "print": true,
+      "review": true,
+      "reviewGroups": ["Group1", "Group2", ""]
     },
-    "editorConfig": {
-        "callbackUrl": "https://example.com/url-to-callback.ashx",
-        "mode": "edit",
-        "user": {
-            "group": "Group1",
-            "id": "78e1e841",
-            "name": "Smith"
-        }
+    "url": "https://example.com/url-to-example-document.docx"
+  },
+  "editorConfig": {
+    "callbackUrl": "https://example.com/url-to-callback.ashx",
+    "mode": "edit",
+    "user": {
+      "group": "Group1",
+      "id": "78e1e841",
+      "name": "Smith"
     }
+  }
 }
 ```
 
@@ -51,7 +51,7 @@ Where **example.com** is the name of the server where **document manager** and *
 
 ``` json
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicGVybWlzc2lvbnMiOnsiY29tbWVudCI6dHJ1ZSwiY29tbWVudEdyb3VwcyI6eyJlZGl0IjpbIkdyb3VwMiIsIiJdLCJyZW1vdmUiOlsiIl0sInZpZXciOiIifSwiY29weSI6dHJ1ZSwiZGVsZXRlQ29tbWVudEF1dGhvck9ubHkiOmZhbHNlLCJkb3dubG9hZCI6dHJ1ZSwiZWRpdCI6dHJ1ZSwiZWRpdENvbW1lbnRBdXRob3JPbmx5IjpmYWxzZSwiZmlsbEZvcm1zIjp0cnVlLCJtb2RpZnlDb250ZW50Q29udHJvbCI6dHJ1ZSwibW9kaWZ5RmlsdGVyIjp0cnVlLCJwcmludCI6dHJ1ZSwicmV2aWV3Ijp0cnVlLCJyZXZpZXdHcm91cHMiOlsiR3JvdXAxIiwiR3JvdXAyIiwiIl19LCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZWRpdG9yQ29uZmlnIjp7ImNhbGxiYWNrVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2FsbGJhY2suYXNoeCIsIm1vZGUiOiJlZGl0IiwidXNlciI6eyJncm91cCI6Ikdyb3VwMSIsImlkIjoiNzhlMWU4NDEiLCJuYW1lIjoiU21pdGgifX19.irYst9vmsLoQtC-95A-6W8DnbqGXCbmcxJajfbPh6tQ"
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicGVybWlzc2lvbnMiOnsiY29tbWVudCI6dHJ1ZSwiY29tbWVudEdyb3VwcyI6eyJlZGl0IjpbIkdyb3VwMiIsIiJdLCJyZW1vdmUiOlsiIl0sInZpZXciOiIifSwiY29weSI6dHJ1ZSwiZGVsZXRlQ29tbWVudEF1dGhvck9ubHkiOmZhbHNlLCJkb3dubG9hZCI6dHJ1ZSwiZWRpdCI6dHJ1ZSwiZWRpdENvbW1lbnRBdXRob3JPbmx5IjpmYWxzZSwiZmlsbEZvcm1zIjp0cnVlLCJtb2RpZnlDb250ZW50Q29udHJvbCI6dHJ1ZSwibW9kaWZ5RmlsdGVyIjp0cnVlLCJwcmludCI6dHJ1ZSwicmV2aWV3Ijp0cnVlLCJyZXZpZXdHcm91cHMiOlsiR3JvdXAxIiwiR3JvdXAyIiwiIl19LCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZWRpdG9yQ29uZmlnIjp7ImNhbGxiYWNrVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2FsbGJhY2suYXNoeCIsIm1vZGUiOiJlZGl0IiwidXNlciI6eyJncm91cCI6Ikdyb3VwMSIsImlkIjoiNzhlMWU4NDEiLCJuYW1lIjoiU21pdGgifX19.irYst9vmsLoQtC-95A-6W8DnbqGXCbmcxJajfbPh6tQ"
 }
 ```
 
@@ -65,13 +65,13 @@ When calling the [insertImage](../../../Usage%20API/Methods/index.md#insertimage
 
   ``` json
   {
-      "c": "add",
-      "images": [
-          {
-              "fileType": "png",
-              "url": "https://example.com/url-to-example-image.png"
-          }
-      ]
+    "c": "add",
+    "images": [
+      {
+        "fileType": "png",
+        "url": "https://example.com/url-to-example-image.png"
+      }
+    ]
   }
   ```
 
@@ -93,14 +93,14 @@ When calling the [setHistoryData](../../../Usage%20API/Methods/index.md#sethisto
 
   ``` json
   {
-      "changesUrl": "https://example.com/url-to-changes.zip",
-      "key": "Khirz6zTPdfd7",
-      "previous": {
-          "key": "af86C7e71Ca8",
-          "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
-      },
-      "url": "https://example.com/url-to-example-document.docx",
-      "version": 2
+    "changesUrl": "https://example.com/url-to-changes.zip",
+    "key": "Khirz6zTPdfd7",
+    "previous": {
+      "key": "af86C7e71Ca8",
+      "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
+    },
+    "url": "https://example.com/url-to-example-document.docx",
+    "version": 2
   }
   ```
 
@@ -122,8 +122,8 @@ When calling the [setMailMergeRecipients](../../../Usage%20API/Methods/index.md#
 
   ``` json
   {
-      "fileType": "xlsx",
-      "url": "https://example.com/url-to-example-recipients.xlsx"
+    "fileType": "xlsx",
+    "url": "https://example.com/url-to-example-recipients.xlsx"
   }
   ```
 
@@ -145,14 +145,14 @@ When calling the [setReferenceData](../../../Usage%20API/Methods/index.md#setref
 
   ``` json
   {
-      "fileType": "xlsx",
-      "path": "sample.xlsx",
-      "referenceData": {
-          "fileKey": "BCFA2CED",
-          "instanceId": "https://example.com",
-          "key": "Khirz6zTPdfd7"
-      },
-      "url": "https://example.com/url-to-example-document.xlsx"
+    "fileType": "xlsx",
+    "path": "sample.xlsx",
+    "referenceData": {
+      "fileKey": "BCFA2CED",
+      "instanceId": "https://example.com",
+      "key": "Khirz6zTPdfd7"
+    },
+    "url": "https://example.com/url-to-example-document.xlsx"
   }
   ```
 
@@ -174,14 +174,14 @@ When calling the [setReferenceSource](../../../Usage%20API/Methods/index.md#setr
 
   ``` json
   {
-      "fileType": "xlsx",
-      "path": "sample.xlsx",
-      "referenceData": {
-          "fileKey": "BCFA2CED",
-          "instanceId": "https://example.com",
-          "key": "Khirz6zTPdfd7"
-      },
-      "url": "https://example.com/url-to-example-document.xlsx"
+    "fileType": "xlsx",
+    "path": "sample.xlsx",
+    "referenceData": {
+      "fileKey": "BCFA2CED",
+      "instanceId": "https://example.com",
+      "key": "Khirz6zTPdfd7"
+    },
+    "url": "https://example.com/url-to-example-document.xlsx"
   }
   ```
 
@@ -203,9 +203,9 @@ When calling the [setRequestedDocument](../../../Usage%20API/Methods/index.md#se
 
   ``` json
   {
-      "c": "compare",
-      "fileType": "docx",
-      "url": "https://example.com/url-to-example-document.docx"
+    "c": "compare",
+    "fileType": "docx",
+    "url": "https://example.com/url-to-example-document.docx"
   }
   ```
 
@@ -227,9 +227,9 @@ When calling the [setRequestedSpreadsheet](../../../Usage%20API/Methods/index.md
 
   ``` json
   {
-      "c": "mailmerge",
-      "fileType": "xlsx",
-      "url": "https://example.com/url-to-example-recipients.xlsx"
+    "c": "mailmerge",
+    "fileType": "xlsx",
+    "url": "https://example.com/url-to-example-recipients.xlsx"
   }
   ```
 
@@ -251,8 +251,8 @@ When calling the [setRevisedFile](../../../Usage%20API/Methods/index.md#setrevis
 
   ``` json
   {
-      "fileType": "docx",
-      "url": "https://example.com/url-to-example-document.docx"
+    "fileType": "docx",
+    "url": "https://example.com/url-to-example-document.docx"
   }
   ```
 

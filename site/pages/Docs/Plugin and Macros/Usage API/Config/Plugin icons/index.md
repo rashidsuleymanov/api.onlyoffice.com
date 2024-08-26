@@ -5,15 +5,17 @@ Plugin icon image files that are specified in the [config.json](../index.md#icon
 There can be several scaling types for plugin icons: 100%, 125%, 150%, 175%, 200%, etc. For each type the icon has its *normal* state:
 
 ``` json
-"icons": [
+{
+  "icons": [
     {
-        "100%": { "normal": "icon.png" },
-        "125%": { "normal": "icon@1.25.png" },
-        "150%": { "normal": "icon@1.5x.png" },
-        "175%": { "normal": "icon@1.75.png" },
-        "200%": { "normal": "icon@2x.png" }
+      "100%": {"normal": "icon.png"},
+      "125%": {"normal": "icon@1.25.png"},
+      "150%": {"normal": "icon@1.5x.png"},
+      "175%": {"normal": "icon@1.75.png"},
+      "200%": {"normal": "icon@2x.png"}
     }
-]
+  ]
+}
 ```
 
 The document editor chooses the necessary icons in the following way:
@@ -30,11 +32,14 @@ The *style* parameter is also used to specify the icon appearance:
 | style | The theme type of the plugin icons. It can have the *light* or *dark* values. | string | "dark"  |
 
 ``` json
-"icons": [
+{
+  "icons": [
     {
-        "style" : "dark"
+      "style": "dark"
     }
-]
+  ]
+}
+
 ```
 
 > This parameter is only used when the icons are different in light and dark themes.

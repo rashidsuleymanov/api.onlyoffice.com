@@ -42,10 +42,10 @@ Type: object
 **Example**:
 
 ``` javascript
-{
-    "edit": ["Group2", ""],
-    "remove": [""],
-    "view": ""
+const config = {
+  edit: ["Group2", ""],
+  remove: [""],
+  view: "",
 }
 ```
 
@@ -228,31 +228,31 @@ Example: ["Group1", ""]
 
 ### Example
 ``` javascript
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "document": {
-        "permissions": {
-            "chat": true,
-            "comment": true,
-            "copy": true,
-            "commentGroups": {
-                "edit": ["Group2", ""],
-                "remove": [""],
-                "view": ""
-            },
-            "deleteCommentAuthorOnly": false,
-            "download": true,
-            "edit": true,
-            "editCommentAuthorOnly": false,
-            "fillForms": true,
-            "modifyContentControl": true,
-            "modifyFilter": true,
-            "print": true,
-            "protect": true,
-            "review": false,
-            "reviewGroups": ["Group1", "Group2", ""],
-            "userInfoGroups": ["Group1", ""]
-        }
-        ,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  document: {
+    permissions: {
+      chat: true,
+      comment: true,
+      copy: true,
+      commentGroups: {
+        edit: ["Group2", ""],
+        remove: [""],
+        view: "",
+      },
+      deleteCommentAuthorOnly: false,
+      download: true,
+      edit: true,
+      editCommentAuthorOnly: false,
+      fillForms: true,
+      modifyContentControl: true,
+      modifyFilter: true,
+      print: true,
+      protect: true,
+      review: false,
+      reviewGroups: ["Group1", "Group2", ""],
+      userInfoGroups: ["Group1", ""],
+    }
+    ,
+  },
+})
 ```

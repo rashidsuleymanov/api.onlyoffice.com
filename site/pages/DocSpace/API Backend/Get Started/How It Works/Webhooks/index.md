@@ -16,7 +16,7 @@ The **Accept** and **Content-Type** webhook headers must be used. Custom headers
 
 The API request is signed with the secret key which is generated when creating the webhook:
 
-``` javascript
+``` csharp
 private string GetSecretHash(string secretKey, string body)
 {
     var secretBytes = Encoding.UTF8.GetBytes(secretKey);
@@ -31,10 +31,8 @@ The secret key is sent in the **x-docspace-signature-256** header:
 
 ``` json
 {
-    "Accept": ["*/*"],
-    "x-docspace-signature-256": [
-        "sha256=0D4C9D09136103625379E0BC3AA6084E941EA2F2901A2C94FACEFE3A7F9688F3"
-    ]
+  "Accept": ["*/*"],
+  "x-docspace-signature-256": ["sha256=0D4C9D09136103625379E0BC3AA6084E941EA2F2901A2C94FACEFE3A7F9688F3"]
 }
 ```
 
@@ -44,7 +42,7 @@ The webhook request body contains the original request body.
 
 The request timeout is 5 minutes:
 
-``` js
+``` csharp
 var lifeTime = TimeSpan.FromMinutes(5);
 
 Func<IServiceProvider, HttpRequestMessage, IAsyncPolicy<HttpResponseMessage>> policyHandler = (s, _) =>

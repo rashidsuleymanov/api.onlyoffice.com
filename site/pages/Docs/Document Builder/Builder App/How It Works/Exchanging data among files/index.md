@@ -11,13 +11,13 @@ To exchange the data between the files *GlobalVariable* is introduced.
 What you need, is to create a variable in the first opened or created file using the *GlobalVariable* method, e.g.:
 
 ```js
-GlobalVariable["CommentsReport"] = oDocument.GetCommentsReport();
+GlobalVariable["CommentsReport"] = oDocument.GetCommentsReport()
 ```
 
 Then close the document and open or create a new one where this variable can be used without any problems, e.g.:
 
 ```js
-var oCommentsReport = GlobalVariable["CommentsReport"];
+const oCommentsReport = GlobalVariable["CommentsReport"]
 ```
 
 The example below shows how *GlobalVariable* is used. For more information visit the ApiDocument.GetCommentsReport and ApiDocument.GetReviewReport sections.
@@ -25,14 +25,14 @@ The example below shows how *GlobalVariable* is used. For more information visit
 ## Example
 
 ```js
-builder.OpenFile("https://example.com/DocumentWithComments.docx");
-var oDocument = Api.GetDocument();
-GlobalVariable["CommentsReport"] = oDocument.GetCommentsReport();
-builder.CloseFile();
+builder.OpenFile("https://example.com/DocumentWithComments.docx")
+const oDocument = Api.GetDocument()
+GlobalVariable["CommentsReport"] = oDocument.GetCommentsReport()
+builder.CloseFile()
 
-builder.CreateFile("docx");
-var oCommentsReport = GlobalVariable["CommentsReport"];
-... // now you can use the 'CommentsReport' variable from the previous document in the current document;
-builder.SaveFile("docx", "GetCommentsReport.docx");
-builder.CloseFile();
+builder.CreateFile("docx")
+const oCommentsReport = GlobalVariable["CommentsReport"]
+// now you can use the 'CommentsReport' variable from the previous document in the current document
+builder.SaveFile("docx", "GetCommentsReport.docx")
+builder.CloseFile()
 ```

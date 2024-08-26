@@ -12,57 +12,57 @@ order: -4
 
   1. The callback handler receives the data in the response from the **document editing service** with *status* **2** (which means that the all the users of the document closed it and the current version has been compiled). This response will look something like this:
 
-     ``` javascript
-     {
-         "key": "2745492410",
-         "status": 2,
-         "users": ["F89d8069ba2b"],
-         "url": "https://documentserver/url-to-edited-document.docx",
-         "history": {
-             "serverVersion": serverVersion,
-             "changes": changes
-         }
-     }
-     ```
+``` javascript
+const data = {
+  key: "2745492410",
+  status: 2,
+  users: ["F89d8069ba2b"],
+  url: "https://documentserver/url-to-edited-document.docx",
+  history: {
+    serverVersion,
+    changes,
+  },
+}
+  ```
 
   2. The callback handler parses the received data and passes it to the configuration file (it does not need to parse the *history.serverVersion* and *history.changes* data which can be used by the *onRequestHistory* function as is).
 
   3. The configuration file must have the following sections present: *events.onRequestHistory* and the *onRequestHistory* function itself:
 
      ``` javascript
-     var onRequestHistory = function() {
-         docEditor.refreshHistory({
-             "currentVersion": 2,
-             "history": [
-                 {
-                     "created": "2019-02-01 3:03 PM",
-                     "key": "2745492410",
-                     "user": {
-                         "id": "F89d8069ba2b",
-                         "name": "Kate Cage"
-                     },
-                     "version": 1
-                 },
-                 {
-                     "changes": changes,
-                     "created": "2010-07-07 3:46 PM",
-                     "key": "Khirz6zTPdfd7",
-                     "serverVersion": serverVersion,
-                     "user": {
-                         "id": "78e1e841",
-                         "name": "John Smith"
-                     },
-                     "version": 2
-                 },
-             ]
-         });
-     };
-
-     var docEditor = new DocsAPI.DocEditor("placeholder", {
-         "events": {
-             "onRequestHistory": onRequestHistory,
-         },
-     });
+     function onRequestHistory() {
+       docEditor.refreshHistory({
+         currentVersion: 2,
+         history: [
+           {
+             created: "2019-02-01 3:03 PM",
+             key: "2745492410",
+             user: {
+               id: "F89d8069ba2b",
+               name: "Kate Cage",
+             },
+             version: 1,
+           },
+           {
+             changes,
+             created: "2010-07-07 3:46 PM",
+             key: "Khirz6zTPdfd7",
+             serverVersion,
+             user: {
+               id: "78e1e841",
+               name: "John Smith",
+             },
+             version: 2,
+           },
+         ],
+       })
+     }
+     
+     const docEditor = new DocsAPI.DocEditor("placeholder", {
+       events: {
+         onRequestHistory,
+       },
+     })
      ```
 
      Where
@@ -90,41 +90,41 @@ order: -4
 
   * Parse the *changesurl* parameter from the **document editing service** received response with *status* **2**:
 
-    ``` javascript
-    {
-        "changesurl": "https://documentserver/url-to-changes.zip",
-        "key": "2745492410",
-        "status": 2,
-        "users": ["F89d8069ba2b"],
-        "url": "https://documentserver/url-to-edited-document.docx",
-        "history": {
-            "serverVersion": serverVersion,
-            "changes": changes
-        }
-    }
-    ```
+``` javascript
+const config = {
+  changesurl: "https://documentserver/url-to-changes.zip",
+  key: "2745492410",
+  status: 2,
+  users: ["F89d8069ba2b"],
+  url: "https://documentserver/url-to-edited-document.docx",
+  history: {
+    serverVersion,
+    changes,
+  },
+}
+```
   * Add the *onRequestHistoryData* function to the configuration file together with the *setHistoryData* method and *events.onRequestHistoryData* event:
 
     ``` javascript
-    var onRequestHistoryData = function(event) {
-        var version = event.data;
-        docEditor.setHistoryData({
-            "changesUrl": "https://example.com/url-to-changes.zip",
-            "key": "2745492410",
-            "previous": {
-                "key": "af86C7e71Ca8",
-                "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
-            },
-            "url": "https://documentserver/url-to-edited-document.docx",
-            "version": version
-        })
-    };
-
-    var docEditor = new DocsAPI.DocEditor("placeholder", {
-        "events": {
-            "onRequestHistoryData": onRequestHistoryData,
+    function onRequestHistoryData(event) {
+      const version = event.data
+      docEditor.setHistoryData({
+        changesUrl: "https://example.com/url-to-changes.zip",
+        key: "2745492410",
+        previous: {
+          key: "af86C7e71Ca8",
+          url: "https://example.com/url-to-the-previous-version-of-the-document.docx",
         },
-    });
+        url: "https://documentserver/url-to-edited-document.docx",
+        version,
+      })
+    }
+    
+    const docEditor = new DocsAPI.DocEditor("placeholder", {
+      events: {
+        onRequestHistoryData,
+      },
+    })
     ```
     The object containing the valid links to the current document version (*url*) and to the previous document version (*previous.url*) as well as the IDs (*key* and *previous.key*) must be passed to the configuration file. *changesUrl* archive file must be also available and downloadable from the browser to be able to display the changes.
 

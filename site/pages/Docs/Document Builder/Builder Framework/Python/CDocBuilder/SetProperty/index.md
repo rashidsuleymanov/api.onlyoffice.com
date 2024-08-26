@@ -42,7 +42,7 @@ builder.SetProperty("--argument", L"{\"name\":\"ONLYOFFICE\"}")
 
 #### .docbuilder
 
-```js
+```shell
 docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
 ```
 
@@ -61,6 +61,6 @@ builder.SetProperty("--check-fonts", L"true")
 
 #### .docbuilder
 
-```js
+```shell
 docbuilder.exe "--check-fonts=true" test.docbuilder
 ```

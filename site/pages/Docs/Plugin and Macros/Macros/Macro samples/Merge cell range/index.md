@@ -6,6 +6,8 @@ order: -15
 
 Merges the selected cell range.
 
+<!-- This code snippet is shown in the screenshot. -->
+<!-- eslint-skip -->
 ``` javascript
 (function()
 {

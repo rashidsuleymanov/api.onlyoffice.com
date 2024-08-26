@@ -102,15 +102,15 @@ Example: true
 ### Example
 
 ``` javascript
-import {IButton, ButtonSize} from "@onlyoffice/docspace-plugin-sdk";
+import {ButtonSize, type IButton} from "@onlyoffice/docspace-plugin-sdk"
 
 const buttonProps: IButton = {
-    "label": "Convert file",
-    "primary": true,
-    "size": ButtonSize.normal,
-    "scale": true,
-    "isDisabled": false,
-    "withLoadingAfterClick": true,
-    "onClick": () => {},
-};
+  label: "Convert file",
+  primary: true,
+  size: ButtonSize.normal,
+  scale: true,
+  isDisabled: false,
+  withLoadingAfterClick: true,
+  onClick: () => {},
+}
 ```

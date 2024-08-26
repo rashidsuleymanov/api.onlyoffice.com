@@ -22,62 +22,62 @@ Example: true
 ### Example
 
 ``` javascript
-import {Actions, Components, IBox, IFrame, IMessage, IModalDialog, ISkeleton, ModalDisplayType} from "@onlyoffice/docspace-plugin-sdk";
+import {Actions, Components, type IBox, type IFrame, type IMessage, type IModalDialog, type ISkeleton, ModalDisplayType} from "@onlyoffice/docspace-plugin-sdk"
 
 export const frameProps: IFrame = {
-    "width": "100%",
-    "height": "100%",
-    "name": "test-drawio",
-    "src": "",
-};
+  width: "100%",
+  height: "100%",
+  name: "test-drawio",
+  src: "",
+}
 
 const skeletonProps: ISkeleton = {
-    "width": "100%",
-    "height": "100%",
-};
+  width: "100%",
+  height: "100%",
+}
 
 const body: IBox = {
-    "widthProp": "100vw",
-    "heightProp": "calc(var(--vh, 1vh) * 100)",
+  widthProp: "100vw",
+  heightProp: "calc(var(--vh, 1vh) * 100)",
 
-    "children": [
-        {
-            "component": Components.iFrame,
-            "props": frameProps,
-        },
-    ],
-};
+  children: [
+    {
+      component: Components.iFrame,
+      props: frameProps,
+    },
+  ],
+}
 
 const bodySkeleton: IBox = {
-    "widthProp": "100vw",
-    "heightProp": "calc(var(--vh, 1vh) * 100)",
-    "children": [
-        {
-            "component": Components.skeleton,
-            "props": skeletonProps,
-        },
-    ],
-};
+  widthProp: "100vw",
+  heightProp: "calc(var(--vh, 1vh) * 100)",
+  children: [
+    {
+      component: Components.skeleton,
+      props: skeletonProps,
+    },
+  ],
+}
 
 export const drawIoModalDialogProps: IModalDialog = {
-    "dialogHeader": "",
-    "dialogBody": body,
-    "displayType": ModalDisplayType.modal,
-    "onClose": () => {
-        const message: IMessage = {
-        "actions": [Actions.closeModal],
-    };
+  dialogHeader: "",
+  dialogBody: body,
+  displayType: ModalDisplayType.modal,
+  onClose: () => {
+    const message: IMessage = {
+      actions: [Actions.closeModal],
+    }
 
-    return message;
-},
+    return message
+  },
 
-    "onLoad": async () => {
-        return {
-            "newDialogHeader": drawIoModalDialogProps.dialogHeader,
-            "newDialogBody": drawIoModalDialogProps.dialogBody,
-        };
-    },
-    "autoMaxHeight": true,
-    "autoMaxWidth": true,
-};
+  onLoad: async () => {
+    return {
+      newDialogHeader: drawIoModalDialogProps.dialogHeader,
+      newDialogBody: drawIoModalDialogProps.dialogBody,
+    }
+  },
+  autoMaxHeight: true,
+  autoMaxWidth: true,
+}
 ```

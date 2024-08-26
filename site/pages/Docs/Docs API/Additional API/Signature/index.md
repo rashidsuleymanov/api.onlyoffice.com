@@ -39,27 +39,27 @@ supervisorctl restart all
 
 ``` json
 {
-    "services": {
-        "CoAuthoring": {
-            "secret": {
-                "inbox": {
-                    "string": "secret"
-                },
-                "outbox": {
-                    "string": "secret"
-                },
-            },
-            "token": {
-                "enable": {
-                    "browser": true,
-                    "request": {
-                        "inbox": true,
-                        "outbox": true
-                    }
-                }
-            }
+  "services": {
+    "CoAuthoring": {
+      "secret": {
+        "inbox": {
+          "string": "secret"
+        },
+        "outbox": {
+          "string": "secret"
         }
+      },
+      "token": {
+        "enable": {
+          "browser": true,
+          "request": {
+            "inbox": true,
+            "outbox": true
+          }
+        }
+      }
     }
+  }
 }
 ```
 
@@ -118,15 +118,17 @@ public static String CreateToken(Map payloadClaims)
 ### Node.js example
 
 ``` javascript
-var configServer = require('config').get('server');
-var cfgSignatureSecretExpiresIn = configServer.get('token.expiresIn');
-var cfgSignatureSecret = configServer.get('token.secret');
-var cfgSignatureSecretAlgorithmRequest = configServer.get('token.algorithmRequest');
+import config from "config"
 
-documentService.getToken = function (data) {
-    var options = {algorithm: cfgSignatureSecretAlgorithmRequest, expiresIn: cfgSignatureSecretExpiresIn};
-    return jwt.sign(data, cfgSignatureSecret, options);
-};
+const configServer = config.get("server")
+const cfgSignatureSecretExpiresIn = configServer.get("token.expiresIn")
+const cfgSignatureSecret = configServer.get("token.secret")
+const cfgSignatureSecretAlgorithmRequest = configServer.get("token.algorithmRequest")
+documentService.getToken = function getToken(data) {
+  const options = {algorithm: cfgSignatureSecretAlgorithmRequest,
+    expiresIn: cfgSignatureSecretExpiresIn}
+  return jwt.sign(data, cfgSignatureSecret, options)
+}
 ```
 
 ### PHP example

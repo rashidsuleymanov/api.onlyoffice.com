@@ -11,44 +11,47 @@ First you can translate the [config.json](../../Usage%20API/Config/index.md) fil
 Add the new nodes with the key name plus *Locale*, equal to an object that will have the language locale as the key and the translation as the value. For example, for the *name* key the localization object will look like this:
 
 ``` json
-"name": "Highlight code",
-"nameLocale": {
+{
+  "name": "Highlight code",
+  "nameLocale": {
     "de": "Code hervorheben",
     "es": "Resaltar el código",
     "fr": "Code en surbrillance"
+  }
 }
+
 ```
 
 The complete translations in the [config.json](../../Usage%20API/Config/index.md) for the [highlighting plugin code](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/highlightcode) will look the following way:
 
 ``` json
 {
-    "name": "Highlight code",
-    "nameLocale": {
+  "name": "Highlight code",
+  "nameLocale": {
+    "de": "Code hervorheben",
+    "es": "Resaltar el código",
+    "fr": "Code en surbrillance"
+  },
+  "variations": [
+    {
+      "description": "Highlight code",
+      "descriptionLocale": {
         "de": "Code hervorheben",
         "es": "Resaltar el código",
         "fr": "Code en surbrillance"
-    },
-    "variations": [
+      },
+      "buttons": [
         {
-            "description": "Highlight code",
-            "descriptionLocale": {
-                "de": "Code hervorheben",
-                "es": "Resaltar el código",
-                "fr": "Code en surbrillance"
-            },
-            "buttons": [
-                {
-                    "text": "Cancel",
-                    "textLocale": {
-                        "de": "Abbrechen",
-                        "es": "Cancelar",
-                        "fr": "Annuler"
-                    },
-                }
-            ],
+          "text": "Cancel",
+          "textLocale": {
+            "de": "Abbrechen",
+            "es": "Cancelar",
+            "fr": "Annuler"
+          }
         }
-    ]
+      ]
+    }
+  ]
 }
 ```
 
@@ -67,9 +70,9 @@ Create the language *.json* files for each language you want to add the translat
 
 ``` json
 {
-    "Language": "Sprache",
-    "Highlight": "Hervorheben",
-    "Style": "Stil",
+  "Language": "Sprache",
+  "Highlight": "Hervorheben",
+  "Style": "Stil"
 }
 ```
 
@@ -77,10 +80,10 @@ Starting from version 7.2, you can add the *langs.json* file to the translations
 
 ``` json
 [
-    "cs-CZ",
-    "de-DE",
-    "es-ES",
-    "fr-FR"
+  "cs-CZ",
+  "de-DE",
+  "es-ES",
+  "fr-FR"
 ]
 ```
 
@@ -118,12 +121,12 @@ Add the *id* attribute to it, so that it looked like this:
 After that add the window.Asc.plugin.onTranslate function to the [pluginCode.js](../../Usage%20API/Plugin%20object/index.md) file:
 
 ``` javascript
-window.Asc.plugin.onTranslate = function()
-    {
-        var label = document.getElementById("button_new");
-        if (label)
-            label.innerHTML = window.Asc.plugin.tr("New");
-    }
+window.Asc.plugin.onTranslate = function onTranslate() {
+  const label = document.querySelector("#button_new")
+  if (label) {
+    label.innerHTML = window.Asc.plugin.tr("New")
+  }
+}
 ```
 
 The *window\.Asc.plugin.onTranslate* function will be called right after the plugin startup and later in case the plugin language is changed.
@@ -131,13 +134,12 @@ The *window\.Asc.plugin.onTranslate* function will be called right after the plu
 If you need to localize more than one word/phrase, the *window\.Asc.plugin.onTranslate* function can have the following appearance:
 
 ``` javascript
-window.Asc.plugin.onTranslate = function()
-    {
-        document.getElementById("button_delete").innerHTML = window.Asc.plugin.tr("Delete");
-        document.getElementById("button_new").innerHTML    = window.Asc.plugin.tr("New");
-        document.getElementById("button_rename").innerHTML = window.Asc.plugin.tr("Rename");
-        document.getElementById("button_run").innerHTML    = window.Asc.plugin.tr("Run");
-    }
+window.Asc.plugin.onTranslate = function onTranslate() {
+  document.querySelector("#button_delete").innerHTML = window.Asc.plugin.tr("Delete")
+  document.querySelector("#button_new").innerHTML = window.Asc.plugin.tr("New")
+  document.querySelector("#button_rename").innerHTML = window.Asc.plugin.tr("Rename")
+  document.querySelector("#button_run").innerHTML = window.Asc.plugin.tr("Run")
+}
 ```
 
 Where every line will represent the localized element, reached using the appropriate ID.

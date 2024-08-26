@@ -47,22 +47,22 @@ Update the profile menu item.
 
 **Example**
 
-``` javascript
-import {IProfileMenuPlugin, IProfileMenuItem} from "@onlyoffice/docspace-plugin-sdk";
+``` typescript
+import {type IProfileMenuItemIProfileMenuPlugin, type IProfileMenuPlugin} from "@onlyoffice/docspace-plugin-sdk"
 
-class Plugin implements IProfileMenuPlugin{
-    profileMenuItems: Map<string, IProfileMenuItem> = new Map();
+class Plugin implements IProfileMenuPlugin {
+  profileMenuItems = new Map<string, IProfileMenuItem>()
 
-    addProfileMenuItem = (item: IProfileMenuItem): void => {
-        this.profileMenuItems.set(item.key, item);
-    };
+  addProfileMenuItem = (item: IProfileMenuItem): void => {
+    this.profileMenuItems.set(item.key, item)
+  }
 
-    getProfileMenuItems = (): Map<string, IProfileMenuItem> => {
-        return this.profileMenuItems;
-    };
+  getProfileMenuItems = (): Map<string, IProfileMenuItem> => {
+    return this.profileMenuItems
+  }
 
-    updateProfileMenuItem = (item: IProfileMenuItem): void => {
-        this.profileMenuItems.set(item.key, item);
-    };
+  updateProfileMenuItem = (item: IProfileMenuItem): void => {
+    this.profileMenuItems.set(item.key, item)
+  }
 }
 ```

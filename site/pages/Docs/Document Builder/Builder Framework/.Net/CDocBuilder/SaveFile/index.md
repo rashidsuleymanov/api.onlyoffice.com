@@ -27,7 +27,7 @@ CDocBuilder.Destroy();
 #### .docbuilder
 
 ```js
-builder.SaveFile("docx", "result.docx");
+builder.SaveFile("docx", "result.docx")
 ```
 
 ## Saving into images
@@ -52,5 +52,5 @@ oBuilder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "<m_oThumbnail><for
 #### .docbuilder
 
 ```js
-builder.SaveFile("image", "./thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>");
+builder.SaveFile("image", "./thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")
 ```

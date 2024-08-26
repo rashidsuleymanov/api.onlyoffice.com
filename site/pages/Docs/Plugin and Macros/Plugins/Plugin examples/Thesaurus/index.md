@@ -44,90 +44,90 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ``` json
 {
-    "name": "Thesaurus",
-    "nameLocale": {
-        "fr": "Thésaurus",
-        "es": "Tesauro",
-        "pt-BR": "Thesaurus",
-        "de": "Thesaurus"
-    },
-    "guid": "asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9840}",
-    "version": "1.0.2",
+  "name": "Thesaurus",
+  "nameLocale": {
+    "fr": "Thésaurus",
+    "es": "Tesauro",
+    "pt-BR": "Thesaurus",
+    "de": "Thesaurus"
+  },
+  "guid": "asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9840}",
+  "version": "1.0.2",
 
-    "variations": [
+  "variations": [
+    {
+      "description": "Search for synonyms and antonyms of a word and replace it with the selected one.",
+      "descriptionLocale": {
+        "fr": "Recherchez les synonymes et les antonymes d'un mot et remplacez-le par le mot sélectionné.",
+        "es": "Busque sinónimos y antónimos de una palabra y sustitúyala por la seleccionada.",
+        "pt-BR": "Pesquise sinônimos e antônimos de uma palavra e substitua pela selecionada.",
+        "de": "Finden Sie Synonyme und Antonyme eines Wortes und ersetzen Sie es durch die ausgewählte Variante."
+      },
+      "url": "index.html",
+
+      "icons": ["resources/light/icon.png", "resources/light/icon@2x.png"],
+      "icons2": [
         {
-            "description": "Search for synonyms and antonyms of a word and replace it with the selected one.",
-            "descriptionLocale": {
-                "fr": "Recherchez les synonymes et les antonymes d'un mot et remplacez-le par le mot sélectionné.",
-                "es": "Busque sinónimos y antónimos de una palabra y sustitúyala por la seleccionada.",
-                "pt-BR": "Pesquise sinônimos e antônimos de uma palavra e substitua pela selecionada.",
-                "de": "Finden Sie Synonyme und Antonyme eines Wortes und ersetzen Sie es durch die ausgewählte Variante."
-            },
-            "url": "index.html",
-
-            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
-            "icons2": [
-                {
-                    "style" : "light",
+          "style": "light",
                     
-                    "100%": {
-                        "normal": "resources/light/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/light/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/light/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/light/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/light/icon@2x.png"
-                    }
-                },
-                {
-                    "style" : "dark",
+          "100%": {
+            "normal": "resources/light/icon.png"
+          },
+          "125%": {
+            "normal": "resources/light/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/light/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/light/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/light/icon@2x.png"
+          }
+        },
+        {
+          "style": "dark",
                     
-                    "100%": {
-                        "normal": "resources/dark/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/dark/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/dark/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/dark/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/dark/icon@2x.png"
-                    }
-                }
-            ],
-            "isViewer": true,
-            "EditorsSupport": [ "word", "cell", "slide", "pdf" ],
-
-            "isVisual": true,
-            "isModal": false,
-            "isInsideMode": true,
-            "initDataType": "text",
-            "initOnSelectionChanged": true,
-            "store": {
-                "background": {
-                    "light": "#F44725",
-                    "dark": "#F44725"
-                },
-                "screenshots" : ["resources/store/screenshots/screen_1.png"],
-                "icons"       : {
-                    "light" : "resources/store/icons",
-                    "dark"  : "resources/store/icons"
-                },
-                "categories": ["specAbilities"]
-            }
+          "100%": {
+            "normal": "resources/dark/icon.png"
+          },
+          "125%": {
+            "normal": "resources/dark/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/dark/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/dark/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/dark/icon@2x.png"
+          }
         }
-    ]
+      ],
+      "isViewer": true,
+      "EditorsSupport": ["word", "cell", "slide", "pdf"],
+
+      "isVisual": true,
+      "isModal": false,
+      "isInsideMode": true,
+      "initDataType": "text",
+      "initOnSelectionChanged": true,
+      "store": {
+        "background": {
+          "light": "#F44725",
+          "dark": "#F44725"
+        },
+        "screenshots": ["resources/store/screenshots/screen_1.png"],
+        "icons": {
+          "light": "resources/store/icons",
+          "dark": "resources/store/icons"
+        },
+        "categories": ["specAbilities"]
+      }
+    }
+  ]
 }
 ```
 

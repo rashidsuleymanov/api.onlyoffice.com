@@ -20,13 +20,13 @@ Example: "Sample for text component"
 ### Example
 
 ``` javascript
-import {IText} from "@onlyoffice/docspace-plugin-sdk";
+import {type IText} from "@onlyoffice/docspace-plugin-sdk"
 
 const text: IText = {
-    "text": "Sample for text component",
-    "fontWeight": 600,
-    "fontSize": "13px",
-    "lineHeight": "20px",
-    "noSelect": true,
-};
+  text: "Sample for text component",
+  fontWeight: 600,
+  fontSize: "13px",
+  lineHeight: "20px",
+  noSelect: true,
+}
 ```

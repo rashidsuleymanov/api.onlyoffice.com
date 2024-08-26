@@ -66,13 +66,11 @@ Example: "100%"
 ### Example
 
 ``` javascript
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    {
-        "documentType": "word",
-        "type": "desktop",
-        "height": "550px",
-        "width": "100%" ,
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"
-    }
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  documentType: "word",
+  type: "desktop",
+  height: "550px",
+  width: "100%",
+  token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
+})
 ```

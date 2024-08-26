@@ -9,22 +9,21 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 ### Example
 
 ``` javascript
-import {IToggleButton, IMessage, Actions} from "@onlyoffice/docspace-plugin-sdk";
+import {Actions, type IMessage, type IToggleButton} from "@onlyoffice/docspace-plugin-sdk"
 
 const onChange = () => {
-    toggleButtonProps.isChecked = !toggleButtonProps.isChecked;
+  toggleButtonProps.isChecked = !toggleButtonProps.isChecked
 
-    const message: IMessage = {
-        "actions": [Actions.updateProps],
-        "newProps": toggleButtonProps,
-    };
-
-    return message;
-};
+  const message: IMessage = {
+    actions: [Actions.updateProps],
+    newProps: toggleButtonProps,
+  }
+  return message
+}
 
 const libToggleButtonProps: IToggleButton = {
-    "isChecked": false,
-    onChange,
-    style: {"position": "relative", "gap": "0px"},
-};
+  isChecked: false,
+  onChange,
+  style: {position: "relative", gap: "0px"},
+}
 ```

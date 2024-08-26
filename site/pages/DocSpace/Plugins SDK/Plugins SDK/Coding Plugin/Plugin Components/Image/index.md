@@ -5,12 +5,12 @@ A component that is used to embed an image not from the *assets* folder into a m
 ### Example
 
 ``` javascript
-import {IImage} from "@onlyoffice/docspace-plugin-sdk";
+import {type IImage} from "@onlyoffice/docspace-plugin-sdk"
 
 const imageProps: IImage = {
-    "width": "64px",
-    "height": "64px",
-    "alt": "sample",
-    "src": "image.png",
-};
+  width: "64px",
+  height: "64px",
+  alt: "sample",
+  src: "image.png",
+}
 ```

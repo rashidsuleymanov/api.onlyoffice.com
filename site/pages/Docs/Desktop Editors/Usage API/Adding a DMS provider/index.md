@@ -48,10 +48,10 @@ Example:
 
 ``` json
 {
-    "url": "status",
-    "headers": {
-        "X-CUSTOM-HEADER": true
-    }
+  "url": "status",
+  "headers": {
+    "X-CUSTOM-HEADER": true
+  }
 }
 ```
 
@@ -133,10 +133,10 @@ Example:
 
 ``` json
 {
-    "themeLight": {
-        "connectionsList": "./assets/listicon.svg",
-        "buttonLogo": "./assets/buttonlogo.svg"
-    }
+  "themeLight": {
+    "connectionsList": "./assets/listicon.svg",
+    "buttonLogo": "./assets/buttonlogo.svg"
+  }
 }
 ```
 
@@ -163,28 +163,28 @@ Example: "./assets/buttonlogo.svg"
 
 ``` json
 {
-    "provider": "onlyoffice",
-    "name" : "ONLYOFFICE",
-    "check": {
-        "url": "status",
-        "headers": {
-            "X-CUSTOM-HEADER": true
-        }
-    },
-    "entryPage" : "https://url-to-connect-provider.com",
-    "extraLogout" : "https://url-for-logout.com",
-    "editorPage" : "/apps/onlyoffice/",
-    "startPage" : "/",
-    "icons" : {
-        "themeLight": {
-            "connectionsList": "./assets/listicon.svg",
-            "buttonLogo": "./assets/buttonlogo.svg"
-        },
-        "themeDark": {
-            "connectionsList": "./assets/listicon_dark.svg",
-            "buttonLogo": "./assets/buttonlogo_dark.svg"
-        }
+  "provider": "onlyoffice",
+  "name": "ONLYOFFICE",
+  "check": {
+    "url": "status",
+    "headers": {
+      "X-CUSTOM-HEADER": true
     }
+  },
+  "entryPage": "https://url-to-connect-provider.com",
+  "extraLogout": "https://url-for-logout.com",
+  "editorPage": "/apps/onlyoffice/",
+  "startPage": "/",
+  "icons": {
+    "themeLight": {
+      "connectionsList": "./assets/listicon.svg",
+      "buttonLogo": "./assets/buttonlogo.svg"
+    },
+    "themeDark": {
+      "connectionsList": "./assets/listicon_dark.svg",
+      "buttonLogo": "./assets/buttonlogo_dark.svg"
+    }
+  }
 }
 ```
 

@@ -10,21 +10,20 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 ### Example
 
 ``` javascript
-import {ITextArea, IMessage, Actions} from "@onlyoffice/docspace-plugin-sdk";
+import {Actions, type IMessage, type ITextArea} from "@onlyoffice/docspace-plugin-sdk"
 
 const onChange = (value: string) => {
-    props.value = value;
+  props.value = value
 
-    const message: IMessage = {
-        "actions": [Actions.updateProps],
-        "newProps": props,
-    };
-
-    return message;
-};
+  const message: IMessage = {
+    actions: [Actions.updateProps],
+    newProps: props,
+  }
+  return message
+}
 
 const props: ITextArea = {
-    "value": "",
-    onChange,
-};
+  value: "",
+  onChange,
+}
 ```

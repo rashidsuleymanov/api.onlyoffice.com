@@ -30,123 +30,129 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/c
 
 ``` json
 {
-    "name": "Chess",
-    "nameLocale": {
-        "fr": "Échecs",
-        "es": "Ajedrez",
-        "pt-BR": "Xadrez",
-        "de": "Schach"
-    },
-    "guid": "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
-    "version": "1.0.1",
+  "name": "Chess",
+  "nameLocale": {
+    "fr": "Échecs",
+    "es": "Ajedrez",
+    "pt-BR": "Xadrez",
+    "de": "Schach"
+  },
+  "guid": "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
+  "version": "1.0.1",
 
-    "variations": [
+  "variations": [
+    {
+      "description": "Play chess with other collaborators right in the editors. ",
+      "descriptionLocale": {
+        "fr": "Jouez aux échecs avec vos collaborateurs directement dans les éditeurs.",
+        "es": "Juegue al ajedrez con otros colaboradores directamente en los editores.",
+        "pt-BR": "Jogue xadrez com outros colaboradores diretamente nos editores.",
+        "de": "Spielen Sie Schach mit anderen Mitautoren direkt in den Editoren."
+      },
+      "url": "index.html",
+
+      "icons": ["resources/light/icon.png", "resources/light/icon@2x.png"],
+      "icons2": [
         {
-            "description": "Play chess with other collaborators right in the editors. ",
-            "descriptionLocale": {
-                "fr": "Jouez aux échecs avec vos collaborateurs directement dans les éditeurs.",
-                "es": "Juegue al ajedrez con otros colaboradores directamente en los editores.",
-                "pt-BR": "Jogue xadrez com outros colaboradores diretamente nos editores.",
-                "de": "Spielen Sie Schach mit anderen Mitautoren direkt in den Editoren."
-            },
-            "url" : "index.html",
-
-            "icons" : ["resources/light/icon.png", "resources/light/icon@2x.png"],
-            "icons2": [
-                {
-                    "style" : "light",
+          "style": "light",
                     
-                    "100%": {
-                        "normal": "resources/light/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/light/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/light/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/light/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/light/icon@2x.png"
-                    }
-                },
-                {
-                    "style" : "dark",
-                    
-                    "100%": {
-                        "normal": "resources/dark/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/dark/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/dark/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/dark/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/dark/icon@2x.png"
-                    }
-                }
-            ],
-            "isViewer"            : true,
-            "isDisplayedInViewer" : false,
-            "EditorsSupport"      : ["word", "cell", "slide"],
-
-            "isVisual"     : true,
-            "isModal"      : true,
-            "isInsideMode" : false,
-
-            "initDataType" : "ole",
-            "initData"     : "",
-
-            "isUpdateOleOnResize" : true,
-
-            "buttons" : [
-                { "text": "Ok", "primary": true, "isViewer": false },
-                { "text": "Cancel", "primary": false } 
-            ],
-
-            "store": {
-                "background": {
-                    "light" : "#444444",
-                    "dark" : "#444444;"
-                },
-                "screenshots" : [
-                    "resources/store/screenshots/screen_1.png",
-                    "resources/store/screenshots/screen_2.png"
-                ],
-                "icons"       : {
-                    "light" : "resources/store/icons",
-                    "dark"  : "resources/store/icons"
-                },
-                "categories": ["entertainment", "specAbilities"]
-            }
+          "100%": {
+            "normal": "resources/light/icon.png"
+          },
+          "125%": {
+            "normal": "resources/light/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/light/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/light/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/light/icon@2x.png"
+          }
         },
         {
-            "description" : "About",
-            "url"         : "index_about.html",
-
-            "icons"               : ["resources/light/icon.png", "resources/light/icon@2x.png"],
-            "isViewer"            : true,
-            "isDisplayedInViewer" : false,
-            "EditorsSupport"      : ["word", "cell", "slide"],
-
-            "isVisual"     : true,
-            "isModal"      : true,
-            "isInsideMode" : false,
-
-            "initDataType" : "none",
-            "initData"     : "",
-
-            "buttons" : [ { "text": "Ok", "primary": true } ],
-
-            "size" : [392, 147]
+          "style": "dark",
+                    
+          "100%": {
+            "normal": "resources/dark/icon.png"
+          },
+          "125%": {
+            "normal": "resources/dark/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/dark/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/dark/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/dark/icon@2x.png"
+          }
         }
-    ]
+      ],
+      "isViewer": true,
+      "isDisplayedInViewer": false,
+      "EditorsSupport": ["word", "cell", "slide"],
+
+      "isVisual": true,
+      "isModal": true,
+      "isInsideMode": false,
+
+      "initDataType": "ole",
+      "initData": "",
+
+      "isUpdateOleOnResize": true,
+
+      "buttons": [
+        {"text": "Ok",
+          "primary": true,
+          "isViewer": false},
+        {"text": "Cancel",
+          "primary": false} 
+      ],
+
+      "store": {
+        "background": {
+          "light": "#444444",
+          "dark": "#444444;"
+        },
+        "screenshots": [
+          "resources/store/screenshots/screen_1.png",
+          "resources/store/screenshots/screen_2.png"
+        ],
+        "icons": {
+          "light": "resources/store/icons",
+          "dark": "resources/store/icons"
+        },
+        "categories": ["entertainment", "specAbilities"]
+      }
+    },
+    {
+      "description": "About",
+      "url": "index_about.html",
+
+      "icons": ["resources/light/icon.png", "resources/light/icon@2x.png"],
+      "isViewer": true,
+      "isDisplayedInViewer": false,
+      "EditorsSupport": ["word", "cell", "slide"],
+
+      "isVisual": true,
+      "isModal": true,
+      "isInsideMode": false,
+
+      "initDataType": "none",
+      "initData": "",
+
+      "buttons": [
+        {"text": "Ok",
+          "primary": true}
+      ],
+
+      "size": [392, 147]
+    }
+  ]
 }
 ```
 

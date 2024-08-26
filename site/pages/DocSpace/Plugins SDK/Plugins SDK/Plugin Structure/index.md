@@ -16,16 +16,19 @@ Each DocSpace plugin is a folder with files. It must contain the following files
 * **src/index.ts** - the entry point for building the plugin. This file is required. All the necessary functionality is added to this file for the plugin to work in the specified scope. In this file, the plugin is declared in the *window\.Plugins.\[pluginName]* DocSpace scope, where *pluginName* must match the same parameter from the *package.json* file:
 
   ``` javascript
-  window.Plugins.PDFConverter = plugin || {};
+  window.Plugins.PDFConverter = plugin || {}
   ```
 
 * **webpack.config.js** - the webpack configuration file. This file can be edited but this is important that in the *output* parameter, the *fileName* field is equal to *plugin.js* and the *path* field is equal to *dist*:
 
   ``` javascript
-  "output": {
-      "filename": "plugin.js",
-      "path": path.resolve(__dirname, "dist"),
+  const config = {
+    output: {
+      filename: "plugin.js",
+      path: path.resolve(dirname, "dist"),
+    },
   }
+  
   ```
 
 * **tsconfig** - the *typescript* configuration file. This file can be edited.

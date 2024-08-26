@@ -7,7 +7,7 @@ order: -2
 To create the connector, use the [createConnector](../Methods/index.md#createconnector) method of the **document editor** object:
 
 ``` javascript
-var connector = docEditor.createConnector()
+const connector = docEditor.createConnector()
 ```
 
 > Please note that the connector is available only for **ONLYOFFICE Developer Edition**.
@@ -50,14 +50,14 @@ The function called to add an item to the context menu.
   ### Example
 
   ``` javascript
-  var items: [
-      {
-          "id": "onConvert",
-          "text": getMessage("Convert to Markdown or HTML")
-      }
+  const items = [
+    {
+      id: "onConvert",
+      text: getMessage("Convert to Markdown or HTML"),
+    },
   ]
 
-  connector.addContextMenuItem(items);
+  connector.addContextMenuItem(items)
   ```
 
 ## addToolbarMenuItem
@@ -105,48 +105,48 @@ The function called to add an item to the toolbar menu.
   ### Example
 
   ``` javascript
-  var oToolbarMenuItem = {
-      "id": "MeaningItem",
-      "type": "button",
-      "text": "Meaning",
-      "hint": "Meaning",
-      "icons": "resources/light/icon.png",
-      "disabled": false,
-      "enableToggle": false,
-      "lockInViewMode": false,
-      "separator": true,
-      "split": true,
-      "onClick": onClick,
-      "items": [
-          {
-              "id": "onMeaningT",
-              "text": "Explain text in comment"
-          },
-          {
-              "id": "onFixSpelling",
-              "text": "Fix spelling & grammar"
-          },
-          {
-              "id": "onMakeLonger",
-              "text": "Make longer"
-          },
-          {
-              "id": "onMakeShorter",
-              "text": "Make shorter"
-          }
-      ]
-  };
-  var oToolbarMenuTab = {
-      "id": "ChatGPT",
-      "text": "AI Assistant",
-      "items": [oToolbarMenuItem]
-  };
-  var oToolbarMenuMainItem = {
-      "guid": "asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}",
-      "tabs": [oToolbarMenuTab]
-  };
-
-  connector.addToolbarMenuItem(oToolbarMenuMainItem);
+  const oToolbarMenuItem = {
+    id: "MeaningItem",
+    type: "button",
+    text: "Meaning",
+    hint: "Meaning",
+    icons: "resources/light/icon.png",
+    disabled: false,
+    enableToggle: false,
+    lockInViewMode: false,
+    separator: true,
+    split: true,
+    onClick,
+    items: [
+      {
+        id: "onMeaningT",
+        text: "Explain text in comment",
+      },
+      {
+        id: "onFixSpelling",
+        text: "Fix spelling & grammar",
+      },
+      {
+        id: "onMakeLonger",
+        text: "Make longer",
+      },
+      {
+        id: "onMakeShorter",
+        text: "Make shorter",
+      },
+    ],
+  }
+  const oToolbarMenuTab = {
+    id: "ChatGPT",
+    text: "AI Assistant",
+    items: [oToolbarMenuItem],
+  }
+  const oToolbarMenuMainItem = {
+    guid: "asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}",
+    tabs: [oToolbarMenuTab],
+  }
+  
+  connector.addToolbarMenuItem(oToolbarMenuMainItem)
   ```
 
 ## attachEvent
@@ -163,10 +163,9 @@ The function called to add an event listener, a function that will be called whe
   ### Example
 
   ``` javascript
-  connector.attachEvent("onChangeContentControl", function()
-  {
-      console.log("event: onChangeContentControl");
-  });
+  connector.attachEvent("onChangeContentControl", () => {
+    console.log("event: onChangeContentControl")
+  })
   ```
 
 ## callCommand
@@ -188,16 +187,14 @@ The function called to send the data back to the editor. It allows the connector
   ### Example
 
   ``` javascript
-  Asc.scope.text = "Hello world!"; 
-
-  connector.callCommand(function() {
-
-      var oDocument = Api.GetDocument();
-      var oParagraph = Api.CreateParagraph();
-      oParagraph.AddText(Asc.scope.text);
-      oDocument.InsertContent([oParagraph]);
-
-  }, function() { console.log("callback command"); });
+  Asc.scope.text = "Hello world!"
+  
+  connector.callCommand(() => {
+    const oDocument = Api.GetDocument()
+    const oParagraph = Api.CreateParagraph()
+    oParagraph.AddText(Asc.scope.text)
+    oDocument.InsertContent([oParagraph])
+  }, () => { console.log("callback command") })
   ```
 
 ## connect
@@ -225,7 +222,7 @@ The function called to remove an event listener.
   ### Example
 
   ``` javascript
-  connector.detachEvent("onChangeContentControl");
+  connector.detachEvent("onChangeContentControl")
   ```
 
 ## disconnect
@@ -253,7 +250,7 @@ The function called to execute certain editor methods using the connector. The f
   ### Example
 
   ``` javascript
-  connector.executeMethod("SetFormValue",[forms[i]["InternalId"],"OnlyOffice BANK"],null);
+  connector.executeMethod("SetFormValue", [forms[i]["InternalId"], "OnlyOffice BANK"], null)
   ```
 
 ## updateContextMenuItem
@@ -280,12 +277,12 @@ The function called to update an item in the context menu with the specified ite
   ### Example
 
   ``` javascript
-  var items: [
-      {
-          "id": "onConvert",
-          "text": getMessage("Convert to Markdown or HTML")
-      }
+  const items = [
+    {
+      id: "onConvert",
+      text: getMessage("Convert to Markdown or HTML"),
+    },
   ]
 
-  connector.updateContextMenuItem(items);
+  connector.updateContextMenuItem(items)
   ```

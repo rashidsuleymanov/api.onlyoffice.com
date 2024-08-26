@@ -69,9 +69,9 @@ Type: object
 
 **Example**:
 ``` javascript
-{
-    "request": true,
-    "label": "Guest"
+const anonymous = {
+  request: true,
+  label: "Guest",
 }
 ```
 
@@ -127,9 +127,9 @@ Type: object
 **Example**:
 
 ``` javascript
-{
-    "visible": true,
-    "text": "Close file"
+const close = {
+  visible: true,
+  text: "Close file",
 }
 ```
 
@@ -223,15 +223,15 @@ Type: object
 **Example**:
 
 ``` javascript
-{
-    "address": "My City, 123a-45",
-    "info": "Some additional information",
-    "logo": "https://example.com/logo-big.png",
-    "logoDark": "https://example.com/dark-logo-big.png",
-    "mail": "john@example.com",
-    "name": "John Smith and Co.",
-    "phone": "123456789",
-    "www": "example.com"
+const customer = {
+  address: "My City, 123a-45",
+  info: "Some additional information",
+  logo: "https://example.com/logo-big.png",
+  logoDark: "https://example.com/dark-logo-big.png",
+  mail: "john@example.com",
+  name: "John Smith and Co.",
+  phone: "123456789",
+  www: "example.com",
 }
 ```
 
@@ -318,12 +318,12 @@ Type: object
 **Example**:
 
 ``` javascript
-{
-    "roles": true,
-    "spellcheck": {
-        "mode": true,
-        "change": true
-    }
+const features = {
+  roles: true,
+  spellcheck: {
+    mode: true,
+    change: true,
+  },
 }
 ```
 
@@ -414,9 +414,9 @@ Type:  object
 **Example**:
 
 ``` javascript
-{
-    "name": "Arial",
-    "size": "11px"
+const font = {
+  name: "Arial",
+  size: "11px",
 }
 ```
 
@@ -458,10 +458,10 @@ Type: object
 **Example**:
 
 ``` javascript
-{
-    "blank": true,
-    "text": "Open file location",
-    "url": "https://example.com"
+const goback = {
+  blank: true,
+  text: "Open file location",
+  url: "https://example.com",
 }
 ```
 
@@ -574,46 +574,46 @@ Type:  object
 **Example**:
 
 ``` javascript
-{
-    "header": {
-        "editMode": true,
-        "save": true,
-        "users": true
+const layout = {
+  header: {
+    editMode: true,
+    save: true,
+    users: true,
+  },
+  leftMenu: {
+    mode: true,
+    navigation: true,
+    spellcheck: true,
+  },
+  rightMenu: {
+    mode: true,
+  },
+  statusBar: {
+    actionStatus: true,
+    docLang: true,
+    textLang: true,
+  },
+  toolbar: {
+    collaboration: {
+      mailmerge: true,
     },
-    "leftMenu": {
-        "mode": true,
-        "navigation": true,
-        "spellcheck": true
+    draw: true,
+    file: {
+      close: true,
+      info: true,
+      save: true,
+      settings: true,
     },
-    "rightMenu": {
-        "mode": true
+    home: {},
+    layout: true,
+    plugins: true,
+    protect: true,
+    references: true,
+    save: true,
+    view: {
+      navigation: true,
     },
-    "statusBar": {
-        "actionStatus": true,
-        "docLang": true,
-        "textLang": true
-    },
-    "toolbar": {
-        "collaboration": {
-            "mailmerge": true
-        },
-        "draw": true,
-        "file": {
-            "close": true,
-            "info": true,
-            "save": true,
-            "settings": true
-        },
-        "home": {},
-        "layout": true,
-        "plugins": true,
-        "protect": true,
-        "references": true,
-        "save": true,
-        "view": {
-            "navigation": true
-        }
-    }
+  },
 }
 ```
 
@@ -626,10 +626,10 @@ Type: object
 **Example**:
 
 ``` javascript
-{
-    "editMode": true,
-    "save": true,
-    "users": true
+const header = {
+  editMode: true,
+  save: true,
+  users: true,
 }
 ```
 
@@ -670,10 +670,10 @@ Type: object or boolean
 **Example**:
 
 ``` javascript
-{
-    "mode": true,
-    "navigation": true,
-    "spellcheck": true
+const leftMenu = {
+  mode: true,
+  navigation: true,
+  spellcheck: true,
 }
 ```
 
@@ -714,8 +714,8 @@ Type: object or boolean
 **Example**:
 
 ``` javascript
-{
-    "mode": true
+const rightMenu = {
+  mode: true,
 }
 ```
 
@@ -738,10 +738,10 @@ Type: object or boolean
 **Example**:
 
 ``` javascript
-{
-    "actionStatus": true,
-    "docLang": true,
-    "textLang": true
+const statusBar = {
+  actionStatus: true,
+  docLang: true,
+  textLang: true,
 }
 ```
 
@@ -782,26 +782,26 @@ Type: object or boolean
 **Example**:
 
 ``` javascript
-{
-    "collaboration": {
-        "mailmerge": true
-    },
-    "draw": true,
-    "file": {
-        "close": true,
-        "info": true,
-        "save": true,
-        "settings": true
-    },
-    "home": {},
-    "layout": true,
-    "plugins": true,
-    "protect": true,
-    "references": true,
-    "save": true,
-    "view": {
-        "navigation": true
-    }
+const toolbar = {
+  collaboration: {
+    mailmerge: true,
+  },
+  draw: true,
+  file: {
+    close: true,
+    info: true,
+    save: true,
+    settings: true,
+  },
+  home: {},
+  layout: true,
+  plugins: true,
+  protect: true,
+  references: true,
+  save: true,
+  view: {
+    navigation: true,
+  },
 }
 ```
 
@@ -815,8 +815,8 @@ Type: object or boolean
 **Example**:
 
 ``` javascript
-{
-    "mailmerge": true
+const collaboration = {
+  mailmerge: true,
 }
 ```
 
@@ -848,11 +848,11 @@ Type: object or boolean
 **Example**:
 
 ``` javascript
-{
-    "close": true,
-    "info": true,
-    "save": true,
-    "settings": true
+const file = {
+  close: true,
+  info: true,
+  save: true,
+  settings: true,
 }
 ```
 
@@ -965,8 +965,8 @@ Type: object or boolean
 **Example**:
 
 ``` javascript
-{
-    "navigation": true
+const view = {
+  navigation: true,
 }
 ```
 
@@ -1026,11 +1026,11 @@ Type: object
 **Example**:
 
 ```  javascript
-{
-    "image": "https://example.com/logo.png",
-    "imageDark": "https://example.com/dark-logo.png",
-    "url": "https://example.com",
-    "visible": true
+const logo = {
+  image: "https://example.com/logo.png",
+  imageDark: "https://example.com/dark-logo.png",
+  url: "https://example.com",
+  visible: true,
 }
 ```
 
@@ -1152,12 +1152,12 @@ Type: object
 **Example**:
 
 ``` javascript
-{
-    "hideReviewDisplay": false,
-    "showReviewChanges": false,
-    "reviewDisplay": "original",
-    "trackChanges": true,
-    "hoverMode": false
+const review = {
+  hideReviewDisplay: false,
+  showReviewChanges: false,
+  reviewDisplay: "original",
+  trackChanges: true,
+  hoverMode: false,
 }
 ```
 
@@ -1401,129 +1401,129 @@ Example: 100
 ### Example
 
 ``` javascript
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "editorConfig": {
-        "customization": {
-            "about": true,
-            "anonymous": {
-                "request": true,
-                "label": "Guest"
-            },
-            "autosave": true,
-            "close": {
-                "visible": true,
-                "text": "Close file"
-            },
-            "comments": true,
-            "compactHeader": false,
-            "compactToolbar": false,
-            "compatibleFeatures": false,
-            "customer": {
-                "address": "My City, 123a-45",
-                "info": "Some additional information",
-                "logo": "https://example.com/logo-big.png",
-                "logoDark": "https://example.com/dark-logo-big.png",
-                "mail": "john@example.com",
-                "name": "John Smith and Co.",
-                "phone": "123456789",
-                "www": "example.com"
-            },
-            "features": {
-                "roles": true,
-                "spellcheck": {
-                    "mode": true,
-                    "change": true
-                }
-            },
-            "feedback": {
-                "url": "https://example.com",
-                "visible": true
-            },
-            "font": {
-                "name": "Arial",
-                "size": "11px"
-            },
-            "forcesave": false,
-            "goback": {
-                "blank": true,
-                "text": "Open file location",
-                "url": "https://example.com"
-            },
-            "help": true,
-            "hideNotes": false,
-            "hideRightMenu": true,
-            "hideRulers": false,
-            "integrationMode": "embed",
-            "layout": {
-                "header": {
-                    "editMode": true,
-                    "save": true,
-                    "users": true
-                },
-                "leftMenu": {
-                    "mode": true,
-                    "navigation": true,
-                    "spellcheck": true
-                },
-                "rightMenu": {
-                    "mode": true
-                },
-                "statusBar": {
-                    "actionStatus": true,
-                    "docLang": true,
-                    "textLang": true
-                },
-                "toolbar": {
-                    "collaboration": {
-                        "mailmerge": true
-                    },
-                    "draw": true,
-                    "file": {
-                        "close": true,
-                        "info": true,
-                        "save": true,
-                        "settings": true
-                    },
-                    "home": {},
-                    "layout": true,
-                    "plugins": true,
-                    "protect": true,
-                    "references": true,
-                    "save": true,
-                    "view": {
-                        "navigation": true
-                    }
-                }
-            },
-            "loaderLogo": "https://example.com/loader-logo.png",
-            "loaderName": "The document is loading, please wait...",
-            "logo": {
-                "image": "https://example.com/logo.png",
-                "imageDark": "https://example.com/dark-logo.png",
-                "url": "https://example.com",
-                "visible": true
-            },
-            "macros": true,
-            "macrosMode": "warn",
-            "mentionShare": true,
-            "mobileForceView": true,
-            "plugins": true,
-            "review": {
-                "hideReviewDisplay": false,
-                "showReviewChanges": false,
-                "reviewDisplay": "original",
-                "trackChanges": true,
-                "hoverMode": false
-            },
-            "submitForm": true,
-            "toolbarHideFileName": false,
-            "toolbarNoTabs": false,
-            "uiTheme": "theme-dark",
-            "unit": "cm",
-            "zoom": 100
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  editorConfig: {
+    customization: {
+      about: true,
+      anonymous: {
+        request: true,
+        label: "Guest",
+      },
+      autosave: true,
+      close: {
+        visible: true,
+        text: "Close file",
+      },
+      comments: true,
+      compactHeader: false,
+      compactToolbar: false,
+      compatibleFeatures: false,
+      customer: {
+        address: "My City, 123a-45",
+        info: "Some additional information",
+        logo: "https://example.com/logo-big.png",
+        logoDark: "https://example.com/dark-logo-big.png",
+        mail: "john@example.com",
+        name: "John Smith and Co.",
+        phone: "123456789",
+        www: "example.com",
+      },
+      features: {
+        roles: true,
+        spellcheck: {
+          mode: true,
+          change: true,
         },
+      },
+      feedback: {
+        url: "https://example.com",
+        visible: true,
+      },
+      font: {
+        name: "Arial",
+        size: "11px",
+      },
+      forcesave: false,
+      goback: {
+        blank: true,
+        text: "Open file location",
+        url: "https://example.com",
+      },
+      help: true,
+      hideNotes: false,
+      hideRightMenu: true,
+      hideRulers: false,
+      integrationMode: "embed",
+      layout: {
+        header: {
+          editMode: true,
+          save: true,
+          users: true,
+        },
+        leftMenu: {
+          mode: true,
+          navigation: true,
+          spellcheck: true,
+        },
+        rightMenu: {
+          mode: true,
+        },
+        statusBar: {
+          actionStatus: true,
+          docLang: true,
+          textLang: true,
+        },
+        toolbar: {
+          collaboration: {
+            mailmerge: true,
+          },
+          draw: true,
+          file: {
+            close: true,
+            info: true,
+            save: true,
+            settings: true,
+          },
+          home: {},
+          layout: true,
+          plugins: true,
+          protect: true,
+          references: true,
+          save: true,
+          view: {
+            navigation: true,
+          },
+        },
+      },
+      loaderLogo: "https://example.com/loader-logo.png",
+      loaderName: "The document is loading, please wait...",
+      logo: {
+        image: "https://example.com/logo.png",
+        imageDark: "https://example.com/dark-logo.png",
+        url: "https://example.com",
+        visible: true,
+      },
+      macros: true,
+      macrosMode: "warn",
+      mentionShare: true,
+      mobileForceView: true,
+      plugins: true,
+      review: {
+        hideReviewDisplay: false,
+        showReviewChanges: false,
+        reviewDisplay: "original",
+        trackChanges: true,
+        hoverMode: false,
+      },
+      submitForm: true,
+      toolbarHideFileName: false,
+      toolbarNoTabs: false,
+      uiTheme: "theme-dark",
+      unit: "cm",
+      zoom: 100,
     },
-});
+  },
+})
 ```
 
 The **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

@@ -16,8 +16,8 @@ order: -8
 
   ``` json
   {
-      "c": "info",
-      "key": "Khirz6zTPdfd7"
+    "c": "info",
+    "key": "Khirz6zTPdfd7"
   }
   ```
 
@@ -25,9 +25,9 @@ order: -8
 
   ``` json
   {
-      "key": "Khirz6zTPdfd7",
-      "status": 1,
-      "users": ["6d5a81d0", "78e1e841"]
+    "key": "Khirz6zTPdfd7",
+    "status": 1,
+    "users": ["6d5a81d0", "78e1e841"]
   }
   ```
 
@@ -43,9 +43,9 @@ order: -8
 
   ``` json
   {
-      "c": "drop",
-      "key": "Khirz6zTPdfd7",
-      "users": [ "6d5a81d0", "78e1e841" ]
+    "c": "drop",
+    "key": "Khirz6zTPdfd7",
+    "users": ["6d5a81d0", "78e1e841"]
   }
   ```
 

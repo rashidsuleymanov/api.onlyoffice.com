@@ -45,7 +45,7 @@ CDocBuilder.Destroy();
 
 #### .docbuilder
 
-```js
+```shell
 docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
 ```
 
@@ -67,6 +67,6 @@ CDocBuilder.Destroy();
 
 #### .docbuilder
 
-```js
+```shell
 docbuilder.exe "--check-fonts=true" test.docbuilder
 ```

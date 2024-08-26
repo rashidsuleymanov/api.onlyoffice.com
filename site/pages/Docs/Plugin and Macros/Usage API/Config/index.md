@@ -74,8 +74,8 @@ Example:
 
 ``` json
 {
-    "name": "Macros",
-    "rank": 2
+  "name": "Macros",
+  "rank": 2
 } 
 ```
 
@@ -162,71 +162,71 @@ Example:
 
 ``` json
 [
-    {
-        "buttons": [
-            { 
-                "text": "Cancel",
-                "primary": false,
-                "isviewer": false,
-                "textLocale": {
-                    "fr": "Annuler",
-                    "es": "Cancelar"
-                }
-            }
-        ],
-        "cryptoDisabledForExternalCloud": "true",
-        "cryptoDisabledForInternalCloud": "true",
-        "cryptoDisabledOnStart": "true",
-        "cryptoMode": "1",
-        "description": "plugin description",
-        "descriptionLocale": {
-            "fr": "french plugin description",
-            "es": "spanish plugin description"
-        },
-        "EditorsSupport": ["word", "cell", "slide", "pdf"],
-        "events": ["onClick"],
-        "icons": ["icon.png", "icon@2x.png"],
-        "icons2": [
-            {
-                "100%": { "normal": "icon.png" },
-                "125%": { "normal": "icon@1.25.png" },
-                "150%": { "normal": "icon@1.5x.png" },
-                "175%": { "normal": "icon@1.75.png" },
-                "200%": { "normal": "icon@2x.png" }
-            },
-            {
-                "style": "dark"
-            }
-        ],
-        "initData": "",
-        "initDataType": "ole",
-        "initOnSelectionChanged": true,
-        "isCustomWindow": true,
-        "isDisplayedInViewer": true,
-        "isInsideMode": false,
-        "isModal": true,
-        "isSystem": false,
-        "isUpdateOleOnResize": true,
-        "isViewer": true,
-        "isVisual": false,
-        "menu": "right",
-        "screens": ["resources/store/screenshots/screen_1.png"],
-        "size": [600, 700],
-        "store": {
-            "background": {
-                "light": "#F5F5F5",
-                "dark": "#444444"
-            },
-            "categories": ["specAbilities", "work"],
-            "icons": {
-                "light": "resources/store/icons",
-                "dark" : "resources/store/icons"
-            },
-            "screenshots": ["resources/store/screenshots/screen_1.png"]
-        },
-        "type": "background",
-        "url": "index.html"
-    }
+  {
+    "buttons": [
+      { 
+        "text": "Cancel",
+        "primary": false,
+        "isviewer": false,
+        "textLocale": {
+          "fr": "Annuler",
+          "es": "Cancelar"
+        }
+      }
+    ],
+    "cryptoDisabledForExternalCloud": "true",
+    "cryptoDisabledForInternalCloud": "true",
+    "cryptoDisabledOnStart": "true",
+    "cryptoMode": "1",
+    "description": "plugin description",
+    "descriptionLocale": {
+      "fr": "french plugin description",
+      "es": "spanish plugin description"
+    },
+    "EditorsSupport": ["word", "cell", "slide", "pdf"],
+    "events": ["onClick"],
+    "icons": ["icon.png", "icon@2x.png"],
+    "icons2": [
+      {
+        "100%": {"normal": "icon.png"},
+        "125%": {"normal": "icon@1.25.png"},
+        "150%": {"normal": "icon@1.5x.png"},
+        "175%": {"normal": "icon@1.75.png"},
+        "200%": {"normal": "icon@2x.png"}
+      },
+      {
+        "style": "dark"
+      }
+    ],
+    "initData": "",
+    "initDataType": "ole",
+    "initOnSelectionChanged": true,
+    "isCustomWindow": true,
+    "isDisplayedInViewer": true,
+    "isInsideMode": false,
+    "isModal": true,
+    "isSystem": false,
+    "isUpdateOleOnResize": true,
+    "isViewer": true,
+    "isVisual": false,
+    "menu": "right",
+    "screens": ["resources/store/screenshots/screen_1.png"],
+    "size": [600, 700],
+    "store": {
+      "background": {
+        "light": "#F5F5F5",
+        "dark": "#444444"
+      },
+      "categories": ["specAbilities", "work"],
+      "icons": {
+        "light": "resources/store/icons",
+        "dark": "resources/store/icons"
+      },
+      "screenshots": ["resources/store/screenshots/screen_1.png"]
+    },
+    "type": "background",
+    "url": "index.html"
+  }
 ]
 ```
 
@@ -241,15 +241,15 @@ Example:
 
 ``` json
 [
-    {
-        "text": "Cancel",
-        "primary": false,
-        "isviewer": false,
-        "textLocale": {
-            "fr": "Annuler",
-            "es": "Cancelar"
-        }
+  {
+    "text": "Cancel",
+    "primary": false,
+    "isviewer": false,
+    "textLocale": {
+      "fr": "Annuler",
+      "es": "Cancelar"
     }
+  }
 ]
 ```
 
@@ -480,16 +480,16 @@ Example:
 
 ``` json
 {
-    "background": {
-        "light": "#F5F5F5",
-        "dark": "#444444"
-    },
-    "categories": ["specAbilities", "work"],
-    "icons": {
-        "light": "resources/store/icons",
-        "dark" : "resources/store/icons"
-    },
-    "screenshots": ["resources/store/screenshots/screen_1.png"]
+  "background": {
+    "light": "#F5F5F5",
+    "dark": "#444444"
+  },
+  "categories": ["specAbilities", "work"],
+  "icons": {
+    "light": "resources/store/icons",
+    "dark": "resources/store/icons"
+  },
+  "screenshots": ["resources/store/screenshots/screen_1.png"]
 }
 ```
 
@@ -504,8 +504,8 @@ Example:
 
 ``` json
 {
-    "light": "#F5F5F5",
-    "dark": "#444444"
+  "light": "#F5F5F5",
+  "dark": "#444444"
 }
 ```
 
@@ -555,8 +555,8 @@ Example:
 
 ``` json
 {
-    "light": "resources/store/icons",
-    "dark" : "resources/store/icons"
+  "light": "resources/store/icons",
+  "dark": "resources/store/icons"
 }
 ```
 
@@ -619,87 +619,87 @@ Example: "1.0"
 
 ``` json
 {
-        "baseUrl": "",
-        "group": {
-            "name": "Macros",
-            "rank": 2
+  "baseUrl": "",
+  "group": {
+    "name": "Macros",
+    "rank": 2
+  },
+  "guid": "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
+  "help": "",
+  "minVersion": "6.3.0",
+  "name": "plugin name",
+  "nameLocale": {
+    "fr": "french plugin name",
+    "es": "spanish plugin name"
+  },
+  "offered": "John Smith",
+  "variations": [
+    {
+      "buttons": [
+        { 
+          "text": "Cancel",
+          "primary": false,
+          "isviewer": false,
+          "textLocale": {
+            "fr": "Annuler",
+            "es": "Cancelar"
+          }
+        }
+      ],
+      "cryptoDisabledForExternalCloud": "true",
+      "cryptoDisabledForInternalCloud": "true",
+      "cryptoDisabledOnStart": "true",
+      "cryptoMode": "1",
+      "description": "plugin description",
+      "descriptionLocale": {
+        "fr": "french plugin description",
+        "es": "spanish plugin description"
+      },
+      "EditorsSupport": ["word", "cell", "slide", "pdf"],
+      "events": ["onClick"],
+      "icons": ["icon.png", "icon@2x.png"],
+      "icons2": [
+        {
+          "100%": {"normal": "icon.png"},
+          "125%": {"normal": "icon@1.25.png"},
+          "150%": {"normal": "icon@1.5x.png"},
+          "175%": {"normal": "icon@1.75.png"},
+          "200%": {"normal": "icon@2x.png"}
         },
-        "guid": "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
-        "help": "",
-        "minVersion": "6.3.0",
-        "name": "plugin name",
-        "nameLocale": {
-            "fr": "french plugin name",
-            "es": "spanish plugin name"
+        {
+          "style": "dark"
+        }
+      ],
+      "initData": "",
+      "initDataType": "ole",
+      "initOnSelectionChanged": true,
+      "isCustomWindow": true,
+      "isDisplayedInViewer": true,
+      "isInsideMode": false,
+      "isModal": true,
+      "isSystem": false,
+      "isUpdateOleOnResize": true,
+      "isViewer": true,
+      "isVisual": false,
+      "menu": "right",
+      "screens": ["resources/store/screenshots/screen_1.png"],
+      "size": [600, 700],
+      "store": {
+        "background": {
+          "light": "#F5F5F5",
+          "dark": "#444444"
         },
-        "offered": "John Smith",
-        "variations": [
-            {
-                "buttons": [
-                    { 
-                        "text": "Cancel",
-                        "primary": false,
-                        "isviewer": false,
-                        "textLocale": {
-                            "fr": "Annuler",
-                            "es": "Cancelar"
-                        }
-                    }
-                ],
-                "cryptoDisabledForExternalCloud": "true",
-                "cryptoDisabledForInternalCloud": "true",
-                "cryptoDisabledOnStart": "true",
-                "cryptoMode": "1",
-                "description": "plugin description",
-                "descriptionLocale": {
-                    "fr": "french plugin description",
-                    "es": "spanish plugin description"
-                },
-                "EditorsSupport": ["word", "cell", "slide", "pdf"],
-                "events": ["onClick"],
-                "icons": ["icon.png", "icon@2x.png"],
-                "icons2": [
-                    {
-                        "100%": { "normal": "icon.png" },
-                        "125%": { "normal": "icon@1.25.png" },
-                        "150%": { "normal": "icon@1.5x.png" },
-                        "175%": { "normal": "icon@1.75.png" },
-                        "200%": { "normal": "icon@2x.png" }
-                    },
-                    {
-                        "style": "dark"
-                    }
-                ],
-                "initData": "",
-                "initDataType": "ole",
-                "initOnSelectionChanged": true,
-                "isCustomWindow": true,
-                "isDisplayedInViewer": true,
-                "isInsideMode": false,
-                "isModal": true,
-                "isSystem": false,
-                "isUpdateOleOnResize": true,
-                "isViewer": true,
-                "isVisual": false,
-                "menu": "right",
-                "screens": ["resources/store/screenshots/screen_1.png"],
-                "size": [600, 700],
-                "store": {
-                    "background": {
-                        "light": "#F5F5F5",
-                        "dark": "#444444"
-                    },
-                    "categories": ["specAbilities", "work"],
-                    "icons": {
-                        "light": "resources/store/icons",
-                        "dark" : "resources/store/icons"
-                    },
-                    "screenshots": ["resources/store/screenshots/screen_1.png"]
-                },
-                "type": "background",
-                "url": "index.html"
-            }
-        ],
-        "version": "1.0"
+        "categories": ["specAbilities", "work"],
+        "icons": {
+          "light": "resources/store/icons",
+          "dark": "resources/store/icons"
+        },
+        "screenshots": ["resources/store/screenshots/screen_1.png"]
+      },
+      "type": "background",
+      "url": "index.html"
     }
+  ],
+  "version": "1.0"
+}
 ```

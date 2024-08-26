@@ -4,7 +4,7 @@ Requests a list of the forgotten files.
 
 ``` json
 {
-    "c": "getForgottenList"
+  "c": "getForgottenList"
 }
 ```
 
@@ -18,8 +18,8 @@ Requests a list of the forgotten files.
 
 ``` json
 {
-    "error": 0,
-    "keys": ["Khirz6zTPdfd7"]
+  "error": 0,
+  "keys": ["Khirz6zTPdfd7"]
 }
 ```
 

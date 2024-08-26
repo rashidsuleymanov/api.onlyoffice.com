@@ -13,5 +13,5 @@ Displays a list of entities depending on the specified [rootPath](../../Config/i
 | [initManager](../../Methods/index.md#initmanager) | Initializes the SDK frame in the "manager" mode. |
 
 ``` javascript
-var docSpace = DocSpace.SDK.initManager({config});
+const docSpace = DocSpace.SDK.initManager({config})
 ```

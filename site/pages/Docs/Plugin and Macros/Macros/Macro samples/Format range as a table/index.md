@@ -6,6 +6,8 @@ order: -12
 
 Formats the range of cells **A1:D10** as a table.
 
+<!-- This code snippet is shown in the screenshot. -->
+<!-- eslint-skip -->
 ``` javascript
 (function()
 {

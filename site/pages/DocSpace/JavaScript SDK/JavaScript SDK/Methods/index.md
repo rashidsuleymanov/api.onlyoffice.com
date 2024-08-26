@@ -5,7 +5,7 @@ order: -2
 After initializing SDK, you will get an object that can be used to call the methods:
 
 ``` javascript
-var docSpace = DocSpace.SDK.initManager({config});
+const docSpace = DocSpace.SDK.initManager({config})
 ```
 
 - [addTagsToRoom](#addtagstoroom)
@@ -45,7 +45,7 @@ var docSpace = DocSpace.SDK.initManager({config});
 Adds the specified tags to the room with the specified ID.
 
   ``` javascript
-  docSpace.addTagsToRoom(roomId, tags);
+  docSpace.addTagsToRoom(roomId, tags)
   ```
 
   | Parameter | Description                                            | Type             | Presence |
@@ -59,7 +59,7 @@ Adds the specified tags to the room with the specified ID.
 Creates a file with the specified parameters.
 
   ``` javascript
-  docSpace.createFile(folderId, title, templateId, formId);
+  docSpace.createFile(folderId, title, templateId, formId)
   ```
 
   | Parameter  | Description                                                       | Type   | Presence |
@@ -75,7 +75,7 @@ Creates a file with the specified parameters.
 Creates a folder with the specified parameters.
 
   ``` javascript
-  docSpace.createFolder(parentFolderId, title);
+  docSpace.createFolder(parentFolderId, title)
   ```
 
   | Parameter      | Description                                                       | Type   | Presence |
@@ -89,7 +89,7 @@ Creates a folder with the specified parameters.
 Generates the hash string based on the specified hash settings.
 
   ``` javascript
-  docSpace.createHash(password, hashSettings);
+  docSpace.createHash(password, hashSettings)
   ```
 
   | Parameter               | Description                                                                                                   | Type    | Presence |
@@ -106,7 +106,7 @@ Generates the hash string based on the specified hash settings.
 Creates a room with the specified parameters.
 
   ``` javascript
-  docSpace.createRoom(title, type);
+  docSpace.createRoom(title, type)
   ```
 
   | Parameter | Description                                          | Type   | Presence |
@@ -120,7 +120,7 @@ Creates a room with the specified parameters.
 Creates a tag with the specified name.
 
   ``` javascript
-  docSpace.createTag(name);
+  docSpace.createTag(name)
   ```
 
   | Parameter | Description           | Type   | Presence |
@@ -133,7 +133,7 @@ Creates a tag with the specified name.
 Destroys the SDK frame, replacing it with the element passed to [destroyText](../Config/index.md#destroytext).
 
   ``` javascript
-  docSpace.destroyFrame();
+  docSpace.destroyFrame()
   ```
 
 
@@ -142,7 +142,7 @@ Destroys the SDK frame, replacing it with the element passed to [destroyText](..
 Returns the SDK config.
 
   ``` javascript
-  docSpace.getConfig();
+  docSpace.getConfig()
   ```
 
 
@@ -151,7 +151,7 @@ Returns the SDK config.
 Returns the information about all files in the SDK frame.
 
   ``` javascript
-  docSpace.getFiles();
+  docSpace.getFiles()
   ```
 
 
@@ -160,7 +160,7 @@ Returns the information about all files in the SDK frame.
 Returns the information about the current directory opened in the SDK frame.
 
   ``` javascript 
-  docSpace.getFolderInfo();
+  docSpace.getFolderInfo()
   ```
 
 
@@ -169,7 +169,7 @@ Returns the information about the current directory opened in the SDK frame.
 Returns the information about all the folders in the SDK frame.
 
   ``` javascript
-  docSpace.getFolders();
+  docSpace.getFolders()
   ```
 
 
@@ -178,7 +178,7 @@ Returns the information about all the folders in the SDK frame.
 Returns the DocSpace hash settings for generating a password hash.
 
   ``` javascript
-  docSpace.getHashSettings();
+  docSpace.getHashSettings()
   ```
 
 
@@ -187,7 +187,7 @@ Returns the DocSpace hash settings for generating a password hash.
 Returns the information about all files and folders in the SDK frame.
 
   ``` javascript
-  docSpace.getList();
+  docSpace.getList()
   ```
 
 
@@ -196,7 +196,7 @@ Returns the information about all files and folders in the SDK frame.
 Returns the information about rooms according to the specified filter parameters.
 
   ``` javascript
-  docSpace.getRooms(filter);
+  docSpace.getRooms(filter)
   ```
 
   | Parameter | Description                                                                                                                       | Type   | Presence |
@@ -209,7 +209,7 @@ Returns the information about rooms according to the specified filter parameters
 Returns the information about the selected elements in the SDK frame.
 
   ``` javascript
-  docSpace.getSelection();
+  docSpace.getSelection()
   ```
 
 
@@ -218,7 +218,7 @@ Returns the information about the selected elements in the SDK frame.
 Returns the information about the current DocSpace user or null if there are no authorized users.
 
   ``` javascript
-  docSpace.getUserInfo();
+  docSpace.getUserInfo()
   ```
 
 
@@ -227,7 +227,7 @@ Returns the information about the current DocSpace user or null if there are no 
 Initializes the SDK frame in the "editor" mode.
 
   ``` javascript
-  docSpace.initEditor(config);
+  docSpace.initEditor(config)
   ```
 
   | Parameter | Description                                                                                                    | Type   | Presence |
@@ -240,7 +240,7 @@ Initializes the SDK frame in the "editor" mode.
 Initializes the SDK frame in the "file-selector" mode.
 
   ``` javascript
-  docSpace.initFileSelector(config);
+  docSpace.initFileSelector(config)
   ```
 
   | Parameter | Description                                                                                                    | Type   | Presence |
@@ -253,7 +253,7 @@ Initializes the SDK frame in the "file-selector" mode.
 Initializes the SDK frame dispaying the DocSpace page.
 
   ``` javascript
-  docSpace.initFrame(config);
+  docSpace.initFrame(config)
   ```
 
   | Parameter | Description                                                                                                    | Type   | Presence |
@@ -266,7 +266,7 @@ Initializes the SDK frame dispaying the DocSpace page.
 Initializes the SDK frame in the "manager" mode.
 
   ``` javascript
-  docSpace.initManager(config);
+  docSpace.initManager(config)
   ```
 
   | Parameter | Description                                                                                                    | Type   | Presence |
@@ -279,7 +279,7 @@ Initializes the SDK frame in the "manager" mode.
 Initializes the SDK frame in the "room-selector" mode.
 
   ``` javascript
-  docSpace.initRoomSelector(config);
+  docSpace.initRoomSelector(config)
   ```
 
   | Parameter | Description                                                                                                    | Type   | Presence |
@@ -292,7 +292,7 @@ Initializes the SDK frame in the "room-selector" mode.
 Initializes the SDK frame in the "system" mode to call system methods. This lightweight frame displays a blank page with the loader.
 
   ``` javascript
-  docSpace.initSystem(config);
+  docSpace.initSystem(config)
   ```
 
   | Parameter | Description                                                                                                    | Type   | Presence |
@@ -305,7 +305,7 @@ Initializes the SDK frame in the "system" mode to call system methods. This ligh
 Initializes the SDK frame in the "viewer" mode.
 
   ``` javascript
-  docSpace.initViewer(config);
+  docSpace.initViewer(config)
   ```
 
   | Parameter | Description                                                                                                    | Type   | Presence |
@@ -318,7 +318,7 @@ Initializes the SDK frame in the "viewer" mode.
 Logs in to the DocSpace account using the specified email and password hash.
 
   ``` javascript
-  docSpace.login(email, passwordHash);
+  docSpace.login(email, passwordHash)
   ```
 
   | Parameter    | Description                     | Type   | Presence |
@@ -332,7 +332,7 @@ Logs in to the DocSpace account using the specified email and password hash.
 Logs out from the DocSpace account of the current user.
 
   ``` javascript
-  docSpace.logout();
+  docSpace.logout()
   ```
 
 
@@ -341,7 +341,7 @@ Logs out from the DocSpace account of the current user.
 Opens the DocSpace modal window of the specified type.
 
   ``` javascript
-  docSpace.openModal(type);
+  docSpace.openModal(type)
   ```
 
   | Parameter | Description                                                                          | Type   | Presence |
@@ -354,7 +354,7 @@ Opens the DocSpace modal window of the specified type.
 Removes the specified tags from the room with the specified ID.
 
   ``` javascript
-  docSpace.removeTagsFromRoom(roomId, tags);
+  docSpace.removeTagsFromRoom(roomId, tags)
   ```
 
   | Parameter | Description                                              | Type             | Presence |
@@ -368,7 +368,7 @@ Removes the specified tags from the room with the specified ID.
 Sets the specified config for the current SDK entity.
 
   ``` javascript
-  docSpace.setConfig(config);
+  docSpace.setConfig(config)
   ```
 
   | Parameter | Description                                                                                                    | Type   | Presence |
@@ -381,7 +381,7 @@ Sets the specified config for the current SDK entity.
 Disables the loader in the SDK window.
 
   ``` javascript
-  docSpace.setIsLoaded();
+  docSpace.setIsLoaded()
   ```
 
 
@@ -390,7 +390,7 @@ Disables the loader in the SDK window.
 Sets the display of entity lists according to the specified type.
 
   ``` javascript
-  docSpace.setListView(type);
+  docSpace.setListView(type)
   ```
 
   | Parameter | Description                                                                             | Type   | Presence |

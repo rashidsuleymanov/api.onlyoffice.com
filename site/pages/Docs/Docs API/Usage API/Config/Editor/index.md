@@ -45,8 +45,8 @@ Type: object
 
 ``` json
 {
-    "mode": "fast",
-    "change": true
+  "mode": "fast",
+  "change": true
 }
 ```
 
@@ -124,11 +124,11 @@ Type: array of object
 
 ``` json
 [
-    {
-        "folder": "Example Files",
-        "title": "exampledocument1.docx",
-        "url": "https://example.com/exampledocument1.docx"
-    }
+  {
+    "folder": "Example Files",
+    "title": "exampledocument1.docx",
+    "url": "https://example.com/exampledocument1.docx"
+  }
 ]
 ```
 
@@ -181,11 +181,11 @@ Type: array of object
 
 ``` json
 [
-    {
-        "image": "https://example.com/exampletemplate1.png",
-        "title": "exampletemplate1.docx",
-        "url": "https://example.com/url-to-create-template1"
-    }
+  {
+    "image": "https://example.com/exampletemplate1.png",
+    "title": "exampletemplate1.docx",
+    "url": "https://example.com/url-to-create-template1"
+  }
 ]
 ```
 
@@ -229,10 +229,10 @@ Type: object
 
 ``` json
 {
-    "group": "Group1,Group2",
-    "id": "78e1e841",
-    "image": "https://example.com/url-to-user-avatar.png",
-    "name": "John Smith"
+  "group": "Group1,Group2",
+  "id": "78e1e841",
+  "image": "https://example.com/url-to-user-avatar.png",
+  "name": "John Smith"
 }
 ```
 
@@ -298,41 +298,41 @@ Example: "John Smith"
 ### Example
 
 ``` javascript
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "editorConfig": {
-        "actionLink": "ACTION_DATA",
-        "callbackUrl": "https://example.com/url-to-callback.ashx",
-        "coEditing": {
-            "mode": "fast",
-            "change": true
-        },
-        "createUrl": "https://example.com/url-to-create-document/",
-        "lang": "en",
-        "location": "",
-        "mode": "edit",
-        "recent": [
-            {
-                "folder": "Example Files",
-                "title": "exampledocument1.docx",
-                "url": "https://example.com/exampledocument1.docx"
-            }
-        ],
-        "region": "en-US",
-        "templates": [
-            {
-                "image": "https://example.com/exampletemplate1.png",
-                "title": "exampletemplate1.docx",
-                "url": "https://example.com/url-to-create-template1"
-            }
-        ],
-        "user": {
-            "group": "Group1,Group2",
-            "id": "78e1e841",
-            "image": "https://example.com/url-to-user-avatar.png",
-            "name": "John Smith"
-        }
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  editorConfig: {
+    actionLink: "ACTION_DATA",
+    callbackUrl: "https://example.com/url-to-callback.ashx",
+    coEditing: {
+      mode: "fast",
+      change: true,
     },
-});
+    createUrl: "https://example.com/url-to-create-document/",
+    lang: "en",
+    location: "",
+    mode: "edit",
+    recent: [
+      {
+        folder: "Example Files",
+        title: "exampledocument1.docx",
+        url: "https://example.com/exampledocument1.docx",
+      },
+    ],
+    region: "en-US",
+    templates: [
+      {
+        image: "https://example.com/exampletemplate1.png",
+        title: "exampletemplate1.docx",
+        url: "https://example.com/url-to-create-template1",
+      },
+    ],
+    user: {
+      group: "Group1,Group2",
+      id: "78e1e841",
+      image: "https://example.com/url-to-user-avatar.png",
+      name: "John Smith",
+    },
+  },
+})
 ```
 
 The **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

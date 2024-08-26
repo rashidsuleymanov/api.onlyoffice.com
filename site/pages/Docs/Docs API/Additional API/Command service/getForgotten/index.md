@@ -4,8 +4,8 @@ Requests a forgotten file.
 
 ``` json
 {
-    "c": "getForgotten",
-    "key": "Khirz6zTPdfd7"
+  "c": "getForgotten",
+  "key": "Khirz6zTPdfd7"
 }
 ```
 
@@ -20,9 +20,9 @@ Requests a forgotten file.
 
 ``` json
 {
-    "error": 0,
-    "key": "Khirz6zTPdfd7",
-    "url": "https://documentserver/url-to-forgotten-document.docx"
+  "error": 0,
+  "key": "Khirz6zTPdfd7",
+  "url": "https://documentserver/url-to-forgotten-document.docx"
 }
 ```
 

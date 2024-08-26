@@ -9,7 +9,7 @@ Starting from version 5.6, ONLYOFFICE Desktop Editors offers support for Private
 Declare the *cloudCryptoCommand* function to process messages from the desktop app:
 
 ``` javascript
-window.cloudCryptoCommand = function (type, params, callback) 
+window.cloudCryptoCommand = function cloudCryptoCommand(type, params, callback) {}
 ```
 
 ## type
@@ -21,11 +21,11 @@ Defines the command type:
 * *getsharingkeys* - to request for the public keys of all the users who have access to the file. The keys will be transferred via callback:
 
   ``` javascript
-  callback ( {
-    "keys": [{
-      "userId": "78e1e841",
-      "publicKey": "yyy"
-    }]
+  callback({
+    keys: [{
+      userId: "78e1e841",
+      publicKey: "yyy",
+    }],
   })
   ```
 

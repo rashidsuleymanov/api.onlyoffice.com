@@ -17,5 +17,5 @@ oBuilder->Dispose();
 #### .docbuilder
 
 ```js
-builder.CloseFile();
+builder.CloseFile()
 ```

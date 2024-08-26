@@ -44,10 +44,10 @@ Example:
 
 ``` javascript
 [
-    {
-        "name": "accept-button",
-        "props": {...acceptButtonProps, "isDisabled": false}
-    }
+  {
+    name: "accept-button",
+    props: {...acceptButtonProps, isDisabled: false},
+  },
 ]
 ```
 
@@ -109,15 +109,15 @@ Example: "{settings}"
 **Example**
 
 ``` javascript
-import {IMessage, Actions, ToastType} from "@onlyoffice/docspace-plugin-sdk";
+import {Actions, type IMessage, ToastType} from "@onlyoffice/docspace-plugin-sdk"
 
 const message: IMessage = {
-    "actions": [Actions.showToast, Actions.closeModal],
-    "toastProps": [
-        {
-            "type": ToastType.success,
-            "title": toastTitle,
-        },
-    ],
-};
+  actions: [Actions.showToast, Actions.closeModal],
+  toastProps: [
+    {
+      type: ToastType.success,
+      title: toastTitle,
+    },
+  ],
+}
 ```

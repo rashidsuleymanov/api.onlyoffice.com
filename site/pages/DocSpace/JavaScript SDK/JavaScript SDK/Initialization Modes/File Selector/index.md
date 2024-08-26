@@ -13,5 +13,5 @@ Opens the file selector and allows you to select a file from a list of available
 | [initFileSelector](../../Methods/index.md#initfileselector) | Initializes the SDK frame in the "file-selector" mode. |
 
 ``` javascript
-var docSpace = DocSpace.SDK.initFileSelector({config});
+const docSpace = DocSpace.SDK.initFileSelector({config})
 ```

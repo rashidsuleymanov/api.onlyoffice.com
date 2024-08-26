@@ -29,74 +29,74 @@ Copy the code below and save it in the *config.json*, *index.html*, and *code.js
 
 ``` json
 {
-    "name" : "ContextMenu and Events",
-    "guid" : "asc.{B617C899-03AA-476F-8D2C-1B7272489CBC}",
+  "name": "ContextMenu and Events",
+  "guid": "asc.{B617C899-03AA-476F-8D2C-1B7272489CBC}",
 
-    "variations" : [
+  "variations": [
+    {
+      "description": "example context menu and events",
+      "url": "index.html",
+
+      "icons": ["resources/light/icon.png", "resources/light/icon@2x.png"],
+      "icons2": [
         {
-            "description" : "example context menu and events",
-            "url"         : "index.html",
-
-            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
-            "icons2": [
-                {
-                    "style" : "light",
+          "style": "light",
                     
-                    "100%": {
-                        "normal": "resources/light/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/light/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/light/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/light/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/light/icon@2x.png"
-                    }
-                },
-                {
-                    "style" : "dark",
+          "100%": {
+            "normal": "resources/light/icon.png"
+          },
+          "125%": {
+            "normal": "resources/light/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/light/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/light/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/light/icon@2x.png"
+          }
+        },
+        {
+          "style": "dark",
                     
-                    "100%": {
-                        "normal": "resources/dark/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/dark/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/dark/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/dark/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/dark/icon@2x.png"
-                    }
-                }
-            ],
-            "isViewer"        : false,
-            "EditorsSupport"  : ["word"],
-
-            "isVisual"        : false,
-            "isModal"         : false,
-            "isInsideMode"    : false,
-            "isSystem"        : false,
-
-            "initDataType"    : "none",
-            "initData"        : "",
-
-            "buttons"        : [ ],
-
-            "events" : [
-                "onContextMenuShow",
-                "onTargetPositionChanged"
-            ]
+          "100%": {
+            "normal": "resources/dark/icon.png"
+          },
+          "125%": {
+            "normal": "resources/dark/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/dark/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/dark/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/dark/icon@2x.png"
+          }
         }
-    ]
+      ],
+      "isViewer": false,
+      "EditorsSupport": ["word"],
+
+      "isVisual": false,
+      "isModal": false,
+      "isInsideMode": false,
+      "isSystem": false,
+
+      "initDataType": "none",
+      "initData": "",
+
+      "buttons": [],
+
+      "events": [
+        "onContextMenuShow",
+        "onTargetPositionChanged"
+      ]
+    }
+  ]
 }
 ```
 
@@ -119,109 +119,91 @@ Copy the code below and save it in the *config.json*, *index.html*, and *code.js
 ## Plugin code
 
 ``` javascript
-(function(window, undefined){
+console.log("work")
+window.Asc.plugin.init = function init() {}
+window.Asc.plugin.button = function button(id) {
+  this.executeCommand("close", "")
+}
+window.Asc.plugin.event_onContextMenuShow = function event_onContextMenuShow(options) {
+  switch (options.type) {
+  case "Target":
 
-    console.log('work');
-    window.Asc.plugin.init = function()
-    {
-    };
-
-    window.Asc.plugin.button = function(id)
-    {
-        this.executeCommand("close", "");
-    };
-
-    window.Asc.plugin.event_onContextMenuShow = function(options) {
-        switch (options.type)
+    this.executeMethod("AddContextMenuItem", [{
+      guid: this.guid,
+      items: [
         {
-            case "Target":
+          id: "onClickItem1",
+          text: {en: "Item 1", de: "Menü 1"},
+          items: [
             {
-                this.executeMethod("AddContextMenuItem", [{
-                    guid : this.guid,
-                    items : [
-                        {
-                            id : "onClickItem1",
-                            text : { en : "Item 1", de : "Menü 1" },
-                            items : [
-                                {
-                                    id : "onClickItem1Sub1",
-                                    text : { en : "Subitem 1", de : "Untermenü 1" },
-                                    disabled : true
-                                },
-                                {
-                                    id : "onClickItem1Sub2",
-                                    text : { en : "Subitem 2", de : "Untermenü 2" },
-                                    separator: true
-                                }
-                            ]
-                        },
-                        {
-                            id : "onClickItem2",
-                            text : { en : "Item 2", de : "Menü 2" }
-                        }
-                    ]
-                }]);
-                break;
-            }
-            case "Selection":
+              id: "onClickItem1Sub1",
+              text: {en: "Subitem 1", de: "Untermenü 1"},
+              disabled: true,
+            },
             {
-                this.executeMethod("AddContextMenuItem", [{
-                    guid : this.guid,
-                    items : [
-                        {
-                            id : "onClickItem3",
-                            text : { en : "Item 3", de : "Menü 3" }
-                        }
-                    ]
-                }]);
-                break;
-            }
-            case 'Image':
-            case 'Shape':
-            {
-                this.executeMethod("AddContextMenuItem", [{
-                    guid : this.guid,
-                    items : [
-                        {
-                            id : "onClickItem4",
-                            text : { en : "Item 4", de : "Menü 4" }
-                        }
-                    ]
-                }]);
-                break;
-            }
-            default:
-                break;
-        }
-    };
+              id: "onClickItem1Sub2",
+              text: {en: "Subitem 2", de: "Untermenü 2"},
+              separator: true,
+            },
+          ],
+        },
+        {
+          id: "onClickItem2",
+          text: {en: "Item 2", de: "Menü 2"},
+        },
+      ],
+    }])
+    break
 
-    window.Asc.plugin.attachContextMenuClickEvent("onClickItem1Sub1", function(){
-        window.Asc.plugin.executeMethod("InputText", ["clicked: onClickItem1Sub1"]);
-    });
+  case "Selection":
 
-    window.Asc.plugin.attachContextMenuClickEvent("onClickItem1Sub2", function(){
-        window.Asc.plugin.executeMethod("InputText", ["clicked: onClickItem1Sub2"]);
-    });
+    this.executeMethod("AddContextMenuItem", [{
+      guid: this.guid,
+      items: [
+        {
+          id: "onClickItem3",
+          text: {en: "Item 3", de: "Menü 3"},
+        },
+      ],
+    }])
+    break
 
-    window.Asc.plugin.attachContextMenuClickEvent("onClickItem2", function(){
-        window.Asc.plugin.executeMethod("InputText", ["clicked: onClickItem2"]);
-    });
+  case "Image":
+  case "Shape":
 
-    window.Asc.plugin.attachContextMenuClickEvent("onClickItem3", function(){
-        window.Asc.plugin.executeMethod("InputText", ["clicked: onClickItem3"]);
-    });
+    this.executeMethod("AddContextMenuItem", [{
+      guid: this.guid,
+      items: [
+        {
+          id: "onClickItem4",
+          text: {en: "Item 4", de: "Menü 4"},
+        },
+      ],
+    }])
+    break
 
-    window.Asc.plugin.attachContextMenuClickEvent("onClickItem4", function(){
-        console.log("clicked: onClickItem4");
-    });
-
-    window.Asc.plugin.event_onTargetPositionChanged = function()
-    {
-        console.log("event: onTargetPositionChanged");
-
-    };
-
-})(window, undefined);
+  default:
+    break
+  }
+}
+window.Asc.plugin.attachContextMenuClickEvent("onClickItem1Sub1", () => {
+  window.Asc.plugin.executeMethod("InputText", ["clicked: onClickItem1Sub1"])
+})
+window.Asc.plugin.attachContextMenuClickEvent("onClickItem1Sub2", () => {
+  window.Asc.plugin.executeMethod("InputText", ["clicked: onClickItem1Sub2"])
+})
+window.Asc.plugin.attachContextMenuClickEvent("onClickItem2", () => {
+  window.Asc.plugin.executeMethod("InputText", ["clicked: onClickItem2"])
+})
+window.Asc.plugin.attachContextMenuClickEvent("onClickItem3", () => {
+  window.Asc.plugin.executeMethod("InputText", ["clicked: onClickItem3"])
+})
+window.Asc.plugin.attachContextMenuClickEvent("onClickItem4", () => {
+  console.log("clicked: onClickItem4")
+})
+window.Asc.plugin.event_onTargetPositionChanged = function event_onTargetPositionChanged() {
+  console.log("event: onTargetPositionChanged")
+}
 ```
 
 ## Methods and events

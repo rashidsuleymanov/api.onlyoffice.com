@@ -53,22 +53,22 @@ You can create a plugin in any project by adding the *@onlyoffice/docspace-plugi
 
 ``` json
 {
-    "name": "PDF-converter",
-    "version": "1.0.0",
-    "author": "ONLYOFFICE",
-    "scopes": [
-      "API",
-      "Settings",
-      "ContextMenu"
-    ],
-    "description": "Sample description",
-    "pluginName": "PDFConverter",
-    "license": "MIT",
-    "logo": "logo.png",
-    "homepage": "https://github.com/ONLYOFFICE/docspace-plugins/tree/master/pdf-converter",
-    "cspDomains": [
-      "https://embed.diagrams.net/",
-      "https://*.diagrams.net/"
-    ]
+  "name": "PDF-converter",
+  "version": "1.0.0",
+  "author": "ONLYOFFICE",
+  "scopes": [
+    "API",
+    "Settings",
+    "ContextMenu"
+  ],
+  "description": "Sample description",
+  "pluginName": "PDFConverter",
+  "license": "MIT",
+  "logo": "logo.png",
+  "homepage": "https://github.com/ONLYOFFICE/docspace-plugins/tree/master/pdf-converter",
+  "cspDomains": [
+    "https://embed.diagrams.net/",
+    "https://*.diagrams.net/"
+  ]
 }
 ```

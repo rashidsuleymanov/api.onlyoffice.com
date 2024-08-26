@@ -27,19 +27,19 @@ The reference figure and the steps below explain the process of saving a documen
 3. In the configuration script for Document Editor initialization specify the URL to the file with the *Callback handler* in the [parameter line](../../../Usage%20API/Config/Editor/index.md#callbackurl). Be sure to add a [token](../Security/index.md) when using local links. Otherwise, an error will occur.
 
    ``` javascript
-   new DocsAPI.DocEditor("placeholder", {
-       "document": {
-           "fileType": "docx",
-           "key": "Khirz6zTPdfd7",
-           "title": "Example Document Title.docx",
-           "url": "https://example.com/url-to-example-document.docx"
-       },
-       "documentType": "word",
-       "editorConfig": {
-           "callbackUrl": "https://example.com/url-to-callback.ashx"
-       },
-       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU"
-   });
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
+     document: {
+       fileType: "docx",
+       key: "Khirz6zTPdfd7",
+       title: "Example Document Title.docx",
+       url: "https://example.com/url-to-example-document.docx",
+     },
+     documentType: "word",
+     editorConfig: {
+       callbackUrl: "https://example.com/url-to-callback.ashx",
+     },
+     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
+   })
    ```
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
 4. Open your *html* file in the browser and edit your document.
@@ -69,13 +69,13 @@ If you want to change it, you can use the *local.json* file, where all the edite
 
 ``` json
 {
-    "services": {
-        "CoAuthoring": {
-            "server": {
-                "savetimeoutdelay": 5000
-            }
-        }
+  "services": {
+    "CoAuthoring": {
+      "server": {
+        "savetimeoutdelay": 5000
+      }
     }
+  }
 }
 ```
 
@@ -104,14 +104,14 @@ If you want to change it, you can use the *local.json* file, where all the edite
 
   ``` json
   {
-      "services": {
-          "CoAuthoring": {
-              "autoAssembly": {
-                  "enable": true,
-                  "interval": "5m"
-              }
-          }
+    "services": {
+      "CoAuthoring": {
+        "autoAssembly": {
+          "enable": true,
+          "interval": "5m"
+        }
       }
+    }
   }
   ```
 
@@ -133,13 +133,13 @@ Starting from version 7.0, the [assemblyFormatAsOrigin](https://helpcenter.onlyo
 
 ``` json
 {
-    "services": {
-        "CoAuthoring": {
-            "server": {
-                "assemblyFormatAsOrigin": true
-            }
-        }
+  "services": {
+    "CoAuthoring": {
+      "server": {
+        "assemblyFormatAsOrigin": true
+      }
     }
+  }
 }
 ```
 

@@ -108,45 +108,45 @@ Get all the API parameters of the DocSpace portal in one request. Returns an obj
 **Example**
 
 ``` javascript
-import {IApiPlugin} from "@onlyoffice/docspace-plugin-sdk";
+import {type IApiPlugin} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements IApiPlugin {
-    origin = "";
-    proxy = "";
-    prefix = "";
+  origin = ""
+  proxy = ""
+  prefix = ""
 
-    setOrigin = (origin: string): void => {
-        this.origin = origin;
-    };
+  setOrigin = (origin: string): void => {
+    this.origin = origin
+  }
 
-    getOrigin = (): string => {
-        return this.origin;
-    };
+  getOrigin = (): string => {
+    return this.origin
+  }
 
-    setProxy = (proxy: string): void => {
-        this.proxy = proxy;
-    };
+  setProxy = (proxy: string): void => {
+    this.proxy = proxy
+  }
 
-    getProxy = (): string => {
-        return this.proxy;
-    };
+  getProxy = (): string => {
+    return this.proxy
+  }
 
-    setPrefix = (prefix: string): void => {
-        this.prefix = prefix;
-    };
+  setPrefix = (prefix: string): void => {
+    this.prefix = prefix
+  }
 
-    getPrefix = (): string => {
-        return this.prefix;
-    };
+  getPrefix = (): string => {
+    return this.prefix
+  }
 
-    setAPI = (origin: string, proxy: string, prefix: string): void => {
-        this.origin = origin;
-        this.proxy = proxy;
-        this.prefix = prefix;
-    };
+  setAPI = (origin: string, proxy: string, prefix: string): void => {
+    this.origin = origin
+    this.proxy = proxy
+    this.prefix = prefix
+  }
 
-    getAPI = (): {origin: string, proxy: string, prefix: string} => {
-        return {origin: this.origin, proxy: this.proxy, prefix: this.prefix};
-    };
+  getAPI = (): {origin: string; proxy: string; prefix: string} => {
+    return {origin: this.origin, proxy: this.proxy, prefix: this.prefix}
+  }
 }
 ```
