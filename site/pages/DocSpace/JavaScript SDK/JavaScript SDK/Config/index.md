@@ -2,7 +2,6 @@
 order: -3
 ---
 
-
 The configuration parameters describe the behavior and display options of the DocSpace elements.
 
 - [buttonColor](#buttoncolor)
@@ -50,7 +49,6 @@ The configuration parameters describe the behavior and display options of the Do
 - [withSearch](#withsearch)
 - [withSubtitle](#withsubtitle)
 
-
 ## buttonColor
 
 The selector button color.
@@ -58,7 +56,6 @@ The selector button color.
 Type: string
 
 Example: "#5299E0"
-
 
 ## checkCSP
 
@@ -68,7 +65,6 @@ Type: boolean
 
 Example: true
 
-
 ## destroyText
 
 The text that will be inserted into the *div* tag when the [destroyFrame](../Methods/index.md#destroyframe) method is called.
@@ -76,7 +72,6 @@ The text that will be inserted into the *div* tag when the [destroyFrame](../Met
 Type: string
 
 Example: ""
-
 
 ## disableActionButton
 
@@ -86,7 +81,6 @@ Type: boolean
 
 Example: false
 
-
 ## downloadToEvent
 
 Specifies whether to switch the SDK to the mode of working with download links through the [onDownload](../Events/index.md#ondownload) event.
@@ -94,7 +88,6 @@ Specifies whether to switch the SDK to the mode of working with download links t
 Type: boolean
 
 Example: false
-
 
 ## editorCustomization
 
@@ -104,7 +97,6 @@ Type: object
 
 Example: {}
 
-
 ## editorGoBack
 
 Specifies whether the **File Location** button is displayed in the editor.
@@ -113,7 +105,6 @@ Type: boolean
 
 Example: true
 
-
 ## editorType
 
 The editor mode display type ("embedded", "desktop").
@@ -121,7 +112,6 @@ The editor mode display type ("embedded", "desktop").
 Type: string
 
 Example: "desktop"
-
 
 ## events
 
@@ -144,7 +134,6 @@ const events = {
 }
 ```
 
-
 ## filter
 
 The filter parameters that facilitate searching files in the DocSpace manager.
@@ -164,7 +153,6 @@ const filter = {
 }
 ```
 
-
 ### filter.count
 
 A number of files to be displayed.
@@ -172,7 +160,6 @@ A number of files to be displayed.
 Type: integer
 
 Example: 100
-
 
 ### filter.page
 
@@ -182,7 +169,6 @@ Type: integer
 
 Example: 1
 
-
 ### filter.search
 
 A query to search for files.
@@ -190,7 +176,6 @@ A query to search for files.
 Type: string
 
 Example: ""
-
 
 ### filter.sortorder
 
@@ -200,7 +185,6 @@ Type: string
 
 Example: "descending"
 
-
 ### filter.sortby
 
 The parameter by which the files will be sorted ("DateAndTime", "AZ", "Type", "Size", "DateAndTimeCreation", "Author").
@@ -208,7 +192,6 @@ The parameter by which the files will be sorted ("DateAndTime", "AZ", "Type", "S
 Type: string
 
 Example: "DateAndTime"
-
 
 ### filter.withSubfolders
 
@@ -218,7 +201,6 @@ Type: boolean
 
 Example: false
 
-
 ## filterParam
 
 The filter parameters that facilitate searching files in the selector mode. The possible values: *"ALL", "DOCX", "IMG", "GZ", "DOCXF", "XLSX", "BackupOnly"*.
@@ -226,7 +208,6 @@ The filter parameters that facilitate searching files in the selector mode. The 
 Type: string
 
 Example: "ALL"
-
 
 ## frameId
 
@@ -236,7 +217,6 @@ Type: string
 
 Example: "ds-frame"
 
-
 ## height
 
 The frame SDK height measured in percent.
@@ -244,7 +224,6 @@ The frame SDK height measured in percent.
 Type: string
 
 Example: "100%"
-
 
 ## id
 
@@ -254,7 +233,6 @@ Type: string
 
 Example: null
 
-
 ## infoPanelVisible
 
 Specifies whether to display a button to show the info panel in the manager.
@@ -262,7 +240,6 @@ Specifies whether to display a button to show the info panel in the manager.
 Type: boolean
 
 Example: true
-
 
 ## locale
 
@@ -272,7 +249,6 @@ Type: string
 
 Example: null
 
-
 ## mode
 
 The SDK [initialization mode](../Initialization%20Modes/index.md) ("manager", "file-selector", "room-selector", "editor", "viewer", "system").
@@ -280,7 +256,6 @@ The SDK [initialization mode](../Initialization%20Modes/index.md) ("manager", "f
 Type: string
 
 Example: "manager"
-
 
 ## name
 
@@ -290,7 +265,6 @@ Type: string
 
 Example: "frameDocSpace"
 
-
 ## requestToken
 
 The request token that is used to open public rooms and files in public rooms.
@@ -298,7 +272,6 @@ The request token that is used to open public rooms and files in public rooms.
 Type: string
 
 Example: null
-
 
 ## rootPath
 
@@ -308,7 +281,6 @@ Type: string
 
 Example: "/rooms/shared/"
 
-
 ## selectorType
 
 The selector type that defines filters for elements in the selector mode. The possible values: *"roomsOnly", "userFolderOnly", "exceptPrivacyTrashArchiveFolders", "exceptSortedByTagsFolders"*.
@@ -316,7 +288,6 @@ The selector type that defines filters for elements in the selector mode. The po
 Type: string
 
 Example: "roomsOnly"
-
 
 ## showFilter
 
@@ -326,7 +297,6 @@ Type: boolean
 
 Example: false
 
-
 ## showHeader
 
 Specifies whether the interface header is displayed in the mobile view manager.
@@ -334,7 +304,6 @@ Specifies whether the interface header is displayed in the mobile view manager.
 Type: boolean
 
 Example: false
-
 
 ## showMenu
 
@@ -344,7 +313,6 @@ Type: boolean
 
 Example: false
 
-
 ## showSelectorCancel
 
 Specifies whether the **Cancel** button is displayed in the selector mode.
@@ -352,7 +320,6 @@ Specifies whether the **Cancel** button is displayed in the selector mode.
 Type: boolean
 
 Example: false
-
 
 ## showSelectorHeader
 
@@ -362,7 +329,6 @@ Type: boolean
 
 Example: false
 
-
 ## showSettings
 
 Specifies whether to display the **Manage displayed columns** button for configuring the table columns in the manager.
@@ -370,7 +336,6 @@ Specifies whether to display the **Manage displayed columns** button for configu
 Type: boolean
 
 Example: false
-
 
 ## showSignOut
 
@@ -380,7 +345,6 @@ Type: boolean
 
 Example: true
 
-
 ## showTitle
 
 Specifies whether the interface title is displayed in the DocSpace manager.
@@ -388,7 +352,6 @@ Specifies whether the interface title is displayed in the DocSpace manager.
 Type: boolean
 
 Example: true
-
 
 ## src
 
@@ -398,7 +361,6 @@ Type: string
 
 Example: {PORTAL\_SRC}
 
-
 ## theme
 
 The DocSpace user interface theme ("Base", "Dark", "System").
@@ -406,7 +368,6 @@ The DocSpace user interface theme ("Base", "Dark", "System").
 Type: string
 
 Example: "Base"
-
 
 ## type
 
@@ -416,7 +377,6 @@ Type: string
 
 Example: "desktop"
 
-
 ## viewAs
 
 The way elements are arranged in the DocSpace manager ("row", "table", "tile").
@@ -424,7 +384,6 @@ The way elements are arranged in the DocSpace manager ("row", "table", "tile").
 Type: string
 
 Example: "row"
-
 
 ## viewTableColumns
 
@@ -434,7 +393,6 @@ Type: string
 
 Example: "Name,Type,Tags"
 
-
 ## width
 
 The frame SDK width measured in percent.
@@ -442,7 +400,6 @@ The frame SDK width measured in percent.
 Type: string
 
 Example: "100%"
-
 
 ## withBreadCrumbs
 
@@ -452,7 +409,6 @@ Type: boolean
 
 Example: true
 
-
 ## withSearch
 
 Specifies whether to display **Search** in the selector mode.
@@ -461,7 +417,6 @@ Type: boolean
 
 Example: true
 
-
 ## withSubtitle
 
 Specifies whether to display the filter parameters in the selector mode.
@@ -469,7 +424,6 @@ Specifies whether to display the filter parameters in the selector mode.
 Type: boolean
 
 Example: true
-
 
 **Example**
 

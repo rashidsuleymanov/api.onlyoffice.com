@@ -12,7 +12,6 @@ Type: string
 
 Example: "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"
 
-
 ## filter
 
 Defines the document types that can be encrypted.
@@ -23,10 +22,9 @@ Type: string
 
 Example: "\*.docx \*.xlsx \*.pptx"
 
+**Example**
 
-### Example
-
-``` javascript
+``` js
 window.AscDesktopEditor.cloudCryptoCommand("upload", {
   cryptoEngineId: "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}",
   filter: "*.docx *.xlsx *.pptx",
@@ -35,7 +33,7 @@ window.AscDesktopEditor.cloudCryptoCommand("upload", {
 
 After the user chooses the files, they will be encrypted in a loop and transferred to *callback*:
 
-``` javascript
+``` js
 callback({
   bytes: [],
   name: "Example Document Title.docx",
@@ -55,7 +53,6 @@ Type: string
 
 Example: "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"
 
-
 ## file
 
 Defines the absolute url to the document.
@@ -63,7 +60,6 @@ Defines the absolute url to the document.
 Type: string
 
 Example: `https://example.com/url-to-example-document.docx`
-
 
 ## keys
 
@@ -73,6 +69,7 @@ Type: array
 
 Example: \[{"userId":"78e1e841","publicKey":"yyy"}, ...]
 
+**Example**
 
 ### Example
 
@@ -89,7 +86,7 @@ window.AscDesktopEditor.cloudCryptoCommand("share", {
 
 The file is uploaded by the desktop app and encrypted. The access rights to the file are transferred to it with keys. After that, it is transmitted to *callback*:
 
-``` javascript
+``` js
 callback({
   bytes: [],
   isCrypto: true,

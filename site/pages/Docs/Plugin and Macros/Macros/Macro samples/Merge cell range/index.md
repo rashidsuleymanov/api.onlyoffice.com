@@ -12,7 +12,7 @@ Merges the selected cell range.
 (function()
 {
     Api.GetActiveSheet().GetRange("A1:B3").Merge(true);
-})();
+}();
 ```
 
 Methods used: GetActiveSheet, GetRange, Merge

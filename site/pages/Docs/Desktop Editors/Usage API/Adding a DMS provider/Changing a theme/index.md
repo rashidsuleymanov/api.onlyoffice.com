@@ -12,8 +12,8 @@ window.AscDesktopEditor.execCommand("portal:uitheme", editorTheme)
 
 Defines the editor theme settings. It can be set in two ways:
 
-* **theme id** - the user sets the theme parameter by its id (**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**);
-* **default theme** - the default dark or light theme value will be set (**default-dark**, **default-light**). The default light theme is **theme-classic-light**.
+- **theme id** - the user sets the theme parameter by its id (**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**);
+- **default theme** - the default dark or light theme value will be set (**default-dark**, **default-light**). The default light theme is **theme-classic-light**.
 
 The first option has higher priority.
 
@@ -25,7 +25,7 @@ Example: "theme-dark"
 
 ### Example
 
-``` javascript
+``` js
 window.AscDesktopEditor.execCommand("portal:uitheme", "theme-dark")
 ```
 

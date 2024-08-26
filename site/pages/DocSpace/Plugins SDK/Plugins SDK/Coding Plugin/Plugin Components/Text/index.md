@@ -16,6 +16,7 @@ Type: string
 
 Example: "Sample for text component"
 
+**Example**
 
 ### Example
 

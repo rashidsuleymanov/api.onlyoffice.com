@@ -1,17 +1,30 @@
 The editorConfig section allows to change the parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.).
 
-* [actionLink](#actionlink)
-* [callbackUrl](#callbackurl)
-* [coEditing](#coediting)
-* [createUrl](#createurl)
-* [lang](#lang)
-* [location](#location)
-* [mode](#mode)
-* [recent](#recent)
-* [region](#region)
-* [templates](#templates)
-* [user](#user)
-
+- [actionLink](#actionlink)
+- [callbackUrl](#callbackurl)
+- [coEditing](#coediting)
+  - [coEditing.mode](#coeditingmode)
+  - [coEditing.change](#coeditingchange)
+- [createUrl](#createurl)
+- [lang](#lang)
+- [location](#location)
+- [mode](#mode)
+- [recent](#recent)
+  - [recent.folder](#recentfolder)
+  - [recent.title](#recenttitle)
+  - [recent.url](#recenturl)
+- [region](#region)
+- [templates](#templates)
+  - [templates.image](#templatesimage)
+  - [templates.title](#templatestitle)
+  - [templates.url](#templatesurl)
+- [user](#user)
+  - [user.firstname](#userfirstname)
+  - [user.group](#usergroup)
+  - [user.id](#userid)
+  - [user.image](#userimage)
+  - [user.lastname](#userlastname)
+  - [user.name](#username)
 
 ## actionLink
 
@@ -20,7 +33,6 @@ Specifies the data received from the **document editing service** using the [onM
 Type: object
 
 Example: ACTION\_DATA
-
 
 ## callbackUrl
 
@@ -31,7 +43,6 @@ Specifies absolute URL to the **document storage service** (which [must be imple
 Type: string
 
 Example: `https://example.com/url-to-callback.ashx`
-
 
 ## coEditing
 
@@ -60,7 +71,6 @@ Example: "fast"
 
 > Please note that in case *mode* setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.coEditing.mode* parameter.
 
-
 ### coEditing.change
 
 Defines if the co-editing mode can be changed in the editor interface or not. The default value is **true**.
@@ -70,7 +80,6 @@ Type: boolean
 Example: true
 
 ![Coediting mode](/assets/images/editor/coediting-mode.png)
-
 
 ## createUrl
 
@@ -82,7 +91,6 @@ Example: `https://example.com/url-to-create-document/`
 
 ![Create URL](/assets/images/editor/create.png)
 
-
 ## lang
 
 Defines the editor interface language (if some other languages other than English are present). Is set using the two letter (**de**, **ru**, **it**, etc.) language codes. The default value is **"en"**.
@@ -92,7 +100,6 @@ Type: string
 Example: "en"
 
 > Please note that to translate the editor interface into Portuguese (Portugal) or Chinese (Traditional, Taiwan) (these languages were added in version 7.2), you need to use the four letter language codes - **pt-PT** or **zh-TW**, respectively. The two letter **pt** language code sets Portuguese (Brazil) and the **zh** code specifies Chinese (People's Republic of China).
-
 
 ## location
 
@@ -104,7 +111,6 @@ Example: ""
 
 > Please note that when **us** or **ca** values are set, the default measurement units are inches.
 
-
 ## mode
 
 Defines the editor opening mode. Can be either **view** to open the document for viewing, or **edit** to open the document in the editing mode allowing to apply changes to the document data. The default value is **"edit"**.
@@ -112,7 +118,6 @@ Defines the editor opening mode. Can be either **view** to open the document for
 Type: string
 
 Example: "edit"
-
 
 ## recent
 
@@ -140,7 +145,6 @@ Type: string
 
 Example: "Example Files"
 
-
 ### recent.title
 
 The document title that will be displayed in the **Open Recent...** menu option.
@@ -148,7 +152,6 @@ The document title that will be displayed in the **Open Recent...** menu option.
 Type: string
 
 Example: "exampledocument1.docx"
-
 
 ### recent.url
 
@@ -158,9 +161,7 @@ Type: string
 
 Example: `https://example.com/exampledocument1.docx`
 
-
 ![Recent documents](/assets/images/editor/recent.png) 
-
 
 ## region
 
@@ -169,7 +170,6 @@ Defines the default display format for currency and date and time (in the **Spre
 Type: string
 
 Example: "en-US"
-
 
 ## templates
 
@@ -197,7 +197,6 @@ Type: string
 
 Example: `https://example.com/exampletemplate1.png`
 
-
 ### templates.title
 
 The template title that will be displayed in the **Create New\...** menu option.
@@ -205,7 +204,6 @@ The template title that will be displayed in the **Create New\...** menu option.
 Type: string
 
 Example: "exampletemplate1.docx"
-
 
 ### templates.url
 
@@ -215,9 +213,7 @@ Type: string
 
 Example: `https://example.com/url-to-create-template1`
 
-
 ![Templates](/assets/images/editor/templates.png)
-
 
 ## user
 
@@ -240,7 +236,6 @@ Type: object
 
 > Please note that if you are subscribed to the [onRequestUsers](../Events/index.md#onrequestusers) event and send an avatar using the [setUsers](../../Methods/index.md#setusers) method, the *user.image* field in the initialization config is not required. We especially don't recommend to specify this parameter if the avatar is sent in the base64 format and the initialization config is signed with JWT. In this case, the token will be too long.
 
-
 ### user.firstname
 
 The first name of the user. Deprecated since version 4.2, please use *name* instead.
@@ -248,7 +243,6 @@ The first name of the user. Deprecated since version 4.2, please use *name* inst
 Type: string
 
 Example: "John"
-
 
 ### user.group
 
@@ -258,7 +252,6 @@ Type: string
 
 Example: "Group1,Group2"
 
-
 ### user.id
 
 The identification of the user. The length is limited to 128 symbols. This information is stored and used to distinguish co-authors, indicate the [author](../../Callback%20handler/index.md#users) of the last changes when saving and highlighting history (in the list of [changes](../../Callback%20handler/index.md#changeshistory)), and count users with access for a license based on the number of users. We recommend using some unique anonymized hash. Do not use sensitive data, like name or email for this field.
@@ -266,7 +259,6 @@ The identification of the user. The length is limited to 128 symbols. This infor
 Type: string
 
 Example: "78e1e841"
-
 
 ### user.image
 
@@ -276,7 +268,6 @@ Type: string
 
 Example: `https://example.com/url-to-user-avatar.png`
 
-
 ### user.lastname
 
 The last name of the user. Deprecated since version 4.2, please use *name* instead.
@@ -284,7 +275,6 @@ The last name of the user. Deprecated since version 4.2, please use *name* inste
 Type: string
 
 Example: "Smith"
-
 
 ### user.name
 
@@ -294,6 +284,7 @@ Type: string
 
 Example: "John Smith"
 
+**Example**
 
 ### Example
 

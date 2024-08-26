@@ -4,7 +4,6 @@ order: -5
 
 Describes an item that will be embedded in the file info panel as a separate tab.
 
-
 ## key
 
 Defines the unique item identifier used by the service to recognize the item.
@@ -12,7 +11,6 @@ Defines the unique item identifier used by the service to recognize the item.
 Type: string
 
 Example: "test-info-panel"
-
 
 ## submenu
 
@@ -29,7 +27,6 @@ const item = {
 }
 ```
 
-
 ### submenu.name
 
 The tab display name.
@@ -37,7 +34,6 @@ The tab display name.
 Type: string
 
 Example: "Test"
-
 
 ### submenu.onClick
 
@@ -47,7 +43,6 @@ Type: func
 
 Example: `() => {}`
 
-
 ## body
 
 Defines the tab UI of the info panel.
@@ -55,7 +50,6 @@ Defines the tab UI of the info panel.
 Type: [IBox](../../Plugin%20Components/Box/index.md)
 
 Example: parentBox
-
 
 ## onLoad
 
@@ -65,15 +59,13 @@ Type: func
 
 Example: `() => {}`
 
-
 ## fileExt
 
 Defines the extensions of files where the current item will be displayed in the context menu. It only works if the *FilesType.Files* is specified in the *fileType* parameter. If this parameter is not specified, then the current context menu item will be displayed in any file extension.
 
 Type: array of [FilesExst](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Files.ts) / string
 
-Example: [FilesExst.docx, FilesExst.xlsx]
-
+Example: \[FilesExst.docx, FilesExst.xlsx]
 
 ## fileType
 
@@ -81,8 +73,7 @@ Defines the types of files where the current item will be displayed in the conte
 
 Type: array of [FilesType](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Files.ts)
 
-Example: [FilesType.room, FilesType.file]
-
+Example: \[FilesType.room, FilesType.file]
 
 ## usersType
 
@@ -90,8 +81,7 @@ Defines the types of users who will see the current item in the context menu. Cu
 
 Type: array of [UsersType](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/UsersType.ts)
 
-Example: [UsersType.owner, UsersType.docSpaceAdmin, UsersType.roomAdmin]
-
+Example: \[UsersType.owner, UsersType.docSpaceAdmin, UsersType.roomAdmin]
 
 ## devices
 
@@ -100,7 +90,6 @@ Defines the types of devices where the current item will be displayed in the con
 Type: array of [Devices](https://github.com/ONLYOFFICE/docspace-plugin-sdk/blob/master/src/enums/Devices.ts)
 
 Example: \[Devices.desktop]
-
 
 **Example**
 

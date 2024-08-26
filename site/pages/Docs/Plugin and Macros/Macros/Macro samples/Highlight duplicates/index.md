@@ -2,7 +2,6 @@
 order: -10
 ---
 
-
 ## Description
 
 Highlights duplicates in the selected area with different colors to recognize duplicated values quickly.

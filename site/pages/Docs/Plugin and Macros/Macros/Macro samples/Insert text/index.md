@@ -2,7 +2,6 @@
 order: -8
 ---
 
-
 ## Description
 
 Inserts text into the document at the current cursor position.

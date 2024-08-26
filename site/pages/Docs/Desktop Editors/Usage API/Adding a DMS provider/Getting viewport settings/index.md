@@ -25,7 +25,6 @@ Type: string
 
 Example: "window"
 
-
 ## captionHeight
 
 The caption height.

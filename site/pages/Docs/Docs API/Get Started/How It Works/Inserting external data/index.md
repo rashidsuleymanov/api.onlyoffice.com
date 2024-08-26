@@ -34,9 +34,9 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
 3. When the user copies the data from the source spreadsheet, the clipboard receives a list of the following values:
 
-   * the sheet name and the range from where the data was copied which will be used later to refresh the copied data;
-   * the [document.referenceData](../../../Usage%20API/Config/Document/index.md#referencedata) object which will be used to check the availability of insering data into the destination spreadsheet by the external link;
-   * the file name which will be used to display a formula in the editor.
+   - the sheet name and the range from where the data was copied which will be used later to refresh the copied data;
+   - the [document.referenceData](../../../Usage%20API/Config/Document/index.md#referencedata) object which will be used to check the availability of insering data into the destination spreadsheet by the external link;
+   - the file name which will be used to display a formula in the editor.
 
 4. Create a destination spreadsheet where the external data will be inserted.
 
@@ -56,7 +56,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
 7. When the user clicks the *Paste link* button, the formula is inserted into the current cell, and the *referenceData* object is saved to the destination file. The inserted formula is displayed as follows:
 
-   ```
+   ``` js
    ='[fileName]sheetName'!cell
    ```
 
@@ -88,7 +88,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
    > Please note that this method is executed only when the user has permissions to the source file.
 
-   ``` javascript
+   ``` js
    docEditor.setReferenceData({
      fileType: "xlsx",
      path: "sample.xlsx",
@@ -146,7 +146,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
    
    <img alt="Change source" src="/assets/images/editor/change-source.png" width="498px">
 
-   ### Example
+   **Example**
 
    ``` javascript
    function onRequestReferenceSource() {

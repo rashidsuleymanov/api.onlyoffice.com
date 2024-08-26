@@ -8,7 +8,7 @@ If you need to pass some arguments to the created document using the command lin
 
 In this case the command will look like this:
 
-```bash
+```sh
 docbuilder.exe "--argument={\"company\":\"ONLYOFFICE\",\"product\":\"ONLYOFFICE Document Builder\",\"compatibility\":\"100%\"}" "path-to-file\sample_with_arguments.docbuilder"
 ```
 

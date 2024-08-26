@@ -46,6 +46,6 @@ Imports data from remote CSV/TXT files into the spreadsheet.
 
 Methods used: GetActiveSheet, GetCells, SetValue
 
-##  Result
+## Result
 
 ![Import CSV/text data](/assets/images/plugins/import-csv-macro.png)

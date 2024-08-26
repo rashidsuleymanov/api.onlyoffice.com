@@ -6,7 +6,7 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 ![Checkbox](/assets/images/docspace/checkbox.png)
 
-### Example
+**Example**
 
 ``` javascript
 import {Actions, type ICheckbox, type IMessage} from "@onlyoffice/docspace-plugin-sdk"

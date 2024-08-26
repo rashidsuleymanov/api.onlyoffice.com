@@ -23,7 +23,9 @@ The reference figure and the steps below explain the process of saving a documen
 ## How this can be done in practice
 
 1. Create a [callback handler](../../../Usage%20API/Callback%20handler/index.md) to save the document from **document editing service**.
+
 2. Create an *html* file to [Open the document](../Opening%20file/index.md#how-this-can-be-done-in-practice).
+
 3. In the configuration script for Document Editor initialization specify the URL to the file with the *Callback handler* in the [parameter line](../../../Usage%20API/Config/Editor/index.md#callbackurl). Be sure to add a [token](../Security/index.md) when using local links. Otherwise, an error will occur.
 
    ``` javascript
@@ -42,7 +44,9 @@ The reference figure and the steps below explain the process of saving a documen
    })
    ```
    Where **example.com** is the name of the server where **document manager** and **document storage service** are installed.
+
 4. Open your *html* file in the browser and edit your document.
+
 5. Close the **Document Editor**. Check out your document in about 10 seconds. All changes should be saved, meaning the configuration is correct.
 
 ## Save delay
@@ -59,13 +63,13 @@ If you want to change it, you can use the *local.json* file, where all the edite
 
 > Please do not edit the contents of the *default.json* file directly. The default values will be restored each time you restart Docker container or upgrade **ONLYOFFICE Docs** to a new version and all your changes will be lost.
 
-### Parameters
+**Parameters**
 
 | Parameter                                    | Description                                                                                         | Type    | Example |
 | -------------------------------------------- | --------------------------------------------------------------------------------------------------- | ------- | ------- |
 | services.CoAuthoring.server.savetimeoutdelay | Defines the conversion start delay time (measured in milliseconds) after the edited file is closed. | integer | 5000    |
 
-### Sample local.json configuration
+**Sample local.json configuration**
 
 ``` json
 {
@@ -83,24 +87,24 @@ If you want to change it, you can use the *local.json* file, where all the edite
 
 **Document editing service** allows to get the current document state before the editing is finished. The process is called *forcesave* in ONLYOFFICE Docs. When forcesave is initiated, **document editing service** performs request to the [callback handler](../../../Usage%20API/Callback%20handler/index.md) with the link to the document as the *url* parameter and with the **6** value for the *status* parameter. The forcesave process can be initiated the following ways:
 
-* By the request to the [document command service](../../../Additional%20API/Command%20service/index.md) with the [forcesave](../../../Additional%20API/Command%20service/forcesave/index.md) value in the *c* parameter. The *forcesavetype* parameter will have the **0** value when sending the request to the **callback handler**.
+- By the request to the [document command service](../../../Additional%20API/Command%20service/index.md) with the [forcesave](../../../Additional%20API/Command%20service/forcesave/index.md) value in the *c* parameter. The *forcesavetype* parameter will have the **0** value when sending the request to the **callback handler**.
 
-* Enable the [editorConfig.customization.forcesave](../../../Usage%20API/Config/Editor/Customization/index.md#forcesave) mode setting it to **true** in the editor initialization configuration. In this case each time the user clicks the **Save** button, the forcesave will be done, and the *forcesavetype* parameter will have the **1** value when sending the request to the **callback handler**.
+- Enable the [editorConfig.customization.forcesave](../../../Usage%20API/Config/Editor/Customization/index.md#forcesave) mode setting it to **true** in the editor initialization configuration. In this case each time the user clicks the **Save** button, the forcesave will be done, and the *forcesavetype* parameter will have the **1** value when sending the request to the **callback handler**.
 
-* You can enable [the repeating forcesave start](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#AutoAssembly) in the **ONLYOFFICE Docs** additional configuration file, which can be either found at (in case you have already created it) or placed to the following path:
+- You can enable [the repeating forcesave start](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#AutoAssembly) in the **ONLYOFFICE Docs** additional configuration file, which can be either found at (in case you have already created it) or placed to the following path:
 
   For Linux - */etc/onlyoffice/documentserver/**local.json***.
 
   For Windows - *%ProgramFiles%\ONLYOFFICE\DocumentServer\config\\**local.json***.
 
-  ### Parameters
+  **Parameters**
 
   | Parameter                                  | Description                                                                             | Type    | Example |
   | ------------------------------------------ | --------------------------------------------------------------------------------------- | ------- | ------- |
   | services.CoAuthoring.autoAssembly.enable   | Defines if the automatic forcesaving is enabled or not. The default value is **false**. | boolean | false   |
   | services.CoAuthoring.autoAssembly.interval | Defines the interval time in minutes for initiating the automatic forcesaving.          | string  | 5m      |
 
-  ### Sample local.json configuration
+  **Sample local.json configuration**
 
   ``` json
   {
@@ -123,13 +127,13 @@ If you want to change it, you can use the *local.json* file, where all the edite
 
 Starting from version 7.0, the [assemblyFormatAsOrigin](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-assemblyFormatAsOrigin) server setting is enabled by default to save the assembled file in its original format. It is used to change the file format from OOXML to ODF or to save files with macros.
 
-### Parameters
+**Parameters**
 
 | Parameter                                          | Description                                                                                          | Type    | Example |
 | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------- | ------- |
 | services.CoAuthoring.server.assemblyFormatAsOrigin | Defines if the assembled file is saved in its original format or not. The default value is **true**. | boolean | true    |
 
-### Sample local.json configuration
+**Sample local.json configuration**
 
 ``` json
 {

@@ -75,9 +75,9 @@ const config = {
 
 In the following cases, only the common viewer is used:
 
-* in the [embedded mode](../../../Usage%20API/Config/Editor/Embedded/index.md);
-* for [WOPI](../../../Using%20WOPI/Overview/index.md);
-* when opening the *pdf/djvu/xps* formats.
+- in the [embedded mode](../../../Usage%20API/Config/Editor/Embedded/index.md);
+- for [WOPI](../../../Using%20WOPI/Overview/index.md);
+- when opening the *pdf/djvu/xps* formats.
 
 > Please note that the server connections for the live viewer are counted separately from the total number of simultaneous connections and limited with the [connections\_view](../../../Additional%20API/Command%20service/license/index.md#license) parameter in the license. For the open source version, this limit is 20. The live viewer is not available for the older licenses.
 

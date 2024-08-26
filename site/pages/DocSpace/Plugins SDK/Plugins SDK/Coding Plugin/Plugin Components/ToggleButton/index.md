@@ -6,7 +6,7 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 ![Toggle button](/assets/images/docspace/toggle-button.png)
 
-### Example
+**Example**
 
 ``` javascript
 import {Actions, type IMessage, type IToggleButton} from "@onlyoffice/docspace-plugin-sdk"

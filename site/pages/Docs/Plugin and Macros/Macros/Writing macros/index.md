@@ -20,13 +20,13 @@ Now that you know how macros work, try to write your own macro. We have a table 
 
 4. Let's consult the [Office API documentation](../../../Office%20API/Office%20API/Spreadsheet%20API/index.md) to see what we need to complete our task:
 
-   * First, get the current worksheet using the GetActiveSheet method:
+   - First, get the current worksheet using the GetActiveSheet method:
 
      ``` javascript
      const oWorksheet = Api.GetActiveSheet()
      ```
 
-   * Then create a loop to run from the first to the last row:
+   - Then create a loop to run from the first to the last row:
 
      ``` javascript
      for (let i = 1; i < 200; i += 2) {
@@ -34,14 +34,14 @@ Now that you know how macros work, try to write your own macro. We have a table 
      }
      ```
 
-   * Set two variables: one for odd rows, the second for even rows:
+   - Set two variables: one for odd rows, the second for even rows:
 
      ``` javascript
      const rowOdd = i
      const rowEven = i + 1
      ```
 
-   * Now that we can access both the odd and even rows, let's color them in proper colors. Set the desired colors using the CreateColorFromRGB method. Get the cell range within the row using the GetRange method and set the color for the odd rows:
+   - Now that we can access both the odd and even rows, let's color them in proper colors. Set the desired colors using the CreateColorFromRGB method. Get the cell range within the row using the GetRange method and set the color for the odd rows:
 
      ``` javascript
      oWorksheet.GetRange(`A${rowOdd}:S${rowOdd}`).SetFillColor(Api.CreateColorFromRGB(138, 181, 155))

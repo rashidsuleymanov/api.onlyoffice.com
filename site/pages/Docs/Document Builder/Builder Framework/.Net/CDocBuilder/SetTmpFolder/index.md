@@ -1,8 +1,8 @@
-#### void SetTmpFolder(sFolder);
+`void SetTmpFolder(sFolder);`
 
 Sets the path to the folder where the program will temporarily save files needed for the program correct work. After the successful document file creation, all the files will be deleted from the folder. If no temporary folder is set, the system one will be used.
 
-## Parameters:
+## Parameters
 
 | Name      | Type    | Description                                                     |
 | --------- | ------- | --------------------------------------------------------------- |
@@ -10,9 +10,9 @@ Sets the path to the folder where the program will temporarily save files needed
 
 ## Example
 
-#### .Net
+**.Net**
 
-```c#
+```cpp
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -20,7 +20,7 @@ oBuilder.SetTmpFolder(L"DocBuilderTemp");
 CDocBuilder.Destroy();
 ```
 
-#### .docbuilder
+**.docbuilder**
 
 ```js
 builder.SetTmpFolder("DocBuilderTemp")

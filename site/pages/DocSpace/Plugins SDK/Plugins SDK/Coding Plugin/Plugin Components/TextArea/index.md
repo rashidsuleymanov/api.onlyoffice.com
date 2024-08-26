@@ -6,6 +6,7 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 ![Textarea](/assets/images/docspace/textarea.png)
 
+**Example**
 
 ### Example
 

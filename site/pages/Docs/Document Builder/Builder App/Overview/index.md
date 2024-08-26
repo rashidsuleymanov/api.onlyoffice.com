@@ -8,7 +8,7 @@ If you are going to use **ONLYOFFICE Document Builder** with an application writ
 
 To launch **ONLYOFFICE Document Builder** executable file run the following command:
 
-```bash
+```sh
 docbuilder.exe mydocument.docbuilder
 ```
 
@@ -18,7 +18,7 @@ Visit the [.docbuilder](../Using%20.docbuilder%20file/index.md) file section for
 
 See the examples in some of the most popular programming languages at [this page](../../Builder%20Server/Overview/index.md).
 
-# Known issues
+## Known issues
 
 If you use **ONLYOFFICE Document Builder** as both an application and a script, then you need to know some rules and limitations:
 
@@ -33,19 +33,19 @@ If you use **ONLYOFFICE Document Builder** as both an application and a script, 
 
    Another way to do this is to use the **docbuilder.exe** executable file and run it with the **.docbuilder** file as an argument, where all the code for the document file creation will be written:
 
-   ```bash
+   ```sh
    docbuilder.exe "path-to-script.docbuilder"
    ```
 
 2. To set an argument to the builder class which can be trasferred to the program outside the [CDocBuilder.ExecuteCommand](../../Builder%20Framework/C++/CDocBuilder/ExecuteCommand/index.md) method, add it as an additional property when running **ONLYOFFICE Document Builder** executable file or as a part of program JavaScript code, but not included into the document file script:
 
-   #### Sets the --argument property to CDocBuilder.Run
+   ### Sets the --argument property to CDocBuilder.Run
 
-   ```bash
+   ```sh
    docbuilder.exe "--argument={\"company\":\"ONLYOFFICE\",\"product\":\"ONLYOFFICE Document Builder\"}" "path-to-script.docbuilder"
    ```
 
-   #### Sets the --argument property using JavaScript code
+   ### Sets the --argument property using JavaScript code
 
    ```js
    const sCompany = Argument["company"]
@@ -137,7 +137,7 @@ If you use **ONLYOFFICE Document Builder** as both an application and a script, 
    const tmpFile = builderJS.OpenTmpFile("path_or_url")
    ```
 
-   ## Methods:
+   ## Methods
 
    | Name        | Description                                                                                                    |
    | ----------- | -------------------------------------------------------------------------------------------------------------- |

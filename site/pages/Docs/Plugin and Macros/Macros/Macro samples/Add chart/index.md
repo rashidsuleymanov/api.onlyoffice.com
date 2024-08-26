@@ -2,7 +2,6 @@
 order: -11
 ---
 
-
 ## Description
 
 Adds a new chart to the selected cell range.

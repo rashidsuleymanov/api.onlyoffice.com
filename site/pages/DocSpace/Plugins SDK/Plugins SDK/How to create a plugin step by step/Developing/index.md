@@ -10,13 +10,13 @@ Create a plugin template and configure its settings which will be displayed in t
 
 1. To create a plugin template, open the terminal and run the following **npx** command:
 
-   ``` bash
+   ``` sh
    npx create-docspace-plugin
    ```
 
    > If the npx command is not avaibale, install the *@onlyoffice/docspace-plugin-sdk* npm package globally using the following command:
    > 
-   > ``` bash
+   > ``` sh
    > npm i -g @onlyoffice/docspace-plugin-sdk
    > ```
 
@@ -32,7 +32,7 @@ Create a plugin template and configure its settings which will be displayed in t
    | Plugin logo                                                   | logo.png                                                                                                                       |
    | Plugin description                                            | Speech to Text Conversion is a speech recognition software that allows you to recognize and translate spoken speech into text. |
    | Plugin license                                                | Apache-2.0                                                                                                                     |
-   | Plugin homepage                                               | https://github.com/ONLYOFFICE/docspace-plugin                                                                                 |
+   | Plugin homepage                                               | <https://github.com/ONLYOFFICE/docspace-plugin>                                                                                |
    | Select scopes (Press \<space> to select, Enter when finished) | API, Settings, Context menu                                                                                                    |
 
    ![Speech template](/assets/images/docspace/speech-template.png)
@@ -45,7 +45,6 @@ Create a plugin template and configure its settings which will be displayed in t
 
    You can also create a plugin in any project by adding the *@onlyoffice/docspace-plugin-sdk* npm package as a dependency and specifying all the necessary fields in the *package.json* file.
 
-
 ## Step 2. Configure the plugin entry point
 
 The [index.ts](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/speech-to-text/src/index.ts) plugin entry point will be created automatically in the [src](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/speech-to-text/src) folder during the template creation step. This file is required.
@@ -54,16 +53,15 @@ This file contains all the basic methods of the plugin types that you selected i
 
 If you create a plugin yourself, without a template, for the plugin entry point, you can use the code from our ready-made plugin samples. It will work perfectly.
 
-
 ## Step 3. Add plugin icons
 
 Create the [assets](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/speech-to-text/assets) folder in the root plugin folder and add there all the plugin icons. The number of icons and their sizes will depend on the plugin types you implement. For the **speech-to-text** plugin, we need the following icons:
 
-* The default plugin type requires a [logo](../../Config/index.md#image) image. It is equal to the *logo* parameter from the *package.json* file. The logo will be displayed in the DocSpace plugin settings. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.
+- The default plugin type requires a [logo](../../Config/index.md#image) image. It is equal to the *logo* parameter from the *package.json* file. The logo will be displayed in the DocSpace plugin settings. The required icon size is 48x48 px. Otherwise, it will be compressed to this size.
 
   <img alt="Plugin logo" src="/assets/images/docspace/plugin-logo.png" width="300px">
 
-* The context menu plugin uses an [icon](../../Coding%20Plugin/Plugin%20Items/ContextMenuItem/index.md#icon) on the **Convert to text** button. The required icon size is 16x16 px. Otherwise, it will be compressed to this size.
+- The context menu plugin uses an [icon](../../Coding%20Plugin/Plugin%20Items/ContextMenuItem/index.md#icon) on the **Convert to text** button. The required icon size is 16x16 px. Otherwise, it will be compressed to this size.
 
   ![Convert to text](/assets/images/docspace/convert-to-text.png)
 
@@ -79,16 +77,15 @@ Create the [assets](https://github.com/ONLYOFFICE/docspace-plugins/tree/master/s
 
   ![File icon tile](/assets/images/docspace/file-icon-tile.png)
 
-
 ## Step 4. Configure the plugin's interface elements
 
 If necessary, define the plugin's UI elements. Consult our [Storybook](https://api.onlyoffice.com/docspace-storybook/) to develop your plugin's UI.
 
 For example, the **draw\.io** plugin contains two main UI elements - the modal window and the diagram editor. Create the files for configuring each element. For your convenience, you can put these files into a separate *DrawIO* folder.
 
-* In the [Dialog.ts](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw-io/src/DrawIO/Dialog.ts) file, configure the modal window settings. Specify the [IFrame](../../Coding%20Plugin/Plugin%20Components/IFrame/index.md) UI component that is used to embed the draw\.io website into a modal window:
+- In the [Dialog.ts](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw-io/src/DrawIO/Dialog.ts) file, configure the modal window settings. Specify the [IFrame](../../Coding%20Plugin/Plugin%20Components/IFrame/index.md) UI component that is used to embed the draw\.io website into a modal window:
 
-  ``` javascript
+  ``` js
   export const frameProps: IFrame = {
     width: "100%",
     height: "100%",
@@ -115,7 +112,7 @@ For example, the **draw\.io** plugin contains two main UI elements - the modal w
 
   Configure the [modal window](../../Coding%20Plugin/Plugin%20Components/ModalDialog/index.md) properties:
 
-  ``` javascript
+  ``` js
   export const drawIoModalDialogProps: IModalDialog = {
     dialogHeader: "",
     dialogBody: body,
@@ -138,17 +135,17 @@ For example, the **draw\.io** plugin contains two main UI elements - the modal w
   }
   ```
 
-* In the [Editor.ts](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw-io/src/DrawIO/Editor.ts) file, configure the diagram editor. Create the *DiagramEditor* function with the following parameters:
+- In the [Editor.ts](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw-io/src/DrawIO/Editor.ts) file, configure the diagram editor. Create the *DiagramEditor* function with the following parameters:
 
-  | Parameter      | Description                                                       | Type    | Example                       |
-  | -------------- | ----------------------------------------------------------------- | ------- | ----------------------------- |
-  | ui             | Defines the editor's ui theme.                                    | string  | "default"                     |
-  | dark           | Defines the editor's dark theme.                                  | string  | "auto"                        |
-  | off            | Specifies if the offline mode is active or not.                   | boolean | false                         |
-  | lib            | Specifies if the libraries are enabled or not.                    | boolean | false                         |
-  | lang           | Defines the editor's language.                                    | string  | "auto"                        |
+  | Parameter      | Description                                                       | Type    | Example                      |
+  | -------------- | ----------------------------------------------------------------- | ------- | ---------------------------- |
+  | ui             | Defines the editor's ui theme.                                    | string  | "default"                    |
+  | dark           | Defines the editor's dark theme.                                  | string  | "auto"                       |
+  | off            | Specifies if the offline mode is active or not.                   | boolean | false                        |
+  | lib            | Specifies if the libraries are enabled or not.                    | boolean | false                        |
+  | lang           | Defines the editor's language.                                    | string  | "auto"                       |
   | url            | Defines the URL to the editor.                                    | string  | `https://embed.diagrams.net` |
-  | showSaveButton | Specifies if the **Save** button will be displayed in the editor. | boolean | true                          |
+  | showSaveButton | Specifies if the **Save** button will be displayed in the editor. | boolean | true                         |
 
   Then specify methods to work with diagrams:
 
@@ -166,14 +163,13 @@ For example, the **draw\.io** plugin contains two main UI elements - the modal w
 
   The full code for the *DiagramEditor* can be found [here](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw-io/src/DrawIO/Editor.ts).
 
-
 ## Step 5. Create plugin types
 
 Now that the default plugin is ready, you can start coding other plugin types.
 
 Each plugin type has specific plugin items. Define the [context menu item](../../Coding%20Plugin/Plugin%20Items/ContextMenuItem/index.md) that will be displayed when you right-click on audio or video files:
 
-``` javascript
+``` js
 export const contextMenuItem: IContextMenuItem = {
   key: "speech-to-text-context-menu-item",
   label: "Convert to text",
@@ -188,7 +184,7 @@ export const contextMenuItem: IContextMenuItem = {
 
 You can add more plugin types. For example, the **draw\.io** plugin can be accessed from the main button menu, so we need to specify the [main button item](../../Coding%20Plugin/Plugin%20Items/MainButtonItem/index.md):
 
-``` javascript
+``` js
 const mainButtonItem: IMainButtonItem = {
   key: "draw-io-main-button-item",
   label: "Draw.io",
@@ -229,7 +225,7 @@ For the **draw\.io** plugin, you also need to configure the file plugin type whi
 
 1. Define the [file item](../../Coding%20Plugin/Plugin%20Items/FileItem/index.md) that is represented as a file with the specific extension (*.drawio*) and icon:
 
-   ``` javascript
+   ``` js
    export const drawIoItem: IFileItem = {
      extension: ".drawio",
      fileTypeName: "Diagram",
@@ -242,7 +238,7 @@ For the **draw\.io** plugin, you also need to configure the file plugin type whi
 
 2. Define the *onClick* event which will execute the *editDiagram* method each time the *.drawio* file is opened:
 
-   ``` javascript
+   ``` js
    const onClick = async (item: File) => {
      return await drawIo.editDiagram(item.id)
    }
@@ -250,14 +246,13 @@ For the **draw\.io** plugin, you also need to configure the file plugin type whi
 
    ![Drawio file](/assets/images/docspace/drawio-file.png)
 
-
 ## Step 6. Create the settings plugin type
 
 Configure the settings plugin type to provide users with the administrator settings.
 
 1. Create a container where the plugin settings will be placed:
 
-   ``` javascript
+   ``` js
    const descriptionText: TextGroup = {
      component: Components.text,
      props: {
@@ -286,7 +281,7 @@ Configure the settings plugin type to provide users with the administrator setti
 
 2. Configure the administrator settings with the *ISettings* object:
 
-   ``` javascript
+   ``` js
    const adminSettings: ISettings = {
      settings: parentBox,
      saveButton: userButtonComponent,
@@ -314,7 +309,6 @@ Each settings item is determined in separate files ([buttons](https://github.com
 
 <img alt="Speech settings" src="/assets/images/docspace/speech-settings.png" width="300px">
 
-
 ## Step 7. Create the main plugin code file
 
 Create a file in the *src* folder with the main plugin code. This file is required.
@@ -325,7 +319,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
 
 1. Define the *AssemblyAI* class with all the necessary variables and methods:
 
-   ## Variables and their description:
+   ## Variables and their description
 
    ### apiURL
    
@@ -351,7 +345,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
     apiToken = ""
     ```
 
-   ## Methods and their description:
+   ## Methods and their description
 
    ### createAPIUrl
    
@@ -545,7 +539,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    
    Implements the plugin work.
 
-    ``` javascript
+   ``` js
     speechToText = async (id: number) => {
       if (!this.apiToken) {
         return

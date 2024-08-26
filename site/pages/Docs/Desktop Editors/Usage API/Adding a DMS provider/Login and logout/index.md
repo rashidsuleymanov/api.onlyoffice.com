@@ -29,7 +29,6 @@ Type: string
 
 Example: "John Smith"
 
-
 ## email
 
 Defines the user email displayed on the **Connected clouds** page.
@@ -37,7 +36,6 @@ Defines the user email displayed on the **Connected clouds** page.
 Type: string
 
 Example: `john@example.com`
-
 
 ## domain
 
@@ -49,7 +47,6 @@ Type: string
 
 Example: `https://exampledomain.com`
 
-
 ## provider
 
 Defines the provider id used to refer to the desktop app in the JavaScript commands (the same as in the [config](../index.md)).
@@ -60,13 +57,12 @@ Type: string
 
 Example: "onlyoffice"
 
-
 ## uiTheme
 
 Defines the editor theme settings. It can be set in two ways:
 
-* **theme id** - the user sets the theme parameter by its id (**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**);
-* **default theme** - the default dark or light theme value will be set (**default-dark**, **default-light**).
+- **theme id** - the user sets the theme parameter by its id (**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**);
+- **default theme** - the default dark or light theme value will be set (**default-dark**, **default-light**).
 
 The default light theme is **theme-classic-light**.The first option has higher priority.
 
@@ -75,7 +71,6 @@ Apart from the available editor themes, the user can also customize their own [c
 Type: string
 
 Example: "theme-dark"
-
 
 ## userId
 
@@ -87,10 +82,9 @@ Type: string
 
 Example: "78e1e841"
 
+**Example**
 
-### Example
-
-``` javascript
+``` js
 const params = {
   displayName: "John Smith",
   email: "john@example.com",
@@ -120,6 +114,7 @@ Type: string
 
 Example: `https://exampledomain.com`
 
+**Example**
 
 ### Example
 

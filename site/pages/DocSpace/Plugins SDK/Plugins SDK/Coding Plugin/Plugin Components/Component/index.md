@@ -12,7 +12,6 @@ Type: string
 
 Example: "acceptButton"
 
-
 ### Example
 
 ``` javascript

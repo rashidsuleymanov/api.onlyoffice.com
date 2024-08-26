@@ -16,9 +16,11 @@ window.cloudCryptoCommand = function cloudCryptoCommand(type, params, callback) 
 
 Defines the command type:
 
-* *encryptionKeys* - to save private and public keys to the parameters;
-* *relogin* - to re-enter the portal after unsuccessful keys decryption;
-* *getsharingkeys* - to request for the public keys of all the users who have access to the file. The keys will be transferred via callback:
+- *encryptionKeys* - to save private and public keys to the parameters;
+
+- *relogin* - to re-enter the portal after unsuccessful keys decryption;
+
+- *getsharingkeys* - to request for the public keys of all the users who have access to the file. The keys will be transferred via callback:
 
   ``` javascript
   callback({
@@ -31,13 +33,11 @@ Defines the command type:
 
 Type: string
 
-
 ## params
 
 Defines the parameters that are passed to the method.
 
 Type: string
-
 
 ## callback
 
@@ -45,8 +45,7 @@ Defines the result that the method returns.
 
 Type: string
 
-
 Explore the following pages to find out which commands need to be used for:
 
-* [Key generation](Key%20generation/index.md)
-* [Operations with encrypted files](Operations%20with%20encrypted%20files/index.md)
+- [Key generation](Key%20generation/index.md)
+- [Operations with encrypted files](Operations%20with%20encrypted%20files/index.md)

@@ -46,7 +46,7 @@ The reference figure and the steps below explain the process of mentioning users
 
 3. In order to set the users list under the comment field, the [setUsers](../../../Usage%20API/Methods/index.md#setusers) method must be called:
 
-   ``` javascript
+   ``` js
    docEditor.setUsers({
      c: "mention",
      users: [
@@ -98,7 +98,7 @@ In the case when the [document.info.sharingSettings](../../../Usage%20API/Config
 
 ![Sharing settings](/assets/images/editor/sharing_settings.png)
 
-``` javascript
+``` js
 docEditor.setSharingSettings({
   sharingSettings: [
     {

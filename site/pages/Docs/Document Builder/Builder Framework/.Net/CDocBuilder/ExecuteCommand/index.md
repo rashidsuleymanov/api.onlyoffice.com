@@ -1,10 +1,10 @@
-#### bool ExecuteCommand(sCommand, oRetValue = 0);
+`bool ExecuteCommand(sCommand, oRetValue = 0);`
 
 Executes the command which will be used to create the document file (text document, spreadsheet, presentation, form document, PDF). See the [Text document API](../../../../../Office%20API/Office%20API/Text%20Document%20API/index.md), [Spreadsheet API](../../../../../Office%20API/Office%20API/Presentation%20API/index.md), [Presentation API](../../../../../Office%20API/Office%20API/Presentation%20API/index.md), or [Form API](../../../../../Office%20API/Office%20API/Form%20API/index.md) sections for more information which commands are available for various document types.
 
 > Please note, that for the *.docbuilder* file the *CDocBuilder.ExecuteCommand* method is not used explicitly. The command itself is used instead. See the example below.
 
-## Parameters:
+## Parameters
 
 | Name        | Type               | Description                                                                                                                                                                         |
 | ----------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -13,7 +13,7 @@ Executes the command which will be used to create the document file (text docume
 
 ## Example
 
-#### .Net
+**.Net**
 
 ```csharp
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
@@ -23,7 +23,7 @@ oBuilder.ExecuteCommand(L"oParagraph.AddText(\"Hello from .net!\");");
 CDocBuilder.Destroy();
 ```
 
-#### .docbuilder
+**.docbuilder**
 
 ```js
 oParagraph.AddText("Hello from .net!")

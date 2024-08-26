@@ -1,6 +1,5 @@
 A form document has exactly the same structure as a [text document](../Text%20Document%20API/index.md). The only difference is a new *forms* entity placed with other paragraph elements – text runs, inline text content controls and hyperlinks. There are seven form types: *text field*, *combo box*, *dropdown list*, *checkbox*, *radio button*, *picture form*, and *complex field*.
 
-
 ## Creating a new form document
 
 To create a form document, the [CreateFile](../../../Document%20Builder/Builder%20Framework/C++/CDocBuilder/CreateFile/index.md) method with the *"pdf"* extension must be used.
@@ -34,7 +33,6 @@ builder.SaveFile("pdf", "example.pdf")
 // close the form document file and finish work with ONLYOFFICE Document Builder
 builder.CloseFile()
 ```
-
 
 ## Opening an existing form document
 

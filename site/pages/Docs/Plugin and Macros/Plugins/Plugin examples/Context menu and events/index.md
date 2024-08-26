@@ -208,12 +208,12 @@ window.Asc.plugin.event_onTargetPositionChanged = function event_onTargetPositio
 
 ## Methods and events
 
-* button
-* init
-* onTargetPositionChanged
-* attachContextMenuClickEvent
-* executeMethod ("AddContextMenuItem")
-* executeMethod ("InputText")
+- button
+- init
+- onTargetPositionChanged
+- attachContextMenuClickEvent
+- executeMethod ("AddContextMenuItem")
+- executeMethod ("InputText")
 
 ## Support
 

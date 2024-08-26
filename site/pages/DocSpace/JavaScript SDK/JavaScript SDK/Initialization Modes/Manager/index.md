@@ -6,7 +6,7 @@ Displays a list of entities depending on the specified [rootPath](../../Config/i
 
 ![Manager](/assets/images/docspace/manager-mode.png)
 
-### Method
+**Method**
 
 | Name                                              | Description                                      |
 | ------------------------------------------------- | ------------------------------------------------ |

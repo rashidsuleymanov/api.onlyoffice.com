@@ -1,4 +1,4 @@
-#### String^ GetVersion();
+`String^ GetVersion();`
 
 Returns the **ONLYOFFICE Document Builder** engine version.
 
@@ -6,7 +6,7 @@ Returns the **ONLYOFFICE Document Builder** engine version.
 
 ## Example
 
-#### .Net
+**.Net**
 
 ```csharp
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";

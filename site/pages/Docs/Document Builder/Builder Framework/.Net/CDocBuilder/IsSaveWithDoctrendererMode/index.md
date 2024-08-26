@@ -1,4 +1,4 @@
-#### bool IsSaveWithDoctrendererMode();
+`bool IsSaveWithDoctrendererMode();`
 
 Specifies if the doctrenderer mode is used when building a document or getting content from the editor when saving a file.
 
@@ -6,7 +6,7 @@ Specifies if the doctrenderer mode is used when building a document or getting c
 
 ## Example
 
-#### .Net
+.Net
 
 ```csharp
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";

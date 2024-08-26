@@ -14,7 +14,6 @@ A table has a little bit more complex structure, as it comprises *table rows*, w
 
 A block content control can also contain the *paragraph*, *table* or another *block content control* inside it.
 
-
 ## Creating a new text document
 
 The simplest example text document with a single paragraph containing centered "Center" text can be built with the help of **ONLYOFFICE Document Builder** using the following code:
@@ -45,12 +44,13 @@ builder.SaveFile("docx", "example.docx")
 builder.CloseFile()
 ```
 
-> Actually in the above example the created text document will have two paragraphs, as the first paragraph is created by default for an empty text document, i.e. a new empty text document always contains at least one paragraph. You can address the first paragraph to change it using the *Api.GetElement(0)* method, so that line 4 of the above code looked like this:
-> ``` js
-> oParagraph = oDocument.GetElement(0)
-> ```
-> and line 7 (*oDocument.Push(oParagraph);*) is not needed.
+Actually in the above example the created text document will have two paragraphs, as the first paragraph is created by default for an empty text document, i.e. a new empty text document always contains at least one paragraph. You can address the first paragraph to change it using the *Api.GetElement(0)* method, so that line 4 of the above code looked like this:
 
+``` js
+oParagraph = oDocument.GetElement(0)
+```
+
+and line 7 (*oDocument.Push(oParagraph);*) is not needed.
 
 ## Opening an existing text document
 

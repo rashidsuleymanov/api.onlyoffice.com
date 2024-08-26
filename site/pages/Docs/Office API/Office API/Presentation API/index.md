@@ -10,7 +10,6 @@ The *layout* can be added to the *slide* to specify its structure. Also some dra
 
 The text cannot be placed directly to the *slide*, it can be only grouped to *paragraphs* and added to the *shapes* or *tables*. For the sake of convenience (as it is always easier to work with smaller blocks than with larger ones) the text is usually divided into small text portions called *runs*. Each paragraph can consist either of only one text run or have dozens of them inside, depending on the paragraph complexity.
 
-
 ## Creating a new presentation
 
 The simplest example presentation with a single slide without any objects can be built with the help of **ONLYOFFICE Document Builder** using the following code:
@@ -34,7 +33,6 @@ builder.SaveFile("pptx", "example.pptx")
 // close the presentation file and finish work with ONLYOFFICE Document Builder
 builder.CloseFile()
 ```
-
 
 ## Opening an existing presentation
 

@@ -6,7 +6,7 @@ Displays a blank page with the loader. It allows you to call system methods.
 
 ![System mode](/assets/images/docspace/system-mode.png)
 
-### Method
+**Method**
 
 | Name                                            | Description                                     |
 | ----------------------------------------------- | ----------------------------------------------- |

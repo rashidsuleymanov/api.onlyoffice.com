@@ -1,54 +1,52 @@
 The customization section allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details.
 
-* [about](#about)
-* [anonymous](#anonymous)
-* [autosave](#autosave)
-* [chat](#chat)
-* [close](#close)
-* [commentAuthorOnly](#commentauthoronly)
-* [comments](#comments)
-* [compactHeader](#compactheader)
-* [compactToolbar](#compacttoolbar)
-* [compatibleFeatures](#compatiblefeatures)
-* [customer](#customer)
-* [features](#features)
-* [feedback](#feedback)
-* [font](#font)
-* [forcesave](#forcesave)
-* [goback](#goback)
-* [help](#help)
-* [hideNotes](#hidenotes)
-* [hideRightMenu](#hiderightmenu)
-* [hideRulers](#hiderulers)
-* [integrationMode](#integrationmode)
-* [layout](#layout)
-* [leftMenu](#leftmenu)
-* [loaderLogo](#loaderlogo)
-* [loaderName](#loadername)
-* [logo](#logo)
-* [macros](#macros)
-* [macrosMode](#macrosmode)
-* [mentionShare](#mentionshare)
-* [mobileForceView](#mobileforceview)
-* [plugins](#plugins)
-* [review](#review)
-* [reviewDisplay](#reviewdisplay)
-* [rightMenu](#rightmenu)
-* [showReviewChanges](#showreviewchanges)
-* [spellcheck](#spellcheck)
-* [statusBar](#statusbar)
-* [submitForm](#submitform)
-* [toolbar](#toolbar)
-* [toolbarHideFileName](#toolbarhidefilename)
-* [toolbarNoTabs](#toolbarnotabs)
-* [trackChanges](#trackchanges)
-* [uiTheme](#uitheme)
-* [unit](#unit)
-* [zoom](#zoom)
-
+- [about](#about)
+- [anonymous](#anonymous)
+- [autosave](#autosave)
+- [chat](#chat)
+- [close](#close)
+- [commentAuthorOnly](#commentauthoronly)
+- [comments](#comments)
+- [compactHeader](#compactheader)
+- [compactToolbar](#compacttoolbar)
+- [compatibleFeatures](#compatiblefeatures)
+- [customer](#customer)
+- [features](#features)
+- [feedback](#feedback)
+- [font](#font)
+- [forcesave](#forcesave)
+- [goback](#goback)
+- [help](#help)
+- [hideNotes](#hidenotes)
+- [hideRightMenu](#hiderightmenu)
+- [hideRulers](#hiderulers)
+- [integrationMode](#integrationmode)
+- [layout](#layout)
+- [leftMenu](#leftmenu)
+- [loaderLogo](#loaderlogo)
+- [loaderName](#loadername)
+- [logo](#logo)
+- [macros](#macros)
+- [macrosMode](#macrosmode)
+- [mentionShare](#mentionshare)
+- [mobileForceView](#mobileforceview)
+- [plugins](#plugins)
+- [review](#review)
+- [reviewDisplay](#reviewdisplay)
+- [rightMenu](#rightmenu)
+- [showReviewChanges](#showreviewchanges)
+- [spellcheck](#spellcheck)
+- [statusBar](#statusbar)
+- [submitForm](#submitform)
+- [toolbar](#toolbar)
+- [toolbarHideFileName](#toolbarhidefilename)
+- [toolbarNoTabs](#toolbarnotabs)
+- [trackChanges](#trackchanges)
+- [uiTheme](#uitheme)
+- [unit](#unit)
+- [zoom](#zoom)
 
 > Please note that only the following parameters are available for the mobile editors: [close](#close), [feedback](#feedback), [goback](#goback), [help](#help), [logo](#logo), [macrosMode](#macrosmode), [mobileForceView](#mobileforceview).
-
 
 ## about
 
@@ -59,7 +57,6 @@ Defines if the **About** menu button is displayed or hidden. The default value i
 Type: boolean
 
 Example: true
-
 
 ## anonymous
 
@@ -75,7 +72,6 @@ const anonymous = {
 }
 ```
 
-
 ### anonymous.request
 
 Defines if the request is sent or not. The default value is **true**.
@@ -83,7 +79,6 @@ Defines if the request is sent or not. The default value is **true**.
 Type: boolean
 
 Example: true
-
 
 ### anonymous.label
 
@@ -95,7 +90,6 @@ Example: "Guest"
 
 ![Anonymous](/assets/images/editor/anonymous.png)
 
-
 ## autosave
 
 Defines if the **Autosave** menu option is enabled or disabled. If set to **false**, only **Strict** co-editing mode can be selected, as **Fast** does not work without autosave. The default value is **true**.
@@ -106,7 +100,6 @@ Example: true
 
 > Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.autosave* parameter.
 
-
 ## chat
 
 Defines if the **Chat** menu button is displayed or hidden. Please note that in case you hide the **Chat** button, the corresponding chat functionality will also be disabled. The default value is **true**. Deprecated since version 7.1, please use the [document.permissions.chat](../../Document/Permissions/index.md#chat) parameter instead.
@@ -116,7 +109,6 @@ Type: boolean
 Example: true
 
 ![Chat](/assets/images/editor/chat.png)
-
 
 ## close
 
@@ -133,7 +125,6 @@ const close = {
 }
 ```
 
-
 ### close.visible
 
 Defines if the cross button to close the editor is displayed or hidden. The default value is **true**.
@@ -141,7 +132,6 @@ Defines if the cross button to close the editor is displayed or hidden. The defa
 Type: boolean
 
 Example: true
-
 
 ### close.text
 
@@ -151,13 +141,11 @@ Type: string
 
 Example: "Close file"
 
-
 > Please note that it will only be available if the [onRequestClose](../../Events/index.md#onrequestclose) event is set. If the event is not declared and the *close* parameter is not specified, the cross button will not be displayed.
 
 > Please note that this parameter is also available for the mobile editors.
 
 ![Cross button in the header](/assets/images/editor/cross-button.jpg)
-
 
 ## commentAuthorOnly
 
@@ -166,7 +154,6 @@ Defines if the user can edit and delete only his comments. The default value is 
 Type: boolean
 
 Example: true
-
 
 ## comments
 
@@ -178,7 +165,6 @@ Example: true
 
 ![Comments](/assets/images/editor/comment.png)
 
-
 ## compactHeader
 
 Defines if the additional action buttons are displayed in the upper part of the editor window header next to the logo (**false**) or in the toolbar (**true**) making the header more compact. The default value is **false**.
@@ -188,7 +174,6 @@ Type: boolean
 Example: false
 
 ![Compact header](/assets/images/editor/compactHeader.png)
-
 
 ## compactToolbar
 
@@ -202,7 +187,6 @@ Example: false
 
 ![Compact toolbar](/assets/images/editor/compactToolbar.png)
 
-
 ## compatibleFeatures
 
 Defines the use of functionality only compatible with the OOXML format. For example, do not use comments on the entire document. The default value is **false**.
@@ -210,7 +194,6 @@ Defines the use of functionality only compatible with the OOXML format. For exam
 Type: boolean
 
 Example: false
-
 
 ## customer
 
@@ -243,7 +226,6 @@ Type: string
 
 Example: "My City, 123a-45"
 
-
 ### customer.info
 
 Some additional information about the company or person you want the others to know.
@@ -251,7 +233,6 @@ Some additional information about the company or person you want the others to k
 Type: string
 
 Example: "Some additional information"
-
 
 ### customer.logo
 
@@ -261,7 +242,6 @@ Type: string
 
 Example: `https://example.com/logo-big.png`
 
-
 ### customer.logoDark
 
 The path to the image logo for the dark theme (there are no special recommendations for this file, but it would be better if it was in *.png* format with transparent background). The image must have the following size: 432x70.
@@ -269,7 +249,6 @@ The path to the image logo for the dark theme (there are no special recommendati
 Type: string
 
 Example: `https://example.com/dark-logo-big.png`
-
 
 ### customer.mail
 
@@ -279,7 +258,6 @@ Type: string
 
 Example: `john@example.com`
 
-
 ### customer.name
 
 The name of the company or person who gives access to the editors or the editor authors.
@@ -288,7 +266,6 @@ Type: string
 
 Example: "John Smith and Co."
 
-
 ### customer.phone
 
 The phone of the company or person who gives access to the editors or the editor authors.
@@ -296,7 +273,6 @@ The phone of the company or person who gives access to the editors or the editor
 Type: string
 
 Example: "123456789"
-
 
 ### customer.www
 
@@ -307,7 +283,6 @@ Type: string
 Example: "example.com"
 
 ![Customer](/assets/images/editor/customer.png)
-
 
 ## features
 
@@ -337,7 +312,6 @@ Type: boolean
 
 Example: true
 
-
 ### features.spellcheck
 
 Defines if the spell checker is automatically switched on or off when the editor is loaded. If this parameter is a boolean value, then it is set as the initial spell checker value and the spell checker setting will not be hidden. The default value is **true**.
@@ -346,7 +320,6 @@ Type: object or boolean
 
 Example: true
 
-
 ### features.spellcheck.mode
 
 Defines if the spell checker is automatically switched on or off when the editor is loaded. This parameter will only be available for the document editor and the presentation editor.
@@ -354,7 +327,6 @@ Defines if the spell checker is automatically switched on or off when the editor
 Type: boolean
 
 Example: true
-
 
 ### features.spellcheck.change
 
@@ -366,9 +338,7 @@ Type: boolean
 
 Example: true
 
-
 > Please note that in case *spellcheck* setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.features.spellcheck* parameter.
-
 
 ## feedback
 
@@ -384,7 +354,6 @@ Example: true
 
 ![Feedback](/assets/images/editor/feedback.png)
 
-
 ### feedback.url
 
 The absolute URL to the website address which will be opened when clicking the **Feedback & Support** menu button.
@@ -393,7 +362,6 @@ Type: string
 
 Example: `https://example.com`
 
-
 ### feedback.visible
 
 Shows or hides the **Feedback & Support** menu button.
@@ -401,7 +369,6 @@ Shows or hides the **Feedback & Support** menu button.
 Type: boolean
 
 Example: true
-
 
 ## font
 
@@ -428,7 +395,6 @@ Type: string
 
 Example: "Arial"
 
-
 ### font.size
 
 The font size.
@@ -436,7 +402,6 @@ The font size.
 Type: string
 
 Example: "11px"
-
 
 ## forcesave
 
@@ -447,7 +412,6 @@ Type: boolean
 Example: false
 
 > Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.forcesave* parameter.
-
 
 ## goback
 
@@ -469,7 +433,6 @@ const goback = {
 
 ![Go back](/assets/images/editor/goback.png)
 
-
 ### goback.blank
 
 Opens the website in the new browser tab/window (if the value is set to **true**) or the current tab (if the value is set to **false**) when the **Open file location** button is clicked. The default value is **true**.
@@ -477,7 +440,6 @@ Opens the website in the new browser tab/window (if the value is set to **true**
 Type: boolean
 
 Example: true
-
 
 ### goback.requestClose
 
@@ -487,7 +449,6 @@ Type: boolean
 
 Example: false
 
-
 ### goback.text
 
 The text which will be displayed for the **Open file location** menu button and upper right corner button (i.e. instead of *Go to Documents*).
@@ -496,7 +457,6 @@ Type: string
 
 Example: "Open file location"
 
-
 ### goback.url
 
 The absolute URL to the website address which will be opened when clicking the **Open file location** menu button.
@@ -504,7 +464,6 @@ The absolute URL to the website address which will be opened when clicking the *
 Type: string
 
 Example: `https://example.com`
-
 
 ## help
 
@@ -518,7 +477,6 @@ Example: true
 
 ![Help](/assets/images/editor/help.png)
 
-
 ## hideNotes
 
 Defines if the note panel is displayed or hidden on first loading. The default value is **false**. This parameter is available for the presentation editor only.
@@ -531,7 +489,6 @@ Example: false
 
 ![Hide notes](/assets/images/editor/hideNotes.png)
 
-
 ## hideRightMenu
 
 Defines if the right menu is displayed or hidden on first loading. The default value is **true**.
@@ -541,7 +498,6 @@ Type: boolean
 Example: true
 
 > Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.hideRightMenu* parameter.
-
 
 ## hideRulers
 
@@ -553,7 +509,6 @@ Example: false
 
 ![Hide rulers](/assets/images/editor/hideRulers.png)
 
-
 ## integrationMode
 
 Defines the mode of embedding editors into the web page. The **embed** value disables scrolling to the editor frame when it is loaded as the focus is not captured.
@@ -561,7 +516,6 @@ Defines the mode of embedding editors into the web page. The **embed** value dis
 Type: string
 
 Example: "embed"
-
 
 ## layout
 
@@ -633,7 +587,6 @@ const header = {
 }
 ```
 
-
 ### layout.header.editMode
 
 Defines if a button for switching editor modes will be displayed in the header or not. The default value is **true**.
@@ -641,7 +594,6 @@ Defines if a button for switching editor modes will be displayed in the header o
 Type: boolean
 
 Example: true
-
 
 ### layout.header.save
 
@@ -651,7 +603,6 @@ Type: boolean
 
 Example: true
 
-
 ### layout.header.users
 
 Defines if the button with the editing users is displayed or hidden. The default value is **true**.
@@ -659,7 +610,6 @@ Defines if the button with the editing users is displayed or hidden. The default
 Type: boolean
 
 Example: true
-
 
 ### layout.leftMenu
 
@@ -677,7 +627,6 @@ const leftMenu = {
 }
 ```
 
-
 ### layout.leftMenu.mode
 
 Defines the initial value of the left panel visibility - displayed or hidden. It is used for the **Left panel** menu option on the **View** tab. The default value is **true**.
@@ -685,7 +634,6 @@ Defines the initial value of the left panel visibility - displayed or hidden. It
 Type: boolean
 
 Example: true
-
 
 ### layout.leftMenu.navigation
 
@@ -695,7 +643,6 @@ Type: boolean
 
 Example: true
 
-
 ### layout.leftMenu.spellcheck
 
 Defines if the **Spellcheck** button is displayed or hidden. The default value is **true**. This parameter will only be available for the spreadsheet editor.
@@ -703,7 +650,6 @@ Defines if the **Spellcheck** button is displayed or hidden. The default value i
 Type: boolean
 
 Example: true
-
 
 ### layout.rightMenu
 
@@ -719,7 +665,6 @@ const rightMenu = {
 }
 ```
 
-
 ### layout.rightMenu.mode
 
 Defines the initial value of the right panel visibility - displayed or hidden. It is used for the **Right panel** menu option on the **View** tab. The default value is **true**.
@@ -727,7 +672,6 @@ Defines the initial value of the right panel visibility - displayed or hidden. I
 Type: boolean
 
 Example: true
-
 
 ### layout.statusBar
 
@@ -745,7 +689,6 @@ const statusBar = {
 }
 ```
 
-
 ### layout.statusBar.actionStatus
 
 Defines if an action status is displayed or hidden. The default value is **true**.
@@ -753,7 +696,6 @@ Defines if an action status is displayed or hidden. The default value is **true*
 Type: boolean
 
 Example: true
-
 
 ### layout.statusBar.docLang
 
@@ -763,7 +705,6 @@ Type: boolean
 
 Example: true
 
-
 ### layout.statusBar.textLang
 
 Defines if a button for choosing the text language is displayed or hidden. The default value is **true**. This parameter will only be available for the document editor and the presentation editor.
@@ -771,7 +712,6 @@ Defines if a button for choosing the text language is displayed or hidden. The d
 Type: boolean
 
 Example: true
-
 
 ### layout.toolbar
 
@@ -805,7 +745,6 @@ const toolbar = {
 }
 ```
 
-
 ### layout.toolbar.collaboration
 
 Defines the **Collaboration** tab settings. If this parameter is a boolean value, then it specifies whether the **Collaboration** tab will be displayed or hidden. The default value is **true**.
@@ -820,7 +759,6 @@ const collaboration = {
 }
 ```
 
-
 ### layout.toolbar.collaboration.mailmerge
 
 Defines if the button for choosing the mail merge base is displayed or hidden. The default value is **true**.
@@ -829,7 +767,6 @@ Type: boolean
 
 Example: true
 
-
 ### layout.toolbar.draw
 
 Defines if the **Draw** tab is displayed or hidden. The default value is **true**.
@@ -837,7 +774,6 @@ Defines if the **Draw** tab is displayed or hidden. The default value is **true*
 Type: boolean
 
 Example: true
-
 
 ### layout.toolbar.file
 
@@ -856,7 +792,6 @@ const file = {
 }
 ```
 
-
 ### layout.toolbar.file.close
 
 Defines if the **Close menu** option is displayed or hidden. The default value is **true**.
@@ -864,7 +799,6 @@ Defines if the **Close menu** option is displayed or hidden. The default value i
 Type: boolean
 
 Example: true
-
 
 ### layout.toolbar.file.info
 
@@ -874,7 +808,6 @@ Type: boolean
 
 Example: true
 
-
 ### layout.toolbar.file.save
 
 Defines if the **Save** option is displayed or hidden. The default value is **true**.
@@ -882,7 +815,6 @@ Defines if the **Save** option is displayed or hidden. The default value is **tr
 Type: boolean
 
 Example: true
-
 
 ### layout.toolbar.file.settings
 
@@ -892,7 +824,6 @@ Type: boolean
 
 Example: true
 
-
 ### layout.toolbar.home
 
 Defines the **Home** tab settings. This tab cannot be hidden.
@@ -900,7 +831,6 @@ Defines the **Home** tab settings. This tab cannot be hidden.
 Type: object
 
 Example: {}
-
 
 ### layout.toolbar.home.mailmerge
 
@@ -910,7 +840,6 @@ Type: boolean
 
 Example: true
 
-
 ### layout.toolbar.layout
 
 Defines if the **Layout** tab is displayed or hidden. This parameter will only be available for the document editor and the spreadsheet editor. The default value is **true**.
@@ -918,7 +847,6 @@ Defines if the **Layout** tab is displayed or hidden. This parameter will only b
 Type: boolean
 
 Example: true
-
 
 ### layout.toolbar.plugins
 
@@ -928,7 +856,6 @@ Type: boolean
 
 Example: true
 
-
 ### layout.toolbar.protect
 
 Defines if the **Protection** tab is displayed or hidden. The default value is **true**.
@@ -936,7 +863,6 @@ Defines if the **Protection** tab is displayed or hidden. The default value is *
 Type: boolean
 
 Example: true
-
 
 ### layout.toolbar.references
 
@@ -946,7 +872,6 @@ Type: boolean
 
 Example: true
 
-
 ### layout.toolbar.save
 
 Defines if the **Save** button on the toolbar is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](#compactheader) parameter is set to **true**.
@@ -954,7 +879,6 @@ Defines if the **Save** button on the toolbar is displayed or hidden. The defaul
 Type: boolean
 
 Example: true
-
 
 ### layout.toolbar.view
 
@@ -970,7 +894,6 @@ const view = {
 }
 ```
 
-
 ### layout.toolbar.view.navigation
 
 Defines if the **Navigation** button is displayed or hidden. The default value is **true**. This parameter will only be available for the document editor.
@@ -978,7 +901,6 @@ Defines if the **Navigation** button is displayed or hidden. The default value i
 Type: boolean
 
 Example: true
-
 
 ## leftMenu
 
@@ -992,7 +914,6 @@ Type: boolean
 
 Example: true
 
-
 ## loaderLogo
 
 Defines the path to the image logo which will be displayed while the document is being loaded (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background). The image will be proportionally resized to the height of 160 pixels when displayed in the editors.
@@ -1003,7 +924,6 @@ Type: string
 
 Example: `https://example.com/loader-logo.png`
 
-
 ## loaderName
 
 Defines the text which will be displayed while the document is being loaded.
@@ -1013,7 +933,6 @@ Defines the text which will be displayed while the document is being loaded.
 Type: string
 
 Example: "The document is loading, please wait..."
-
 
 ## logo
 
@@ -1036,7 +955,6 @@ const logo = {
 
 > Please note that this parameter is also available for the mobile editors.
 
-
 ### logo.image
 
 Path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode (see the [config](../../index.md#type) section to find out how to define the **embedded** document type). The image must have the following size: 172x40.
@@ -1044,7 +962,6 @@ Path to the image file used to show in the common work mode (i.e. in view and ed
 Type: string
 
 Example: `https://example.com/logo.png`
-
 
 ### logo.imageDark
 
@@ -1054,7 +971,6 @@ Type: string
 
 Example: `https://example.com/dark-logo.png`
 
-
 ### logo.imageEmbedded
 
 Path to the image file used to show in the embedded mode (see the [config](../../index.md#type) section to find out how to define the **embedded** document type). The image must have the following size: 248x40. Deprecated since version 7.0, please use the *image* field instead.
@@ -1062,7 +978,6 @@ Path to the image file used to show in the embedded mode (see the [config](../..
 Type: string
 
 Example: `https://example.com/logo_em.png`
-
 
 ### logo.url
 
@@ -1072,7 +987,6 @@ Type: string
 
 Example: `https://example.com`
 
-
 ### logo.visible
 
 Shows or hides the logo. The default value is **true**.
@@ -1080,7 +994,6 @@ Shows or hides the logo. The default value is **true**.
 Type: boolean
 
 Example: true
-
 
 ## macros
 
@@ -1090,14 +1003,13 @@ Type: boolean
 
 Example: true
 
-
 ## macrosMode
 
 Defines the macros run mode when autostart is enabled. Can take the following values:
 
-* **disable** - don't run macros at all;
-* **enable** - run all macros automatically;
-* **warn** - warn about macros and ask permission to run them.
+- **disable** - don't run macros at all;
+- **enable** - run all macros automatically;
+- **warn** - warn about macros and ask permission to run them.
 
 The default value is **warn**.
 
@@ -1108,7 +1020,6 @@ Example: "warn"
 > Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.macrosMode* parameter.
 
 > Please note that this parameter is also available for the mobile editors.
-
 
 ## mentionShare
 
@@ -1122,7 +1033,6 @@ Example: true
 
 <img alt="Mention share" src="/assets/images/editor/mentionShare.png" width="379px">
 
-
 ## mobileForceView
 
 Defines if the mobile document editor is opened in the view/edit mode on launch. The default value is **true**.
@@ -1133,7 +1043,6 @@ Example: true
 
 > Please note that this parameter is only available for the mobile editors.
 
-
 ## plugins
 
 Defines if [plugins](../../../../../Plugin%20and%20Macros/Get%20Started/Overview/index.md) will be launched and available. The default value is **true**.
@@ -1141,7 +1050,6 @@ Defines if [plugins](../../../../../Plugin%20and%20Macros/Get%20Started/Overview
 Type: boolean
 
 Example: true
-
 
 ## review
 
@@ -1167,7 +1075,6 @@ const review = {
 
 ![Review display](/assets/images/editor/reviewDisplay.png)
 
-
 ### review.hideReviewDisplay
 
 Defines if the **Display mode** button is displayed or hidden on the **Collaboration** tab. The default value is **false**.
@@ -1175,7 +1082,6 @@ Defines if the **Display mode** button is displayed or hidden on the **Collabora
 Type: boolean
 
 Example: false
-
 
 ### review.hoverMode
 
@@ -1185,22 +1091,20 @@ Type: boolean
 
 Example: false
 
-
 ### review.reviewDisplay
 
 Defines the review editing mode which will be used when the document is opened for viewing. It will only be available for the document editor if [mode](../../Editor/index.md#mode) is set to **view**. Can take the following values:
 
-* **markup** - the document is displayed with proposed changes highlighted;
-* **simple** - the document is displayed with proposed changes highlighted, but the balloons are turned off;
-* **final** - the document is displayed with all the proposed changes applied;
-* **original** - the original document is displayed without the proposed changes.
+- **markup** - the document is displayed with proposed changes highlighted;
+- **simple** - the document is displayed with proposed changes highlighted, but the balloons are turned off;
+- **final** - the document is displayed with all the proposed changes applied;
+- **original** - the original document is displayed without the proposed changes.
 
 The default value is **original**.
 
 Type: string
 
 Example: "original"
-
 
 ### review.showReviewChanges
 
@@ -1210,7 +1114,6 @@ Type: boolean
 
 Example: false
 
-
 ### review.trackChanges
 
 Defines if the document is opened in the review editing mode (**true**) or not (**false**) regardless of the [document.permissions.review](../../Document/Permissions/index.md#review) parameter (the review mode is changed only for the current user). If the parameter is *undefined*, the *document.permissions.review* value is used (for all the document users).
@@ -1219,15 +1122,14 @@ Type: boolean
 
 Example: true
 
-
 ## reviewDisplay
 
 Defines the review editing mode in the document editor. This parameter can take the following values:
 
-* **markup** - the document is displayed with proposed changes highlighted;
-* **simple** - the document is displayed with proposed changes highlighted, but the balloons are turned off;
-* **final** - the document is displayed with all the proposed changes applied;
-* **original** - the original document is displayed without the proposed changes.
+- **markup** - the document is displayed with proposed changes highlighted;
+- **simple** - the document is displayed with proposed changes highlighted, but the balloons are turned off;
+- **final** - the document is displayed with all the proposed changes applied;
+- **original** - the original document is displayed without the proposed changes.
 
 The default value is **original** for viewer and **markup** for editor.                                                                   
 
@@ -1238,7 +1140,6 @@ Example: "original"
 > Deprecated since version 7.0. Please use the [review.reviewDisplay](#review) parameter instead.
 
 > Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.reviewDisplay* parameter.
-
 
 ## rightMenu
 
@@ -1252,7 +1153,6 @@ Type: boolean
 
 Example: true
 
-
 ## showReviewChanges
 
 Defines if the review changes panel is automatically displayed or hidden when the editor is loaded. The default value is **false**.
@@ -1262,7 +1162,6 @@ Type: boolean
 Example: false
 
 > Deprecated since version 7.0. Please use the [review.showReviewChanges](#review) parameter instead.
-
 
 ## spellcheck
 
@@ -1276,7 +1175,6 @@ Example: true
 
 > Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.spellcheck* parameter.
 
-
 ## statusBar
 
 Defines if the status bar is displayed or hidden. The default value is **true**.
@@ -1289,7 +1187,6 @@ Type: boolean
 
 Example: true
 
-
 ## submitForm
 
 Defines if the **Complete & Submit** button is displayed or hidden on the top toolbar. Button will only be available for the *pdf* format. The default value is **false**.
@@ -1299,7 +1196,6 @@ Type: boolean
 Example: true
 
 ![Submit button](/assets/images/editor/submitForm.png)
-
 
 ## toolbar
 
@@ -1313,7 +1209,6 @@ Type: boolean
 
 Example: true
 
-
 ## toolbarHideFileName
 
 Defines if the document title is visible on the top toolbar (**false**) or hidden (**true**). The default value is **false**.
@@ -1326,7 +1221,6 @@ Example: false
 
 ![Toolbar hide file name](/assets/images/editor/toolbarHideFileName.png)
 
-
 ## toolbarNoTabs
 
 Defines if the top toolbar tabs are distinctly displayed (**false**) or only highlighted to see which one is selected (**true**). The default value is **false**. 
@@ -1336,7 +1230,6 @@ Type: boolean
 Example: false
 
 ![Toolbar no tabs](/assets/images/editor/toolbarNoTabs.png)
-
 
 ## trackChanges
 
@@ -1348,13 +1241,12 @@ Example: true
 
 > Deprecated since version 7.0. Please use the [review.trackChanges](#review.trackchanges) parameter instead.
 
-
 ## uiTheme
 
 Defines the editor theme settings. It can be set in two ways:
 
-* **theme id** - the user sets the theme parameter by its id (**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**);
-* **default theme** - the default dark or light theme value will be set (**default-dark**, **default-light**). The default light theme is **theme-classic-light**.
+- **theme id** - the user sets the theme parameter by its id (**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**);
+- **default theme** - the default dark or light theme value will be set (**default-dark**, **default-light**). The default light theme is **theme-classic-light**.
 
 The first option has higher priority.
 
@@ -1366,14 +1258,13 @@ Example: "theme-dark"
 
 > Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.uiTheme* parameter.
 
-
 ## unit
 
 Defines the measurement units used on the ruler and in dialog boxes. Can take the following values:
 
-* **cm** - centimeters;
-* **pt** - points;
-* **inch** - inches.
+- **cm** - centimeters;
+- **pt** - points;
+- **inch** - inches.
 
 The default value is centimeters (**cm**).
 
@@ -1382,7 +1273,6 @@ Type: string
 Example: "cm"
 
 > Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.unit* parameter.
-
 
 ## zoom
 
@@ -1394,9 +1284,9 @@ Example: 100
 
 > Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.zoom* parameter.
 
-
 ![Customization](/assets/images/editor/customization.png)
 
+**Example**
 
 ### Example
 

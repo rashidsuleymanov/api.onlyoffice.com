@@ -59,7 +59,6 @@ There are three main variants how the document can be opened with the *track cha
 
 Further information about the permissions can be found [at this page](../../../Usage%20API/Config/Document/Permissions/index.md).
 
-
 ## How to open a document with "commenting" mode enabled?
 
 To open the document with the *commenting* mode enabled, the *document.permissions* parameter is used (see the complete structure of ONLYOFFICE Docs configuration object [here](../../../Usage%20API/Advanced%20parameters/index.md)).
@@ -133,7 +132,6 @@ There are the following main variants how the document can be opened with the co
 
 Further information about the permissions can be found [at this page](../../../Usage%20API/Config/Document/Permissions/index.md).
 
-
 ## How can the 'fillForms' parameter be used?
 
 Starting from version 5.2, ONLYOFFICE Docs provides functionality for filling special forms without the need to give editing permissions to the user. This can be used, for example, in case you have a document form of some kind and want to give the users the access to this form so that they could fill it, but could not edit other document fields (e.g. fill the names in a contract but not change the contract terms, or fill the variable fields in some other document but leave the other parts of the document intact).
@@ -168,7 +166,6 @@ The second scenario is more commonly used, when you have a document template wit
 
 Further information about the permissions can be found [at this page](../../../Usage%20API/Config/Document/Permissions/index.md).
 
-
 ## How to enable both the editing and commenting mode for a document?
 
 To open the document with both the *editing* and the *commenting* modes enabled, the *document.permissions* parameter is used (see the complete structure of ONLYOFFICE Docs configuration object [here](../../../Usage%20API/Advanced%20parameters/index.md)).
@@ -191,21 +188,19 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 Further information about the permissions can be found [at this page](../../../Usage%20API/Config/Document/Permissions/index.md).
 
-
 ## Do the permission parameters influence each other?
 
 Most permission parameters are independent and are only enabled when their value is set to **true** and disabled when the value is set to **false**. There are, though, several combinations, when the permission will be either enabled or disabled notwithstanding the corresponding parameter value:
 
-* Form filling permission is enabled (even if the *fillForm* parameter is set to **false**) when either the *edit* or *review* parameter is set to **true**.
-* Form filling permission is disabled (even if the *fillForm* parameter is set to **true**) when both the *edit* and *review* parameters are set to **false** and the *comment* is set to **true**.
-* Commenting permission is disabled (even if the *comment* parameter is set to **true**) when both the *edit* and *review* parameters are set to **false** and the *fillForms* is set to **true**.
+- Form filling permission is enabled (even if the *fillForm* parameter is set to **false**) when either the *edit* or *review* parameter is set to **true**.
+- Form filling permission is disabled (even if the *fillForm* parameter is set to **true**) when both the *edit* and *review* parameters are set to **false** and the *comment* is set to **true**.
+- Commenting permission is disabled (even if the *comment* parameter is set to **true**) when both the *edit* and *review* parameters are set to **false** and the *fillForms* is set to **true**.
 
 You should bear this in mind when you set the necessary permissions and combine different permissions for the same document.
 
 See the interactive table below to find out how different parameters and parameter combinations influence each other and the resulting document permissions.
 
 Further information about the permissions can be found [at this page](../../../Usage%20API/Config/Document/Permissions/index.md).
-
 
 ## How to open the document in a viewer without the option to edit it?
 
@@ -233,7 +228,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 Further information about the permissions can be found [at this page](../../../Usage%20API/Config/Document/Permissions/index.md).
 
-
 ## How to disable/enable the possibility to download the file?
 
 To open the document with the *downloading* option disabled, the *document.permissions* parameter is used (see the complete structure of ONLYOFFICE Docs configuration object [here](../../../Usage%20API/Advanced%20parameters/index.md)).
@@ -252,7 +246,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 
 Further information about the permissions can be found [at this page](../../../Usage%20API/Config/Document/Permissions/index.md).
 
-
 ## How to prevent a document from being printed?
 
 To open the document with the *printing* option disabled, the *document.permissions* parameter is used (see the complete structure of ONLYOFFICE Docs configuration object [here](../../../Usage%20API/Advanced%20parameters/index.md)).
@@ -270,7 +263,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 ```
 
 Further information about the permissions can be found [at this page](../../../Usage%20API/Config/Document/Permissions/index.md).
-
 
 ## How to view and change sharing settings for a certain document?
 
@@ -307,7 +299,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
 ```
 
 Further information about the permissions can be found [at this page](../../../Usage%20API/Config/Document/Info/index.md).
-
 
 ## How to restrict commenting?
 

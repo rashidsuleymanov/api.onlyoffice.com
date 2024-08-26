@@ -10,22 +10,20 @@ Type: object
 
 **Presence**: optional
 
-
 ## async
 
 Defines the type of the request to the **document builder service**: asynchronous or not.
 
 Supported values:
 
-* **true**;
-* **false**.
+- **true**;
+- **false**.
 
 When the asynchronous request type is used, the response is formed instantly. In this case to get the result it is necessary to send requests without parameter change until the document generation is finished. The default value is **false**.
 
 Type: boolean
 
 **Presence**: optional
-
 
 ## key
 
@@ -35,7 +33,6 @@ Type: string
 
 **Presence**: required
 
-
 ## token
 
 Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../Signature/Request/Token%20in%20body/index.md#builder).
@@ -44,7 +41,6 @@ Type: string
 
 **Presence**: required by configuration
 
-
 ## url
 
 Defines the absolute URL to the .docbuilder file.
@@ -52,7 +48,6 @@ Defines the absolute URL to the .docbuilder file.
 Type: string
 
 **Presence**: required
-
 
 The *.docbuilder* file contains the script used to generate the output document file (text document, spreadsheet or presentation), specifies the output file format and name. Once the document generation is ready, the response with the absolute URL to the resulting file will be returned (see below).
 
@@ -71,7 +66,7 @@ You can find more information about the *.docbuilder* file syntax [here](../../.
 
 Where **example.com** is the name of the server where **document storage service** are installed. See the [How it works](../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-### Response format
+**Response format**
 
 ``` json
 {
@@ -89,7 +84,7 @@ Where **example.com** is the name of the server where **document storage service
 }
 ```
 
-### Response format
+**Response format**
 
 ``` json
 {
@@ -113,7 +108,7 @@ Where **example.com** is the name of the server where **document storage service
 
 Where **example.com** is the name of the server where **document storage service** are installed. See the [How it works](../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-### Response example
+**Response example**
 
 ``` json
 {
@@ -155,7 +150,7 @@ Where **example.com** is the name of the server where **document storage service
 
 Where **example.com** is the name of the server where **document storage service** are installed. See the [How it works](../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-### Response format
+**Response format**
 
 ``` json
 {

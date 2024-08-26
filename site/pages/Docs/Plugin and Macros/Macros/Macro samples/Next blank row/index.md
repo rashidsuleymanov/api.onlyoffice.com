@@ -2,7 +2,6 @@
 order: -9
 ---
 
-
 ## Description
 
 Finds the next available blank row in a worksheet. This macro allows you to get the blank at the very end of your data (not between it).

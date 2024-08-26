@@ -12,7 +12,6 @@ Some drawn objects - *images*, *shapes*, *charts* - can be placed directly to th
 
 The text that does not pertain to the cell values, can be grouped to *paragraphs* and added to the *shapes*. For the sake of convenience (as it is always easier to work with smaller blocks than with larger ones) the text is usually divided into small text portions called *runs*. Each paragraph can consist either of only one text run or have dozens of them inside, depending on the paragraph complexity.
 
-
 ## Creating a new spreadsheet
 
 The simplest example spreadsheet with a sheet named 'sheet 1' and the first column 140 pixels wide and A1 cell set to 'New cell' value can be built with the help of **ONLYOFFICE Document Builder** using the following code:
@@ -39,7 +38,6 @@ builder.SaveFile("xlsx", "example.xlsx")
 // close the spreadsheet file and finish work with ONLYOFFICE Document Builder
 builder.CloseFile()
 ```
-
 
 ## Opening an existing spreadsheet
 

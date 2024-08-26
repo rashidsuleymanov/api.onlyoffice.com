@@ -7,15 +7,10 @@ The reference figure and the steps below explain the process of renaming a docum
 ![Renaming File](/assets/images/editor/rename.svg)
 
 1. The user gives a new name to the document in the **document editor**.
-
 2. The **document editor** informs the **document manager** about the new name of the document.
-
 3. The **document manager** sends the new name of the document to the **document storage service** where the software integrators rename the document.
-
 4. The **document storage service** informs the **document editing service** about the new name of the document.
-
 5. The **document editing service** sends the new name of the document to the **document editor** of each user.
-
 6. Now the new name becomes visible to all users.
 
 ## How this can be done in practice

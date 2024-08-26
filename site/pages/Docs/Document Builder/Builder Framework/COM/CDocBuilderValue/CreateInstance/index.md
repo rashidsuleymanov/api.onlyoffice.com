@@ -1,10 +1,10 @@
-#### HRESULT CreateInstance(\[in, optional] VARIANT value);
+`HRESULT CreateInstance([in, optional] VARIANT value);`
 
 Creates an instance of the *CDocBuilderValue* class.
 
 > Please note, that for the *.docbuilder* file the *CDocBuilderValue.CreateInstance* method is not used.
 
-## Parameters:
+## Parameters
 
 | Name    | Type    | Description                                     |
 | ------- | ------- | ----------------------------------------------- |
@@ -12,9 +12,9 @@ Creates an instance of the *CDocBuilderValue* class.
 
 ## Example
 
-#### COM
+**COM**
 
-```c++
+```cpp
 CoInitialize(NULL);
 IONLYOFFICEDocBuilder* oBuilder = NULL;
 IONLYOFFICEDocBuilderContext* oContext = NULL;
@@ -34,7 +34,7 @@ oParagraph->Call(_bstr_t("SetSpacingAfter"), p1, ATL::CComVariant(VARIANT_FALSE)
 oBuilder->Dispose();
 ```
 
-#### .docbuilder
+**.docbuilder**
 
 ```js
 const oDocument = Api.GetDocument()

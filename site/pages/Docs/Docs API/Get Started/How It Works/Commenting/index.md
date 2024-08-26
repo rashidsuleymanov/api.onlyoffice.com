@@ -94,9 +94,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", {
    })
    ```
 
-   * *"edit": \["Group2", ""]* means that the user can edit comments made by users from *Group2* and users who do not belong to any of the groups (for example, the document that is commented in third-party editors).
-   * *"remove": \[""]* means that the user can remove comments made by someone who belongs to none of these groups (for example, the document that is commented in third-party editors).
-   * *"view": ""* means that the user can view comments made by any user.
+   - *"edit": \["Group2", ""]* means that the user can edit comments made by users from *Group2* and users who do not belong to any of the groups (for example, the document that is commented in third-party editors).
+   - *"remove": \[""]* means that the user can remove comments made by someone who belongs to none of these groups (for example, the document that is commented in third-party editors).
+   - *"view": ""* means that the user can view comments made by any user.
 
 ## Threaded comments in spreadsheets
 
@@ -119,5 +119,5 @@ To display ONLYOFFICE spreadsheet comments in other editors correctly, all the c
 
 The file in the editors opens as follows:
 
-* If there are threaded comments in the file, they are used when opening.
-* If there are comments in the original ONLYOFFICE format only, they are converted into threaded comments.
+- If there are threaded comments in the file, they are used when opening.
+- If there are comments in the original ONLYOFFICE format only, they are converted into threaded comments.

@@ -6,7 +6,7 @@ Allows you to open the SDK as a document editor for viewing by specifying the [i
 
 ![Viewer mode](/assets/images/docspace/viewer-mode.png)
 
-### Method
+**Method**
 
 | Name                                            | Description                                     |
 | ----------------------------------------------- | ----------------------------------------------- |

@@ -6,24 +6,23 @@ Starting from version 8.1, it is recommended to add the [shardkey](../../Get%20S
 
 ## Request parameters and their description
 
-* [async](#async)
-* [codePage](#codepage)
-* [delimiter](#delimiter)
-* [documentLayout](#documentlayout)
-* [documentRenderer](#documentrenderer)
-* [filetype](#filetype)
-* [key](#key)
-* [outputtype](#outputtype)
-* [password](#password)
-* [pdf](#pdf)
-* [region](#region)
-* [spreadsheetLayout](#spreadsheetlayout)
-* [thumbnail](#thumbnail)
-* [title](#title)
-* [token](#token)
-* [url](#url)
-* [watermark](#watermark)
-
+- [async](#async)
+- [codePage](#codepage)
+- [delimiter](#delimiter)
+- [documentLayout](#documentlayout)
+- [documentRenderer](#documentrenderer)
+- [filetype](#filetype)
+- [key](#key)
+- [outputtype](#outputtype)
+- [password](#password)
+- [pdf](#pdf)
+- [region](#region)
+- [spreadsheetLayout](#spreadsheetlayout)
+- [thumbnail](#thumbnail)
+- [title](#title)
+- [token](#token)
+- [url](#url)
+- [watermark](#watermark)
 
 ## async
 
@@ -31,8 +30,8 @@ Defines the conversion request type: asynchronous or not.
 
 Supported values:
 
-* **true**
-* **false**
+- **true**
+- **false**
 
 When the asynchronous request type is used, the response is formed instantly. In this case to get the result it is necessary to send requests without parameter change until the conversion is finished. The default value is **false**.
 
@@ -42,18 +41,17 @@ When the asynchronous request type is used, the response is formed instantly. In
 
 > If the conversion is synchronous and the file takes a long time to be converted, a web request timeout error may occur. Although the conversion can be eventually completed, the result can only be obtained by sending the request again with the same key.
 
-
 ## codePage
 
 Defines the file encoding when converting from *csv* or *txt* format.
 
 Main supported values:
 
-* **932** - Japanese (Shift-JIS);
-* **950** - Chinese Traditional (Big5);
-* **1250** - Central European (Windows);
-* **1251** - Cyrillic (Windows);
-* **65001** - Unicode (UTF-8).
+- **932** - Japanese (Shift-JIS);
+- **950** - Chinese Traditional (Big5);
+- **1250** - Central European (Windows);
+- **1251** - Cyrillic (Windows);
+- **65001** - Unicode (UTF-8).
 
 You can find all the supported values [in this file](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js).
 
@@ -61,24 +59,22 @@ You can find all the supported values [in this file](https://github.com/ONLYOFFI
 
 **Presence**: optional
 
-
 ## delimiter
 
 Defines the delimiter characters for separating values when converting from *csv* format.
 
 Supported values:
 
-* **0** - no delimiter;
-* **1** - tab;
-* **2** - semicolon;
-* **3** - colon;
-* **4** - comma;
-* **5** - space.
+- **0** - no delimiter;
+- **1** - tab;
+- **2** - semicolon;
+- **3** - colon;
+- **4** - comma;
+- **5** - space.
 
 **Type**: integer
 
 **Presence**: optional
-
 
 ## documentLayout
 
@@ -88,7 +84,6 @@ Defines the document layout which specifies parameters for printing forms as *pd
 
 **Presence**: optional
 
-
 ### documentLayout.drawPlaceHolders
 
 Defines if placeholders will be drawn or not.
@@ -96,7 +91,6 @@ Defines if placeholders will be drawn or not.
 **Type**: boolean
 
 **Presence**: optional
-
 
 ### documentLayout.drawFormHighlight
 
@@ -106,7 +100,6 @@ Defines if forms will be highlighted or not.
 
 **Presence**: optional
 
-
 ### documentLayout.isPrint
 
 Defines if the print mode is turned on or off. This parameter is used only for converting *docx/docxf* into *pdf*. If this parameter is equal to **true**, the *drawPlaceHolders* and *drawFormHighlight* flags are used as described above. If this parameter is **false**, the *drawFormHighlight* flag does not work and the *drawPlaceHolders* parameter allows saving the forms in the *pdf* format. The default value is **false**.
@@ -114,7 +107,6 @@ Defines if the print mode is turned on or off. This parameter is used only for c
 **Type**: boolean
 
 **Presence**: optional
-
 
 ## documentRenderer
 
@@ -124,22 +116,20 @@ Defines the document renderer when converting from *pdf*, *xps*, *oxps*.
 
 **Presence**: optional
 
-
 ### documentRenderer.textAssociation
 
 Defines the rendering mode that can have the following values:
 
-* **blockChar** - all text is converted by single characters. Each character is in its own frame (like a textbox);
-* **blockLine** - all text is converted by separate lines. Each text line is in its own frame. Lines can be combined within the same block;
-* **plainLine** - all text is converted as a plain text. But each line is a separate paragraph;
-* **plainParagraph** - all text is converted as a plain text. Lines are combined into paragraphs.
+- **blockChar** - all text is converted by single characters. Each character is in its own frame (like a textbox);
+- **blockLine** - all text is converted by separate lines. Each text line is in its own frame. Lines can be combined within the same block;
+- **plainLine** - all text is converted as a plain text. But each line is a separate paragraph;
+- **plainParagraph** - all text is converted as a plain text. Lines are combined into paragraphs.
 
 The default value is **plainLine**.
 
 **Type**: string
 
 **Presence**: optional
-
 
 ## filetype
 
@@ -151,7 +141,6 @@ Defines the type of the document file to be converted.
 
 **Presence**: required
 
-
 ## key
 
 Defines the document identifier used to unambiguously identify the document file.
@@ -160,20 +149,18 @@ Defines the document identifier used to unambiguously identify the document file
 
 **Presence**: required
 
-
 ## outputtype
 
 Defines the resulting converted document type. Starting from version 7.0, file formats can be specified instead of extensions. They are used when we do not know in advance what extension is required:
 
-* **ooxml** - defines that the file will be converted into *docx*, *docm*, *xlsx*, *xlsm*, *pptx* or *pptm*. For example, when the *doc* file is converted into the OOXML format, the resulting file can be *docx* or *docm* if this file contains macros (the same for *xls* and *ppt*). It is also applied when converting XML files into OOXML formats (*docx*, *xlsx* or *pptx* depending on the content);
-* **odf** - defines that the file will be converted into *odt*, *ods* or *odp*. For example, it is used when converting XML files into ODF formats (*odt*, *ods* or *odp* depending on the content).
+- **ooxml** - defines that the file will be converted into *docx*, *docm*, *xlsx*, *xlsm*, *pptx* or *pptm*. For example, when the *doc* file is converted into the OOXML format, the resulting file can be *docx* or *docm* if this file contains macros (the same for *xls* and *ppt*). It is also applied when converting XML files into OOXML formats (*docx*, *xlsx* or *pptx* depending on the content);
+- **odf** - defines that the file will be converted into *odt*, *ods* or *odp*. For example, it is used when converting XML files into ODF formats (*odt*, *ods* or *odp* depending on the content).
 
 > In the tables below you can see possibility of conversion your documents into the most known file formats, where the **Input format** column corresponds to the values of the **filetype** parameter and the **Output format** columns correspond to the values of the **outputtype** parameter.
 
 **Type**: string
 
 **Presence**: required
-
 
 ## password
 
@@ -183,7 +170,6 @@ Defines the password for the document file if it is protected with a password.
 
 **Presence**: optional
 
-
 ## pdf
 
 Defines settings for converting document files to pdf.
@@ -191,7 +177,6 @@ Defines settings for converting document files to pdf.
 **Type**: object
 
 **Presence**: optional
-
 
 ### pdf.form
 
@@ -201,7 +186,6 @@ Defines whether the document will be converted to the *pdf* form (**true**) or t
 
 **Presence**: optional
 
-
 ## region
 
 Defines the default display format for currency and date and time when converting from *Spreadsheet format* to *pdf*. Is set using the four letter (**en-US**, **fr-FR**, etc.) language codes. The default value is **en-US**.
@@ -209,7 +193,6 @@ Defines the default display format for currency and date and time when convertin
 **Type**: string
 
 **Presence**: optional
-
 
 ## spreadsheetLayout
 
@@ -221,7 +204,6 @@ Defines settings for converting the spreadsheet to pdf.
 
 **Presence**: optional
 
-
 ### spreadsheetLayout.fitToHeight
 
 Sets the height of the converted area, measured in the number of pages. The default value is **0**.
@@ -229,7 +211,6 @@ Sets the height of the converted area, measured in the number of pages. The defa
 **Type**: integer
 
 **Presence**: optional
-
 
 ### spreadsheetLayout.fitToWidth
 
@@ -239,7 +220,6 @@ Sets the width of the converted area, measured in the number of pages. The defau
 
 **Presence**: optional
 
-
 ### spreadsheetLayout.gridLines
 
 Allows to include grid lines to the output PDF file or not. The default value is **false**.
@@ -247,7 +227,6 @@ Allows to include grid lines to the output PDF file or not. The default value is
 **Type**: boolean
 
 **Presence**: optional
-
 
 ### spreadsheetLayout.headings
 
@@ -257,7 +236,6 @@ Allows to include the headings to the output PDF file or not. The default value 
 
 **Presence**: optional
 
-
 ### spreadsheetLayout.ignorePrintArea
 
 Determines whether to ignore the print area chosen for the spreadsheet file or not. The default value is **true**.
@@ -265,7 +243,6 @@ Determines whether to ignore the print area chosen for the spreadsheet file or n
 **Type**: boolean
 
 **Presence**: optional
-
 
 ### spreadsheetLayout.margins
 
@@ -275,7 +252,6 @@ Sets the margins of the output PDF file.
 
 **Presence**: optional
 
-
 ### spreadsheetLayout.margins.bottom
 
 Sets the bottom margin of the output PDF file. The default value is **19.1mm**.
@@ -283,7 +259,6 @@ Sets the bottom margin of the output PDF file. The default value is **19.1mm**.
 **Type**: string
 
 **Presence**: optional
-
 
 ### spreadsheetLayout.margins.left
 
@@ -293,7 +268,6 @@ Sets the left margin of the output PDF file. The default value is **17.8mm**.
 
 **Presence**: optional
 
-
 ### spreadsheetLayout.margins.right
 
 Sets the right margin of the output PDF file. The default value is **17.8mm**.
@@ -301,7 +275,6 @@ Sets the right margin of the output PDF file. The default value is **17.8mm**.
 **Type**: string
 
 **Presence**: optional
-
 
 ### spreadsheetLayout.margins.top
 
@@ -311,7 +284,6 @@ Sets the top margin of the output PDF file. The default value is **19.1mm**.
 
 **Presence**: optional
 
-
 ### spreadsheetLayout.orientation
 
 Sets the orientation of the output PDF file. May be **landscape**, **portrait**. The default value is **portrait**.
@@ -319,7 +291,6 @@ Sets the orientation of the output PDF file. May be **landscape**, **portrait**.
 **Type**: string
 
 **Presence**: optional
-
 
 ### spreadsheetLayout.pageSize
 
@@ -329,7 +300,6 @@ Sets the page size of the output PDF file.
 
 **Presence**: optional
 
-
 ### spreadsheetLayout.pageSize.height
 
 Sets the page height of the output PDF file. The default value is **297mm**.
@@ -337,7 +307,6 @@ Sets the page height of the output PDF file. The default value is **297mm**.
 **Type**: string
 
 **Presence**: optional
-
 
 ### spreadsheetLayout.pageSize.width
 
@@ -347,7 +316,6 @@ Sets the page width of the output PDF file. The default value is **210mm**.
 
 **Presence**: optional
 
-
 ### spreadsheetLayout.scale
 
 Allows to set the scale of the output PDF file. The default value is **100**.
@@ -355,7 +323,6 @@ Allows to set the scale of the output PDF file. The default value is **100**.
 **Type**: integer
 
 **Presence**: optional
-
 
 ## thumbnail
 
@@ -365,21 +332,19 @@ Defines the settings for the thumbnail when specifying the image formats (*bmp*,
 
 **Presence**: optional
 
-
 ### thumbnail.aspect
 
 Defines the mode to fit the image to the height and width specifyed. Supported values:
 
-* **0** - stretch file to fit height and width;
-* **1** - keep the aspect for the image;
-* **2** - in this case, the width and height settings are not used. Instead of that, metric sizes of the page are converted into pixels with 96dpi. E.g., the A4 (210x297mm) page will turn out to be a picture with the 794x1123pix dimensions.
+- **0** - stretch file to fit height and width;
+- **1** - keep the aspect for the image;
+- **2** - in this case, the width and height settings are not used. Instead of that, metric sizes of the page are converted into pixels with 96dpi. E.g., the A4 (210x297mm) page will turn out to be a picture with the 794x1123pix dimensions.
 
 The default value is **2**.
 
 **Type**: integer
 
 **Presence**: optional
-
 
 ### thumbnail.first
 
@@ -389,7 +354,6 @@ Defines if the thumbnails should be generated for the first page only or for all
 
 **Presence**: optional
 
-
 ### thumbnail.height
 
 Defines the thumbnail height in pixels. The default value is **100**.
@@ -397,7 +361,6 @@ Defines the thumbnail height in pixels. The default value is **100**.
 **Type**: integer
 
 **Presence**: optional
-
 
 ### thumbnail.width
 
@@ -407,7 +370,6 @@ Defines the thumbnail width in pixels. The default value is **100**.
 
 **Presence**: optional
 
-
 ## title
 
 Defines the converted file name.
@@ -415,7 +377,6 @@ Defines the converted file name.
 **Type**: string
 
 **Presence**: optional
-
 
 ## token
 
@@ -425,7 +386,6 @@ Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the f
 
 **Presence**: required by configuration
 
-
 ## url
 
 Defines the absolute URL to the document to be converted. Be sure to add a [token](../../Get%20Started/How%20It%20Works/Security/index.md) when using local links. Otherwise, an error will occur.
@@ -433,7 +393,6 @@ Defines the absolute URL to the document to be converted. Be sure to add a [toke
 **Type**: string
 
 **Presence**: required
-
 
 ## watermark
 
@@ -443,7 +402,6 @@ Defines a JSON object containing the properties of a watermark which is inserted
 
 **Presence**: optional
 
-
 ### watermark.transparent
 
 Defines the watermark transparency degree.
@@ -451,7 +409,6 @@ Defines the watermark transparency degree.
 **Type**: float
 
 **Presence**: optional
-
 
 ### watermark.type
 
@@ -461,7 +418,6 @@ Defines the shape type which specifies the preset shape geometry for the current
 
 **Presence**: optional
 
-
 ### watermark.width
 
 Defines the watermark width measured in millimeters.
@@ -469,7 +425,6 @@ Defines the watermark width measured in millimeters.
 **Type**: integer
 
 **Presence**: optional
-
 
 ### watermark.height
 
@@ -479,7 +434,6 @@ Defines the watermark height measured in millimeters.
 
 **Presence**: optional
 
-
 ### watermark.rotate
 
 Defines the watermark rotation angle measured in degrees.
@@ -487,7 +441,6 @@ Defines the watermark rotation angle measured in degrees.
 **Type**: integer
 
 **Presence**: optional
-
 
 ### watermark.margins
 
@@ -497,7 +450,6 @@ Defines the text margins measured in millimeters in the watermark shape.
 
 **Presence**: optional
 
-
 ### watermark.fill
 
 Defines the watermark fill color in the RGB format, or the URL to image (base64 support: *data:image/png;...*). The empty array \[] means that the watermark has no fill.
@@ -505,7 +457,6 @@ Defines the watermark fill color in the RGB format, or the URL to image (base64 
 **Type**: array of integers \| string
 
 **Presence**: optional
-
 
 ### watermark.stroke-width
 
@@ -515,7 +466,6 @@ Defines the watermark stroke width measured in millimeters.
 
 **Presence**: optional
 
-
 ### watermark.stroke
 
 Defines the watermark stroke color in the RGB format. The empty array \[] means that the watermark stroke has no fill.
@@ -523,7 +473,6 @@ Defines the watermark stroke color in the RGB format. The empty array \[] means 
 **Type**: array of integers
 
 **Presence**: optional
-
 
 ### watermark.align
 
@@ -533,7 +482,6 @@ Defines the vertical text align in the watermark shape: **0** - bottom, **1** - 
 
 **Presence**: optional
 
-
 ### watermark.paragraphs
 
 Defines the array with paragraphs from the current watermark with their properties.
@@ -541,7 +489,6 @@ Defines the array with paragraphs from the current watermark with their properti
 **Type**: array of objects
 
 **Presence**: optional
-
 
 ### watermark.paragraphs.align
 
@@ -551,7 +498,6 @@ Defines the horizontal text align in the current paragraph: **0** - right, **1**
 
 **Presence**: optional
 
-
 ### watermark.paragraphs.fill
 
 Defines the paragraph highlight in the RGB format. The empty array \[] means that the paragraph is not highlighted.
@@ -559,7 +505,6 @@ Defines the paragraph highlight in the RGB format. The empty array \[] means tha
 **Type**: array of integers
 
 **Presence**: optional
-
 
 ### watermark.paragraphs.linespacing
 
@@ -569,7 +514,6 @@ Defines the text linespacing in the current paragraph.
 
 **Presence**: optional
 
-
 ### watermark.paragraphs.runs
 
 Defines the array with runs from the current paragraph with their properties.
@@ -577,7 +521,6 @@ Defines the array with runs from the current paragraph with their properties.
 **Type**: array of objects
 
 **Presence**: optional
-
 
 ### watermark.paragraphs.runs.text
 
@@ -587,7 +530,6 @@ Defines the run text.
 
 **Presence**: optional
 
-
 ### watermark.paragraphs.runs.fill
 
 Defines the text highlight in the RGB format. The empty array \[] means that the text is not highlighted.
@@ -595,7 +537,6 @@ Defines the text highlight in the RGB format. The empty array \[] means that the
 **Type**: array of integers
 
 **Presence**: optional
-
 
 ### watermark.paragraphs.runs.font-family
 
@@ -605,7 +546,6 @@ Defines the text font family.
 
 **Presence**: optional
 
-
 ### watermark.paragraphs.runs.font-size
 
 Defines the text font size measured in points (pt).
@@ -613,7 +553,6 @@ Defines the text font size measured in points (pt).
 **Type**: string
 
 **Presence**: optional
-
 
 ### watermark.paragraphs.runs.bold
 
@@ -623,7 +562,6 @@ Defines if the current text is displayed bold or not.
 
 **Presence**: optional
 
-
 ### watermark.paragraphs.runs.italic
 
 Defines if the current text is displayed italic or not.
@@ -631,7 +569,6 @@ Defines if the current text is displayed italic or not.
 **Type**: boolean
 
 **Presence**: optional
-
 
 ### watermark.paragraphs.runs.strikeout
 
@@ -641,7 +578,6 @@ Defines if the current text is displayed struck through or not.
 
 **Presence**: optional
 
-
 ### watermark.paragraphs.runs.underline
 
 Defines if the current text is displayed underlined or not.
@@ -650,80 +586,77 @@ Defines if the current text is displayed underlined or not.
 
 **Presence**: optional
 
-
 ## Text document file formats
 
-
-| | bmp | docm | docx | docxf | dotm | dotx | epub | fb2 | gif | html | jpg | odt | ott | pdf | pdfa | png | rtf | txt |
-| ---------------- | --- | ---- | ---- | ----- | ---- | ---- | ---- | --- | --- | ---- | --- | --- | --- | --- | ---- | --- | --- | --- |
-| djvu             | +   |      |      |       |      |      |      |     | +   |      | +   |     |     | +   | +    | +   |     |     |
-| doc              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| docm             | +   |      | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| docx             | +   | +    |      | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| docxf            | +   | +    | +    |       | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| dot              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| dotm             | +   | +    | +    | +     |      | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| dotx             | +   | +    | +    | +     | +    |      | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| epub             | +   | +    | +    | +     | +    | +    |      | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| fb2              | +   | +    | +    | +     | +    | +    | +    |     | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| fodt             | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| htm              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| html             | +   | +    | +    | +     | +    | +    | +    | +   | +   |      | +   | +   | +   | +   | +    | +   | +   | +   |
-| mht              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| mhtml            | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| odt              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   |     | +   | +   | +    | +   | +   | +   |
-| ott              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    |     | +   | +   | +   | +    | +   | +   | +   |
-| oxps             | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| pdf              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   |     | +    | +   | +   | +   |
-| rtf              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   |     | +   |
-| stw              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| sxw              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| txt              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   |     |
-| wps              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| wpt              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| xml              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
-| xps              | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+|       | bmp | docm | docx | docxf | dotm | dotx | epub | fb2 | gif | html | jpg | odt | ott | pdf | pdfa | png | rtf | txt |
+| ----- | --- | ---- | ---- | ----- | ---- | ---- | ---- | --- | --- | ---- | --- | --- | --- | --- | ---- | --- | --- | --- |
+| djvu  | +   |      |      |       |      |      |      |     | +   |      | +   |     |     | +   | +    | +   |     |     |
+| doc   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| docm  | +   |      | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| docx  | +   | +    |      | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| docxf | +   | +    | +    |       | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| dot   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| dotm  | +   | +    | +    | +     |      | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| dotx  | +   | +    | +    | +     | +    |      | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| epub  | +   | +    | +    | +     | +    | +    |      | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| fb2   | +   | +    | +    | +     | +    | +    | +    |     | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| fodt  | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| htm   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| html  | +   | +    | +    | +     | +    | +    | +    | +   | +   |      | +   | +   | +   | +   | +    | +   | +   | +   |
+| mht   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| mhtml | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| odt   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   |     | +   | +   | +    | +   | +   | +   |
+| ott   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    |     | +   | +   | +   | +    | +   | +   | +   |
+| oxps  | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| pdf   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   |     | +    | +   | +   | +   |
+| rtf   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   |     | +   |
+| stw   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| sxw   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| txt   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   |     |
+| wps   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| wpt   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| xml   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
+| xps   | +   | +    | +    | +     | +    | +    | +    | +   | +   | +    | +   | +   | +   | +   | +    | +   | +   | +   |
 
 ## Spreadsheet file formats
 
-
-| | bmp | csv | gif | jpg | ods | ots | pdf | pdfa | png | xlsm | xlsx | xltm | xltx |
-| ---------------- | --- | --- | --- | --- | --- | --- | --- | ---- | --- | ---- | ---- | ---- | ---- |
-| csv              | +   |     | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
-| et               | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
-| ett              | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
-| fods             | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
-| ods              | +   | +   | +   | +   |     | +   | +   | +    | +   | +    | +    | +    | +    |
-| ots              | +   | +   | +   | +   | +   |     | +   | +    | +   | +    | +    | +    | +    |
-| sxc              | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
-| xls              | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
-| xlsb             | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
-| xlsm             | +   | +   | +   | +   | +   | +   | +   | +    | +   |      | +    | +    | +    |
-| xlsx             | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    |      | +    | +    |
-| xlt              | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
-| xltm             | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    |      | +    |
-| xltx             | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    |      |
-| xml              | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
+|      | bmp | csv | gif | jpg | ods | ots | pdf | pdfa | png | xlsm | xlsx | xltm | xltx |
+| ---- | --- | --- | --- | --- | --- | --- | --- | ---- | --- | ---- | ---- | ---- | ---- |
+| csv  | +   |     | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
+| et   | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
+| ett  | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
+| fods | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
+| ods  | +   | +   | +   | +   |     | +   | +   | +    | +   | +    | +    | +    | +    |
+| ots  | +   | +   | +   | +   | +   |     | +   | +    | +   | +    | +    | +    | +    |
+| sxc  | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
+| xls  | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
+| xlsb | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
+| xlsm | +   | +   | +   | +   | +   | +   | +   | +    | +   |      | +    | +    | +    |
+| xlsx | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    |      | +    | +    |
+| xlt  | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
+| xltm | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    |      | +    |
+| xltx | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    |      |
+| xml  | +   | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |
 
 ## Presentation file formats
 
-| | bmp | gif | jpg | odp | otp | pdf | pdfa | png | potm | potx | ppsm | ppsx | pptm | pptx |
-| ---------------- | --- | --- | --- | --- | --- | --- | ---- | --- | ---- | ---- | ---- | ---- | ---- | ---- |
-| dps              | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
-| dpt              | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
-| fodp             | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
-| odp              | +   | +   | +   |     | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
-| otp              | +   | +   | +   | +   |     | +   | +    | +   | +    | +    | +    | +    | +    | +    |
-| pot              | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
-| potm             | +   | +   | +   | +   | +   | +   | +    | +   |      | +    | +    | +    | +    | +    |
-| potx             | +   | +   | +   | +   | +   | +   | +    | +   | +    |      | +    | +    | +    | +    |
-| pps              | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
-| ppsm             | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    |      | +    | +    | +    |
-| ppsx             | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    |      | +    | +    |
-| ppt              | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
-| pptm             | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |      | +    |
-| pptx             | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    |      |
-| sxi              | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
+|      | bmp | gif | jpg | odp | otp | pdf | pdfa | png | potm | potx | ppsm | ppsx | pptm | pptx |
+| ---- | --- | --- | --- | --- | --- | --- | ---- | --- | ---- | ---- | ---- | ---- | ---- | ---- |
+| dps  | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
+| dpt  | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
+| fodp | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
+| odp  | +   | +   | +   |     | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
+| otp  | +   | +   | +   | +   |     | +   | +    | +   | +    | +    | +    | +    | +    | +    |
+| pot  | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
+| potm | +   | +   | +   | +   | +   | +   | +    | +   |      | +    | +    | +    | +    | +    |
+| potx | +   | +   | +   | +   | +   | +   | +    | +   | +    |      | +    | +    | +    | +    |
+| pps  | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
+| ppsm | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    |      | +    | +    | +    |
+| ppsx | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    |      | +    | +    |
+| ppt  | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
+| pptm | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    |      | +    |
+| pptx | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    |      |
+| sxi  | +   | +   | +   | +   | +   | +   | +    | +   | +    | +    | +    | +    | +    | +    |
 
 ### Sample of JSON object sent to **document conversion service** used to convert the file from *docx* format to *pdf* format
 

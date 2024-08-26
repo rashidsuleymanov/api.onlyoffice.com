@@ -1,6 +1,6 @@
 To check if the desktop app supports encryption, call the following command:
 
-``` javascript
+``` js
 typeof window.AscDesktopEditor.cloudCryptoCommand === "function"
 ```
 
@@ -8,7 +8,7 @@ The steps below explain the process of document encryption in ONLYOFFICE.
 
 1. Log in to the cloud and pass the **Encryption** plugin ID:
 
-   ``` javascript
+   ``` js
    window.AscDesktopEditor.execCommand("portal:login", JSON.stringify({
      encryptionKeys: {
        cryptoEngineId: "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}",
@@ -34,7 +34,6 @@ The steps below explain the process of document encryption in ONLYOFFICE.
 
    Example: `https://exampledomain.com`
 
-
    ## emailInput
 
    Defines the user email entered on the login page.
@@ -42,7 +41,6 @@ The steps below explain the process of document encryption in ONLYOFFICE.
    Type: string
 
    Example: `john@example.com`
-
 
    ## pwdInput
 
@@ -52,10 +50,9 @@ The steps below explain the process of document encryption in ONLYOFFICE.
 
    Example: "123456"
 
+   **Example**
 
-   ### Example
-
-   ``` javascript
+   ``` js
    window.AscDesktopEditor.execCommand("portal:checkpwd", JSON.stringify({
      domain: "https://exampledomain.com",
      emailInput: "john@example.com",
@@ -85,7 +82,6 @@ The steps below explain the process of document encryption in ONLYOFFICE.
 
    Example: "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"
 
-
    ## privateKeyEnc
 
    Defines the encrypted private key.
@@ -94,7 +90,6 @@ The steps below explain the process of document encryption in ONLYOFFICE.
 
    Example: "xxx"
 
-    
    ## publicKey
 
    Defines the public key.
@@ -103,10 +98,9 @@ The steps below explain the process of document encryption in ONLYOFFICE.
 
    Example: "yyy"
 
+   **Example**
 
-   ### Example
-
-   ``` javascript
+   ``` js
    window.AscDesktopEditor.execCommand("portal:login", JSON.stringify({
      encryptionKeys: {
        cryptoEngineId: "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}",
@@ -132,7 +126,7 @@ The steps below explain the process of document encryption in ONLYOFFICE.
 
 4. Send the generated keys to the cloud through the *cloudCryptoCommand* method with the *encryptionKeys* type:
 
-   ``` javascript
+   ``` js
    window.AscDesktopEditor.cloudCryptoCommand(
      "encryptionKeys",
      {

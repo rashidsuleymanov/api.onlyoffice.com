@@ -16,7 +16,6 @@ Type: string
 
 Example: "operation"
 
-
 ## e.opMessage
 
 Defines the message that will be displayed to the user.
@@ -24,7 +23,6 @@ Defines the message that will be displayed to the user.
 Type: string
 
 Example: "Loading..."
-
 
 ## e.opType
 
@@ -34,6 +32,7 @@ Type: integer
 
 Example: 1
 
+**Example**
 
 ### Example
 

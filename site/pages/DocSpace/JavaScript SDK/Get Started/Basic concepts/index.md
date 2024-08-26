@@ -24,7 +24,7 @@ Create the target HTML file which must include a placeholder *div* tag, where al
 
 The API JavaScript file can normally be found in the following DocSpace folder:
 
-**{PORTAL\_SRC}/static/scripts/sdk/1.0.0/api.js**
+`{PORTAL\_SRC}/static/scripts/sdk/1.0.0/api.js`
 
 where **{PORTAL\_SRC}** is the name of the server with the ONLYOFFICE DocSpace installed.
 
@@ -63,6 +63,6 @@ The full list of [config parameters](../../JavaScript%20SDK/Config/index.md) can
 
 After initialization, the current SDK instance can be accessed by using its [frameId](../../JavaScript%20SDK/Config/index.md#frameid). The list of current SDK instances is available in the *DocSpace.SDK.frames* array. To get the specific SDK instance, use the following string:
 
-``` javascript
+``` js
 DocSpace.SDK.frames[frameId]
 ```

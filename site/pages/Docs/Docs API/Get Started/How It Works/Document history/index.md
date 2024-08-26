@@ -156,9 +156,9 @@ If the document version was created with the **document editor**, then the docum
 
 > When the server version is updated, the **document editor** does not use the *changes* data to highlight changes in the history. It only returns the changed document in the *changesurl* parameter.
 
-* [history](../../../Usage%20API/Callback%20handler/index.md#history) - this information allows to display the time and the author for each document version when you view the document history in the side panel. Must be sent as a property changes of the object sent as the argument to the [refreshHistory](../../../Usage%20API/Methods/index.md#refreshhistory) method.
+- [history](../../../Usage%20API/Callback%20handler/index.md#history) - this information allows to display the time and the author for each document version when you view the document history in the side panel. Must be sent as a property changes of the object sent as the argument to the [refreshHistory](../../../Usage%20API/Methods/index.md#refreshhistory) method.
 
-  ``` javascript
+  ``` js
   docEditor.refreshHistory({
     currentVersion: 2,
     history: [
@@ -192,11 +192,11 @@ If the document version was created with the **document editor**, then the docum
 
   > ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted. Therefore, you cannot see the document versions created with the [force saving option](../Saving%20file/index.md#forcesave) in the document history.
 
-* [changesurl](../../../Usage%20API/Callback%20handler/index.md#changesurl) - the absolute URL to the file with the document editing data used to show the changes corresponding to the specific document version. The file must be saved and its address must be sent as changesUrl parameter using the [setHistoryData](../../../Usage%20API/Methods/index.md#sethistorydata) method. The link to the previous document version (*previous.url*) must be added into the object.
+- [changesurl](../../../Usage%20API/Callback%20handler/index.md#changesurl) - the absolute URL to the file with the document editing data used to show the changes corresponding to the specific document version. The file must be saved and its address must be sent as changesUrl parameter using the [setHistoryData](../../../Usage%20API/Methods/index.md#sethistorydata) method. The link to the previous document version (*previous.url*) must be added into the object.
 
   When calling the *setHistoryData* method to view the document history version, the token must be added to validate the parameters.
 
-  ``` javascript
+  ``` js
   docEditor.setHistoryData({
     changesUrl: "https://example.com/url-to-changes.zip",
     fileType: "docx",

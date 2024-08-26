@@ -10,9 +10,9 @@ Follow the steps below to add your own document management system (DMS) to the c
 
 Create a folder using the DMS provider as a name (e.g. *onlyoffice*) in the *providers* directory. The path to the folder depends on the operating system you use:
 
-* For Linux - */opt/onlyoffice/desktopeditors/providers/*
-* For Windows - *%ProgramFiles%\ONLYOFFICE\DesktopEditors\providers\\*
-* For Mac OS - */Applications/ONLYOFFICE.app/Contents/Resources/providers/*
+- For Linux - */opt/onlyoffice/desktopeditors/providers/*
+- For Windows - *%ProgramFiles%\ONLYOFFICE\DesktopEditors\providers\\*
+- For Mac OS - */Applications/ONLYOFFICE.app/Contents/Resources/providers/*
 
 ## Step 2
 
@@ -26,7 +26,6 @@ Type: string
 
 Example: "onlyoffice"
 
-
 ## name
 
 Defines the name displayed in the provider choice section when adding a cloud.
@@ -34,7 +33,6 @@ Defines the name displayed in the provider choice section when adding a cloud.
 Type: string
 
 Example: "ONLYOFFICE"
-
 
 ## check
 
@@ -55,7 +53,6 @@ Example:
 }
 ```
 
-
 ### check.url
 
 The URL used in the request.
@@ -63,7 +60,6 @@ The URL used in the request.
 Type: string
 
 Example: "status"
-
 
 ### check.headers
 
@@ -73,7 +69,6 @@ Type: object
 
 Example: {"OCS-APIREQUEST": true}
 
-
 ## entryPage
 
 Defines the URL to connect the provider. It is used instead of the provider address and allows the desktop app not to send the [check](#check) request.
@@ -82,7 +77,6 @@ Type: string
 
 Example: `https://url-to-connect-provider.com`
 
-
 ## extraLogout
 
 Defines the URL to log out from the cloud. It is used instead of the provider address.
@@ -90,16 +84,6 @@ Defines the URL to log out from the cloud. It is used instead of the provider ad
 Type: string or array of strings
 
 Example: `https://url-for-logout.com`
-
-
-## editorPage
-
-Defines the relative URL that indicates that the type of the opening file is a document.
-
-Type: string
-
-Example: "/apps/onlyoffice/"
-
 
 ## editorPage
 
@@ -111,7 +95,6 @@ Type: string
 
 Example: "/apps/onlyoffice/"
 
-
 ## startPage
 
 Defines the relative URL added to the entered IP or domain when creating a new connection.
@@ -119,7 +102,6 @@ Defines the relative URL added to the entered IP or domain when creating a new c
 Type: string
 
 Example: "/"
-
 
 ## icons
 
@@ -140,7 +122,6 @@ Example:
 }
 ```
 
-
 ### icons.connectionsList
 
 The path to the icon for the connection list.
@@ -149,7 +130,6 @@ Type: string
 
 Example: "./assets/listicon.svg"
 
-
 ### icons.buttonLogo
 
 The path to the icon for the provider button on the connection page when the portal list is empty.
@@ -157,7 +137,6 @@ The path to the icon for the provider button on the connection page when the por
 Type: string
 
 Example: "./assets/buttonlogo.svg"
-
 
 ### Example
 

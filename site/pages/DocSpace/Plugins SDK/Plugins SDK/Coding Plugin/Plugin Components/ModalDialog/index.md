@@ -18,7 +18,6 @@ Type: boolean
 
 Example: true
 
-
 ### Example
 
 ``` javascript

@@ -17,13 +17,8 @@ To debug ONLYOFFICE macros, follow the instructions below.
 
 3. To run your script in debug mode:
 
-   **For ONLYOFFICE Docs**
-
-   Open the developer console by pressing the **F12** button.
-
-   **For Desktop Editors**
-
-   Use the [instruction](../../../Desktop%20Editors/Usage%20API/Debugging/index.md) for debugging in ONLYOFFICE Desktop Editors.
+   - **For ONLYOFFICE Docs**: open the developer console by pressing the **F12** button.
+   - **For Desktop Editors**: use the [instruction](../../../Desktop%20Editors/Usage%20API/Debugging/index.md) for debugging in ONLYOFFICE Desktop Editors.
 
 4. Press the **Run** button to run your script.
 
