@@ -208,7 +208,7 @@
                             <a href="<%= Url.Action("pluginssdk/addingplugin") %>">Adding plugin</a>
                         </li>
                         <li>
-                            <a href="/docspace-storybook" target="_blank">Storybook</a>
+                            <a href="/docspace-storybook/" target="_blank">Storybook</a>
                         </li>
             <li>
                 <a title="How to create plugin step by step" href="<%= Url.Action("pluginssdk/plugintutorial") %>">How to create plugin step by step</a>
