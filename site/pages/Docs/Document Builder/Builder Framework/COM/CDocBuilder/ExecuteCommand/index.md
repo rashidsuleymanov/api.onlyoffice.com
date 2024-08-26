@@ -29,6 +29,6 @@ oBuilder->Dispose();
 #### .docbuilder
 
 ```js
-oParagraph.AddText("Hello, world!");
-oParagraph.SetSpacingAfter(1000, false);
+oParagraph.AddText("Hello, world!")
+oParagraph.SetSpacingAfter(1000, false)
 ```

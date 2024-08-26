@@ -8,7 +8,7 @@ import eslintStylistic from "@stylistic/eslint-plugin"
 import {ESLint as ES} from "eslint"
 import eslintImport from "eslint-plugin-import"
 import eslintJsonc from "eslint-plugin-jsonc"
-// import eslintMarkdown from "eslint-plugin-markdown"
+import eslintMarkdown from "eslint-plugin-markdown"
 import eslintPromise from "eslint-plugin-promise"
 import eslintUnicorn from "eslint-plugin-unicorn"
 import eslintWc from "eslint-plugin-wc"
@@ -743,103 +743,109 @@ const c: Config = [
     },
   },
 
-  // {
-  //   // Based on https://github.com/eslint/markdown/blob/v5.1.0/README.md
-  //   name: "markdown",
+  {
+    // Based on https://github.com/eslint/markdown/blob/v5.1.0/README.md
+    name: "markdown",
 
-  //   files: [
-  //     "*.md",
-  //     "**/*.md",
-  //   ],
+    files: [
+      "*.md",
+      "**/*.md",
+    ],
 
-  //   processor: eslintMarkdown.processors.markdown,
+    processor: eslintMarkdown.processors.markdown,
 
-  //   plugins: {
-  //     markdown: eslintMarkdown,
-  //   },
-  // },
+    plugins: {
+      markdown: eslintMarkdown,
+    },
+  },
 
-  // {
-  //   // Based on https://github.com/typescript-eslint/typescript-eslint/blob/v8.0.1/packages/eslint-plugin/src/configs/disable-type-checked.ts
-  //   name: "markdown/typescript",
+  {
+    // Based on https://github.com/typescript-eslint/typescript-eslint/blob/v8.0.1/packages/eslint-plugin/src/configs/disable-type-checked.ts
+    name: "markdown/typescript",
 
-  //   files: [
-  //     "*.md/*.cjs",
-  //     "*.md/*.cts",
-  //     "*.md/*.js",
-  //     "*.md/*.jsx",
-  //     "*.md/*.mjs",
-  //     "*.md/*.mts",
-  //     "*.md/*.ts",
-  //     "*.md/*.tsx",
-  //     "**/*.md/*.cjs",
-  //     "**/*.md/*.cts",
-  //     "**/*.md/*.js",
-  //     "**/*.md/*.jsx",
-  //     "**/*.md/*.mjs",
-  //     "**/*.md/*.mts",
-  //     "**/*.md/*.ts",
-  //     "**/*.md/*.tsx",
-  //   ],
+    files: [
+      "*.md/*.cjs",
+      "*.md/*.cts",
+      "*.md/*.js",
+      "*.md/*.jsx",
+      "*.md/*.mjs",
+      "*.md/*.mts",
+      "*.md/*.ts",
+      "*.md/*.tsx",
+      "**/*.md/*.cjs",
+      "**/*.md/*.cts",
+      "**/*.md/*.js",
+      "**/*.md/*.jsx",
+      "**/*.md/*.mjs",
+      "**/*.md/*.mts",
+      "**/*.md/*.ts",
+      "**/*.md/*.tsx",
+    ],
 
-  //   languageOptions: {
-  //     parserOptions: {
-  //       ecmaFeatures: {
-  //         impliedStrict: true,
-  //       },
-  //       program: null,
-  //       project: false,
-  //       projectService: false,
-  //     },
-  //   },
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: {
+          impliedStrict: true,
+        },
+        program: null,
+        project: false,
+        projectService: false,
+      },
+    },
 
-  //   rules: {
-  //     "new-cap": "off",
+    rules: {
+      "camelcase": "off",
+      "new-cap": "off",
+      "no-debugger": "off",
 
-  //     "@typescript-eslint/await-thenable": "off",
-  //     "@typescript-eslint/dot-notation": "off",
-  //     "@typescript-eslint/explicit-function-return-type": "off",
-  //     "@typescript-eslint/explicit-module-boundary-types": "off",
-  //     "@typescript-eslint/no-array-delete": "off",
-  //     "@typescript-eslint/no-base-to-string": "off",
-  //     "@typescript-eslint/no-confusing-void-expression": "off",
-  //     "@typescript-eslint/no-duplicate-type-constituents": "off",
-  //     "@typescript-eslint/no-floating-promises": "off",
-  //     "@typescript-eslint/no-for-in-array": "off",
-  //     "@typescript-eslint/no-implied-eval": "off",
-  //     "@typescript-eslint/no-meaningless-void-operator": "off",
-  //     "@typescript-eslint/no-misused-promises": "off",
-  //     "@typescript-eslint/no-mixed-enums": "off",
-  //     "@typescript-eslint/no-redundant-type-constituents": "off",
-  //     "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
-  //     "@typescript-eslint/no-unnecessary-qualifier": "off",
-  //     "@typescript-eslint/no-unnecessary-template-expression": "off",
-  //     "@typescript-eslint/no-unnecessary-type-arguments": "off",
-  //     "@typescript-eslint/no-unnecessary-type-assertion": "off",
-  //     "@typescript-eslint/no-unsafe-argument": "off",
-  //     "@typescript-eslint/no-unsafe-enum-comparison": "off",
-  //     "@typescript-eslint/no-unsafe-unary-minus": "off",
-  //     "@typescript-eslint/no-unused-expressions": "off",
-  //     "@typescript-eslint/no-unused-vars": "off",
-  //     "@typescript-eslint/non-nullable-type-assertion-style": "off",
-  //     "@typescript-eslint/only-throw-error": "off",
-  //     "@typescript-eslint/prefer-destructuring": "off",
-  //     "@typescript-eslint/prefer-find": "off",
-  //     "@typescript-eslint/prefer-includes": "off",
-  //     "@typescript-eslint/prefer-promise-reject-errors": "off",
-  //     "@typescript-eslint/prefer-reduce-type-parameter": "off",
-  //     "@typescript-eslint/prefer-regexp-exec": "off",
-  //     "@typescript-eslint/prefer-string-starts-ends-with": "off",
-  //     "@typescript-eslint/promise-function-async": "off",
-  //     "@typescript-eslint/require-array-sort-compare": "off",
-  //     "@typescript-eslint/require-await": "off",
-  //     "@typescript-eslint/restrict-plus-operands": "off",
-  //     "@typescript-eslint/return-await": "off",
-  //     "@typescript-eslint/unbound-method": "off",
+      "@typescript-eslint/await-thenable": "off",
+      "@typescript-eslint/dot-notation": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-array-delete": "off",
+      "@typescript-eslint/no-base-to-string": "off",
+      "@typescript-eslint/no-confusing-void-expression": "off",
+      "@typescript-eslint/no-duplicate-type-constituents": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-floating-promises": "off",
+      "@typescript-eslint/no-for-in-array": "off",
+      "@typescript-eslint/no-implied-eval": "off",
+      "@typescript-eslint/no-invalid-this": "off",
+      "@typescript-eslint/no-meaningless-void-operator": "off",
+      "@typescript-eslint/no-misused-promises": "off",
+      "@typescript-eslint/no-mixed-enums": "off",
+      "@typescript-eslint/no-redundant-type-constituents": "off",
+      "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
+      "@typescript-eslint/no-unnecessary-qualifier": "off",
+      "@typescript-eslint/no-unnecessary-template-expression": "off",
+      "@typescript-eslint/no-unnecessary-type-arguments": "off",
+      "@typescript-eslint/no-unnecessary-type-assertion": "off",
+      "@typescript-eslint/no-unsafe-argument": "off",
+      "@typescript-eslint/no-unsafe-enum-comparison": "off",
+      "@typescript-eslint/no-unsafe-unary-minus": "off",
+      "@typescript-eslint/no-unused-expressions": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/non-nullable-type-assertion-style": "off",
+      "@typescript-eslint/only-throw-error": "off",
+      "@typescript-eslint/prefer-destructuring": "off",
+      "@typescript-eslint/prefer-find": "off",
+      "@typescript-eslint/prefer-includes": "off",
+      "@typescript-eslint/prefer-promise-reject-errors": "off",
+      "@typescript-eslint/prefer-reduce-type-parameter": "off",
+      "@typescript-eslint/prefer-regexp-exec": "off",
+      "@typescript-eslint/prefer-string-starts-ends-with": "off",
+      "@typescript-eslint/promise-function-async": "off",
+      "@typescript-eslint/require-array-sort-compare": "off",
+      "@typescript-eslint/require-await": "off",
+      "@typescript-eslint/restrict-plus-operands": "off",
+      "@typescript-eslint/return-await": "off",
+      "@typescript-eslint/unbound-method": "off",
 
-  //     "unicorn/filename-case": "off",
-  //   },
-  // },
+      "import/extensions": "off",
+
+      "unicorn/filename-case": "off",
+    },
+  },
 ]
 
 export class ESLint extends ES {

@@ -29,5 +29,5 @@ CDocBuilder.Destroy();
 #### .docbuilder
 
 ```js
-var oDocument = Api.GetDocument();
+const oDocument = Api.GetDocument()
 ```

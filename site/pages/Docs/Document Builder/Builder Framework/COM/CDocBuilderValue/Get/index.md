@@ -37,7 +37,7 @@ oBuilder->Dispose();
 #### .docbuilder
 
 ```js
-var oDocument = Api.GetDocument();
-var aCharts = oDocument.GetAllCharts();
-var oChart = aCharts[1];
+const oDocument = Api.GetDocument()
+const aCharts = oDocument.GetAllCharts()
+const oChart = aCharts[1]
 ```

@@ -62,12 +62,12 @@ Example: \[Devices.desktop]
 **Example**
 
 ``` javascript
-import {IProfileMenuItem} from "@onlyoffice/docspace-plugin-sdk";
+import {type IProfileMenuItem} from "@onlyoffice/docspace-plugin-sdk"
 
 export const ProfileMenuItem: IProfileMenuItem = {
-    "key": "profile-menu-plugin",
-    "label": "Profile menu item",
-    "icon": "logo.jpg",
-    "onClick": () => {},
-};
+  key: "profile-menu-plugin",
+  label: "Profile menu item",
+  icon: "logo.jpg",
+  onClick: () => {},
+}
 ```

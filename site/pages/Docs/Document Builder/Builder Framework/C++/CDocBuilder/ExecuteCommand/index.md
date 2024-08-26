@@ -26,5 +26,5 @@ CDocBuilder::Dispose();
 #### .docbuilder
 
 ```js
-oParagraph.AddText("Hello, world!");
+oParagraph.AddText("Hello, world!")
 ```

@@ -36,18 +36,18 @@ Get all the event listener items.
 
 **Example**
 
-``` javascript
-import {IEventListenerPlugin, IEventListenerItem} from "@onlyoffice/docspace-plugin-sdk";
+``` typescript
+import {type IEventListenerItem, type IEventListenerPlugin} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements IEventListenerPlugin {
-    eventListenerItems: Map<string, IEventListenerItem> = new Map();
+  eventListenerItems = new Map<string, IEventListenerItem>()
 
-    addEventListenerItem = (item: IEventListenerItem): void => {
-        this.eventListenerItems.set(item.key, item);
-    };
+  addEventListenerItem = (item: IEventListenerItem): void => {
+    this.eventListenerItems.set(item.key, item)
+  }
 
-    getEventListenerItems = (): Map<string, IEventListenerItem> => {
-        return this.eventListenerItems;
-    };
+  getEventListenerItems = (): Map<string, IEventListenerItem> => {
+    return this.eventListenerItems
+  }
 }
 ```

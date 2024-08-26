@@ -5,10 +5,10 @@ A component that is used to hide components during uploading.
 ### Example
 
 ``` javascript
-import {ISkeleton} from "@onlyoffice/docspace-plugin-sdk";
+import {type ISkeleton} from "@onlyoffice/docspace-plugin-sdk"
 
 const skeletonProps: ISkeleton = {
-    "width": "100%",
-    "height": "100%",
-};
+  width: "100%",
+  height: "100%",
+}
 ```

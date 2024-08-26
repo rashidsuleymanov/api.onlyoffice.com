@@ -4,11 +4,11 @@ Updates the meta information of the document for all collaborative editors.
 
 ``` json
 {
-    "c": "meta",
-    "key": "Khirz6zTPdfd7",
-    "meta": {
-        "title": "Example Document Title.docx"
-    }
+  "c": "meta",
+  "key": "Khirz6zTPdfd7",
+  "meta": {
+    "title": "Example Document Title.docx"
+  }
 }
 ```
 
@@ -24,8 +24,8 @@ Updates the meta information of the document for all collaborative editors.
 
 ``` json
 {
-    "error": 0,
-    "key": "Khirz6zTPdfd7"
+  "error": 0,
+  "key": "Khirz6zTPdfd7"
 }
 ```
 

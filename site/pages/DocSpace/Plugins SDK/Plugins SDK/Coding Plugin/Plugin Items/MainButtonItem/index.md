@@ -72,19 +72,19 @@ Example: \[createItem]
 **Example**
 
 ``` javascript
-import {IMainButtonItem} from "@onlyoffice/docspace-plugin-sdk";
+import {type IMainButtonItem} from "@onlyoffice/docspace-plugin-sdk"
 
 const createItem: IMainButtonItem = {
-    "key": "draw-io-main-button-item_create",
-    "label": "Create new",
-    "icon": "create-new.svg",
-    "onClick": (id: number) => {},
-};
+  key: "draw-io-main-button-item_create",
+  label: "Create new",
+  icon: "create-new.svg",
+  onClick: (id: number) => {},
+}
 
 const mainButtonItem: IMainButtonItem = {
-    "key": "draw-io-main-button-item",
-    "label": "Draw.io",
-    "icon": "drawio.png",
-    "items": [createItem],
-};
+  key: "draw-io-main-button-item",
+  label: "Draw.io",
+  icon: "drawio.png",
+  items: [createItem],
+}
 ```

@@ -132,15 +132,15 @@ Type: object
 Example:
 
 ``` javascript
-{
-    "onSelectCallback": null,
-    "onCloseCallback": null,
-    "onAppReady": null,
-    "onAppError": null,
-    "onEditorCloseCallback": null,
-    "onAuthSuccess": null,
-    "onSignOut": null,
-    "onDownload": null
+const events = {
+  onSelectCallback: null,
+  onCloseCallback: null,
+  onAppReady: null,
+  onAppError: null,
+  onEditorCloseCallback: null,
+  onAuthSuccess: null,
+  onSignOut: null,
+  onDownload: null,
 }
 ```
 
@@ -154,14 +154,14 @@ Type: object
 Example:
 
 ``` javascript
-{
-    "count": 100,
-    "page": 1,
-    "search": "",
-    "sortorder": "descending",
-    "sortby": "DateAndTime",
-    "withSubfolders": false
-} 
+const filter = {
+  count: 100,
+  page: 1,
+  search: "",
+  sortorder: "descending",
+  sortby: "DateAndTime",
+  withSubfolders: false,
+}
 ```
 
 
@@ -474,60 +474,60 @@ Example: true
 **Example**
 
 ``` javascript
-{ 
-    "buttonColor": "#5299E0", 
-    "destroyText": "",
-    "checkCSP" true,
-    "disableActionButton": false,
-    "downloadToEvent": false,
-    "editorCustomization": {},
-    "editorGoBack": true,
-    "editorType": "desktop",
-    "events": {
-        "onSelectCallback": null,
-        "onCloseCallback": null,
-        "onAppReady": null,
-        "onAppError": null,
-        "onEditorCloseCallback": null,
-        "onAuthSuccess": null,
-        "onSignOut": null,
-        "onDownload": null
-    },
-    "filter": {
-          "count": 100,
-          "page": 1,
-          "search": "",
-          "sortorder": "descending",
-          "sortby": "DateAndTime",
-          "withSubfolders": false
-    },
-    "filterParam": "ALL",
-    "frameId": "ds-frame",
-    "height":  "100%",
-    "id": null,
-    "infoPanelVisible": true,
-    "locale": null,
-    "mode": "manager",
-    "name": "frameDocSpace",
-    "requestToken": null,
-    "rootPath": "/rooms/shared/",
-    "selectorType": "exceptPrivacyTrashArchiveFolders",
-    "showFilter": false,
-    "showHeader": false,
-    "showMenu": false,
-    "showSelectorCancel": false,
-    "showSelectorHeader": false,
-    "showSettings": false,
-    "showSignOut": true,
-    "showTitle": true,
-    "src": {PORTAL_SRC},
-    "theme": "Base",
-    "type": "desktop",
-    "viewAs": "row",
-    "viewTableColumns": "Name,Type,Tags",
-    "width": "100%",
-    "withBreadCrumbs": true,
-    "withSearch": true,
-    "withSubtitle": true
+const config = {
+  buttonColor: "#5299E0",
+  destroyText: "",
+  checkCSP: true,
+  disableActionButton: false,
+  downloadToEvent: false,
+  editorCustomization: {},
+  editorGoBack: true,
+  editorType: "desktop",
+  events: {
+    onSelectCallback: null,
+    onCloseCallback: null,
+    onAppReady: null,
+    onAppError: null,
+    onEditorCloseCallback: null,
+    onAuthSuccess: null,
+    onSignOut: null,
+    onDownload: null,
+  },
+  filter: {
+    count: 100,
+    page: 1,
+    search: "",
+    sortorder: "descending",
+    sortby: "DateAndTime",
+    withSubfolders: false,
+  },
+  filterParam: "ALL",
+  frameId: "ds-frame",
+  height: "100%",
+  id: null,
+  infoPanelVisible: true,
+  locale: null,
+  mode: "manager",
+  name: "frameDocSpace",
+  requestToken: null,
+  rootPath: "/rooms/shared/",
+  selectorType: "exceptPrivacyTrashArchiveFolders",
+  showFilter: false,
+  showHeader: false,
+  showMenu: false,
+  showSelectorCancel: false,
+  showSelectorHeader: false,
+  showSettings: false,
+  showSignOut: true,
+  showTitle: true,
+  src: {PORTAL_SRC},
+  theme: "Base",
+  type: "desktop",
+  viewAs: "row",
+  viewTableColumns: "Name,Type,Tags",
+  width: "100%",
+  withBreadCrumbs: true,
+  withSearch: true,
+  withSubtitle: true,
 }
 ```

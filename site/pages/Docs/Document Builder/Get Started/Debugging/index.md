@@ -11,10 +11,10 @@ You can debug any Document Builder [component](../../Get%20Started/Overview/inde
 2. Use the **debugger** command in your script:
 
    ```js
-   debugger;
-   var oDocument = Api.GetDocument();
-   var oParagraph = oDocument.GetElement(0);
-   oParagraph.AddText("Hello world!");
+   debugger
+   const oDocument = Api.GetDocument()
+   const oParagraph = oDocument.GetElement(0)
+   oParagraph.AddText("Hello world!")
    ```
 
 3. Open the developer console by pressing the **F12** button.

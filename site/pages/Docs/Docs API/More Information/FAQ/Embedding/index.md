@@ -15,9 +15,9 @@ order: -9
   That is why the *type* should be set to **embedded** and the configuration file will look like this:
 
   ``` javascript
-  var docEditor = new DocsAPI.DocEditor("placeholder", {
-      "type": "embedded",
-  });
+  const docEditor = new DocsAPI.DocEditor("placeholder", {
+    type: "embedded",
+  })
   ```
 
   Further information about the display type can be found [at this page](../../../Usage%20API/Config/index.md#type).
@@ -31,15 +31,15 @@ order: -9
   * *editorConfig.embedded.shareUrl* is the absolute URL to the document which can be used by other users to share it with others.
 
   ``` javascript
-  var docEditor = new DocsAPI.DocEditor("placeholder", {
-      "editorConfig": {
-          "embedded": {
-              "embedUrl": "https://example.com/embedded?doc=exampledocument1.docx",
-              "saveUrl": "https://example.com/download?doc=exampledocument1.docx",
-              "shareUrl": "https://example.com/view?doc=exampledocument1.docx",
-          },
+  const docEditor = new DocsAPI.DocEditor("placeholder", {
+    editorConfig: {
+      embedded: {
+        embedUrl: "https://example.com/embedded?doc=exampledocument1.docx",
+        saveUrl: "https://example.com/download?doc=exampledocument1.docx",
+        shareUrl: "https://example.com/view?doc=exampledocument1.docx",
       },
-  });
+    },
+  })
   ```
 
   Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

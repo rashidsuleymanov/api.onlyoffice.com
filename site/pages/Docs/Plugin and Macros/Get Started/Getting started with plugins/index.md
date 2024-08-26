@@ -78,7 +78,7 @@ Put all the prepared files to the plugin folder and push it to the remote reposi
    To create an extension, open the *onlyoffice.github.io/store/plugin-dev/extension/inject.js* file and assign the path to your plugin on GitHub Pages site to the **URL\_TO\_PLUGIN** variable:
 
    ``` javascript
-   var URL_TO_PLUGIN = "https://YOUR-USERNAME.github.io/onlyoffice.github.io/sdkjs-plugins/content/helloworld/"
+   const URL_TO_PLUGIN = "https://YOUR-USERNAME.github.io/onlyoffice.github.io/sdkjs-plugins/content/helloworld/"
    ```
 
    The *onlyoffice.github.io/store/plugin-dev/extension* folder is a new extension. Upload it to the [browser](../../Plugins/Adding%20plugins/ONLYOFFICE%20Cloud/index.md#step-2-uploading-extensions-to-the-browser), run your ONLYOFFICE Docs and find the plugin in the [Plugin Manager](../../Plugins/Adding%20plugins/ONLYOFFICE%20Docs%20on-premises/index.md#adding-plugins-through-the-plugin-manager).

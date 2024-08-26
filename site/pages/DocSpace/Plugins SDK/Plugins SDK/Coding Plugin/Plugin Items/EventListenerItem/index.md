@@ -53,11 +53,11 @@ Example: \[Devices.desktop]
 **Example**
 
 ``` javascript
-import {IEventListenerItem, Events} from "@onlyoffice/docspace-plugin-sdk";
+import {Events, type IEventListenerItem} from "@onlyoffice/docspace-plugin-sdk"
 
 const eventItem: IEventListenerItem = {
-    "key": "event-listener-item",
-    "eventType": Events.CREATE,
-    "eventHandler": () => {},
-};
+  key: "event-listener-item",
+  eventType: Events.CREATE,
+  eventHandler: () => {},
+}
 ```

@@ -97,12 +97,15 @@ To enable work within **ownCloud Web**, register the connector in the ownCloud W
 To register the connector, use these lines:
 
 ``` json
-"external_apps": [
+{
+  "external_apps": [
     {
-        "id": "onlyoffice",
-        "path": "http(s)://<owncloud-10-server-address>/custom/onlyoffice/js/web/onlyoffice.js",
+      "id": "onlyoffice",
+      "path": "http(s)://<owncloud-10-server-address>/custom/onlyoffice/js/web/onlyoffice.js"
     }
-]
+  ]
+}
+
 ```
 
 Depending on your webserver configuration you can drop the *index.php* segment from the URL path.

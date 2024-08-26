@@ -47,22 +47,22 @@ Update the info panel item.
 
 **Example**
 
-``` javascript
-import {IInfoPanelPlugin, IInfoPanelItem} from "@onlyoffice/docspace-plugin-sdk";
+``` typescript
+import {type IInfoPanelItem, type IInfoPanelPlugin} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements IInfoPanelPlugin {
-    infoPanelItems: Map<string, IInfoPanelItem> = new Map();
+  infoPanelItems = new Map<string, IInfoPanelItem>()
 
-    addInfoPanelItem = (item: IInfoPanelItem): void => {
-        this.infoPanelItems.set(item.key, item);
-    };
+  addInfoPanelItem = (item: IInfoPanelItem): void => {
+    this.infoPanelItems.set(item.key, item)
+  }
 
-    getInfoPanelItems = (): Map<string, IInfoPanelItem> => {
-        return this.infoPanelItems;
-    };
+  getInfoPanelItems = (): Map<string, IInfoPanelItem> => {
+    return this.infoPanelItems
+  }
 
-    updateInfoPanelItem = (item: IInfoPanelItem): void => {
-        this.infoPanelItems.set(item.key, item);
-    };
+  updateInfoPanelItem = (item: IInfoPanelItem): void => {
+    this.infoPanelItems.set(item.key, item)
+  }
 }
 ```

@@ -52,8 +52,8 @@ For example, for the **Extended comments** plugin the *guid* parameter will look
 
 ``` json
 {
-    "name" : "Extended comments",
-    "guid" : "asc.{91EAC419-EF8B-440C-A960-B451C7DF3A37}",
+  "name": "Extended comments",
+  "guid": "asc.{91EAC419-EF8B-440C-A960-B451C7DF3A37}"
 }
 ```
 

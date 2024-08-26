@@ -98,19 +98,19 @@ Example: "1.0.0"
 **Example**
 
 ``` javascript
-{
-    "author": "ONLYOFFICE",
-    "cspDomains": [
-      "https://embed.diagrams.net/",
-      "https://*.diagrams.net/"
-    ],
-    "description": "plugin description",
-    "homePage": "https://example.com/url-to-plugin-repository",
-    "image": "logo.png",
-    "license": "MIT",
-    "name": "plugin name",
-    "pluginName": "plugin name",
-    "scopes": "ContextMenu,InfoPanel,MainButton",
-    "version": "1.0.0"
+const config = {
+  author: "ONLYOFFICE",
+  cspDomains: [
+    "https://embed.diagrams.net/",
+    "https://*.diagrams.net/",
+  ],
+  description: "plugin description",
+  homePage: "https://example.com/url-to-plugin-repository",
+  image: "logo.png",
+  license: "MIT",
+  name: "plugin name",
+  pluginName: "plugin name",
+  scopes: "ContextMenu,InfoPanel,MainButton",
+  version: "1.0.0",
 }
 ```

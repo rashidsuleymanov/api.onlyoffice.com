@@ -5,7 +5,7 @@ order: -7
 The desktop app can send text messages to be displayed to the user. To do so, declare the function:
 
 ``` javascript
-window.onSystemMessage = function (e)
+window.onSystemMessage = function onSystemMessage(e) {}
 ```
 
 ## e.type
@@ -38,7 +38,7 @@ Example: 1
 ### Example
 
 ``` javascript
-window.onSystemMessage({"type" : "operation", "opType" : 1})                    
+window.onSystemMessage({type: "operation", opType: 1})
 ```
 
 ## Updating file status
@@ -48,5 +48,5 @@ The desktop app can send notifications about file editing completion.
 Declare the following global function:
 
 ``` javascript
-window.DesktopUpdateFile = function ()
+window.DesktopUpdateFile = function DesktopUpdateFile() {}
 ```

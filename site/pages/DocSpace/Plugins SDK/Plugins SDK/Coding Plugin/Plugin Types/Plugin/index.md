@@ -57,23 +57,23 @@ Sets the [onLoadCallback](#onloadcallback) variable to the plugin.
 
 **Example**
 
-``` javascript
-import {IPlugin, PluginStatus} from "@onlyoffice/docspace-plugin-sdk";
+``` typescript
+import {type IPlugin, PluginStatus} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements IPlugin {
-    status: PluginStatus = PluginStatus.active;
-    onLoadCallback = async () => {};
+  status: PluginStatus = PluginStatus.active
+  onLoadCallback = async () => {}
 
-    updateStatus = (status: PluginStatus) => {
-        this.status = status;
-    };
+  updateStatus = (status: PluginStatus) => {
+    this.status = status
+  }
 
-    getStatus = () => {
-        return this.status;
-    };
+  getStatus = () => {
+    return this.status
+  }
 
-    setOnLoadCallback = (callback: () => Promise<void>) => {
-        this.onLoadCallback = callback;
-    };
+  setOnLoadCallback = (callback: () => Promise<void>) => {
+    this.onLoadCallback = callback
+  }
 }
 ```

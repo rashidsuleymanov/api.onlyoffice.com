@@ -163,28 +163,38 @@ It is received when the force saving request is performed.The *callbackUrl* depe
 
 ``` json
 {
-    "actions": [{"type": 1, "userid": "78e1e841"}],
-    "key": "Khirz6zTPdfd7",
-    "status": 1,
-    "users": ["6d5a81d0", "78e1e841"]
+  "actions": [
+    {"type": 1,
+      "userid": "78e1e841"}
+  ],
+  "key": "Khirz6zTPdfd7",
+  "status": 1,
+  "users": ["6d5a81d0", "78e1e841"]
 }
 ```
 
 ### Sample of JSON object sent to the "callbackUrl" address by document editing service when the user changed the document and closed it for editing
 
-``` javascript
+<!-- The 'changes' and 'serverVersion' fields should be left as they are, since the information about the types of these properties is not known. -->
+<!-- eslint-skip -->
+``` json
 {
-    "actions": [{"type": 0, "userid": "78e1e841"}],
-    "changesurl": "https://documentserver/url-to-changes.zip",
-    "history": {
-        "changes": changes,
-        "serverVersion": serverVersion
-    },
-    "filetype": "docx",
-    "key": "Khirz6zTPdfd7",
-    "status": 2,
-    "url": "https://documentserver/url-to-edited-document.docx",
-    "users": ["6d5a81d0"]
+  "actions": [
+    {
+      "type": 0,
+      "userid": "78e1e841"
+    }
+  ],
+  "changesurl": "https://documentserver/url-to-changes.zip",
+  "history": {
+    "changes": changes,
+    "serverVersion": serverVersion
+  },
+  "filetype": "docx",
+  "key": "Khirz6zTPdfd7",
+  "status": 2,
+  "url": "https://documentserver/url-to-edited-document.docx",
+  "users": ["6d5a81d0"]
 }
 ```
 
@@ -192,27 +202,29 @@ It is received when the force saving request is performed.The *callbackUrl* depe
 
 ``` json
 {
-    "key": "Khirz6zTPdfd7",
-    "status": 4
+  "key": "Khirz6zTPdfd7",
+  "status": 4
 }
 ```
 
 ### Sample of JSON object sent to the "callbackUrl" address by document editing service after the [forcesave](../../Additional%20API/Command%20service/forcesave/index.md) command had been received
 
-``` javascript
+<!-- The 'changes' and 'serverVersion' fields should be left as they are, since the information about the types of these properties is not known. -->
+<!-- eslint-skip -->
+``` json
 {
-    "changesurl": "https://documentserver/url-to-changes.zip",
-    "forcesavetype": 0,
-    "history": {
-        "changes": changes,
-        "serverVersion": serverVersion
-    },
-    "filetype": "docx",
-    "key": "Khirz6zTPdfd7",
-    "status": 6,
-    "url": "https://documentserver/url-to-edited-document.docx",
-    "users": ["6d5a81d0"],
-    "userdata": "sample userdata"
+  "changesurl": "https://documentserver/url-to-changes.zip",
+  "forcesavetype": 0,
+  "history": {
+    "changes": changes,
+    "serverVersion": serverVersion
+  },
+  "filetype": "docx",
+  "key": "Khirz6zTPdfd7",
+  "status": 6,
+  "url": "https://documentserver/url-to-edited-document.docx",
+  "users": ["6d5a81d0"],
+  "userdata": "sample userdata"
 }
 ```
 
@@ -222,7 +234,7 @@ The **document storage service** must return the following response, otherwise t
 
 ``` json
 {
-    "error": 0
+  "error": 0
 }
 ```
 
@@ -308,39 +320,37 @@ On the [Java example](../../Get%20Started/Language-specific%20examples/Java%20ex
 ### Node.js document save example
 
 ``` javascript
-var fs = require("fs");
-var syncRequest = require("sync-request");
+import {fs} from "node:fs"
+import {syncRequest} from "sync-request"
 
-app.post("/track", function (req, res) {
-
-    var updateFile = function (response, body, path) {
-        if (body.status == 2)
-        {
-            var file = syncRequest("GET", body.url);
-            fs.writeFileSync(path, file.getBody());
-        }
-
-        response.write("{\"error\":0}");
-        response.end();
+app.post("/track", (req, res) => {
+  function updateFile(response, body, path) {
+    if (body.status === 2) {
+      const file = syncRequest("GET", body.url)
+      fs.writeFileSync(path, file.getBody())
     }
 
-    var readbody = function (request, response, path) {
-        var content = "";
-        request.on("data", function (data) {
-            content += data;
-        });
-        request.on("end", function () {
-            var body = JSON.parse(content);
-            updateFile(response, body, path);
-        });
-    }
+    response.write("{\"error\":0}")
+    response.end()
+  }
 
-    if (req.body.hasOwnProperty("status")) {
-        updateFile(res, req.body, pathForSave);
-    } else {
-        readbody(req, res, pathForSave)
-    }
-});
+  function readbody(request, response, path) {
+    let content = ""
+    request.on("data", (data) => {
+      content += data
+    })
+    request.on("end", () => {
+      const body = JSON.parse(content)
+      updateFile(response, body, path)
+    })
+  }
+
+  if (req.body.hasOwn("status")) {
+    updateFile(res, req.body, pathForSave)
+  } else {
+    readbody(req, res, pathForSave)
+  }
+})
 ```
 
 > *pathForSave* is the absolute path to your computer folder where the file will be saved including the file name.

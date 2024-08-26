@@ -9,11 +9,11 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 ### Example
 
 ``` javascript
-import {ILabel} from "@onlyoffice/docspace-plugin-sdk";
+import {type ILabel} from "@onlyoffice/docspace-plugin-sdk"
 
 const label: ILabel = {
-    "text": "Input:",
-    "isRequired": false,
-    "truncate": true,
-};
+  text: "Input:",
+  isRequired: false,
+  truncate: true,
+}
 ```

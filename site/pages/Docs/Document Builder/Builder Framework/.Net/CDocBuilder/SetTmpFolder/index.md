@@ -23,5 +23,5 @@ CDocBuilder.Destroy();
 #### .docbuilder
 
 ```js
-builder.SetTmpFolder("DocBuilderTemp");
+builder.SetTmpFolder("DocBuilderTemp")
 ```

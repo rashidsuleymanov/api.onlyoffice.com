@@ -36,12 +36,13 @@ order: -1
 
   ``` json
   {
-      "name" : "Nextcloud",
-      "check": {
-          "url": "status.php",
-          "headers": 
-              "OCS-APIREQUEST": true
-          }
+    "name": "Nextcloud",
+    "check": {
+      "url": "status.php",
+      "headers": {
+        "OCS-APIREQUEST": true
+      } 
+    }
   }
   ```
 
@@ -49,9 +50,9 @@ order: -1
 
   Declare the following global function:
 
-  ``` javascript
-  window.DesktopUpdateFile = function ()
-  ```
+``` javascript
+window.DesktopUpdateFile = function DesktopUpdateFile() {}
+```
 
   It will be called by the desktop app to notify the user about the completion of file editing.
 

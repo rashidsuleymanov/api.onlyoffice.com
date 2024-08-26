@@ -28,28 +28,28 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/i
 
 ``` json
 {
-    "name" : "Invoices",
-    "guid" : "asc.{6B6715E5-A558-4F70-8058-40704CD659CF}",
+  "name": "Invoices",
+  "guid": "asc.{6B6715E5-A558-4F70-8058-40704CD659CF}",
 
-    "variations" : [
-        {
-            "description" : "invoices",
-            "url"         : "index.html",
+  "variations": [
+    {
+      "description": "invoices",
+      "url": "index.html",
 
-            "icons"           : ["resources/img/icon.png", "resources/img/icon@2x.png"],
-            "isViewer"        : false,
-            "EditorsSupport"  : ["word"],
+      "icons": ["resources/img/icon.png", "resources/img/icon@2x.png"],
+      "isViewer": false,
+      "EditorsSupport": ["word"],
 
-            "isVisual"        : true,
-            "isModal"         : false,
-            "isInsideMode"    : true,
+      "isVisual": true,
+      "isModal": false,
+      "isInsideMode": true,
 
-            "initDataType"    : "none",
-            "initData"        : "",
+      "initDataType": "none",
+      "initData": "",
 
-            "buttons"        : [ ]
-        }
-    ]
+      "buttons": []
+    }
+  ]
 }
 ```
 

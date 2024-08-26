@@ -16,10 +16,10 @@ The minimum data that the request body must contain:
 
 ``` json
 {
-    "CreateOn": "2024-01-01T12:00:00.600Z",
-    "FileName": "name.docx",
-    "FileSize": 15728640,
-    "folderId": 12345
+  "CreateOn": "2024-01-01T12:00:00.600Z",
+  "FileName": "name.docx",
+  "FileSize": 15728640,
+  "folderId": 12345
 }
 ```
 
@@ -27,16 +27,16 @@ An object with the information about the created session will be returned in the
 
 ``` json
 {
-    "success": true,
-    "data": {
-        "bytes_total": 15728640,
-        "bytes_uploaded": 0,
-        "created": "2024-01-01T12:00:00.600Z",
-        "expired": "2024-01-01T12:00:00.600Z",
-        "id": "00000000000000000000000000000000",
-        "location": "https://example.onlyoffice.io/ChunkedUploader.ashx?uid=00000000000000000000000000000000",
-        "path": [12345]
-    }
+  "success": true,
+  "data": {
+    "bytes_total": 15728640,
+    "bytes_uploaded": 0,
+    "created": "2024-01-01T12:00:00.600Z",
+    "expired": "2024-01-01T12:00:00.600Z",
+    "id": "00000000000000000000000000000000",
+    "location": "https://example.onlyoffice.io/ChunkedUploader.ashx?uid=00000000000000000000000000000000",
+    "path": [12345]
+  }
 }
 ```
 
@@ -63,12 +63,12 @@ After the last chunk is uploaded, the server returns an object in the following 
 
 ``` json
 {
-    "file": {},
-    "folderId": 12345,
-    "id": 123456,
-    "title": "demo.docx",
-    "uploaded": true,
-    "version": 1
+  "file": {},
+  "folderId": 12345,
+  "id": 123456,
+  "title": "demo.docx",
+  "uploaded": true,
+  "version": 1
 }
 ```
 
@@ -82,17 +82,17 @@ const chunkUploadSize = 1024 * 1023
 const folderId = "your_folder_id"
 
 const body = {
-    "CreateOn": new Date().toISOString(),
-    "FileName": "file_name",
-    "FileSize": size,
-    "folderId": folderId
+  CreateOn: new Date().toISOString(),
+  FileName: "file_name",
+  FileSize: size,
+  folderId,
 }
 
 const url = `https://example.onlyoffice.com/api/2.0/files/${folderId}/upload/create_session`
 const sessionResponse = await fetch(url, {
-    "body": JSON.stringify(body),
-    "headers": { "Content-Type": "application/json" },
-    "method": "POST"
+  body: JSON.stringify(body),
+  headers: {"Content-Type": "application/json"},
+  method: "POST",
 })
 
 const session = await sessionResponse.json()
@@ -102,24 +102,23 @@ const chunks = Math.ceil(size / chunkUploadSize)
 let chunk = 0
 
 while (chunk < chunks) {
-    const offset = chunk * chunkUploadSize
-    const formData = new FormData()
-    formData.append("file", new Blob([data.slice(offset, offset + chunkUploadSize)]))
-    requestsDataArray.push(formData)
-    chunk = chunk + 1
+  const offset = chunk * chunkUploadSize
+  const formData = new FormData()
+  formData.append("file", new Blob([data.slice(offset, offset + chunkUploadSize)]))
+  requestsDataArray.push(formData)
+  chunk += 1
 }
 
 let result
-for (let i = 0; i < requestsDataArray.length; i = i + 1) {
-    const formData = requestsDataArray[i]
-    const headers = {
-        ...formData.getHeaders(),
-        "Content-Type": "multipart/form-data"
-    };
-    result = await fetch(session.data.location, {
-        "body": formData,
-        "headers": headers,
-        "method": "POST"
-    })
+for (const formData of requestsDataArray) {
+  const headers = {
+    ...formData.getHeaders(),
+    "Content-Type": "multipart/form-data",
+  }
+  result = await fetch(session.data.location, {
+    body: formData,
+    headers,
+    method: "POST",
+  })
 }
 ```

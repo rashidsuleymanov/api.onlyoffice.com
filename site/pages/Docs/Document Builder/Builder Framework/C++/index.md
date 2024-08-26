@@ -60,13 +60,13 @@ int main(int argc, char *argv[])
 #### .docbuilder
 
 ```js
-builder.SetTmpFolder("DocBuilderTemp");
-builder.CreateFile("docx");
-var oDocument = Api.GetDocument();
-var oParagraph = Api.CreateParagraph();
-oParagraph.SetSpacingAfter(1000, false);
-oParagraph.AddText("Hello, world!");
-oDocument.InsertContent([oParagraph]);
-builder.SaveFile("docx", "result.docx");
-builder.CloseFile();
+builder.SetTmpFolder("DocBuilderTemp")
+builder.CreateFile("docx")
+const oDocument = Api.GetDocument()
+const oParagraph = Api.CreateParagraph()
+oParagraph.SetSpacingAfter(1000, false)
+oParagraph.AddText("Hello, world!")
+oDocument.InsertContent([oParagraph])
+builder.SaveFile("docx", "result.docx")
+builder.CloseFile()
 ```

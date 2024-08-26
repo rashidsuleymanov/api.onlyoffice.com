@@ -34,27 +34,27 @@ To develop a plugin for ONLYOFFICE web editors, follow the instructions below.
 To debug ONLYOFFICE plugins in the web editors, follow the instructions below.
 
 1. Add the **debugger** command to your script:
-
+<!-- This code snippet is shown in the screenshot. -->
+<!-- eslint-skip -->
    ``` javascript
-   (function(window, undefined){
+   (function debugger(window, undefined){
 
-       var text = "Hello world!";
+    var text = "Hello world!";
 
-       window.Asc.plugin.init = function()
-       {
-           debugger;
-           var variant = 2;
+    window.Asc.plugin.init = function init()
+    {
+        debugger;
+        var variant = 2;
 
-           switch (variant)
-           {}
-       };
+        switch (variant)
+        {}
+    };
 
-       window.Asc.plugin.button = function(id)
-       {
-       };
+    window.Asc.plugin.button = function button(id)
+    {
+    };
 
-   })(window, undefined);
-           
+    })(window, undefined);
    ```
 
 2. Open the developer console by pressing the **F12** button.

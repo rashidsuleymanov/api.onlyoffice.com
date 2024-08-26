@@ -10,6 +10,8 @@ Returns information about the exchange rates for the last several days and fills
 
 You can [assign this macro](../../Writing%20macros/index.md#assigning-macros) to the autoshape. When you click on it, a macro is executed, the table is filled in with the relevant data and the corresponding chart is rebuilt.
 
+<!-- This code snippet is shown in the screenshot. -->
+<!-- eslint-skip -->
 ``` javascript
 (function()
 {

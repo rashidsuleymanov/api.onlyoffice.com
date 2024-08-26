@@ -19,12 +19,12 @@ Example
 
 ``` json
 {
-    "wopi": {
-        "publicKey": "public key example",
-        "modulus": "modulus example",
-        "exponent": "AQAB",
-        "privateKey": "private key example"
-    }
+  "wopi": {
+    "publicKey": "public key example",
+    "modulus": "modulus example",
+    "exponent": "AQAB",
+    "privateKey": "private key example"
+  }
 }
 ```
 

@@ -7,6 +7,8 @@ order: -10
 
 Highlights duplicates in the selected area with different colors to recognize duplicated values quickly.
 
+<!-- This code snippet is shown in the screenshot. -->
+<!-- eslint-skip -->
 ``` javascript
 (function () 
 {

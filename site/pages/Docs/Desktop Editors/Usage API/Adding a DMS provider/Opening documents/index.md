@@ -21,9 +21,9 @@ To open a document in a new window / tab correctly:
 
 ``` json
 {
-    "url" : "url to document",
-    "type" : "type",
-    "provider" : "provider"
+  "url": "url to document",
+  "type": "type",
+  "provider": "provider"
 } 
 ```
 
@@ -58,9 +58,9 @@ Example: "onlyoffice"
 
 ``` javascript
 const params = {
-    "url" : "https://example.com/url-to-example-document.docx",
-    "type" : "word",
-    "provider" : "onlyoffice"
+  url: "https://example.com/url-to-example-document.docx",
+  type: "word",
+  provider: "onlyoffice",
 }
 window.AscDesktopEditor.execCommand("open:document", JSON.stringify(params))
 ```

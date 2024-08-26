@@ -49,69 +49,67 @@ ng version
 1. Open the *./src/app/app.module.ts* file in the *onlyoffice-angular-demo* project and import the **DocumentEditorModule**:
 
    ``` typescript
-   import { NgModule } from "@angular/core";
-   import { DocumentEditorModule } from "@onlyoffice/document-editor-angular";
-   import { AppComponent } from "./app.component";
-   import { BrowserModule } from "@angular/platform-browser";
-
+   import {NgModule} from "@angular/core"
+   import {BrowserModule} from "@angular/platform-browser"
+   import {DocumentEditorModule} from "@onlyoffice/document-editor-angular"
+   import {AppComponent} from "./app.component"
+   
    @NgModule({
-       declarations: [
-           AppComponent
-       ],
-       imports: [
-           DocumentEditorModule,
-           BrowserModule
-       ],
-       bootstrap: [AppComponent]
+     declarations: [
+       AppComponent,
+     ],
+     imports: [
+       DocumentEditorModule,
+       BrowserModule,
+     ],
+     bootstrap: [AppComponent],
    })
 
-   export class AppModule { }
-    
+   export class AppModule {}
+   
    ```
 
 2. Open the *./src/app/app.component.ts* file in the *onlyoffice-angular-demo* project and define options in your consuming component:
 
    ``` typescript
-   import { Component } from "@angular/core";
-   import { IConfig } from "@onlyoffice/document-editor-angular";
-
+   import {Component} from "@angular/core"
+   import {type IConfig} from "@onlyoffice/document-editor-angular"
+   
    @Component({
-       selector: "app-root",
-       templateUrl: "./app.component.html"
+     selector: "app-root",
+     templateUrl: "./app.component.html",
    })
    export class AppComponent {
-       config: IConfig = {
-           document: {
-               "fileType": "docx",
-               "key": "Khirz6zTPdfd7",
-               "title": "Example Document Title.docx",
-               "url": "https://example.com/url-to-example-document.docx"
-           },
-           documentType: "word",
-           editorConfig: {
-               "callbackUrl": "https://example.com/url-to-callback.ashx"
-           },
+     config: IConfig = {
+       document: {
+         fileType: "docx",
+         key: "Khirz6zTPdfd7",
+         title: "Example Document Title.docx",
+         url: "https://example.com/url-to-example-document.docx",
+       },
+       documentType: "word",
+       editorConfig: {
+         callbackUrl: "https://example.com/url-to-callback.ashx",
+       },
+     }
+     onDocumentReady = () => {
+       console.log("Document is loaded")
+     }
+     onLoadComponentError = (errorCode, errorDescription) => {
+       switch (errorCode) {
+       case -1: // Unknown error loading component
+         console.log(errorDescription)
+         break
+  
+       case -2: // Error load DocsAPI from http://documentserver/
+         console.log(errorDescription)
+         break
+  
+       case -3: // DocsAPI is not defined
+         console.log(errorDescription)
+         break
        }
-
-       onDocumentReady = () => {
-           console.log("Document is loaded");
-       };
-
-       onLoadComponentError = (errorCode, errorDescription) => {
-           switch(errorCode) {
-               case -1: // Unknown error loading component
-                   console.log(errorDescription);
-                   break;
-
-               case -2: // Error load DocsAPI from http://documentserver/
-                   console.log(errorDescription);
-                   break;
-
-               case -3: // DocsAPI is not defined
-                   console.log(errorDescription);
-                   break;
-           }
-       }
+     }
    }
    ```
 
@@ -143,52 +141,47 @@ ng version
 
    > Please note that starting from Angular v17.0.0, the *app.module.ts* file is not added to the new projects by default. You must specify *DocumentEditorModule* in the *imports* property of the *Component* decorator and set *standalone* to *true*.
 
-   ``` typescript
-   import { Component } from "@angular/core";
-   import { IConfig } from "@onlyoffice/document-editor-angular";
-   import { DocumentEditorModule } from "@onlyoffice/document-editor-angular";
+  ``` typescript
+  import {Component} from "@angular/core"
+  import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-angular"
 
-   @Component({
-       selector: "app-root",
-       standalone: true,
-       imports: [DocumentEditorModule],
-       templateUrl: "./app.component.html"
-   })
-   export class AppComponent {
-       config: IConfig = {
-           document: {
-               "fileType": "docx",
-               "key": "Khirz6zTPdfd7",
-               "title": "Example Document Title.docx",
-               "url": "https://example.com/url-to-example-document.docx"
-           },
-           documentType: "word",
-           editorConfig: {
-               "callbackUrl": "https://example.com/url-to-callback.ashx"
-           },
-       }
-
-       onDocumentReady = () => {
-           console.log("Document is loaded");
-       };
-
-       onLoadComponentError = (errorCode, errorDescription) => {
-           switch(errorCode) {
-               case -1: // Unknown error loading component
-                   console.log(errorDescription);
-                   break;
-
-               case -2: // Error load DocsAPI from http://documentserver/
-                   console.log(errorDescription);
-                   break;
-
-               case -3: // DocsAPI is not defined
-                   console.log(errorDescription);
-                   break;
-           }
-       }
-   }
-   ```
+  @Component({
+    selector: "app-root",
+    standalone: true,
+    imports: [DocumentEditorModule],
+    templateUrl: "./app.component.html",
+  })
+  export class AppComponent {
+    config: IConfig = {
+      document: {
+        fileType: "docx",
+        key: "Khirz6zTPdfd7",
+        title: "Example Document Title.docx",
+        url: "https://example.com/url-to-example-document.docx",
+      },
+      documentType: "word",
+      editorConfig: {
+        callbackUrl: "https://example.com/url-to-callback.ashx",
+      },
+    }
+    onDocumentReady = () => {
+      console.log("Document is loaded")
+    }
+    onLoadComponentError = (errorCode, errorDescription) => {
+      switch (errorCode) {
+      case -1: // Unknown error loading component
+        console.log(errorDescription)
+        break
+      case -2: // Error load DocsAPI from http://documentserver/
+        console.log(errorDescription)
+        break
+      case -3: // DocsAPI is not defined
+        console.log(errorDescription)
+        break
+      }
+    }
+  }
+  ```
 
    Replace the following lines with your own data:
 
@@ -199,15 +192,15 @@ ng version
 
 2. In template, use the *document-editor* component with your options:
 
-   ``` xml
-   <document-editor
-       id="docxEditor"
-       documentServerUrl="http://documentserver/"
-       [config]="config"
-       [events_onDocumentReady]="onDocumentReady"
-       [onLoadComponentError]="onLoadComponentError"
-   ></document-editor>
-   ```
+  ``` xml
+  <document-editor
+      id="docxEditor"
+      documentServerUrl="http://documentserver/"
+      [config]="config"
+      [events_onDocumentReady]="onDocumentReady"
+      [onLoadComponentError]="onLoadComponentError"
+  ></document-editor>
+  ```
 
    Replace the `http://documentserver/` line with the URL of your server.
 
@@ -237,7 +230,7 @@ To deploy the application to a production environment, create the build-specific
 
    ``` typescript
    export const environment = {
-       production: false
+     production: false,
    }
    ```
 
@@ -247,23 +240,23 @@ To deploy the application to a production environment, create the build-specific
 
    ``` typescript
    export const environment = {
-       production: true,
-       apiUrl: "http://my-prod-url"
-   };
+     production: true,
+     apiUrl: "http://my-prod-url",
+   }
    ```
 
    The target-specific configuration files, such as *environment.development.ts*, set default values for the *development* build target:
 
    ``` typescript
    export const environment = {
-       production: true
+     production: true,
    }
    ```
 
 2. Import the original environment file in the *app.component.ts* component file to use the environment configurations you have defined:
 
    ``` typescript
-   import { environment } from "./../environments/environment";
+   import {environment} from "./../environments/environment"
    ```
 
    This ensures that the *build* and *serve* commands can find the configurations for the specific build targets.
@@ -272,52 +265,59 @@ To deploy the application to a production environment, create the build-specific
 
    By default no files are replaced. But you can add file replacements for the specific build targets:
 
-   ```json
-   "configurations": {
-       "development": {
-           "fileReplacements": [
-               {
-                   "replace": "src/environments/environment.ts",
-                   "with": "src/environments/environment.development.ts"
-               }
-           ]
-       }
-   }
-   ```
+  ```json
+  {
+    "configurations": {
+      "development": {
+        "fileReplacements": [
+          {
+            "replace": "src/environments/environment.ts",
+            "with": "src/environments/environment.development.ts"
+          }
+        ]
+      }
+    }
+  }
+  ```
 
    This means that when you build your development configuration with *ng build --configuration development*, the *src/environments/environment.ts* file is replaced with the *src/environments/environment.development.ts* target-specific version of the file.
 
    You can add additional configurations. For example, to add a *staging* environment, copy the *src/environments/environment.ts* file with the *src/environments/environment.staging.ts* title, then add a *staging* configuration to *angular.json*:
 
-   ``` json
-   "configurations": {
-       "production": { },
-       "staging": {
-           "fileReplacements": [
-               {
-                   "replace": "src/environments/environment.ts",
-                   "with": "src/environments/environment.staging.ts"
-               }
-           ]
-       }
-   }
-   ```
+  ``` json
+  {
+    "configurations": {
+      "production": {},
+      "staging": {
+        "fileReplacements": [
+          {
+            "replace": "src/environments/environment.ts",
+            "with": "src/environments/environment.staging.ts"
+          }
+        ]
+      }
+    }
+  }
+  ```
 
 4. Configure the *serve* command to use the targeted build configuration by adding it to the *serve.configurations* section of *angular.json*:
 
-   ``` json
-   "serve": {
-       "builder": "@angular-devkit/build-angular:dev-server",
-       "configurations": {
-           "production": {
-               "browserTarget": "document-editor-angular-workspace:build:production"
-           },
-           "development": {
-               "browserTarget": "document-editor-angular-workspace:build:development"
-           }
-       }
-   }
-   ```
+  ``` json
+  {
+    "serve": {
+      "builder": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "document-editor-angular-workspace:build:production"
+        },
+        "development": {
+          "browserTarget": "document-editor-angular-workspace:build:development"
+        }
+      }
+    }
+  }
+   
+  ```
 
 Now you can deploy the application to the created server:
 

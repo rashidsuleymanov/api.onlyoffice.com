@@ -26,20 +26,20 @@ docker run -itd -p 80:80 -v /absolutly_path_to_work_dir:/var/www/onlyoffice/docu
 In [ONLYOFFICE Docs config](../../../../Docs%20API/Usage%20API/Config/Editor/Plugins/index.md), add the relative path to the *config.json* file of the created plugin to the *plugins.pluginsData* parameter:
 
 ``` javascript
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "editorConfig": {
-        "plugins": {
-            "autostart": [
-                "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
-                "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
-            ],
-            "pluginsData": [
-                "https://example.com/plugin1/config.json",
-                "https://example.com/plugin2/config.json",
-            ]
-        },
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  editorConfig: {
+    plugins: {
+      autostart: [
+        "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
+        "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
+      ],
+      pluginsData: [
+        "https://example.com/plugin1/config.json",
+        "https://example.com/plugin2/config.json",
+      ],
     },
-});
+  },
+})
 ```
 
 where **example.com** is the name of the server where document manager and document storage service are installed and the plugins are placed. See the [How it works](../../../../Docs%20API/Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -127,20 +127,20 @@ The path to the folder depends on the operating system you use:
 **Option 3.** Edit the [ONLYOFFICE Docs config](../../../../Docs%20API/Usage%20API/Config/Editor/Plugins/index.md) by removing the corresponding plugin. The plugin will become unavailable for all portal users upon the editor next start:
 
 ``` javascript
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "editorConfig": {
-        "plugins": {
-            "autostart": [
-                "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
-                "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
-            ],
-            "pluginsData": [
-                "https://example.com/plugin1/config.json",
-                "https://example.com/plugin2/config.json",
-            ]
-        },
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  editorConfig: {
+    plugins: {
+      autostart: [
+        "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
+        "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
+      ],
+      pluginsData: [
+        "https://example.com/plugin1/config.json",
+        "https://example.com/plugin2/config.json",
+      ],
     },
-});                
+  },
+})
 ```
 
 The plugins will be removed for all the users. [In some cases](https://nodejs.org/docs/latest/api/fs.html#fs_availability), service restart is required.

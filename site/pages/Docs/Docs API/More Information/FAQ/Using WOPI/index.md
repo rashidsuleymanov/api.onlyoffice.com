@@ -16,9 +16,9 @@ order: -1
 
   ``` json
   {
-      "wopi": {
-          "enable": true
-      }
+    "wopi": {
+      "enable": true
+    }
   }
   ```
 

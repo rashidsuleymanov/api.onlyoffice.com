@@ -46,142 +46,142 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ``` json
 {
-    "name": "OCR",
-    "nameLocale": {
-        "fr": "Reconnaissance optique de caractères",
-        "es": "Reconocimiento óptico de caracteres",
-        "de": "OCR",
-        "pt-BR": "OCR"
-    },
-    "guid": "asc.{440EBF13-9B19-4BD8-8621-05200E58140B}",
-    "version": "2.0.0",
+  "name": "OCR",
+  "nameLocale": {
+    "fr": "Reconnaissance optique de caractères",
+    "es": "Reconocimiento óptico de caracteres",
+    "de": "OCR",
+    "pt-BR": "OCR"
+  },
+  "guid": "asc.{440EBF13-9B19-4BD8-8621-05200E58140B}",
+  "version": "2.0.0",
 
-    "variations": [
+  "variations": [
+    {
+      "description": "Recognize text from pictures and screenshots and insert it into your documents.",
+      "descriptionLocale": {
+        "fr": "Reconnaissez le texte des images et des captures d'écran et insérez-le dans vos documents.",
+        "es": "Reconozca el texto de imágenes y capturas de pantalla e insértelo en sus documentos.",
+        "de": "Erkennen Sie Text auf Bildern und Screenshots und fügen Sie ihn in Ihre Dokumente ein.",
+        "pt-BR": "Reconheça texto de imagens e capturas de tela e insira-o em seus documentos."
+      },
+      "url": "index.html",
+
+      "icons": ["resources/light/icon.png", "resources/light/icon@2x.png"],
+      "icons2": [
         {
-            "description": "Recognize text from pictures and screenshots and insert it into your documents.",
-            "descriptionLocale": {
-                "fr": "Reconnaissez le texte des images et des captures d'écran et insérez-le dans vos documents.",
-                "es": "Reconozca el texto de imágenes y capturas de pantalla e insértelo en sus documentos.",
-                "de": "Erkennen Sie Text auf Bildern und Screenshots und fügen Sie ihn in Ihre Dokumente ein.",
-                "pt-BR": "Reconheça texto de imagens e capturas de tela e insira-o em seus documentos."
-            },
-            "url": "index.html",
-
-            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
-            "icons2": [
-                {
-                    "style" : "light",
+          "style": "light",
                     
-                    "100%": {
-                        "normal": "resources/light/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/light/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/light/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/light/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/light/icon@2x.png"
-                    }
-                },
-                {
-                    "style" : "dark",
-                    
-                    "100%": {
-                        "normal": "resources/dark/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/dark/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/dark/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/dark/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/dark/icon@2x.png"
-                    }
-                }
-            ],
-
-            "isViewer": false,
-            "EditorsSupport": [ "word" ],
-            "isVisual": true,
-            "isModal": true,
-            "isInsideMode": false,
-            "initDataType": "none",
-
-            "buttons": [
-                {
-                    "text": "Insert Text",
-                    "primary": true,
-                    "textLocale": {
-                        "fr": "Insérer le texte",
-                        "es": "Insertar texto",
-                        "de": "Text einfügen"
-                    }
-                },
-                {
-                    "text": "Cancel",
-                    "primary": false,
-                    "textLocale": {
-                        "fr": "Annuler",
-                        "es": "Cancelar",
-                        "de": "Abbrechen"
-                    }
-                }
-            ],
-
-            "size": [ 592, 100 ],
-            "store": {
-                "background": {
-                    "light" : "#444444",
-                    "dark" : "#444444"
-                },
-                "screenshots" : [
-                    "resources/store/screenshots/screen_1.png",
-                    "resources/store/screenshots/screen_2.png",
-                    "resources/store/screenshots/screen_3.png"
-                ],
-                "icons"       : {
-                    "light" : "resources/store/icons",
-                    "dark"  : "resources/store/icons"
-                },
-                "categories": ["specAbilities", "work"]
-            }
+          "100%": {
+            "normal": "resources/light/icon.png"
+          },
+          "125%": {
+            "normal": "resources/light/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/light/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/light/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/light/icon@2x.png"
+          }
         },
         {
-            "description": "About",
-            "descriptionLocale": {
-                "fr": "À propos",
-                "es": "Sobre programa",
-                "de": "Über"
-            },
-
-            "url": "index_about.html",
-            "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon2.png", "resources/img/icon2@2x.png" ],
-            "isViewer": false,
-            "EditorsSupport": [ "word" ],
-            "isVisual": true,
-            "isModal": true,
-            "isInsideMode": false,
-            "initDataType": "none",
-
-            "buttons": [
-                {
-                    "text": "Ok",
-                    "primary": true
-                }
-            ],
-
-            "size": [ 392, 147 ]
+          "style": "dark",
+                    
+          "100%": {
+            "normal": "resources/dark/icon.png"
+          },
+          "125%": {
+            "normal": "resources/dark/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/dark/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/dark/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/dark/icon@2x.png"
+          }
         }
-    ]
+      ],
+
+      "isViewer": false,
+      "EditorsSupport": ["word"],
+      "isVisual": true,
+      "isModal": true,
+      "isInsideMode": false,
+      "initDataType": "none",
+
+      "buttons": [
+        {
+          "text": "Insert Text",
+          "primary": true,
+          "textLocale": {
+            "fr": "Insérer le texte",
+            "es": "Insertar texto",
+            "de": "Text einfügen"
+          }
+        },
+        {
+          "text": "Cancel",
+          "primary": false,
+          "textLocale": {
+            "fr": "Annuler",
+            "es": "Cancelar",
+            "de": "Abbrechen"
+          }
+        }
+      ],
+
+      "size": [592, 100],
+      "store": {
+        "background": {
+          "light": "#444444",
+          "dark": "#444444"
+        },
+        "screenshots": [
+          "resources/store/screenshots/screen_1.png",
+          "resources/store/screenshots/screen_2.png",
+          "resources/store/screenshots/screen_3.png"
+        ],
+        "icons": {
+          "light": "resources/store/icons",
+          "dark": "resources/store/icons"
+        },
+        "categories": ["specAbilities", "work"]
+      }
+    },
+    {
+      "description": "About",
+      "descriptionLocale": {
+        "fr": "À propos",
+        "es": "Sobre programa",
+        "de": "Über"
+      },
+
+      "url": "index_about.html",
+      "icons": ["resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon2.png", "resources/img/icon2@2x.png"],
+      "isViewer": false,
+      "EditorsSupport": ["word"],
+      "isVisual": true,
+      "isModal": true,
+      "isInsideMode": false,
+      "initDataType": "none",
+
+      "buttons": [
+        {
+          "text": "Ok",
+          "primary": true
+        }
+      ],
+
+      "size": [392, 147]
+    }
+  ]
 }
 ```
 

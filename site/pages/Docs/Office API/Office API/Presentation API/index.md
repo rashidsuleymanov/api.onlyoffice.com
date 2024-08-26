@@ -16,12 +16,23 @@ The text cannot be placed directly to the *slide*, it can be only grouped to *pa
 The simplest example presentation with a single slide without any objects can be built with the help of **ONLYOFFICE Document Builder** using the following code:
 
 ``` js
-builder.CreateFile("pptx");                      // create a presentation file in the .pptx format with ONLYOFFICE Document Builder
-var oPresentation = Api.GetPresentation();       // create a new 'oPresentation' variable and get the created presentation contents
-var oSlide = oPresentation.GetSlideByIndex(0);   // get the first slide
-oSlide.RemoveAllObjects();                       // remove all objects from the first slide
-builder.SaveFile("pptx", "example.pptx");        // save the resulting presentation as a file in the .pptx format with a new 'example.pptx' name
-builder.CloseFile();                             // close the presentation file and finish work with ONLYOFFICE Document Builder
+// create a presentation file in the .pptx format with ONLYOFFICE Document Builder
+builder.CreateFile("pptx")
+
+// create a new 'oPresentation' variable and get the created presentation contents
+const oPresentation = Api.GetPresentation()
+
+// get the first slide
+const oSlide = oPresentation.GetSlideByIndex(0)
+
+// remove all objects from the first slide
+oSlide.RemoveAllObjects()
+
+// save the resulting presentation as a file in the .pptx format with a new 'example.pptx' name
+builder.SaveFile("pptx", "example.pptx")
+
+// close the presentation file and finish work with ONLYOFFICE Document Builder
+builder.CloseFile()
 ```
 
 
@@ -30,12 +41,23 @@ builder.CloseFile();                             // close the presentation file 
 If you want to edit an already existing presentation, you can open it using **ONLYOFFICE Document Builder**, get its elements and change them however you need. The only difference from a presentation editor in this case will be that you will not need this presentation editor. The presentation is opened the following way:
 
 ``` js
-builder.OpenFile("https://example.com/mypresentation.pptx");         // use a path to an existing 'mypresentation.pptx' presentation file to open it with ONLYOFFICE Document Builder
-var oPresentation = Api.GetPresentation();       // create a new 'oPresentation' variable and get the created presentation contents
-var oSlide = oPresentation.GetSlideByIndex(0);   // get the first slide
-oSlide.RemoveAllObjects();                       // remove all objects from the first slide
-builder.SaveFile("pptx", "example.pptx");        // save the resulting presentation as a file in the .pptx format with a new 'example.pptx' name
-builder.CloseFile();                             // close the presentation file and finish work with ONLYOFFICE Document Builder
+// use a path to an existing 'mypresentation.pptx' presentation file to open it with ONLYOFFICE Document Builder
+builder.OpenFile("https://example.com/mypresentation.pptx")
+
+// create a new 'oPresentation' variable and get the created presentation contents
+const oPresentation = Api.GetPresentation()
+
+// get the first slide
+const oSlide = oPresentation.GetSlideByIndex(0)
+
+// remove all objects from the first slide
+oSlide.RemoveAllObjects()
+
+// save the resulting presentation as a file in the .pptx format with a new 'example.pptx' name
+builder.SaveFile("pptx", "example.pptx")
+
+// close the presentation file and finish work with ONLYOFFICE Document Builder
+builder.CloseFile()
 ```
 
 As you can see you just need to use the *builder.OpenFile();* method of the [CDocBuilder](../../../Document%20Builder/Builder%20Framework/C++/CDocBuilder/index.md) class with the path to the necessary presentation as an argument to open it. In the above example we open **mypresentation.pptx** presentation, get its first slide and remove all objects from it. The same way any other presentation element can be changed.

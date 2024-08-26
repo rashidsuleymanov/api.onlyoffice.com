@@ -28,28 +28,28 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/s
 
 ``` json
 {
-    "name"       : "searchAndReplaceOnStart",
-    "guid"       : "asc.{C820F3CC-1248-4CA2-8D0F-D7EFD44DE09C}",
-    "baseUrl"    : "",
-    "variations" : [
-        {
-            "description"         : "searchAndReplaceOnStart",
-            "url"                 : "index.html",
+  "name": "searchAndReplaceOnStart",
+  "guid": "asc.{C820F3CC-1248-4CA2-8D0F-D7EFD44DE09C}",
+  "baseUrl": "",
+  "variations": [
+    {
+      "description": "searchAndReplaceOnStart",
+      "url": "index.html",
 
-            "isViewer"            : true,
-            "EditorsSupport"      : [ "word" ],
+      "isViewer": true,
+      "EditorsSupport": ["word"],
 
-            "isSystem"            : true,
-            "isVisual"            : false,
+      "isSystem": true,
+      "isVisual": false,
 
-            "initDataType"        : "none",
-            "initData"            : "",
+      "initDataType": "none",
+      "initData": "",
 
-            "buttons"             : [],
+      "buttons": [],
 
-            "events"              : ["onDocumentContentReady"]
-        }
-    ]
+      "events": ["onDocumentContentReady"]
+    }
+  ]
 }
 ```
 

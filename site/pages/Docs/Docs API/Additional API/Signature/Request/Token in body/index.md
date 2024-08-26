@@ -27,8 +27,8 @@ The *payload* for the JSON Web Token contains the request body parameters.
 
   ``` json
   {
-      "c": "info",
-      "key": "Khirz6zTPdfd7"
+    "c": "info",
+    "key": "Khirz6zTPdfd7"
   }
   ```
 
@@ -56,11 +56,11 @@ The *payload* for the JSON Web Token contains the request body parameters.
 
   ``` json
   {
-      "filetype": "docx",
-      "key": "Khirz6zTPdfd7",
-      "outputtype": "pdf",
-      "title": "Example Document Title.docx",
-      "url": "https://example.com/url-to-example-document.docx"
+    "filetype": "docx",
+    "key": "Khirz6zTPdfd7",
+    "outputtype": "pdf",
+    "title": "Example Document Title.docx",
+    "url": "https://example.com/url-to-example-document.docx"
   }
   ```
 
@@ -88,8 +88,8 @@ The *payload* for the JSON Web Token contains the request body parameters.
 
   ``` json
   {
-      "async": true,
-      "url": "https://example.com/url-to-example-script.docbuilder"
+    "async": true,
+    "url": "https://example.com/url-to-example-script.docbuilder"
   }
   ```
 
@@ -119,8 +119,8 @@ The *payload* for the JSON Web Token contains the request body parameters.
 
   ``` json
   {
-      "key": "Khirz6zTPdfd7",
-      "status": 4
+    "key": "Khirz6zTPdfd7",
+    "status": 4
   }
   ```
 

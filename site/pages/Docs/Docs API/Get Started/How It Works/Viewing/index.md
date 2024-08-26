@@ -8,16 +8,16 @@ Starting from version 7.2, the **live viewer** is added to the text document, sp
 
 1. If the *mode* field is *fast* and the *change* field is *true*, then the live viewer is opened by default, but you can switch the mode to the common viewer and back without reloading the page. To do this, open the **File** tab, click **Advanced Settings...** and check/uncheck the **Show changes from other users** checkbox. This mode is enabled by default:
 
-   ```  javascript
-   {
-       "editorConfig": {
-           "coEditing": {
-               "mode": "fast",
-               "change": true
-           },
-           "mode": "view"
-       },
-   }
+```  javascript
+const config = {
+  editorConfig: {
+    coEditing: {
+      mode: "fast",
+      change: true,
+    },
+    mode: "view",
+  },
+}
    ```
 
    ![Setting](/assets/images/editor/show-changes-from-other-users.png)
@@ -32,44 +32,44 @@ Starting from version 7.2, the **live viewer** is added to the text document, sp
 
 2. If the *mode* field is *fast* and the *change* field is *false*, then the live viewer is opened by default, and you cannot switch the mode to the common viewer:
 
-   ```  javascript
-   {
-       "editorConfig": {
-           "coEditing": {
-               "mode": "fast",
-               "change": false
-           }
-       }
-   }      
+```  javascript
+const config = {
+  editorConfig: {
+    coEditing: {
+      mode: "fast",
+      change: false,
+    },
+  },
+}
    ```
 
 3. If the *mode* field is *strict* and the *change* field is *true*, then the common viewer is opened by default, but you can switch the mode to the live viewer in the **Advanced Settings...**:
 
-   ```  javascript
-   {
-       "editorConfig": {
-           "coEditing": {
-               "mode": "strict",
-               "change": true
-           },
-           "mode": "view"
-       },
-   }
-   ```
+```  javascript
+const config = {
+  editorConfig: {
+    coEditing: {
+      mode: "strict",
+      change: true,
+    },
+    mode: "view",
+  },
+}
+```
 
 4. If the *mode* field is *strict* and the *change* field is *false*, then the common viewer is opened by default, and you cannot switch the mode to the live viewer:
 
-   ```  javascript
-   {
-       "editorConfig": {
-           "coEditing": {
-               "mode": "strict",
-               "change": false
-           },
-           "mode": "view"
-       },
-   }
-   ```
+```  javascript
+const config = {
+  editorConfig: {
+    coEditing: {
+      mode: "strict",
+      change: false,
+    },
+    mode: "view",
+  },
+}
+```
 
    ![Viewer](/assets/images/editor/viewer.png)
 

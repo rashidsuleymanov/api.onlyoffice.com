@@ -7,11 +7,11 @@ order: -5
   The **document editing service** informs the **document storage service** about the status of the document editing and sends the response with all the necessary data via the *callbackUrl*, which is specified in the configuration file like this:
 
   ``` javascript
-  var docEditor = new DocsAPI.DocEditor("placeholder", {
-      "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx"
-      },
-  });
+  const docEditor = new DocsAPI.DocEditor("placeholder", {
+    editorConfig: {
+      callbackUrl: "https://example.com/url-to-callback.ashx",
+    },
+  })
   ```
 
   Here the `https://example.com/url-to-callback.ashx` is the address of the special handler which can process the response from the **document editing service** and response with the *"error": 0* status code. This handler can be written in the programming language of your choice.
@@ -38,11 +38,11 @@ order: -5
   Set the mode using the *editorConfig* section of the configuration file:
 
   ``` javascript
-  var docEditor = new DocsAPI.DocEditor("placeholder", {
-      "editorConfig": {
-          "mode": "edit",
-      },
-  });
+  const docEditor = new DocsAPI.DocEditor("placeholder", {
+    editorConfig: {
+      mode: "edit",
+    },
+  })
   ```
 
   More information on this parameter is available [here](../../../Usage%20API/Config/Editor/index.md#mode).

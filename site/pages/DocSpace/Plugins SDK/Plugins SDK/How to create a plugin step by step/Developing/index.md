@@ -90,54 +90,52 @@ For example, the **draw\.io** plugin contains two main UI elements - the modal w
 
   ``` javascript
   export const frameProps: IFrame = {
-      width: "100%",
-      height: "100%",
-      name: "test-drawio",
-      src: "",
-  };
+    width: "100%",
+    height: "100%",
+    name: "test-drawio",
+    src: "",
+  }
   ```
 
   Create the [IBox](../../Coding%20Plugin/Plugin%20Components/Box/index.md) container to add the iframe to it:
 
   ``` javascript
-  const body:
-  IBox = {
-      widthProp: "100%",
-      heightProp: "100%",
+  const body: IBox = {
+    widthProp: "100%",
+    heightProp: "100%",
 
-      children: [
-          {
-              component: Components.iFrame,
-              props: frameProps,
-          },
-      ],
-  };
+    children: [
+      {
+        component: Components.iFrame,
+        props: frameProps,
+      },
+    ],
+  }
   ```
 
   Configure the [modal window](../../Coding%20Plugin/Plugin%20Components/ModalDialog/index.md) properties:
 
   ``` javascript
   export const drawIoModalDialogProps: IModalDialog = {
-      dialogHeader: "",
-      dialogBody: body,
-      displayType: ModalDisplayType.modal,
-      fullScreen: true,
-      onClose: () => {
-          const message: IMessage = {
-              actions: [Actions.closeModal],
-          };
-
-          return message;
-      },
-      onLoad: async () => {
-          return {
-              newDialogHeader: drawIoModalDialogProps.dialogHeader || "",
-              newDialogBody: drawIoModalDialogProps.dialogBody,
-          };
-      },
-      autoMaxHeight: true,
-      autoMaxWidth: true,
-  };
+    dialogHeader: "",
+    dialogBody: body,
+    displayType: ModalDisplayType.modal,
+    fullScreen: true,
+    onClose: () => {
+      const message: IMessage = {
+        actions: [Actions.closeModal],
+      }
+      return message
+    },
+    onLoad: async () => {
+      return {
+        newDialogHeader: drawIoModalDialogProps.dialogHeader || "",
+        newDialogBody: drawIoModalDialogProps.dialogBody,
+      }
+    },
+    autoMaxHeight: true,
+    autoMaxWidth: true,
+  }
   ```
 
 * In the [Editor.ts](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw-io/src/DrawIO/Editor.ts) file, configure the diagram editor. Create the *DiagramEditor* function with the following parameters:
@@ -177,13 +175,13 @@ Each plugin type has specific plugin items. Define the [context menu item](../..
 
 ``` javascript
 export const contextMenuItem: IContextMenuItem = {
-    key: "speech-to-text-context-menu-item",
-    label: "Convert to text",
-    icon: "speech-to-text-16.png",
-    onClick: assemblyAI.speechToText,
-    fileType: [FilesType.video],
-    withActiveItem: true,
-};
+  key: "speech-to-text-context-menu-item",
+  label: "Convert to text",
+  icon: "speech-to-text-16.png",
+  onClick: assemblyAI.speechToText,
+  fileType: [FilesType.video],
+  withActiveItem: true,
+}
 ```
 
 <img alt="Context menu item" src="/assets/images/docspace/context-menu-item.png" width="400px">
@@ -192,36 +190,35 @@ You can add more plugin types. For example, the **draw\.io** plugin can be acces
 
 ``` javascript
 const mainButtonItem: IMainButtonItem = {
-    key: "draw-io-main-button-item",
-    label: "Draw.io",
-    icon: "drawio.png",
-    onClick: (id: number) => {
-        drawIo.setCurrentFolderId(id);
+  key: "draw-io-main-button-item",
+  label: "Draw.io",
+  icon: "drawio.png",
+  onClick: (id: number) => {
+    drawIo.setCurrentFolderId(id)
 
-        const message: IMessage = {
-            actions: [Actions.showCreateDialogModal],
-            createDialogProps: {
-                title: "Create diagram",
-                startValue: "New diagram",
-                visible: true,
-                isCreateDialog: true,
-                extension: ".drawio",
-                onSave: async (e: any, value: string) => {
-                    await drawIo.createNewFile(value);
-                },
-                onCancel: (e: any) => {
-                    drawIo.setCurrentFolderId(null);
-                },
-                onClose: (e: any) => {
-                    drawIo.setCurrentFolderId(null);
-                },
-            },
-        };
-
-        return message;
-    },
-    // items: [createItem],
-};
+    const message: IMessage = {
+      actions: [Actions.showCreateDialogModal],
+      createDialogProps: {
+        title: "Create diagram",
+        startValue: "New diagram",
+        visible: true,
+        isCreateDialog: true,
+        extension: ".drawio",
+        onSave: async (e: any, value: string) => {
+          await drawIo.createNewFile(value)
+        },
+        onCancel: (e: any) => {
+          drawIo.setCurrentFolderId(null)
+        },
+        onClose: (e: any) => {
+          drawIo.setCurrentFolderId(null)
+        },
+      },
+    }
+    return message
+  },
+  // items: [createItem],
+}
 ```
 
 When the main button item is clicked, the modal window appears where you can type the diagram's name and open an empty *.drawio* file.
@@ -234,21 +231,21 @@ For the **draw\.io** plugin, you also need to configure the file plugin type whi
 
    ``` javascript
    export const drawIoItem: IFileItem = {
-       extension: ".drawio",
-       fileTypeName: "Diagram",
-       fileRowIcon: "drawio-32.svg",
-       fileTileIcon: "drawio-32.svg",
-       devices: [Devices.desktop],
-       onClick,
-   };
+     extension: ".drawio",
+     fileTypeName: "Diagram",
+     fileRowIcon: "drawio-32.svg",
+     fileTileIcon: "drawio-32.svg",
+     devices: [Devices.desktop],
+     onClick,
+   }
    ```
 
 2. Define the *onClick* event which will execute the *editDiagram* method each time the *.drawio* file is opened:
 
    ``` javascript
    const onClick = async (item: File) => {
-       return await drawIo.editDiagram(item.id);
-   };
+     return await drawIo.editDiagram(item.id)
+   }
    ```
 
    ![Drawio file](/assets/images/docspace/drawio-file.png)
@@ -262,27 +259,27 @@ Configure the settings plugin type to provide users with the administrator setti
 
    ``` javascript
    const descriptionText: TextGroup = {
-       component: Components.text,
-       props: {
-           text: "To generate API token visit https://www.assemblyai.com",
-           color: "#A3A9AE",
-           fontSize: "12px",
-           fontWeight: 400,
-           lineHeight: "16px",
-       },
-   };
-
+     component: Components.text,
+     props: {
+       text: "To generate API token visit https://www.assemblyai.com",
+       color: "#A3A9AE",
+       fontSize: "12px",
+       fontWeight: 400,
+       lineHeight: "16px",
+     },
+   }
+   
    const descGroup: BoxGroup = {
-       component: Components.box,
-       props: { children: [descriptionText] },
-   };
-
+     component: Components.box,
+     props: {children: [descriptionText]},
+   }
+   
    const parentBox: IBox = {
-       displayProp: "flex",
-       flexDirection: "column",
-       // marginProp: "16px 0 0 0",
-       children: [tokenGroup, descGroup],
-   };
+     displayProp: "flex",
+     flexDirection: "column",
+     // marginProp: "16px 0 0 0",
+     children: [tokenGroup, descGroup],
+   }
    ```
 
    In the settings description, indicate that it is necessary to generate an API token in order to be able to work with the plugin.
@@ -291,20 +288,24 @@ Configure the settings plugin type to provide users with the administrator setti
 
    ``` javascript
    const adminSettings: ISettings = {
-       settings: parentBox,
-       saveButton: userButtonComponent,
-       onLoad: async () => {
-           assemblyAI.fetchAPIToken();
+     settings: parentBox,
+     saveButton: userButtonComponent,
+     onLoad: async () => {
+       assemblyAI.fetchAPIToken()
+   
+       tokenInput.value = assemblyAI.apiToken
+   
+       if (!assemblyAI.apiToken) {
+         return {
+           settings: parentBox,
+         }
+       }
 
-           tokenInput.value = assemblyAI.apiToken;
-
-           if (!assemblyAI.apiToken) return { settings: parentBox };
-
-           plugin.setAdminPluginSettings(adminSettings);
-
-           return { settings: parentBox };
-       },
-   };
+       plugin.setAdminPluginSettings(adminSettings)
+   
+       return {settings: parentBox}
+     },
+   }
    ```
 
    Specify the *onLoad* event which defines which plugin settings will be displayed when the settins block is loaded.
@@ -331,15 +332,15 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    Defines the API URL.
 
     ``` javascript
-    apiURL = "";
+    apiURL = ""
     ```
 
    ### currentFileId
    
    Defines the current file ID.
 
-    ``` javascript
-    currentFileId: null | number = null;
+    ``` typescript
+    const currentFileId: numbernull | number = null
     ```
 
    ### apiToken
@@ -347,7 +348,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    Defines the API token.
 
     ``` javascript
-    apiToken = "";
+    apiToken = ""
     ```
 
    ## Methods and their description:
@@ -358,24 +359,27 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
 
     ``` javascript
     createAPIUrl = () => {
-        const api = plugin.getAPI();
+      const api = plugin.getAPI()
 
-        this.apiURL = api.origin.replace(/\/+$/, "");
+      this.apiURL = api.origin.replace(/\/+$/, "")
 
-        const params = [api.proxy, api.prefix];
+      const params = [api.proxy, api.prefix]
 
-        if (this.apiURL) {
-            params.forEach((part) => {
-                if (!part) return;
-                const newPart = part.trim().replace(/^\/+/, "");
-                this.apiURL += newPart
-                    ? this.apiURL.length > 0 &&
-                        this.apiURL[this.apiURL.length - 1] === "/"
-                        ? newPart
-                        : `/${newPart}`
-                    : "";
-            });
+      if (this.apiURL) {
+        for (const part of params) {
+          if (!part) {
+            continue
+          }
+          const newPart = part.trim().replace(/^\/+/, "")
+          if (newPart) {
+            if (this.apiURL.length !== 0 && this.apiURL[this.apiURL.length - 1] === "/") {
+              this.apiURL += newPart
+            } else {
+              this.apiURL += `/${newPart}`
+            }
+          }
         }
+      }
     }
      ```
 
@@ -385,8 +389,8 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
 
     ``` javascript
     setAPIUrl = (url: string) => {
-        this.apiURL = url;
-    };
+      this.apiURL = url
+    }
     ```
 
    ### getAPIUrl
@@ -395,8 +399,8 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
 
     ``` javascript
     getAPIUrl = () => {
-        return this.apiURL;
-    };
+      return this.apiURL
+    }
     ```
 
    ### setAPIToken
@@ -405,8 +409,8 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
 
     ``` javascript
     setAPIToken = (apiToken: string) => {
-        this.apiToken = apiToken;
-    };
+      this.apiToken = apiToken
+    }
     ```
 
    ### getAPIToken
@@ -415,8 +419,8 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
 
     ``` javascript
     getAPIToken = () => {
-        return this.apiToken;
-    };
+      return this.apiToken
+    }
     ```
 
    ### fetchAPIToken
@@ -425,13 +429,15 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
 
      ``` javascript
      fetchAPIToken = async () => {
-         const apiToken = localStorage.getItem("speech-to-text-api-token");
+       const apiToken = localStorage.getItem("speech-to-text-api-token")
+     
+       if (!apiToken) {
+         return
+       }
 
-         if (!apiToken) return;
-
-         this.setAPIToken(apiToken);
-         plugin.updateStatus(PluginStatus.active);
-     };
+       this.setAPIToken(apiToken)
+       plugin.updateStatus(PluginStatus.active)
+     }
      ```
 
    ### saveAPIToken
@@ -440,10 +446,16 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
 
     ``` javascript
     saveAPIToken = (apiToken: string) => {
-        localStorage.setItem("speech-to-text-api-token", apiToken);
-
-        plugin.updateStatus(!!apiToken ? PluginStatus.active : PluginStatus.hide);
-    };
+      localStorage.setItem("speech-to-text-api-token", apiToken)
+    
+      let status
+      if (apiToken) {
+        status = PluginStatus.active
+      } else {
+        status = PluginStatus.hide
+      }
+      plugin.updateStatus(status)
+    }
     ```
 
    ### setCurrentFileId
@@ -452,8 +464,8 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
 
     ``` javascript
     setCurrentFileId = (id: number | null) => {
-        this.currentFileId = id;
-    };
+      this.currentFileId = id
+    }
     ```
 
    ### uploadFile
@@ -461,33 +473,32 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    Uploads a file which will be transcribed.
 
     ``` javascript
-    uploadFile = async (api_token: string, path: string, data: Blob) => {
-        console.log(`Uploading file: ${path}`);
-
-        const url = "https://api.assemblyai.com/v2/upload";
-
-        try {
-            const response = await fetch(url, {
-                method: "POST",
-                body: data,
-                headers: {
-                    "Content-Type": "application/octet-stream",
-                    Authorization: api_token,
-                },
-            });
-
-            if (response.status === 200) {
-                const responseData = await response.json();
-                return responseData["upload_url"];
-            } else {
-                console.error(`Error: ${response.status} - ${response.statusText}`);
-                return null;
-            }
-        } catch (error) {
-            console.error(`Error: ${error}`);
-            return null;
+    uploadFile = async (apiToken: string, path: string, data: Blob) => {
+      console.log(`Uploading file: ${path}`)
+    
+      const url = "https://api.assemblyai.com/v2/upload"
+    
+      try {
+        const response = await fetch(url, {
+          method: "POST",
+          body: data,
+          headers: {
+            "Content-Type": "application/octet-stream",
+            "Authorization": apiToken,
+          },
+        })
+    
+        if (response.status === 200) {
+          const responseData = await response.json()
+          return responseData["upload_url"]
         }
-    };
+        console.error(`Error: ${response.status} - ${response.statusText}`)
+        return null
+      } catch (error) {
+        console.error(`Error: ${error}`)
+        return null
+      }
+    }
     ```
 
    ### transcribeAudio
@@ -495,40 +506,39 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    Transcribes the audio file.
 
     ``` javascript
-    transcribeAudio = async (api_token: string, audio_url: string) => {
-        console.log("Transcribing audio... This might take a moment.");
-
-        const headers = {
-            authorization: api_token,
-            "content-type": "application/json",
-        };
-
-        const response = await fetch("https://api.assemblyai.com/v2/transcript", {
-            method: "POST",
-            body: JSON.stringify({ audio_url }),
-            headers,
-        });
-
-        const responseData = await response.json();
-        const transcriptId = responseData.id;
-
-        const pollingEndpoint = `https://api.assemblyai.com/v2/transcript/${transcriptId}`;
-
-        while (true) {
-            const pollingResponse = await fetch(pollingEndpoint, { headers });
-            const transcriptionResult = await pollingResponse.json();
-
-            if (transcriptionResult.status === "completed") {
-                return transcriptionResult;
-            }
-            else if (transcriptionResult.status === "error") {
-                throw new Error(`Transcription failed: ${transcriptionResult.error}`);
-            }
-            else {
-                await new Promise((resolve) => setTimeout(resolve, 3000));
-            }
+    transcribeAudio = async (apiToken: string, audioUrl: string) => {
+      console.log("Transcribing audio... This might take a moment.")
+    
+      const headers = {
+        "authorization": apiToken,
+        "content-type": "application/json",
+      }
+      const response = await fetch("https://api.assemblyai.com/v2/transcript", {
+        method: "POST",
+        body: JSON.stringify({audioUrl}),
+        headers,
+      })
+    
+      const responseData = await response.json()
+      const transcriptId = responseData.id
+    
+      const pollingEndpoint = `https://api.assemblyai.com/v2/transcript/${transcriptId}`
+    
+      while (true) {
+        const pollingResponse = await fetch(pollingEndpoint, {headers})
+        const transcriptionResult = await pollingResponse.json()
+    
+        if (transcriptionResult.status === "completed") {
+          return transcriptionResult
+        } else if (transcriptionResult.status === "error") {
+          throw new Error(`Transcription failed: ${transcriptionResult.error}`)
+        } else {
+          await new Promise((resolve) => {
+            setTimeout(resolve, 3000)
+          })
         }
-    };
+      }
+    }
     ```
 
    ### speechToText
@@ -537,84 +547,89 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
 
     ``` javascript
     speechToText = async (id: number) => {
-        if (!this.apiToken) return;
+      if (!this.apiToken) {
+        return
+      }
 
-        this.setCurrentFileId(null);
+      this.setCurrentFileId(null)
+    
+      if (!this.apiURL) {
+        this.createAPIUrl()
+      }
 
-        if (!this.apiURL) this.createAPIUrl();
+      const response = await fetch(`${this.apiURL}/files/file/${id}`)
+      const data = await response.json()
+      const {viewUrl, title, folderId, fileExst} = data.response
+    
+      const file = await fetch(viewUrl)
+    
+      const fileBlob = await file.blob()
+    
+      const uploadUrl = await this.uploadFile(this.apiToken, viewUrl, fileBlob)
+    
+      const transcript = await this.transcribeAudio(this.apiToken, uploadUrl)
+    
+      const blob = new Blob([transcript.text], {
+        type: "text/plain;charset=UTF-8",
+      })
+    
+      const newFile = new File([blob], "blob", {
+        type: "",
+        lastModified: Date.now(),
+      })
+    
+      const formData = new FormData()
+      formData.append("file", newFile)
+    
+      const newTitle = `${title.replaceAll(fileExst, "")} text`
+    
+      try {
+        const sessionRes = await fetch(
+          `${this.apiURL}/files/${folderId}/upload/create_session`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json;charset=utf-8",
+            },
+            body: JSON.stringify({
+              createOn: new Date(),
+              fileName: `${newTitle}.txt`,
+              fileSize: newFile.size,
+              relativePath: "",
+            }),
+          },
+        )
+        const response = await sessionRes.json()
+        const sessionData = response.response.data
+    
+        const data = await fetch(`${sessionData.location}`, {
+          method: "POST",
+          body: formData,
+        })
 
-        const { viewUrl, title, folderId, fileExst } = (
-            await (await fetch(`${this.apiURL}/files/file/${id}`)).json()
-        ).response;
+        const jsonData = await data.json()
+        const {id: fileId} = jsonData.data
+    
+        return fileId
+      } catch (e) {
+        console.log(e)
+      }
 
-        const file = await fetch(viewUrl);
-
-        const fileBlob = await file.blob();
-
-        const upload_url = await this.uploadFile(this.apiToken, viewUrl, fileBlob);
-
-        const transcript = await this.transcribeAudio(this.apiToken, upload_url);
-
-        const blob = new Blob([transcript.text], {
-            type: "text/plain;charset=UTF-8",
-        });
-
-        const newFile = new File([blob], `blob`, {
-            type: "",
-            lastModified: new Date().getTime(),
-        });
-
-        const formData = new FormData();
-        formData.append("file", newFile);
-
-        const newTitle = `${title.replaceAll(fileExst, "")} text`;
-
-        try {
-            const sessionRes = await fetch(
-                `${this.apiURL}/files/${folderId}/upload/create_session`,
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json;charset=utf-8",
-                    },
-                    body: JSON.stringify({
-                        createOn: new Date(),
-                        fileName: `${newTitle}.txt`,
-                        fileSize: newFile.size,
-                        relativePath: "",
-                    }),
-                }
-            );
-
-            const sessionData = (await sessionRes.json()).response.data;
-
-            const data = await fetch(`${sessionData.location}`, {
-                method: "POST",
-                body: formData,
-            });
-
-            const { id: fileId } = (await data.json()).data;
-
-            return fileId;
-        } catch (e) {
-            console.log(e);
-        }
-
-        return {
-            actions: [Actions.showToast],
-            toastProps: [{ type: ToastType.success, title: "" }],
-        } as IMessage;
-    };
+      return {
+        actions: [Actions.showToast],
+        toastProps: [{type: ToastType.success, title: ""}],
+      } as IMessage
+    }
     ```
 
 2. Declare the *AssemblyAI* class instance:
 
    ``` javascript
-   const assemblyAI = new AssemblyAI();
+   const assemblyAI = new AssemblyAI()
    ```
 
 3. Export the created plugin instance:
 
    ``` javascript
-   export default assemblyAI;
+   export default assemblyAI
    ```

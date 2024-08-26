@@ -46,136 +46,136 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ``` json
 {
-    "name": "Photo Editor",
-    "nameLocale": {
-        "fr": "Photo Editor",
-        "es": "Editor de Fotos",
-        "pt-BR": "Editor de foto",
-        "de": "Foto-Editor"
-    },
-    "guid": "asc.{07FD8DFA-DFE0-4089-AL24-0730933CC80A}",
-    "version": "1.0.1",
-    "baseUrl": "",
+  "name": "Photo Editor",
+  "nameLocale": {
+    "fr": "Photo Editor",
+    "es": "Editor de Fotos",
+    "pt-BR": "Editor de foto",
+    "de": "Foto-Editor"
+  },
+  "guid": "asc.{07FD8DFA-DFE0-4089-AL24-0730933CC80A}",
+  "version": "1.0.1",
+  "baseUrl": "",
 
-    "variations": [
+  "variations": [
+    {
+      "description": "Edit images, screenshots, and photos right in your documents: crop, resize, apply effects.",
+      "descriptionLocale": {
+        "fr": "Modifiez des images, des captures d'écran et des photos directement dans vos documents: coupez, ajustez, appliquez des effets.",
+        "es": "Edite imágenes, capturas de pantalla y fotos directamente en sus documentos: recorte, cambie el tamaño y aplique efectos.",
+        "pt-BR": "Edite imagens, capturas de tela e fotos diretamente em seus documentos: corte, redimensione e aplique efeitos.",
+        "de": "Bearbeiten Sie Bilder, Screenshots und Fotos direkt in Dokumenten: Zuschneiden, Größe ändern, Effekte anwenden."
+      },
+      "url": "index.html",
+
+      "icons": ["resources/light/icon.png", "resources/light/icon@2x.png"],
+      "icons2": [
         {
-            "description": "Edit images, screenshots, and photos right in your documents: crop, resize, apply effects.",
-            "descriptionLocale": {
-                "fr": "Modifiez des images, des captures d'écran et des photos directement dans vos documents: coupez, ajustez, appliquez des effets.",
-                "es": "Edite imágenes, capturas de pantalla y fotos directamente en sus documentos: recorte, cambie el tamaño y aplique efectos.",
-                "pt-BR": "Edite imagens, capturas de tela e fotos diretamente em seus documentos: corte, redimensione e aplique efeitos.",
-                "de": "Bearbeiten Sie Bilder, Screenshots und Fotos direkt in Dokumenten: Zuschneiden, Größe ändern, Effekte anwenden."
-            },
-            "url": "index.html",
-
-            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
-            "icons2": [
-                {
-                    "style" : "light",
+          "style": "light",
                     
-                    "100%": {
-                        "normal": "resources/light/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/light/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/light/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/light/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/light/icon@2x.png"
-                    }
-                },
-                {
-                    "style" : "dark",
-                    
-                    "100%": {
-                        "normal": "resources/dark/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/dark/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/dark/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/dark/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/dark/icon@2x.png"
-                    }
-                }
-            ],
-            "isViewer": false,
-            "EditorsSupport": [ "word", "cell", "slide" ],
-
-            "isVisual": true,
-            "isModal": true,
-            "isInsideMode": false,
-
-            "initDataType": "html",
-            "initData": "",
-
-            "buttons": [
-                {
-                    "text": "Ok",
-                    "primary": true
-                },
-				{
-                    "text": "Cancel",
-                    "primary": false,
-                    "isViewer": false,
-                    "textLocale": {
-                        "fr": "Annuler",
-                        "es": "Cancelar",
-                        "de": "Abbrechen"
-                    }
-                }
-            ],
-
-            "size": [ 10000, 10000 ],
-            "store": {
-                "background": {
-                    "light" : "linear-gradient(180deg, #FF8E3D 0%, #FF6F3D 100%)",
-                    "dark" : "linear-gradient(180deg, #FF8E3D 0%, #FF6F3D 100%)"
-                },
-                "screenshots" : [
-                    "resources/store/screenshots/screen_1.png",
-                    "resources/store/screenshots/screen_2.png"
-                ],
-                "icons"       : {
-                    "light" : "resources/store/icons",
-                    "dark"  : "resources/store/icons"
-                },
-                "categories": ["specAbilities", "work", "recommended"]
-            }
+          "100%": {
+            "normal": "resources/light/icon.png"
+          },
+          "125%": {
+            "normal": "resources/light/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/light/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/light/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/light/icon@2x.png"
+          }
         },
         {
-            "description": "About",
-            "descriptionLocale": {
-                "fr": "À propos",
-                "es": "Sobre programa",
-                "de": "Über"
-            },
-            "url": "index_about.html",
-
-            "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon2.png", "resources/img/icon2@2x.png" ],
-            "isViewer": false,
-            "EditorsSupport": [ "word", "cell", "slide" ],
-
-            "isVisual": true,
-            "isModal": true,
-            "isInsideMode": false,
-
-            "initDataType": "none",
-            "initData": "",
-
-            "size": [ 392, 147 ]
+          "style": "dark",
+                    
+          "100%": {
+            "normal": "resources/dark/icon.png"
+          },
+          "125%": {
+            "normal": "resources/dark/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/dark/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/dark/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/dark/icon@2x.png"
+          }
         }
-    ]
+      ],
+      "isViewer": false,
+      "EditorsSupport": ["word", "cell", "slide"],
+
+      "isVisual": true,
+      "isModal": true,
+      "isInsideMode": false,
+
+      "initDataType": "html",
+      "initData": "",
+
+      "buttons": [
+        {
+          "text": "Ok",
+          "primary": true
+        },
+        {
+          "text": "Cancel",
+          "primary": false,
+          "isViewer": false,
+          "textLocale": {
+            "fr": "Annuler",
+            "es": "Cancelar",
+            "de": "Abbrechen"
+          }
+        }
+      ],
+
+      "size": [10000, 10000],
+      "store": {
+        "background": {
+          "light": "linear-gradient(180deg, #FF8E3D 0%, #FF6F3D 100%)",
+          "dark": "linear-gradient(180deg, #FF8E3D 0%, #FF6F3D 100%)"
+        },
+        "screenshots": [
+          "resources/store/screenshots/screen_1.png",
+          "resources/store/screenshots/screen_2.png"
+        ],
+        "icons": {
+          "light": "resources/store/icons",
+          "dark": "resources/store/icons"
+        },
+        "categories": ["specAbilities", "work", "recommended"]
+      }
+    },
+    {
+      "description": "About",
+      "descriptionLocale": {
+        "fr": "À propos",
+        "es": "Sobre programa",
+        "de": "Über"
+      },
+      "url": "index_about.html",
+
+      "icons": ["resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon2.png", "resources/img/icon2@2x.png"],
+      "isViewer": false,
+      "EditorsSupport": ["word", "cell", "slide"],
+
+      "isVisual": true,
+      "isModal": true,
+      "isInsideMode": false,
+
+      "initDataType": "none",
+      "initData": "",
+
+      "size": [392, 147]
+    }
+  ]
 }
 ```
 

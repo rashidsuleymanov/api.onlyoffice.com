@@ -36,82 +36,82 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ``` json
 {
-    "name": "YouTube",
-    "nameLocale": {
-        "fr": "YouTube",
-        "es": "YouTube",
-        "pt-BR": "YouTube",
-        "de": "YouTube"
-    },
-    "guid": "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}",
-    "version": "1.0.4",
+  "name": "YouTube",
+  "nameLocale": {
+    "fr": "YouTube",
+    "es": "YouTube",
+    "pt-BR": "YouTube",
+    "de": "YouTube"
+  },
+  "guid": "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}",
+  "version": "1.0.4",
 
-    "variations": [
+  "variations": [
+    {
+      "description": "Easily embed YouTube videos into your documents.",
+      "descriptionLocale": {
+        "fr": "Insérez facilement des vidéos YouTube dans vos documents.",
+        "es": "Inserte fácilmente vídeos de YouTube en sus documentos.",
+        "pt-BR": "Incorpore facilmente vídeos do YouTube em seus documentos.",
+        "de": "Betten Sie ganz einfach YouTube-Videos in Ihre Dokumente ein."
+      },
+      "url": "index.html",
+
+      "icons": ["resources/img/icon.png", "resources/img/icon@2x.png"],
+      "icons2": [
         {
-            "description": "Easily embed YouTube videos into your documents.",
-            "descriptionLocale": {
-                "fr": "Insérez facilement des vidéos YouTube dans vos documents.",
-                "es": "Inserte fácilmente vídeos de YouTube en sus documentos.",
-                "pt-BR": "Incorpore facilmente vídeos do YouTube em seus documentos.",
-                "de": "Betten Sie ganz einfach YouTube-Videos in Ihre Dokumente ein."
-            },
-            "url": "index.html",
-
-            "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png" ],
-            "icons2": [
-                {
-                    "100%": { "normal": "resources/img/icon.png" },
-                    "125%": { "normal": "resources/img/icon@1.25x.png" },
-                    "150%": { "normal": "resources/img/icon@1.5x.png" },
-                    "175%": { "normal": "resources/img/icon@1.75x.png" },
-                    "200%": { "normal": "resources/img/icon@2x.png" }
-                }
-            ],
-            "isViewer": true,
-            "isDisplayedInViewer": false,
-            "EditorsSupport": [ "word", "cell", "slide" ],
-            "isVisual": true,
-            "isModal": true,
-            "isInsideMode": false,
-            "initDataType": "ole",
-            "isUpdateOleOnResize": false,
-
-            "buttons": [
-                {
-                    "text": "Ok",
-                    "primary": true,
-                    "isViewer": false
-                },
-                {
-                    "text": "Cancel",
-                    "primary": false,
-                    "isViewer": true,
-                    "textLocale": {
-                        "fr": "Annuler",
-                        "es": "Cancelar",
-                        "de": "Abbrechen"
-                    }
-                }
-            ],
-
-            "size": [ 350, 90 ],
-            "store": {
-                "background": {
-                    "light" : "#ED3323",
-                    "dark" : "#ED3323"
-                },
-                "screenshots" : [
-                    "resources/store/screenshots/screen_1.png",
-                    "resources/store/screenshots/screen_2.png"
-                ],
-                "icons"       : {
-                    "light" : "resources/store/icons",
-                    "dark"  : "resources/store/icons"
-                },
-                "categories": ["specAbilities", "entertainment", "recommended"]
-            }
+          "100%": {"normal": "resources/img/icon.png"},
+          "125%": {"normal": "resources/img/icon@1.25x.png"},
+          "150%": {"normal": "resources/img/icon@1.5x.png"},
+          "175%": {"normal": "resources/img/icon@1.75x.png"},
+          "200%": {"normal": "resources/img/icon@2x.png"}
         }
-    ]
+      ],
+      "isViewer": true,
+      "isDisplayedInViewer": false,
+      "EditorsSupport": ["word", "cell", "slide"],
+      "isVisual": true,
+      "isModal": true,
+      "isInsideMode": false,
+      "initDataType": "ole",
+      "isUpdateOleOnResize": false,
+
+      "buttons": [
+        {
+          "text": "Ok",
+          "primary": true,
+          "isViewer": false
+        },
+        {
+          "text": "Cancel",
+          "primary": false,
+          "isViewer": true,
+          "textLocale": {
+            "fr": "Annuler",
+            "es": "Cancelar",
+            "de": "Abbrechen"
+          }
+        }
+      ],
+
+      "size": [350, 90],
+      "store": {
+        "background": {
+          "light": "#ED3323",
+          "dark": "#ED3323"
+        },
+        "screenshots": [
+          "resources/store/screenshots/screen_1.png",
+          "resources/store/screenshots/screen_2.png"
+        ],
+        "icons": {
+          "light": "resources/store/icons",
+          "dark": "resources/store/icons"
+        },
+        "categories": ["specAbilities", "entertainment", "recommended"]
+      }
+    }
+  ]
 }
 ```
 

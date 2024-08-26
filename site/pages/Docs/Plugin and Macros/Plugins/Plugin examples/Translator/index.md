@@ -46,62 +46,62 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ``` json
 {
-    "name": "Translator",
-    "nameLocale": {
-        "fr": "Traducteur",
-        "es": "Traductor",
-        "pt-BR": "Tradutor",
-        "de": "Übersetzer"
-    },
-    "guid": "asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}",
-    "version": "1.0.6",
+  "name": "Translator",
+  "nameLocale": {
+    "fr": "Traducteur",
+    "es": "Traductor",
+    "pt-BR": "Tradutor",
+    "de": "Übersetzer"
+  },
+  "guid": "asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}",
+  "version": "1.0.6",
 
-    "variations": [
+  "variations": [
+    {
+      "description": "Translate the selected text into other languages with Google Translate.",
+      "descriptionLocale": {
+        "fr": "Traduisez le texte sélectionné dans d'autres langues avec Google Translate.",
+        "es": "Traduzca el texto seleccionado a otros idiomas con el Traductor de Google.",
+        "pt-BR": "Traduza o texto selecionado para outros idiomas com o Google Translate.",
+        "de": "Übersetzen Sie den ausgewählten Text in andere Sprachen mit Google Translate."
+      },
+      "url": "index.html",
+
+      "icons": ["resources/img/icon.png", "resources/img/icon@2x.png"],
+      "icons2": [
         {
-            "description": "Translate the selected text into other languages with Google Translate.",
-            "descriptionLocale": {
-                "fr": "Traduisez le texte sélectionné dans d'autres langues avec Google Translate.",
-                "es": "Traduzca el texto seleccionado a otros idiomas con el Traductor de Google.",
-                "pt-BR": "Traduza o texto selecionado para outros idiomas com o Google Translate.",
-                "de": "Übersetzen Sie den ausgewählten Text in andere Sprachen mit Google Translate."
-            },
-            "url": "index.html",
-
-            "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png" ],
-            "icons2": [
-                {
-                    "100%": { "normal": "resources/img/icon.png" },
-                    "125%": { "normal": "resources/img/icon@1.25x.png" },
-                    "150%": { "normal": "resources/img/icon@1.5x.png" },
-                    "175%": { "normal": "resources/img/icon@1.75x.png" },
-                    "200%": { "normal": "resources/img/icon@2x.png" }
-                }
-            ],
-            "screens": ["resources/store/screen_1.png"],
-            "isViewer": true,
-            "EditorsSupport": [ "word", "cell", "slide", "pdf" ],
-            "isVisual": true,
-            "isModal": false,
-            "isInsideMode": true,
-            "initDataType": "text",
-            "initOnSelectionChanged": true,
-            "store": {
-                "background": {
-                    "light": "#F5F5F5",
-                    "dark": "#444444"
-                },
-                "screenshots" : [
-                    "resources/store/screenshots/screen_1.png",
-                    "resources/store/screenshots/screen_2.png"
-                ],
-                "icons"       : {
-                    "light" : "resources/store/icons",
-                    "dark"  : "resources/store/icons"
-                },
-                "categories": ["specAbilities"]
-            }
+          "100%": {"normal": "resources/img/icon.png"},
+          "125%": {"normal": "resources/img/icon@1.25x.png"},
+          "150%": {"normal": "resources/img/icon@1.5x.png"},
+          "175%": {"normal": "resources/img/icon@1.75x.png"},
+          "200%": {"normal": "resources/img/icon@2x.png"}
         }
-    ]
+      ],
+      "screens": ["resources/store/screen_1.png"],
+      "isViewer": true,
+      "EditorsSupport": ["word", "cell", "slide", "pdf"],
+      "isVisual": true,
+      "isModal": false,
+      "isInsideMode": true,
+      "initDataType": "text",
+      "initOnSelectionChanged": true,
+      "store": {
+        "background": {
+          "light": "#F5F5F5",
+          "dark": "#444444"
+        },
+        "screenshots": [
+          "resources/store/screenshots/screen_1.png",
+          "resources/store/screenshots/screen_2.png"
+        ],
+        "icons": {
+          "light": "resources/store/icons",
+          "dark": "resources/store/icons"
+        },
+        "categories": ["specAbilities"]
+      }
+    }
+  ]
 }
 ```
 

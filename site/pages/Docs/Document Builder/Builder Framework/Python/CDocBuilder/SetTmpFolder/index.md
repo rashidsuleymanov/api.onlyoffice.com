@@ -20,5 +20,5 @@ builder.SetTmpFolder(L"DocBuilderTemp")
 #### .docbuilder
 
 ```js
-builder.SetTmpFolder("DocBuilderTemp");
+builder.SetTmpFolder("DocBuilderTemp")
 ```

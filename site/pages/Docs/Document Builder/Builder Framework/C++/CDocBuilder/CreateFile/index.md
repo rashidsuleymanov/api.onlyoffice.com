@@ -22,6 +22,6 @@ CDocBuilder::Dispose();
 
 #### .docbuilder
 
-```
-builder.CreateFile("docx");
+```js
+builder.CreateFile("docx")
 ```

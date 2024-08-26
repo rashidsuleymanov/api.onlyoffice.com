@@ -55,113 +55,113 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ``` json
 {
-    "guid": "asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}",
-    "name": "Highlight code",
-    "nameLocale": {
-        "de": "Code hervorheben",
-        "es": "Resaltar el código",
-        "pt-BR": "Highlight code",
-        "fr": "Code en surbrillance"
-    },
-    "version": "1.0.2",
-    "variations": [
+  "guid": "asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}",
+  "name": "Highlight code",
+  "nameLocale": {
+    "de": "Code hervorheben",
+    "es": "Resaltar el código",
+    "pt-BR": "Highlight code",
+    "fr": "Code en surbrillance"
+  },
+  "version": "1.0.2",
+  "variations": [
+    {
+      "EditorsSupport": [
+        "word",
+        "cell",
+        "slide"
+      ],
+      "buttons": [
         {
-            "EditorsSupport": [
-                "word",
-                "cell",
-                "slide"
-            ],
-            "buttons": [
-                {
-                    "primary": true,
-                    "text": "Ok"
-                },
-                {
-                    "primary": false,
-                    "text": "Cancel",
-                    "textLocale": {
-                        "de": "Abbrechen",
-                        "es": "Cancelar",
-                        "fr": "Annuler"
-                    }
-                }
-            ],
-            "description": "Highlight syntax of the code selecting the necessary language, style, and background color.",
-            "descriptionLocale": {
-                "de": "Heben Sie die Codesyntax hervor, indem Sie die gewünschte Sprache, den Stil und die Hintergrundfarbe auswählen.",
-                "es": "Resalte la sintaxis del código seleccionando el idioma, el estilo y el color de fondo necesarios.",
-                "pt-BR": "Destaque a sintaxe do código selecionando o idioma, estilo e cor de fundo necessários.",
-                "fr": "Mettez en évidence la syntaxe du code en sélectionnant la langue, le style et la couleur de l'arrière-plan."
-            },
-            "icons": [
-                "resources/light/icon.png",
-                "resources/light/icon@2x.png"
-            ],
-            "icons2": [
-                {
-                    "100%": {
-                        "normal": "resources/light/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/light/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/light/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/light/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/light/icon@2x.png"
-                    },
-                    "style": "light"
-                },
-                {
-                    "100%": {
-                        "normal": "resources/dark/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/dark/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/dark/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/dark/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/dark/icon@2x.png"
-                    },
-                    "style": "dark"
-                }
-            ],
-            "initData": "",
-            "initDataType": "html",
-            "initOnSelectionChanged": true,
-            "isInsideMode": false,
-            "isModal": true,
-            "isViewer": false,
-            "isVisual": true,
-            "url": "index.html",
-            "store": {
-                "background": {
-                    "light" : "#282C33",
-                    "dark" : "#282C33"
-                },
-                "screenshots" : [
-                    "resources/store/screenshots/screen_1.png",
-                    "resources/store/screenshots/screen_2.png",
-                    "resources/store/screenshots/screen_3.png",
-                    "resources/store/screenshots/screen_4.png"
-                ],
-                "icons"       : {
-                    "light" : "resources/store/icons",
-                    "dark"  : "resources/store/icons"
-                },
-                "categories": ["specAbilities", "work", "devTools"]
-            }
+          "primary": true,
+          "text": "Ok"
+        },
+        {
+          "primary": false,
+          "text": "Cancel",
+          "textLocale": {
+            "de": "Abbrechen",
+            "es": "Cancelar",
+            "fr": "Annuler"
+          }
         }
-    ]
+      ],
+      "description": "Highlight syntax of the code selecting the necessary language, style, and background color.",
+      "descriptionLocale": {
+        "de": "Heben Sie die Codesyntax hervor, indem Sie die gewünschte Sprache, den Stil und die Hintergrundfarbe auswählen.",
+        "es": "Resalte la sintaxis del código seleccionando el idioma, el estilo y el color de fondo necesarios.",
+        "pt-BR": "Destaque a sintaxe do código selecionando o idioma, estilo e cor de fundo necessários.",
+        "fr": "Mettez en évidence la syntaxe du code en sélectionnant la langue, le style et la couleur de l'arrière-plan."
+      },
+      "icons": [
+        "resources/light/icon.png",
+        "resources/light/icon@2x.png"
+      ],
+      "icons2": [
+        {
+          "100%": {
+            "normal": "resources/light/icon.png"
+          },
+          "125%": {
+            "normal": "resources/light/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/light/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/light/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/light/icon@2x.png"
+          },
+          "style": "light"
+        },
+        {
+          "100%": {
+            "normal": "resources/dark/icon.png"
+          },
+          "125%": {
+            "normal": "resources/dark/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/dark/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/dark/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/dark/icon@2x.png"
+          },
+          "style": "dark"
+        }
+      ],
+      "initData": "",
+      "initDataType": "html",
+      "initOnSelectionChanged": true,
+      "isInsideMode": false,
+      "isModal": true,
+      "isViewer": false,
+      "isVisual": true,
+      "url": "index.html",
+      "store": {
+        "background": {
+          "light": "#282C33",
+          "dark": "#282C33"
+        },
+        "screenshots": [
+          "resources/store/screenshots/screen_1.png",
+          "resources/store/screenshots/screen_2.png",
+          "resources/store/screenshots/screen_3.png",
+          "resources/store/screenshots/screen_4.png"
+        ],
+        "icons": {
+          "light": "resources/store/icons",
+          "dark": "resources/store/icons"
+        },
+        "categories": ["specAbilities", "work", "devTools"]
+      }
+    }
+  ]
 }
 ```
 

@@ -40,60 +40,60 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/s
 
 ``` json
 {
-    "name": "Symbol Table",
-    "nameLocale": {
+  "name": "Symbol Table",
+  "nameLocale": {
+    "fr": "Table des symboles",
+    "es": "Tabla de símbolos",
+    "de": "Symboltabelle"
+  },
+  "guid": "asc.{03C18A8D-8E01-444A-86EB-EDDFA7773157}",
+  "baseUrl": "",
+
+  "variations": [
+    {
+      "description": "Symbol Table",
+      "descriptionLocale": {
         "fr": "Table des symboles",
         "es": "Tabla de símbolos",
         "de": "Symboltabelle"
-    },
-    "guid": "asc.{03C18A8D-8E01-444A-86EB-EDDFA7773157}",
-    "baseUrl": "",
+      },
+      "url": "index.html",
 
-    "variations": [
+      "icons": ["resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon2.png", "resources/img/icon2@2x.png"],
+      "isViewer": false,
+      "EditorsSupport": ["word", "cell", "slide"],
+
+      "isVisual": true,
+      "isModal": false,
+      "isInsideMode": true,
+
+      "initDataType": "html",
+      "initData": "",
+
+      "buttons": [
         {
-            "description": "Symbol Table",
-            "descriptionLocale": {
-                "fr": "Table des symboles",
-                "es": "Tabla de símbolos",
-                "de": "Symboltabelle"
-            },
-            "url": "index.html",
-
-            "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon2.png", "resources/img/icon2@2x.png" ],
-            "isViewer": false,
-            "EditorsSupport": [ "word", "cell", "slide" ],
-
-            "isVisual": true,
-            "isModal": false,
-            "isInsideMode": true,
-
-            "initDataType": "html",
-            "initData": "",
-
-            "buttons": [
-                {
-                    "text": "Insert",
-                    "primary": true,
-                    "textLocale": {
-                        "fr": "Insérer",
-                        "es": "Insertar",
-                        "de": "Einfügen"
-                    }
-                },
-                {
-                    "text": "Cancel",
-                    "primary": false,
-                    "textLocale": {
-                        "fr": "Annuler",
-                        "es": "Cancelar",
-                        "de": "Abbrechen"
-                    }
-                }
-            ],
-
-            "size": [ 600, 700 ]
+          "text": "Insert",
+          "primary": true,
+          "textLocale": {
+            "fr": "Insérer",
+            "es": "Insertar",
+            "de": "Einfügen"
+          }
+        },
+        {
+          "text": "Cancel",
+          "primary": false,
+          "textLocale": {
+            "fr": "Annuler",
+            "es": "Cancelar",
+            "de": "Abbrechen"
+          }
         }
-    ]
+      ],
+
+      "size": [600, 700]
+    }
+  ]
 }
 ```
 

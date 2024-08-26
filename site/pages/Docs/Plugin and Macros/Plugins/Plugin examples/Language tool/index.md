@@ -47,129 +47,129 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ``` json
 {
-    "name": "LanguageTool",
-    "nameLocale": {
-        "fr": "LanguageTool",
-        "es": "LanguageTool",
-        "pt-BR": "LanguageTool",
-        "de": "LanguageTool"
-    },
-    "guid": "asc.{7CDB02C9-A0BF-4B56-9A1A-71C860B8498F}",
-    "version": "1.0.3",
+  "name": "LanguageTool",
+  "nameLocale": {
+    "fr": "LanguageTool",
+    "es": "LanguageTool",
+    "pt-BR": "LanguageTool",
+    "de": "LanguageTool"
+  },
+  "guid": "asc.{7CDB02C9-A0BF-4B56-9A1A-71C860B8498F}",
+  "version": "1.0.3",
 
-    "variations": [
+  "variations": [
+    {
+      "description": "Improve spelling, grammar, and style in your texts.",
+      "descriptionLocale": {
+        "fr": "Améliorez l'orthographe, la grammaire et le style de vos textes.",
+        "es": "Mejore la ortografía, la gramática y el estilo de sus textos.",
+        "pt-BR": "Melhore a ortografia, a gramática e o estilo dos seus textos.",
+        "de": "Verbessern Sie Rechtschreibung, Grammatik und Stil in Ihren Texten."
+      },
+      "url": "index.html",
+
+      "icons": ["resources/light/icon.png", "resources/light/icon@2x.png"],
+      "icons2": [
         {
-            "description": "Improve spelling, grammar, and style in your texts.",
-            "descriptionLocale": {
-                "fr": "Améliorez l'orthographe, la grammaire et le style de vos textes.",
-                "es": "Mejore la ortografía, la gramática y el estilo de sus textos.",
-                "pt-BR": "Melhore a ortografia, a gramática e o estilo dos seus textos.",
-                "de": "Verbessern Sie Rechtschreibung, Grammatik und Stil in Ihren Texten."
-            },
-            "url": "index.html",
+          "style": "light",
 
-            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
-            "icons2": [
-                {
-                    "style" : "light",
-
-                    "100%": {
-                        "normal": "resources/light/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/light/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/light/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/light/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/light/icon@2x.png"
-                    }
-                },
-                {
-                    "style" : "dark",
-
-                    "100%": {
-                        "normal": "resources/dark/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/dark/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/dark/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/dark/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/dark/icon@2x.png"
-                    }
-                }
-            ],
-            "isViewer": true,
-            "EditorsSupport": [ "word", "cell", "slide", "pdf" ],
-
-            "isVisual": true,
-            "isModal": true,
-            "isInsideMode": true,
-
-            "initDataType": "text",
-            "initData": "",
-
-            "buttons": [],
-
-            "initOnSelectionChanged": true,
-
-            "store": {
-                "background": {
-                    "light" : "#357EE5",
-                    "dark" : "#357EE5"
-                },
-                "screenshots" : [
-                    "resources/store/screenshots/screen_1.png",
-                    "resources/store/screenshots/screen_2.png",
-                    "resources/store/screenshots/screen_3.png"
-                ],
-                "icons"       : {
-                    "light" : "resources/store/icons",
-                    "dark"  : "resources/store/icons"
-                },
-                "categories": ["specAbilities", "work", "recommended"]
-            }
+          "100%": {
+            "normal": "resources/light/icon.png"
+          },
+          "125%": {
+            "normal": "resources/light/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/light/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/light/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/light/icon@2x.png"
+          }
         },
         {
-            "description": "About",
-            "descriptionLocale": {
-                "fr": "À propos",
-                "es": "Sobre programa",
-                "de": "Über"
-            },
-            "url": "index_about.html",
+          "style": "dark",
 
-            "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png" ],
-            "isViewer": true,
-            "EditorsSupport": [ "word", "cell", "slide" ],
-
-            "isVisual": true,
-            "isModal": true,
-            "isInsideMode": false,
-
-            "initDataType": "none",
-            "initData": "",
-
-            "buttons": [
-                {
-                    "text": "Ok",
-                    "primary": true
-                }
-            ],
-
-            "size": [ 400, 50 ]
+          "100%": {
+            "normal": "resources/dark/icon.png"
+          },
+          "125%": {
+            "normal": "resources/dark/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/dark/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/dark/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/dark/icon@2x.png"
+          }
         }
-    ]
+      ],
+      "isViewer": true,
+      "EditorsSupport": ["word", "cell", "slide", "pdf"],
+
+      "isVisual": true,
+      "isModal": true,
+      "isInsideMode": true,
+
+      "initDataType": "text",
+      "initData": "",
+
+      "buttons": [],
+
+      "initOnSelectionChanged": true,
+
+      "store": {
+        "background": {
+          "light": "#357EE5",
+          "dark": "#357EE5"
+        },
+        "screenshots": [
+          "resources/store/screenshots/screen_1.png",
+          "resources/store/screenshots/screen_2.png",
+          "resources/store/screenshots/screen_3.png"
+        ],
+        "icons": {
+          "light": "resources/store/icons",
+          "dark": "resources/store/icons"
+        },
+        "categories": ["specAbilities", "work", "recommended"]
+      }
+    },
+    {
+      "description": "About",
+      "descriptionLocale": {
+        "fr": "À propos",
+        "es": "Sobre programa",
+        "de": "Über"
+      },
+      "url": "index_about.html",
+
+      "icons": ["resources/img/icon.png", "resources/img/icon@2x.png"],
+      "isViewer": true,
+      "EditorsSupport": ["word", "cell", "slide"],
+
+      "isVisual": true,
+      "isModal": true,
+      "isInsideMode": false,
+
+      "initDataType": "none",
+      "initData": "",
+
+      "buttons": [
+        {
+          "text": "Ok",
+          "primary": true
+        }
+      ],
+
+      "size": [400, 50]
+    }
+  ]
 }
 ```
 

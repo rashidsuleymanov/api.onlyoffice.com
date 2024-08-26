@@ -29,68 +29,68 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/e
 
 ``` json
 {
-    "name" : "Example of search and replace",
-    "guid" : "asc.{5FF5F75F-2977-4B98-8D36-7C406D610B90}",
+  "name": "Example of search and replace",
+  "guid": "asc.{5FF5F75F-2977-4B98-8D36-7C406D610B90}",
 
-    "variations" : [
+  "variations": [
+    {
+      "description": "Example of search and replace",
+      "url": "index.html",
+
+      "icons": ["resources/light/icon.png", "resources/light/icon@2x.png"],
+      "icons2": [
         {
-            "description" : "Example of search and replace",
-            "url"         : "index.html",
-
-            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
-            "icons2": [
-                {
-                    "style" : "light",
+          "style": "light",
                     
-                    "100%": {
-                        "normal": "resources/light/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/light/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/light/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/light/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/light/icon@2x.png"
-                    }
-                },
-                {
-                    "style" : "dark",
+          "100%": {
+            "normal": "resources/light/icon.png"
+          },
+          "125%": {
+            "normal": "resources/light/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/light/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/light/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/light/icon@2x.png"
+          }
+        },
+        {
+          "style": "dark",
                     
-                    "100%": {
-                        "normal": "resources/dark/icon.png"
-                    },
-                    "125%": {
-                        "normal": "resources/dark/icon@1.25x.png"
-                    },
-                    "150%": {
-                        "normal": "resources/dark/icon@1.5x.png"
-                    },
-                    "175%": {
-                        "normal": "resources/dark/icon@1.75x.png"
-                    },
-                    "200%": {
-                        "normal": "resources/dark/icon@2x.png"
-                    }
-                }
-            ],
-            "isViewer"        : true,
-            "EditorsSupport"  : ["word"],
-
-            "isVisual"        : true,
-            "isModal"         : true,
-            "isInsideMode"    : false,
-
-            "initDataType"    : "none",
-            "initData"        : "",
-
-            "buttons"         : []
+          "100%": {
+            "normal": "resources/dark/icon.png"
+          },
+          "125%": {
+            "normal": "resources/dark/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/dark/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/dark/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/dark/icon@2x.png"
+          }
         }
-    ]
+      ],
+      "isViewer": true,
+      "EditorsSupport": ["word"],
+
+      "isVisual": true,
+      "isModal": true,
+      "isInsideMode": false,
+
+      "initDataType": "none",
+      "initData": "",
+
+      "buttons": []
+    }
+  ]
 }
 ```
 

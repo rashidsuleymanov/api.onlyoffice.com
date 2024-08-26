@@ -44,15 +44,15 @@ The function called when the application is loaded into the browser.
 ### Example
 
 ``` javascript
-var onAppReady = function () {
-    console.log("ONLYOFFICE Document Editor is ready");
-};
+function onAppReady() {
+  console.log("ONLYOFFICE Document Editor is ready")
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onAppReady": onAppReady,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onAppReady,
+  },
+})
 ```
 
 ## onCollaborativeChanges
@@ -62,15 +62,15 @@ The function called when the document is co-edited by the other user in the *str
 ### Example
 
 ``` javascript
-var onCollaborativeChanges = function () {
-    console.log("The document changed by collaborative user");
-};
+function onCollaborativeChanges() {
+  console.log("The document changed by collaborative user")
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onCollaborativeChanges": onCollaborativeChanges,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onCollaborativeChanges,
+  },
+})
 ```
 
 ## onDocumentReady
@@ -80,15 +80,15 @@ The function called when the document is loaded into the document editor.
 ### Example
 
 ``` javascript
-var onDocumentReady = function () {
-    console.log("Document is loaded");
-};
+function onDocumentReady() {
+  console.log("Document is loaded")
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onDocumentReady": onDocumentReady,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onDocumentReady,
+  },
+})
 ```
 
 ## onDocumentStateChange
@@ -98,19 +98,19 @@ The function called when the document is modified. It is called with the paramet
 ### Example
 
 ``` javascript
-var onDocumentStateChange = function (event) {
-    if (event.data) {
-        console.log("The document changed");
-    } else {
-        console.log("Changes are collected on document editing service");
-    }
-};
+function onDocumentStateChange(event) {
+  if (event.data) {
+    console.log("The document changed")
+  } else {
+    console.log("Changes are collected on document editing service")
+  }
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onDocumentStateChange": onDocumentStateChange,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onDocumentStateChange,
+  },
+})
 ```
 
 ## onDownloadAs
@@ -120,17 +120,17 @@ The function called with the absolute URL to the edited file when the [downloadA
 ### Example
 
 ``` javascript
-var onDownloadAs = function (event) {
-    var fileType = event.data.fileType;
-    var url = event.data.url;
-    console.log("ONLYOFFICE Document Editor create file: " + url);
-};
+function onDownloadAs(event) {
+  const fileType = event.data.fileType
+  const url = event.data.url
+  console.log(`ONLYOFFICE Document Editor create file: ${url}`)
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onDownloadAs": onDownloadAs,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onDownloadAs,
+  },
+})
 ```
 
 ## onError
@@ -140,15 +140,15 @@ The function called when an error or some other specific event occurs. The error
 ### Example
 
 ``` javascript
-var onError = function (event) {
-    console.log("ONLYOFFICE Document Editor reports an error: code " + event.data.errorCode + ", description " + event.data.errorDescription);
-};
+function onError(event) {
+  console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`)
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onError": onError,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onError,
+  },
+})
 ```
 
 ## onInfo
@@ -158,15 +158,15 @@ The function called when the application opened the file. The mode is sent in th
 ### Example
 
 ``` javascript
-var onInfo = function (event) {
-    console.log("ONLYOFFICE Document Editor is opened in mode " + event.data.mode);
-};
+function onInfo(event) {
+  console.log(`ONLYOFFICE Document Editor is opened in mode ${event.data.mode}`)
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onInfo": onInfo,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onInfo,
+  },
+})
 ```
 
 ## onMakeActionLink
@@ -180,17 +180,17 @@ To set the bookmark link, you must call the [setActionLink](../../Methods/index.
 ### Example
 
 ``` javascript
-var onMakeActionLink = function (event){
-    var ACTION_DATA = event.data;
-    var link = GENERATE_LINK(ACTION_DATA);
-    docEditor.setActionLink(link);
-};
+function onMakeActionLink(event) {
+  const ACTION_DATA = event.data
+  const link = GENERATE_LINK(ACTION_DATA)
+  docEditor.setActionLink(link)
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onMakeActionLink": onMakeActionLink,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onMakeActionLink,
+  },
+})
 ```
 
 ## onMetaChange
@@ -204,16 +204,16 @@ When the user clicks the *Favorite* icon, the [setFavorite](../../Methods/index.
 ### Example
 
 ``` javascript
-var onMetaChange = function (event) {
-    var title = event.data.title;
-    var favorite = event.data.favorite;
-};
+function onMetaChange(event) {
+  const title = event.data.title
+  const favorite = event.data.favorite
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onMetaChange": onMetaChange,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onMetaChange,
+  },
+})
 ```
 
 ## onOutdatedVersion
@@ -223,15 +223,15 @@ The function called after the [error](../../../More%20Information/Troubleshootin
 ### Example
 
 ``` javascript
-var onOutdatedVersion = function () {
-    location.reload(true);
-};
+function onOutdatedVersion() {
+  location.reload(true)
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onOutdatedVersion": onOutdatedVersion,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onOutdatedVersion,
+  },
+})
 ```
 
 ## onPluginsReady
@@ -241,13 +241,13 @@ Tthe function called when all plugins are loaded and can be used.
 ### Example
 
 ``` javascript
-var onPluginsReady = function () {};
+function onPluginsReady() {}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onPluginsReady": onPluginsReady,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onPluginsReady,
+  },
+})
 ```
 
 ## onReady
@@ -261,19 +261,19 @@ The function called when the user is trying to end the work with the editor and 
 ### Example
 
 ``` javascript
-var onRequestClose = function () {
-    if (window.opener) {
-        window.close();
-        return;
-    }
-    docEditor.destroyEditor();
-};
+function onRequestClose() {
+  if (window.opener) {
+    window.close()
+    return
+  }
+  docEditor.destroyEditor()
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestClose": onRequestClose,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestClose,
+  },
+})
 ```
 
 ## onRequestCompareFile
@@ -289,13 +289,13 @@ The function called when the user is trying to create document by clicking the *
 ### Example
 
 ``` javascript
-var onRequestCreateNew = function () {};
+function onRequestCreateNew() {}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestCreateNew": onRequestCreateNew,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestCreateNew,
+  },
+})
 ```
 
 ## onRequestEditRights
@@ -310,16 +310,16 @@ The function called when the user is trying to switch the document from the view
 ### Example
 
 ``` javascript
-var onRequestEditRights = function () {
-    console.log("ONLYOFFICE Document Editor requests editing rights");
-    document.location.reload();
-};
+function onRequestEditRights() {
+  console.log("ONLYOFFICE Document Editor requests editing rights")
+  document.location.reload()
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestEditRights": onRequestEditRights,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestEditRights,
+  },
+})
 ```
 
 ## onRequestHistory
@@ -333,39 +333,39 @@ To show the document version history you must call the [refreshHistory](../../Me
 ### Example
 
 ``` javascript
-var onRequestHistory = function () {
-    docEditor.refreshHistory({
-        "currentVersion": 2,
-        "history": [
-            {
-                "created": "2010-07-06 10:13 AM",
-                "key": "af86C7e71Ca8",
-                "user": {
-                    "id": "F89d8069ba2b",
-                    "name": "Kate Cage"
-                },
-                "version": 1
-            },
-            {
-                "changes": changes,
-                "created": "2010-07-07 3:46 PM",
-                "key": "Khirz6zTPdfd7",
-                "serverVersion": serverVersion,
-                "user": {
-                    "id": "78e1e841",
-                    "name": "John Smith"
-                },
-                "version": 2
-            },
-        ]
-    });
-};
+function onRequestHistory() {
+  docEditor.refreshHistory({
+    currentVersion: 2,
+    history: [
+      {
+        created: "2010-07-06 10:13 AM",
+        key: "af86C7e71Ca8",
+        user: {
+          id: "F89d8069ba2b",
+          name: "Kate Cage",
+        },
+        version: 1,
+      },
+      {
+        changes,
+        created: "2010-07-07 3:46 PM",
+        key: "Khirz6zTPdfd7",
+        serverVersion,
+        user: {
+          id: "78e1e841",
+          name: "John Smith",
+        },
+        version: 2,
+      },
+    ],
+  })
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestHistory": onRequestHistory,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestHistory,
+  },
+})
 ```
 
 Where the **changes** is the *changes* from [the history object](../../Callback%20handler/index.md#history) returned after saving the document.
@@ -381,15 +381,15 @@ The function called when the user is trying to go back to the document from view
 ### Example
 
 ``` javascript
-var onRequestHistoryClose = function () {
-    document.location.reload();
-};
+function onRequestHistoryClose() {
+  document.location.reload()
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestHistoryClose": onRequestHistoryClose,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestHistoryClose,
+  },
+})
 ```
 
 ## onRequestHistoryData
@@ -405,28 +405,28 @@ To show the changes corresponding to the specific document version you must call
 ### Example
 
 ``` javascript
-var onRequestHistoryData = function (event) {
-    var version = event.data;
-    docEditor.setHistoryData({
-        "changesUrl": "https://example.com/url-to-changes.zip",
-        "fileType": "docx",
-        "key": "Khirz6zTPdfd7",
-        "previous": {
-            "fileType": "docx",
-            "key": "af86C7e71Ca8",
-            "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
-        },
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsiZmlsZVR5cGUiOiJkb2N4Iiwia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4In0.pfPJs9XvCmAnPiUnZYRm0rZGPYHzqfEP7AFRjKg1af4",
-        "url": "https://example.com/url-to-example-document.docx",
-        "version": version
-    })
-};
-
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestHistoryData": onRequestHistoryData,
+function onRequestHistoryData(event) {
+  const version = event.data
+  docEditor.setHistoryData({
+    changesUrl: "https://example.com/url-to-changes.zip",
+    fileType: "docx",
+    key: "Khirz6zTPdfd7",
+    previous: {
+      fileType: "docx",
+      key: "af86C7e71Ca8",
+      url: "https://example.com/url-to-the-previous-version-of-the-document.docx",
     },
-});
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tY2hhbmdlcy56aXAiLCJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicHJldmlvdXMiOnsiZmlsZVR5cGUiOiJkb2N4Iiwia2V5IjoiYWY4NkM3ZTcxQ2E4IiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tdGhlLXByZXZpb3VzLXZlcnNpb24tb2YtdGhlLWRvY3VtZW50LmRvY3gifSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4In0.pfPJs9XvCmAnPiUnZYRm0rZGPYHzqfEP7AFRjKg1af4",
+    url: "https://example.com/url-to-example-document.docx",
+    version,
+  })
+}
+
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestHistoryData,
+  },
+})
 ```
 
 Where the **changesUrl** is the *changesUrl* from [the JSON object](../../Callback%20handler/index.md#changesurl) returned after saving the document.
@@ -446,28 +446,28 @@ To insert an image into the file you must call the [insertImage](../../Methods/i
 ### Example
 
 ``` javascript
-var onRequestInsertImage = function (event) {
-    docEditor.insertImage({
-        "c": event.data.c,
-        "images": [
-            {
-                "fileType": "png",
-                "url": "https://example.com/url-to-example-image1.png"
-            },
-            {
-                "fileType": "png",
-                "url": "https://example.com/url-to-example-image2.png"
-            },
-        ],
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZXMiOlt7ImZpbGVUeXBlIjoicG5nIiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1pbWFnZTEucG5nIn0seyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UyLnBuZyJ9XX0.ly1O8-6u4Y7WJlgp9O-bJMeffHe0GtaXzyvY2UUFJTg"
-    });
-};
+function onRequestInsertImage(event) {
+  docEditor.insertImage({
+    c: event.data.c,
+    images: [
+      {
+        fileType: "png",
+        url: "https://example.com/url-to-example-image1.png",
+      },
+      {
+        fileType: "png",
+        url: "https://example.com/url-to-example-image2.png",
+      },
+    ],
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZXMiOlt7ImZpbGVUeXBlIjoicG5nIiwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1pbWFnZTEucG5nIn0seyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UyLnBuZyJ9XX0.ly1O8-6u4Y7WJlgp9O-bJMeffHe0GtaXzyvY2UUFJTg",
+  })
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestInsertImage": onRequestInsertImage,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestInsertImage,
+  },
+})
 ```
 
 Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -489,21 +489,21 @@ An object with the unique file data, the file path, and a new browser tab name a
 ### Example
 
 ``` javascript
-var onRequestOpen = function (event) {
-    var path  = event.data.path;
-    var referenceData = event.data.referenceData;
-    var windowName  = event.data.windowName;
-    window.open({
-        "path": "https://example.com/external-url.docx",
-        "windowName": event.data.windowName
-    });
-};
+function onRequestOpen(event) {
+  const path = event.data.path
+  const referenceData = event.data.referenceData
+  const windowName = event.data.windowName
+  window.open({
+    path: "https://example.com/external-url.docx",
+    windowName: event.data.windowName,
+  })
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestOpen": onRequestOpen,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestOpen,
+  },
+})
 ```
 
 Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -525,29 +525,29 @@ To refresh data by a link to a file which is specified with the event parameters
 ### Example
 
 ``` javascript
-var onRequestReferenceData = function () {
-    var link = event.data.link;
-    var referenceData =  event.data.referenceData;
-    var path = event.data.path;
+function onRequestReferenceData() {
+  const link = event.data.link
+  const referenceData = event.data.referenceData
+  const path = event.data.path
 
-    docEditor.setReferenceData({
-        "fileType": "xlsx",
-        "path": "sample.xlsx",
-        "referenceData": {
-            "fileKey": "BCFA2CED",
-            "instanceId": "https://example.com",
-            "key": "Khirz6zTPdfd7"
-        },
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
-        "url": "https://example.com/url-to-example-document.xlsx"
-    });
-};
-
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestReferenceData": onRequestReferenceData,
+  docEditor.setReferenceData({
+    fileType: "xlsx",
+    path: "sample.xlsx",
+    referenceData: {
+      fileKey: "BCFA2CED",
+      instanceId: "https://example.com",
+      key: "Khirz6zTPdfd7",
     },
-});
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
+    url: "https://example.com/url-to-example-document.xlsx",
+  })
+}
+
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestReferenceData,
+  },
+})
 ```
 
 ## onRequestReferenceSource
@@ -565,28 +565,28 @@ When the button is clicked, you must call the [setReferenceSource](../../Methods
 ### Example
 
 ``` javascript
-var onRequestReferenceSource = function () {
-    var referenceData =  event.data.referenceData;
-    var path = event.data.path;
+function onRequestReferenceSource() {
+  const referenceData = event.data.referenceData
+  const path = event.data.path
 
-    docEditor.setReferenceSource({
-        "fileType": "xlsx",
-        "path": "sample.xlsx",
-        "referenceData": {
-            "fileKey": "BCFA2CED",
-            "instanceId": "https://example.com",
-            "key": "Khirz6zTPdfd7"
-        },
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
-        "url": "https://example.com/url-to-example-document.xlsx"
-    });
-};
-
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestReferenceSource": onRequestReferenceSource,
+  docEditor.setReferenceSource({
+    fileType: "xlsx",
+    path: "sample.xlsx",
+    referenceData: {
+      fileKey: "BCFA2CED",
+      instanceId: "https://example.com",
+      key: "Khirz6zTPdfd7",
     },
-});
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
+    url: "https://example.com/url-to-example-document.xlsx",
+  })
+}
+
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestReferenceSource,
+  },
+})
 ```
 
 ## onRequestRename
@@ -600,15 +600,15 @@ The function called when the user is trying to rename the file by clicking the *
 ### Example
 
 ``` javascript
-var onRequestRename = function (event) {
-    var title = event.data;
-};
+function onRequestRename(event) {
+  const title = event.data
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestRename": onRequestRename,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestRename,
+  },
+})
 ```
 
 ## onRequestRestore
@@ -626,43 +626,43 @@ When the function is called, you must call the [refreshHistory](../../Methods/in
 ### Example
 
 ``` javascript
-var onRequestRestore = function (event) {
-    var fileType = event.data.fileType;
-    var url = event.data.url;
-    var version = event.data.version;
+function onRequestRestore(event) {
+  const fileType = event.data.fileType
+  const url = event.data.url
+  const version = event.data.version
 
-    docEditor.refreshHistory({
-        "currentVersion": 2,
-        "history": [
-            {
-                "created": "2010-07-06 10:13 AM",
-                "key": "af86C7e71Ca8",
-                "user": {
-                    "id": "F89d8069ba2b",
-                    "name": "Kate Cage"
-                },
-                "version": 1
-            },
-            {
-                "changes": changes,
-                "created": "2010-07-07 3:46 PM",
-                "key": "Khirz6zTPdfd7",
-                "serverVersion": serverVersion,
-                "user": {
-                    "id": "78e1e841",
-                    "name": "John Smith"
-                },
-                "version": 2
-            },
-        ]
-    });
-};
+  docEditor.refreshHistory({
+    currentVersion: 2,
+    history: [
+      {
+        created: "2010-07-06 10:13 AM",
+        key: "af86C7e71Ca8",
+        user: {
+          id: "F89d8069ba2b",
+          name: "Kate Cage",
+        },
+        version: 1,
+      },
+      {
+        changes,
+        created: "2010-07-07 3:46 PM",
+        key: "Khirz6zTPdfd7",
+        serverVersion,
+        user: {
+          id: "78e1e841",
+          name: "John Smith",
+        },
+        version: 2,
+      },
+    ],
+  })
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestRestore": onRequestRestore,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestRestore,
+  },
+})
 ```
 
 Where the **changes** is the *changes* from [the history object](../../Callback%20handler/index.md#history) returned after saving the document.
@@ -680,17 +680,17 @@ The function called when the user is trying to save file by clicking *Save Copy 
 ### Example
 
 ``` javascript
-var onRequestSaveAs = function (event) {
-    var fileType = event.data.fileType;
-    var title = event.data.title;
-    var url = event.data.url;
-};
+function onRequestSaveAs(event) {
+  const fileType = event.data.fileType
+  const title = event.data.title
+  const url = event.data.url
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestSaveAs": onRequestSaveAs,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestSaveAs,
+  },
+})
 ```
 
 ## onRequestSelectDocument
@@ -708,20 +708,20 @@ To select a document for comparing or combining, you must call the [setRequested
 ### Example
 
 ``` javascript
-var onRequestSelectDocument = function () {
-    docEditor.setRequestedDocument({
-        "c": event.data.c,
-        "fileType": "docx",
-        "url": "https://example.com/url-to-example-document.docx",
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8"
-    });
-};
+function onRequestSelectDocument() {
+  docEditor.setRequestedDocument({
+    c: event.data.c,
+    fileType: "docx",
+    url: "https://example.com/url-to-example-document.docx",
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
+  })
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestSelectDocument": onRequestSelectDocument,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestSelectDocument,
+  },
+})
 ```
 
 Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -739,20 +739,20 @@ To select recipient data, you must call the [setRequestedSpreadsheet](../../Meth
 ### Example
 
 ``` javascript
-var onRequestSelectSpreadsheet = function () {
-    docEditor.setRequestedSpreadsheet({
-        "c": event.data.c,
-        "fileType": "xlsx",
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
-        "url": "https://example.com/url-to-example-recipients.xlsx"
-    });
-};
+function onRequestSelectSpreadsheet() {
+  docEditor.setRequestedSpreadsheet({
+    c: event.data.c,
+    fileType: "xlsx",
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
+    url: "https://example.com/url-to-example-recipients.xlsx",
+  })
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestSelectSpreadsheet": onRequestSelectSpreadsheet,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestSelectSpreadsheet,
+  },
+})
 ```
 
 Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../../Get%20Started/How%20It%20Works/index.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
@@ -770,17 +770,17 @@ The list of users to be mentioned should be completed by [setUsers](../../Method
 ### Example
 
 ``` javascript
-var onRequestSendNotify = function (event) {
-    var ACTION_DATA = event.data.actionLink;
-    var comment = event.data.message;
-    var emails = event.data.emails;
-};
+function onRequestSendNotify(event) {
+  const ACTION_DATA = event.data.actionLink
+  const comment = event.data.message
+  const emails = event.data.emails
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestSendNotify": onRequestSendNotify,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestSendNotify,
+  },
+})
 ```
 
 ## onRequestSharingSettings
@@ -794,27 +794,27 @@ When the access rights is changed, you must call the [setSharingSettings](../../
 ### Example
 
 ``` javascript
-var onRequestSharingSettings = function () {
-    docEditor.setSharingSettings({
-        "sharingSettings": [
-            {
-                "permissions": "Full Access",
-                "user": "John Smith"
-            },
-            {
-                "isLink": true,
-                "permissions": "Read Only",
-                "user": "External link"
-            }
-        ]
-    });
-};
+function onRequestSharingSettings() {
+  docEditor.setSharingSettings({
+    sharingSettings: [
+      {
+        permissions: "Full Access",
+        user: "John Smith",
+      },
+      {
+        isLink: true,
+        permissions: "Read Only",
+        user: "External link",
+      },
+    ],
+  })
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestSharingSettings": onRequestSharingSettings,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestSharingSettings,
+  },
+})
 ```
 
 ## onRequestStartFilling
@@ -826,15 +826,15 @@ When the user clicks the *Start filling* button, the [startFilling](../../Method
 ### Example
 
 ``` javascript
-var onRequestStartFilling = function () {
-    docEditor.startFilling();
-};
+function onRequestStartFilling() {
+  docEditor.startFilling()
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestStartFilling": onRequestStartFilling,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestStartFilling,
+  },
+})
 ```
 
 ## onRequestUsers
@@ -854,34 +854,34 @@ To set a list of users, you must call the [setUsers](../../Methods/index.md#setu
 ### Example
 
 ``` javascript
-var onRequestUsers = function (event) {
-    var c = event.data.c;
-    var id = event.data.id;
+function onRequestUsers(event) {
+  const c = event.data.c
+  const id = event.data.id
 
-    docEditor.setUsers({
-        "c": event.data.c,
-        "users": [
-            {
-                "email": "john@example.com",
-                "id": "78e1e841",
-                "image": "https://example.com/url-to-user-avatar1.png",
-                "name": "John Smith"
-            },
-            {
-                "email": "kate@example.com",
-                "id": "F89d8069ba2b",
-                "image": "https://example.com/url-to-user-avatar2.png",
-                "name": "Kate Cage"
-            },
-        ]
-    });
-};
+  docEditor.setUsers({
+    c: event.data.c,
+    users: [
+      {
+        email: "john@example.com",
+        id: "78e1e841",
+        image: "https://example.com/url-to-user-avatar1.png",
+        name: "John Smith",
+      },
+      {
+        email: "kate@example.com",
+        id: "F89d8069ba2b",
+        image: "https://example.com/url-to-user-avatar2.png",
+        name: "Kate Cage",
+      },
+    ],
+  })
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestUsers": onRequestUsers,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onRequestUsers,
+  },
+})
 ```
 
 ## onSubmit
@@ -891,15 +891,15 @@ The function called when the force saving request of the *3* [forcesavetype](../
 ### Example
 
 ``` javascript
-var onSubmit = function (event) {
-    console.log("The form was submitted.");
-};
+function onSubmit(event) {
+  console.log("The form was submitted.")
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onSubmit": onSubmit,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onSubmit,
+  },
+})
 ```
 
 ## onWarning
@@ -909,13 +909,13 @@ The function called when a warning occurs. The warning message is sent in the *d
 ### Example
 
 ``` javascript
-var onWarning = function (event) {
-    console.log("ONLYOFFICE Document Editor reports a warning: code " + event.data.warningCode + ", description " + event.data.warningDescription);
-};
+function onWarning(event) {
+  console.log(`ONLYOFFICE Document Editor reports a warning: code ${event.data.warningCode}, description ${event.data.warningDescription}`)
+}
 
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onWarning": onWarning,
-    },
-});
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  events: {
+    onWarning,
+  },
+})
 ```

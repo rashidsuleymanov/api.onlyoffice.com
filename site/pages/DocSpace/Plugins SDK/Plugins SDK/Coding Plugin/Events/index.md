@@ -12,10 +12,10 @@ The function called when updating the state of the item which action was passed.
 
   ``` javascript
   const message: IMessage = {
-      "newProps": { ...acceptButton, isDisabled: true },
-      "actions": [Actions.showToast, Actions.updateStatus, Actions.updateProps],
-      toastProps,
-  };
+    newProps: {...acceptButton, isDisabled: true},
+    actions: [Actions.showToast, Actions.updateStatus, Actions.updateProps],
+    toastProps,
+  }
   ```
 
 ## updateContext
@@ -24,18 +24,18 @@ The function called when updating the state of the the parent or child items whi
 
   ``` javascript
   const message: IMessage = {
-      "actions": [Actions.updateProps, Actions.updateContext],
-      "newProps": { ...nameInputProps, value },
-      "contextProps": [
-          {
-              "name": "accept-button",
-              "props": {
-                  ...acceptButtonProps,
-                  "isDisabled": !value,
-              },
-          },
-      ],
-  };
+    actions: [Actions.updateProps, Actions.updateContext],
+    newProps: {...nameInputProps, value},
+    contextProps: [
+      {
+        name: "accept-button",
+        props: {
+          ...acceptButtonProps,
+          isDisabled: !value,
+        },
+      },
+    ],
+  }
   ```
 
 ## updateStatus
@@ -44,10 +44,10 @@ The function called when updating the plugin status.
 
   ``` javascript
   const message: IMessage = {
-      "newProps": { ...acceptButton, isDisabled: true },
-      "actions": [Actions.showToast, Actions.updateProps, Actions.updateStatus],
-      toastProps,
-  };
+    newProps: {...acceptButton, isDisabled: true},
+    actions: [Actions.showToast, Actions.updateProps, Actions.updateStatus],
+    toastProps,
+  }
   ```
 
 ## updateContextMenuItems
@@ -56,8 +56,8 @@ The function called when updating all the context menu items.
 
   ``` javascript
   const message: IMessage = {
-      "actions": [Actions.updateContextMenuItems]
-  };
+    actions: [Actions.updateContextMenuItems],
+  }
   ```
 
 ## updateInfoPanelItems
@@ -66,8 +66,8 @@ The function called when updating all the info panel items.
 
   ``` javascript
   const message: IMessage = {
-      "actions": [Actions.updateInfoPanelItems]
-  };
+    actions: [Actions.updateInfoPanelItems],
+  }
   ```
 
 ## updateMainButtonItems
@@ -76,8 +76,8 @@ The function called when updating all the main button menu items.
 
   ``` javascript
   const message: IMessage = {
-      "actions": [Actions.updateMainButtonItems]
-  };
+    actions: [Actions.updateMainButtonItems],
+  }
   ```
 
 ## updateProfileMenuItems
@@ -86,8 +86,8 @@ The function called when updating all the profile menu items.
 
   ``` javascript
   const message: IMessage = {
-      "actions": [Actions.updateProfileMenuItems]
-  };
+    actions: [Actions.updateProfileMenuItems],
+  }
   ```
 
 ## updateFileItems
@@ -96,8 +96,8 @@ The function called when updating all the file items.
 
   ``` javascript
   const message: IMessage = {
-      "actions": [Actions.updateFileItems]
-  };
+    actions: [Actions.updateFileItems],
+  }
   ```
 
 ## updateEventListenerItems
@@ -106,8 +106,8 @@ The function called when updating all the event listener items.
 
   ``` javascript
   const message: IMessage = {
-      "actions": [Actions.updateEventListenerItems]
-  };
+    actions: [Actions.updateEventListenerItems],
+  }
   ```
 
 ## showToast
@@ -116,10 +116,10 @@ The function called when displaying a toast notification after the user actions.
 
   ``` javascript
   const message: IMessage = {
-      "newProps": { ...acceptButton, isDisabled: true },
-      "actions": [Actions.showToast, Actions.updateProps, Actions.updateStatus],
-      toastProps,
-  };
+    newProps: {...acceptButton, isDisabled: true},
+    actions: [Actions.showToast, Actions.updateProps, Actions.updateStatus],
+    toastProps,
+  }
   ```
 
 ## showCreateDialogModal
@@ -128,24 +128,24 @@ The function called when opening a modal window for creating certain item (file,
 
   ``` javascript
   const message: IMessage = {
-      "actions": [Actions.showCreateDialogModal],
-      "createDialogProps": {
-          "title": "Create diagram",
-          "startValue": "New diagram",
-          "visible": true,
-          "isCreateDialog": true,
-          "extension": ".drawio",
-          "onSave": async (e: any, value: string) => {
-              await drawIo.createNewFile(value);
-          },
-          "onCancel": (e: any) => {
-              drawIo.setCurrentFolderId(null);
-          },
-          "onClose": (e: any) => {
-              drawIo.setCurrentFolderId(null);
-          },
+    actions: [Actions.showCreateDialogModal],
+    createDialogProps: {
+      title: "Create diagram",
+      startValue: "New diagram",
+      visible: true,
+      isCreateDialog: true,
+      extension: ".drawio",
+      onSave: async (e: any, value: string) => {
+        await drawIo.createNewFile(value)
       },
-  };
+      onCancel: (e: any) => {
+        drawIo.setCurrentFolderId(null)
+      },
+      onClose: (e: any) => {
+        drawIo.setCurrentFolderId(null)
+      },
+    },
+  }
   ```
 
 ## showModal
@@ -154,9 +154,9 @@ The function called when opening a modal window. It does not work if the [modalD
 
   ``` javascript
   const message: IMessage = {
-      "actions": [Actions.showModal],
-      "modalDialogProps": openFromUrlProps,
-  };
+    actions: [Actions.showModal],
+    modalDialogProps: openFromUrlProps,
+  }
   ```
 
 ## closeModal
@@ -165,8 +165,8 @@ The function called when closing a modal window.
 
   ``` javascript
   const message: IMessage = {
-      "actions": [Actions.closeModal],
-  };
+    actions: [Actions.closeModal],
+  }
   ```
 
 ## sendPostMessage
@@ -175,17 +175,17 @@ The function called when sending a message to a frame. It does not work if the [
 
   ``` javascript
   const message: IMessage = {
-      "actions": [Actions.sendPostMessage],
-      "postMessage": {
-          "frameId": this.frameId,
-          "message": {
-              "action": "export",
-              "format": this.format,
-              "xml": msg.xml,
-              "spinKey": "export",
-          },
+    actions: [Actions.sendPostMessage],
+    postMessage: {
+      frameId: this.frameId,
+      message: {
+        action: "export",
+        format: this.format,
+        xml: msg.xml,
+        spinKey: "export",
       },
-  };
+    },
+  }
   ```
 
 ## saveSettings
@@ -194,14 +194,14 @@ The function called when saving the data that was transferred in the [settings](
 
   ``` javascript
   const message: IMessage = {
-      "actions": [
-        Actions.showToast,
-        Actions.updateProps,
-        Actions.updateStatus,
-        Actions.saveSettings,
-      ],
-      "toastProps": [{ "title": "Token is saved", "type": ToastType.success }],
-      "newProps": { ...userButtonProps, "isDisabled": true },
-      "settings": tokenInput.value,
-  };
+    actions: [
+      Actions.showToast,
+      Actions.updateProps,
+      Actions.updateStatus,
+      Actions.saveSettings,
+    ],
+    toastProps: [{title: "Token is saved", type: ToastType.success}],
+    newProps: {...userButtonProps, isDisabled: true},
+    settings: tokenInput.value,
+  }
   ```

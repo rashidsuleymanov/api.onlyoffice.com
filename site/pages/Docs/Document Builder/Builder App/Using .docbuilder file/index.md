@@ -8,22 +8,21 @@ All **.docbuilder** files have simple structure which allows to create them easi
 
 1. Preparing to work with the document (either the [CDocBuilder.CreateFile](../../Builder%20Framework/C++/CDocBuilder/CreateFile/index.md) or [CDocBuilder.OpenFile](../../Builder%20Framework/C++/CDocBuilder/OpenFile/index.md) methods are used together with the [CDocBuilder.SetTmpFolder](../../Builder%20Framework/C++/CDocBuilder/SetTmpFolder/index.md) method).
    ```js
-   builder.SetTmpFolder("DocBuilderTemp");
-   builder.CreateFile("docx");
+   builder.SetTmpFolder("DocBuilderTemp")
+   builder.CreateFile("docx")
    ```
 2. Creating the document contents with the help of the [CDocBuilder.ExecuteCommand](../../Builder%20Framework/C++/CDocBuilder/ExecuteCommand/index.md) method (the method is not used explicitly, the commands themselves are used instead).
    ```js
-   var oDocument = Api.GetDocument();
-   var oParagraph;
-   oParagraph = Api.CreateParagraph();
-   oParagraph.SetJc("center");
-   oParagraph.AddText("Center");
-   oDocument.Push(oParagraph);
+   const oDocument = Api.GetDocument()
+   const oParagraph = Api.CreateParagraph()
+   oParagraph.SetJc("center")
+   oParagraph.AddText("Center")
+   oDocument.Push(oParagraph)
    ```
 3. Saving the document (using the [CDocBuilder.SaveFile](../../Builder%20Framework/C++/CDocBuilder/SaveFile/index.md) method) and releasing it to finish work with it (the [CloseFile](../../Builder%20Framework/C++/CDocBuilder/CloseFile/index.md) method).
    ```js
-   builder.SaveFile("pdf", "images.pdf");
-   builder.CloseFile();
+   builder.SaveFile("pdf", "images.pdf")
+   builder.CloseFile()
    ```
 
 ## Rules for .docbuilder file
@@ -45,13 +44,12 @@ Thus the example of the complete working **.docbuilder** file is available below
 ## Example
 
 ```js
-builder.SetTmpFolder("DocBuilderTemp");
-builder.CreateFile("docx");
-var oDocument = Api.GetDocument();
-var oParagraph;
-oParagraph = oDocument.GetElement(0);
-oParagraph.SetJc("center");
-oParagraph.AddText("Center");
-builder.SaveFile("pdf", "images.pdf");
-builder.CloseFile();
+builder.SetTmpFolder("DocBuilderTemp")
+builder.CreateFile("docx")
+const oDocument = Api.GetDocument()
+const oParagraph = oDocument.GetElement(0)
+oParagraph.SetJc("center")
+oParagraph.AddText("Center")
+builder.SaveFile("pdf", "images.pdf")
+builder.CloseFile()
 ```

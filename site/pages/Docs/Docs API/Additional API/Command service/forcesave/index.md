@@ -4,9 +4,9 @@ Forcibly saves the document being edited without closing it. The document editin
 
 ``` json
 {
-    "c": "forcesave",
-    "key": "Khirz6zTPdfd7",
-    "userdata": "sample userdata"
+  "c": "forcesave",
+  "key": "Khirz6zTPdfd7",
+  "userdata": "sample userdata"
 }
 ```
 
@@ -22,8 +22,8 @@ Forcibly saves the document being edited without closing it. The document editin
 
 ``` json
 {
-    "error": 0,
-    "key": "Khirz6zTPdfd7"
+  "error": 0,
+  "key": "Khirz6zTPdfd7"
 }
 ```
 

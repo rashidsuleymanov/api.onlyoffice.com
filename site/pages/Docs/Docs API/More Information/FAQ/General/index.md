@@ -20,7 +20,7 @@ order: -12
 
   ``` json
   {
-      "c": "version"
+    "c": "version"
   }
   ```
 
@@ -28,8 +28,8 @@ order: -12
 
   ``` json
   {
-      "error": 0,
-      "version": "4.3.1.4"
+    "error": 0,
+    "version": "4.3.1.4"
   }
   ```
 

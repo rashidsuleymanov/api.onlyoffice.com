@@ -14,10 +14,10 @@ The *payload* for the JSON Web Token contains the following fields:
 
   ``` json
   {
-      "payload": {
-          "c": "info",
-          "key": "Khirz6zTPdfd7"
-      }
+    "payload": {
+      "c": "info",
+      "key": "Khirz6zTPdfd7"
+    }
   }
   ```
 
@@ -43,13 +43,13 @@ The *payload* for the JSON Web Token contains the following fields:
 
   ``` json
   {
-      "payload": {
-          "filetype": "docx",
-          "key": "Khirz6zTPdfd7",
-          "outputtype": "pdf",
-          "title": "Example Document Title.docx",
-          "url": "https://example.com/url-to-example-document.docx"
-      }
+    "payload": {
+      "filetype": "docx",
+      "key": "Khirz6zTPdfd7",
+      "outputtype": "pdf",
+      "title": "Example Document Title.docx",
+      "url": "https://example.com/url-to-example-document.docx"
+    }
   }
   ```
 
@@ -82,10 +82,10 @@ The *payload* for the JSON Web Token contains the following fields:
 
   ``` json
   {
-      "payload": {
-          "async": true,
-          "url": "https://example.com/url-to-example-script.docbuilder"
-      }
+    "payload": {
+      "async": true,
+      "url": "https://example.com/url-to-example-script.docbuilder"
+    }
   }
   ```
 
@@ -117,10 +117,10 @@ The *payload* for the JSON Web Token contains the following fields:
 
   ``` json
   {
-      "payload": {
-          "key": "Khirz6zTPdfd7",
-          "status": 4
-      }
+    "payload": {
+      "key": "Khirz6zTPdfd7",
+      "status": 4
+    }
   }
   ```
 
@@ -148,9 +148,9 @@ The *payload* for the JSON Web Token contains the following fields:
 
   ``` json
   {
-      "payload": {
-          "url": "https://example.com/url-to-example-document.docx"
-      }
+    "payload": {
+      "url": "https://example.com/url-to-example-document.docx"
+    }
   }
   ```
 
@@ -174,9 +174,9 @@ The *payload* for the JSON Web Token contains the following fields:
 
   ``` json
   {
-      "payload": {
-          "url": "https://example.com/url-to-document-changes.zip"
-      }
+    "payload": {
+      "url": "https://example.com/url-to-document-changes.zip"
+    }
   }
   ```
 

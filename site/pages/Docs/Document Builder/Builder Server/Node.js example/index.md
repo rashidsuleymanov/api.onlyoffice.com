@@ -21,7 +21,9 @@ Download the [Node.js Example](../Overview/index.md) from our site.
 You need to connnect the ONLYOFFICE Document Builder to your web site. For that specify the path in the *config/default.json* file:
 
 ``` json
-"builderPath": "C:\\ONLYOFFICE\\DocumentBuilder\\docbuilder.exe"
+{
+  "builderPath": "C:\\ONLYOFFICE\\DocumentBuilder\\docbuilder.exe"
+}
 ```
 
 ## Step 3. System requirements
@@ -107,7 +109,9 @@ First, download [**ONLYOFFICE Document Builder**](https://www.onlyoffice.com/doc
    Edit the following lines:
 
    ``` json
-   "builderPath": "/usr/bin/docbuilder"
+   {
+     "builderPath": "/usr/bin/docbuilder"
+   }
    ```
 
 6. Run the project with Node.js:

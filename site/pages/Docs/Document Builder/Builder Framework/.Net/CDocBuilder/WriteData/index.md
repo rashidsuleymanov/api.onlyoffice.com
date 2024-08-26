@@ -16,7 +16,7 @@ Writes data to the log file. It is used for logs in JS code.
 
 #### .Net
 
-```c#
+```csharp
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

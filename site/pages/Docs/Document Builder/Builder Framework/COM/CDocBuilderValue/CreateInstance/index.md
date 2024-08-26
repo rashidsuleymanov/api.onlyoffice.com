@@ -37,7 +37,7 @@ oBuilder->Dispose();
 #### .docbuilder
 
 ```js
-var oDocument = Api.GetDocument();
-var oParagraph = Api.CreateParagraph();
-oParagraph.SetSpacingAfter(1000, false);
+const oDocument = Api.GetDocument()
+const oParagraph = Api.CreateParagraph()
+oParagraph.SetSpacingAfter(1000, false)
 ```

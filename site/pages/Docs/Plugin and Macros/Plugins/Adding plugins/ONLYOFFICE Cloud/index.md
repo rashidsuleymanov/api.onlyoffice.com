@@ -23,7 +23,7 @@ You can add a plugin to the **Cloud service** as an **extension**. It can be don
 6. Open the *onlyoffice.github.io/store/plugin-dev/extension/inject.js* file and assign the path to your plugin on GitHub Pages site to the **URL\_TO\_PLUGIN** variable:
 
    ``` javascript
-   var URL_TO_PLUGIN = "https://YOUR-USERNAME.github.io/onlyoffice.github.io/sdkjs-plugins/content/helloworld/"
+   const URL_TO_PLUGIN = "https://YOUR-USERNAME.github.io/onlyoffice.github.io/sdkjs-plugins/content/helloworld/"
    ```
 
 The *onlyoffice.github.io/store/plugin-dev/extension* folder is a new extension.

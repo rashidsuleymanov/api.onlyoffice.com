@@ -48,22 +48,20 @@ Get the administrator or owner plugin settings.
 
 **Example**
 
-``` javascript
-import {ISettings, ISettingsPlugin} from "@onlyoffice/docspace-plugin-sdk";
+``` typescript
+import {type ISettings, type ISettingsPlugin} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements ISettingsPlugin {
-    adminPluginSettings: ISettings | null = { } as ISettings;
+  adminPluginSettings: ISettings | null = {} as ISettings
 
-    getAdminPluginSettings = ( ) => {
-        return this.adminPluginSettings;
-    }
+  getAdminPluginSettings = () => {
+    return this.adminPluginSettings
+  }
 
-    setAdminPluginSettings = (settings: ISettings | null): void => {
-        this.adminPluginSettings = settings;
-    }
+  setAdminPluginSettings = (settings: ISettings | null): void => {
+    this.adminPluginSettings = settings
+  }
 
-    setAdminPluginSettingsValue = (settings: string | null): void => {
-
-    }
+  setAdminPluginSettingsValue = (settings: string | null): void => {}
 }
 ```

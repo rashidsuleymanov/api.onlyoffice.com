@@ -12,36 +12,36 @@ order: -3
 
     ``` json
     {
-        "c": "forcesave",
-        "key": "Khirz6zTPdfd7",
-        "userdata": "sample userdata"
+      "c": "forcesave",
+      "key": "Khirz6zTPdfd7",
+      "userdata": "sample userdata"
     }
     ```
 
   * Enabling the [editorConfig.customization.forcesave](../../../Usage%20API/Config/Editor/Customization/index.md#forcesave) setting to **true** in the editor initialization configuration:
 
     ``` javascript
-    var docEditor = new DocsAPI.DocEditor("placeholder", {
-        "editorConfig": {
-            "customization": {
-                "forcesave": false,
-            },
+    const docEditor = new DocsAPI.DocEditor("placeholder", {
+      editorConfig: {
+        customization: {
+          forcesave: false,
         },
-    });
+      },
+    })
     ```
 
   * Enabling the repeating forcesave start in the **default.json** ONLYOFFICE Docs configuration file:
 
     ``` json
     {
-        "services": {
-            "CoAuthoring": {
-                "autoAssembly": {
-                    "enable": true,
-                    "interval": "5m"
-                }
-            }
+      "services": {
+        "CoAuthoring": {
+          "autoAssembly": {
+            "enable": true,
+            "interval": "5m"
+          }
         }
+      }
     }
     ```
 
@@ -64,13 +64,13 @@ order: -3
   The **Autosave** option is enabled by default. To disable it, you need to set the [editorConfig.customization.autosave](../../../Usage%20API/Config/Editor/Customization/index.md#autosave) parameter in the document configuration to **false**:
 
   ``` javascript
-  var docEditor = new DocsAPI.DocEditor("placeholder", {
-      "editorConfig": {
-          "customization": {
-              "autosave": false,
-          },
+  const docEditor = new DocsAPI.DocEditor("placeholder", {
+    editorConfig: {
+      customization: {
+        autosave: false,
       },
-  });
+    },
+  })
   ```
 
   > Please note, that disabling the **Autosave** will also disable the **Fast** co-editing mode which only works with the automatic document saving enabled.
@@ -87,13 +87,13 @@ order: -3
 
   ``` json
   {
-      "services": {
-          "CoAuthoring": {
-              "server": {
-                  "savetimeoutdelay": 5000
-              }
-          }
+    "services": {
+      "CoAuthoring": {
+        "server": {
+          "savetimeoutdelay": 5000
+        }
       }
+    }
   }
   ```
 
@@ -107,12 +107,12 @@ order: -3
 
   ``` json
   {
-      "codePage": 65001,
-      "filetype": "txt",
-      "key": "Khirz6zTPdfd7",
-      "outputtype": "docx",
-      "title": "Example Document Title.docx",
-      "url": "https://example.com/url-to-example-document.txt"
+    "codePage": 65001,
+    "filetype": "txt",
+    "key": "Khirz6zTPdfd7",
+    "outputtype": "docx",
+    "title": "Example Document Title.docx",
+    "url": "https://example.com/url-to-example-document.txt"
   }
   ```
 

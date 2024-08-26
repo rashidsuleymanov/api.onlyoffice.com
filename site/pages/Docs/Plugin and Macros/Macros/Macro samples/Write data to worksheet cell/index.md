@@ -6,10 +6,12 @@ order: -19
 
 Writes the data (the *Hello world* phrase) to the worksheet third column of the fourth row.
 
+<!-- This code snippet is shown in the screenshot. -->
+<!-- eslint-skip -->
 ``` javascript
 (function()
 {
-    Api.GetActiveSheet().GetRange("C4").SetValue("Hello world");
+  Api.GetActiveSheet().GetRange("C4").SetValue("Hello world");
 })();
 ```
 

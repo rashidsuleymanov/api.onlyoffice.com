@@ -184,23 +184,23 @@ This example demonstrates how to open the ONLYOFFICE editors via WKWebView using
 
 7. Add the script initializing the **Document Editor** for the *div* element with the configuration for the document you want to open:
 
-   ``` javascript
-   window.docEditor = new DocsAPI.DocEditor("placeholder",
-       {
-           {external_config},
-           "type": "mobile",
-           "events": {
-               "onAppReady": onAppReady,
-               "onDocumentReady": onDocumentReady,
-               "onDownloadAs": onDownloadAs,
-               "onError": onError,
-               "onInfo": onInfo,
-               "onRequestClose": onRequestClose,
-               "onRequestInsertImage": onRequestInsertImage,
-               "onRequestUsers": onRequestUsers,
-               "onWarning": onWarning,
-           }
-       });
+   <!-- eslint-skip -->
+   ```js
+   window.docEditor = new DocsAPI.DocEditor("placeholder", {
+     {external_config},
+     type: "mobile",
+     events: {
+       onAppReady,
+       onDocumentReady,
+       onDownloadAs,
+       onError,
+       onInfo,
+       onRequestClose,
+       onRequestInsertImage,
+       onRequestUsers,
+       onWarning,
+     },
+   })
    ```
 
 8. To start working with documents, display the ONLYOFFICE editor on your mobile device via the WKWebView component. To do this, specify the **EditorViewController** controller. Request the URL to the *editor.html* file, get its contents and replace the *"{external\_config}"* parameter with a config from the *samples.plist* file where all the sample configurations are categorized according to [API documentation Try page](../../../Try%20Docs/index.tsx):

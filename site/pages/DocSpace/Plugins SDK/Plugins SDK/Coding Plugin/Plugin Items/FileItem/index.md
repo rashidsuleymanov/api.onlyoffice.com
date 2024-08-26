@@ -71,13 +71,13 @@ Example: "drawio-96.svg"
 **Example**
 
 ``` javascript
-import {IFileItem, File} from "@onlyoffice/docspace-plugin-sdk";
+import {type File, type IFileItem} from "@onlyoffice/docspace-plugin-sdk"
 
 export const drawIoItem: IFileItem = {
-    "extension": ".drawio",
-    "fileTypeName": "Diagram",
-    "fileRowIcon": "drawio-32.svg",
-    "fileTileIcon": "drawio-96.svg",
-    "onClick": async (item: File) => {},
-};
+  extension: ".drawio",
+  fileTypeName: "Diagram",
+  fileRowIcon: "drawio-32.svg",
+  fileTileIcon: "drawio-96.svg",
+  onClick: async (item: File) => {},
+}
 ```

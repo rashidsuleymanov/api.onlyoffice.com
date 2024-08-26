@@ -71,93 +71,93 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ``` json
 {
-    "name": "Zotero",
-    "nameLocale": {
-        "fr": "Zotero",
-        "es": "Zotero",
-        "pt-BR": "Zotero",
-        "de": "Zotero"
-    },
-    "guid" : "asc.{BFC5D5C6-89DE-4168-9565-ABD8D1E48711}",
-    "version": "1.0.3",
-    "minVersion": "7.3.3",
+  "name": "Zotero",
+  "nameLocale": {
+    "fr": "Zotero",
+    "es": "Zotero",
+    "pt-BR": "Zotero",
+    "de": "Zotero"
+  },
+  "guid": "asc.{BFC5D5C6-89DE-4168-9565-ABD8D1E48711}",
+  "version": "1.0.3",
+  "minVersion": "7.3.3",
 
-    "variations" : [
+  "variations": [
+    {
+      "description": "Create bibliographies in the required style using Zotero service.",
+      "descriptionLocale": {
+        "fr": "Créez des bibliographies dans le style nécessaire avec Zotero.",
+        "es": "Cree bibliografías en el estilo requerido utilizando el servicio Zotero.",
+        "pt-BR": "Crie bibliografias no estilo desejado usando o serviço Zotero.",
+        "de": "Erstellen Sie Literaturverzeichnisse im gewünschten Stil mittels Zotero."
+      },
+      "url": "index.html",
+      "icons": ["resources/light/icon.png", "resources/light/icon@2x.png"],
+      "icons2": [
         {
-            "description": "Create bibliographies in the required style using Zotero service.",
-            "descriptionLocale": {
-                    "fr": "Créez des bibliographies dans le style nécessaire avec Zotero.",
-                    "es": "Cree bibliografías en el estilo requerido utilizando el servicio Zotero.",
-                    "pt-BR": "Crie bibliografias no estilo desejado usando o serviço Zotero.",
-                    "de": "Erstellen Sie Literaturverzeichnisse im gewünschten Stil mittels Zotero."
-                },
-            "url": "index.html",
-            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
-            "icons2": [
-                    {
-                        "style" : "light",
+          "style": "light",
                         
-                        "100%": {
-                            "normal": "resources/light/icon.png"
-                        },
-                        "125%": {
-                            "normal": "resources/light/icon@1.25x.png"
-                        },
-                        "150%": {
-                            "normal": "resources/light/icon@1.5x.png"
-                        },
-                        "175%": {
-                            "normal": "resources/light/icon@1.75x.png"
-                        },
-                        "200%": {
-                            "normal": "resources/light/icon@2x.png"
-                        }
-                    },
-                    {
-                        "style" : "dark",
+          "100%": {
+            "normal": "resources/light/icon.png"
+          },
+          "125%": {
+            "normal": "resources/light/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/light/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/light/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/light/icon@2x.png"
+          }
+        },
+        {
+          "style": "dark",
                         
-                        "100%": {
-                            "normal": "resources/dark/icon.png"
-                        },
-                        "125%": {
-                            "normal": "resources/dark/icon@1.25x.png"
-                        },
-                        "150%": {
-                            "normal": "resources/dark/icon@1.5x.png"
-                        },
-                        "175%": {
-                            "normal": "resources/dark/icon@1.75x.png"
-                        },
-                        "200%": {
-                            "normal": "resources/dark/icon@2x.png"
-                        }
-                    }
-                ],
-            "isViewer": false,
-            "EditorsSupport": [ "word" ],
-            "initDataType": "text",
-            "initData": "",
-            "isVisual": true,
-            "isModal": false,
-            "isInsideMode": true,
-            "initOnSelectionChanged": false,
-            "store": {
-                "background": {
-                    "light" : "#2D3037",
-                    "dark" : "#2D3037"
-                },
-                "screenshots" : [
-                    "resources/store/screenshots/screen_1.png",
-                    "resources/store/screenshots/screen_2.png"
-                ],
-                "icons"       : {
-                    "light" : "resources/store/icons",
-                    "dark"  : "resources/store/icons"
-                },
-                "categories": ["specAbilities"]
-            }
+          "100%": {
+            "normal": "resources/dark/icon.png"
+          },
+          "125%": {
+            "normal": "resources/dark/icon@1.25x.png"
+          },
+          "150%": {
+            "normal": "resources/dark/icon@1.5x.png"
+          },
+          "175%": {
+            "normal": "resources/dark/icon@1.75x.png"
+          },
+          "200%": {
+            "normal": "resources/dark/icon@2x.png"
+          }
         }
-    ]
+      ],
+      "isViewer": false,
+      "EditorsSupport": ["word"],
+      "initDataType": "text",
+      "initData": "",
+      "isVisual": true,
+      "isModal": false,
+      "isInsideMode": true,
+      "initOnSelectionChanged": false,
+      "store": {
+        "background": {
+          "light": "#2D3037",
+          "dark": "#2D3037"
+        },
+        "screenshots": [
+          "resources/store/screenshots/screen_1.png",
+          "resources/store/screenshots/screen_2.png"
+        ],
+        "icons": {
+          "light": "resources/store/icons",
+          "dark": "resources/store/icons"
+        },
+        "categories": ["specAbilities"]
+      }
+    }
+  ]
 }
 ```
 

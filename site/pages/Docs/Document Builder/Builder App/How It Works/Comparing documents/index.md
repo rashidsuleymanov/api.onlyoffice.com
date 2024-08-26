@@ -7,12 +7,12 @@ If you need to compare two documents, you can use **Document Builder**. The step
 1. Create the *compare.docbuilder* script file with the following code:
 
    ``` js
-   builder.OpenFile("https://example.com/file1.docx");
-   var file = builderJS.OpenTmpFile("https://example.com/file2.docx");
-   AscCommonWord.CompareDocuments(Api, file, null);
-   file.Close();
-   builder.SaveFile("docx", "Result.docx");
-   builder.CloseFile();
+   builder.OpenFile("https://example.com/file1.docx")
+   const file = builderJS.OpenTmpFile("https://example.com/file2.docx")
+   AscCommonWord.CompareDocuments(Api, file, null)
+   file.Close()
+   builder.SaveFile("docx", "Result.docx")
+   builder.CloseFile()
    ```
 
    where
@@ -23,10 +23,10 @@ If you need to compare two documents, you can use **Document Builder**. The step
 
 2. Send the [POST request](../../../../Docs%20API/Additional%20API/Document%20Builder%20API/index.md) to **https\://documentserver/docbuilder** with the following body in the JSON format:
 
-   ``` js
+   ``` json
    {
-       "async": false,
-       "url": "https://example.com/compare.docbuilder"
+     "async": false,
+     "url": "https://example.com/compare.docbuilder"
    }
    ```
 
@@ -36,13 +36,13 @@ If you need to compare two documents, you can use **Document Builder**. The step
 
 3. Once the document generation is ready, the response with the absolute URL to the output file of document comparing will be returned:
 
-   ``` js
+   ``` json
    {
-      "key": "Khirz6zTPdfd7",
-       "urls": {
-           "Result.docx": "https://documentserver/Result.docx"
-       },
-       "end": true
+     "key": "Khirz6zTPdfd7",
+     "urls": {
+       "Result.docx": "https://documentserver/Result.docx"
+     },
+     "end": true
    }
    ```
 

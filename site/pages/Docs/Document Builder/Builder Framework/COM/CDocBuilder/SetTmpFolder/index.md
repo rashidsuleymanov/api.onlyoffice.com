@@ -23,5 +23,5 @@ oBuilder->Dispose();
 #### .docbuilder
 
 ```js
-builder.SetTmpFolder("DocBuilderTemp");
+builder.SetTmpFolder("DocBuilderTemp")
 ```

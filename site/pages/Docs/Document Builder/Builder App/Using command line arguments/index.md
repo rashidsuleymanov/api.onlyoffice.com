@@ -17,21 +17,20 @@ The sample code for the **.docbuilder** script file can be like this:
 ## Example
 
 ```js
-builder.CreateFile("docx");
-var sCompany   = Argument["company"];
-var sProduct = Argument["product"];
-var sCompatibility    = Argument["compatibility"];
-var oDocument = Api.GetDocument();
-var oParagraph, oRun;
-oParagraph = oDocument.GetElement(0);
-oParagraph.AddText("This is an example of using command line arguments with ONLYOFFICE Document Builder.");
-oParagraph.AddLineBreak();
-oParagraph.AddLineBreak();
-oParagraph.AddText("Company name: " + sCompany);
-oParagraph.AddLineBreak();
-oParagraph.AddText("Product:  " + sProduct);
-oParagraph.AddLineBreak();
-oParagraph.AddText("Compatibility with OOXML standards: " + sCompatibility);
-builder.SaveFile("docx", "ArgumentUse.docx");
-builder.CloseFile();
+builder.CreateFile("docx")
+const sCompany = Argument["company"]
+const sProduct = Argument["product"]
+const sCompatibility = Argument["compatibility"]
+const oDocument = Api.GetDocument()
+const oParagraph = oDocument.GetElement(0)
+oParagraph.AddText("This is an example of using command line arguments with ONLYOFFICE Document Builder.")
+oParagraph.AddLineBreak()
+oParagraph.AddLineBreak()
+oParagraph.AddText(`Company name: ${sCompany}`)
+oParagraph.AddLineBreak()
+oParagraph.AddText(`Product:  ${sProduct}`)
+oParagraph.AddLineBreak()
+oParagraph.AddText(`Compatibility with OOXML standards: ${sCompatibility}`)
+builder.SaveFile("docx", "ArgumentUse.docx")
+builder.CloseFile()
 ```

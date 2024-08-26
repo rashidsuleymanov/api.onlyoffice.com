@@ -4,9 +4,9 @@ Disconnects the users with the identifiers specified in the *users* parameter fr
 
 ``` json
 {
-    "c": "drop",
-    "key": "Khirz6zTPdfd7",
-    "users": [ "6d5a81d0" ]
+  "c": "drop",
+  "key": "Khirz6zTPdfd7",
+  "users": ["6d5a81d0"]
 }
 ```
 
@@ -22,8 +22,8 @@ Disconnects the users with the identifiers specified in the *users* parameter fr
 
 ``` json
 {
-    "error": 0,
-    "key": "Khirz6zTPdfd7"
+  "error": 0,
+  "key": "Khirz6zTPdfd7"
 }
 ```
 

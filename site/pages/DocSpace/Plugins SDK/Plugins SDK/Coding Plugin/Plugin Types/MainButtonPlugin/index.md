@@ -47,22 +47,22 @@ Update the main button item.
 
 **Example**
 
-``` javascript
-import {IMainButtonPlugin, IMainButtonItem} from "@onlyoffice/docspace-plugin-sdk";
+``` typescript
+import {type IMainButtonItem, type IMainButtonPlugin} from "@onlyoffice/docspace-plugin-sdk"
 
-class Plugin implements IMainButtonPlugin{
-    mainButtonItems: Map<string, IMainButtonItem> = new Map();
+class Plugin implements IMainButtonPlugin {
+  mainButtonItems = new Map<string, IMainButtonItem>()
 
-    addMainButtonItem = (item: IMainButtonItem): void => {
-        this.mainButtonItems.set(item.key, item);
-    };
+  addMainButtonItem = (item: IMainButtonItem): void => {
+    this.mainButtonItems.set(item.key, item)
+  }
 
-    getMainButtonItems = (): Map<string, IMainButtonItem> => {
-        return this.mainButtonItems;
-    };
+  getMainButtonItems = (): Map<string, IMainButtonItem> => {
+    return this.mainButtonItems
+  }
 
-    updateMainButtonItem = (item: IMainButtonItem): void => {
-        this.mainButtonItems.set(item.key, item);
-    };
+  updateMainButtonItem = (item: IMainButtonItem): void => {
+    this.mainButtonItems.set(item.key, item)
+  }
 }
 ```

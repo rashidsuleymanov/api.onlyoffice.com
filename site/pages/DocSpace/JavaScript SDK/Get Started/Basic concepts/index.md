@@ -49,10 +49,10 @@ If the users are not authenticated, they will see a page asking them to sign in 
 Initialize DocSpace frame using the [initFrame](../../JavaScript%20SDK/Methods/index.md#initframe) method with the SDK config passed to it:
 
 ``` javascript
-var docSpace = DocSpace.SDK.initFrame({
-    frameId: "frameId",
-    showMenu: true
-});
+const docSpace = DocSpace.SDK.initFrame({
+  frameId: "frameId",
+  showMenu: true,
+})
 ```
 
 You can use other available [methods](../../JavaScript%20SDK/Methods/index.md) to initialize DocSpace.

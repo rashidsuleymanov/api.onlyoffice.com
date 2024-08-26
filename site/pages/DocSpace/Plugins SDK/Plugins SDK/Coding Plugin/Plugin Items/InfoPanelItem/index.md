@@ -23,9 +23,9 @@ Type: object
 Example:
 
 ``` javascript
-{
-    "name": "Test",
-    "onClick": () => {}
+const item = {
+  name: "Test",
+  onClick: () => {},
 }
 ```
 
@@ -105,37 +105,43 @@ Example: \[Devices.desktop]
 **Example**
 
 ``` javascript
-import {IInfoPanelItem, IBox, IComponent, IInfoPanelSubMenu, FilesExst, FilesType} from "@onlyoffice/docspace-plugin-sdk";
+import {FilesExst, FilesType, type IBox, type IComponent, type IInfoPanelItem, type IInfoPanelSubMenu} from "@onlyoffice/docspace-plugin-sdk"
+import {buttonBox} from "./Button"
+import {checkboxBox} from "./Checkbox"
+import {headerBox} from "./Header"
+import {inputGroupBox} from "./Input"
+import {textAreaGroupBox} from "./TextArea"
+import {toggleButtonBox} from "./ToggleButton"
 
-import {headerBox} from "./Header";
-import {checkboxBox} from "./Checkbox";
-import {textAreaGroupBox} from "./TextArea";
-import {inputGroupBox} from "./Input";
-import {buttonBox} from "./Button";
-import {toggleButtonBox} from "./ToggleButton";
-
-const parentBoxChildren: IComponent[] = [headerBox, checkboxBox, textAreaGroupBox, inputGroupBox, toggleButtonBox, buttonBox];
+const parentBoxChildren: IComponent[] = [
+  headerBox,
+  checkboxBox,
+  textAreaGroupBox,
+  inputGroupBox,
+  toggleButtonBox,
+  buttonBox,
+]
 
 const parentBox: IBox = {
-    "widthProp": "100%",
-    "heightProp": "auto",
-    "marginProp": "0",
-    "displayProp": "flex",
-    "paddingProp": "0",
-    "flexDirection": "column",
-    "children": parentBoxChildren
-};
+  widthProp: "100%",
+  heightProp: "auto",
+  marginProp: "0",
+  displayProp: "flex",
+  paddingProp: "0",
+  flexDirection: "column",
+  children: parentBoxChildren,
+}
 
 const infoPanelSubMenu: IInfoPanelSubMenu = {
-    "name": "Test",
-    "onClick": () => { },
-};
+  name: "Test",
+  onClick: () => {},
+}
 
 export const InfoPanelItem: IInfoPanelItem = {
-    "key": "test-info-panel",
-    "subMenu": infoPanelSubMenu,
-    "body": parentBox,
-    "filesExsts": [FilesExst.docx, FilesExst.xlsx],
-    "filesType": [FilesType.room, FilesType.file]
-};
+  key: "test-info-panel",
+  subMenu: infoPanelSubMenu,
+  body: parentBox,
+  filesExsts: [FilesExst.docx, FilesExst.xlsx],
+  filesType: [FilesType.room, FilesType.file],
+}
 ```

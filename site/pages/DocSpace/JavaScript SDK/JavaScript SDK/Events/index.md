@@ -21,15 +21,15 @@ The function called when SDK is initialized with an error. This error is returne
   **Example**
 
   ``` javascript
-  var onAppError = function () {
-      console.log("ONLYOFFICE DocSpace reports an error");
-  };
-
-  var docSpace = DocSpace.SDK.initManager({
-      "events": {
-          "onAppError": onAppError,
-      },
-  });
+  function onAppError() {
+    console.log("ONLYOFFICE DocSpace reports an error")
+  }
+  
+  const docSpace = DocSpace.SDK.initManager({
+    events: {
+      onAppError,
+    },
+  })
   ```
 
 
@@ -40,15 +40,15 @@ The function called when SDK is initialized successfully.
   **Example**
 
   ``` javascript
-  var onAppReady = function () {
-      console.log("ONLYOFFICE DocSpace is ready");
-  };
-
-  var docSpace = DocSpace.SDK.initManager({
-      "events": {
-          "onAppReady": onAppReady,
-      },
-  });
+  function onAppReady() {
+    console.log("ONLYOFFICE DocSpace is ready")
+  }
+  
+  const docSpace = DocSpace.SDK.initManager({
+    events: {
+      onAppReady,
+    },
+  })
   ```
 
 
@@ -59,15 +59,15 @@ The function called upon successful authorization.
   **Example**
 
   ``` javascript
-  var onAuthSuccess = function () {
-      console.log("The authorization is successful.");
-  };
-
-  var docSpace = DocSpace.SDK.initManager({
-      "events": {
-          "onAuthSuccess ": onAuthSuccess,
-      },
-  });
+  function onAuthSuccess() {
+    console.log("The authorization is successful.")
+  }
+  
+  const docSpace = DocSpace.SDK.initManager({
+    events: {
+      "onAuthSuccess ": onAuthSuccess,
+    },
+  })
   ```
 
 
@@ -78,15 +78,15 @@ The function called only in the [room-selector](../Initialization%20Modes/Room%2
   **Example**
 
   ``` javascript
-  var onCloseCallback = function () {
-      console.log("The room selector is closed.");
-  };
-
-  var docSpace = DocSpace.SDK.initRoomSelector({
-      "events": {
-          "onCloseCallback": onCloseCallback,
-      },
-  });
+  function onCloseCallback() {
+    console.log("The room selector is closed.")
+  }
+  
+  const docSpace = DocSpace.SDK.initRoomSelector({
+    events: {
+      onCloseCallback,
+    },
+  })
   ```
 
 
@@ -97,15 +97,15 @@ The function called when firing events to download items from the manager. It re
   **Example**
 
   ``` javascript
-  var onDownload = function () {
-      console.log("The 'New document' file has been downloaded.");
-  };
-
-  var docSpace = DocSpace.SDK.initManager({
-      "events": {
-          "onDownload": onDownload,
-      },
-  });
+  function onDownload() {
+    console.log("The 'New document' file has been downloaded.")
+  }
+  
+  const docSpace = DocSpace.SDK.initManager({
+    events: {
+      onDownload,
+    },
+  })
   ```
 
 
@@ -116,15 +116,15 @@ The function called when the document editor is closed.
   **Example**
 
   ``` javascript
-  var onEditorCloseCallback = function () {
-      console.log("The document editor is closed.");
-  };
-
-  var docSpace = DocSpace.SDK.initEditor({
-      "events": {
-          "onEditorCloseCallback": onEditorCloseCallback,
-      },
-  });
+  function onEditorCloseCallback() {
+    console.log("The document editor is closed.")
+  }
+  
+  const docSpace = DocSpace.SDK.initEditor({
+    events: {
+      onEditorCloseCallback,
+    },
+  })
   ```
 
 
@@ -135,25 +135,25 @@ The function called only in the [room-selector](../Initialization%20Modes/Room%2
   **Example**
 
   ``` javascript
-  var onSelectCallback = function () {
-      console.log("The 'New room' room was selected.");
-  };
-
-  var docSpace = DocSpace.SDK.initRoomSelector({
-      "events": {
-          "onSelectCallback": onSelectCallback,
-      },
-  });
+  function onSelectCallback() {
+    console.log("The 'New room' room was selected.")
+  }
+  
+  const docSpace = DocSpace.SDK.initRoomSelector({
+    events: {
+      onSelectCallback,
+    },
+  })
   ```
 
   The information about the selected item is returned:
 
   ``` json
   {
-      "icon": "https://example.com/url-to-example-image.svg",
-      "id": 34,
-      "isSelected": false,
-      "label": "roomName"
+    "icon": "https://example.com/url-to-example-image.svg",
+    "id": 34,
+    "isSelected": false,
+    "label": "roomName"
   }
   ```
 
@@ -174,13 +174,13 @@ The function called when logging out of the user account.
   **Example**
 
   ``` javascript
-  var onSignOut = function () {
-      console.log("The user is logging out of the DocSpace account.");
-  };
-
-  var docSpace = DocSpace.SDK.initManager({
-      "events": {
-          "onSignOut ": onSignOut,
-      },
-  });
+  function onSignOut() {
+    console.log("The user is logging out of the DocSpace account.")
+  }
+  
+  const docSpace = DocSpace.SDK.initManager({
+    events: {
+      "onSignOut ": onSignOut,
+    },
+  })
   ```

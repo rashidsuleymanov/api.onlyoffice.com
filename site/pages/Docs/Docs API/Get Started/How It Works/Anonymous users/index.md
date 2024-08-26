@@ -33,16 +33,16 @@ The reference figure and the steps below explain the process of setting a name t
    ![Label](/assets/images/editor/label.png)
 
    ``` javascript
-   var docEditor = new DocsAPI.DocEditor("placeholder", {
-       "editorConfig": {
-           "customization": {
-               "anonymous": {
-                   "request": true,
-                   "label": "Guest"
-               },
-           },
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
+     editorConfig: {
+       customization: {
+         anonymous: {
+           request: true,
+           label: "Guest",
+         },
        },
-   });
+     },
+   })
    ```
 
 5. As soon as you set the name for the first time, it will be stored in the browser local storage. To use it next time, just press the **F5** button.

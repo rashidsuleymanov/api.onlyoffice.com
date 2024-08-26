@@ -99,14 +99,14 @@ Example: true
 **Example**
 
 ``` javascript
-import {FilesType, IContextMenuItem, UsersType} from "@onlyoffice/docspace-plugin-sdk";
+import {FilesType, type IContextMenuItem, UsersType} from "@onlyoffice/docspace-plugin-sdk"
 
 export const convertFileItem: IContextMenuItem = {
-    "key": "convert-file-item",
-    "label": "Convert to PDF",
-    "icon": "convert-16.png",
-    "onClick": (id: number) => {},
-    "fileType": [FilesType.file],
-    "usersTypes": [UsersType.owner, UsersType.docSpaceAdmin, UsersType.roomAdmin]
-};
+  key: "convert-file-item",
+  label: "Convert to PDF",
+  icon: "convert-16.png",
+  onClick: (id: number) => {},
+  fileType: [FilesType.file],
+  usersTypes: [UsersType.owner, UsersType.docSpaceAdmin, UsersType.roomAdmin],
+}
 ```

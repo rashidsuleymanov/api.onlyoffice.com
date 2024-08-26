@@ -26,26 +26,26 @@ Repository on GitHub: <https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/s
 
 ``` json
 {
-    "name"       : "settings",
-    "guid"       : "asc.{CF3A000F-C6B4-451D-AC0B-F3DDAB1880D2}",
-    "baseUrl"    : "",
-    "variations" : [
-        {
-            "description"         : "settings",
-            "url"                 : "index.html",
+  "name": "settings",
+  "guid": "asc.{CF3A000F-C6B4-451D-AC0B-F3DDAB1880D2}",
+  "baseUrl": "",
+  "variations": [
+    {
+      "description": "settings",
+      "url": "index.html",
 
-            "isViewer"            : true,
-            "EditorsSupport"      : [ "word", "cell", "slide" ],
+      "isViewer": true,
+      "EditorsSupport": ["word", "cell", "slide"],
 
-            "isSystem"            : true,
-            "isVisual"            : false,
+      "isSystem": true,
+      "isVisual": false,
 
-            "initDataType"        : "none",
-            "initData"            : "",
+      "initDataType": "none",
+      "initData": "",
 
-            "buttons"             : []
-        }
-    ]
+      "buttons": []
+    }
+  ]
 }
 ```
 

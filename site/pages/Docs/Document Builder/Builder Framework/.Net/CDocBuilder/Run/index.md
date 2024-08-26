@@ -22,6 +22,6 @@ CDocBuilder.Destroy();
 
 #### .docbuilder
 
-```js
+```shell
 docbuilder.exe mydocument.docbuilder
 ```

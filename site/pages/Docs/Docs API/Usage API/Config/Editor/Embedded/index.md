@@ -50,16 +50,15 @@ Example: "top"
 ### Example
 
 ``` javascript
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "editorConfig": {
-        "embedded": {
-            "embedUrl": "https://example.com/embedded?doc=exampledocument1.docx",
-            "fullscreenUrl": "https://example.com/embedded?doc=exampledocument1.docx#fullscreen",
-            "saveUrl": "https://example.com/download?doc=exampledocument1.docx",
-            "shareUrl": "https://example.com/view?doc=exampledocument1.docx",
-            "toolbarDocked": "top"
-        }
-        ,
+const docEditor = new DocsAPI.DocEditor("placeholder", {
+  editorConfig: {
+    embedded: {
+      embedUrl: "https://example.com/embedded?doc=exampledocument1.docx",
+      fullscreenUrl: "https://example.com/embedded?doc=exampledocument1.docx#fullscreen",
+      saveUrl: "https://example.com/download?doc=exampledocument1.docx",
+      shareUrl: "https://example.com/view?doc=exampledocument1.docx",
+      toolbarDocked: "top",
     },
-});
+  },
+})
 ```

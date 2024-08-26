@@ -11,33 +11,32 @@ To create a combo box option, use [IComboBoxItem](https://github.com/ONLYOFFICE/
 ### Example
 
 ``` javascript
-import {IComboBox, IComboBoxItem, Actions, IMessage} from "@onlyoffice/docspace-plugin-sdk";
+import {Actions, type IComboBox, type IComboBoxItem, type IMessage} from "@onlyoffice/docspace-plugin-sdk"
 
 const options: IComboBoxItem[] = [
-    {"key": "auto", "label": "Auto"},
-    {"key": "en", "label": "English"},
-    {"key": "es", "label": "EspaÃ±ol"},
-    {"key": "eu", "label": "Euskara"},
-];
+  {key: "auto", label: "Auto"},
+  {key: "en", label: "English"},
+  {key: "es", label: "EspaÃ±ol"},
+  {key: "eu", label: "Euskara"},
+]
 
 const onSelect = (option: IComboBoxItem) => {
-    comboBox.selectedOption = option;
+  comboBox.selectedOption = option
 
-    const message: IMessage = {
-        "actions": [Actions.updateProps],
-        "newProps": langComboBox,
-    };
-
-    return message;
-};
+  const message: IMessage = {
+    actions: [Actions.updateProps],
+    newProps: langComboBox,
+  }
+  return message
+}
 
 const comboBox: IComboBox = {
-    options,
-    "selectedOption": options[0],
-    onSelect,
-    "scaled": true,
-    "dropDownMaxHeight": 400,
-    "directionY": "both",
-    "scaledOptions": true,
-};
+  options,
+  selectedOption: options[0],
+  onSelect,
+  scaled: true,
+  dropDownMaxHeight: 400,
+  directionY: "both",
+  scaledOptions: true,
+}
 ```

@@ -13,5 +13,5 @@ Opens the room selector and allows you to select a room from a list of the avail
 | [initRoomSelector](../../Methods/index.md#initroomselector) | Initializes the SDK frame in the "room-selector" mode. |
 
 ``` javascript
-var docSpace = DocSpace.SDK.initRoomSelector({config});
+const docSpace = DocSpace.SDK.initRoomSelector({config})
 ```

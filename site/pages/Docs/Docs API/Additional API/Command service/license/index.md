@@ -4,7 +4,7 @@ Requests the license from ONLYOFFICE Docs with information about the server and 
 
 ``` json
 {
-    "c": "license"
+  "c": "license"
 }
 ```
 
@@ -18,46 +18,46 @@ Requests the license from ONLYOFFICE Docs with information about the server and 
 
 ``` json
 {
-    "error": 0,
-    "license": {
-        "end_date": "2021-07-07T23:59:59.000Z",
-        "trial": false,
-        "customization": false,
-        "connections": 0,
-        "connections_view": 0,
-        "users_count": 10,
-        "users_view_count": 10,
-        "users_expire": 30
-    },
-    "server": {
-        "resultType": 3,
-        "packageType": 1,
-        "buildDate": "2021-05-21T00:00:00.000Z",
-        "buildVersion": "6.3.0",
-        "buildNumber": 111
-    },
-    "quota": {
-        "users": [
-            {
-                "userid": "uid-0",
-                "expire": "2021-07-07T23:59:59.000Z"
-            },
-            {
-                "userid": "uid-1",
-                "expire": "2021-07-09T23:59:59.000Z"
-            }
-        ],
-        "users_view": [
-            {
-                "userid": "uid-0",
-                "expire": "2021-07-07T23:59:59.000Z"
-            },
-            {
-                "userid": "uid-1",
-                "expire": "2021-07-09T23:59:59.000Z"
-            }
-        ]
-    }
+  "error": 0,
+  "license": {
+    "end_date": "2021-07-07T23:59:59.000Z",
+    "trial": false,
+    "customization": false,
+    "connections": 0,
+    "connections_view": 0,
+    "users_count": 10,
+    "users_view_count": 10,
+    "users_expire": 30
+  },
+  "server": {
+    "resultType": 3,
+    "packageType": 1,
+    "buildDate": "2021-05-21T00:00:00.000Z",
+    "buildVersion": "6.3.0",
+    "buildNumber": 111
+  },
+  "quota": {
+    "users": [
+      {
+        "userid": "uid-0",
+        "expire": "2021-07-07T23:59:59.000Z"
+      },
+      {
+        "userid": "uid-1",
+        "expire": "2021-07-09T23:59:59.000Z"
+      }
+    ],
+    "users_view": [
+      {
+        "userid": "uid-0",
+        "expire": "2021-07-07T23:59:59.000Z"
+      },
+      {
+        "userid": "uid-1",
+        "expire": "2021-07-09T23:59:59.000Z"
+      }
+    ]
+  }
 }
 ```
 
