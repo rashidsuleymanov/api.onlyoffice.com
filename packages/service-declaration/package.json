@@ -4,7 +4,8 @@
   "private": true,
   "exports": {
     ".": "./lib/main.ts",
-    "./example.ts": "./lib/example.ts"
+    "./example.ts": "./lib/example.ts",
+    "./main2.ts": "./lib/main2.ts"
   },
   "main": "lib/main.ts",
   "scripts": {

@@ -18,18 +18,18 @@ export class GroupDeclaration implements DeclarationNode {
 export class RequestDeclaration implements DeclarationNode {
   id = ""
   type = "request" as const
+  title = ""
+  description = ""
   method = ""
   path = ""
-  summary = ""
-  description = ""
   deprecated = false
-  headerParameters: Property[] = []
-  cookieParameters: Property[] = []
-  pathParameters: Property[] = []
-  queryParameters: Property[] = []
-  bodyParameters: Property[] = []
+  headerParameters: Parameter[] = []
+  cookieParameters: Parameter[] = []
+  pathParameters: Parameter[] = []
+  queryParameters: Parameter[] = []
+  bodyParameters: Parameter[] = []
   examples: unknown[] = []
-  responses: Response[] = []
+  responses: ResponseRecord[] = []
 }
 
 export interface DeclarationNode {
@@ -37,19 +37,38 @@ export interface DeclarationNode {
   type: string
 }
 
-export class Response {
-  status = -1
-  description = ""
-  body: Type = new NoopType()
+export interface ComponentNode {
+  type: string
 }
 
-export class Property {
+export class ResponseRecord {
+  status = -1
+  self = new Response()
+}
+
+export class Response {
+  description = ""
+  body = new Model()
+}
+
+export class Parameter {
   identifier = ""
   description = ""
   required = false
   deprecated = false
+  self = new Model()
+}
+
+export class PropertyRecord {
+  identifier = ""
+  // required = false
+  self = new Model()
+}
+
+export class Model {
+  description = ""
+  deprecated = false
   type: Type = new NoopType()
-  format = ""
 }
 
 export type Security = SecurityMap[keyof SecurityMap]
@@ -112,7 +131,7 @@ export class EnumType implements TypeNode {
 
 export class IntegerType implements TypeNode {
   type = "integer" as const
-  // format = ""
+  format = ""
 }
 
 export class LiteralType implements TypeNode {
@@ -131,17 +150,17 @@ export class NullType implements TypeNode {
 
 export class NumberType implements TypeNode {
   type = "number" as const
-  // format = ""
+  format = ""
 }
 
 export class ObjectType implements TypeNode {
   type = "object" as const
-  properties: Property[] = []
+  properties: PropertyRecord[] = []
 }
 
 export class StringType implements TypeNode {
   type = "string" as const
-  // format = ""
+  format = ""
 }
 
 export class UnionType implements TypeNode {

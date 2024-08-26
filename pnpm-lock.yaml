@@ -1187,6 +1187,19 @@ importers:
       typescript:
         specifier: ^5.4.5
         version: 5.5.4
+    devDependencies:
+      c8:
+        specifier: ^9.1.0
+        version: 9.1.0
+      is-valid-uuid-v4:
+        specifier: ^1.2.3
+        version: 1.2.3
+      tsx:
+        specifier: ^4.16.5
+        version: 4.17.0
+      uvu:
+        specifier: ^0.5.6
+        version: 0.5.6
 
   packages/openapi-resource:
     dependencies:
@@ -7103,6 +7116,9 @@ packages:
 
   is-valid-element-name@1.0.0:
     resolution: {integrity: sha512-GZITEJY2LkSjQfaIPBha7eyZv+ge0PhBR7KITeCCWvy7VBQrCUdFkvpI+HrAPQjVtVjy1LvlEkqQTHckoszruw==}
+
+  is-valid-uuid-v4@1.2.3:
+    resolution: {integrity: sha512-MndaUTxDgkd/q979gr9sLiFCmT+kQdjhSzj+SHgdlvqJJkmrC3+G9AHS1EZUknhgeVdEJ5EicyVf63DcNT6sgw==}
 
   is-weakref@1.0.2:
     resolution: {integrity: sha512-qctsuLZmIQ0+vSSMfoVvyFe2+GSEvnmZ2ezTup1SBse9+twCCeial6EEi3Nc2KFcf6+qz2FBPnjXsk8xhKSaPQ==}
@@ -14431,6 +14447,8 @@ snapshots:
   is-valid-element-name@1.0.0:
     dependencies:
       is-potential-custom-element-name: 1.0.1
+
+  is-valid-uuid-v4@1.2.3: {}
 
   is-weakref@1.0.2:
     dependencies:
