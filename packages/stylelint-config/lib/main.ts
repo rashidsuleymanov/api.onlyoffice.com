@@ -202,7 +202,12 @@ const c: Config = {
     "order/order": ["custom-properties", "declarations", "at-rules", "rules"],
     "order/properties-alphabetical-order": true,
 
-    "plugin/use-logical-properties-and-values": true,
+    "plugin/use-logical-properties-and-values": [true, {
+      // The overflow-block and overflow-inline properties are poorly supported.
+      // https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-block/
+      // https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-inline/
+      ignore: ["overflow-x", "overflow-y"],
+    }],
   },
 }
 
