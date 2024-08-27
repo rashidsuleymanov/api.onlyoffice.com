@@ -14,7 +14,7 @@ Creates a Uint8Array value, an analogue of *Uint8Array* in JS.
 
 **.Net**
 
-```cpp
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

@@ -8,7 +8,7 @@ Creates a null value, an analogue of *null* in JS.
 
 **.Net**
 
-```cpp
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

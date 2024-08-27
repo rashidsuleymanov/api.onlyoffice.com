@@ -15,7 +15,7 @@ Calls the specified Document Builder method. See the [Text document API](../../.
 
 **.Net**
 
-```cpp
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -28,6 +28,6 @@ CDocBuilder.Destroy();
 
 **.docbuilder**
 
-```js
+```ts
 const oDocument = Api.GetDocument()
 ```

@@ -8,7 +8,7 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 **Example**
 
-``` javascript
+``` ts
 import {Actions, type ICheckbox, type IMessage} from "@onlyoffice/docspace-plugin-sdk"
 
 const onChange = () => {

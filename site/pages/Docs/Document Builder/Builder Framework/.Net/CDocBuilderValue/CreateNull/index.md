@@ -8,7 +8,7 @@ Creates a null value. This method returns the current [context](../../CDocBuilde
 
 **.Net**
 
-```cpp
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

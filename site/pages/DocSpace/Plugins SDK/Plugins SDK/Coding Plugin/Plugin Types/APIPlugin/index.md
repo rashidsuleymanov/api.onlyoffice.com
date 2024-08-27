@@ -94,7 +94,7 @@ Get all the API parameters of the DocSpace portal in one request. Returns an obj
 
 **Example**
 
-``` javascript
+``` ts
 import {type IApiPlugin} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements IApiPlugin {

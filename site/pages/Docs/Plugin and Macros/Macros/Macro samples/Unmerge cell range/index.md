@@ -8,7 +8,7 @@ Unmerges the selected cell range.
 
 <!-- This code snippet is shown in the screenshot. -->
 <!-- eslint-skip -->
-``` javascript
+``` ts
 (function()
 {
     Api.GetActiveSheet().GetRange("C5:D10").UnMerge();

@@ -14,7 +14,7 @@ Creates an array value, an analogue of *new Array (length)* in JS.
 
 **.Net**
 
-```cpp
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

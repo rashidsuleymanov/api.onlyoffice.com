@@ -8,7 +8,7 @@ Completes the basic address data with detailed address information and inserts i
 
 <!-- This code snippet is shown in the screenshot. -->
 <!-- eslint-skip -->
-``` javascript
+``` ts
 // Macros structure:
 // Read Address (Cell A2) ->
 // REQUEST Data -> 

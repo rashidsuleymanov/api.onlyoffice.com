@@ -14,7 +14,7 @@ Returns a property of the **CDocBuilderValue** object.
 
 **.Net**
 
-```cpp
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -30,7 +30,7 @@ There are two more ways to get a property of the **CDocBuilderValue** object:
 
 1. use the **Get** method that takes an argument in the string format:
 
-   ```cpp
+   ```cs
    CDocBuilderValue^ Get(String^ name);
    ```
 
@@ -38,7 +38,7 @@ There are two more ways to get a property of the **CDocBuilderValue** object:
 
    **.Net**
 
-   ```cpp
+   ```cs
    string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
    CDocBuilder.Initialize(workDirectory);
    CDocBuilder oBuilder = new CDocBuilder();
@@ -52,7 +52,7 @@ There are two more ways to get a property of the **CDocBuilderValue** object:
 
 2. use the **default\[]** postfix expression that takes an argument in the string format:
 
-   ```cpp
+   ```cs
    property CDocBuilderValue^ default[String^]
    ```
 
@@ -60,7 +60,7 @@ There are two more ways to get a property of the **CDocBuilderValue** object:
 
    **.Net**
 
-   ```cpp
+   ```cs
    string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
    CDocBuilder.Initialize(workDirectory);
    CDocBuilder oBuilder = new CDocBuilder();

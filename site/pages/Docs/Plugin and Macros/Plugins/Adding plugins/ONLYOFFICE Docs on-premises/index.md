@@ -25,7 +25,7 @@ docker run -itd -p 80:80 -v /absolutly_path_to_work_dir:/var/www/onlyoffice/docu
 
 In [ONLYOFFICE Docs config](../../../../Docs%20API/Usage%20API/Config/Editor/Plugins/index.md), add the relative path to the *config.json* file of the created plugin to the *plugins.pluginsData* parameter:
 
-``` javascript
+``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", {
   editorConfig: {
     plugins: {
@@ -126,7 +126,7 @@ The path to the folder depends on the operating system you use:
 
 **Option 3.** Edit the [ONLYOFFICE Docs config](../../../../Docs%20API/Usage%20API/Config/Editor/Plugins/index.md) by removing the corresponding plugin. The plugin will become unavailable for all portal users upon the editor next start:
 
-``` javascript
+``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", {
   editorConfig: {
     plugins: {

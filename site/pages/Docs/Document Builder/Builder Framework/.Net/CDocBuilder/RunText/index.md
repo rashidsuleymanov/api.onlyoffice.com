@@ -14,7 +14,7 @@ Runs all the commands for the document creation using a single command. Compared
 
 **.Net**
 
-```csharp
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

@@ -26,13 +26,13 @@ The target HTML file where the editors are to be embedded need to have a placeho
 
 The page code containing the changeable parameters looks the following way:
 
-``` javascript
+``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", config)
 ```
 
 Where *config* is an object:
 
-``` javascript
+``` ts
 const config = {
   document: {
     fileType: "docx",

@@ -86,7 +86,7 @@ Example: "1.0.0"
 
 **Example**
 
-``` javascript
+``` ts
 const config = {
   author: "ONLYOFFICE",
   cspDomains: [

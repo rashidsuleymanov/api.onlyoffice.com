@@ -15,7 +15,7 @@ Executes the command which will be used to create the document file (text docume
 
 **.Net**
 
-```csharp
+``` cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -25,6 +25,6 @@ CDocBuilder.Destroy();
 
 **.docbuilder**
 
-```js
+``` ts
 oParagraph.AddText("Hello from .net!")
 ```

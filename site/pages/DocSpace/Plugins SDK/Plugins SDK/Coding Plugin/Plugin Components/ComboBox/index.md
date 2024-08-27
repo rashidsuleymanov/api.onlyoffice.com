@@ -10,7 +10,7 @@ To create a combo box option, use [IComboBoxItem](https://github.com/ONLYOFFICE/
 
 **Example**
 
-``` javascript
+``` ts
 import {Actions, type IComboBox, type IComboBoxItem, type IMessage} from "@onlyoffice/docspace-plugin-sdk"
 
 const options: IComboBoxItem[] = [

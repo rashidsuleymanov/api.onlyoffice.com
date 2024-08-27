@@ -10,7 +10,7 @@ You can debug any Document Builder [component](../../Get%20Started/Overview/inde
 
 2. Use the **debugger** command in your script:
 
-   ```js
+   ```ts
    debugger
    const oDocument = Api.GetDocument()
    const oParagraph = oDocument.GetElement(0)

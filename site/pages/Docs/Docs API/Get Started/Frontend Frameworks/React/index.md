@@ -34,7 +34,7 @@ This procedure creates a [basic React application](https://github.com/facebook/c
 
 4. Open the *./src/App.js* file in the *onlyoffice-react-demo* project and replace its contents with the following code:
 
-   ```jsx
+   ``` tsx
    import {DocumentEditor} from "@onlyoffice/document-editor-react"
    import React, {useRef} from "react"
    

@@ -14,7 +14,7 @@ You can embed the document with any appearance to your webpage, but it is more l
 
 That is why the *type* should be set to **embedded** and the configuration file will look like this:
 
-  ``` javascript
+  ``` ts
   const docEditor = new DocsAPI.DocEditor("placeholder", {
     type: "embedded",
   })
@@ -32,7 +32,7 @@ The embedded mode allows to display the document with only three control buttons
 
 - *editorConfig.embedded.shareUrl* is the absolute URL to the document which can be used by other users to share it with others.
 
-  ``` javascript
+  ``` ts
   const docEditor = new DocsAPI.DocEditor("placeholder", {
     editorConfig: {
       embedded: {

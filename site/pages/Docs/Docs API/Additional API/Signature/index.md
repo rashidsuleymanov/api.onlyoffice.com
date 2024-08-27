@@ -116,7 +116,7 @@ public static String CreateToken(Map payloadClaims)
 
 ### Node.js example
 
-``` javascript
+``` ts
 import config from "config"
 
 const configServer = config.get("server")

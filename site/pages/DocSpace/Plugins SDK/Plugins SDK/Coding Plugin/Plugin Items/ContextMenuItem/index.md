@@ -88,7 +88,7 @@ Example: true
 
 **Example**
 
-``` javascript
+``` ts
 import {FilesType, type IContextMenuItem, UsersType} from "@onlyoffice/docspace-plugin-sdk"
 
 export const convertFileItem: IContextMenuItem = {

@@ -15,7 +15,7 @@ Sets an array value by its index.
 
 **.Net**
 
-```cpp
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -34,7 +34,7 @@ CDocBuilder.Destroy();
 
 The **default\[]** postfix expression can be also used to set an array value by its index:
 
-```cpp
+```cs
 property CDocBuilderValue^ default[int]
 ```
 
@@ -42,7 +42,7 @@ property CDocBuilderValue^ default[int]
 
 **.Net**
 
-```cpp
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

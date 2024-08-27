@@ -42,7 +42,7 @@ After the editing is finished, the [document saving](../Saving%20file/index.md) 
 
 4. Add the script initializing the **Document Editor** for the *div* element with the configuration for the document you want to open. Be sure to add a [token](../Security/index.md) when using local links. Otherwise, an error will occur.
 
-   ``` javascript
+   ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {
      document: {
        fileType: "docx",

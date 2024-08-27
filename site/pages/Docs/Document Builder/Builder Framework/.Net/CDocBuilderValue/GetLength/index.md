@@ -8,7 +8,7 @@ Returns the length if the **CDocBuilderValue** object is an array/typed array. O
 
 **.Net**
 
-```cpp
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

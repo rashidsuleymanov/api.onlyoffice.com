@@ -24,6 +24,6 @@ oBuilder->Dispose();
 
 **.docbuilder**
 
-```js
+```ts
 builder.CreateFile("docx")
 ```

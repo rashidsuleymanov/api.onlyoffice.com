@@ -16,6 +16,6 @@ oBuilder->Dispose();
 
 **.docbuilder**
 
-```js
+```ts
 builder.CloseFile()
 ```

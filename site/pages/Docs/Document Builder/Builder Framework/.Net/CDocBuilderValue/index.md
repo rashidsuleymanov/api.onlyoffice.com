@@ -4,7 +4,7 @@ Class used by **ONLYOFFICE Document Builder** for getting the results of called 
 
 The **CDocBuilderValue** class can be created from the primitive data types:
 
-```cpp
+```cs
 CDocBuilderValue(bool value);
 CDocBuilderValue(int value);
 CDocBuilderValue(unsigned int value);

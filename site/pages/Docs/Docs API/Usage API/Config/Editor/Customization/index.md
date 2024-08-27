@@ -65,7 +65,7 @@ Adds a request for the anonymous name.
 Type: object
 
 **Example**:
-``` javascript
+``` ts
 const anonymous = {
   request: true,
   label: "Guest",
@@ -118,7 +118,7 @@ Type: object
 
 **Example**:
 
-``` javascript
+``` ts
 const close = {
   visible: true,
   text: "Close file",
@@ -205,7 +205,7 @@ Type: object
 
 **Example**:
 
-``` javascript
+``` ts
 const customer = {
   address: "My City, 123a-45",
   info: "Some additional information",
@@ -292,7 +292,7 @@ Type: object
 
 **Example**:
 
-``` javascript
+``` ts
 const features = {
   roles: true,
   spellcheck: {
@@ -380,7 +380,7 @@ Type:  object
 
 **Example**:
 
-``` javascript
+``` ts
 const font = {
   name: "Arial",
   size: "11px",
@@ -421,7 +421,7 @@ Type: object
 
 **Example**:
 
-``` javascript
+``` ts
 const goback = {
   blank: true,
   text: "Open file location",
@@ -527,7 +527,7 @@ Type:  object
 
 **Example**:
 
-``` javascript
+``` ts
 const layout = {
   header: {
     editMode: true,
@@ -579,7 +579,7 @@ Type: object
 
 **Example**:
 
-``` javascript
+``` ts
 const header = {
   editMode: true,
   save: true,
@@ -619,7 +619,7 @@ Type: object or boolean
 
 **Example**:
 
-``` javascript
+``` ts
 const leftMenu = {
   mode: true,
   navigation: true,
@@ -659,7 +659,7 @@ Type: object or boolean
 
 **Example**:
 
-``` javascript
+``` ts
 const rightMenu = {
   mode: true,
 }
@@ -681,7 +681,7 @@ Type: object or boolean
 
 **Example**:
 
-``` javascript
+``` ts
 const statusBar = {
   actionStatus: true,
   docLang: true,
@@ -721,7 +721,7 @@ Type: object or boolean
 
 **Example**:
 
-``` javascript
+``` ts
 const toolbar = {
   collaboration: {
     mailmerge: true,
@@ -753,7 +753,7 @@ Type: object or boolean
 
 **Example**:
 
-``` javascript
+``` ts
 const collaboration = {
   mailmerge: true,
 }
@@ -783,7 +783,7 @@ Type: object or boolean
 
 **Example**:
 
-``` javascript
+``` ts
 const file = {
   close: true,
   info: true,
@@ -888,7 +888,7 @@ Type: object or boolean
 
 **Example**:
 
-``` javascript
+``` ts
 const view = {
   navigation: true,
 }
@@ -944,7 +944,7 @@ Type: object
 
 **Example**:
 
-```  javascript
+``` ts
 const logo = {
   image: "https://example.com/logo.png",
   imageDark: "https://example.com/dark-logo.png",
@@ -1059,7 +1059,7 @@ Type: object
 
 **Example**:
 
-``` javascript
+``` ts
 const review = {
   hideReviewDisplay: false,
   showReviewChanges: false,
@@ -1290,7 +1290,7 @@ Example: 100
 
 ### Example
 
-``` javascript
+``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", {
   editorConfig: {
     customization: {

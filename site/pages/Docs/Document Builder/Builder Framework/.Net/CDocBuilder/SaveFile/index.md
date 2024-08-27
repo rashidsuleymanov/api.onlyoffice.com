@@ -14,7 +14,7 @@ Saves the file after all the changes are made. The type of the file which will b
 
 **.Net**
 
-```cpp
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 string resultPath = "result.docx";
 var doctype = (int)OfficeFileTypes.Document.DOCX;
@@ -26,7 +26,7 @@ CDocBuilder.Destroy();
 
 **.docbuilder**
 
-```js
+```ts
 builder.SaveFile("docx", "result.docx")
 ```
 
@@ -45,12 +45,12 @@ builder.SaveFile("docx", "result.docx")
 
 **.Net**
 
-```cpp
+```cs
 oBuilder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>");
 ```
 
 **.docbuilder**
 
-```js
+```ts
 builder.SaveFile("image", "./thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")
 ```

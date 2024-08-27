@@ -20,7 +20,7 @@ Type: object
 
 Example:
 
-``` javascript
+``` ts
 const item = {
   name: "Test",
   onClick: () => {},
@@ -93,7 +93,7 @@ Example: \[Devices.desktop]
 
 **Example**
 
-``` javascript
+``` ts
 import {FilesExst, FilesType, type IBox, type IComponent, type IInfoPanelItem, type IInfoPanelSubMenu} from "@onlyoffice/docspace-plugin-sdk"
 import {buttonBox} from "./Button"
 import {checkboxBox} from "./Checkbox"

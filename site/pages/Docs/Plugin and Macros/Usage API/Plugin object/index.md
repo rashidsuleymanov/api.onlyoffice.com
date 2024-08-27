@@ -16,7 +16,7 @@ If the plugin operates with an OLE object, window.Asc.plugin.callCommand method 
 
 Let's see how this is done in the *helloworld.js* plugin:
 
-``` javascript
+``` ts
 window.Asc.plugin.init = function init() {
   this.callCommand(() => {
     const oDocument = Api.GetDocument()

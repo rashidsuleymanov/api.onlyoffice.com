@@ -24,7 +24,7 @@ Example: "\*.docx \*.xlsx \*.pptx"
 
 **Example**
 
-``` js
+``` ts
 window.AscDesktopEditor.cloudCryptoCommand("upload", {
   cryptoEngineId: "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}",
   filter: "*.docx *.xlsx *.pptx",
@@ -33,7 +33,7 @@ window.AscDesktopEditor.cloudCryptoCommand("upload", {
 
 After the user chooses the files, they will be encrypted in a loop and transferred to *callback*:
 
-``` js
+``` ts
 callback({
   bytes: [],
   name: "Example Document Title.docx",
@@ -73,7 +73,7 @@ Example: \[{"userId":"78e1e841","publicKey":"yyy"}, ...]
 
 ### Example
 
-``` javascript
+``` ts
 window.AscDesktopEditor.cloudCryptoCommand("share", {
   cryptoEngineId: "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}",
   file: ["https://example.com/url-to-example-document.docx"],
@@ -86,7 +86,7 @@ window.AscDesktopEditor.cloudCryptoCommand("share", {
 
 The file is uploaded by the desktop app and encrypted. The access rights to the file are transferred to it with keys. After that, it is transmitted to *callback*:
 
-``` js
+``` ts
 callback({
   bytes: [],
   isCrypto: true,

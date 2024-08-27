@@ -19,6 +19,6 @@ builder.Run("path-to-script.docbuilder")
 
 **.docbuilder**
 
-```shell
+```sh
 docbuilder.exe mydocument.docbuilder
 ```

@@ -12,6 +12,6 @@ Displays a blank page with the loader. It allows you to call system methods.
 | ----------------------------------------------- | ----------------------------------------------- |
 | [initSystem](../../Methods/index.md#initsystem) | Initializes the SDK frame in the "system" mode. |
 
-``` javascript
+``` ts
 const docSpace = DocSpace.SDK.initSystem({config})
 ```

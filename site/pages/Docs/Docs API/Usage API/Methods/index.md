@@ -4,7 +4,7 @@ order: -3
 
 After initializing **document editor** you will get the object that can be used to call the methods.
 
-``` javascript
+``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", config)
 ```
 
@@ -35,7 +35,7 @@ Create the [connector](../Automation%20API/index.md) to interact with text docum
 
 > This parameter is available for editing only for ONLYOFFICE Developer Edition.
 
-  ``` javascript
+  ``` ts
   docEditor.createConnector()
   ```
 
@@ -43,7 +43,7 @@ Create the [connector](../Automation%20API/index.md) to interact with text docum
 
 Deny editing. This method can be called when you want to make the document editing unavailable.
 
-  ``` javascript
+  ``` ts
   docEditor.denyEditingRights(message)
   ```
 
@@ -55,7 +55,7 @@ Deny editing. This method can be called when you want to make the document editi
 
 Destroy *docEditor* object. This method can be called when you want to reinit document editor with another configurations. Used since version 4.3.
 
-  ``` javascript
+  ``` ts
   docEditor.destroyEditor()
   ```
 
@@ -63,7 +63,7 @@ Destroy *docEditor* object. This method can be called when you want to reinit do
 
 Download the edited file. This method can be called only when the existence of the [onDownloadAs](../Config/Events/index.md#ondownloadas) events. **Document editing service** asynchronously creates a document and triggers the **onDownloadAs** event with a link in parameter.
 
-  ``` javascript
+  ``` ts
   docEditor.downloadAs(format)
   ```
 
@@ -77,7 +77,7 @@ Download the edited file. This method can be called only when the existence of t
 
 Insert an image into the file. Starting from version 7.0, this method allows a user to insert several images. The *images* array is used to do it. This method must be called after the [onRequestInsertImage](../Config/Events/index.md#onrequestinsertimage) events.
 
-  ``` js
+  ``` ts
   docEditor.insertImage({
     c: "add",
     images: [
@@ -108,7 +108,7 @@ Where **example.com** is the name of the server where **document manager** and *
 
   > Prior to version 7.0, this method allowed to insert only one image and had the following parameters:
   >
-  > ``` javascript
+  > ``` ts
   > docEditor.insertImage({
   >   c: "add",
   >   fileType: "png",
@@ -122,7 +122,7 @@ Where **example.com** is the name of the server where **document manager** and *
 
 Show the document version history. This method must be called after the [onRequestHistory](../Config/Events/index.md#onrequesthistory) events.
 
-  ``` js
+  ``` ts
   docEditor.refreshHistory({
     currentVersion: 2,
     history: [
@@ -150,7 +150,7 @@ Show the document version history. This method must be called after the [onReque
 
 If after editing and saving the document the *history* with the object changes and server version is returned, send the object changes in the *changes* parameter and the server version in the *serverVersion* parameter.
 
-  ``` js
+  ``` ts
   docEditor.refreshHistory({
     currentVersion: 2,
     history: [
@@ -184,7 +184,7 @@ Where **serverVersion** is the *serverVersion* from [the history object](../Call
 
 Show an error message explaining why the version history cannot be displayed:
 
-  ``` js
+  ``` ts
   docEditor.refreshHistory({
     error: "Exception",
   })
@@ -208,7 +208,7 @@ Show an error message explaining why the version history cannot be displayed:
 
 Request to close the editor. It is recommended to call this method before the [destroyEditor](#destroyeditor) method to check if there is some unsaved data in the editor or not. If the unsaved data exists, then the dialog box will be displayed to ask the user whether they want to continue editing or close the editor losing all the unsaved data. If the *Close* option will be chosen, then the [onRequestClose](../Config/Events/index.md#onrequestclose) event will be called.
 
-  ``` javascript
+  ``` ts
   docEditor.requestClose()
   ```
 
@@ -216,7 +216,7 @@ Request to close the editor. It is recommended to call this method before the [d
 
 Set the link to the document which contains a bookmark. This method must be called after the [onMakeActionLink](../Config/Events/index.md#onmakeactionlink) event. The software integrator must process the *ACTION\_DATA* received from the **document editing service** to set the link. The link is created by the software integrators who use ONLYOFFICE Docs in their **document manager**.
 
-  ``` javascript
+  ``` ts
   docEditor.setActionLink(link)
   ```
 
@@ -228,7 +228,7 @@ Set the link to the document which contains a bookmark. This method must be call
 
 Change the *Favorite* icon state. This method must be called after the [onMetaChange](../Config/Events/index.md#onmetachange) event.
 
-  ``` javascript
+  ``` ts
   docEditor.setFavorite(favorite)
   ```
 
@@ -240,7 +240,7 @@ Change the *Favorite* icon state. This method must be called after the [onMetaCh
 
 Send the link to the document for viewing the version history. This method must be called after the [onRequestHistoryData](../Config/Events/index.md#onrequesthistorydata) events.
 
-  ``` js
+  ``` ts
   docEditor.setHistoryData({
     fileType: "docx",
     key: "Khirz6zTPdfd7",
@@ -254,7 +254,7 @@ Where **example.com** is the name of the server where **document manager** and *
 
 If after editing and saving the document the *changesurl* link to the file with changes data is returned, download the file by this link and send the file URL in the *changesUrl* parameter. The absolute URL address of the document previous version must be sent in the *previous.url* parameter.
 
-  ``` js
+  ``` ts
   docEditor.setHistoryData({
     changesUrl: "https://example.com/url-to-changes.zip",
     fileType: "docx",
@@ -274,7 +274,7 @@ Where **example.com** is the name of the server where **document manager** and *
 
 Send an error message explaining why the document version cannot be displayed:
 
-  ``` js
+  ``` ts
   docEditor.setHistoryData({
     error: "Exception",
     version: 2,
@@ -299,7 +299,7 @@ Send an error message explaining why the document version cannot be displayed:
 
 Insert recipient data for mail merge into the file. This method must be called after the [onRequestMailMergeRecipients](../Config/Events/index.md#onrequestmailmergerecipients) event. Deprecated since version 7.5, please use [setRequestedSpreadsheet](#setrequestedspreadsheet) instead.
 
-  ``` js
+  ``` ts
   docEditor.setMailMergeRecipients({
     fileType: "xlsx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXJlY2lwaWVudHMueGxzeCJ9.P3TjOyX1Tv3xAVRAc8qtNb-uFLD6FH_WErag_rbI6nQ",
@@ -323,7 +323,7 @@ Refresh data by a link to a file which is specified with the *referenceData*, *p
 
   > Please note that this method is executed only when the user has permissions to the file from which the data is taken.
 
-  ``` js
+  ``` ts
   docEditor.setReferenceData({
     fileType: "xlsx",
     path: "sample.xlsx",
@@ -341,7 +341,7 @@ Where the **example.com** is the name of the server where **document manager** a
 
 Show an error message explaining if any error occurred:
 
-  ``` js
+  ``` ts
   docEditor.setReferenceData({
     error: "Exception",
   })
@@ -362,7 +362,7 @@ Change a source of the external data. This method can be called after the [onReq
 
   > Please note that this method is executed only when the user has permissions to the file from which the data is taken.
 
-  ``` js
+  ``` ts
   docEditor.setReferenceSource({
     fileType: "xlsx",
     path: "sample.xlsx",
@@ -380,7 +380,7 @@ Where the **example.com** is the name of the server where **document manager** a
 
 Show an error message explaining if any error occurred:
 
-  ``` js
+  ``` ts
   docEditor.setReferenceSource({
     error: "Exception",
   })
@@ -401,7 +401,7 @@ Select a document for comparing or combining. This method must be called after t
 
 > This parameter is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
 
-  ``` js
+  ``` ts
   docEditor.setRequestedDocument({
     c: "compare",
     fileType: "docx",
@@ -423,7 +423,7 @@ Where **example.com** is the name of the server where **document manager** and *
 
 Insert recipient data for mail merge into the file. This method must be called after the [onRequestSelectSpreadsheet](../Config/Events/index.md#onrequestselectspreadsheet) event.
 
-  ``` js
+  ``` ts
   docEditor.setRequestedSpreadsheet({
     c: "mailmerge",
     fileType: "xlsx",
@@ -447,7 +447,7 @@ Select a document for comparing. This method must be called after the [onRequest
 
 > This parameter is available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition.
 
-  ``` js
+  ``` ts
   docEditor.setRevisedFile({
     fileType: "docx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
@@ -467,7 +467,7 @@ Where **example.com** is the name of the server where **document manager** and *
 
 Update the [information](../Config/Document/Info/index.md#sharingsettings) about the settings which allow to share the document with other users. This method can be called after the [onRequestSharingSettings](../Config/Events/index.md#onrequestsharingsettings) events.
 
-  ``` js
+  ``` ts
   docEditor.setSharingSettings({
     sharingSettings: [
       {
@@ -493,7 +493,7 @@ Update the [information](../Config/Document/Info/index.md#sharingsettings) about
 
 Set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. This method must be called after the [onRequestUsers](../Config/Events/index.md#onrequestusers) events.
 
-  ``` js
+  ``` ts
   docEditor.setUsers({
     c: "protect",
     users: [
@@ -532,7 +532,7 @@ Where **example.com** is the name of the server where **document manager** and *
 
 Display a tooltip with a message. This method can be called only after the [onAppReady](../Config/Events/index.md#onappready) events.
 
-  ``` javascript
+  ``` ts
   docEditor.showMessage(message)
   ```
 
@@ -546,6 +546,6 @@ Display a tooltip with a message. This method can be called only after the [onAp
 
 Start filling out the ready forms and lock the pdf editing (only pdf viewing becomes available). This method can be called only after the [onRequestStartFilling](../Config/Events/index.md#onrequeststartfilling) event.
 
-  ``` javascript
+  ``` ts
   docEditor.startFilling()
   ```

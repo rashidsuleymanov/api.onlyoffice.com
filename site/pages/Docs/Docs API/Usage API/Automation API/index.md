@@ -6,7 +6,7 @@ order: -2
 
 To create the connector, use the [createConnector](../Methods/index.md#createconnector) method of the **document editor** object:
 
-``` javascript
+``` ts
 const connector = docEditor.createConnector()
 ```
 
@@ -49,7 +49,7 @@ The function called to add an item to the context menu.
 
 **Example**
 
-  ``` javascript
+  ``` ts
   const items = [
     {
       id: "onConvert",
@@ -104,7 +104,7 @@ The function called to add an item to the toolbar menu.
 
 **Example**
 
-  ``` javascript
+  ``` ts
   const oToolbarMenuItem = {
     id: "MeaningItem",
     type: "button",
@@ -162,7 +162,7 @@ The function called to add an event listener, a function that will be called whe
 
 **Example**
 
-  ``` javascript
+  ``` ts
   connector.attachEvent("onChangeContentControl", () => {
     console.log("event: onChangeContentControl")
   })
@@ -186,7 +186,7 @@ This method is executed in its context isolated from other JavaScript data. If s
 
 **Example**
 
-  ``` javascript
+  ``` ts
   Asc.scope.text = "Hello world!"
   
   connector.callCommand(() => {
@@ -205,7 +205,7 @@ The function called to connect the connector to the editor.
 
 **Example**
 
-  ``` js
+  ``` ts
   connector.connect()
   ```
 
@@ -221,7 +221,7 @@ The function called to remove an event listener.
 
 **Example**
 
-  ``` javascript
+  ``` ts
   connector.detachEvent("onChangeContentControl")
   ```
 
@@ -231,7 +231,7 @@ The function called to disconnect the connector from the editor.
 
 **Example**
 
-  ``` js
+  ``` ts
   connector.disconnect()
   ```
 
@@ -249,7 +249,7 @@ The function called to execute certain editor methods using the connector. The f
 
 **Example**
 
-  ``` javascript
+  ``` ts
   connector.executeMethod("SetFormValue", [forms[i]["InternalId"], "OnlyOffice BANK"], null)
   ```
 
@@ -276,7 +276,7 @@ The function called to update an item in the context menu with the specified ite
 
 **Example**
 
-  ``` javascript
+  ``` ts
   const items = [
     {
       id: "onConvert",

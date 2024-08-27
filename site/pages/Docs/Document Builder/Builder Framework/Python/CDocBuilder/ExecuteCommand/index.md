@@ -22,6 +22,6 @@ builder.ExecuteCommand(L"oParagraph.AddText(\"Hello from Python!\");");
 
 **.docbuilder**
 
-```js
+```ts
 oParagraph.AddText("Hello, world!")
 ```

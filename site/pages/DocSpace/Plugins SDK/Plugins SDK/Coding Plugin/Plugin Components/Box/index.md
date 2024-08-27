@@ -20,7 +20,7 @@ To set borders to the Box component, use a stroke or the [IBorderProp](https://g
 
 **Example**
 
-``` javascript
+``` ts
 import {Components, type IBox, type IInput, type InputGroup} from "@onlyoffice/docspace-plugin-sdk"
 
 const nameInputProps: IInput = {

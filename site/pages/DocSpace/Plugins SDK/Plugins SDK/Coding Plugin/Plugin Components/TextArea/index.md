@@ -10,7 +10,7 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 ### Example
 
-``` javascript
+``` ts
 import {Actions, type IMessage, type ITextArea} from "@onlyoffice/docspace-plugin-sdk"
 
 const onChange = (value: string) => {

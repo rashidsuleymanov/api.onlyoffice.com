@@ -30,7 +30,7 @@ Example: `https://example.com/plugins/`
 
 ### Example
 
-``` javascript
+``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", {
   editorConfig: {
     plugins: {

@@ -4,7 +4,7 @@ Modal dialog for creating certain item (file, folder, etc.). The user gets the f
 
 **Example**
 
-``` js
+``` ts
 const createDialogProps = {
   title: "Create diagram",
   startValue: "New diagram",

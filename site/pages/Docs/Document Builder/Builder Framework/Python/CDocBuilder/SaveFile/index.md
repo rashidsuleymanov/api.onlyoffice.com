@@ -22,7 +22,7 @@ builder.SaveFile("docx", dstPath)
 
 **.docbuilder**
 
-```js
+```ts
 builder.SaveFile("docx", "result.docx")
 ```
 
@@ -47,6 +47,6 @@ builder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "<m_oThumbnail><form
 
 **.docbuilder**
 
-```js
+```ts
 builder.SaveFile("image", "./thumbnail.png", "<m_oThumbnail><format>4</format><aspect>1</aspect><first>false</first><width>1000</width><height>1000</height></m_oThumbnail>")
 ```

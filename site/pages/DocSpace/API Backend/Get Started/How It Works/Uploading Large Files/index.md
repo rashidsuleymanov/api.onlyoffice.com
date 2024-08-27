@@ -74,7 +74,7 @@ After the last chunk is uploaded, the server returns an object in the following 
 
 Below you can see an example in Node.js:
 
-``` js
+``` ts
 const fileResponse = await fetch("url_to_file")
 const data = await fileResponse.arrayBuffer()
 const size = fileResponse.headers.get("content-length")

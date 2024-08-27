@@ -25,7 +25,7 @@ The reference figure and the steps below explain the process of viewing the hist
 
 2. Specify the event handler for opening the [version history](../../../Usage%20API/Config/Events/index.md#onrequesthistory) list in the configuration script for Document Editor initialization. When the [onRequestHistory](../../../Usage%20API/Config/Events/index.md#onrequesthistory) event is called, the [refreshHistory](../../../Usage%20API/Methods/index.md#refreshhistory) method must be executed. This method contains document history for each document version, if the history parameter has been present for each version.
 
-   ``` javascript
+   ``` ts
    function onRequestHistory() {
      docEditor.refreshHistory({
        currentVersion: 2,
@@ -65,7 +65,7 @@ The reference figure and the steps below explain the process of viewing the hist
 
    When calling the *setHistoryData* method to view the document history version, the token must be added to validate the parameters.
 
-   ``` javascript
+   ``` ts
    function onRequestHistoryData(event) {
      const version = event.data
      docEditor.setHistoryData({
@@ -88,7 +88,7 @@ The reference figure and the steps below explain the process of viewing the hist
 
 4. In the configuration script for Document Editor initialization, specify the event handler which will [restore](../../../Usage%20API/Config/Events/index.md#onrequestrestore) the file version when the user clicks the *Restore* button in the version history. When the [onRequestRestore](../../../Usage%20API/Config/Events/index.md#onrequestrestore) event is called, the [refreshHistory](../../../Usage%20API/Methods/index.md#refreshhistory) method must be executed to initialize version history again. This method contains document history for each document version, if the history parameter has been present for each version.
 
-   ``` javascript
+   ``` ts
    function onRequestRestore(event) {
      const fileType = event.data.fileType
      const url = event.data.url
@@ -136,7 +136,7 @@ The reference figure and the steps below explain the process of viewing the hist
 
 7. Specify the event handler for the *Close History* button to be displayed in the configuration script for Document Editor initialization. When the user is trying to go back to the document from viewing the document version history by clicking the *Close History* button, the [onRequestHistoryClose](../../../Usage%20API/Config/Events/index.md#onrequesthistoryclose) event is called and the version history list is hidden. When the function is called, the editor must be initialized again, in the editing mode.
 
-   ``` javascript
+   ``` ts
    function onRequestHistoryClose() {
      document.location.reload()
    }
@@ -158,7 +158,7 @@ If the document version was created with the **document editor**, then the docum
 
 - [history](../../../Usage%20API/Callback%20handler/index.md#history) - this information allows to display the time and the author for each document version when you view the document history in the side panel. Must be sent as a property changes of the object sent as the argument to the [refreshHistory](../../../Usage%20API/Methods/index.md#refreshhistory) method.
 
-  ``` js
+  ``` ts
   docEditor.refreshHistory({
     currentVersion: 2,
     history: [
@@ -196,7 +196,7 @@ If the document version was created with the **document editor**, then the docum
 
   When calling the *setHistoryData* method to view the document history version, the token must be added to validate the parameters.
 
-  ``` js
+  ``` ts
   docEditor.setHistoryData({
     changesUrl: "https://example.com/url-to-changes.zip",
     fileType: "docx",

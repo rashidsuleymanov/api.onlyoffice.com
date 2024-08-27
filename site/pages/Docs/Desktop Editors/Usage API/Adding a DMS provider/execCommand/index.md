@@ -4,7 +4,7 @@ order: -6
 
 Use the **execCommand** method of the *window\.AscDesktopEditor* object to execute a command specified in the request.
 
-``` javascript
+``` ts
 window.AscDesktopEditor.execCommand(command, parameters)
 ```
 

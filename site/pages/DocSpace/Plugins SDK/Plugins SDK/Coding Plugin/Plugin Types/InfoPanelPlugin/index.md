@@ -42,7 +42,7 @@ Update the info panel item.
 
 **Example**
 
-``` typescript
+``` ts
 import {type IInfoPanelItem, type IInfoPanelPlugin} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements IInfoPanelPlugin {

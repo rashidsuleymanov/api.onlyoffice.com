@@ -12,7 +12,7 @@ Now that you know how macros work, try to write your own macro. We have a table 
 
 <!-- This code is related to macros. -->
 <!-- eslint-skip -->
-   ``` javascript
+   ``` ts
    (function () {
      // ... your code goes here ...
    })()
@@ -22,13 +22,13 @@ Now that you know how macros work, try to write your own macro. We have a table 
 
    - First, get the current worksheet using the GetActiveSheet method:
 
-     ``` javascript
+     ``` ts
      const oWorksheet = Api.GetActiveSheet()
      ```
 
    - Then create a loop to run from the first to the last row:
 
-     ``` javascript
+     ``` ts
      for (let i = 1; i < 200; i += 2) {
        // TODO: Implement functionality here
      }
@@ -36,20 +36,20 @@ Now that you know how macros work, try to write your own macro. We have a table 
 
    - Set two variables: one for odd rows, the second for even rows:
 
-     ``` javascript
+     ``` ts
      const rowOdd = i
      const rowEven = i + 1
      ```
 
    - Now that we can access both the odd and even rows, let's color them in proper colors. Set the desired colors using the CreateColorFromRGB method. Get the cell range within the row using the GetRange method and set the color for the odd rows:
 
-     ``` javascript
+     ``` ts
      oWorksheet.GetRange(`A${rowOdd}:S${rowOdd}`).SetFillColor(Api.CreateColorFromRGB(138, 181, 155))
      ```
 
      The same is for the even rows, but with a different color:
 
-     ``` javascript
+     ``` ts
      oWorksheet.GetRange(`A${rowEven}:S${rowEven}`).SetFillColor(Api.CreateColorFromRGB(216, 227, 220))
      ```
 
@@ -57,7 +57,7 @@ Now let's sum it up with the complete script code:
 
 <!-- This code is related to macros. -->
 <!-- eslint-skip -->
-``` javascript
+``` ts
 (function()
 {
     var oWorksheet = Api.GetActiveSheet();
@@ -79,7 +79,7 @@ To subscribe to the specified event and call the callback function when the even
 
 For example, to subscribe to an event when a hyperlink in a document is clicked, use the following lines:
 
-``` javascript
+``` ts
 Api.attachEvent("asc_onHyperlinkClick", () => {
   console.log("HYPERLINK!!!")
 })

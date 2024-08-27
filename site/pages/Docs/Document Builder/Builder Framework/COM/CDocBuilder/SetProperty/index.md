@@ -45,7 +45,7 @@ oBuilder->Dispose();
 
 **.docbuilder**
 
-```shell
+```sh
 docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder;
 ```
 
@@ -67,6 +67,6 @@ oBuilder->Dispose();
 
 **.docbuilder**
 
-```shell
+```sh
 docbuilder.exe "--check-fonts=true" test.docbuilder
 ```

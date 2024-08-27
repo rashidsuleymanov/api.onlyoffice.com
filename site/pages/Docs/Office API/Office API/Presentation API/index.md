@@ -14,7 +14,7 @@ The text cannot be placed directly to the *slide*, it can be only grouped to *pa
 
 The simplest example presentation with a single slide without any objects can be built with the help of **ONLYOFFICE Document Builder** using the following code:
 
-``` js
+``` ts
 // create a presentation file in the .pptx format with ONLYOFFICE Document Builder
 builder.CreateFile("pptx")
 
@@ -38,7 +38,7 @@ builder.CloseFile()
 
 If you want to edit an already existing presentation, you can open it using **ONLYOFFICE Document Builder**, get its elements and change them however you need. The only difference from a presentation editor in this case will be that you will not need this presentation editor. The presentation is opened the following way:
 
-``` js
+``` ts
 // use a path to an existing 'mypresentation.pptx' presentation file to open it with ONLYOFFICE Document Builder
 builder.OpenFile("https://example.com/mypresentation.pptx")
 

@@ -13,6 +13,6 @@ builder.CloseFile()
 
 **.docbuilder**
 
-``` js
+``` ts
 builder.CloseFile()
 ```

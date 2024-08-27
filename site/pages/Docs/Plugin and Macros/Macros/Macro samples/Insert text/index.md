@@ -8,7 +8,7 @@ Inserts text into the document at the current cursor position.
 
 <!-- This code snippet is shown in the screenshot. -->
 <!-- eslint-skip -->
-``` javascript
+``` ts
 (function()
 {
     var oDocument = Api.GetDocument();

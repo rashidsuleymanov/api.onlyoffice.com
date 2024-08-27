@@ -45,7 +45,7 @@ CDocBuilder::Dispose();
 
 **.docbuilder**
 
-```shell
+```sh
 docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
 ```
 
@@ -67,6 +67,6 @@ CDocBuilder::Dispose();
 
 **.docbuilder**
 
-```shell
+```sh
 docbuilder.exe "--check-fonts=true" test.docbuilder
 ```

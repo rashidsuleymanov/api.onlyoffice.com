@@ -84,7 +84,7 @@ Example: "78e1e841"
 
 **Example**
 
-``` js
+``` ts
 const params = {
   displayName: "John Smith",
   email: "john@example.com",
@@ -118,7 +118,7 @@ Example: `https://exampledomain.com`
 
 ### Example
 
-``` javascript
+``` ts
 window.AscDesktopEditor.execCommand("portal:logout", JSON.stringify({
   domain: "https://exampledomain.com",
 }))

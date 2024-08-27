@@ -12,7 +12,7 @@ So the implementation of the document version history display should look like t
 
 1. The callback handler receives the data in the response from the **document editing service** with *status* **2** (which means that the all the users of the document closed it and the current version has been compiled). This response will look something like this:
 
-``` javascript
+``` ts
 const data = {
   key: "2745492410",
   status: 2,
@@ -29,7 +29,7 @@ const data = {
 
 3. The configuration file must have the following sections present: *events.onRequestHistory* and the *onRequestHistory* function itself:
 
-     ``` javascript
+     ``` ts
      function onRequestHistory() {
        docEditor.refreshHistory({
          currentVersion: 2,
@@ -88,7 +88,7 @@ In addition to the actions described in the [above question](#which-methods-can-
 
 - Parse the *changesurl* parameter from the **document editing service** received response with *status* **2**:
 
-``` javascript
+``` ts
 const config = {
   changesurl: "https://documentserver/url-to-changes.zip",
   key: "2745492410",
@@ -103,7 +103,7 @@ const config = {
 ```
   * Add the *onRequestHistoryData* function to the configuration file together with the *setHistoryData* method and *events.onRequestHistoryData* event:
 
-    ``` javascript
+    ``` ts
     function onRequestHistoryData(event) {
       const version = event.data
       docEditor.setHistoryData({

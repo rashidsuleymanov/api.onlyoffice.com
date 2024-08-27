@@ -17,7 +17,7 @@ The reference figure and the steps below explain the process of setting the avat
 
 2. To set the current user avatar, use the [editorConfig.user.image](../../../Usage%20API/Config/Editor/index.md#user) field of the initialization config:
 
-   ``` javascript
+   ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {
      editorConfig: {
        user: {
@@ -36,7 +36,7 @@ The reference figure and the steps below explain the process of setting the avat
 
     <img alt="Co-editors avatars" src="/assets/images/editor/avatars-coediting.png" width="298px">
 
-    ``` javascript
+    ``` ts
     function onRequestUsers(event) {
       const c = event.data.c
       const id = event.data.id
@@ -51,7 +51,7 @@ The reference figure and the steps below explain the process of setting the avat
 
 4. In order to set the users' avatars, the [setUsers](../../../Usage%20API/Methods/index.md#setUsers) method must be called:
 
-    ``` javascript
+    ``` ts
     docEditor.setUsers({
       c: "info",
       users: [

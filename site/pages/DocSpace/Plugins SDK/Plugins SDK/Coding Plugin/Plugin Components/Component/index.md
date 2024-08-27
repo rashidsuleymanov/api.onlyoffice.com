@@ -14,7 +14,7 @@ Example: "acceptButton"
 
 ### Example
 
-``` javascript
+``` ts
 import {Actions, type ButtonGroup, ButtonSize, Components, type IButton, type IMessage, ToastType} from "@onlyoffice/docspace-plugin-sdk"
 
 const onClick = () => {

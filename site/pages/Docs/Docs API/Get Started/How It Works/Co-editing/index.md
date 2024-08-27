@@ -34,7 +34,7 @@ The reference figure and the steps below explain the process of co-editing a doc
 
 4. Add the script initializing the **Document Editor** for the *div* element with the configuration for the document you want to open. Be sure to add a [token](../../../Additional%20API/Signature/index.md) when using local links. Otherwise, an error will occur.
 
-  ``` javascript
+  ``` ts
   const docEditor = DocsAPI.DocEditor("placeholder", {
     document: {
       fileType: "docx",
@@ -61,7 +61,7 @@ The reference figure and the steps below explain the process of co-editing a doc
 
 7. Change the script initializing the **Document Editor** in the copied *html* file.
 
-   ``` javascript
+   ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {
      document: {
        fileType: "docx",
@@ -104,7 +104,7 @@ If the user saves the document before the editing is finished (the *status* valu
 
    Close the **Document Editor**.
 
-   ``` javascript
+   ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {
      document: {
        fileType: "docx",
@@ -121,7 +121,7 @@ If the user saves the document before the editing is finished (the *status* valu
 
 2. Add the script initializing the **Document Editor** with the same *key 1*. The new URL is not used because the key is known and the document is reopened from the editor cache.
 
-   ``` javascript
+   ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {
      document: {
        fileType: "docx",
@@ -140,7 +140,7 @@ If the user saves the document before the editing is finished (the *status* valu
 
    Close the **Document Editor**.
 
-   ``` javascript
+   ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {
      document: {
        fileType: "docx",
@@ -159,7 +159,7 @@ If the user saves the document before the editing is finished (the *status* valu
 
    Get the current document state without closing the document. The [forcesave](../../../Usage%20API/Config/Editor/Customization/index.md#forcesave) parameter allows you to do it in the customization section of the editor initialization.
 
-   ``` javascript
+   ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {
      document: {
        fileType: "docx",
@@ -183,7 +183,7 @@ If the user saves the document before the editing is finished (the *status* valu
 
    Close all the three editing sessions with *key 1*. All changes are successfully saved. As the document is saved, the key must be generated anew.
 
-   ``` javascript
+   ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {
      document: {
        fileType: "docx",
@@ -203,7 +203,7 @@ If the user saves the document before the editing is finished (the *status* valu
 
 6. Add the script initializing the **Document Editor** for viewing the document created. *Key 1* can be used.
 
-   ``` javascript
+   ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {
      document: {
        fileType: "docx",
@@ -225,7 +225,7 @@ If the user saves the document before the editing is finished (the *status* valu
 
    Close the **Document Editor**.
 
-   ``` javascript
+   ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {
      document: {
        fileType: "docx",
@@ -249,7 +249,7 @@ There are two modes to collaborate on documents in real time - **Fast** and **St
 
 You can change the co-editing mode using the [editorConfig.coEditing](../../../Usage%20API/Config/Editor/index.md#coediting) parameter:
 
-``` javascript
+``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", {
   editorConfig: {
     coEditing: {

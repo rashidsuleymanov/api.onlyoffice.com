@@ -48,7 +48,7 @@ CreateAuthToken() {
 
 **Node.js generating token example**
 
-``` javascript
+``` ts
 import crypto from "node:crypto"
 import moment from "moment"
 

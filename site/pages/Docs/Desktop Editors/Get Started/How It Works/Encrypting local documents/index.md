@@ -49,7 +49,7 @@ All the config parameters are described in the [documentation](../../../../Plugi
 
 After the config file is ready, create the plugin code file with the following contents:
 
-``` javascript
+``` ts
 const globalPassword = "{my-super-long-password}"
 window.Asc.plugin.init = function init(obj) {
   if (!obj) {
@@ -136,7 +136,7 @@ With it, we will get a new tab called **Encryption** on the main app page:
 
 Enable encryption by ticking the checkbox:
 
-``` javascript
+``` ts
 window.addEventListener("load", () => {
   const ASC_DESKTOP_EDITOR_DEFAULT_MODE = 0
   const ASC_DESKTOP_EDITOR_CRYPTO_MODE = 2

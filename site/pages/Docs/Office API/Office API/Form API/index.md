@@ -8,7 +8,7 @@ To save the ready document as a form, you need to use the [SaveFile](../../../Do
 
 The simplest example form document with a single text form containing the "John Smith" text can be built with the help of **ONLYOFFICE Document Builder** using the following code:
 
-``` js
+``` ts
 // create a form document file in the .pdf format with ONLYOFFICE Document Builder
 builder.CreateFile("pdf")
 
@@ -38,7 +38,7 @@ builder.CloseFile()
 
 If you want to edit an already existing form document, you can open it using **ONLYOFFICE Document Builder**, get its elements and change them however you need. The only difference from a document editor in this case will be that you will not need this document editor. The document is opened the following way:
 
-``` js
+``` ts
 // use a path to an existing 'myformdocument.pdf' form document file to open it with ONLYOFFICE Document Builder
 builder.OpenFile("https://example.com/myformdocument.pdf")
 

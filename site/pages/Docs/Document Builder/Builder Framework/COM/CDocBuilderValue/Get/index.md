@@ -36,7 +36,7 @@ oBuilder->Dispose();
 
 **.docbuilder**
 
-```js
+```ts
 const oDocument = Api.GetDocument()
 const aCharts = oDocument.GetAllCharts()
 const oChart = aCharts[1]

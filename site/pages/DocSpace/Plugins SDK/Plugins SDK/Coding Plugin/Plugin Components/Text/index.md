@@ -20,7 +20,7 @@ Example: "Sample for text component"
 
 ### Example
 
-``` javascript
+``` ts
 import {type IText} from "@onlyoffice/docspace-plugin-sdk"
 
 const text: IText = {

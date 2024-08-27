@@ -27,7 +27,7 @@ Sets an argument to the builder class which can be trasferred to the program out
 
 Once added, the argument will be available as the **Argument** variable with its parameter values set:
 
-```cpp
+```cs
 Argument.name === "ONLYOFFICE" // true
 ```
 
@@ -35,7 +35,7 @@ Argument.name === "ONLYOFFICE" // true
 
 **.Net**
 
-```cpp
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -45,7 +45,7 @@ CDocBuilder.Destroy();
 
 **.docbuilder**
 
-```shell
+```sh
 docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
 ```
 
@@ -57,7 +57,7 @@ It is also possible to update the font list when you either add new fonts or rem
 
 **.Net**
 
-```c#
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -67,6 +67,6 @@ CDocBuilder.Destroy();
 
 **.docbuilder**
 
-```shell
+```sh
 docbuilder.exe "--check-fonts=true" test.docbuilder
 ```

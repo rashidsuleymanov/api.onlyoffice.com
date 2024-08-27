@@ -64,7 +64,7 @@ Example: \[createItem]
 
 **Example**
 
-``` javascript
+``` ts
 import {type IMainButtonItem} from "@onlyoffice/docspace-plugin-sdk"
 
 const createItem: IMainButtonItem = {

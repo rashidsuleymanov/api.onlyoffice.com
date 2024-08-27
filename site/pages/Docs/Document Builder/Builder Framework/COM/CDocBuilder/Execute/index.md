@@ -26,6 +26,6 @@ oBuilder->Dispose();
 
 **.docbuilder**
 
-```js
+```ts
 oParagraph.AddText("Hello, world!")
 ```

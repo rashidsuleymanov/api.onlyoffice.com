@@ -288,7 +288,7 @@ Example: "John Smith"
 
 ### Example
 
-``` javascript
+``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", {
   editorConfig: {
     actionLink: "ACTION_DATA",

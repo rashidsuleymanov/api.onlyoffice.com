@@ -21,7 +21,7 @@ The reference figure and the steps below explain the process of renaming a docum
 
    <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png" width="282px">
 
-   ``` javascript
+   ``` ts
    function onRequestRename(event) {
      const title = event.data
    }
@@ -47,7 +47,7 @@ The reference figure and the steps below explain the process of renaming a docum
 
 4. When the name of the document is changed via the [meta](../../../Additional%20API/Command%20service/meta/index.md) command, the [onMetaChange](../../../Usage%20API/Config/Events/index.md#onmetachange) event must be called in the document editor of each user. This event sends the name of the document in the *data.title* parameter.
 
-   ``` javascript
+   ``` ts
    function onMetaChange(event) {
      const title = event.data.title
    }

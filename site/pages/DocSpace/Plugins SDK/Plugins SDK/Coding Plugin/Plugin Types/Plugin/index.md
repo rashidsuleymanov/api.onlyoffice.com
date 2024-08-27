@@ -52,7 +52,7 @@ Sets the [onLoadCallback](#onloadcallback) variable to the plugin.
 
 **Example**
 
-``` typescript
+``` ts
 import {type IPlugin, PluginStatus} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements IPlugin {

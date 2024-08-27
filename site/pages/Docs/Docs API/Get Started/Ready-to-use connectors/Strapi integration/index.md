@@ -20,7 +20,7 @@ To start using ONLYOFFICE Docs with Strapi, follow these steps:
 
    To allow inserting a frame with the editor and loading *api.js*, replace the *strapi::security* line in this file with the following:
 
-``` js
+``` ts
 const config = {
   name: "strapi::security",
   config: {

@@ -46,7 +46,7 @@ Example: "top"
 
 ### Example
 
-``` javascript
+``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", {
   editorConfig: {
     embedded: {

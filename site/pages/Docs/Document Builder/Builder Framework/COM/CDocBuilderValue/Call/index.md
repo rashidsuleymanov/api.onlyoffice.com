@@ -33,6 +33,6 @@ oBuilder->Dispose();
 
 **.docbuilder**
 
-```js
+```ts
 const oDocument = Api.GetDocument()
 ```

@@ -42,7 +42,7 @@ Update the profile menu item.
 
 **Example**
 
-``` typescript
+``` ts
 import {type IProfileMenuItemIProfileMenuPlugin, type IProfileMenuPlugin} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements IProfileMenuPlugin {

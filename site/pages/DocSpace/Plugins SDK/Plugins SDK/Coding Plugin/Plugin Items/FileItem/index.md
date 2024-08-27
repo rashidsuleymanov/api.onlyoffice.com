@@ -62,7 +62,7 @@ Example: "drawio-96.svg"
 
 **Example**
 
-``` javascript
+``` ts
 import {type File, type IFileItem} from "@onlyoffice/docspace-plugin-sdk"
 
 export const drawIoItem: IFileItem = {

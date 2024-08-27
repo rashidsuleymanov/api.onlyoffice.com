@@ -42,7 +42,7 @@ The function called when the application is loaded into the browser.
 
 **Example**
 
-``` javascript
+``` ts
 function onAppReady() {
   console.log("ONLYOFFICE Document Editor is ready")
 }
@@ -60,7 +60,7 @@ The function called when the document is co-edited by the other user in the *str
 
 **Example**
 
-``` javascript
+``` ts
 function onCollaborativeChanges() {
   console.log("The document changed by collaborative user")
 }
@@ -78,7 +78,7 @@ The function called when the document is loaded into the document editor.
 
 **Example**
 
-``` javascript
+``` ts
 function onDocumentReady() {
   console.log("Document is loaded")
 }
@@ -96,7 +96,7 @@ The function called when the document is modified. It is called with the paramet
 
 **Example**
 
-``` javascript
+``` ts
 function onDocumentStateChange(event) {
   if (event.data) {
     console.log("The document changed")
@@ -118,7 +118,7 @@ The function called with the absolute URL to the edited file when the [downloadA
 
 **Example**
 
-``` javascript
+``` ts
 function onDownloadAs(event) {
   const fileType = event.data.fileType
   const url = event.data.url
@@ -138,7 +138,7 @@ The function called when an error or some other specific event occurs. The error
 
 **Example**
 
-``` javascript
+``` ts
 function onError(event) {
   console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`)
 }
@@ -156,7 +156,7 @@ The function called when the application opened the file. The mode is sent in th
 
 **Example**
 
-``` javascript
+``` ts
 function onInfo(event) {
   console.log(`ONLYOFFICE Document Editor is opened in mode ${event.data.mode}`)
 }
@@ -178,7 +178,7 @@ To set the bookmark link, you must call the [setActionLink](../../Methods/index.
 
 **Example**
 
-``` javascript
+``` ts
 function onMakeActionLink(event) {
   const ACTION_DATA = event.data
   const link = GENERATE_LINK(ACTION_DATA)
@@ -202,7 +202,7 @@ When the user clicks the *Favorite* icon, the [setFavorite](../../Methods/index.
 
 **Example**
 
-``` javascript
+``` ts
 function onMetaChange(event) {
   const title = event.data.title
   const favorite = event.data.favorite
@@ -221,7 +221,7 @@ The function called after the [error](../../../More%20Information/Troubleshootin
 
 **Example**
 
-``` javascript
+``` ts
 function onOutdatedVersion() {
   location.reload(true)
 }
@@ -239,7 +239,7 @@ Tthe function called when all plugins are loaded and can be used.
 
 **Example**
 
-``` javascript
+``` ts
 function onPluginsReady() {}
 
 const docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -259,7 +259,7 @@ The function called when the user is trying to end the work with the editor and 
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestClose() {
   if (window.opener) {
     window.close()
@@ -287,7 +287,7 @@ The function called when the user is trying to create document by clicking the *
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestCreateNew() {}
 
 const docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -308,7 +308,7 @@ The function called when the user is trying to switch the document from the view
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestEditRights() {
   console.log("ONLYOFFICE Document Editor requests editing rights")
   document.location.reload()
@@ -331,7 +331,7 @@ To show the document version history you must call the [refreshHistory](../../Me
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestHistory() {
   docEditor.refreshHistory({
     currentVersion: 2,
@@ -379,7 +379,7 @@ The function called when the user is trying to go back to the document from view
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestHistoryClose() {
   document.location.reload()
 }
@@ -403,7 +403,7 @@ To show the changes corresponding to the specific document version you must call
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestHistoryData(event) {
   const version = event.data
   docEditor.setHistoryData({
@@ -444,7 +444,7 @@ To insert an image into the file you must call the [insertImage](../../Methods/i
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestInsertImage(event) {
   docEditor.insertImage({
     c: event.data.c,
@@ -487,7 +487,7 @@ An object with the unique file data, the file path, and a new browser tab name a
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestOpen(event) {
   const path = event.data.path
   const referenceData = event.data.referenceData
@@ -523,7 +523,7 @@ To refresh data by a link to a file which is specified with the event parameters
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestReferenceData() {
   const link = event.data.link
   const referenceData = event.data.referenceData
@@ -563,7 +563,7 @@ When the button is clicked, you must call the [setReferenceSource](../../Methods
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestReferenceSource() {
   const referenceData = event.data.referenceData
   const path = event.data.path
@@ -598,7 +598,7 @@ The function called when the user is trying to rename the file by clicking the *
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestRename(event) {
   const title = event.data
 }
@@ -624,7 +624,7 @@ When the function is called, you must call the [refreshHistory](../../Methods/in
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestRestore(event) {
   const fileType = event.data.fileType
   const url = event.data.url
@@ -678,7 +678,7 @@ The function called when the user is trying to save file by clicking *Save Copy 
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestSaveAs(event) {
   const fileType = event.data.fileType
   const title = event.data.title
@@ -706,7 +706,7 @@ To select a document for comparing or combining, you must call the [setRequested
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestSelectDocument() {
   docEditor.setRequestedDocument({
     c: event.data.c,
@@ -737,7 +737,7 @@ To select recipient data, you must call the [setRequestedSpreadsheet](../../Meth
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestSelectSpreadsheet() {
   docEditor.setRequestedSpreadsheet({
     c: event.data.c,
@@ -768,7 +768,7 @@ The list of users to be mentioned should be completed by [setUsers](../../Method
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestSendNotify(event) {
   const ACTION_DATA = event.data.actionLink
   const comment = event.data.message
@@ -792,7 +792,7 @@ When the access rights is changed, you must call the [setSharingSettings](../../
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestSharingSettings() {
   docEditor.setSharingSettings({
     sharingSettings: [
@@ -824,7 +824,7 @@ When the user clicks the *Start filling* button, the [startFilling](../../Method
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestStartFilling() {
   docEditor.startFilling()
 }
@@ -852,7 +852,7 @@ To set a list of users, you must call the [setUsers](../../Methods/index.md#setu
 
 **Example**
 
-``` javascript
+``` ts
 function onRequestUsers(event) {
   const c = event.data.c
   const id = event.data.id
@@ -889,7 +889,7 @@ The function called when the force saving request of the *3* [forcesavetype](../
 
 **Example**
 
-``` javascript
+``` ts
 function onSubmit(event) {
   console.log("The form was submitted.")
 }
@@ -907,7 +907,7 @@ The function called when a warning occurs. The warning message is sent in the *d
 
 **Example**
 
-``` javascript
+``` ts
 function onWarning(event) {
   console.log(`ONLYOFFICE Document Editor reports a warning: code ${event.data.warningCode}, description ${event.data.warningDescription}`)
 }

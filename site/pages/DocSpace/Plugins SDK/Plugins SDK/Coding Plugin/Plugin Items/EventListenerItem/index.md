@@ -46,7 +46,7 @@ Example: \[Devices.desktop]
 
 **Example**
 
-``` javascript
+``` ts
 import {Events, type IEventListenerItem} from "@onlyoffice/docspace-plugin-sdk"
 
 const eventItem: IEventListenerItem = {

@@ -4,7 +4,7 @@ order: -2
 
 After initializing SDK, you will get an object that can be used to call the methods:
 
-``` javascript
+``` ts
 const docSpace = DocSpace.SDK.initManager({config})
 ```
 
@@ -43,7 +43,7 @@ const docSpace = DocSpace.SDK.initManager({config})
 
 Adds the specified tags to the room with the specified ID.
 
-  ``` javascript
+  ``` ts
   docSpace.addTagsToRoom(roomId, tags)
   ```
 
@@ -56,7 +56,7 @@ Adds the specified tags to the room with the specified ID.
 
 Creates a file with the specified parameters.
 
-  ``` javascript
+  ``` ts
   docSpace.createFile(folderId, title, templateId, formId)
   ```
 
@@ -71,7 +71,7 @@ Creates a file with the specified parameters.
 
 Creates a folder with the specified parameters.
 
-  ``` javascript
+  ``` ts
   docSpace.createFolder(parentFolderId, title)
   ```
 
@@ -84,7 +84,7 @@ Creates a folder with the specified parameters.
 
 Generates the hash string based on the specified hash settings.
 
-  ``` javascript
+  ``` ts
   docSpace.createHash(password, hashSettings)
   ```
 
@@ -100,7 +100,7 @@ Generates the hash string based on the specified hash settings.
 
 Creates a room with the specified parameters.
 
-  ``` javascript
+  ``` ts
   docSpace.createRoom(title, type)
   ```
 
@@ -113,7 +113,7 @@ Creates a room with the specified parameters.
 
 Creates a tag with the specified name.
 
-  ``` javascript
+  ``` ts
   docSpace.createTag(name)
   ```
 
@@ -125,7 +125,7 @@ Creates a tag with the specified name.
 
 Destroys the SDK frame, replacing it with the element passed to [destroyText](../Config/index.md#destroytext).
 
-  ``` javascript
+  ``` ts
   docSpace.destroyFrame()
   ```
 
@@ -133,7 +133,7 @@ Destroys the SDK frame, replacing it with the element passed to [destroyText](..
 
 Returns the SDK config.
 
-  ``` javascript
+  ``` ts
   docSpace.getConfig()
   ```
 
@@ -141,7 +141,7 @@ Returns the SDK config.
 
 Returns the information about all files in the SDK frame.
 
-  ``` javascript
+  ``` ts
   docSpace.getFiles()
   ```
 
@@ -149,7 +149,7 @@ Returns the information about all files in the SDK frame.
 
 Returns the information about the current directory opened in the SDK frame.
 
-  ``` javascript 
+  ``` ts 
   docSpace.getFolderInfo()
   ```
 
@@ -157,7 +157,7 @@ Returns the information about the current directory opened in the SDK frame.
 
 Returns the information about all the folders in the SDK frame.
 
-  ``` javascript
+  ``` ts
   docSpace.getFolders()
   ```
 
@@ -165,7 +165,7 @@ Returns the information about all the folders in the SDK frame.
 
 Returns the DocSpace hash settings for generating a password hash.
 
-  ``` javascript
+  ``` ts
   docSpace.getHashSettings()
   ```
 
@@ -173,7 +173,7 @@ Returns the DocSpace hash settings for generating a password hash.
 
 Returns the information about all files and folders in the SDK frame.
 
-  ``` javascript
+  ``` ts
   docSpace.getList()
   ```
 
@@ -181,7 +181,7 @@ Returns the information about all files and folders in the SDK frame.
 
 Returns the information about rooms according to the specified filter parameters.
 
-  ``` javascript
+  ``` ts
   docSpace.getRooms(filter)
   ```
 
@@ -193,7 +193,7 @@ Returns the information about rooms according to the specified filter parameters
 
 Returns the information about the selected elements in the SDK frame.
 
-  ``` javascript
+  ``` ts
   docSpace.getSelection()
   ```
 
@@ -201,7 +201,7 @@ Returns the information about the selected elements in the SDK frame.
 
 Returns the information about the current DocSpace user or null if there are no authorized users.
 
-  ``` javascript
+  ``` ts
   docSpace.getUserInfo()
   ```
 
@@ -209,7 +209,7 @@ Returns the information about the current DocSpace user or null if there are no 
 
 Initializes the SDK frame in the "editor" mode.
 
-  ``` javascript
+  ``` ts
   docSpace.initEditor(config)
   ```
 
@@ -221,7 +221,7 @@ Initializes the SDK frame in the "editor" mode.
 
 Initializes the SDK frame in the "file-selector" mode.
 
-  ``` javascript
+  ``` ts
   docSpace.initFileSelector(config)
   ```
 
@@ -233,7 +233,7 @@ Initializes the SDK frame in the "file-selector" mode.
 
 Initializes the SDK frame dispaying the DocSpace page.
 
-  ``` javascript
+  ``` ts
   docSpace.initFrame(config)
   ```
 
@@ -245,7 +245,7 @@ Initializes the SDK frame dispaying the DocSpace page.
 
 Initializes the SDK frame in the "manager" mode.
 
-  ``` javascript
+  ``` ts
   docSpace.initManager(config)
   ```
 
@@ -257,7 +257,7 @@ Initializes the SDK frame in the "manager" mode.
 
 Initializes the SDK frame in the "room-selector" mode.
 
-  ``` javascript
+  ``` ts
   docSpace.initRoomSelector(config)
   ```
 
@@ -269,7 +269,7 @@ Initializes the SDK frame in the "room-selector" mode.
 
 Initializes the SDK frame in the "system" mode to call system methods. This lightweight frame displays a blank page with the loader.
 
-  ``` javascript
+  ``` ts
   docSpace.initSystem(config)
   ```
 
@@ -281,7 +281,7 @@ Initializes the SDK frame in the "system" mode to call system methods. This ligh
 
 Initializes the SDK frame in the "viewer" mode.
 
-  ``` javascript
+  ``` ts
   docSpace.initViewer(config)
   ```
 
@@ -293,7 +293,7 @@ Initializes the SDK frame in the "viewer" mode.
 
 Logs in to the DocSpace account using the specified email and password hash.
 
-  ``` javascript
+  ``` ts
   docSpace.login(email, passwordHash)
   ```
 
@@ -306,7 +306,7 @@ Logs in to the DocSpace account using the specified email and password hash.
 
 Logs out from the DocSpace account of the current user.
 
-  ``` javascript
+  ``` ts
   docSpace.logout()
   ```
 
@@ -314,7 +314,7 @@ Logs out from the DocSpace account of the current user.
 
 Opens the DocSpace modal window of the specified type.
 
-  ``` javascript
+  ``` ts
   docSpace.openModal(type)
   ```
 
@@ -326,7 +326,7 @@ Opens the DocSpace modal window of the specified type.
 
 Removes the specified tags from the room with the specified ID.
 
-  ``` javascript
+  ``` ts
   docSpace.removeTagsFromRoom(roomId, tags)
   ```
 
@@ -339,7 +339,7 @@ Removes the specified tags from the room with the specified ID.
 
 Sets the specified config for the current SDK entity.
 
-  ``` javascript
+  ``` ts
   docSpace.setConfig(config)
   ```
 
@@ -351,7 +351,7 @@ Sets the specified config for the current SDK entity.
 
 Disables the loader in the SDK window.
 
-  ``` javascript
+  ``` ts
   docSpace.setIsLoaded()
   ```
 
@@ -359,7 +359,7 @@ Disables the loader in the SDK window.
 
 Sets the display of entity lists according to the specified type.
 
-  ``` javascript
+  ``` ts
   docSpace.setListView(type)
   ```
 

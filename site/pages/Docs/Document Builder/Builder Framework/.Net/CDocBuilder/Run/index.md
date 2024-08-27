@@ -12,7 +12,7 @@ Runs the **ONLYOFFICE Document Builder** executable. If you do not want to write
 
 **.Net**
 
-```cpp
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -22,6 +22,6 @@ CDocBuilder.Destroy();
 
 **.docbuilder**
 
-```shell
+```sh
 docbuilder.exe mydocument.docbuilder
 ```

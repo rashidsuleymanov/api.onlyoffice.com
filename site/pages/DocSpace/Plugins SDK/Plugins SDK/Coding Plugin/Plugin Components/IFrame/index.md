@@ -4,7 +4,7 @@ A component that is used to embed a third-party website into a modal window or t
 
 **Example**
 
-``` javascript
+``` ts
 import {type IFrame} from "@onlyoffice/docspace-plugin-sdk"
 
 const frameProps: IFrame = {

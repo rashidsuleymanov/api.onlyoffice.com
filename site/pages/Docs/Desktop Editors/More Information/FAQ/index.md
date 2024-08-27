@@ -50,7 +50,7 @@ These two parameters should be specified in the integration [config](../../Usage
 
 Declare the following global function:
 
-``` javascript
+``` ts
 window.DesktopUpdateFile = function DesktopUpdateFile() {}
 ```
 
@@ -74,7 +74,7 @@ To open the document in a new window / tab correctly, you need to use the `windo
 
 To check if the desktop app supports encryption, call the following command:
 
-``` js
+``` ts
 typeof window.AscDesktopEditor.cloudCryptoCommand === "function"
 ```
 

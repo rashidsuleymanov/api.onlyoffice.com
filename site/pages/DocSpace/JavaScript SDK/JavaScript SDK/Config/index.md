@@ -121,7 +121,7 @@ Type: object
 
 Example:
 
-``` javascript
+``` ts
 const events = {
   onSelectCallback: null,
   onCloseCallback: null,
@@ -142,7 +142,7 @@ Type: object
 
 Example:
 
-``` javascript
+``` ts
 const filter = {
   count: 100,
   page: 1,
@@ -427,7 +427,7 @@ Example: true
 
 **Example**
 
-``` javascript
+``` ts
 const config = {
   buttonColor: "#5299E0",
   destroyText: "",

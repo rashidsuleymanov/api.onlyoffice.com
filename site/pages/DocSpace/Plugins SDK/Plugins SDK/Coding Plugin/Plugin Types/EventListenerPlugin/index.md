@@ -32,7 +32,7 @@ Get all the event listener items.
 
 **Example**
 
-``` typescript
+``` ts
 import {type IEventListenerItem, type IEventListenerPlugin} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements IEventListenerPlugin {

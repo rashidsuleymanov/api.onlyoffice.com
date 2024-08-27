@@ -8,7 +8,7 @@ Sets the font of the cell **A2** to bold.
 
 <!-- This code snippet is shown in the screenshot. -->
 <!-- eslint-skip -->
-``` javascript
+``` ts
 (function()
 {
     Api.GetActiveSheet().GetRange("A2").SetBold(true);

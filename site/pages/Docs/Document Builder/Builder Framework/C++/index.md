@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 
 **.docbuilder**
 
-```js
+```ts
 builder.SetTmpFolder("DocBuilderTemp")
 builder.CreateFile("docx")
 const oDocument = Api.GetDocument()

@@ -8,7 +8,7 @@ Unloads the **ONLYOFFICE Document Builder** from the application memory when it 
 
 **.Net**
 
-```csharp
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

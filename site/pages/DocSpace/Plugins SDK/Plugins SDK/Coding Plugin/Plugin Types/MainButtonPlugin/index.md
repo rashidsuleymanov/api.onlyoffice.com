@@ -42,7 +42,7 @@ Update the main button item.
 
 **Example**
 
-``` typescript
+``` ts
 import {type IMainButtonItem, type IMainButtonPlugin} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements IMainButtonPlugin {

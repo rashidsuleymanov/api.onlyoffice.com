@@ -44,7 +44,7 @@ Get the administrator or owner plugin settings.
 
 **Example**
 
-``` typescript
+``` ts
 import {type ISettings, type ISettingsPlugin} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements ISettingsPlugin {

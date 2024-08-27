@@ -94,7 +94,7 @@ Example: true
 
 ### Example
 
-``` javascript
+``` ts
 import {ButtonSize, type IButton} from "@onlyoffice/docspace-plugin-sdk"
 
 const buttonProps: IButton = {

@@ -19,7 +19,7 @@ The reference figure and the steps below explain the process of protecting range
 
    <img alt="Grant access" src="/assets/images/editor/protect-range.png" width="292px">
 
-   ``` javascript
+   ``` ts
    function onRequestUsers(event) {
      docEditor.setUsers({
        c: event.data.c,
@@ -47,7 +47,7 @@ The reference figure and the steps below explain the process of protecting range
 
 3. In order to set the users list under the *Who can edit* field, the [setUsers](../../../Usage%20API/Methods/index.md#setusers) method must be called:
 
-   ``` js
+   ``` ts
    docEditor.setUsers({
      c: "protect",
      users: [

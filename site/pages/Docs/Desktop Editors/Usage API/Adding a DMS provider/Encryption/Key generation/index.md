@@ -1,6 +1,6 @@
 To check if the desktop app supports encryption, call the following command:
 
-``` js
+``` ts
 typeof window.AscDesktopEditor.cloudCryptoCommand === "function"
 ```
 
@@ -8,7 +8,7 @@ The steps below explain the process of document encryption in ONLYOFFICE.
 
 1. Log in to the cloud and pass the **Encryption** plugin ID:
 
-   ``` js
+   ``` ts
    window.AscDesktopEditor.execCommand("portal:login", JSON.stringify({
      encryptionKeys: {
        cryptoEngineId: "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}",
@@ -52,7 +52,7 @@ The steps below explain the process of document encryption in ONLYOFFICE.
 
    **Example**
 
-   ``` js
+   ``` ts
    window.AscDesktopEditor.execCommand("portal:checkpwd", JSON.stringify({
      domain: "https://exampledomain.com",
      emailInput: "john@example.com",
@@ -100,7 +100,7 @@ The steps below explain the process of document encryption in ONLYOFFICE.
 
    **Example**
 
-   ``` js
+   ``` ts
    window.AscDesktopEditor.execCommand("portal:login", JSON.stringify({
      encryptionKeys: {
        cryptoEngineId: "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}",
@@ -112,7 +112,7 @@ The steps below explain the process of document encryption in ONLYOFFICE.
 
    You can also do it in the editor initialization config:
 
-   ``` javascript
+   ``` ts
   const docEditor = new DocsAPI.DocEditor("placeholder", {
      editorConfig: {
        encryptionKeys: {
@@ -126,7 +126,7 @@ The steps below explain the process of document encryption in ONLYOFFICE.
 
 4. Send the generated keys to the cloud through the *cloudCryptoCommand* method with the *encryptionKeys* type:
 
-   ``` js
+   ``` ts
    window.AscDesktopEditor.cloudCryptoCommand(
      "encryptionKeys",
      {

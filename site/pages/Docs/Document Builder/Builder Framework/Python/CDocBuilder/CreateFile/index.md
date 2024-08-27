@@ -19,6 +19,6 @@ builder.CreateFile("docx")
 
 **.docbuilder**
 
-``` js
+``` ts
 builder.CreateFile("docx")
 ```

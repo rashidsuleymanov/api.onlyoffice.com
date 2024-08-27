@@ -25,6 +25,6 @@ oBuilder->Dispose();
 
 **.docbuilder**
 
-```js
+```ts
 builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>")
 ```

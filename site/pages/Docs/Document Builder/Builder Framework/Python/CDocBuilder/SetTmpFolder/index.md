@@ -19,6 +19,6 @@ builder.SetTmpFolder(L"DocBuilderTemp")
 
 **.docbuilder**
 
-```js
+```ts
 builder.SetTmpFolder("DocBuilderTemp")
 ```

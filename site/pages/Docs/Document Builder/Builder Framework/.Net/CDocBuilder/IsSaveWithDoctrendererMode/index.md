@@ -8,7 +8,7 @@ Specifies if the doctrenderer mode is used when building a document or getting c
 
 .Net
 
-```csharp
+``` cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

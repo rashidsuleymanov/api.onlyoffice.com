@@ -302,7 +302,7 @@ On the [Java example](../../Get%20Started/Language-specific%20examples/Java%20ex
 
 ### Node.js document save example
 
-``` javascript
+``` ts
 import {fs} from "node:fs"
 import {syncRequest} from "sync-request"
 

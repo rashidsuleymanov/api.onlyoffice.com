@@ -16,7 +16,7 @@ The sample code for the **.docbuilder** script file can be like this:
 
 ## Example
 
-```js
+``` ts
 builder.CreateFile("docx")
 const sCompany = Argument["company"]
 const sProduct = Argument["product"]

@@ -15,7 +15,7 @@ Sets a property to the **CDocBuilderValue** object.
 
 **.Net**
 
-```cpp
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -31,7 +31,7 @@ There are two more ways to set a property to the **CDocBuilderValue** object:
 
 1. use the **Set** method that takes the object property name and value as arguments:
 
-   ```cpp
+   ```cs
    void Set(String^ name, CDocBuilderValue^ value);
    ```
 
@@ -39,7 +39,7 @@ There are two more ways to set a property to the **CDocBuilderValue** object:
 
    **.Net**
 
-   ```cpp
+   ```cs
    string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
    CDocBuilder.Initialize(workDirectory);
    CDocBuilder oBuilder = new CDocBuilder();
@@ -53,7 +53,7 @@ There are two more ways to set a property to the **CDocBuilderValue** object:
 
 2. use the **default\[]** postfix expression:
 
-   ```cpp
+   ```cs
    property CDocBuilderValue^ default[String^]
    ```
 
@@ -61,7 +61,7 @@ There are two more ways to set a property to the **CDocBuilderValue** object:
 
    **.Net**
 
-   ```cpp
+   ```cs
    string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
    CDocBuilder.Initialize(workDirectory);
    CDocBuilder oBuilder = new CDocBuilder();

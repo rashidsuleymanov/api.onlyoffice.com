@@ -54,7 +54,7 @@ Example: \[Devices.desktop]
 
 **Example**
 
-``` javascript
+``` ts
 import {type IProfileMenuItem} from "@onlyoffice/docspace-plugin-sdk"
 
 export const ProfileMenuItem: IProfileMenuItem = {

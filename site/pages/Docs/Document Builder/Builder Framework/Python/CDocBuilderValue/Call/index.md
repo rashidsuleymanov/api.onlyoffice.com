@@ -25,6 +25,6 @@ document = api.Call("GetDocument")
 
 **.docbuilder**
 
-```js
+```ts
 const oDocument = Api.GetDocument()
 ```

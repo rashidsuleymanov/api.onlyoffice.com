@@ -8,7 +8,7 @@ Returns the **ONLYOFFICE Document Builder** engine version.
 
 **.Net**
 
-```csharp
+``` cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();

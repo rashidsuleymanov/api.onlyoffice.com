@@ -46,7 +46,7 @@ Update the context menu item.
 
 **Example**
 
-``` typescript
+``` ts
 import {type IContextMenuItem, type IContextMenuPlugin} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements IContextMenuPlugin {

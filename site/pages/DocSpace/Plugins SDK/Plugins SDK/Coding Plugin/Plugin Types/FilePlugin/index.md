@@ -42,7 +42,7 @@ Update the item for interactions with files.
 
 **Example**
 
-``` typescript
+``` ts
 import {type IFileItem, type IFilePlugin} from "@onlyoffice/docspace-plugin-sdk"
 
 class Plugin implements IFilePlugin {

@@ -86,7 +86,7 @@ Example: `https://example.com/url-to-example-document.docx`
 
 ### Example
 
-``` javascript
+``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", {
   document: {
     fileType: "xlsx",

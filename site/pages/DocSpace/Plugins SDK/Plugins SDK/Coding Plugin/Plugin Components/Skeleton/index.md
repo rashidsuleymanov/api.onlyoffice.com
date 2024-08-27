@@ -4,7 +4,7 @@ A component that is used to hide components during uploading.
 
 **Example**
 
-``` javascript
+``` ts
 import {type ISkeleton} from "@onlyoffice/docspace-plugin-sdk"
 
 const skeletonProps: ISkeleton = {

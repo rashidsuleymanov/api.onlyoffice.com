@@ -47,14 +47,14 @@ If you use **ONLYOFFICE Document Builder** as both an application and a script, 
 
    ### Sets the --argument property using JavaScript code
 
-   ```js
+   ``` ts
    const sCompany = Argument["company"]
    const sProduct = Argument["product"]
    ```
 
 3. The **builder** object methods cannot be called with the JS variables. Wrap them with the *jsValue* instruction if necessary:
 
-   ```js
+   ``` ts
    const jsVar = "123.docx"
    builder.SaveFile("docx", jsVar) // Incorrect
    builder.SaveFile("docx", jsValue(jsVar)) // Correct
@@ -64,25 +64,25 @@ If you use **ONLYOFFICE Document Builder** as both an application and a script, 
 
    For example,
 
-   ```js
+   ``` ts
    builder.CreateFile("docx")
    ```
 
    is the same as
 
-   ```js
+   ``` ts
    CDocBuilder.CreateFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX)
    ```
 
    And
 
-   ```js
+   ``` ts
    builder.SaveFile("docx", file_path)
    ```
 
    is the same as
 
-   ```js
+   ``` ts
    CDocBuilder.SaveFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX, file_path)
    ```
 
@@ -121,7 +121,7 @@ If you use **ONLYOFFICE Document Builder** as both an application and a script, 
 
 5. The entire JavaScript context is a wrapper for its native CDocBuilder **builderJS** object. You need to work with it as with an ordinary JavaScript object. In this case, the *jsValue* instruction is not needed for the JS variables:
 
-   ```js
+   ``` ts
    builderJS.OpenFile("path_or_url", "x2t_additons_as_xml")
    builderJS.CreateFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX)
    // or builderJS.CreateFile("docx")
@@ -133,7 +133,7 @@ If you use **ONLYOFFICE Document Builder** as both an application and a script, 
 
 6. The Document Builder always works with one file. But there are cases when you need to be able to open another file not for adding its data to the content, but for some kind of manipulation (document comparison, mailmerge, etc). For such cases, the Document Builder provides the **OpenTmpFile** method:
 
-   ```js
+   ``` ts
    const tmpFile = builderJS.OpenTmpFile("path_or_url")
    ```
 

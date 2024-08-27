@@ -8,14 +8,14 @@ All **.docbuilder** files have simple structure which allows to create them easi
 
 1. Preparing to work with the document (either the [CDocBuilder.CreateFile](../../Builder%20Framework/C++/CDocBuilder/CreateFile/index.md) or [CDocBuilder.OpenFile](../../Builder%20Framework/C++/CDocBuilder/OpenFile/index.md) methods are used together with the [CDocBuilder.SetTmpFolder](../../Builder%20Framework/C++/CDocBuilder/SetTmpFolder/index.md) method).
 
-   ```js
+   ``` ts
    builder.SetTmpFolder("DocBuilderTemp")
    builder.CreateFile("docx")
    ```
 
 2. Creating the document contents with the help of the [CDocBuilder.ExecuteCommand](../../Builder%20Framework/C++/CDocBuilder/ExecuteCommand/index.md) method (the method is not used explicitly, the commands themselves are used instead).
 
-   ```js
+   ``` ts
    const oDocument = Api.GetDocument()
    const oParagraph = Api.CreateParagraph()
    oParagraph.SetJc("center")
@@ -24,7 +24,7 @@ All **.docbuilder** files have simple structure which allows to create them easi
    ```
 
 3. Saving the document (using the [CDocBuilder.SaveFile](../../Builder%20Framework/C++/CDocBuilder/SaveFile/index.md) method) and releasing it to finish work with it (the [CloseFile](../../Builder%20Framework/C++/CDocBuilder/CloseFile/index.md) method).
-   ```js
+   ``` ts
    builder.SaveFile("pdf", "images.pdf")
    builder.CloseFile()
    ```
@@ -47,7 +47,7 @@ Thus the example of the complete working **.docbuilder** file is available below
 
 ## Example
 
-```js
+``` ts
 builder.SetTmpFolder("DocBuilderTemp")
 builder.CreateFile("docx")
 const oDocument = Api.GetDocument()

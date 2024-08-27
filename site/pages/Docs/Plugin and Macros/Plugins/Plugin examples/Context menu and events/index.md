@@ -118,7 +118,7 @@ Copy the code below and save it in the *config.json*, *index.html*, and *code.js
 
 ## Plugin code
 
-``` javascript
+``` ts
 console.log("work")
 window.Asc.plugin.init = function init() {}
 window.Asc.plugin.button = function button(id) {

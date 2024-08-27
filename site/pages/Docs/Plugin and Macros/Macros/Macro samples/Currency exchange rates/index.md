@@ -12,7 +12,7 @@ You can [assign this macro](../../Writing%20macros/index.md#assigning-macros) to
 
 <!-- This code snippet is shown in the screenshot. -->
 <!-- eslint-skip -->
-``` javascript
+``` ts
 (function()
 {
     var sCurPair = "USD_EUR";

@@ -38,7 +38,7 @@ Type: array of objects
 
 Example:
 
-``` js
+``` ts
 [
   {
     name: "accept-button",
@@ -97,7 +97,7 @@ Example: "{settings}"
 
 **Example**
 
-``` javascript
+``` ts
 import {Actions, type IMessage, ToastType} from "@onlyoffice/docspace-plugin-sdk"
 
 const message: IMessage = {

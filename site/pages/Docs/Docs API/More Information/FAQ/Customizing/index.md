@@ -26,7 +26,7 @@ The below options can be edited for whitelabeling your version of ONLYOFFICE Doc
 
   With all the above fields filled, the *customization* configuration will look like this:
 
-  ``` javascript
+  ``` ts
   const docEditor = new DocsAPI.DocEditor("placeholder", {
     editorConfig: {
       customization: {
@@ -55,7 +55,7 @@ The below options can be edited for whitelabeling your version of ONLYOFFICE Doc
 
 If the interface language is present in the [list of available ONLYOFFICE Docs languages](https://helpcenter.onlyoffice.com/server/document/available-languages.aspx), you can simply use the *editorConfig.lang* property in the configuration file to set it to the necessary locale, like this:
 
-  ``` javascript
+  ``` ts
   const docEditor = new DocsAPI.DocEditor("placeholder", {
     editorConfig: {
       lang: "de",
@@ -71,7 +71,7 @@ Further information about the language settings can be found [at this page](../.
 
 The chat and comments are enabled by default. To disable them use the *document.permissions.comment* and *document.permissions.chat* parameters with the values set to **false** in the configuration file respectively:
 
-  ``` javascript
+  ``` ts
   const docEditor = new DocsAPI.DocEditor("placeholder", {
     document: {
       permissions: {
@@ -90,7 +90,7 @@ Further information about the customization can be found [at this page](../../..
 
 You can either display the full top toolbar or its compact version. To control this the *editorConfig.customization.compactToolbar* parameter is used. With the default **false** value the top toolbar will have its usual view. If you want to display its compact variant, the configuration will have to look like this:
 
-  ``` javascript
+  ``` ts
   const docEditor = new DocsAPI.DocEditor("placeholder", {
     editorConfig: {
       customization: {
@@ -106,7 +106,7 @@ Further information about the customization can be found [at this page](../../..
 
 The document owner and uploading date is affected by the *document.info.owner* and *document.info.uploaded* parameter respectively. You can pass these settings from some database of yours to the document configuration file the following way:
 
-  ``` javascript
+  ``` ts
   const docEditor = new DocsAPI.DocEditor("placeholder", {
     document: {
       info: {
@@ -127,7 +127,7 @@ There are three main appearances of the editors, optimized for different use:
 
 - **desktop**, which is optimized for the display in desktop computer browsers:
 
-    ``` javascript
+    ``` ts
     const docEditor = new DocsAPI.DocEditor("placeholder", {
       type: "desktop",
     })
@@ -135,7 +135,7 @@ There are three main appearances of the editors, optimized for different use:
 
 - **mobile**, which is optimized for the display in mobile device browsers:
 
-    ``` javascript
+    ``` ts
     const docEditor = new DocsAPI.DocEditor("placeholder", {
       type: "mobile",
     })
@@ -143,7 +143,7 @@ There are three main appearances of the editors, optimized for different use:
 
 - **embedded**, which is optimized for the embedding the documents into a website page:
 
-    ``` javascript
+    ``` ts
     const docEditor = new DocsAPI.DocEditor("placeholder", {
       type: "embedded",
     })
@@ -163,7 +163,7 @@ To enable plugins for all ONLYOFFICE Docs users, you need the following:
 
 - Change the configuration file the following way:
 
-  ``` javascript
+  ``` ts
   const docEditor = new DocsAPI.DocEditor("placeholder", {
     editorConfig: {
       plugins: {

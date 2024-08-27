@@ -4,7 +4,7 @@ A component that is used to embed an image not from the *assets* folder into a m
 
 **Example**
 
-``` javascript
+``` ts
 import {type IImage} from "@onlyoffice/docspace-plugin-sdk"
 
 const imageProps: IImage = {

@@ -53,7 +53,7 @@ Example: "onlyoffice"
 
 **Example**
 
-``` js
+``` ts
 const params = {
   url: "https://example.com/url-to-example-document.docx",
   type: "word",

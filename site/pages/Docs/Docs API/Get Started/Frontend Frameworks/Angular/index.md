@@ -48,7 +48,7 @@ ng version
 
 1. Open the *./src/app/app.module.ts* file in the *onlyoffice-angular-demo* project and import the **DocumentEditorModule**:
 
-   ``` typescript
+   ``` ts
    import {NgModule} from "@angular/core"
    import {BrowserModule} from "@angular/platform-browser"
    import {DocumentEditorModule} from "@onlyoffice/document-editor-angular"
@@ -71,7 +71,7 @@ ng version
 
 2. Open the *./src/app/app.component.ts* file in the *onlyoffice-angular-demo* project and define options in your consuming component:
 
-   ``` typescript
+   ``` ts
    import {Component} from "@angular/core"
    import {type IConfig} from "@onlyoffice/document-editor-angular"
    
@@ -140,7 +140,7 @@ ng version
 
    > Please note that starting from Angular v17.0.0, the *app.module.ts* file is not added to the new projects by default. You must specify *DocumentEditorModule* in the *imports* property of the *Component* decorator and set *standalone* to *true*.
 
-  ``` typescript
+  ``` ts
   import {Component} from "@angular/core"
   import {DocumentEditorModule, type IConfig} from "@onlyoffice/document-editor-angular"
 
@@ -254,7 +254,7 @@ To deploy the application to a production environment, create the build-specific
 
 2. Import the original environment file in the *app.component.ts* component file to use the environment configurations you have defined:
 
-   ``` typescript
+   ``` ts
    import {environment} from "./../environments/environment"
    ```
 

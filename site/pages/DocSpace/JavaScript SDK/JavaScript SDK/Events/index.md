@@ -19,7 +19,7 @@ The function called when SDK is initialized with an error. This error is returne
 
 **Example**
 
-  ``` javascript
+  ``` ts
   function onAppError() {
     console.log("ONLYOFFICE DocSpace reports an error")
   }
@@ -37,7 +37,7 @@ The function called when SDK is initialized successfully.
 
 **Example**
 
-  ``` javascript
+  ``` ts
   function onAppReady() {
     console.log("ONLYOFFICE DocSpace is ready")
   }
@@ -55,7 +55,7 @@ The function called upon successful authorization.
 
 **Example**
 
-  ``` javascript
+  ``` ts
   function onAuthSuccess() {
     console.log("The authorization is successful.")
   }
@@ -73,7 +73,7 @@ The function called only in the [room-selector](../Initialization%20Modes/Room%2
 
 **Example**
 
-  ``` javascript
+  ``` ts
   function onCloseCallback() {
     console.log("The room selector is closed.")
   }
@@ -91,7 +91,7 @@ The function called when firing events to download items from the manager. It re
 
 **Example**
 
-  ``` javascript
+  ``` ts
   function onDownload() {
     console.log("The 'New document' file has been downloaded.")
   }
@@ -109,7 +109,7 @@ The function called when the document editor is closed.
 
 **Example**
 
-  ``` javascript
+  ``` ts
   function onEditorCloseCallback() {
     console.log("The document editor is closed.")
   }
@@ -127,7 +127,7 @@ The function called only in the [room-selector](../Initialization%20Modes/Room%2
 
 **Example**
 
-  ``` javascript
+  ``` ts
   function onSelectCallback() {
     console.log("The 'New room' room was selected.")
   }
@@ -165,7 +165,7 @@ The function called when logging out of the user account.
 
 **Example**
 
-  ``` javascript
+  ``` ts
   function onSignOut() {
     console.log("The user is logging out of the DocSpace account.")
   }

@@ -85,7 +85,7 @@ For example, the **draw\.io** plugin contains two main UI elements - the modal w
 
 - In the [Dialog.ts](https://github.com/ONLYOFFICE/docspace-plugins/blob/master/draw-io/src/DrawIO/Dialog.ts) file, configure the modal window settings. Specify the [IFrame](../../Coding%20Plugin/Plugin%20Components/IFrame/index.md) UI component that is used to embed the draw\.io website into a modal window:
 
-  ``` js
+  ``` ts
   export const frameProps: IFrame = {
     width: "100%",
     height: "100%",
@@ -96,7 +96,7 @@ For example, the **draw\.io** plugin contains two main UI elements - the modal w
 
   Create the [IBox](../../Coding%20Plugin/Plugin%20Components/Box/index.md) container to add the iframe to it:
 
-  ``` javascript
+  ``` ts
   const body: IBox = {
     widthProp: "100%",
     heightProp: "100%",
@@ -112,7 +112,7 @@ For example, the **draw\.io** plugin contains two main UI elements - the modal w
 
   Configure the [modal window](../../Coding%20Plugin/Plugin%20Components/ModalDialog/index.md) properties:
 
-  ``` js
+  ``` ts
   export const drawIoModalDialogProps: IModalDialog = {
     dialogHeader: "",
     dialogBody: body,
@@ -169,7 +169,7 @@ Now that the default plugin is ready, you can start coding other plugin types.
 
 Each plugin type has specific plugin items. Define the [context menu item](../../Coding%20Plugin/Plugin%20Items/ContextMenuItem/index.md) that will be displayed when you right-click on audio or video files:
 
-``` js
+``` ts
 export const contextMenuItem: IContextMenuItem = {
   key: "speech-to-text-context-menu-item",
   label: "Convert to text",
@@ -184,7 +184,7 @@ export const contextMenuItem: IContextMenuItem = {
 
 You can add more plugin types. For example, the **draw\.io** plugin can be accessed from the main button menu, so we need to specify the [main button item](../../Coding%20Plugin/Plugin%20Items/MainButtonItem/index.md):
 
-``` js
+``` ts
 const mainButtonItem: IMainButtonItem = {
   key: "draw-io-main-button-item",
   label: "Draw.io",
@@ -225,7 +225,7 @@ For the **draw\.io** plugin, you also need to configure the file plugin type whi
 
 1. Define the [file item](../../Coding%20Plugin/Plugin%20Items/FileItem/index.md) that is represented as a file with the specific extension (*.drawio*) and icon:
 
-   ``` js
+   ``` ts
    export const drawIoItem: IFileItem = {
      extension: ".drawio",
      fileTypeName: "Diagram",
@@ -238,7 +238,7 @@ For the **draw\.io** plugin, you also need to configure the file plugin type whi
 
 2. Define the *onClick* event which will execute the *editDiagram* method each time the *.drawio* file is opened:
 
-   ``` js
+   ``` ts
    const onClick = async (item: File) => {
      return await drawIo.editDiagram(item.id)
    }
@@ -252,7 +252,7 @@ Configure the settings plugin type to provide users with the administrator setti
 
 1. Create a container where the plugin settings will be placed:
 
-   ``` js
+   ``` ts
    const descriptionText: TextGroup = {
      component: Components.text,
      props: {
@@ -281,7 +281,7 @@ Configure the settings plugin type to provide users with the administrator setti
 
 2. Configure the administrator settings with the *ISettings* object:
 
-   ``` js
+   ``` ts
    const adminSettings: ISettings = {
      settings: parentBox,
      saveButton: userButtonComponent,
@@ -325,7 +325,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    
    Defines the API URL.
 
-    ``` javascript
+    ``` ts
     apiURL = ""
     ```
 
@@ -333,7 +333,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    
    Defines the current file ID.
 
-    ``` typescript
+    ``` ts
     const currentFileId: numbernull | number = null
     ```
 
@@ -341,7 +341,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    
    Defines the API token.
 
-    ``` javascript
+    ``` ts
     apiToken = ""
     ```
 
@@ -351,7 +351,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    
    Creates the API URL.
 
-    ``` javascript
+    ``` ts
     createAPIUrl = () => {
       const api = plugin.getAPI()
 
@@ -381,7 +381,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    
    Sets the API URL.
 
-    ``` javascript
+    ``` ts
     setAPIUrl = (url: string) => {
       this.apiURL = url
     }
@@ -391,7 +391,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    
    Retuns the API URL.
 
-    ``` javascript
+    ``` ts
     getAPIUrl = () => {
       return this.apiURL
     }
@@ -401,7 +401,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    
    Sets the API token.
 
-    ``` javascript
+    ``` ts
     setAPIToken = (apiToken: string) => {
       this.apiToken = apiToken
     }
@@ -411,7 +411,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    
    Returns the API token.
 
-    ``` javascript
+    ``` ts
     getAPIToken = () => {
       return this.apiToken
     }
@@ -421,7 +421,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    
    Fetches the API token.
 
-     ``` javascript
+     ``` ts
      fetchAPIToken = async () => {
        const apiToken = localStorage.getItem("speech-to-text-api-token")
      
@@ -438,7 +438,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    
    Saves the API token.
 
-    ``` javascript
+    ``` ts
     saveAPIToken = (apiToken: string) => {
       localStorage.setItem("speech-to-text-api-token", apiToken)
     
@@ -456,7 +456,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    
    Sets the ID to the current file.
 
-    ``` javascript
+    ``` ts
     setCurrentFileId = (id: number | null) => {
       this.currentFileId = id
     }
@@ -466,7 +466,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    
    Uploads a file which will be transcribed.
 
-    ``` javascript
+    ``` ts
     uploadFile = async (apiToken: string, path: string, data: Blob) => {
       console.log(`Uploading file: ${path}`)
     
@@ -499,7 +499,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    
    Transcribes the audio file.
 
-    ``` javascript
+    ``` ts
     transcribeAudio = async (apiToken: string, audioUrl: string) => {
       console.log("Transcribing audio... This might take a moment.")
     
@@ -539,7 +539,7 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
    
    Implements the plugin work.
 
-   ``` js
+    ``` ts
     speechToText = async (id: number) => {
       if (!this.apiToken) {
         return
@@ -618,12 +618,12 @@ Let's see how the [AssemblyAI.ts](https://github.com/ONLYOFFICE/docspace-plugins
 
 2. Declare the *AssemblyAI* class instance:
 
-   ``` javascript
+   ``` ts
    const assemblyAI = new AssemblyAI()
    ```
 
 3. Export the created plugin instance:
 
-   ``` javascript
+   ``` ts
    export default assemblyAI
    ```

@@ -20,7 +20,7 @@ There are several ways to initiate forced saving:
 
 - Enabling the [editorConfig.customization.forcesave](../../../Usage%20API/Config/Editor/Customization/index.md#forcesave) setting to **true** in the editor initialization configuration:
 
-    ``` javascript
+    ``` ts
     const docEditor = new DocsAPI.DocEditor("placeholder", {
       editorConfig: {
         customization: {
@@ -63,7 +63,7 @@ The details of how the conversion works and why it is needed can be found in [th
 
 The **Autosave** option is enabled by default. To disable it, you need to set the [editorConfig.customization.autosave](../../../Usage%20API/Config/Editor/Customization/index.md#autosave) parameter in the document configuration to **false**:
 
-  ``` javascript
+  ``` ts
   const docEditor = new DocsAPI.DocEditor("placeholder", {
     editorConfig: {
       customization: {

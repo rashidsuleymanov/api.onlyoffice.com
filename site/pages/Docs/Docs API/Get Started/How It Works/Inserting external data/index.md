@@ -20,7 +20,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
 2. Specify the [document.referenceData](../../../Usage%20API/Config/Document/index.md#referencedata) parameter in the initialization config of the source spreadsheet:
 
-   ``` javascript
+   ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {
      document: {
        referenceData: {
@@ -42,7 +42,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
 5. Specify the [onRequestReferenceData](../../../Usage%20API/Config/Events/index.md#onrequestreferencedata) event handler in the initialization config of the destination spreadsheet for the *Paste link* and *Update values* buttons to be displayed:
 
-   ``` javascript
+   ``` ts
    const docEditor = new DocsAPI.DocEditor("placeholder", {
      events: {
        onRequestReferenceData,
@@ -56,7 +56,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
 7. When the user clicks the *Paste link* button, the formula is inserted into the current cell, and the *referenceData* object is saved to the destination file. The inserted formula is displayed as follows:
 
-   ``` js
+   ``` ts
    ='[fileName]sheetName'!cell
    ```
 
@@ -74,7 +74,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
    > To send the data to the *setReferenceData* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* or *link* parameters are used.
 
-   ``` javascript
+   ``` ts
    function onRequestReferenceData(event) {
      const link = event.data.link
      const referenceData = event.data.referenceData
@@ -88,7 +88,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
    > Please note that this method is executed only when the user has permissions to the source file.
 
-   ``` js
+   ``` ts
    docEditor.setReferenceData({
      fileType: "xlsx",
      path: "sample.xlsx",
@@ -116,7 +116,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
    ### Example
 
-   ``` javascript
+   ``` ts
    function onRequestOpen(event) {
      const path = event.data.path
      const referenceData = event.data.referenceData
@@ -148,7 +148,7 @@ The steps below explain the process of inserting data into the spreadsheet by an
 
    **Example**
 
-   ``` javascript
+   ``` ts
    function onRequestReferenceSource() {
      const referenceData = event.data.referenceData
      const path = event.data.path

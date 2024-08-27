@@ -8,7 +8,7 @@ See the parameters of this component in [storybook](https://storybook.onlyoffice
 
 **Example**
 
-``` javascript
+``` ts
 import {type ILabel} from "@onlyoffice/docspace-plugin-sdk"
 
 const label: ILabel = {

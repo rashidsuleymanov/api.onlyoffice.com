@@ -10,7 +10,7 @@ To change the toast type, use [ToastType](https://github.com/ONLYOFFICE/docspace
 
 **Example**
 
-``` javascript
+``` ts
 import {type IToast, ToastType} from "@onlyoffice/docspace-plugin-sdk"
 
 const toast: IToast = {

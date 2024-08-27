@@ -31,6 +31,6 @@ int wmain(int argc, wchar_t *argv[])
 
 **.docbuilder**
 
-```shell
+```sh
 docbuilder.exe mydocument.docbuilder
 ```

@@ -76,7 +76,7 @@ Put all the prepared files to the plugin folder and push it to the remote reposi
 
    To create an extension, open the *onlyoffice.github.io/store/plugin-dev/extension/inject.js* file and assign the path to your plugin on GitHub Pages site to the **URL\_TO\_PLUGIN** variable:
 
-   ``` javascript
+   ``` ts
    const URL_TO_PLUGIN = "https://YOUR-USERNAME.github.io/onlyoffice.github.io/sdkjs-plugins/content/helloworld/"
    ```
 

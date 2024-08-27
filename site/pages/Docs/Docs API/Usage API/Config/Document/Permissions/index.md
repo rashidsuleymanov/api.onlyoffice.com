@@ -38,7 +38,7 @@ Type: object
 
 **Example**:
 
-``` javascript
+``` ts
 const config = {
   edit: ["Group2", ""],
   remove: [""],
@@ -209,7 +209,7 @@ Example: \["Group1", ""]
 **Example**
 
 ### Example
-``` javascript
+``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", {
   document: {
     permissions: {

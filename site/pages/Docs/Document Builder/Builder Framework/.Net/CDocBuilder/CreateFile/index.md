@@ -12,7 +12,7 @@ Creates a new file. The type of the file which will be created needs to be set.
 
 **.Net**
 
-```csharp
+```cs
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
@@ -23,6 +23,6 @@ CDocBuilder.Destroy();
 
 **.docbuilder**
 
-```js
+```ts
 builder.CreateFile("docx")
 ```
