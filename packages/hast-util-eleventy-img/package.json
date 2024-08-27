@@ -8,9 +8,9 @@
     "test": "pnpm test:types"
   },
   "dependencies": {
-    "@11ty/eleventy-img": "^4.0.2",
-    "@types/11ty__eleventy-img": "^4.0.0",
-    "@types/hast": "^3.0.4",
-    "typescript": "^5.4.5"
+    "@11ty/eleventy-img": "4.0.2",
+    "@types/11ty__eleventy-img": "4.0.0",
+    "@types/hast": "3.0.4",
+    "typescript": "5.4.5"
   }
 }

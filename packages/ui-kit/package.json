@@ -29,7 +29,7 @@
     "@onlyoffice/ui-sr-only": "workspace:^",
     "@onlyoffice/ui-template": "workspace:^",
     "@onlyoffice/ui-text-input": "workspace:^",
-    "preact": "^10.22.0",
-    "typescript": "^5.4.5"
+    "preact": "10.22.0",
+    "typescript": "5.4.5"
   }
 }

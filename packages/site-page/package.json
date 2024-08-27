@@ -19,12 +19,12 @@
     "@onlyoffice/preact-types": "workspace:^",
     "@onlyoffice/site-chapter": "workspace:^",
     "@onlyoffice/ui-icons": "workspace:^",
-    "preact": "^10.22.0",
-    "typescript": "^5.4.5"
+    "preact": "10.22.0",
+    "typescript": "5.4.5"
   },
   "devDependencies": {
     "@onlyoffice/ui-kit": "workspace:^",
-    "@storybook/preact": "^8.0.0",
-    "vite": "^5.1.6"
+    "@storybook/preact": "8.0.0",
+    "vite": "5.1.6"
   }
 }

@@ -8,9 +8,9 @@
     "test": "pnpm test:types"
   },
   "dependencies": {
-    "@types/hast": "^3.0.4",
-    "typescript": "^5.4.5",
-    "unist-util-visit": "^5.0.0"
+    "@types/hast": "3.0.4",
+    "typescript": "5.4.5",
+    "unist-util-visit": "5.0.0"
   },
   "devDependencies": {
     "@onlyoffice/rehype-metastring": "workspace:^"

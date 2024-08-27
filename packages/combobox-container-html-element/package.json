@@ -9,12 +9,12 @@
     "test": "pnpm test:types"
   },
   "dependencies": {
-    "typescript": "^5.4.5"
+    "typescript": "5.4.5"
   },
   "devDependencies": {
-    "@web/dev-server": "^0.4.4",
-    "@web/dev-server-esbuild": "^1.0.2",
-    "esbuild": "^0.23.0",
-    "preact": "^10.22.0"
+    "@web/dev-server": "0.4.4",
+    "@web/dev-server-esbuild": "1.0.2",
+    "esbuild": "0.23.0",
+    "preact": "10.22.0"
   }
 }

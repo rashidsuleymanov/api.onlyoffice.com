@@ -10,9 +10,9 @@
   "dependencies": {
     "@onlyoffice/document-editor-html-element": "workspace:^",
     "@onlyoffice/document-server-types": "workspace:^",
-    "typescript": "^5.4.5"
+    "typescript": "5.4.5"
   },
   "devDependencies": {
-    "preact": "^10.22.0"
+    "preact": "10.22.0"
   }
 }

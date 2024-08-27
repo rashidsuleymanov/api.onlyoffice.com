@@ -9,12 +9,12 @@
     "test": "pnpm test:types && pnpm test:unit"
   },
   "dependencies": {
-    "@types/hast": "^3.0.4",
-    "typescript": "^5.4.5"
+    "@types/hast": "3.0.4",
+    "typescript": "5.4.5"
   },
   "devDependencies": {
-    "c8": "^9.1.0",
-    "tsx": "^4.16.5",
-    "uvu": "^0.5.6"
+    "c8": "9.1.0",
+    "tsx": "4.16.5",
+    "uvu": "0.5.6"
   }
 }

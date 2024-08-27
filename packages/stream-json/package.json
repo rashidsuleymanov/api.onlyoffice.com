@@ -8,9 +8,9 @@
     "test": "pnpm test:types"
   },
   "dependencies": {
-    "@types/node": "^20.12.12",
-    "@types/stream-json": "^1.7.7",
-    "stream-json": "^1.8.0",
-    "typescript": "^5.4.5"
+    "@types/node": "20.12.12",
+    "@types/stream-json": "1.7.7",
+    "stream-json": "1.8.0",
+    "typescript": "5.4.5"
   }
 }

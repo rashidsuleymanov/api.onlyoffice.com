@@ -13,15 +13,15 @@
   },
   "dependencies": {
     "@onlyoffice/eslint-config": "workspace:^",
-    "unist-util-visit": "^5.0.0",
-    "vfile": "^6.0.1"
+    "unist-util-visit": "5.0.0",
+    "vfile": "6.0.1"
   },
   "devDependencies": {
-    "@types/mdast": "^4.0.3",
-    "c8": "^9.1.0",
-    "esbuild": "^0.23.0",
-    "tsx": "^4.16.5",
-    "typescript": "^5.4.5",
-    "uvu": "^0.5.6"
+    "@types/mdast": "4.0.3",
+    "c8": "9.1.0",
+    "esbuild": "0.23.0",
+    "tsx": "4.16.5",
+    "typescript": "5.4.5",
+    "uvu": "0.5.6"
   }
 }

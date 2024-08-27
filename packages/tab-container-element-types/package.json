@@ -8,10 +8,10 @@
     "test": "pnpm test:types"
   },
   "dependencies": {
-    "@github/tab-container-element": "^4.8.0",
-    "typescript": "^5.4.5"
+    "@github/tab-container-element": "4.8.0",
+    "typescript": "5.4.5"
   },
   "devDependencies": {
-    "preact": "^10.22.0"
+    "preact": "10.22.0"
   }
 }

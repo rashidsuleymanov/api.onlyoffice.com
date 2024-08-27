@@ -15,11 +15,11 @@
   "dependencies": {
     "@onlyoffice/declaration-code-example": "workspace:^",
     "@onlyoffice/declaration-reference": "workspace:^",
-    "typescript": "^5.4.5"
+    "typescript": "5.4.5"
   },
   "devDependencies": {
-    "c8": "^9.1.0",
-    "tsx": "^4.16.5",
-    "uvu": "^0.5.6"
+    "c8": "9.1.0",
+    "tsx": "4.16.5",
+    "uvu": "0.5.6"
   }
 }

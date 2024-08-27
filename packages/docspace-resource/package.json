@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@onlyoffice/service-declaration": "workspace:^",
-    "@types/node": "^20.12.12",
-    "typescript": "^5.4.5"
+    "@types/node": "20.12.12",
+    "typescript": "5.4.5"
   },
   "devDependencies": {
     "@onlyoffice/console": "workspace:^",
@@ -21,6 +21,6 @@
     "@onlyoffice/openapi-resource": "workspace:^",
     "@onlyoffice/resource": "workspace:^",
     "@onlyoffice/stream-string": "workspace:^",
-    "tsx": "^4.16.5"
+    "tsx": "4.16.5"
   }
 }
