@@ -44,7 +44,7 @@ The plugin will be added to the opened editors and all the editors you will open
 
 * For Linux - */opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/*
 * For Windows - *%ProgramFiles%\ONLYOFFICE\DesktopEditors\editors\sdkjs-plugins\\*
-* For Mac OS - */Applications/ONLYOFFICE.app/Contents/Resources/editors/sdkjs-plugins/*
+* For Mac OS - *~/Library/Application Support/asc.onlyoffice.ONLYOFFICE/data/sdkjs-plugins/*
 
 **Step 2.** Use a plugin **GUID** as the folder name. You can find the plugin GUID in the *config.json* file.
 
