@@ -60,7 +60,7 @@
   inline-size: 100%;
   inset-block-start: calc(100% + var(--base-size-6));
   max-block-size: var(--select-listbox-max-height);
-  overflow-block: auto;
+  overflow-y: auto;
   padding-block-end: var(--base-size-8);
   padding-block-start: var(--base-size-8);
   position: absolute;
