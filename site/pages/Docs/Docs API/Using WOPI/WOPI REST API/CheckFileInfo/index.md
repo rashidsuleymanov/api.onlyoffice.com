@@ -1,6 +1,6 @@
 **GET /wopi/files/*(file\_id)***
 
-The **CheckFileInfo** operation is one of the most important WOPI operations. **CheckFileInfo** must be implemented for all WOPI actions. This operation returns information about a file, a user’s permissions on that file, and general information about the capabilities that the WOPI host has on the file. Also, some **CheckFileInfo** properties can influence the appearance and behavior of WOPI clients.
+The `CheckFileInfo` operation is one of the most important WOPI operations. `CheckFileInfo` must be implemented for all WOPI actions. This operation returns information about a file, a user’s permissions on that file, and general information about the capabilities that the WOPI host has on the file. Also, some `CheckFileInfo` properties can influence the appearance and behavior of WOPI clients.
 
 ### Parameters
 
